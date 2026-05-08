@@ -1,14 +1,16 @@
 ---
-name: novel-claude-ai
-description: 中文长篇小说全流程创作技能（v1.1.0）。当用户想写小说、创作故事、续写章节、构思剧情、搭建世界观、设计人物关系、提取写作风格、仿写其他小说时，必须使用本技能。覆盖从模糊想法到300万字成品的完整链路：脑洞引导、知识图谱构建、大纲管理、分镜写作、质量门禁、跨Agent审核、风格校准、中途改纲级联更新。即使用户只是说"帮我写个故事"或"我有个小说的想法"，也应触发本技能。
-version: 1.1.0
+name: novel-base
+description: 中文长篇小说全流程创作技能（v1.2.0）。当用户想写小说、创作故事、续写章节、构思剧情、搭建世界观、设计人物关系、提取写作风格、仿写其他小说时，必须使用本技能。覆盖从模糊想法到300万字成品的完整链路：脑洞引导、知识图谱构建、大纲管理、分镜写作、质量门禁、跨Agent审核、风格校准、中途改纲级联更新。即使用户只是说"帮我写个故事"或"我有个小说的想法"，也应触发本技能。
+version: 1.2.0
 author: merged from leenbj/novel-creator-skill + custom novel-writing
 license: MIT
 ---
 
-# Novel Claude AI - 小说创作技能 v1.1.0
+# Novel Base - 小说创作技能 v1.2.0
 
-> **合并说明：** 本技能由 `leenbj/novel-creator-skill`（v8.0，45个Python脚本）与自建 `novel-writing` skill 合并而成。通用层数据库（376个文档）、真相文件系统、番茄平台适配等均为自建扩展。后续维护独立于上游。
+> **合并说明：** 本技能由 `leenbj/novel-creator-skill`（v8.0，57个Python脚本）与自建 `novel-writing` skill 合并而成。通用层数据库（376个文档）、真相文件系统、番茄平台适配等均为自建扩展。后续维护独立于上游。
+>
+> **名称统一：** 远程仓库 `novel-base`（GitHub）、本地目录 `novel-creator-skill`（Hermes 注册路径不变）、SKILL.md `name: novel-base`。不再使用 `novel-claude-ai`。
 
 ## 用户当前状态
 
@@ -17,6 +19,95 @@ license: MIT
 - **写作工具**: 本技能（合并后的统一技能）
 - **初始化方式**: `/填充配置` 命令——用户碎片感性输入，AI 结构化填充模板
 - **架构设计**: 通用创作器（通用引擎层 + 项目配置层分离），完整 plan 在 `references/architecture-plan.md`
+
+## 仓库与名称关系
+
+本系统涉及**一个目录、三个名称**：
+
+| 名称 | 位置 | 角色 |
+|---|---|---|
+| `novel-base` | GitHub `BillChen-29/novel-base` | 远程仓库名（统一名称） |
+| `novel-creator-skill` | `~/.hermes/skills/novel-creator-skill/` | 本地代码+数据目录（Hermes 注册路径，保持不变） |
+| `novel-base` | SKILL.md `name:` 字段 | frontmatter 声明名 |
+
+**已废弃名称**：`novel-claude-ai`（旧 frontmatter name）、`novel-writing`（旧 Hermes skill，已合并到本文件）。
+
+**分工**：Claude Code 改代码 → push 到 `novel-base`（GitHub）→ Hermes `git pull` 同步。数据层（assets/、00_memory/、QMD）仅本地维护，不进 git。
+
+## novel-creator-skill 探针结果（Phase 0 已验证）
+
+**仓库：** 原 `leenbj/novel-creator-skill` → 已 fork 到 `BillChen-29/novel-base`
+**本地目录：** `~/.hermes/skills/novel-creator-skill/`
+**SKILL.md 声明名：** `novel-base`（统一后）
+**环境：** Python 3.9+，零外部依赖（纯标准库），10 个回归测试全部通过
+
+### 核心能力矩阵
+
+| 能力 | 脚本 | 状态 |
+|------|------|------|
+| 一键开书 | `novel_flow_executor.py one-click` | ✅ 创建完整记忆结构 |
+| 继续写作 | `novel_flow_executor.py continue-write` | ✅ 检索→写作→门禁→索引更新全链路 |
+| 门禁检查 | `chapter_gate_check.py` | ✅ 6 步检查（存储→隔离→记忆→一致性→风格→校稿→发布） |
+| RAG 检索 | `plot_rag_retriever.py` | ✅ 两级（BM25 粗筛 + 语义精排），零外部依赖 |
+| 风格指纹 | `style_fingerprint.py` | ✅ 提取人称/句长/对话占比/用词倾向 |
+| 知识图谱 | `story_graph_builder.py` | ✅ CRUD + validate + Mermaid 导出 |
+| 大纲锚点 | `outline_anchor_manager.py` | ✅ init/check/advance/recalculate |
+| 多 LLM 写作 | `novel_chapter_writer.py` | ✅ OpenAI/Claude/Kimi/GLM/MiniMax |
+| 一键写书调度 | `auto_novel_writer.py` | ✅ 断点续写 + 进度报告 |
+| 联网调研 | `research_agent.py` | ✅ 关键词生成/缺口检测/资料存储 |
+
+### 一键开书创建的文件结构
+
+```
+<project-root>/
+  00_memory/
+    novel_plan.md           # 主线计划（写前必读）
+    novel_state.md          # 当前状态
+    character_tracker.md    # 角色状态追踪
+    foreshadowing_tracker.md # 伏笔追踪
+    timeline.md             # 时间线
+    world_state.md          # 世界状态
+    style_anchor.md         # 风格锚点（3.3KB，含人称/句长/对话占比/感官偏好）
+    story_graph.json        # 知识图谱
+    outline_anchors.json    # 大纲锚点
+    retrieval/
+      story_index.json      # RAG 索引
+      entity_chapter_map.json
+  02_knowledge_base/        # 设定与知识库
+  03_manuscript/            # 章节正文
+  04_editing/gate_artifacts/<chapter_id>/
+    gate_result.json        # passed=true 才能进入下一章
+```
+
+### 需要改造的部分
+
+| 改造项 | 说明 |
+|--------|------|
+| 命令适配 | Claude Code 斜杠命令 → Hermes skill 调用方式 |
+| 哲学对齐 | 不存在，需新增（按需+定期触发，3 问人工反思表单） |
+| 母题/意象系统 | 不存在，需新增 `motif_library/`（通用层）+ `motifs.md`（项目层） |
+| 世界质感 | 不存在，需新增 `world_texture.md` |
+| 角色原型库 | ✅ 已完成 `character_archetypes/`（通用层，45 个文件） |
+| 节奏模板 | 不存在，需新增 `pacing_template/`（通用层） |
+| 数据闭环 | 不存在，需新增自评+趋势+复盘流程 |
+| 多项目管理 | 不存在，需新增项目切换机制 |
+
+## plan-iteration 工作流
+
+用户会把 plan 发给其他 AI（如 DeepSeek）审查，带回反馈让我修。多轮迭代模式：
+1. 我写/改 plan
+2. 用户发给其他 AI
+3. 用户带回审查意见（逐条）
+4. 我逐条评估，**批判性采纳**（不盲目接受，判断每条是否真的合理）
+5. 修复后同步副本（如有 `~/Downloads/` 副本要求）
+6. 重复直到锁定
+
+**注意：**
+- Plan 有副本同步要求时，每次改动必须同步到 Downloads
+- 外部 AI 的建议不一定都对——要结合实际情况判断，**批判性采纳**（不盲目接受，逐条评估是否真的合理）
+- 用户会把方案发给多个 AI 审查（DeepSeek、Claude），期望我综合多方意见给出自己的判断，而不是直接执行某一方的建议
+- 每轮修订后更新 plan 末尾的时间戳和修订说明
+- 批量 patch 后必须 grep 验证每条改动落地（patch 工具静默失败）
 
 ## 架构设计核心原则
 
@@ -540,6 +631,29 @@ python3 scripts/novel_flow_executor.py continue-write \
 
 详见 `references/rhythm-analysis-workflow.md`
 
+**中后期节奏**：100-150章与前50章对比，节奏模式基本稳定。唯一显著变化是山野村夫钩子率翻倍（18%→35%），但钩子类型（reversal）不变。
+
+### 节奏模板扩充工作流（从热门作品反向提取）
+
+> 将真实热门小说的节奏模式提取为 `pacing_template/` 通用模板
+
+**触发条件**：用户说"分析节奏""提取节奏模板""拆解热门作品节奏"等。
+
+**流程**：
+1. **下载目标作品**：用 TomatoNovelDownloader 下载榜单热门小说（建议 2-3 本不同题材）
+2. **分章读取**：TXT 按章节分割，每 10-15 章为一个分析批次
+3. **逐章标注节奏维度**：章节字数、情绪强度(1-10)、章末钩子类型、爽点位置与类型、付费点设计
+4. **提取节奏模式**：标注高潮/低谷章节编号，绘制情绪曲线
+5. **与现有模板对比**：对照 `pacing-curve.md`、`golden-three-chapters.md` 等现有模板
+6. **写入新模板**：创建 `pacing_template/<题材>-<风格>-pacing.md`
+
+**终止条件**：连续 10 章无新节奏模式发现 → 模式已稳定，停止分析。
+
+**Pitfall**：
+- 节奏 ≠ 内容：分析的是"什么时候给什么情绪"，不是"讲了什么故事"
+- 避免一次性读太多章爆 context，分批读 + 分批总结
+- 不同题材节奏差异大（都市悬疑 vs 玄幻升级），需分别建模板
+
 ### 文献解析入库工作流
 
 用户可以上传参考书籍（PDF/epub/txt/截图），AI 解析后结构化填充到数据库。
@@ -559,6 +673,21 @@ python3 scripts/novel_flow_executor.py continue-write \
 
 详细管线见 `references/motif-extraction-pipeline.md`
 
+**Pitfall：** 大文件需要分章节解析，不能一次性全量喂入。OCR 对扫描版有错误，需用户抽查。
+
+### 跨库反向提取模式
+
+从已入库的通用层资产中反向提炼其他库的内容。
+
+**典型场景**：从 `motif_library/` 的 178 个母题中反向提炼 `character_archetypes/`。
+
+**流程**：
+1. 扫描源库文件，识别与目标库相关的条目
+2. 按模板创建目标库文件
+3. 交叉引用源库条目（在"经典案例"字段中标注来源母题）
+
+**已验证**：从 178 个母题中提炼出 20 个角色原型（Campbell 框架 9 类、中国神话 5 类、民间故事 4 类、Frazer 2 类）。
+
 ### 文本风格分析工作流
 
 从参考作品逐章解析写作风格，填充 `style_library/`。
@@ -575,9 +704,33 @@ python3 scripts/novel_flow_executor.py continue-write \
 
 ### 番茄小说数据采集
 
-详见 `references/fanqie-scraping.md`
+详见 `references/fanqie-scraping.md`（含 TomatoNovelDownloader 输出格式、API 测试、OCR 方案）
 
-**关键 pitfall：** 番茄用自定义字体反爬，API 不公开。批量下载用 TomatoNovelDownloader（Rust TUI），输出格式特殊（`--------` 分隔章、无对话引号），分析脚本必须适配。
+**关键 pitfall：** 番茄用自定义字体反爬，API 不公开。批量下载用 TomatoNovelDownloader（Rust TUI），输出格式特殊（`--------` 分隔章、无对话引号），分析脚本必须适配。详见 `references/novel-pacing-analysis.md`。
+
+**下载工具对比**：
+
+| 工具 | 适用场景 | 优劣 |
+|------|---------|------|
+| **TomatoNovelDownloader** (Rust TUI) | 批量下载完整小说 | ✅ 完整文本、速度快、支持榜单搜索 ❌ 需要交互式 TUI 操作 |
+| 截图 + macOS Vision OCR | 单章/片段采集 | ✅ 无需安装、实时数据 ❌ 手动操作、OCR 有误差 |
+
+**TomatoNovelDownloader 使用**（v2.4.9+，macOS arm64）：
+```bash
+cd ~/Downloads
+chmod +x TomatoNovelDownloader-macOS_arm64-v2.4.9
+./TomatoNovelDownloader-macOS_arm64-v2.4.9
+```
+
+### 番茄小说平台写作规范
+
+| 规范 | 要求 |
+|------|------|
+| 每章字数 | 2000-3000 字 |
+| 前 3 章 | 定生死，必须有悬念 |
+| 章末 | 必须留钩子 |
+| 更新频率 | 日更最佳 |
+| 模式 | 免费阅读，广告分成 |
 
 ## 11. 参考文档导航
 
