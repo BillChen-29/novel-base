@@ -593,7 +593,7 @@ python3 scripts/novel_flow_executor.py revise-outline \
 | `python3 scripts/reflection.py new` | `/反思` |
 | `python3 scripts/novel_ingest.py` | `/导入数据`（统一入口，零token） |
 
-**`continue-write` 标准用法（v1.1.0，全功能默认开启）：**
+**`continue-write` 标准用法（全功能默认开启）：**
 
 ```bash
 # 标准用法：知识图谱/大纲锚点/Beat Sheet/AI痕迹纠正/风格更新均自动激活

@@ -401,7 +401,7 @@ bash scripts/install-portable-skill.sh --tool claude-code --force
 
 2. Claude Code 额外需要复制 `.claude/agents/` 中的Agent定义文件。
 
-3. 安装目录命名建议：`novel-claude-ai`
+3. 安装目录命名建议：`novel-base`
 
 ---
 

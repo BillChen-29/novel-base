@@ -71,7 +71,7 @@ bash scripts/install-portable-skill.sh --tool claude-code --force
 
 ### 仓库结构
 ```
-SKILL.md                    # 技能主文档（v8.0），AI 工具读取此文件执行命令
+SKILL.md                    # 技能主文档（v1.2.0），AI 工具读取此文件执行命令
 novel-creator.md            # 兼容旧入口
 novel-creator.json          # JSON 格式技能定义
 scripts/
@@ -155,19 +155,19 @@ templates/                  # 小说项目初始化模板文件
 
 **`novel_flow_executor.py` 输出格式**：所有子命令均输出 JSON 到 stdout，`ok: true/false` 为顶层状态字段，测试脚本依赖此格式。
 
-**联网调研**（`research_agent.py`，v8.0 新增）：
+**联网调研**（`research_agent.py`）：
 - 通用能力，任何写作场景均可使用（手动/半自动/全自动）
 - 根据题材自动生成搜索关键词（9大题材内置调研维度映射）
 - 知识缺口检测：扫描已有知识库 vs 章节需求
 - 资料按类别自动路由到对应知识库文件
 - 适配 Claude Code / OpenCode / Codex 等多种工具
 
-**多LLM写作引擎**（`novel_chapter_writer.py`，v8.0 新增）：
+**多LLM写作引擎**（`novel_chapter_writer.py`）：
 - 支持 OpenAI / Anthropic / Kimi / GLM / MiniMax / 本地模型 / 任意 OpenAI 兼容 API
 - `write_chapter()` 函数可被外部脚本导入调用
 - 零外部依赖（使用 urllib.request）
 
-**一键写书**（`auto_novel_writer.py`，v8.0 新增）：
+**一键写书**（`auto_novel_writer.py`）：
 - 全自动调度：调研→开书→循环写作→完成报告
 - 断点续写：状态持久化到 `.flow/auto_write_state.json`
 - 进度报告：卷/章/字数/门禁通过率

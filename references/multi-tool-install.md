@@ -13,31 +13,31 @@
 ```bash
 bash scripts/install-portable-skill.sh --tool codex --force
 ```
-默认安装到：`~/.codex/skills/novel-claude-ai`
+默认安装到：`~/.codex/skills/novel-base`
 
 ## 2. Claude Code
 ```bash
 bash scripts/install-portable-skill.sh --tool claude-code --force
 ```
-默认安装到：`~/.claude/skills/novel-claude-ai`
+默认安装到：`~/.claude/skills/novel-base`
 
 ## 3. OpenCode
 ```bash
 bash scripts/install-portable-skill.sh --tool opencode --force
 ```
-默认安装到：`~/.opencode/skills/novel-claude-ai`
+默认安装到：`~/.opencode/skills/novel-base`
 
 ## 4. Gemini CLI
 ```bash
 bash scripts/install-portable-skill.sh --tool gemini-cli --force
 ```
-默认安装到：`~/.gemini/skills/novel-claude-ai`
+默认安装到：`~/.gemini/skills/novel-base`
 
 ## 5. Antigravity
 ```bash
 bash scripts/install-portable-skill.sh --tool antigravity --force
 ```
-默认安装到：`~/.antigravity/skills/novel-claude-ai`
+默认安装到：`~/.antigravity/skills/novel-base`
 
 ## 自定义目录
 ```bash
