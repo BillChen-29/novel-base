@@ -20,3 +20,24 @@ IMPLEMENTATION_STATUS.md
 IMPLEMENTATION_SUMMARY.md
 NOVEL_CREATOR_GUIDE.md
 TEST_REPORT.md
+
+# === 数据层（本地维护，不提交到公开仓库） ===
+# 通用层资产（motif_library, character_archetypes, technique_library 等，267 个文件）
+assets/
+
+# 运行时 / 小说项目数据
+00_memory/
+02_knowledge_base/
+03_manuscript/
+04_editing/
+projects/
+.flow/
+*.log
+
+# QMD 本地索引产物
+ingest_manifest.json
+query_cache.json
+
+# 测试产物
+scripts/tests/__pycache__/
+.pytest_cache/

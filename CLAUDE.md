@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概述
 
-本仓库是 **Novel Creator Skill v8.0**，一个中文小说全流程创作技能，核心逻辑：
+本仓库是 **Novel Base v1.2.0**（原 Novel Creator Skill），一个中文小说全流程创作技能，核心逻辑：
 
-- **技能定义**：`SKILL.md`（v8.0 主文档，作为 Claude Code 等 AI 工具的 skill 安装使用）
+- **技能定义**：`SKILL.md`（v1.2.0 主文档，作为 Claude Code 等 AI 工具的 skill 安装使用）
 - **真实执行器**：`scripts/` 目录下的 Python 脚本，承担门禁校验、RAG 检索、联网调研、多LLM写作、流程编排等硬逻辑
 - **小说项目数据**：写作时在用户机器的 `<project-root>/` 下生成（不在本仓库内）
 

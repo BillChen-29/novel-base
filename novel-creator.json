@@ -1,8 +1,8 @@
 {
-  "id": "novel-claude-ai",
-  "name": "Novel Claude AI - 小说创作大师",
+  "id": "novel-base",
+  "name": "Novel Base - 小说创作大师",
   "description": "中文长篇小说全流程创作技能。当用户想写小说、创作故事、续写章节、构思剧情、搭建世界观、设计人物关系、提取写作风格、仿写其他小说时使用。覆盖从模糊想法到300万字成品的完整链路。",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "activation": {
     "patterns": [
       "/novel-analyze", "/novel-create",
@@ -39,16 +39,16 @@
   },
   "capability_matrix": {
     "implemented": [
-      "新手三命令", "五步质量门禁", "RAG剧情检索", "联网调研",
-      "风格提取与复用", "基线评测"
+      "新手三命令", "六步质量门禁", "RAG剧情检索", "联网调研",
+      "风格提取与复用", "基线评测", "交互式脑洞引导", "知识图谱",
+      "大纲锚点", "多步流水线", "反向刹车", "事件冷却",
+      "跨Agent审核", "中途改纲级联", "真相文件系统", "QMD双搜索",
+      "配置填充", "大纲生成修订", "自评复盘", "数据库管理"
     ],
     "partial": [
       "全自动写书", "小说仿写"
     ],
-    "planned": [
-      "交互式脑洞引导", "知识图谱", "大纲锚点", "多步流水线",
-      "反向刹车", "事件冷却", "跨Agent审核", "中途改纲级联"
-    ]
+    "planned": []
   },
   "memory_system": {
     "principle": "上下文窗口=内存（易失）；文件系统=磁盘（持久）",
@@ -64,7 +64,7 @@
     "story_graph": {
       "file": "00_memory/story_graph.json",
       "schema": "references/story-graph-schema.md",
-      "status": "planned"
+      "status": "implemented"
     },
     "gate_artifacts": {
       "path": "04_editing/gate_artifacts/<chapter_id>/",
@@ -91,10 +91,7 @@
       "/剧情检索", "/写作", "/更新记忆", "/检查一致性",
       "/风格校准", "/校稿", "/门禁检查", "/更新剧情索引"
     ],
-    "planned_pipeline": [
-      "锚点配额检查", "Beat Sheet生成", "Beat扩写",
-      "章节合成", "门禁", "图谱回写", "跨Agent审核"
-    ]
+    "planned_pipeline": []
   },
   "compatibility": {
     "supported_tools": ["codex", "claude-code", "opencode", "gemini-cli", "antigravity"],
