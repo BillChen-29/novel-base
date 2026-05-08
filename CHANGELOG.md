@@ -34,7 +34,9 @@
 | 2026-05-08 23:38 | Phase B: commit + push | commit 4d1ae5b, push 成功 |
 | 2026-05-08 23:39 | Step 6: 更新 web-novel-publishing 引用 | novel-writing → novel-base |
 | 2026-05-08 23:40 | Step 6: 备份并删除 novel-writing | /tmp/novel-writing-backup |
-| 2026-05-08 23:41 | ECC 审查 | code-reviewer agent |
+| 2026-05-08 23:41 | ECC 审查 | code-reviewer agent，3 HIGH 问题 |
+| 2026-05-08 23:45 | ECC 修复 | commit 1f90fd1，修复残留引用 |
+| 2026-05-08 23:46 | 最终验证 | 全部通过 |
 
 ### 验证结果
 
