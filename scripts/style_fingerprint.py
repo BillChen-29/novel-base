@@ -391,6 +391,7 @@ def main() -> int:
         outputs.update(update_project_files(project_root, profile_name, slug, md, metrics))
 
     result = {
+        "ok": True,
         "profile_name": profile_name,
         "slug": slug,
         "metrics": metrics,

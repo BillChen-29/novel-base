@@ -1,0 +1,8 @@
+{
+  "hooks": [],
+  "health": {
+    "stale_debt": [],
+    "burst_warning": [],
+    "no_advance": []
+  }
+}
