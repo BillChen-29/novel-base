@@ -1053,7 +1053,7 @@ python3 scripts/one-click_novel_flow.py --title "小说标题" --genre "题材" 
 
 ### 完整修复方案
 
-详见 `/Users/chenzefeng/.hermes/projects/novel-test/project_plan_final.md`
+详见 `<project-root>/project_plan_final.md`
 
 ## 15. Pitfall
 

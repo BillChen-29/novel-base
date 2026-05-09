@@ -1,7 +1,7 @@
 # Integration Test Findings (2026-05-09)
 
 > 40-chapter novel test: 《最后一个知情者》(都市悬疑, 114k chars)
-> Test report: `/Users/chenzefeng/.hermes/projects/novel-test/project_test_report.md`
+> Test report: `<project-root>/project_test_report.md`
 
 ## Script Test Results (12/17 passed)
 

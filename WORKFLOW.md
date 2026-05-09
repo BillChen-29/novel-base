@@ -3,7 +3,7 @@
 ## 目录结构
 
 ```
-/Users/chenzefeng/Desktop/project/novel-base/   # Claude Code 工作区（代码-only）
+<workdir>                                      # Claude Code 工作区（代码-only）
 ~/.hermes/skills/creative/novel-base/           # Hermes Skill 目录（运行时）
 ```
 
@@ -11,7 +11,7 @@
 
 ### 代码修改流程
 ```
-1. Claude Code 在 /Users/chenzefeng/Desktop/project/novel-base/ 修改代码
+1. Claude Code 在 <workdir> 修改代码
 2. git add -A && git commit -m "..." && git push origin main
 3. Hermes 执行: cd ~/.hermes/skills/creative/novel-base && git pull origin main
 4. 验证: python3 scripts/test_novel_flow_executor.py

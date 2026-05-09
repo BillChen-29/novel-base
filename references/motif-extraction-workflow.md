@@ -144,7 +144,7 @@ qmd collection show motif-library
 
 # If path is wrong, fix in SQLite:
 sqlite3 ~/.cache/qmd/index.sqlite \
-  "UPDATE store_collections SET path='/Users/chenzefeng/.hermes/skills/novel-creator-skill/assets/motif_library' WHERE name='motif-library';"
+  "UPDATE store_collections SET path='<skill-dir>/novel-creator-skill/assets/motif_library' WHERE name='motif-library';"
 
 # Re-index and embed
 qmd update
