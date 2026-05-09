@@ -47,8 +47,7 @@ bash scripts/install-portable-skill.sh --tool <tool> --dest <目标目录> --for
 ## 安装后检查
 确认以下文件存在：
 - `SKILL.md`
-- `novel-creator.md`
-- `novel-creator.json`
+- `skill-definition.json`
 - 对应工具入口文件（如 `CLAUDE.md` / `GEMINI.md` / `OPENCODE.md` / `ANTIGRAVITY.md`）
 - `TOOL_COMPAT.json`
 

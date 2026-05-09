@@ -12,8 +12,8 @@ usage() {
 
 示例：
   install-portable-skill.sh --tool codex
-  install-portable-skill.sh --tool claude-code --dest ~/.claude/skills/novel-claude-ai
-  install-portable-skill.sh --tool gemini-cli --dest ~/.gemini/skills/novel-claude-ai --force
+  install-portable-skill.sh --tool claude-code --dest ~/.claude/skills/novel-base
+  install-portable-skill.sh --tool gemini-cli --dest ~/.gemini/skills/novel-base --force
 USAGE
 }
 
@@ -54,11 +54,11 @@ SRC_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 default_dest() {
   case "$1" in
-    codex) echo "$HOME/.codex/skills/novel-claude-ai" ;;
-    claude-code) echo "$HOME/.claude/skills/novel-claude-ai" ;;
-    opencode) echo "$HOME/.opencode/skills/novel-claude-ai" ;;
-    gemini-cli) echo "$HOME/.gemini/skills/novel-claude-ai" ;;
-    antigravity) echo "$HOME/.antigravity/skills/novel-claude-ai" ;;
+    codex) echo "$HOME/.codex/skills/novel-base" ;;
+    claude-code) echo "$HOME/.claude/skills/novel-base" ;;
+    opencode) echo "$HOME/.opencode/skills/novel-base" ;;
+    gemini-cli) echo "$HOME/.gemini/skills/novel-base" ;;
+    antigravity) echo "$HOME/.antigravity/skills/novel-base" ;;
     *)
       echo "不支持的工具: $1" >&2
       exit 2
@@ -108,8 +108,7 @@ fi
 mkdir -p "$DEST"
 
 copy_core() {
-  cp "$SRC_DIR/novel-creator.md" "$DEST/"
-  cp "$SRC_DIR/novel-creator.json" "$DEST/"
+  cp "$SRC_DIR/skill-definition.json" "$DEST/"
   cp "$SRC_DIR/SKILL.md" "$DEST/"
   cp -R "$SRC_DIR/templates" "$DEST/"
   cp -R "$SRC_DIR/references" "$DEST/"
@@ -164,7 +163,7 @@ TXT
       cat > "$DEST/CLAUDE.md" <<'TXT'
 # Claude Code 入口
 
-请将本目录作为技能目录使用，核心入口为 `SKILL.md` 与 `novel-creator.md`。
+请将本目录作为技能目录使用，核心入口为 `SKILL.md`。
 章节发布必须执行：`/更新记忆 -> /检查一致性 -> /风格校准 -> /校稿 -> /门禁检查`。
 新手建议：`/新手模式 开启 -> /一键开书 -> /继续写`；失败时执行 `/修复本章`。
 TXT
@@ -206,8 +205,7 @@ write_manifest() {
   "installed_at": "$(date '+%Y-%m-%d %H:%M:%S')",
   "entry_files": [
     "SKILL.md",
-    "novel-creator.md",
-    "novel-creator.json"
+    "skill-definition.json"
   ],
   "chapter_release_pipeline": [
     "/更新记忆",

@@ -393,8 +393,7 @@ bash scripts/install-portable-skill.sh --tool claude-code --force
 
 1. 复制以下目录到目标工具的skill目录：
    - `SKILL.md`
-   - `novel-creator.md`
-   - `novel-creator.json`
+   - `skill-definition.json`
    - `templates/`
    - `references/`
    - `scripts/`

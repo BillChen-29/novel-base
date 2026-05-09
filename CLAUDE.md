@@ -72,8 +72,7 @@ bash scripts/install-portable-skill.sh --tool claude-code --force
 ### 仓库结构
 ```
 SKILL.md                    # 技能主文档（v1.2.0），AI 工具读取此文件执行命令
-novel-creator.md            # 兼容旧入口
-novel-creator.json          # JSON 格式技能定义
+skill-definition.json          # JSON 格式技能定义
 scripts/
   novel_flow_executor.py    # 主流程编排器（one-click / continue-write）
   plot_rag_retriever.py     # 两级 RAG 检索（粗筛+精排），零外部依赖
