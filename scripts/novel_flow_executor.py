@@ -24,7 +24,7 @@ from typing import Any, Dict, List, Optional, Tuple, cast
 from common import (
     ensure_dir, read_text, write_text, slugify,
     sha1_text, file_sha1, load_json, save_json,
-    chapter_no_from_name,
+    chapter_no_from_name, count_chars,
 )
 
 try:
@@ -52,7 +52,7 @@ AI_PHRASE_BLACKLIST = [
     # 对话标签套话
     "沉声道", "淡淡地说", "缓缓说道", "淡然道",
     # 反应/动作套话
-    "脸色一变", "神情一凛", "眉头微皱", "身形一顿", "脚步一顿",
+    "脸色一变", "神情一凛", "眉头微皱", "身形一顿", "脚步一顿", "微微", "深吸一口气",
     # 外貌描写套话
     "嘴角微扬", "勾起一抹弧度", "目光如炬",
     # 过渡套话
@@ -767,6 +767,15 @@ def init_project_files(project_root: Path, args: argparse.Namespace, overwrite: 
     skipped: List[str] = []
     now = dt.datetime.now().strftime("%Y-%m-%d")
 
+    # Dynamic volume calculation based on target_words (番茄节奏基准: 章均2500字)
+    _avg_chars = 2500
+    _tw = int(getattr(args, "target_words", 0) or 0)
+    _total_ch = max(10, _tw // _avg_chars) if _tw > 0 else 40
+    _vol_size = max(5, _total_ch // 2)
+    _v1_end = _vol_size
+    _v2_start = _vol_size + 1
+    _v2_end = _vol_size * 2
+
     mapping = {
         "TITLE": args.title,
         "GENRE": args.genre,
@@ -775,14 +784,14 @@ def init_project_files(project_root: Path, args: argparse.Namespace, overwrite: 
         "ENDING": args.ending,
         "VOL1_NAME": "起势卷",
         "VOL1_EVENT": args.core_conflict,
-        "VOL1_END": "120",
+        "VOL1_END": str(_v1_end),
         "ACT1_GOAL": "建立主角目标与初始矛盾",
         "ACT2_CONFLICT": "冲突升级并引入多线压力",
         "ACT3_CLIMAX": "卷末反转并埋下跨卷悬念",
         "VOL2_NAME": "扩张卷",
         "VOL2_EVENT": "主线升级",
-        "VOL2_START": "121",
-        "VOL2_END": "240",
+        "VOL2_START": str(_v2_start),
+        "VOL2_END": str(_v2_end),
         "PROTAGONIST": args.protagonist,
         "START_STATE": "普通起点",
         "MID_TRANSFORM": "价值观重塑",
@@ -2458,7 +2467,7 @@ def one_click(args: argparse.Namespace) -> Dict[str, object]:
     # 初始化大纲锚点：调用 init 子命令，自动解析 novel_plan.md 构建 volumes
     outline_anchors_file = project_root / "00_memory" / "outline_anchors.json"
     if not outline_anchors_file.exists():
-        target_chapters = max(10, int(getattr(args, "target_words", 0) or 0) // 3500)
+        target_chapters = max(10, int(getattr(args, "target_words", 0) or 0) // 2500)
         run_python(
             SCRIPT_DIR / "outline_anchor_manager.py",
             ["init", "--project-root", str(project_root),
