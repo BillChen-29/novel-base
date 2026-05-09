@@ -81,8 +81,93 @@ PACING_MODE_PROFILES: Dict[str, Any] = {
     "immersive": {"min_chars": 4500, "beat_pacing_depth": "immersive", "max_skip_density": 0.15},
 }
 
-PLATFORM_PRESETS: Dict[str, Dict[str, Any]] = {
-    "fanqie": {
+def _load_platform_presets() -> Dict[str, Dict[str, Any]]:
+    """从 assets/platforms/<name>/config.json 加载平台预设。
+
+    优先级：config.json > 硬编码默认值（保持向后兼容）。
+    """
+    platforms_dir = SKILL_ROOT / "assets" / "platforms"
+    presets: Dict[str, Dict[str, Any]] = {}
+
+    # 硬编码回退值（当 config.json 不存在时使用）
+    _fallback: Dict[str, Dict[str, Any]] = {
+        "fanqie": {
+            "avg_chars_per_chapter": 2500,
+            "default_min_chars": 2500,
+            "default_min_paragraphs": 8,
+            "default_min_dialogue_ratio": 0.03,
+            "default_max_dialogue_ratio": 0.7,
+            "default_min_sentences": 8,
+            "default_beat_count": 4,
+            "pacing_mode": "standard",
+            "narrative_voice": "third_person",
+            "style_perspective": "第三人称有限",
+        },
+        "zhihu": {
+            "avg_chars_per_chapter": 9000,
+            "default_min_chars": 7000,
+            "default_min_paragraphs": 30,
+            "default_min_dialogue_ratio": 0.15,
+            "default_max_dialogue_ratio": 0.50,
+            "default_min_sentences": 30,
+            "default_beat_count": 6,
+            "pacing_mode": "immersive",
+            "narrative_voice": "first_person",
+            "style_perspective": "第一人称",
+        },
+    }
+
+    for name in ("fanqie", "zhihu"):
+        config_file = platforms_dir / name / "config.json"
+        if config_file.exists():
+            try:
+                presets[name] = json.loads(config_file.read_text(encoding="utf-8"))
+            except Exception:
+                presets[name] = _fallback.get(name, {})
+        else:
+            presets[name] = _fallback.get(name, {})
+
+    return presets
+
+
+PLATFORM_PRESETS: Dict[str, Dict[str, Any]] = _load_platform_presets()
+
+
+# ─── V3: 项目级平台配置 ──────────────────────────────────────────────
+
+def load_project_config(project_root: Path) -> Optional[Dict[str, Any]]:
+    """加载项目级配置 00_memory/platform_config.json
+
+    返回完整配置字典，或 None（文件不存在/解析失败）。
+    注意：返回的字典中 null 值需要调用者处理回退逻辑。
+    """
+    config_file = project_root / "00_memory" / "platform_config.json"
+    if not config_file.exists():
+        return None
+    try:
+        return json.loads(config_file.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def resolve_platform_config(
+    project_root: Path,
+    args_platform: Optional[str],
+) -> Dict[str, Any]:
+    """三层优先级解析最终配置
+
+    优先级: 项目配置 > 平台预设 > 硬编码默认值
+
+    Args:
+        project_root: 项目根目录
+        args_platform: 命令行 --platform 参数（可能为 None）
+
+    Returns:
+        解析后的完整配置字典（所有字段均有值，无 null）
+    """
+    # 第三层: 硬编码默认值
+    fallback: Dict[str, Any] = {
+        "platform": "fanqie",
         "avg_chars_per_chapter": 2500,
         "default_min_chars": 2500,
         "default_min_paragraphs": 8,
@@ -93,23 +178,86 @@ PLATFORM_PRESETS: Dict[str, Dict[str, Any]] = {
         "pacing_mode": "standard",
         "narrative_voice": "third_person",
         "style_perspective": "第三人称有限",
-    },
-    "zhihu": {
-        "avg_chars_per_chapter": 9000,
-        "default_min_chars": 7000,
-        "default_min_paragraphs": 30,
-        "default_min_dialogue_ratio": 0.15,
-        "default_max_dialogue_ratio": 0.50,
-        "default_min_sentences": 30,
-        "default_beat_count": 6,
-        "pacing_mode": "immersive",
-        "narrative_voice": "first_person",
-        "style_perspective": "第一人称",
-    },
-}
+    }
+
+    # 第二层: 平台预设
+    if args_platform and args_platform in PLATFORM_PRESETS:
+        platform_preset = PLATFORM_PRESETS[args_platform]
+    else:
+        platform_preset = PLATFORM_PRESETS.get("fanqie", fallback)
+
+    # 第一层: 项目配置
+    project_config = load_project_config(project_root)
+
+    # 合并: 项目配置中的非 null 值覆盖平台预设
+    result = dict(platform_preset)  # 以平台预设为基础
+    if project_config:
+        for key in fallback:
+            if key in project_config and project_config[key] is not None:
+                result[key] = project_config[key]
+
+    return result
 
 
-# 概括跳过词正则（与 chapter_synthesizer.py 保持同步）
+def save_project_config(
+    project_root: Path,
+    platform_name: Optional[str],
+    source: str = "platform_preset",
+    overrides: Optional[Dict[str, Any]] = None,
+) -> Path:
+    """保存项目级配置到 00_memory/platform_config.json
+
+    Args:
+        project_root: 项目根目录
+        platform_name: 平台名称（None 表示独立小说/默认）
+        source: 配置来源
+        overrides: 用户自定义覆盖（可选）
+
+    Returns:
+        写入的文件路径
+    """
+    config_file = project_root / "00_memory" / "platform_config.json"
+
+    if platform_name and platform_name in PLATFORM_PRESETS:
+        preset = PLATFORM_PRESETS[platform_name]
+    else:
+        preset = PLATFORM_PRESETS.get("fanqie", {})
+
+    config: Dict[str, Any] = {
+        "_meta": {
+            "version": 1,
+            "created_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+            "source": source,
+            "platform_base": platform_name,
+        },
+        "platform": platform_name,
+    }
+
+    # 从预设中取所有参数字段
+    param_keys = [
+        "avg_chars_per_chapter", "default_min_chars", "default_min_paragraphs",
+        "default_min_dialogue_ratio", "default_max_dialogue_ratio",
+        "default_min_sentences", "default_beat_count", "pacing_mode",
+        "narrative_voice", "style_perspective",
+    ]
+    for key in param_keys:
+        config[key] = preset.get(key)
+
+    # 应用用户覆盖
+    if overrides:
+        for key in param_keys:
+            if key in overrides and overrides[key] is not None:
+                config[key] = overrides[key]
+
+    config_file.parent.mkdir(parents=True, exist_ok=True)
+    config_file.write_text(
+        json.dumps(config, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    return config_file
+
+
+# ─── 概括跳过词正则（与 chapter_synthesizer.py 保持同步） ──────────────
 _FLOW_PACING_SKIP_PATTERNS = [
     r"(?:此后|随后|转眼|一晃|没过多久|几天后|数日后|几个月后|数月后|又过了)",
     r"(?:经过一番|经过数轮|花了[一二三四五六七八九十百\d两]+[天日月年]|苦修[一二三四五六七八九十百\d两]*[天日月年]?)",
@@ -796,8 +944,9 @@ def init_project_files(project_root: Path, args: argparse.Namespace, overwrite: 
     now = dt.datetime.now().strftime("%Y-%m-%d")
 
     # Dynamic volume calculation based on target_words (番茄节奏基准: 章均2500字)
-    _platform = getattr(args, "platform", "fanqie") or "fanqie"
-    _avg_chars = PLATFORM_PRESETS.get(_platform, PLATFORM_PRESETS["fanqie"])["avg_chars_per_chapter"]
+    _platform = getattr(args, "platform", None)
+    resolved = resolve_platform_config(project_root, _platform)
+    _avg_chars = resolved["avg_chars_per_chapter"]
     _tw = int(getattr(args, "target_words", 0) or 0)
     _total_ch = max(10, _tw // _avg_chars) if _tw > 0 else 40
     _vol_size = max(5, _total_ch // 2)
@@ -857,7 +1006,7 @@ def init_project_files(project_root: Path, args: argparse.Namespace, overwrite: 
         "STATUS": "待设定",
         "TIME_SYSTEM_DESCRIPTION": "以章节推进为主时间轴，可按天/周补充细化。",
         "POWER_SYSTEM_DESCRIPTION": "从初阶到终阶，逐步揭示规则与限制。",
-        "PERSPECTIVE": "第一人称" if getattr(args, "platform", "fanqie") == "zhihu" else "第三人称有限",
+        "PERSPECTIVE": resolved.get("style_perspective", "第三人称有限"),
         "DISTANCE": "中等",
         "TENSE": "过去式",
         "AVG_SENTENCE_LENGTH": "24",
@@ -891,6 +1040,10 @@ def init_project_files(project_root: Path, args: argparse.Namespace, overwrite: 
 
     for rel, content in file_map.items():
         write_if_needed(project_root / rel, content, overwrite, changed, skipped)
+
+    # ★ V3: 生成项目级平台配置（standalone 不生成）
+    if _platform != "standalone":
+        save_project_config(project_root, _platform, source="platform_preset")
 
     first_chapter = project_root / "03_manuscript" / "第1章-开篇待写.md"
     first_stub = f"""# 第1章 开篇
@@ -1899,19 +2052,17 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
     args.pacing_mode = pacing_mode
     pacing_profile = PACING_MODE_PROFILES[pacing_mode]
     args.min_chars = max(args.min_chars, int(pacing_profile["min_chars"]))
-    # === 平台预设覆盖 ===
-    platform_val = getattr(args, "platform", "fanqie") or "fanqie"
-    if platform_val not in PLATFORM_PRESETS:
-        platform_val = "fanqie"
-    platform_preset = PLATFORM_PRESETS[platform_val]
+    # === ★ V3: 三层优先级解析平台配置 ===
+    platform_val = getattr(args, "platform", None)
+    resolved = resolve_platform_config(project_root, platform_val)
 
-    if platform_val == "zhihu":
-        args.min_chars = max(args.min_chars, platform_preset["default_min_chars"])
-        args.min_paragraphs = max(args.min_paragraphs, platform_preset["default_min_paragraphs"])
-        args.min_dialogue_ratio = max(args.min_dialogue_ratio, platform_preset["default_min_dialogue_ratio"])
-        args.max_dialogue_ratio = min(args.max_dialogue_ratio, platform_preset["default_max_dialogue_ratio"])
-        args.min_sentences = max(args.min_sentences, platform_preset["default_min_sentences"])
-        args.beat_count = max(args.beat_count, platform_preset["default_beat_count"])
+    # ★ V3: 所有平台都使用解析后的配置（不再仅覆盖 zhihu）
+    args.min_chars = max(args.min_chars, resolved["default_min_chars"])
+    args.min_paragraphs = max(args.min_paragraphs, resolved["default_min_paragraphs"])
+    args.min_dialogue_ratio = max(args.min_dialogue_ratio, resolved["default_min_dialogue_ratio"])
+    args.max_dialogue_ratio = min(args.max_dialogue_ratio, resolved["default_max_dialogue_ratio"])
+    args.min_sentences = max(args.min_sentences, resolved["default_min_sentences"])
+    args.beat_count = max(args.beat_count, resolved["default_beat_count"])
     # === 平台预设覆盖结束 ===
     chapter_path: Optional[Path] = None
     original_chapter_path: Optional[Path] = None
@@ -2797,6 +2948,224 @@ def cmd_brainstorm(args: argparse.Namespace) -> Dict[str, object]:
     }
 
 
+def cmd_db_maintain(args: argparse.Namespace) -> Dict[str, object]:
+    """统一 db-maintain 子命令入口，按子命令分派。"""
+    sub_cmd = getattr(args, "db_subcmd", None)
+    if sub_cmd == "list-assets":
+        return _db_list_assets(args)
+    elif sub_cmd == "list-platforms":
+        return _db_list_platforms(args)
+    elif sub_cmd == "add-platform":
+        return _db_add_platform(args)
+    elif sub_cmd == "validate":
+        return _db_validate(args)
+    elif sub_cmd == "ingest":
+        return _db_ingest(args)
+    else:
+        return {"ok": False, "error": f"unknown_db_subcmd:{sub_cmd}"}
+
+
+# ---------------------------------------------------------------------------
+#  db-maintain: list-assets
+# ---------------------------------------------------------------------------
+
+ASSET_SUBDIRS = [
+    "motif_library",
+    "character_archetypes",
+    "technique_library",
+    "style_library",
+    "pacing",
+    "platforms",
+]
+
+
+def _db_list_assets(_args: argparse.Namespace) -> Dict[str, object]:
+    """遍历 assets/ 目录，统计各子库的文件数。"""
+    assets_dir = SKILL_ROOT / "assets"
+    result: Dict[str, object] = {"ok": True, "assets": {}}
+    lines: List[str] = ["=== Assets 统计 ==="]
+    for subdir in ASSET_SUBDIRS:
+        d = assets_dir / subdir
+        if d.is_dir():
+            count = sum(1 for _ in d.rglob("*") if _.is_file())
+        else:
+            count = 0
+        result["assets"][subdir] = count
+        lines.append(f"{subdir + ':':<22s} {count} 个文件")
+    total = sum(result["assets"].values())
+    lines.append(f"{'合计:':<22s} {total} 个文件")
+    result["summary"] = "\n".join(lines)
+    return result
+
+
+# ---------------------------------------------------------------------------
+#  db-maintain: list-platforms
+# ---------------------------------------------------------------------------
+
+def _db_list_platforms(_args: argparse.Namespace) -> Dict[str, object]:
+    """遍历 assets/platforms/*/config.json，列出所有平台预设。"""
+    platforms_dir = SKILL_ROOT / "assets" / "platforms"
+    result: Dict[str, object] = {"ok": True, "platforms": {}}
+    lines: List[str] = ["=== 平台预设 ==="]
+    if not platforms_dir.is_dir():
+        result["summary"] = "=== 平台预设 ===\n（无平台预设目录）"
+        return result
+    for entry in sorted(platforms_dir.iterdir()):
+        cfg_file = entry / "config.json"
+        if entry.is_dir() and cfg_file.exists():
+            try:
+                cfg = json.loads(cfg_file.read_text(encoding="utf-8"))
+                name = cfg.get("platform", entry.name)
+                avg = cfg.get("avg_chars_per_chapter", "?")
+                voice = cfg.get("narrative_voice", "?")
+                pacing = cfg.get("pacing_mode", "?")
+                result["platforms"][name] = cfg
+                lines.append(f"{name + ':':<12s} avg_chars={avg}, voice={voice}, pacing={pacing}")
+            except Exception as exc:
+                lines.append(f"{entry.name + ':':<12s} (读取失败: {exc})")
+    result["summary"] = "\n".join(lines)
+    return result
+
+
+# ---------------------------------------------------------------------------
+#  db-maintain: add-platform
+# ---------------------------------------------------------------------------
+
+def _db_add_platform(args: argparse.Namespace) -> Dict[str, object]:
+    """手动添加平台预设，写入 runtime-data/platforms/<name>.json。"""
+    name = args.platform_name
+    if not name:
+        return {"ok": False, "error": "必须指定 --name"}
+    target_dir = SKILL_ROOT / "runtime-data" / "platforms"
+    ensure_dir(target_dir)
+    target_file = target_dir / f"{name}.json"
+    if target_file.exists() and not getattr(args, "force", False):
+        return {"ok": False, "error": f"平台预设已存在: {target_file}，使用 --force 覆盖"}
+    cfg: Dict[str, object] = {"platform": name}
+    if args.avg_chars is not None:
+        cfg["avg_chars_per_chapter"] = args.avg_chars
+    if args.min_chars is not None:
+        cfg["default_min_chars"] = args.min_chars
+    if args.min_paragraphs is not None:
+        cfg["default_min_paragraphs"] = args.min_paragraphs
+    if args.min_dialogue_ratio is not None:
+        cfg["default_min_dialogue_ratio"] = args.min_dialogue_ratio
+    if args.max_dialogue_ratio is not None:
+        cfg["default_max_dialogue_ratio"] = args.max_dialogue_ratio
+    if args.min_sentences is not None:
+        cfg["default_min_sentences"] = args.min_sentences
+    if args.beat_count is not None:
+        cfg["default_beat_count"] = args.beat_count
+    if args.pacing_mode is not None:
+        cfg["pacing_mode"] = args.pacing_mode
+    if args.narrative_voice is not None:
+        cfg["narrative_voice"] = args.narrative_voice
+    if args.style_perspective is not None:
+        cfg["style_perspective"] = args.style_perspective
+    target_file.write_text(json.dumps(cfg, ensure_ascii=False, indent=2), encoding="utf-8")
+    return {"ok": True, "file": str(target_file), "config": cfg}
+
+
+# ---------------------------------------------------------------------------
+#  db-maintain: validate
+# ---------------------------------------------------------------------------
+
+def _db_validate(_args: argparse.Namespace) -> Dict[str, object]:
+    """校验 assets/ 下所有 .md 文件的格式。"""
+    assets_dir = SKILL_ROOT / "assets"
+    errors: List[str] = []
+    checked = 0
+    if not assets_dir.is_dir():
+        return {"ok": False, "error": "assets/ 目录不存在"}
+    for md_file in sorted(assets_dir.rglob("*.md")):
+        checked += 1
+        rel = md_file.relative_to(assets_dir)
+        content = md_file.read_text(encoding="utf-8")
+        # 检查文件是否为空
+        if not content.strip():
+            errors.append(f"{rel}: 文件为空")
+            continue
+        # 检查是否有标题（以 # 开头的行）
+        has_heading = any(line.lstrip().startswith("#") for line in content.splitlines())
+        if not has_heading:
+            errors.append(f"{rel}: 缺少标题（无 # 开头的行）")
+    result: Dict[str, object] = {
+        "ok": len(errors) == 0,
+        "checked": checked,
+        "errors": errors,
+        "error_count": len(errors),
+    }
+    lines = [f"=== 校验结果 ===", f"检查文件数: {checked}", f"错误数: {len(errors)}"]
+    for e in errors:
+        lines.append(f"  ✗ {e}")
+    if not errors:
+        lines.append("  ✓ 所有文件校验通过")
+    result["summary"] = "\n".join(lines)
+    return result
+
+
+# ---------------------------------------------------------------------------
+#  db-maintain: ingest
+# ---------------------------------------------------------------------------
+
+INGEST_TYPE_MAP = {
+    "web_novel": "motif_library",
+    "motif": "motif_library",
+    "character": "character_archetypes",
+    "technique": "technique_library",
+    "style": "style_library",
+}
+
+
+def _db_ingest(args: argparse.Namespace) -> Dict[str, object]:
+    """投喂故事文件到 assets 对应子库。"""
+    source = Path(args.source).expanduser().resolve()
+    ingest_type = args.ingest_type
+    if not source.exists():
+        return {"ok": False, "error": f"源文件不存在: {source}"}
+    target_subdir = INGEST_TYPE_MAP.get(ingest_type)
+    if not target_subdir:
+        return {"ok": False, "error": f"未知类型: {ingest_type}，支持: {list(INGEST_TYPE_MAP.keys())}"}
+    assets_dir = SKILL_ROOT / "assets"
+    target_dir = assets_dir / target_subdir
+    ensure_dir(target_dir)
+    # 生成目标文件名
+    if ingest_type == "web_novel":
+        dest_name = source.stem + "_extracted.md"
+    else:
+        dest_name = source.stem + ".md"
+    dest_file = target_dir / dest_name
+    if dest_file.exists() and not getattr(args, "force", False):
+        return {"ok": False, "error": f"目标文件已存在: {dest_file}，使用 --force 覆盖"}
+    # 读取源文件并写入
+    content = source.read_text(encoding="utf-8")
+    dest_file.write_text(content, encoding="utf-8")
+    # 更新 ingest_manifest.json
+    manifest_file = assets_dir / "ingest_manifest.json"
+    manifest: Dict[str, object] = {"ingested": []}
+    if manifest_file.exists():
+        try:
+            manifest = json.loads(manifest_file.read_text(encoding="utf-8"))
+        except Exception:
+            manifest = {"ingested": []}
+    if "ingested" not in manifest:
+        manifest["ingested"] = []
+    manifest["ingested"].append({
+        "file": source.name,
+        "type": ingest_type,
+        "time": dt.datetime.now().isoformat(),
+        "target": str(dest_file.relative_to(assets_dir)),
+    })
+    manifest_file.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    return {
+        "ok": True,
+        "source": str(source),
+        "target": str(dest_file),
+        "type": ingest_type,
+        "subdir": target_subdir,
+    }
+
+
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="小说流程增强执行器：一键开书 / 继续写")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -2819,10 +3188,15 @@ def parse_args() -> argparse.Namespace:
     p_one.add_argument("--emit-json")
     p_one.add_argument(
         "--platform",
-        choices=["fanqie", "zhihu"],
-        default="fanqie",
+        choices=["fanqie", "zhihu", "standalone"],
+        default=None,
         dest="platform",
-        help="目标发布平台（默认 fanqie）。知乎盐选使用 --platform zhihu",
+        help=(
+            "目标发布平台（可选）。"
+            "fanqie=番茄小说, zhihu=知乎盐选, standalone=独立小说。"
+            "不指定时使用默认值（fanqie 参数），并在项目中生成配置文件。"
+            "独立小说不生成平台配置。"
+        ),
     )
 
     p_brain = sub.add_parser("brainstorm", help="执行 /脑洞建图（交互式脑洞引导）")
@@ -2933,10 +3307,14 @@ def parse_args() -> argparse.Namespace:
                         help="风格更新章节间隔，默认 10")
     p_cont.add_argument(
         "--platform",
-        choices=["fanqie", "zhihu"],
-        default="fanqie",
+        choices=["fanqie", "zhihu", "standalone"],
+        default=None,
         dest="platform",
-        help="目标发布平台（默认 fanqie）。知乎盐选使用 --platform zhihu",
+        help=(
+            "目标发布平台（可选）。"
+            "fanqie=番茄小说, zhihu=知乎盐选, standalone=独立小说。"
+            "不指定时使用项目配置或默认值（fanqie 参数）。"
+        ),
     )
     p_cont.add_argument("--auto-truth-update", dest="auto_truth_update",
                         action="store_true", default=True,
@@ -2949,6 +3327,43 @@ def parse_args() -> argparse.Namespace:
                         help="图谱更新仅提取不应用（dry run 模式）")
     p_cont.add_argument("--emit-json")
 
+    # ---- db-maintain 子命令 ----
+    p_db = sub.add_parser("db-maintain", help="资产管理：统计/预设/校验/投喂")
+    db_sub = p_db.add_subparsers(dest="db_subcmd")
+
+    # list-assets
+    db_sub.add_parser("list-assets", help="列出 assets 各子库统计")
+
+    # list-platforms
+    db_sub.add_parser("list-platforms", help="列出所有平台预设")
+
+    # add-platform
+    p_addp = db_sub.add_parser("add-platform", help="手动添加平台预设")
+    p_addp.add_argument("--name", dest="platform_name", required=True, help="平台名称")
+    p_addp.add_argument("--avg-chars", type=int, default=None, help="平均每章字数")
+    p_addp.add_argument("--min-chars", type=int, default=None, help="最低章字数")
+    p_addp.add_argument("--min-paragraphs", type=int, default=None, help="最低段落数")
+    p_addp.add_argument("--min-dialogue-ratio", type=float, default=None, help="最低对话比例")
+    p_addp.add_argument("--max-dialogue-ratio", type=float, default=None, help="最高对话比例")
+    p_addp.add_argument("--min-sentences", type=int, default=None, help="最低句子数")
+    p_addp.add_argument("--beat-count", type=int, default=None, help="每章 Beat 数量")
+    p_addp.add_argument("--pacing-mode", choices=["fast", "standard", "immersive"], default=None,
+                        help="节奏模式")
+    p_addp.add_argument("--narrative-voice", default=None, help="叙事视角 (first_person/third_person)")
+    p_addp.add_argument("--style-perspective", default=None, help="风格视角 (如：第一人称)")
+    p_addp.add_argument("--force", action="store_true", help="覆盖已有预设")
+
+    # validate
+    db_sub.add_parser("validate", help="校验 assets 下所有 .md 文件格式")
+
+    # ingest
+    p_ingest = db_sub.add_parser("ingest", help="投喂故事文件到 assets 对应子库")
+    p_ingest.add_argument("source", help="源文件路径")
+    p_ingest.add_argument("--type", dest="ingest_type", required=True,
+                          choices=["web_novel", "motif", "character", "technique", "style"],
+                          help="投喂类型")
+    p_ingest.add_argument("--force", action="store_true", help="覆盖已有文件")
+
     return p.parse_args()
 
 
@@ -2959,14 +3374,16 @@ def main() -> int:
         "brainstorm": cmd_brainstorm,
         "revise-outline": cmd_revise_outline,
         "continue-write": continue_write,
+        "db-maintain": cmd_db_maintain,
     }
     _handler = _dispatch.get(args.cmd)
     if _handler is None:
         payload: Dict[str, object] = {"ok": False, "error": f"unknown_command:{args.cmd}"}
     else:
         payload = _handler(args)
-    if args.emit_json:
-        jp = Path(args.emit_json).expanduser().resolve()
+    emit_json = getattr(args, "emit_json", None)
+    if emit_json:
+        jp = Path(emit_json).expanduser().resolve()
         ensure_dir(jp.parent)
         jp.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(payload, ensure_ascii=False, indent=2))

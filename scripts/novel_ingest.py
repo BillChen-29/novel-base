@@ -38,10 +38,10 @@ from style_fingerprint import collect_metrics
 
 # ============ 配置 ============
 
-ASSETS_DIR = os.path.expanduser("~/.hermes/skills/novel-creator-skill/assets")
+ASSETS_DIR = os.path.normpath(os.path.join(_SCRIPT_DIR, '..', 'assets'))
 
 TARGETS = {
-    'pacing_template': os.path.join(ASSETS_DIR, 'pacing_template'),
+    'pacing': os.path.join(ASSETS_DIR, 'pacing'),
     'style_library': os.path.join(ASSETS_DIR, 'style_library'),
     'motif_library': os.path.join(ASSETS_DIR, 'motif_library'),
     'character_archetypes': os.path.join(ASSETS_DIR, 'character_archetypes'),

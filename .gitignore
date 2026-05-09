@@ -42,5 +42,8 @@ query_cache.json
 scripts/tests/__pycache__/
 .pytest_cache/
 
+# 运行时数据（db-maintain 管理，本地-only）
+runtime-data/
+
 # 知乎数据（本地-only，不上传 GitHub）
 references/zhihu-*.md

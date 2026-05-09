@@ -14,7 +14,10 @@ license: MIT
 
 ## 用户当前状态
 
-- **目标平台**: 番茄小说（已确认）+ 知乎盐选（2026-05-09 新增，`--platform zhihu`，待实施）
+- **目标平台**: 番茄小说（已确认）+ 知乎盐选（2026-05-09 新增，`--platform zhihu`，commit 90a6b40）
+- **知乎盐选节奏基准**（4篇男频样本）：第一人称100%、篇均8-10k字、段均15-20字、对话25.6%、问号5.3/千字、感叹号3.7/千字、句均长20.2字
+- **数据层架构**：数据（assets/、runtime-data/）与代码（scripts/、templates/）分离，数据本地-only 不上 GitHub
+- **GitHub 隐私规则**：知乎盐选数据（故事文本、节奏基准、下载记录）绝对不能上传 GitHub（.gitignore: references/zhihu-*.md, runtime-data/）
 - **偏好类型**: 都市悬疑（已确认，但系统设计为通用，不绑死一个题材）
 - **写作工具**: 本技能（合并后的统一技能）
 - **初始化方式**: `/填充配置` 命令——用户碎片感性输入，AI 结构化填充模板
@@ -88,7 +91,7 @@ license: MIT
 | 母题/意象系统 | 不存在，需新增 `motif_library/`（通用层）+ `motifs.md`（项目层） |
 | 世界质感 | 不存在，需新增 `world_texture.md` |
 | 角色原型库 | ✅ 已完成 `character_archetypes/`（通用层，45 个文件） |
-| 节奏模板 | 不存在，需新增 `pacing_template/`（通用层） |
+| 节奏模板 | ✅ 已完成 `pacing/`（通用层） |
 | 数据闭环 | 不存在，需新增自评+趋势+复盘流程 |
 | 多项目管理 | 不存在，需新增项目切换机制 |
 
@@ -132,7 +135,7 @@ license: MIT
 | `motifs.md` | 本书母题使用计划 | 项目层 | 选了哪些母题 + 定制意象 + 出场计划 |
 | `world.md` + `world_texture.md` | 舞台 + 触感 | 项目层 | 棋盘 + 棋盘的质感 |
 | `technique_library/` | 写作技巧 | **通用层** | 怎么追问 |
-| `pacing_template/` | 网文节奏套路 | **通用层** | 读者留存的工程学（黄金三章、章末钩子、爽点循环） |
+| `pacing/` | 网文节奏套路 | **通用层** | 读者留存的工程学（黄金三章、章末钩子、爽点循环） |
 
 **母题 vs 意象的关键区分：**
 - **母题（motif）**：可迁移的叙事模式（"归乡""复仇"）→ 通用层 `motif_library/`
@@ -227,7 +230,7 @@ license: MIT
 | `motif_library/` | 178 | motif-library | 中国神话母题索引(25)、神祗与英雄(19)、Indo-European(19)、钟敬文(15)、外国鉴赏辞典(18)、千面英雄(14)、中国民间故事类型(21)、金枝(14) + 其他 |
 | `character_archetypes/` | 45 | character-archetypes | Campbell(9)、中国神话(5)、民间故事(4)、Frazer(2)、水浒(13)、原有(3)、网文角色(9) |
 | `technique_library/` | 26 | technique-library | 原有(5) + 学术论文(11) + 场景串联(10) |
-| `pacing_template/` | 5 | pacing-template | 理论(4) + 真实数据基准(1)（14本小说分析） |
+| `pacing/` | 5 | pacing-template | 理论(4) + 真实数据基准(1)（14本小说分析） |
 | `style_library/` | 11 | style-library | 原有(5) + 巅峰榜epub深度风格(6) |
 
 **QMD 集成**：6 个 collection，376 文档已索引：
@@ -246,7 +249,7 @@ license: MIT
 - **Ingest 导入**：`python3 scripts/novel_ingest.py <文件> --type <类型> --write --sync-qmd`
 - **统一搜索**：`common.py` 中的 `unified_search()` 同时搜 plot_rag + QMD
 
-**节奏基准数据**：14本小说、700章分析，发现巅峰榜四种节奏模式（A低钩子反转/B高钩子问号/C零钩子内容驱动/D低对话描写）。详见 `pacing_template/real-data-pacing-benchmark.md`。
+**节奏基准数据**：14本小说、700章分析，发现巅峰榜四种节奏模式（A低钩子反转/B高钩子问号/C零钩子内容驱动/D低对话描写）。详见 `pacing/real-data-pacing-benchmark.md`。
 
 ## 真相文件系统
 
@@ -570,6 +573,7 @@ python3 scripts/novel_flow_executor.py revise-outline \
 | chapter_gate_check.py | `--auto-create-missing` | 自动创建缺失的门禁产物文件（占位模板） |
 | plot_rag_retriever.py query | `--min-score` | 最低得分阈值（默认0.0），低于此分数的结果被过滤 |
 | novel_flow_executor.py one-click | `--avg-chars-per-chapter` | 章均字数（默认2500，基于番茄巅峰榜基准） |
+| novel_flow_executor.py one-click/continue-write | `--platform {fanqie,zhihu}` | 目标平台（默认fanqie）。知乎盐选用 `--platform zhihu`，自动适配第一人称、段均15-20字、对话15-50%、单篇7000-9000字 |
 | style_fingerprint.py | 子命令模式 `extract` | 从位置参数改为子命令，`--project-root` 改为 required |
 | anti_resolution_guard.py | `--chapter int` | 从 `--chapter-file`（路径）改为 `--chapter`（整数） |
 
@@ -622,14 +626,14 @@ python3 scripts/novel_flow_executor.py continue-write \
 
 ### 节奏分析工作流
 
-从已下载的番茄小说（TXT/EPUB）中逐章提取节奏数据，填充 `pacing_template/` 通用层。
+从已下载的番茄小说（TXT/EPUB）中逐章提取节奏数据，填充 `pacing/` 通用层。
 
 **触发条件**：用户说"分析节奏""解析pacing"等，且有已下载的小说文件。
 
 **工具**：
 - 统一入口：`scripts/novel_ingest.py --type web_novel`（零token，纯脚本）
 - 详细流程与 pitfalls：`references/novel-ingest-pipeline.md`
-- 基准数据：`assets/pacing_template/real-data-pacing-benchmark.md`（v4, 14本分析）
+- 基准数据：`assets/pacing/real-data-pacing-benchmark.md`（v4, 14本分析）
 
 **四种巅峰榜节奏模式**：
 - A 低钩子反转（修仙/玄幻）：钩子率12-18%，power_up驱动，对话22-27%
@@ -645,7 +649,7 @@ python3 scripts/novel_flow_executor.py continue-write \
 
 ### 节奏模板扩充工作流（从热门作品反向提取）
 
-> 将真实热门小说的节奏模式提取为 `pacing_template/` 通用模板
+> 将真实热门小说的节奏模式提取为 `pacing/` 通用模板
 
 **触发条件**：用户说"分析节奏""提取节奏模板""拆解热门作品节奏"等。
 
@@ -655,7 +659,7 @@ python3 scripts/novel_flow_executor.py continue-write \
 3. **逐章标注节奏维度**：章节字数、情绪强度(1-10)、章末钩子类型、爽点位置与类型、付费点设计
 4. **提取节奏模式**：标注高潮/低谷章节编号，绘制情绪曲线
 5. **与现有模板对比**：对照 `pacing-curve.md`、`golden-three-chapters.md` 等现有模板
-6. **写入新模板**：创建 `pacing_template/<题材>-<风格>-pacing.md`
+6. **写入新模板**：创建 `pacing/<题材>-<风格>-pacing.md`
 
 **终止条件**：连续 10 章无新节奏模式发现 → 模式已稳定，停止分析。
 
@@ -679,7 +683,7 @@ python3 scripts/novel_flow_executor.py continue-write \
 | 经典叙事作品 | `motif_library/`（补充经典案例字段） |
 | 文学批评/哲学著作 | `philosophy.md` |
 | 番茄头部作品原文 | `style_library/` |
-| 网文套路指南 | `pacing_template/` |
+| 网文套路指南 | `pacing/` |
 
 详细管线见 `references/motif-extraction-pipeline.md`
 
@@ -750,12 +754,13 @@ chmod +x TomatoNovelDownloader-macOS_arm64-v2.4.9
 - **Hermes（我）**：统筹规划、需求分析、最终验收
 - **Claude Code**：代码实现、自测、推送 Git
 
-**流程**：
+**三阶段流程**：
 1. **多轮讨论**：Hermes 将 issues/需求发给 Claude Code，每轮传递完整上下文（Claude Code 无跨轮记忆）。讨论至无新内容产生。
 2. **项目规划**：将讨论结果转为可落地的项目规划（分优先级 P0-P3，含工时估算），与 Claude Code 确认。
-3. **分批实现**：按 P0→P1→P2→P3 顺序，每批完成后 ECC 回归测试。
-4. **推送 Git**：Claude Code 提交并推送到 `BillChen-29/novel-base`。
-5. **验收**：Hermes `git pull` 最新代码，运行 ECC 验证，用 `grep` 确认每处改动落地。
+3. **微步骤拆分**：将每个改动点拆分为 3-5 个微步骤，每步有明确验证方法。
+4. **分批实现**：按 P0→P1→P2→P3 顺序，每批完成后 ECC 回归测试。
+5. **推送 Git**：Claude Code 提交并推送到 `BillChen-29/novel-base`。
+6. **验收**：Hermes `git pull` 最新代码，运行 ECC 验证，用 `grep` 确认每处改动落地。
 
 **关键 Pitfall**：
 - Claude Code 会 `git stash` 但不 `pop`——每次 delegate_task 后检查 `git stash list`
@@ -763,10 +768,91 @@ chmod +x TomatoNovelDownloader-macOS_arm64-v2.4.9
 - 每轮 delegate_task 无记忆，需传完整上下文（前几轮讨论结果 + 代码位置 + 期望改动）
 - `delegate_task` 的 `acp_command` 参数在 CLI 2.1.119 无效，直接用默认方式
 - **用户工作流偏好**：讨论→规划→实现全交 Claude Code，我统筹+验收。不要自己生成代码，让 Claude Code 写。
+- **Claude Code 会额外修改文件**：验收时需检查 `git diff --stat` 确认改动范围。
+- **Claude Code 无法访问本地文件验证行号**：需本地 grep 二次确认行号后再传给 Claude Code。
+- **多轮审查模式**：第一轮出方案 → 第二轮审查（找遗漏/错误）→ 第三轮整合修正 → 实施。审查轮必须对照源码验证。
+
+**微步骤拆分模式**：大任务拆成 3-5 步微步骤，每步有明确验证方法。行号必须本地 grep 二次确认后再传给 Claude Code。
+
+**架构讨论模式**：讨论→规划→微步骤→实施→审查。架构变更需要多轮讨论直到无新内容产生，再进入实施阶段。
 
 详见 `references/script-fixes-2026-05-09.md`（修复记录）。
 
-## 18. 参考文档导航
+## 19. 数据层架构（V3 — 项目配置优先）
+
+**核心原则**：数据与代码分离，GitHub 是中间层。项目配置 > 平台预设 > 硬编码默认值。
+
+**V3 关键变更**（2026-05-09）：
+- `--platform` 变为可选（default=None），新增 `standalone` 选项
+- 项目级配置 `00_memory/platform_config.json` 作为最高优先级
+- 独立小说不需要套用任何平台模板
+- null 值语义：字段为 null 时回退到平台预设/默认值（支持部分覆盖）
+- 详见 `references/architecture-v3.md`
+
+```
+GitHub (代码 + 设计文档)
+├── scripts/           57 个 .py
+├── templates/         20 个模板
+├── references/        34 个 A 类设计文档
+└── .gitignore         排除 runtime-data/, assets/, zhihu-*.md
+
+Hermes Skill 目录 (运行时)
+├── [git pull] ← GitHub 代码 + 设计文档
+├── assets/            267 个通用层资产 (本地-only)
+└── runtime-data/      平台模板 + 自定义数据 (本地-only)
+
+Project 目录 (Claude Code 工作区)
+└── [git clone] ← GitHub (无数据)
+```
+
+**文件分类标准**：
+- **A 类（代码/设计文档）**：描述"系统如何工作" → 留在 GitHub
+- **B 类（运行时数据）**：描述"创作内容是什么" → 本地-only
+
+**B 类文件清单**（8 个）：
+- `references/genre-style-matrix.md` — 题材矩阵
+- `references/novel-pacing-analysis.md` — 节奏基准
+- 6 个测试/审计报告（时间敏感）
+
+### db-maintain 命令（设计中）
+
+```
+python3 novel_flow_executor.py db-maintain <子功能>
+├── ingest <file> --type web_novel    # 投喂故事 → 自动分析 → 生成平台模板
+├── add-platform --name xxx           # 手动添加平台预设
+├── list-platforms                    # 列出所有平台预设
+├── add-motif/add-character/add-technique/add-style  # 手动添加资产
+├── list-assets                       # 列出 assets 统计
+├── import-batch <dir>                # 批量导入
+├── validate                          # 校验格式
+└── export                            # 导出汇总
+```
+
+**投喂流程**：用户提供故事文件 → 自动分析（章均字数、对话占比、标点密度、段落长度、人称、钩子率）→ 推导平台模板参数 → 保存到 runtime-data/platforms/
+
+详见 `/tmp/db_maintain_design.md`（设计文档）。
+
+## 20. Pitfall（补充）
+
+### GitHub 隐私 Pitfall
+- **绝对不能上传知乎盐选数据**：故事文本、节奏基准、下载记录等有版权风险
+- **.gitignore 规则**：`references/zhihu-*.md`, `runtime-data/`
+- **Claude Code 会自行添加文件**：验收时必须 `git diff --stat` 检查新增文件
+
+### 知乎盐选 Pitfall
+- **动态字体加密**：每次加载映射不同，无法静态解码
+- **采集策略**：用户手动下载文本，不做自动化抓取
+- **Playwright 被检测**：知乎反爬会检测无头浏览器
+- **Chrome AppleScript 控制**：可以提取加密文本，但无法解码
+
+### Claude Code 工作流 Pitfall（补充）
+- **讨论→规划→实现全交 Claude Code**：MiMo 统筹+验收，不自己生成代码
+- **每轮 delegate_task 无记忆**：需传完整上下文（前几轮讨论 + 代码位置 + 期望改动）
+- **微步骤拆分**：大任务拆成 3-5 步微步骤，每步有明确验证方法
+- **行号验证**：Claude Code 无法访问本地文件验证行号，需本地 grep 二次确认
+- **多轮审查**：第一轮出方案 → 第二轮审查 → 第三轮整合修正 → 实施
+
+## 21. 参考文档导航（补充）
 
 根据你的场景选择对应文档：
 
@@ -810,7 +896,10 @@ chmod +x TomatoNovelDownloader-macOS_arm64-v2.4.9
 | 了解脚本修复记录（2026-05-09） | `references/script-fixes-2026-05-09.md` |
 | 了解知乎盐选节奏基准数据 | `references/zhihu-pacing-benchmark.md` |
 | 了解知乎盐选字体加密问题 | `references/zhihu-font-encryption.md` |
-| 了解知乎盐选平台支持计划 | `/tmp/zhihu_plan_final.md`（待实施） |
+| 了解知乎盐选平台支持（已完成） | `references/zhihu-pacing-benchmark.md` + commit 90a6b40 |
+| 了解知乎盐选节奏基准数据 | `references/zhihu-pacing-benchmark.md`（本地-only） |
+| 了解知乎盐选节奏分析（实测数据） | `references/zhihu-pacing-analysis.md`（本地-only） |
+| 了解 V3 架构设计（项目配置优先） | `references/architecture-v3.md` |
 | 了解小说工具对比 | `references/novel-tools-comparison.md` |
 | 了解多工具安装 | `references/multi-tool-install.md` |
 | 了解拆书工作流 | `references/book-extraction-workflow.md` |
