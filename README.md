@@ -1,8 +1,8 @@
-# Novel Claude AI - 小说创作大师
+# Novel Base - 小说创作大师
 
-> **版本**: v1.0.0
+> **版本**: v1.2.0
 > **状态**: 生产可用
-> **支持工具**: Claude Code / Codex / OpenCode / Gemini CLI / Antigravity
+> **支持工具**: Claude Code / Codex / OpenCode / Gemini CLI / Antigravity / Hermes Agent
 
 中文长篇小说全流程创作技能，覆盖从模糊想法到300万字成品的完整链路。
 
@@ -384,10 +384,27 @@ bash scripts/install-portable-skill.sh --tool claude-code --force
 | Codex | `bash scripts/install-portable-skill.sh --tool codex --force` |
 | Gemini CLI | `bash scripts/install-portable-skill.sh --tool gemini-cli --force` |
 | Antigravity | `bash scripts/install-portable-skill.sh --tool antigravity --force` |
+| Hermes Agent | `git clone https://github.com/BillChen-29/novel-base.git ~/.hermes/skills/creative/novel-base/` |
 
 ### 安装验证
 
 安装后在对话中输入 `/一键开书`，如果系统识别命令并提示参数，说明安装成功。
+
+### Hermes Agent 安装
+
+[Hermes Agent](https://github.com/NousResearch/hermes-agent) 用户可直接克隆仓库到 skill 目录：
+
+```bash
+git clone https://github.com/BillChen-29/novel-base.git ~/.hermes/skills/creative/novel-base/
+```
+
+安装后加载 skill：
+
+```
+skill_view(name='novel-base')
+```
+
+然后即可使用 `/一键开书`、`/继续写` 等命令。
 
 ### 手动安装
 
@@ -401,6 +418,25 @@ bash scripts/install-portable-skill.sh --tool claude-code --force
 2. Claude Code 额外需要复制 `.claude/agents/` 中的Agent定义文件。
 
 3. 安装目录命名建议：`novel-base`
+
+---
+
+## Hermes Agent 使用
+
+### 加载 Skill
+
+在 Hermes Agent 对话中输入：
+
+```
+skill_view(name='novel-base')
+```
+
+### 使用命令
+
+```
+/一键开书 书名=\"穿越大唐之我是皇帝\" 题材=历史 剧情种子=\"现代大学生穿越到唐朝成为太子\"
+/继续写 \"太子在朝堂上首次发言，引起百官震动\"
+```
 
 ---
 
