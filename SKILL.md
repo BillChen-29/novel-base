@@ -10,7 +10,7 @@ license: MIT
 
 > **合并说明：** 本技能由 `leenbj/novel-creator-skill`（v8.0，57个Python脚本）与自建 `novel-writing` skill 合并而成。通用层数据库（376个文档）、真相文件系统、番茄平台适配等均为自建扩展。后续维护独立于上游。
 >
-> **名称统一：** 远程仓库 `novel-base`（GitHub）、本地目录 `novel-creator-skill`（Hermes 注册路径不变）、SKILL.md `name: novel-base`。不再使用 `novel-claude-ai`。
+> **名称统一：** 远程仓库 `novel-base`（GitHub）、本地目录 `novel-base`（Hermes 注册路径 `~/.hermes/skills/creative/novel-base/`）、SKILL.md `name: novel-base`。不再使用 `novel-claude-ai`。
 
 ## 用户当前状态
 
@@ -30,17 +30,17 @@ license: MIT
 | 名称 | 位置 | 角色 |
 |---|---|---|
 | `novel-base` | GitHub `BillChen-29/novel-base` | 远程仓库名（统一名称） |
-| `novel-creator-skill` | `~/.hermes/skills/novel-creator-skill/` | 本地代码+数据目录（Hermes 注册路径，保持不变） |
+| `novel-base` | `~/.hermes/skills/creative/novel-base/` | 本地代码+数据目录（Hermes 注册路径） |
 | `novel-base` | SKILL.md `name:` 字段 | frontmatter 声明名 |
 
 **已废弃名称**：`novel-claude-ai`（旧 frontmatter name）、`novel-writing`（旧 Hermes skill，已合并到本文件）。
 
 **分工**：Claude Code 改代码 → push 到 `novel-base`（GitHub）→ Hermes `git pull` 同步。数据层（assets/、00_memory/、QMD）仅本地维护，不进 git。
 
-## novel-creator-skill 探针结果（Phase 0 已验证）
+## novel-base 探针结果（Phase 0 已验证）
 
 **仓库：** 原 `leenbj/novel-creator-skill` → 已 fork 到 `BillChen-29/novel-base`
-**本地目录：** `~/.hermes/skills/novel-creator-skill/`
+**本地目录：** `~/.hermes/skills/creative/novel-base/`
 **SKILL.md 声明名：** `novel-base`（统一后）
 **环境：** Python 3.9+，零外部依赖（纯标准库），10 个回归测试全部通过
 
