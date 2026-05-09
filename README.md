@@ -737,3 +737,10 @@ python3 scripts/benchmark_novel_flow.py --project-root ./我的小说 --rounds 5
 ## License
 
 MIT License
+
+---
+
+## 致谢
+
+- [leenbj/novel-creator-skill](https://github.com/leenbj/novel-creator-skill) — 原始项目（v8.0，57个Python脚本）
+- 作者：王波（[leenbj](https://github.com/leenbj)）
