@@ -335,9 +335,9 @@ class ContextExtractor:
         # 提取风格要素
         style_info = {}
         
-        # 解析叙事视角（兼容 "视角：" 和旧版 "叙述视角：" 两种格式）
+        # 解析叙事视角（兼容 "视角：" "人称：" 和旧版 "叙述视角：" 三种格式）
         perspective_match = (
-            re.search(r'(?<!叙述)视角[：:]\s*(.+)', content)
+            re.search(r'(?:视角|人称)[：:]\s*(.+)', content)
             or re.search(r'叙述视角[：:]\s*(.+)', content)
         )
         if perspective_match:

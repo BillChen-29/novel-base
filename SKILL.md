@@ -14,7 +14,7 @@ license: MIT
 
 ## 用户当前状态
 
-- **目标平台**: 番茄小说（已确认）
+- **目标平台**: 番茄小说（已确认）+ 知乎盐选（2026-05-09 新增，`--platform zhihu`，待实施）
 - **偏好类型**: 都市悬疑（已确认，但系统设计为通用，不绑死一个题材）
 - **写作工具**: 本技能（合并后的统一技能）
 - **初始化方式**: `/填充配置` 命令——用户碎片感性输入，AI 结构化填充模板
@@ -563,6 +563,16 @@ python3 scripts/novel_flow_executor.py revise-outline \
 
 ## 9. 脚本入口
 
+### 新增参数（2026-05-09 修复）
+
+| 脚本 | 新增参数 | 说明 |
+|------|---------|------|
+| chapter_gate_check.py | `--auto-create-missing` | 自动创建缺失的门禁产物文件（占位模板） |
+| plot_rag_retriever.py query | `--min-score` | 最低得分阈值（默认0.0），低于此分数的结果被过滤 |
+| novel_flow_executor.py one-click | `--avg-chars-per-chapter` | 章均字数（默认2500，基于番茄巅峰榜基准） |
+| style_fingerprint.py | 子命令模式 `extract` | 从位置参数改为子命令，`--project-root` 改为 required |
+| anti_resolution_guard.py | `--chapter int` | 从 `--chapter-file`（路径）改为 `--chapter`（整数） |
+
 | 脚本 | 用途 |
 |------|------|
 | `python3 scripts/novel_flow_executor.py one-click` | `/一键开书` |
@@ -732,7 +742,31 @@ chmod +x TomatoNovelDownloader-macOS_arm64-v2.4.9
 | 更新频率 | 日更最佳 |
 | 模式 | 免费阅读，广告分成 |
 
-## 11. 参考文档导航
+## 17. Claude Code 协作工作流
+
+当需要修改 novel-base 代码时，采用以下工作流：
+
+**角色分工**：
+- **Hermes（我）**：统筹规划、需求分析、最终验收
+- **Claude Code**：代码实现、自测、推送 Git
+
+**流程**：
+1. **多轮讨论**：Hermes 将 issues/需求发给 Claude Code，每轮传递完整上下文（Claude Code 无跨轮记忆）。讨论至无新内容产生。
+2. **项目规划**：将讨论结果转为可落地的项目规划（分优先级 P0-P3，含工时估算），与 Claude Code 确认。
+3. **分批实现**：按 P0→P1→P2→P3 顺序，每批完成后 ECC 回归测试。
+4. **推送 Git**：Claude Code 提交并推送到 `BillChen-29/novel-base`。
+5. **验收**：Hermes `git pull` 最新代码，运行 ECC 验证，用 `grep` 确认每处改动落地。
+
+**关键 Pitfall**：
+- Claude Code 会 `git stash` 但不 `pop`——每次 delegate_task 后检查 `git stash list`
+- Claude Code 不会完全实现所有修改——要求 5 处可能只落地 3 处，必须 grep 验证
+- 每轮 delegate_task 无记忆，需传完整上下文（前几轮讨论结果 + 代码位置 + 期望改动）
+- `delegate_task` 的 `acp_command` 参数在 CLI 2.1.119 无效，直接用默认方式
+- **用户工作流偏好**：讨论→规划→实现全交 Claude Code，我统筹+验收。不要自己生成代码，让 Claude Code 写。
+
+详见 `references/script-fixes-2026-05-09.md`（修复记录）。
+
+## 18. 参考文档导航
 
 根据你的场景选择对应文档：
 
@@ -765,8 +799,18 @@ chmod +x TomatoNovelDownloader-macOS_arm64-v2.4.9
 | 了解节奏分析流程 | `references/rhythm-analysis-workflow.md` |
 | 了解番茄数据采集 | `references/fanqie-scraping.md` |
 | 了解技法库结构 | `references/technique-library-structure.md` |
+| 了解集成测试结果 | `references/integration-test-findings-2026-05.md` |
 | 了解脚本审计报告 | `references/script-audit-2026-05.md` |
+| 了解集成测试报告（2026-05） | `references/integration-test-2026-05.md` |
+| 了解知乎内容抓取方案 | `references/zhihu-content-extraction.md` |
+| 了解集成测试结果（2026-05） | `references/integration-test-2026-05.md` |
+| 了解知乎盐选下载工具 | `references/zhihu-salt-downloads.md` |
+| 了解集成测试发现（CLI语法/pitfalls） | `references/integration-test-findings-2026-05.md` |
 | 了解 InkOS 分析 | `references/inkos-ai-novel-generator-analysis.md` |
+| 了解脚本修复记录（2026-05-09） | `references/script-fixes-2026-05-09.md` |
+| 了解知乎盐选节奏基准数据 | `references/zhihu-pacing-benchmark.md` |
+| 了解知乎盐选字体加密问题 | `references/zhihu-font-encryption.md` |
+| 了解知乎盐选平台支持计划 | `/tmp/zhihu_plan_final.md`（待实施） |
 | 了解小说工具对比 | `references/novel-tools-comparison.md` |
 | 了解多工具安装 | `references/multi-tool-install.md` |
 | 了解拆书工作流 | `references/book-extraction-workflow.md` |
@@ -839,22 +883,111 @@ python3 scripts/editorial_team_manager.py need-human --project-root <路径>
 
 | 脚本 | 功能 |
 |------|------|
-| `novel_ingest.py` | 统一入口：文件→用户标记类型→分析→入库→QMD同步（零token） |
+## 工作流：与 Claude Code 协作
 
-**用法**：
+当需要对 novel-base 做代码修改时，采用以下流程：
+1. **我统筹规划**：讨论方案、制定计划、确认优先级
+2. **Claude Code 实现**：通过 delegate_task 派发代码任务，每轮传完整上下文
+3. **ECC 自验**：Claude Code 推 git 前必须跑 `test_novel_flow_executor.py` 全部通过
+4. **我验收**：pull 最新代码，grep 验证每处改动是否真正落地
+5. **Push**：确认无误后由 Claude Code 推送
+
+**重要**：delegate_task 每次是全新会话，无跨轮记忆。多轮讨论时我做 orchestrator，把前轮结论打包进 context。
+
+### Pitfall: Claude Code git stash 忘记 pop
+Claude Code 在测试时可能 `git stash`，但忘记 `git stash pop`。验收时必须检查 `git stash list`。
+
+### Pitfall: Patch 工具静默失败
+用 patch() 批量修文件时，old_string 不匹配不会报错。每次批量 patch 后必须用 grep 验证每个改动是否真正落地。
+
+## 已知 Issues 和测试报告
+
+集成测试报告见 `references/integration-test-report-2026-05-09.md`。
+
+关键遗留问题：
+- `--draft-provider template` 生成器质量差（零故事信息，纯占位符）
+- `chapter_gate_check` 需要预生成门禁产物（不能独立调用）
+- #2 跨章一致性检查需新建脚本（5h+）
+- #8 CJK 字数统计：count_chars 已导入但未启用（与 template 生成器不兼容）
+
+## 使用方法
+
+### 快速初始化
 ```bash
-python3 scripts/novel_ingest.py <文件> --type <类型> [--write] [--sync-qmd] [--force]
+python3 scripts/one-click_novel_flow.py --title "小说标题" --genre "题材" --target-words 1000000
 ```
 类型：`web_novel` / `motif` / `character` / `technique` / `style`
 
 详细用法见 `references/novel-ingest-pipeline.md`
 
-## 14. Pitfall
+## 14. 集成测试发现（2026-05-09）
+
+> 40章/114k字完整测试验证，以下为实测发现的脚本问题。
+
+### P0 阻断性问题
+
+| # | 脚本 | 问题 | 状态 |
+|---|------|------|------|
+| 1 | chapter_gate_check.py | 单独调用时6个产物文件必须预存在，否则报"文件不存在"。需 `--auto-create-missing` | 待修复 |
+| 2 | 无对应脚本 | 跨章节一致性检查缺失（角色性别漂移、设定规则违反无法检测） | 待新建 |
+
+### P1 功能问题
+
+| # | 脚本 | 问题 | 状态 |
+|---|------|------|------|
+| 3 | novel_flow_executor.py | `generate_draft_text()` 模板模式生成通用填充，不读 novel_plan/character_tracker | 待修复 |
+| 4 | plot_rag_retriever.py | `query()` 索引构建成功但查询返回0（触发条件+评分阈值双重问题） | 待修复 |
+| 5 | novel_flow_executor.py | `init_project_files()` 硬编码 VOL1_END=120，忽略 target_words。公式应为 `target_words // 2500`（番茄巅峰榜基准） | 待修复 |
+
+### P2 代码质量
+
+| # | 脚本 | 问题 | 状态 |
+|---|------|------|------|
+| 6 | 多个脚本 | CLI参数不统一（style_fingerprint 用位置参数，anti_resolution 用 --chapter-file，其余用 --chapter） | 待统一 |
+| 7 | novel_flow_executor.py | `AI_PHRASE_BLACKLIST` 漏检"微微""深吸一口气" | 待补充 |
+| 8 | common.py | `evaluate_quality()` 未调用 `count_chars()`，直接 `len(re.sub(...))` 含标点 | 待修复 |
+
+### P3 流水线完善
+
+| # | 脚本 | 问题 | 状态 |
+|---|------|------|------|
+| 9 | novel_flow_executor.py | chapter_observer/reflector 未集成到 continue-write 流程 | 待集成 |
+| 10 | novel_flow_executor.py | `--auto-graph-update` 实际默认 True（非 False），缺 dry-run 和计数反馈 | 待增强 |
+
+### 关键 Pitfall
+
+- **大纲计算公式**：`target_words // 3500` 错误，应为 `// 2500`（番茄巅峰榜章均字数）。推荐榜 2355，新书榜 2610，巅峰榜 2516
+- **图谱自动更新**：`--auto-graph-update` 默认是 True（开启），不是 False。v1 分析曾误判
+- **RAG 双重零结果路径**：(A) `analyze_query_trigger()` 关键词未命中时跳过检索 (B) `retrieve()` 的 `> 0` 阈值过滤掉所有无交集结果
+- **字数统计陷阱**：`count_chars(cjk_only)` 函数存在但 `evaluate_quality()` 没调用它，用的是 `len(re.sub(r"\s+","",body))`（含标点+英文）
+- **Claude Code ACP 调用**：`claude --acp --stdio` 在 CLI 2.1.119 不支持，`delegate_task` 的 `acp_command` 参数无效
+
+### 完整修复方案
+
+详见 `/Users/chenzefeng/.hermes/projects/novel-test/project_plan_final.md`
+
+## 15. Pitfall
 
 ### 流程 Pitfall
 - `novel_flow_executor.py continue-write` 的完整链路依赖 LLM API 调用，本地测试时需要 mock 或跳过写作步骤
 - 门禁检查是纯本地的（正则+文件校验），不走 API，可独立测试
 - RAG 索引构建需要至少 1 个已写章节，空项目时 `build` 会返回空索引
+- **模板写作模式质量极差**：`--draft-provider template` 生成完全通用的模板文本，不含任何故事相关内容（角色名、地点、情节均未使用）。实际使用必须配合 LLM 或手动写作
+- **门禁产物必须预生成**：`chapter_gate_check.py` 单独调用时，6个产物文件不存在就报"文件不存在"。已修复：新增 `--auto-create-missing` 参数
+- **大纲计算已修复但仍有限制**：`one-click` 的 VOL1_END/VOL2 现已动态计算（基于 target_words/2500），但 2500 是番茄巅峰榜基准，其他平台需手动调整
+- **continue-write 测试脆弱**：3 个 continue-write 测试容易因模板文本触发 anti_resolution_guard 误报而失败，这是已有问题而非新引入的
+- **Claude Code 会 stash 改动**：当 delegate_task 中的 Claude Code 在调试时执行 `git stash`，改动会从工作目录消失。检查 `git stash list` 可以找回
+- **continue-write --draft-provider template 生成完全通用模板**：不含任何故事相关内容（角色名、地点、情节），只是 query 文本的扩展填充。不能用于实际写作，只能用于测试流水线
+- **chapter_gate_check 单独调用需 6 个预生成产物**：直接调用 gate_check 时，memory_update.md / consistency_report.md / style_calibration.md / copyedit_report.md / publish_ready.md / quality_report.md 必须预先存在，否则报"文件不存在"。用 `--auto-create-missing` flag 可自动创建占位文件（2026-05 新增）
+- **RAG query 返回 0 的两个路径**：(A) `analyze_query_trigger()` 查询未命中角色名/关键词且 <18字时跳过检索；(B) 评分公式 `score > 0` 阈值过滤掉所有得分为0的候选。用 `--min-score 0.0` 可放宽
+- **one-click 大纲卷计算曾硬编码**：VOL1_END=120 不随 target_words 变化（已修复为动态计算：target_words / 2500）
+- **evaluate_quality 的 char_count 与模板生成器的统计方式不一致**：evaluate_quality 用 `len(pure)`（去空白后所有字符），count_chars() 函数可做 CJK-only 统计但需同步修改模板生成器阈值，否则 3 个 continue-write 测试失败
+- **模板文本可能触发 anti_resolution_guard 误报**：模板生成的通用文本中可能包含 forbidden_reveals 列表中的词（如"终极BOSS身份"），导致门禁失败
+- **style_fingerprint.py CLI 已重构为子命令模式**：从位置参数改为 `extract` 子命令，--project-root 从 optional 改为 required
+- **anti_resolution_guard.py --chapter-file 改为 --chapter int**：文件路径由脚本内部从章节号推导
+- **RAG build 成功但 query 返回 0 结果**：索引摘要质量可能不足，BM25 无法匹配。待调查
+- RAG 索引构建需要至少 1 个已写章节，空项目时 `build` 会返回空索引
+- **CLI 参数格式不统一**：各脚本子命令和参数名不一致。outline_anchor_manager 用 `advance --to-chapter`，anti_resolution_guard 用 `check --chapter-file`，style_fingerprint 用 `--profile-name` + 位置参数 files，cross_agent_reviewer 需要 `--chapter` 和 `--chapter-file` 两个参数。详见 `references/integration-test-findings-2026-05.md`
 - **Python 版本**：Hermes venv 使用 Python 3.11.15，PEP 604 语法（`str | None`）可用
 - **中文变量名**：所有脚本变量名必须用 ASCII 英文，中文变量名在某些 Python 版本报 SyntaxError
 - **输出格式不一致**：`style_fingerprint.py` 的 JSON 输出缺少 `ok` 字段，下游消费者可能依赖此字段
@@ -880,7 +1013,34 @@ python3 scripts/novel_ingest.py <文件> --type <类型> [--write] [--sync-qmd] 
 - **Hermes skill的数据库管理设计原则**：用户手动标记文本类型，脚本按类型路由分析，不做自动分类
 - **style_library 清理策略**：两套命名时保留更大的版本，但需检查互补内容
 
-## 15. 技能安装说明
+### 集成测试 Pitfall（2026-05 新增）
+- **template 字数统计不兼容 CJK-only**：`generate_draft_text()` 用 `len(re.sub(r'\s+', '', text))` 统计（含标点），`count_chars()` 只计 CJK 字符。改一边不改另一边会导致门禁阈值不匹配，3 个 continue-write 测试失败。
+- **大纲卷计算硬编码**：`init_project_files()` 中 `VOL1_END="120"` 是硬编码的，不跟 target_words 联动。已修复为动态计算。
+- **RAG 查询静默跳过**：`analyze_query_trigger()` 在查询不匹配预设关键词时返回 `should_trigger=False`，导致查询返回空结果而无任何提示。已加 >=8 字默认触发。
+- **门禁产物必须预生成**：`chapter_gate_check.py` 直接调用时需要 6 个产物文件存在。已加 `--auto-create-missing`。
+- **Claude Code 会 stash git 变更**：subagent 调试时会 `git stash`，完成后不 pop。需手动 `git stash pop` 恢复。
+- **Claude Code 不会完全实现请求的修改**：要求 5 处修改可能只落地 3 处。每次实现后必须用 `grep` 验证每处改动。
+
+## 15. 集成测试结果（2026-05-09）
+
+通过 40 章小说全流程测试，12/17 脚本验证通过。关键修复已推送到 GitHub。
+详见 `references/integration-test-findings-2026-05.md`。
+
+**已修复的问题**：
+- 门禁产物预生成（`--auto-create-missing`）
+- 大纲卷计算动态化（基于 target_words / 2500）
+- RAG 查询精度（`--min-score` + BM25 回退）
+- CLI 标准化（style_fingerprint 子命令化, anti_resolution_guard `--chapter` int）
+- AI 词表扩展（微微、深吸一口气等）
+- 真相系统集成（observer prompt 自动生成）
+- 图谱更新反馈（graph_update_count + dry-run）
+
+**已知遗留**：
+- template 模式内容质量差（通用模板，不读 novel_plan.md）
+- 跨章节一致性检查缺失（需新建脚本）
+- CJK 字数统计与 template 生成器不兼容（count_chars 已导入未启用）
+
+## 16. 技能安装说明
 
 本仓库同时是一个 Hermes Agent skill。`SKILL.md` 作为 skill 文件，安装后在对话中触发 `/一键开书`、`继续写` 等命令。安装脚本支持 Claude Code、Codex、OpenCode、Gemini CLI、Antigravity 五个工具。
 

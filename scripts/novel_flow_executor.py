@@ -81,6 +81,34 @@ PACING_MODE_PROFILES: Dict[str, Any] = {
     "immersive": {"min_chars": 4500, "beat_pacing_depth": "immersive", "max_skip_density": 0.15},
 }
 
+PLATFORM_PRESETS: Dict[str, Dict[str, Any]] = {
+    "fanqie": {
+        "avg_chars_per_chapter": 2500,
+        "default_min_chars": 2500,
+        "default_min_paragraphs": 8,
+        "default_min_dialogue_ratio": 0.03,
+        "default_max_dialogue_ratio": 0.7,
+        "default_min_sentences": 8,
+        "default_beat_count": 4,
+        "pacing_mode": "standard",
+        "narrative_voice": "third_person",
+        "style_perspective": "第三人称有限",
+    },
+    "zhihu": {
+        "avg_chars_per_chapter": 9000,
+        "default_min_chars": 7000,
+        "default_min_paragraphs": 30,
+        "default_min_dialogue_ratio": 0.15,
+        "default_max_dialogue_ratio": 0.50,
+        "default_min_sentences": 30,
+        "default_beat_count": 6,
+        "pacing_mode": "immersive",
+        "narrative_voice": "first_person",
+        "style_perspective": "第一人称",
+    },
+}
+
+
 # 概括跳过词正则（与 chapter_synthesizer.py 保持同步）
 _FLOW_PACING_SKIP_PATTERNS = [
     r"(?:此后|随后|转眼|一晃|没过多久|几天后|数日后|几个月后|数月后|又过了)",
@@ -768,7 +796,8 @@ def init_project_files(project_root: Path, args: argparse.Namespace, overwrite: 
     now = dt.datetime.now().strftime("%Y-%m-%d")
 
     # Dynamic volume calculation based on target_words (番茄节奏基准: 章均2500字)
-    _avg_chars = 2500
+    _platform = getattr(args, "platform", "fanqie") or "fanqie"
+    _avg_chars = PLATFORM_PRESETS.get(_platform, PLATFORM_PRESETS["fanqie"])["avg_chars_per_chapter"]
     _tw = int(getattr(args, "target_words", 0) or 0)
     _total_ch = max(10, _tw // _avg_chars) if _tw > 0 else 40
     _vol_size = max(5, _total_ch // 2)
@@ -828,7 +857,7 @@ def init_project_files(project_root: Path, args: argparse.Namespace, overwrite: 
         "STATUS": "待设定",
         "TIME_SYSTEM_DESCRIPTION": "以章节推进为主时间轴，可按天/周补充细化。",
         "POWER_SYSTEM_DESCRIPTION": "从初阶到终阶，逐步揭示规则与限制。",
-        "PERSPECTIVE": "第三人称有限",
+        "PERSPECTIVE": "第一人称" if getattr(args, "platform", "fanqie") == "zhihu" else "第三人称有限",
         "DISTANCE": "中等",
         "TENSE": "过去式",
         "AVG_SENTENCE_LENGTH": "24",
@@ -1870,6 +1899,20 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
     args.pacing_mode = pacing_mode
     pacing_profile = PACING_MODE_PROFILES[pacing_mode]
     args.min_chars = max(args.min_chars, int(pacing_profile["min_chars"]))
+    # === 平台预设覆盖 ===
+    platform_val = getattr(args, "platform", "fanqie") or "fanqie"
+    if platform_val not in PLATFORM_PRESETS:
+        platform_val = "fanqie"
+    platform_preset = PLATFORM_PRESETS[platform_val]
+
+    if platform_val == "zhihu":
+        args.min_chars = max(args.min_chars, platform_preset["default_min_chars"])
+        args.min_paragraphs = max(args.min_paragraphs, platform_preset["default_min_paragraphs"])
+        args.min_dialogue_ratio = max(args.min_dialogue_ratio, platform_preset["default_min_dialogue_ratio"])
+        args.max_dialogue_ratio = min(args.max_dialogue_ratio, platform_preset["default_max_dialogue_ratio"])
+        args.min_sentences = max(args.min_sentences, platform_preset["default_min_sentences"])
+        args.beat_count = max(args.beat_count, platform_preset["default_beat_count"])
+    # === 平台预设覆盖结束 ===
     chapter_path: Optional[Path] = None
     original_chapter_path: Optional[Path] = None
     chapter_hash_before = ""
@@ -2467,7 +2510,9 @@ def one_click(args: argparse.Namespace) -> Dict[str, object]:
     # 初始化大纲锚点：调用 init 子命令，自动解析 novel_plan.md 构建 volumes
     outline_anchors_file = project_root / "00_memory" / "outline_anchors.json"
     if not outline_anchors_file.exists():
-        target_chapters = max(10, int(getattr(args, "target_words", 0) or 0) // 2500)
+        _platform_oc = getattr(args, "platform", "fanqie") or "fanqie"
+        _avg_ch_oc = PLATFORM_PRESETS.get(_platform_oc, PLATFORM_PRESETS["fanqie"])["avg_chars_per_chapter"]
+        target_chapters = max(10, int(getattr(args, "target_words", 0) or 0) // _avg_ch_oc)
         run_python(
             SCRIPT_DIR / "outline_anchor_manager.py",
             ["init", "--project-root", str(project_root),
@@ -2772,6 +2817,13 @@ def parse_args() -> argparse.Namespace:
     p_one.add_argument("--core-taboo", default="", help="核心禁区（如：不写血腥/不写恋童）")
     p_one.add_argument("--overwrite", action="store_true")
     p_one.add_argument("--emit-json")
+    p_one.add_argument(
+        "--platform",
+        choices=["fanqie", "zhihu"],
+        default="fanqie",
+        dest="platform",
+        help="目标发布平台（默认 fanqie）。知乎盐选使用 --platform zhihu",
+    )
 
     p_brain = sub.add_parser("brainstorm", help="执行 /脑洞建图（交互式脑洞引导）")
     p_brain.add_argument("--project-root", required=True)
@@ -2879,6 +2931,13 @@ def parse_args() -> argparse.Namespace:
                         help="禁用风格基准自动更新")
     p_cont.add_argument("--style-update-interval", type=int, default=10,
                         help="风格更新章节间隔，默认 10")
+    p_cont.add_argument(
+        "--platform",
+        choices=["fanqie", "zhihu"],
+        default="fanqie",
+        dest="platform",
+        help="目标发布平台（默认 fanqie）。知乎盐选使用 --platform zhihu",
+    )
     p_cont.add_argument("--auto-truth-update", dest="auto_truth_update",
                         action="store_true", default=True,
                         help="门禁通过后自动生成真相更新 prompt（默认开启）")
