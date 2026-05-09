@@ -12,6 +12,7 @@ import datetime as dt
 import hashlib
 import json
 import re
+import sys
 from collections import Counter
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
@@ -19,7 +20,7 @@ from typing import Dict, List, Optional, Tuple
 CJK_RE = re.compile(r"[\u4e00-\u9fff]")
 SENTENCE_SPLIT_RE = re.compile(r"[。！？!?]+")
 PARA_SPLIT_RE = re.compile(r"\n\s*\n+")
-DIALOGUE_RE = re.compile(r"[“\"]([^\"”]{1,2000})[”\"]|「([^」]{1,2000})」|『([^』]{1,2000})』")
+DIALOGUE_RE = re.compile(r'"[^"]{1,2000}"|「[^」]{1,2000}」|『[^』]{1,2000}』')
 
 FIRST_PERSON = {"我", "我们", "咱", "咱们"}
 THIRD_PERSON = {"他", "她", "他们", "她们", "它", "它们"}
@@ -82,8 +83,8 @@ def dialogue_ratio(text: str, total_cjk_chars: int) -> float:
     for m in DIALOGUE_RE.finditer(text):
         parts = [g for g in m.groups() if g]
         if not parts:
-            continue
-        dialogue_chars += sum(len(CJK_RE.findall(part)) for part in parts)
+            # Non-capturing match (e.g., regular quotes) — count the full match
+            dialogue_chars += len(CJK_RE.findall(m.group(0)))
     return round(dialogue_chars / total_cjk_chars, 4)
 
 
@@ -212,7 +213,8 @@ def render_profile_md(profile_name: str, sample_paths: List[str], metrics: Dict[
 
 - 生成时间：{metrics['generated_at']}
 - 样章数量：{len(sample_paths)}
-- 样章路径：\n  - """ + "\n  - ".join(sample_paths) + f"""
+- 样章路径：
+  - """ + "\n  - ".join(sample_paths) + f"""
 
 ## 核心指标
 - 总中文字符：{metrics['total_cjk_chars']}
@@ -241,7 +243,7 @@ def render_profile_md(profile_name: str, sample_paths: List[str], metrics: Dict[
 ## 写作动作建议
 1. 句长控制：以 {metrics['avg_sentence_chars']} 字为中枢，上下浮动不超过 30%。
 2. 对话比例：保持在 {metrics['dialogue_ratio']} 附近，偏离时优先修正文体而非剧情。
-3. 视角一致：默认按“{metrics['perspective_label']}”写作，切视角必须给章节理由。
+3. 视角一致：默认按"{metrics['perspective_label']}"写作，切视角必须给章节理由。
 """
 
 
@@ -259,7 +261,7 @@ def update_global_index(index_file: Path, profile_name: str, profile_path: Path,
         filtered.append(ln)
 
     if not filtered or not filtered[0].startswith("# "):
-        filtered = ["# 全局风格库索引", "", "> 由 style_fingerprint.py 自动维护。按“最新更新时间”降序使用。", ""] + filtered
+        filtered = ["# 全局风格库索引", "", "> 由 style_fingerprint.py 自动维护。按\u201c最新更新时间\u201d降序使用。", ""] + filtered
 
     filtered.append(marker)
     index_file.write_text("\n".join(filtered).rstrip() + "\n", encoding="utf-8")
@@ -303,7 +305,6 @@ def update_project_files(
     outputs["project_profile"] = str(profile_file)
 
     anchor_file = project_root / "00_memory" / "style_anchor.md"
-    # 写入 novel_chapter_writer.py 解析所需的三个字段（视角/句式/对话）
     _m = metrics or {}
     _dialogue_ratio = float(_m.get("dialogue_ratio", 0.0) or 0.0)
     _avg_sentence = _m.get("avg_sentence_chars", 0)
@@ -336,36 +337,26 @@ def update_project_files(
     return outputs
 
 
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="提取样章风格并沉淀为跨项目可复用风格档案")
-    parser.add_argument("files", nargs="+", help="样章文件路径（支持多个）")
-    parser.add_argument("--profile-name", required=True, help="风格名称，例如：番茄快节奏玄幻")
-    parser.add_argument("--project-root", help="小说项目根目录；提供后会同步写入项目知识库")
-    parser.add_argument(
-        "--global-library",
-        default=str(Path.home() / ".codex" / "skills" / "novel-base" / "assets" / "style_library"),
-        help="全局风格库存储目录",
-    )
-    parser.add_argument("--top-n", type=int, default=12, help="高频短语数量")
-    parser.add_argument("--emit-json", help="额外导出 JSON 结果路径")
-    return parser.parse_args()
+# ── 子命令 ────────────────────────────────────────────────────────
 
-
-def main() -> int:
-    args = parse_args()
-
+def cmd_extract(args: argparse.Namespace) -> int:
+    """从样章提取风格并沉淀为跨项目可复用风格档案。"""
     sample_paths = [Path(p).expanduser().resolve() for p in args.files]
     text, missing = read_texts(sample_paths)
 
     if missing:
-        print("以下样章不存在：")
-        for m in missing:
-            print(f"- {m}")
-        return 2
+        print(json.dumps({
+            "ok": False,
+            "error": "以下样章不存在: " + ", ".join(missing),
+        }, ensure_ascii=False, indent=2))
+        return 1
 
     if not text.strip():
-        print("输入文本为空，无法提取风格。")
-        return 3
+        print(json.dumps({
+            "ok": False,
+            "error": "输入文本为空，无法提取风格。",
+        }, ensure_ascii=False, indent=2))
+        return 1
 
     metrics = collect_metrics(text, args.top_n)
     profile_name = args.profile_name.strip()
@@ -386,9 +377,8 @@ def main() -> int:
         "global_index": str(index_file),
     }
 
-    if args.project_root:
-        project_root = Path(args.project_root).expanduser().resolve()
-        outputs.update(update_project_files(project_root, profile_name, slug, md, metrics))
+    project_root = Path(args.project_root).expanduser().resolve()
+    outputs.update(update_project_files(project_root, profile_name, slug, md, metrics))
 
     result = {
         "ok": True,
@@ -406,6 +396,47 @@ def main() -> int:
 
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="提取样章风格并沉淀为跨项目可复用风格档案")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    p_extract = sub.add_parser("extract", help="从样章提取风格特征")
+    p_extract.add_argument("files", nargs="+", help="样章文件路径（支持多个）")
+    p_extract.add_argument("--profile-name", required=True, help="风格名称，例如：番茄快节奏玄幻")
+    p_extract.add_argument("--project-root", required=True, help="小说项目根目录")
+    p_extract.add_argument(
+        "--global-library",
+        default=str(Path.home() / ".codex" / "skills" / "novel-base" / "assets" / "style_library"),
+        help="全局风格库存储目录",
+    )
+    p_extract.add_argument("--top-n", type=int, default=12, help="高频短语数量")
+    p_extract.add_argument("--emit-json", help="额外导出 JSON 结果路径")
+
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+
+    dispatch = {"extract": cmd_extract}
+    handler = dispatch.get(args.cmd)
+    if handler is None:
+        print(json.dumps({
+            "ok": False,
+            "error": f"unknown_command: {args.cmd}",
+        }, ensure_ascii=False, indent=2))
+        return 1
+
+    try:
+        return handler(args)
+    except Exception as exc:
+        print(json.dumps({
+            "ok": False,
+            "error": repr(exc),
+        }, ensure_ascii=False, indent=2))
+        return 1
 
 
 if __name__ == "__main__":

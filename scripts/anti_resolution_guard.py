@@ -157,9 +157,19 @@ def _check_quota_abc(text: str, cfg: AntiResConfig) -> Dict[str, Any]:
 
 def cmd_check(args: argparse.Namespace, cfg: AntiResConfig) -> Dict[str, Any]:
     root = Path(args.project_root).expanduser().resolve()
-    chapter_path = Path(args.chapter_file)
-    if not chapter_path.is_absolute():
-        chapter_path = root / chapter_path
+    # Derive chapter file path from chapter number
+    chapter_no = args.chapter
+    manuscript_dir = root / "03_manuscript"
+    chapter_path = None
+    if manuscript_dir.exists():
+        for f in sorted(manuscript_dir.glob("*.md")):
+            # Extract chapter number from filename (e.g., "第001章_xxx.md" -> 1)
+            m = re.search(r"第(\d+)章", f.name)
+            if m and int(m.group(1)) == chapter_no:
+                chapter_path = f
+                break
+    if chapter_path is None:
+        return {"ok": False, "command": "check", "error": f"未找到章节号 {chapter_no} 对应的文件 (搜索目录: {manuscript_dir})"}
 
     if not chapter_path.exists():
         return {"ok": False, "command": "check", "error": f"章节文件不存在: {chapter_path}"}
@@ -270,7 +280,7 @@ def parse_args() -> argparse.Namespace:
 
     s = sub.add_parser("check", help="校验章节是否违反反向刹车规则")
     s.add_argument("--project-root", required=True)
-    s.add_argument("--chapter-file", required=True)
+    s.add_argument("--chapter", type=int, required=True, help="章节号（整数，如 1、2、3）")
     s.add_argument("--is-finale", action="store_true", help="标记为终局章节（跳过检查）")
 
     s = sub.add_parser("constraint", help="生成写作约束 prompt")

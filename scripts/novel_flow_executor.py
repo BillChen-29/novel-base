@@ -27,6 +27,16 @@ from common import (
     chapter_no_from_name,
 )
 
+try:
+    from chapter_observer import assemble_observer_input
+except ImportError:
+    assemble_observer_input = None  # type: ignore[assignment]
+
+try:
+    from truth_manager import get_truth_dir
+except ImportError:
+    get_truth_dir = None  # type: ignore[assignment]
+
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 SKILL_ROOT = SCRIPT_DIR.parent
@@ -2157,12 +2167,45 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
             ["build", "--project-root", str(project_root)],
         )
 
-        # 写后处理：图谱更新 + 批量审核（均为可选，默认关闭）
+        # 写后处理：真相文件更新 + 图谱更新 + 批量审核（均为可选，默认关闭）
         graph_update_file: Optional[str] = None
+        graph_update_count: int = 0
         batch_review_task: Optional[str] = None
         style_update_file: Optional[str] = None
+        needs_truth_update: bool = False
+        observer_prompt_file: Optional[str] = None
         if gate_passed_final and chapter_path:
             _chapter_no = chapter_no_from_name(chapter_path.name)
+
+            # --- Issue #9: Truth File System Integration ---
+            # 门禁通过后，调用 chapter_observer 生成真相更新 prompt（不直接调 LLM，延迟到 AI 层）
+            if getattr(args, "auto_truth_update", True) and _chapter_no > 0 and assemble_observer_input is not None:
+                try:
+                    _chapter_text = read_text(chapter_path)
+                    _truth_text = ""
+                    if get_truth_dir is not None:
+                        _truth_dir = get_truth_dir(str(project_root))
+                        if _truth_dir.exists():
+                            # 加载所有 JSON 真相文件并拼接为文本
+                            _truth_parts: List[str] = []
+                            for _tf in sorted(_truth_dir.glob("*.json")):
+                                _tdata = load_json(_tf, default={})
+                                if _tdata:
+                                    _truth_parts.append(f"### {_tf.stem}\n```json\n{json.dumps(_tdata, ensure_ascii=False, indent=2)}\n```")
+                            _truth_text = "\n\n".join(_truth_parts) if _truth_parts else "（真相文件尚未初始化）"
+                    if not _truth_text:
+                        _truth_text = "（真相文件尚未初始化）"
+
+                    _observer_prompt = assemble_observer_input(_chapter_text, _truth_text)
+                    _observer_path = gate_dir / "observer_prompt.md"
+                    write_text(_observer_path, _observer_prompt)
+                    observer_prompt_file = str(_observer_path)
+                    needs_truth_update = True
+                except Exception:
+                    # observer prompt 生成失败不影响主流程
+                    pass
+
+            # --- Issue #10: Knowledge Graph Update Feedback ---
             if args.auto_graph_update and _chapter_no > 0:
                 _, _g_out, _g_err, _g_payload = run_python(
                     SCRIPT_DIR / "story_graph_updater.py",
@@ -2171,14 +2214,17 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
                 )
                 if isinstance(_g_payload, dict):
                     graph_update_file = _g_payload.get("update_file")
-                # apply：将 extract 生成的待执行更新写入知识图谱
-                if isinstance(_g_payload, dict) and _g_payload.get("ok"):
-                    run_python(
+                    graph_update_count = int(_g_payload.get("update_count", 0))
+                # apply：将 extract 生成的待执行更新写入知识图谱（dry_run 模式下跳过 apply）
+                if isinstance(_g_payload, dict) and _g_payload.get("ok") and not getattr(args, "graph_update_dry_run", False):
+                    _apply_code, _apply_out, _apply_err, _apply_payload = run_python(
                         SCRIPT_DIR / "story_graph_updater.py",
                         ["apply",
                          "--project-root", str(project_root),
                          "--chapter", str(_chapter_no)],
                     )
+                    if isinstance(_apply_payload, dict):
+                        graph_update_count = int(_apply_payload.get("applied", 0))
             if args.auto_batch_review:
                 _chapter_numbers = sorted({
                     chapter_no_from_name(p.name)
@@ -2315,8 +2361,11 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
             "research_gaps": research_gaps,
             "writing_constraints": writing_constraints,
             "graph_update_file": graph_update_file,
+            "graph_update_count": graph_update_count,
             "batch_review_task": batch_review_task,
             "style_update_file": style_update_file if gate_passed_final and chapter_path else None,
+            "needs_truth_update": needs_truth_update,
+            "observer_prompt_file": observer_prompt_file,
         }
 
         if draft_mode and not args.auto_draft:
@@ -2821,6 +2870,15 @@ def parse_args() -> argparse.Namespace:
                         help="禁用风格基准自动更新")
     p_cont.add_argument("--style-update-interval", type=int, default=10,
                         help="风格更新章节间隔，默认 10")
+    p_cont.add_argument("--auto-truth-update", dest="auto_truth_update",
+                        action="store_true", default=True,
+                        help="门禁通过后自动生成真相更新 prompt（默认开启）")
+    p_cont.add_argument("--no-truth-update", dest="auto_truth_update",
+                        action="store_false",
+                        help="禁用真相文件自动更新")
+    p_cont.add_argument("--graph-update-dry-run", dest="graph_update_dry_run",
+                        action="store_true", default=False,
+                        help="图谱更新仅提取不应用（dry run 模式）")
     p_cont.add_argument("--emit-json")
 
     return p.parse_args()

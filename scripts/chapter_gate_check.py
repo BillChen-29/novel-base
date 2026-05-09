@@ -223,6 +223,8 @@ def parse_args() -> argparse.Namespace:
                    help="当前章预期节奏档位（传入 pacing_tracker check 做预演）")
     p.add_argument("--pacing-event-types", default="",
                    help="当前章事件类型，逗号分隔（档位推断用）")
+    p.add_argument("--auto-create-missing", action="store_true",
+                    help="自动创建缺失的门禁产物文件")
     return p.parse_args()
 
 
@@ -283,6 +285,22 @@ def main() -> int:
                 "message": "通过",
             }
         )
+
+    # ── 自动创建缺失的门禁产物文件 ──
+    if getattr(args, "auto_create_missing", False):
+        _templates = {
+            "memory_update": "# 记忆更新\n\n通过：False\n\n（自动创建的占位文件）\n",
+            "consistency_report": "# 一致性检查\n\n通过：False\n\n（自动创建的占位文件）\n",
+            "style_calibration": "# 风格校准\n\n通过：False\n\n（自动创建的占位文件）\n",
+            "copyedit_report": "# 校稿报告\n\n通过：False\n\n（自动创建的占位文件）\n",
+            "publish_ready": "# 发布就绪\n\n通过：False\n\n可发布：否\n\n（自动创建的占位文件）\n",
+            "quality_report": "# 质量报告\n\n通过：False\n\nchar_count: 0\n\n（自动创建的占位文件）\n",
+        }
+        for _name, _path in required_artifacts(gate_dir).items():
+            if not _path.exists():
+                _tpl = _templates.get(_name, f"# {_name}\n\n（自动创建的占位文件）\n")
+                _path.write_text(_tpl, encoding="utf-8")
+                result["warnings"].append(f"auto_created_artifact: {_name} -> {_path}")
 
     chapter_mtime = chapter_path.stat().st_mtime
     artifacts = required_artifacts(gate_dir)

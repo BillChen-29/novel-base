@@ -43,12 +43,13 @@ def normalize_query(query: str) -> str:
 
 def analyze_query_trigger(query: str, names: List[str]) -> Dict[str, object]:
     q = normalize_query(query)
+    q = normalize_query(query)
     entities = [n for n in names if n in q]
     keyword_hits = sorted([k for k in TRIGGER_KEYWORDS if k in q])
     light_hits = sorted([k for k in LIGHT_SCENE_KEYWORDS if k in q])
     long_query = len(q) >= 18
-
-    should = bool(entities or keyword_hits or (long_query and not light_hits))
+    short_but_meaningful = len(q) >= 8
+    should = bool(entities or keyword_hits or (long_query and not light_hits) or short_but_meaningful)
     reason = []
     if entities:
         reason.append(f"命中角色:{','.join(entities)}")
@@ -56,10 +57,10 @@ def analyze_query_trigger(query: str, names: List[str]) -> Dict[str, object]:
         reason.append(f"命中剧情关键词:{','.join(keyword_hits[:4])}")
     if long_query and not light_hits:
         reason.append("查询描述较长，判定为复杂剧情")
+    if short_but_meaningful and not entities and not keyword_hits:
+        reason.append(f"查询长度({len(q)}字符)>=8，判定为有意义查询")
     if light_hits and not entities and not keyword_hits:
-        reason.append(f"仅命中轻场景关键词:{','.join(light_hits)}")
-    if not reason:
-        reason.append("未命中角色/剧情关键词，判定为可跳过检索")
+        reason.append(f"命中轻场景关键词:{','.join(light_hits)}")
 
     return {
         "should_trigger": should,
@@ -522,6 +523,7 @@ def retrieve(
     candidate_k: int,
     per_chapter: int,
     passage_max_chars: int,
+    min_score: float = 0.0,
 ) -> Dict[str, object]:
     docs = index.get("docs", [])
     query_tokens = tokenize(query)
@@ -536,7 +538,7 @@ def retrieve(
         coarse_scored.append((s, reason, d))
 
     coarse_scored.sort(key=lambda x: x[0], reverse=True)
-    candidate_pool = [x for x in coarse_scored if x[0] > 0][:candidate_k]
+    candidate_pool = [x for x in coarse_scored if x[0] >= min_score][:candidate_k]
     if not candidate_pool:
         candidate_pool = coarse_scored[: min(candidate_k, len(coarse_scored))]
 
@@ -546,9 +548,21 @@ def retrieve(
         fine_scored.append((s, reason, d))
     fine_scored.sort(key=lambda x: x[0], reverse=True)
 
-    picked = [x for x in fine_scored if x[0] > 0][:top_k]
+    picked = [x for x in fine_scored if x[0] >= min_score][:top_k]
     if not picked:
         picked = fine_scored[: min(top_k, len(fine_scored))]
+
+    # BM25 token-only fallback: when all fine scores are 0, do a simple
+    # token-overlap rerank across candidate_pool to avoid returning nothing.
+    if not picked and candidate_pool:
+        token_fallback = []
+        for _, _, d in candidate_pool:
+            kw = set(d.get("keywords", []))
+            tok_overlap = len(query_token_set & kw)
+            if tok_overlap > 0:
+                token_fallback.append((float(tok_overlap), {"token_overlap": tok_overlap}, d))
+        token_fallback.sort(key=lambda x: x[0], reverse=True)
+        picked = token_fallback[:top_k]
 
     character_tracker = project_root / "00_memory" / "character_tracker.md"
     relation_snippets = extract_relation_snippets(character_tracker, query_entities)
@@ -691,6 +705,7 @@ def parse_args() -> argparse.Namespace:
     p_query.add_argument("--passages-per-chapter", type=int, default=2, help="每章返回片段数量")
     p_query.add_argument("--candidate-k", type=int, default=12, help="粗筛候选池大小（两级检索第一阶段）")
     p_query.add_argument("--passage-max-chars", type=int, default=220, help="单片段最大字符数")
+    p_query.add_argument("--min-score", type=float, default=0.0, help="最低得分阈值，低于此分数的结果被过滤（默认0.0）")
     p_query.add_argument("--conditional", dest="conditional", action="store_true", default=True, help="启用条件触发，轻场景跳过检索")
     p_query.add_argument("--no-conditional", dest="conditional", action="store_false", help="关闭条件触发，每次都检索")
     p_query.add_argument("--force", action="store_true", help="强制检索，忽略条件触发判定")
@@ -794,10 +809,22 @@ def main() -> int:
         candidate_k=max(args.top_k, args.candidate_k),
         per_chapter=args.passages_per_chapter,
         passage_max_chars=args.passage_max_chars,
+        min_score=args.min_score,
     )
     result["cache_hit"] = False
     result["skipped"] = False
     result["trigger_reason"] = trigger.get("reason", [])
+
+    # Warn when retrieval returns 0 results
+    if not result.get("retrieved"):
+        import sys as _sys
+        print(
+            f"WARNING: RAG retrieval returned 0 results for query: {args.query!r}. "
+            f"Trigger reasons: {trigger.get('reason', [])}. "
+            f"Candidate pool size: {result.get('retrieval_stats', {}).get('candidate_pool', 0)}. "
+            f"Try lowering --min-score or using --force.",
+            file=_sys.stderr,
+        )
 
     if args.use_cache:
         cache = load_cache(cache_file)
