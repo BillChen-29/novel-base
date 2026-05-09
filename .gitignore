@@ -41,3 +41,6 @@ query_cache.json
 # 测试产物
 scripts/tests/__pycache__/
 .pytest_cache/
+
+# 知乎数据（本地-only，不上传 GitHub）
+references/zhihu-*.md
