@@ -1190,6 +1190,31 @@ def write_chapter(
             except Exception as _he:
                 print(f"[人性化] 跳过（{_he}）")
 
+        # --- 字数上限截断 ---
+        # LLM 有时会大幅超出目标字数（如目标 8000-10000 实际写出 16800+），
+        # 为避免门禁超标失败，在保存前截断到合理上限。
+        _target_chars = int(config.get("target_chapter_chars", 0) or 0)
+        if _target_chars > 0:
+            _hard_max = max(int(_target_chars * 1.5), _target_chars + 3000)
+            _current_chars = count_chinese_chars(generated_content)
+            if _current_chars > _hard_max:
+                print(
+                    f"[字数截断] 生成字数 {_current_chars} 超过上限 {_hard_max} "
+                    f"（目标 {_target_chars}），自动截断..."
+                )
+                # 逐字符向前查找最近的句子结束符，在自然断句处截断
+                _trunc_len = int(len(generated_content) * (_hard_max / max(_current_chars, 1)))
+                _clipped = generated_content[:_trunc_len]
+                _cut = max(
+                    _clipped.rfind("。"), _clipped.rfind("！"),
+                    _clipped.rfind("？"), _clipped.rfind("\n\n"),
+                )
+                if _cut > len(_clipped) // 2:
+                    generated_content = _clipped[:_cut + 1]
+                else:
+                    generated_content = _clipped
+                print(f"[字数截断] 截断后字数: {count_chinese_chars(generated_content)}")
+
         chinese_chars = count_chinese_chars(generated_content)
         save_chapter_content(chapter_file, generated_content, config)
 

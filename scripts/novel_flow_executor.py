@@ -2303,6 +2303,21 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
 
         draft_mode = chapter_is_draft_stub(chapter_path)
 
+        # ── 清理旧 stub 文件 ────────────────────────────────────────────
+        # 当 continue_write 写入真实章节后，one-click 阶段创建的同章节号
+        # stub 文件（文件名含"待写"）可能与真实章节并存，自动删除以避免混淆
+        if not draft_mode and chapter_path:
+            _ch_no_for_stub = chapter_no_from_name(chapter_path.name)
+            if _ch_no_for_stub > 0:
+                for _candidate in list(manuscript_dir.glob("*.md")):
+                    if _candidate == chapter_path:
+                        continue
+                    _cand_no = chapter_no_from_name(_candidate.name)
+                    if _cand_no == _ch_no_for_stub and "待写" in _candidate.name:
+                        # 确认候选文件仍是 stub（非真实正文），才删除
+                        if chapter_is_draft_stub(_candidate):
+                            _candidate.unlink(missing_ok=True)
+
         chapter_id = slugify(chapter_path.stem)
         gate_dir = project_root / "04_editing" / "gate_artifacts" / chapter_id
         ensure_dir(gate_dir)
