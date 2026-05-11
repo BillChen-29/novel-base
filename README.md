@@ -4,12 +4,13 @@
 > **状态**: 生产可用
 > **支持工具**: Claude Code / Codex / OpenCode / Gemini CLI / Antigravity / Hermes Agent
 
-中文长篇小说全流程创作技能，覆盖从模糊想法到300万字成品的完整链路。
+一次个人定制长篇小说的系统性尝试。不同于以"文本生成"为核心的 AI 写作工具，本项目从**叙事生成**的角度切入，将小说创作视为一个结构工程而非文本拼接。
 
 ---
 
 ## 目录
 
+- [设计理念](#设计理念)
 - [核心亮点](#核心亮点)
 - [框架设计特点](#框架设计特点)
 - [长期记忆解决方案](#长期记忆解决方案)
@@ -21,6 +22,40 @@
 - [项目目录结构](#项目目录结构)
 - [多LLM配置](#多llm配置)
 - [常见问题](#常见问题)
+
+---
+
+## 设计理念
+
+### 母题驱动
+
+内置 **178 个叙事母题库**，来源涵盖《千面英雄》《金枝》、中国神话母题索引、钟敬文民间故事类型等经典叙事学著作。每个母题包含叙事结构模板、常见情境原型和跨文化经典案例。
+
+从母题出发生成角色原型（已从母题库提炼 20 个角色原型），再由角色原型驱动情节，形成 **"母题 → 原型 → 情节"** 的叙事链路——而非让 AI 自由发挥导致情节同质化。
+
+```
+motif_library/          # 通用层：178 个母题（跨项目复用）
+character_archetypes/   # 从母题提炼的 20 个角色原型
+motifs.md               # 项目层：本书母题使用计划 + 定制意象
+```
+
+### 主题一致性
+
+通过 **知识图谱**（节点+边+版本）管理角色、势力、伏笔、世界观规则，每章写完自动回写图谱。配合 **大纲锚点系统** 约束全局进度，防止 AI 写作中常见的主题漂移和烂尾问题。
+
+六层一致性保障：真相文件 → 状态追踪 → 知识图谱 → 大纲锚点 → RAG 检索 → 跨 Agent 审核。
+
+### 风格个性化
+
+- **风格指纹提取**：从样章提取写作风格（人称、句长、对话占比、用词偏好），迁移到新作品
+- **去 AI 化润色**：两遍式处理，消除 7 类 AI 生成痕迹（AI 高频词、弱副词、意义膨胀、通用结论、论文结构、正式语体、排比三连）
+- **风格校准**：每章写作后对比风格指纹，检测偏移
+
+### 叙事节奏控制
+
+- **事件矩阵 + 冷却机制**：冲突、羁绊、势力经营、风土人情、危机升级五类事件各有冷却期，刚用过的类型冷却期内不得作为主 Beat，防止情节公式化
+- **8 种叙事切入模式轮换**：动作切入、对话开场、内心独白、环境描写……按章节号取模，每章获得不同写作入口框架
+- **反解决机制**：非终局章节禁止解决主线核心冲突，每章必须新增至少一个未解决的次要问题
 
 ---
 
@@ -551,6 +586,43 @@ skill_view(name='novel-base')
 
 ## 项目目录结构
 
+### Skill 仓库结构
+
+```
+novel-base/
+├── SKILL.md                      # 技能主文档（AI 工具读取此文件执行命令）
+├── skill-definition.json         # JSON 格式技能定义
+├── scripts/                      # Python 脚本（45 个）
+│   ├── novel_flow_executor.py    # 主流程编排器
+│   ├── novel_chapter_writer.py   # 多 LLM 章节写作引擎
+│   ├── plot_rag_retriever.py     # 两级 RAG 检索
+│   ├── story_graph_builder.py    # 知识图谱 CRUD
+│   ├── outline_anchor_manager.py # 大纲锚点管理
+│   ├── event_matrix_scheduler.py # 事件矩阵调度
+│   ├── text_humanizer.py         # 去 AI 化润色
+│   ├── style_fingerprint.py      # 风格指纹提取
+│   ├── cross_agent_reviewer.py   # 跨 Agent 审核
+│   ├── auto_novel_writer.py      # 一键写书调度
+│   └── ...
+├── templates/                    # 项目初始化模板（14 个）
+│   ├── novel_plan.template.md
+│   ├── motif-template.md
+│   ├── style_anchor.template.md
+│   └── ...
+├── references/                   # 设计文档（41 篇）
+│   ├── motif-extraction-pipeline.md
+│   ├── story-graph-schema.md
+│   ├── editorial-team-protocol.md
+│   └── ...
+└── assets/                       # 通用层知识库（不入 git，跨项目复用）
+    ├── motif_library/            # 178 个叙事母题
+    ├── character_archetypes/     # 45 个角色原型
+    ├── technique_library/        # 26 种叙事技法
+    └── style_library/            # 11 种风格样本
+```
+
+### 写作时小说项目结构
+
 ```
 <project-root>/
 ├── 00_memory/                    # 记忆系统
@@ -571,7 +643,10 @@ skill_view(name='novel-base')
 │   ├── 13_reference_materials.md # 参考资料
 │   ├── character_tracker.md      # 角色追踪器
 │   ├── timeline.md               # 时间线
-│   └── foreshadowing_tracker.md  # 伏笔追踪器
+│   ├── foreshadowing_tracker.md  # 伏笔追踪器
+│   ├── motifs.md                 # 本书母题使用计划
+│   ├── philosophy.md             # 核心哲学/主题
+│   └── world_texture.md          # 世界质感/细节肌理
 ├── 03_manuscript/                # 章节正文
 │   └── 第NNN章_标题.md
 ├── 04_editing/                   # 编辑与门禁
