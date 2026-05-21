@@ -1,48 +1,18 @@
 ---
 name: novel-base
-description: 中文长篇小说全流程创作技能（v1.2.0）。当用户想写小说、创作故事、续写章节、构思剧情、搭建世界观、设计人物关系、提取写作风格、仿写其他小说时，必须使用本技能。覆盖从模糊想法到300万字成品的完整链路：脑洞引导、知识图谱构建、大纲管理、分镜写作、质量门禁、跨Agent审核、风格校准、中途改纲级联更新。即使用户只是说"帮我写个故事"或"我有个小说的想法"，也应触发本技能。
-version: 1.2.0
+description: 中文长篇小说全流程创作技能（v1.3.0）。当用户想写小说、创作故事、续写章节、构思剧情、搭建世界观、设计人物关系、提取写作风格、仿写其他小说时，必须使用本技能。覆盖从模糊想法到300万字成品的完整链路：脑洞引导、知识图谱构建、大纲管理、分镜写作、质量门禁、跨Agent审核、风格校准、中途改纲级联更新。支持番茄小说、知乎盐选、独立小说三种模式。即使用户只是说"帮我写个故事"或"我有个小说的想法"，也应触发本技能。
+version: 1.3.0
 author: merged from leenbj/novel-creator-skill + custom novel-writing
 license: MIT
 ---
 
-# Novel Base - 小说创作技能 v1.2.0
+# Novel Base - 小说创作技能 v1.3.0
 
-> **合并说明：** 本技能由 `leenbj/novel-creator-skill`（v8.0，57个Python脚本）与自建 `novel-writing` skill 合并而成。通用层数据库（376个文档）、真相文件系统、番茄平台适配等均为自建扩展。后续维护独立于上游。
+> **合并说明：** 本技能由 `leenbj/novel-creator-skill`（v8.0，57个Python脚本）与自建 `novel-writing` skill 合并而成。通用层数据库（376个文档）、真相文件系统、番茄/知乎平台适配等均为自建扩展。后续维护独立于上游。
 >
 > **名称统一：** 远程仓库 `novel-base`（GitHub）、本地目录 `novel-base`（Hermes 注册路径 `~/.hermes/skills/creative/novel-base/`）、SKILL.md `name: novel-base`。不再使用 `novel-claude-ai`。
-
-## 用户当前状态
-
-- **目标平台**: 番茄小说（已确认）+ 知乎盐选（2026-05-09 新增，`--platform zhihu`，commit 90a6b40）
-- **知乎盐选节奏基准**（4篇男频样本）：第一人称100%、篇均8-10k字、段均15-20字、对话25.6%、问号5.3/千字、感叹号3.7/千字、句均长20.2字
-- **数据层架构**：数据（assets/、runtime-data/）与代码（scripts/、templates/）分离，数据本地-only 不上 GitHub
-- **GitHub 隐私规则**：知乎盐选数据（故事文本、节奏基准、下载记录）绝对不能上传 GitHub（.gitignore: references/zhihu-*.md, runtime-data/）
-- **偏好类型**: 都市悬疑（已确认，但系统设计为通用，不绑死一个题材）
-- **写作工具**: 本技能（合并后的统一技能）
-- **初始化方式**: `/填充配置` 命令——用户碎片感性输入，AI 结构化填充模板
-- **架构设计**: 通用创作器（通用引擎层 + 项目配置层分离），完整 plan 在 `references/architecture-plan.md`
-
-## 仓库与名称关系
-
-本系统涉及**一个目录、三个名称**：
-
-| 名称 | 位置 | 角色 |
-|---|---|---|
-| `novel-base` | GitHub `BillChen-29/novel-base` | 远程仓库名（统一名称） |
-| `novel-base` | `~/.hermes/skills/creative/novel-base/` | 本地代码+数据目录（Hermes 注册路径） |
-| `novel-base` | SKILL.md `name:` 字段 | frontmatter 声明名 |
-
-**已废弃名称**：`novel-claude-ai`（旧 frontmatter name）、`novel-writing`（旧 Hermes skill，已合并到本文件）。
-
-**分工**：Claude Code 改代码 → push 到 `novel-base`（GitHub）→ Hermes `git pull` 同步。数据层（assets/、00_memory/、QMD）仅本地维护，不进 git。
-
-## novel-base 探针结果（Phase 0 已验证）
-
-**仓库：** 原 `leenbj/novel-creator-skill` → 已 fork 到 `BillChen-29/novel-base`
-**本地目录：** `~/.hermes/skills/creative/novel-base/`
-**SKILL.md 声明名：** `novel-base`（统一后）
-**环境：** Python 3.9+，零外部依赖（纯标准库），10 个回归测试全部通过
+>
+> **V1.3.0 新增**：V3 架构（项目配置优先）、db-maintain 命令、知乎盐选支持、独立小说支持、门禁占位文件检测、字数截断逻辑。
 
 ### 核心能力矩阵
 
@@ -334,46 +304,9 @@ license: MIT
 
 **为什么不能跳过**：长篇小说的设定矛盾和风格漂移会随章节指数级放大。门禁每章多花10分钟，可以避免后期30章的全面返工。
 
-### `/节奏审查` 执行规范（Claude Code 自身作为审查 Agent）
+### `/节奏审查` 执行规范
 
-执行 `/节奏审查` 时，**不需要任何外部 API**，由当前 Claude Code 实例直接读取章节正文并执行以下四项语义判断，将结果写入产物文件：
-
-**产物路径**：`04_editing/gate_artifacts/<chapter_id>/pacing_review.md`
-
-**输出模板**（严格按格式填写，便于脚本解析）：
-
-```markdown
-# 节奏审查报告
-
-## 一、档位判断
-- **本章档位**：[慢档 / 中档 / 快档]
-- **判断依据**：[1-2句：主要场景类型、核心矛盾推进幅度]
-
-## 二、A/B/C 配额核查
-- **A（主线矛盾实质推进）**：[触发 / 未触发] — [简要说明]
-- **B（主要关系决定性升级）**：[触发 / 未触发] — [简要说明]
-- **C（核心秘密完整揭露）**：[触发 / 未触发] — [简要说明]
-- **配额违规**：[是 / 否]（同时触发 ≥2项 = 违规）
-
-## 三、章末悬念质量
-- **悬念等级**：[强 / 中 / 弱 / 无]
-- **具体悬念内容**：[用一句话描述章末留下的钩子]
-
-## 四、隐性加速检测
-- **是否存在关键词未覆盖的隐性加速**：[是 / 否]
-- **说明**：[如有，描述具体表现；无则写"无"]
-
-## 综合结论
-节奏审查: [通过 / 失败]
-失败原因: [若失败，填写具体原因；通过则填"无"]
-```
-
-**审查判断标准**：
-- A 触发 = 本章主线格局发生实质性、不可逆的改变（非小摩擦）
-- B 触发 = 主要角色关系到达决定性节点（结盟/决裂/告白/宣战等）
-- C 触发 = 核心秘密在本章被完整揭露（非暗示）
-- **结论为"失败"的条件**：A/B/C 同时触发 ≥2项 **或** 存在隐性加速 **或** 章末悬念等级为"无"且非慢档收尾
-
+> 完整审查模板：`templates/rhythm-review-template.md`
 ## 5. 低上下文策略
 
 - 写前默认只读：`00_memory/novel_plan.md`、`00_memory/novel_state.md`
@@ -447,17 +380,7 @@ license: MIT
 | `/修复本章` | 门禁失败后自动修复 | 门禁返回失败后 |
 | `/新手模式` | 切换简化/高级交互层 | 按需 |
 
-### `/继续写` 的续写前引导机制
-
-每次执行 `/继续写` 时，系统在写作前自动执行：
-
-1. **引导提问**：向用户询问本章的剧情走向偏好（"你希望本章发生什么？有什么新的脑洞吗？"）
-2. **脑洞拓展**：基于当前大纲和知识库，提供 2-3 个可能的剧情走向供选择
-3. **用户确认**：用户选择一个方向，或提供自己的想法
-4. **兜底机制**：如果用户回复"不确定"/"随便"/"自动"，则按 `novel_plan.md` 当前节点自动推进，无需人工干预
-5. **全自动模式**：如果在开书确认卡中选择了"全自动"等级，跳过引导直接按大纲写作
-6. **节奏预检（⛔ BLOCKING，写作开始前必须声明）**：① 本章节奏档位（慢档/中档/快档）及依据；② 近3章配额触发记录，确认本章 A/B/C 至多触发1项；③ 章末保留的具体悬念是什么。预检未通过时禁止进入写作。
-
+> `/继续写` 引导机制详情：`references/command-details.md`
 ### 创作命令
 
 | 命令 | 功能 | 何时使用 |
@@ -494,37 +417,7 @@ license: MIT
 - 温数据（按需触发）：4 个通用层库 + motifs.md + world_texture.md
 - 冷数据（几乎不读）：archive + 旧版文件
 
-### `/改纲续写` 使用说明
-
-**适用场景**：发现主线走向需要调整，修改了 `novel_plan.md` 之后，必须通过此命令重新对齐系统的三层索引（大纲锚点 + 知识图谱 + RAG 索引），然后才能继续写作。
-
-**执行前置条件**（顺序不可颠倒）：
-1. 手动编辑 `00_memory/novel_plan.md`，完成改纲内容
-2. 确认改纲影响的起始章节（`--from-chapter`），即从第几章开始剧情走向已发生变化
-
-**三步级联流程**：
-1. **锚点重算**（必须成功，否则中止）：备份当前 `outline_anchors.json` → 从修改后的 `novel_plan.md` 重新计算所有大纲锚点
-2. **图谱级联标记**（依赖锚点重算成功）：将 `last_updated >= from_chapter` 的知识图谱节点标记为 `cascade_pending=True`，生成级联影响报告
-3. **RAG 索引重建**（依赖锚点重算成功）：调用 `plot_rag_retriever.py build` 全量重建检索索引
-
-**脚本执行**：
-```bash
-python3 scripts/novel_flow_executor.py revise-outline \
-  --project-root <项目目录> \
-  --from-chapter <起始章节号> \
-  --change-description "<本次改纲的简要说明>" \
-  [--emit-json]
-```
-
-**成功判定**：`ok = anchors_recalculated AND report_written`
-
-**产物**：
-- `.flow/backup_anchors_<时间戳>.json`：改纲前的锚点备份
-- `00_memory/outline_anchors.json`：重算后的新锚点
-- `00_memory/revise_outline_report.md`：本次改纲影响范围报告
-
-**改纲后续操作**：检查报告确认级联节点无误 → 对 `cascade_pending=True` 的节点做人工审核或自动修正 → 执行 `/继续写` 恢复正常写作流程
-
+> `/改纲续写` 使用说明：`references/command-details.md`
 ### 质量命令（每章必经）
 
 | 命令 | 功能 |
@@ -566,61 +459,7 @@ python3 scripts/novel_flow_executor.py revise-outline \
 
 ## 9. 脚本入口
 
-### 新增参数（2026-05-09 修复）
-
-| 脚本 | 新增参数 | 说明 |
-|------|---------|------|
-| chapter_gate_check.py | `--auto-create-missing` | 自动创建缺失的门禁产物文件（占位模板） |
-| plot_rag_retriever.py query | `--min-score` | 最低得分阈值（默认0.0），低于此分数的结果被过滤 |
-| novel_flow_executor.py one-click | `--avg-chars-per-chapter` | 章均字数（默认2500，基于番茄巅峰榜基准） |
-| novel_flow_executor.py one-click/continue-write | `--platform {fanqie,zhihu}` | 目标平台（默认fanqie）。知乎盐选用 `--platform zhihu`，自动适配第一人称、段均15-20字、对话15-50%、单篇7000-9000字 |
-| style_fingerprint.py | 子命令模式 `extract` | 从位置参数改为子命令，`--project-root` 改为 required |
-| anti_resolution_guard.py | `--chapter int` | 从 `--chapter-file`（路径）改为 `--chapter`（整数） |
-
-| 脚本 | 用途 |
-|------|------|
-| `python3 scripts/novel_flow_executor.py one-click` | `/一键开书` |
-| `python3 scripts/novel_flow_executor.py continue-write --project-root <目录> --query "<新剧情>"` | `/继续写` |
-| `python3 scripts/novel_flow_executor.py revise-outline --project-root <目录> --from-chapter <N> --change-description "<说明>"` | `/改纲续写` |
-| `python3 scripts/plot_rag_retriever.py build/query` | `/更新剧情索引` `/剧情检索` |
-| `python3 scripts/chapter_gate_check.py` | `/门禁检查` |
-| `python3 scripts/gate_repair_plan.py` | `/修复本章` |
-| `python3 scripts/auto_novel_writer.py` | `/一键写书` |
-| `python3 scripts/style_fingerprint.py` | `/风格提取` |
-| `python3 scripts/research_agent.py` | `/联网调研` |
-| `python3 scripts/benchmark_novel_flow.py` | `/评测基线` |
-| `python3 scripts/story_graph_builder.py` | 知识图谱 CRUD / 校验 / Mermaid 导出 |
-| `python3 scripts/outline_anchor_manager.py` | 大纲锚点初始化 / 配额检查 / 推进 |
-| `python3 scripts/event_matrix_scheduler.py` | 事件矩阵冷却 / 推荐 / 记录 |
-| `python3 scripts/anti_resolution_guard.py` | 反向刹车校验 / 约束 prompt 生成 |
-| `python3 scripts/beat_sheet_generator.py` | Beat Sheet 生成 / 扩写提示 / 校验 |
-| `python3 scripts/chapter_synthesizer.py` | 章节合成 / 合成稿质量校验 |
-| `python3 scripts/cross_agent_reviewer.py` | 跨Agent审核任务生成 / 结果记录 |
-| `python3 scripts/story_graph_updater.py` | 章节完成后自动提取信息更新图谱 |
-| `python3 scripts/interactive_ideation_engine.py` | 交互式脑洞引导 5 轮收敛 / 产出物生成 |
-| `python3 scripts/text_humanizer.py` | AI痕迹检测 / 两遍式润色 prompt 生成 |
-| `python3 scripts/editorial_team_manager.py` | 编辑团队状态管理 |
-| `python3 scripts/fill_config.py` | `/填充配置`（7种配置文件） |
-| `python3 scripts/outline_generator.py generate/revise` | `/构思大纲` `/修订大纲` |
-| `python3 scripts/self_review.py start/submit` | `/自评` |
-| `python3 scripts/review_panel.py summary` | `/复盘` |
-| `python3 scripts/reflection.py new` | `/反思` |
-| `python3 scripts/novel_ingest.py` | `/导入数据`（统一入口，零token） |
-
-**`continue-write` 标准用法（全功能默认开启）：**
-
-```bash
-# 标准用法：知识图谱/大纲锚点/Beat Sheet/AI痕迹纠正/风格更新均自动激活
-python3 scripts/novel_flow_executor.py continue-write \
-  --project-root <项目目录> --query "<新剧情>"
-
-# 高级用户：按需关闭部分功能
-python3 scripts/novel_flow_executor.py continue-write \
-  --project-root <项目目录> --query "<新剧情>" \
-  --no-beat-sheet --no-constraints --no-graph-update
-```
-
-完整参数说明见 `references/command-playbook.md`。
+> 完整脚本参数：`references/script-parameters.md`
 
 ## 10. 工作流
 
@@ -647,105 +486,7 @@ python3 scripts/novel_flow_executor.py continue-write \
 
 **中后期节奏**：100-150章与前50章对比，节奏模式基本稳定。唯一显著变化是山野村夫钩子率翻倍（18%→35%），但钩子类型（reversal）不变。
 
-### 节奏模板扩充工作流（从热门作品反向提取）
-
-> 将真实热门小说的节奏模式提取为 `pacing/` 通用模板
-
-**触发条件**：用户说"分析节奏""提取节奏模板""拆解热门作品节奏"等。
-
-**流程**：
-1. **下载目标作品**：用 TomatoNovelDownloader 下载榜单热门小说（建议 2-3 本不同题材）
-2. **分章读取**：TXT 按章节分割，每 10-15 章为一个分析批次
-3. **逐章标注节奏维度**：章节字数、情绪强度(1-10)、章末钩子类型、爽点位置与类型、付费点设计
-4. **提取节奏模式**：标注高潮/低谷章节编号，绘制情绪曲线
-5. **与现有模板对比**：对照 `pacing-curve.md`、`golden-three-chapters.md` 等现有模板
-6. **写入新模板**：创建 `pacing/<题材>-<风格>-pacing.md`
-
-**终止条件**：连续 10 章无新节奏模式发现 → 模式已稳定，停止分析。
-
-**Pitfall**：
-- 节奏 ≠ 内容：分析的是"什么时候给什么情绪"，不是"讲了什么故事"
-- 避免一次性读太多章爆 context，分批读 + 分批总结
-- 不同题材节奏差异大（都市悬疑 vs 玄幻升级），需分别建模板
-
-### 文献解析入库工作流
-
-用户可以上传参考书籍（PDF/epub/txt/截图），AI 解析后结构化填充到数据库。
-
-**流程：** 用户上传 → 指定目标库 → AI 解析提取 → 结构化填充 → 用户审阅锁定
-
-**文献→目标库映射：**
-| 文献类型 | 目标库 |
-|---------|--------|
-| 原型参考（《史记》《人物原型45种》） | `character_archetypes/` |
-| 叙事技法（《故事》《救猫咪》） | `technique_library/` |
-| 母题模式（《千面英雄》《金枝》） | `motif_library/`（通用层） |
-| 经典叙事作品 | `motif_library/`（补充经典案例字段） |
-| 文学批评/哲学著作 | `philosophy.md` |
-| 番茄头部作品原文 | `style_library/` |
-| 网文套路指南 | `pacing/` |
-
-详细管线见 `references/motif-extraction-pipeline.md`
-
-**Pitfall：** 大文件需要分章节解析，不能一次性全量喂入。OCR 对扫描版有错误，需用户抽查。
-
-### 跨库反向提取模式
-
-从已入库的通用层资产中反向提炼其他库的内容。
-
-**典型场景**：从 `motif_library/` 的 178 个母题中反向提炼 `character_archetypes/`。
-
-**流程**：
-1. 扫描源库文件，识别与目标库相关的条目
-2. 按模板创建目标库文件
-3. 交叉引用源库条目（在"经典案例"字段中标注来源母题）
-
-**已验证**：从 178 个母题中提炼出 20 个角色原型（Campbell 框架 9 类、中国神话 5 类、民间故事 4 类、Frazer 2 类）。
-
-### 文本风格分析工作流
-
-从参考作品逐章解析写作风格，填充 `style_library/`。
-
-**触发条件**：用户说"分析风格""解析写法""提取风格"等。
-
-**流程**：`markitdown` 转 markdown → 逐章阅读总结风格特征 → 连续 10 章无新元素 → 停止 → 写综合风格分析文件
-
-**分析维度**：叙事视角、语言特征、恐怖/情感处理、信息密度、章节结构、角色塑造、世界观展示、节奏控制
-
-**实际验证**：惊悚乐园 34 章、诡秘之主 110 章，两部作品风格在 20-30 章内基本稳定。
-
-详见 `references/style-analysis-workflow.md`（如有）
-
-### 番茄小说数据采集
-
-详见 `references/fanqie-scraping.md`（含 TomatoNovelDownloader 输出格式、API 测试、OCR 方案）
-
-**关键 pitfall：** 番茄用自定义字体反爬，API 不公开。批量下载用 TomatoNovelDownloader（Rust TUI），输出格式特殊（`--------` 分隔章、无对话引号），分析脚本必须适配。详见 `references/novel-pacing-analysis.md`。
-
-**下载工具对比**：
-
-| 工具 | 适用场景 | 优劣 |
-|------|---------|------|
-| **TomatoNovelDownloader** (Rust TUI) | 批量下载完整小说 | ✅ 完整文本、速度快、支持榜单搜索 ❌ 需要交互式 TUI 操作 |
-| 截图 + macOS Vision OCR | 单章/片段采集 | ✅ 无需安装、实时数据 ❌ 手动操作、OCR 有误差 |
-
-**TomatoNovelDownloader 使用**（v2.4.9+，macOS arm64）：
-```bash
-cd ~/Downloads
-chmod +x TomatoNovelDownloader-macOS_arm64-v2.4.9
-./TomatoNovelDownloader-macOS_arm64-v2.4.9
-```
-
-### 番茄小说平台写作规范
-
-| 规范 | 要求 |
-|------|------|
-| 每章字数 | 2000-3000 字 |
-| 前 3 章 | 定生死，必须有悬念 |
-| 章末 | 必须留钩子 |
-| 更新频率 | 日更最佳 |
-| 模式 | 免费阅读，广告分成 |
-
+> 详细工作流（节奏模板扩充、文献解析、跨库提取、风格分析、番茄数据采集、番茄写作规范）：`references/workflow-details.md`
 ## 17. Claude Code 协作工作流
 
 当需要修改 novel-base 代码时，采用以下工作流：
@@ -754,20 +495,23 @@ chmod +x TomatoNovelDownloader-macOS_arm64-v2.4.9
 - **Hermes（我）**：统筹规划、需求分析、最终验收
 - **Claude Code**：代码实现、自测、推送 Git
 
+**项目目录**：`~/Desktop/project/novel-base/`（代码-only clone，不含 assets/ 和 runtime-data/）
+
 **三阶段流程**：
 1. **多轮讨论**：Hermes 将 issues/需求发给 Claude Code，每轮传递完整上下文（Claude Code 无跨轮记忆）。讨论至无新内容产生。
 2. **项目规划**：将讨论结果转为可落地的项目规划（分优先级 P0-P3，含工时估算），与 Claude Code 确认。
 3. **微步骤拆分**：将每个改动点拆分为 3-5 个微步骤，每步有明确验证方法。
 4. **分批实现**：按 P0→P1→P2→P3 顺序，每批完成后 ECC 回归测试。
-5. **推送 Git**：Claude Code 提交并推送到 `BillChen-29/novel-base`。
-6. **验收**：Hermes `git pull` 最新代码，运行 ECC 验证，用 `grep` 确认每处改动落地。
+5. **推送 Git**：Claude Code 在项目目录提交并推送到 `BillChen-29/novel-base`。
+6. **验收**：Hermes `git pull` skill 目录最新代码，运行 ECC 验证，用 `grep` 确认每处改动落地。
 
 **关键 Pitfall**：
 - Claude Code 会 `git stash` 但不 `pop`——每次 delegate_task 后检查 `git stash list`
 - Claude Code 不会完全实现所有修改——要求 5 处可能只落地 3 处，必须 grep 验证
 - 每轮 delegate_task 无记忆，需传完整上下文（前几轮讨论结果 + 代码位置 + 期望改动）
 - `delegate_task` 的 `acp_command` 参数在 CLI 2.1.119 无效，直接用默认方式
-- **用户工作流偏好**：讨论→规划→实现全交 Claude Code，我统筹+验收。不要自己生成代码，让 Claude Code 写。
+- **用户工作流偏好**：讨论→规划→实现全交 Claude Code，我统筹+验收。不要自己生成代码，让 Claude Code 写。Claude Code 在项目目录（~/Desktop/project/novel-base/）改代码，不直接改 skill 目录。
+- **选题必须和用户讨论确定**：不能自作主张选择题材。
 - **Claude Code 会额外修改文件**：验收时需检查 `git diff --stat` 确认改动范围。
 - **Claude Code 无法访问本地文件验证行号**：需本地 grep 二次确认行号后再传给 Claude Code。
 - **多轮审查模式**：第一轮出方案 → 第二轮审查（找遗漏/错误）→ 第三轮整合修正 → 实施。审查轮必须对照源码验证。
@@ -778,361 +522,14 @@ chmod +x TomatoNovelDownloader-macOS_arm64-v2.4.9
 
 详见 `references/script-fixes-2026-05-09.md`（修复记录）。
 
-## 19. 数据层架构（V3 — 项目配置优先）
+## 数据层架构
 
-**核心原则**：数据与代码分离，GitHub 是中间层。项目配置 > 平台预设 > 硬编码默认值。
-
-**V3 关键变更**（2026-05-09）：
-- `--platform` 变为可选（default=None），新增 `standalone` 选项
-- 项目级配置 `00_memory/platform_config.json` 作为最高优先级
-- 独立小说不需要套用任何平台模板
-- null 值语义：字段为 null 时回退到平台预设/默认值（支持部分覆盖）
-- 详见 `references/architecture-v3.md`
-
-```
-GitHub (代码 + 设计文档)
-├── scripts/           57 个 .py
-├── templates/         20 个模板
-├── references/        34 个 A 类设计文档
-└── .gitignore         排除 runtime-data/, assets/, zhihu-*.md
-
-Hermes Skill 目录 (运行时)
-├── [git pull] ← GitHub 代码 + 设计文档
-├── assets/            267 个通用层资产 (本地-only)
-└── runtime-data/      平台模板 + 自定义数据 (本地-only)
-
-Project 目录 (Claude Code 工作区)
-└── [git clone] ← GitHub (无数据)
-```
-
-**文件分类标准**：
-- **A 类（代码/设计文档）**：描述"系统如何工作" → 留在 GitHub
-- **B 类（运行时数据）**：描述"创作内容是什么" → 本地-only
-
-**B 类文件清单**（8 个）：
-- `references/genre-style-matrix.md` — 题材矩阵
-- `references/novel-pacing-analysis.md` — 节奏基准
-- 6 个测试/审计报告（时间敏感）
-
-### db-maintain 命令（设计中）
-
-```
-python3 novel_flow_executor.py db-maintain <子功能>
-├── ingest <file> --type web_novel    # 投喂故事 → 自动分析 → 生成平台模板
-├── add-platform --name xxx           # 手动添加平台预设
-├── list-platforms                    # 列出所有平台预设
-├── add-motif/add-character/add-technique/add-style  # 手动添加资产
-├── list-assets                       # 列出 assets 统计
-├── import-batch <dir>                # 批量导入
-├── validate                          # 校验格式
-└── export                            # 导出汇总
-```
-
-**投喂流程**：用户提供故事文件 → 自动分析（章均字数、对话占比、标点密度、段落长度、人称、钩子率）→ 推导平台模板参数 → 保存到 runtime-data/platforms/
-
-详见 `/tmp/db_maintain_design.md`（设计文档）。
-
-## 20. Pitfall（补充）
-
-### GitHub 隐私 Pitfall
-- **绝对不能上传知乎盐选数据**：故事文本、节奏基准、下载记录等有版权风险
-- **.gitignore 规则**：`references/zhihu-*.md`, `runtime-data/`
-- **Claude Code 会自行添加文件**：验收时必须 `git diff --stat` 检查新增文件
-
-### 知乎盐选 Pitfall
-- **动态字体加密**：每次加载映射不同，无法静态解码
-- **采集策略**：用户手动下载文本，不做自动化抓取
-- **Playwright 被检测**：知乎反爬会检测无头浏览器
-- **Chrome AppleScript 控制**：可以提取加密文本，但无法解码
-
-### Claude Code 工作流 Pitfall（补充）
-- **讨论→规划→实现全交 Claude Code**：MiMo 统筹+验收，不自己生成代码
-- **每轮 delegate_task 无记忆**：需传完整上下文（前几轮讨论 + 代码位置 + 期望改动）
-- **微步骤拆分**：大任务拆成 3-5 步微步骤，每步有明确验证方法
-- **行号验证**：Claude Code 无法访问本地文件验证行号，需本地 grep 二次确认
-- **多轮审查**：第一轮出方案 → 第二轮审查 → 第三轮整合修正 → 实施
-
-## 21. 参考文档导航（补充）
-
-根据你的场景选择对应文档：
-
-| 你想做什么 | 读哪个文档 |
-|-----------|-----------|
-| 第一次使用，从零开书 | `references/user-guide.md` |
-| 查看某个命令的完整参数 | `references/command-playbook.md` |
-| 理解门禁产物和通过标准 | `references/gate-artifacts-spec.md` |
-| 规划百万字级别的卷章结构 | `references/million-word-roadmap.md` |
-| 选择合适的写作风格 | `references/genre-style-matrix.md` |
-| 理解 RAG 检索的设计原理 | `references/rag-consistency-design.md` |
-| 使用联网调研功能 | `references/research-guide.md` |
-| 使用全自动写书功能 | `references/auto-write-guide.md` |
-| 执行 /校稿 去AI味润色 | `references/humanizer-guide.md` |
-| 了解知识图谱数据结构 | `references/story-graph-schema.md` |
-| 了解大纲锚点与进度配额 | `references/outline-anchor-quota-spec.md` |
-| 了解多步流水线写作 | `references/beat-pipeline-spec.md` |
-| 了解反向刹车与事件冷却 | `references/anti-resolution-cooldown-spec.md` |
-| 了解跨Agent审核协议 | `references/cross-agent-review-protocol.md` |
-| 了解脑洞引导流程 | `references/interactive-brainstorming-playbook.md` |
-| 仿写或魔改已有小说 | `references/adaptation-workflow.md` |
-| 了解编辑团队架构与工作协议 | `references/editorial-team-protocol.md` |
-| 了解真相文件系统 | `references/truth-file-system.md` |
-| 了解统一搜索架构 | `references/unified-search-architecture.md` |
-| 了解知识过滤设计 | `references/knowledge-filtering.md` |
-| 了解 Hook Ledger 设计 | `references/truth-file-hook-ledger-design.md` |
-| 了解架构设计方案 | `references/architecture-plan.md` |
-| 了解执行计划 | `references/execution-plan.md` |
-| 了解母题提取管线 | `references/motif-extraction-pipeline.md` |
-| 了解节奏分析流程 | `references/rhythm-analysis-workflow.md` |
-| 了解番茄数据采集 | `references/fanqie-scraping.md` |
-| 了解技法库结构 | `references/technique-library-structure.md` |
-| 了解集成测试结果 | `references/integration-test-findings-2026-05.md` |
-| 了解脚本审计报告 | `references/script-audit-2026-05.md` |
-| 了解集成测试报告（2026-05） | `references/integration-test-2026-05.md` |
-| 了解知乎内容抓取方案 | `references/zhihu-content-extraction.md` |
-| 了解集成测试结果（2026-05） | `references/integration-test-2026-05.md` |
-| 了解知乎盐选下载工具 | `references/zhihu-salt-downloads.md` |
-| 了解集成测试发现（CLI语法/pitfalls） | `references/integration-test-findings-2026-05.md` |
-| 了解 InkOS 分析 | `references/inkos-ai-novel-generator-analysis.md` |
-| 了解脚本修复记录（2026-05-09） | `references/script-fixes-2026-05-09.md` |
-| 了解知乎盐选节奏基准数据 | `references/zhihu-pacing-benchmark.md` |
-| 了解知乎盐选字体加密问题 | `references/zhihu-font-encryption.md` |
-| 了解知乎盐选平台支持（已完成） | `references/zhihu-pacing-benchmark.md` + commit 90a6b40 |
-| 了解知乎盐选节奏基准数据 | `references/zhihu-pacing-benchmark.md`（本地-only） |
-| 了解知乎盐选节奏分析（实测数据） | `references/zhihu-pacing-analysis.md`（本地-only） |
-| 了解 V3 架构设计（项目配置优先） | `references/architecture-v3.md` |
-| 了解小说工具对比 | `references/novel-tools-comparison.md` |
-| 了解多工具安装 | `references/multi-tool-install.md` |
-| 了解拆书工作流 | `references/book-extraction-workflow.md` |
-| 了解 novel-creator 命令详情 | `references/novel-creator-commands.md` |
-| 了解 novel-creator v8 原版文档 | `references/novel-creator-skill-v8.md` |
-| 了解 ingest 管线 | `references/novel-ingest-pipeline.md` |
-| 了解节奏分析详细流程 | `references/novel-pacing-analysis.md` |
+> 完整数据层文档：`references/data-layer.md`
+> Pitfall 补充（选题、工作流、门禁、GitHub、知乎、Claude Code）：`references/pitfalls.md`
 
 ## 12. Agent 编辑团队（`/启动编辑团队`）
 
-### 12.1 为什么需要编辑团队
-
-单 Agent 写作存在三个根性问题：
-1. **AI 幻觉**：写作 Agent 可能捏造从未出现过的地名、人名、设定规则
-2. **角色错乱**：角色被放错位置、被赋予其不具备的能力、或语气风格全部雷同
-3. **Agent 思路污染正文**：写作过程中的分析思路、角色定位说明、meta注记渗入小说正文
-
-编辑团队通过职责严格分离，在生产流程中内建三道防火墙。
-
-### 12.2 团队架构（真实报社模型）
-
-```
-用户
-  │
-  ▼
-总编辑（Claude Code 主 Agent）
-  │  协调所有子 Agent，汇总报告，作最终裁判
-  ├──► 策划主编（planning-editor）
-  │     读规划文件 → 生成 Chapter Brief → 传给写作特工
-  │
-  ├──► 写作特工（novelist）
-  │     只接收 Brief，只输出纯正文，严格隔离 meta 信息
-  │
-  ├──► 反AI编辑（anti-ai-editor）      ┐ 并行
-  └──► 连载核实官（consistency-reviewer）┘ 审核
-```
-
-### 12.3 触发命令
-
-```
-/启动编辑团队 [--项目路径 <路径>] [--章节 <N>] [--模式 单章|批量]
-```
-
-### 12.4 正文隔离协议（防止 Agent 思路污染正文）
-
-| Agent | 允许的输出内容 | 严禁的输出内容 |
-|-------|--------------|--------------|
-| 写作特工 | `NOVEL_TEXT_START` 到 `NOVEL_TEXT_END` 之间的纯小说正文 | 分析说明、角色定位、写作思路 |
-| 反AI编辑 | 报告 + `HUMANIZED_TEXT` 标记内的净化正文 | 在润色后正文中插入注释 |
-| 连载核实官 | 结构化核查报告 | 直接修改正文 |
-| 总编辑 | 最终章节包 | 将审核意见混入正文区 |
-
-**P0 检测触发器**：正文中出现 `[` `]` 括号说明、`（注：）`、`TODO`、`作者按`等，立即触发 P0 强制重写。
-
-### 12.5 状态管理脚本
-
-```bash
-# 生成上下文快照
-python3 scripts/editorial_team_manager.py snapshot --project-root <路径>
-
-# 记录审核结果
-python3 scripts/editorial_team_manager.py record-review \
-  --project-root <路径> --chapter N --stage final --verdict pass --p0 0 --p1 2 --p2 3
-
-# 检测是否需要人工介入
-python3 scripts/editorial_team_manager.py need-human --project-root <路径>
-```
-
-## 13. 自动化分析脚本
-
-| 脚本 | 功能 |
-|------|------|
-## 工作流：与 Claude Code 协作
-
-当需要对 novel-base 做代码修改时，采用以下流程：
-1. **我统筹规划**：讨论方案、制定计划、确认优先级
-2. **Claude Code 实现**：通过 delegate_task 派发代码任务，每轮传完整上下文
-3. **ECC 自验**：Claude Code 推 git 前必须跑 `test_novel_flow_executor.py` 全部通过
-4. **我验收**：pull 最新代码，grep 验证每处改动是否真正落地
-5. **Push**：确认无误后由 Claude Code 推送
-
-**重要**：delegate_task 每次是全新会话，无跨轮记忆。多轮讨论时我做 orchestrator，把前轮结论打包进 context。
-
-### Pitfall: Claude Code git stash 忘记 pop
-Claude Code 在测试时可能 `git stash`，但忘记 `git stash pop`。验收时必须检查 `git stash list`。
-
-### Pitfall: Patch 工具静默失败
-用 patch() 批量修文件时，old_string 不匹配不会报错。每次批量 patch 后必须用 grep 验证每个改动是否真正落地。
-
-## 已知 Issues 和测试报告
-
-集成测试报告见 `references/integration-test-report-2026-05-09.md`。
-
-关键遗留问题：
-- `--draft-provider template` 生成器质量差（零故事信息，纯占位符）
-- `chapter_gate_check` 需要预生成门禁产物（不能独立调用）
-- #2 跨章一致性检查需新建脚本（5h+）
-- #8 CJK 字数统计：count_chars 已导入但未启用（与 template 生成器不兼容）
-
-## 使用方法
-
-### 快速初始化
-```bash
-python3 scripts/one-click_novel_flow.py --title "小说标题" --genre "题材" --target-words 1000000
-```
-类型：`web_novel` / `motif` / `character` / `technique` / `style`
-
-详细用法见 `references/novel-ingest-pipeline.md`
-
-## 14. 集成测试发现（2026-05-09）
-
-> 40章/114k字完整测试验证，以下为实测发现的脚本问题。
-
-### P0 阻断性问题
-
-| # | 脚本 | 问题 | 状态 |
-|---|------|------|------|
-| 1 | chapter_gate_check.py | 单独调用时6个产物文件必须预存在，否则报"文件不存在"。需 `--auto-create-missing` | 待修复 |
-| 2 | 无对应脚本 | 跨章节一致性检查缺失（角色性别漂移、设定规则违反无法检测） | 待新建 |
-
-### P1 功能问题
-
-| # | 脚本 | 问题 | 状态 |
-|---|------|------|------|
-| 3 | novel_flow_executor.py | `generate_draft_text()` 模板模式生成通用填充，不读 novel_plan/character_tracker | 待修复 |
-| 4 | plot_rag_retriever.py | `query()` 索引构建成功但查询返回0（触发条件+评分阈值双重问题） | 待修复 |
-| 5 | novel_flow_executor.py | `init_project_files()` 硬编码 VOL1_END=120，忽略 target_words。公式应为 `target_words // 2500`（番茄巅峰榜基准） | 待修复 |
-
-### P2 代码质量
-
-| # | 脚本 | 问题 | 状态 |
-|---|------|------|------|
-| 6 | 多个脚本 | CLI参数不统一（style_fingerprint 用位置参数，anti_resolution 用 --chapter-file，其余用 --chapter） | 待统一 |
-| 7 | novel_flow_executor.py | `AI_PHRASE_BLACKLIST` 漏检"微微""深吸一口气" | 待补充 |
-| 8 | common.py | `evaluate_quality()` 未调用 `count_chars()`，直接 `len(re.sub(...))` 含标点 | 待修复 |
-
-### P3 流水线完善
-
-| # | 脚本 | 问题 | 状态 |
-|---|------|------|------|
-| 9 | novel_flow_executor.py | chapter_observer/reflector 未集成到 continue-write 流程 | 待集成 |
-| 10 | novel_flow_executor.py | `--auto-graph-update` 实际默认 True（非 False），缺 dry-run 和计数反馈 | 待增强 |
-
-### 关键 Pitfall
-
-- **大纲计算公式**：`target_words // 3500` 错误，应为 `// 2500`（番茄巅峰榜章均字数）。推荐榜 2355，新书榜 2610，巅峰榜 2516
-- **图谱自动更新**：`--auto-graph-update` 默认是 True（开启），不是 False。v1 分析曾误判
-- **RAG 双重零结果路径**：(A) `analyze_query_trigger()` 关键词未命中时跳过检索 (B) `retrieve()` 的 `> 0` 阈值过滤掉所有无交集结果
-- **字数统计陷阱**：`count_chars(cjk_only)` 函数存在但 `evaluate_quality()` 没调用它，用的是 `len(re.sub(r"\s+","",body))`（含标点+英文）
-- **Claude Code ACP 调用**：`claude --acp --stdio` 在 CLI 2.1.119 不支持，`delegate_task` 的 `acp_command` 参数无效
-
-### 完整修复方案
-
-详见 `<project-root>/project_plan_final.md`
-
-## 15. Pitfall
-
-### 流程 Pitfall
-- `novel_flow_executor.py continue-write` 的完整链路依赖 LLM API 调用，本地测试时需要 mock 或跳过写作步骤
-- 门禁检查是纯本地的（正则+文件校验），不走 API，可独立测试
-- RAG 索引构建需要至少 1 个已写章节，空项目时 `build` 会返回空索引
-- **模板写作模式质量极差**：`--draft-provider template` 生成完全通用的模板文本，不含任何故事相关内容（角色名、地点、情节均未使用）。实际使用必须配合 LLM 或手动写作
-- **门禁产物必须预生成**：`chapter_gate_check.py` 单独调用时，6个产物文件不存在就报"文件不存在"。已修复：新增 `--auto-create-missing` 参数
-- **大纲计算已修复但仍有限制**：`one-click` 的 VOL1_END/VOL2 现已动态计算（基于 target_words/2500），但 2500 是番茄巅峰榜基准，其他平台需手动调整
-- **continue-write 测试脆弱**：3 个 continue-write 测试容易因模板文本触发 anti_resolution_guard 误报而失败，这是已有问题而非新引入的
-- **Claude Code 会 stash 改动**：当 delegate_task 中的 Claude Code 在调试时执行 `git stash`，改动会从工作目录消失。检查 `git stash list` 可以找回
-- **continue-write --draft-provider template 生成完全通用模板**：不含任何故事相关内容（角色名、地点、情节），只是 query 文本的扩展填充。不能用于实际写作，只能用于测试流水线
-- **chapter_gate_check 单独调用需 6 个预生成产物**：直接调用 gate_check 时，memory_update.md / consistency_report.md / style_calibration.md / copyedit_report.md / publish_ready.md / quality_report.md 必须预先存在，否则报"文件不存在"。用 `--auto-create-missing` flag 可自动创建占位文件（2026-05 新增）
-- **RAG query 返回 0 的两个路径**：(A) `analyze_query_trigger()` 查询未命中角色名/关键词且 <18字时跳过检索；(B) 评分公式 `score > 0` 阈值过滤掉所有得分为0的候选。用 `--min-score 0.0` 可放宽
-- **one-click 大纲卷计算曾硬编码**：VOL1_END=120 不随 target_words 变化（已修复为动态计算：target_words / 2500）
-- **evaluate_quality 的 char_count 与模板生成器的统计方式不一致**：evaluate_quality 用 `len(pure)`（去空白后所有字符），count_chars() 函数可做 CJK-only 统计但需同步修改模板生成器阈值，否则 3 个 continue-write 测试失败
-- **模板文本可能触发 anti_resolution_guard 误报**：模板生成的通用文本中可能包含 forbidden_reveals 列表中的词（如"终极BOSS身份"），导致门禁失败
-- **style_fingerprint.py CLI 已重构为子命令模式**：从位置参数改为 `extract` 子命令，--project-root 从 optional 改为 required
-- **anti_resolution_guard.py --chapter-file 改为 --chapter int**：文件路径由脚本内部从章节号推导
-- **RAG build 成功但 query 返回 0 结果**：索引摘要质量可能不足，BM25 无法匹配。待调查
-- RAG 索引构建需要至少 1 个已写章节，空项目时 `build` 会返回空索引
-- **CLI 参数格式不统一**：各脚本子命令和参数名不一致。outline_anchor_manager 用 `advance --to-chapter`，anti_resolution_guard 用 `check --chapter-file`，style_fingerprint 用 `--profile-name` + 位置参数 files，cross_agent_reviewer 需要 `--chapter` 和 `--chapter-file` 两个参数。详见 `references/integration-test-findings-2026-05.md`
-- **Python 版本**：Hermes venv 使用 Python 3.11.15，PEP 604 语法（`str | None`）可用
-- **中文变量名**：所有脚本变量名必须用 ASCII 英文，中文变量名在某些 Python 版本报 SyntaxError
-- **输出格式不一致**：`style_fingerprint.py` 的 JSON 输出缺少 `ok` 字段，下游消费者可能依赖此字段
-- **路径常量分散**：目录名在 25+ 个脚本中以字符串字面量硬编码，修改目录名需改 25+ 个文件
-- **子代理并发限制**：`delegate_task` 最多 3 个并发子代理，多于 3 个需分批启动
-- **清理前比对内容**：删除重复文件前，必须 `wc -c` 比较大小 + `head -20` 抽查内容
-
-### 数据 Pitfall
-- **TomatoNovelDownloader 输出格式**：TXT 输出中所有 `""「」` 被去除，对话比例分析必须用 EPUB 格式
-- **QMD 增量索引**：`qmd update` 支持增量检测，不需要全量 rebuild
-- **QMD collection add 路径陷阱**：`qmd collection add` 会忽略 path 参数，创建后必须用 `qmd collection show` 验证
-- **markitdown PDF 依赖**：需 `uv tool install markitdown --force --with "markitdown[pdf]"`
-- **扫描版 PDF OCR**：macOS Vision 框架（pyobjc）可做中英文 OCR
-
-### 真相文件系统 Pitfall
-- **Observer/Reflector 字段名不匹配**：hook_operations 使用 `"operation"` 字段，不是 `"op"`
-- **load_truth 返回 tuple**：`truth_manager.load_truth()` 返回 `(data, errors)` 元组，需解包
-- **迁移脚本 schema 匹配**：用户自定义的 memory 文件名可能不匹配 schema，迁移时会跳过
-
-### 设计 Pitfall
-- **执行计划设计原则**：新建模块不修改原有大文件（novel_chapter_writer.py 57KB、novel_flow_executor.py 134KB）
-- **统一CLI入口对Hermes无价值**：Hermes调用脚本时直接读SKILL.md的命令映射
-- **Hermes skill的数据库管理设计原则**：用户手动标记文本类型，脚本按类型路由分析，不做自动分类
-- **style_library 清理策略**：两套命名时保留更大的版本，但需检查互补内容
-
-### 集成测试 Pitfall（2026-05 新增）
-- **template 字数统计不兼容 CJK-only**：`generate_draft_text()` 用 `len(re.sub(r'\s+', '', text))` 统计（含标点），`count_chars()` 只计 CJK 字符。改一边不改另一边会导致门禁阈值不匹配，3 个 continue-write 测试失败。
-- **大纲卷计算硬编码**：`init_project_files()` 中 `VOL1_END="120"` 是硬编码的，不跟 target_words 联动。已修复为动态计算。
-- **RAG 查询静默跳过**：`analyze_query_trigger()` 在查询不匹配预设关键词时返回 `should_trigger=False`，导致查询返回空结果而无任何提示。已加 >=8 字默认触发。
-- **门禁产物必须预生成**：`chapter_gate_check.py` 直接调用时需要 6 个产物文件存在。已加 `--auto-create-missing`。
-- **Claude Code 会 stash git 变更**：subagent 调试时会 `git stash`，完成后不 pop。需手动 `git stash pop` 恢复。
-- **Claude Code 不会完全实现请求的修改**：要求 5 处修改可能只落地 3 处。每次实现后必须用 `grep` 验证每处改动。
-
-## 15. 集成测试结果（2026-05-09）
-
-通过 40 章小说全流程测试，12/17 脚本验证通过。关键修复已推送到 GitHub。
-详见 `references/integration-test-findings-2026-05.md`。
-
-**已修复的问题**：
-- 门禁产物预生成（`--auto-create-missing`）
-- 大纲卷计算动态化（基于 target_words / 2500）
-- RAG 查询精度（`--min-score` + BM25 回退）
-- CLI 标准化（style_fingerprint 子命令化, anti_resolution_guard `--chapter` int）
-- AI 词表扩展（微微、深吸一口气等）
-- 真相系统集成（observer prompt 自动生成）
-- 图谱更新反馈（graph_update_count + dry-run）
-
-**已知遗留**：
-- template 模式内容质量差（通用模板，不读 novel_plan.md）
-- 跨章节一致性检查缺失（需新建脚本）
-- CJK 字数统计与 template 生成器不兼容（count_chars 已导入未启用）
-
-## 16. 技能安装说明
-
-本仓库同时是一个 Hermes Agent skill。`SKILL.md` 作为 skill 文件，安装后在对话中触发 `/一键开书`、`继续写` 等命令。安装脚本支持 Claude Code、Codex、OpenCode、Gemini CLI、Antigravity 五个工具。
-
-```bash
-bash scripts/install-portable-skill.sh --tool claude-code --force
-```
+> 编辑团队详细架构：`references/editor-team.md`
+> 自动化分析脚本和使用方法：`references/data-layer.md`
+> 集成测试结果：`references/integration-tests.md`
+> 完整 Pitfall 文档：`references/pitfalls.md`
