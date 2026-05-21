@@ -495,7 +495,7 @@ license: MIT
 - **Hermes（我）**：统筹规划、需求分析、最终验收
 - **Claude Code**：代码实现、自测、推送 Git
 
-**项目目录**：`~/Desktop/project/novel-base/`（代码-only clone，不含 assets/ 和 runtime-data/）
+**项目目录**：`<novel-base-dir>`（代码-only clone，不含 assets/ 和 runtime-data/）
 
 **三阶段流程**：
 1. **多轮讨论**：Hermes 将 issues/需求发给 Claude Code，每轮传递完整上下文（Claude Code 无跨轮记忆）。讨论至无新内容产生。
@@ -510,7 +510,7 @@ license: MIT
 - Claude Code 不会完全实现所有修改——要求 5 处可能只落地 3 处，必须 grep 验证
 - 每轮 delegate_task 无记忆，需传完整上下文（前几轮讨论结果 + 代码位置 + 期望改动）
 - `delegate_task` 的 `acp_command` 参数在 CLI 2.1.119 无效，直接用默认方式
-- **用户工作流偏好**：讨论→规划→实现全交 Claude Code，我统筹+验收。不要自己生成代码，让 Claude Code 写。Claude Code 在项目目录（~/Desktop/project/novel-base/）改代码，不直接改 skill 目录。
+- **用户工作流偏好**：讨论→规划→实现全交 Claude Code，我统筹+验收。不要自己生成代码，让 Claude Code 写。Claude Code 在项目目录（<novel-base-dir>/）改代码，不直接改 skill 目录。
 - **选题必须和用户讨论确定**：不能自作主张选择题材。
 - **Claude Code 会额外修改文件**：验收时需检查 `git diff --stat` 确认改动范围。
 - **Claude Code 无法访问本地文件验证行号**：需本地 grep 二次确认行号后再传给 Claude Code。
