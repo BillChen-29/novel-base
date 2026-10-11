@@ -3,7 +3,7 @@
 ## 目录结构
 
 ```
-<workdir>                                      # Claude Code 工作区（代码-only）
+<workdir>                                      # 项目工作区（代码 + assets 通用知识库）
 ~/.hermes/skills/creative/novel-base/           # Hermes Skill 目录（运行时）
 ```
 
@@ -19,14 +19,16 @@
 
 ### 数据修改流程
 ```
-1. 数据文件在 ~/.hermes/skills/creative/novel-base/assets/（本地-only）
-2. 数据文件在 ~/.hermes/skills/creative/novel-base/runtime-data/（本地-only）
-3. 不上 GitHub，不通过项目目录
+1. assets/ 通用知识库随 GitHub 仓库发布，在项目工作区维护并审查后提交。
+2. runtime-data/ 和具体小说项目、正文、记忆、审核产物保留在本地。
+3. 更新 assets/ 时同步 docs/data/asset-manifest.json 中的文件清单、大小和 SHA-256。
 ```
 
 ## 注意事项
 
-- 项目目录是代码-only 的 clone，不含 assets/ 和 runtime-data/
+- 克隆项目包含代码和 assets/，不包含个人 runtime-data/ 和小说项目。
 - Claude Code 只修改项目目录，不直接修改 skill 目录
-- 代码变更通过 GitHub 中转：项目目录 → push → skill 目录 pull
-- 数据变更直接在 skill 目录操作（assets/, runtime-data/）
+- 代码与通用资产变更通过 GitHub 中转：项目目录 → push → skill 目录 pull。
+- 更新已有运行目录前备份本地 assets/；同名未跟踪文件可能阻止 pull，应先逐项比较并保存本地修改。
+- 运行时数据变更直接在 skill 目录操作（runtime-data/ 等）。
+- 资产范围与来源说明见 [docs/data/asset-library.md](docs/data/asset-library.md)。

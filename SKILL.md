@@ -495,7 +495,7 @@ license: MIT
 - **Hermes（我）**：统筹规划、需求分析、最终验收
 - **Claude Code**：代码实现、自测、推送 Git
 
-**项目目录**：`<novel-base-dir>`（代码-only clone，不含 assets/ 和 runtime-data/）
+**项目目录**：`<novel-base-dir>`（包含代码与 assets/ 通用知识库；runtime-data/ 和个人小说项目保留在本地）
 
 **三阶段流程**：
 1. **多轮讨论**：Hermes 将 issues/需求发给 Claude Code，每轮传递完整上下文（Claude Code 无跨轮记忆）。讨论至无新内容产生。

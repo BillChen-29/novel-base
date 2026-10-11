@@ -1,0 +1,13 @@
+{
+  "platform": "fanqie",
+  "avg_chars_per_chapter": 2500,
+  "default_min_chars": 2500,
+  "default_min_paragraphs": 8,
+  "default_min_dialogue_ratio": 0.03,
+  "default_max_dialogue_ratio": 0.7,
+  "default_min_sentences": 8,
+  "default_beat_count": 4,
+  "pacing_mode": "standard",
+  "narrative_voice": "third_person",
+  "style_perspective": "第三人称有限"
+}

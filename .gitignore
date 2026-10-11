@@ -21,9 +21,8 @@ IMPLEMENTATION_SUMMARY.md
 NOVEL_CREATOR_GUIDE.md
 TEST_REPORT.md
 
-# === 数据层（本地维护，不提交到公开仓库） ===
-# 通用层资产（motif_library, character_archetypes, technique_library 等，267 个文件）
-assets/
+# === 数据层 ===
+# assets/ 通用叙事知识库随仓库发布；作品和运行时数据保留在本地。
 
 # 运行时 / 小说项目数据
 00_memory/
@@ -36,6 +35,7 @@ projects/
 
 # QMD 本地索引产物
 ingest_manifest.json
+!assets/ingest_manifest.json
 query_cache.json
 
 # 测试产物

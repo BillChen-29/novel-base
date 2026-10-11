@@ -1,0 +1,13 @@
+{
+  "platform": "zhihu",
+  "avg_chars_per_chapter": 9000,
+  "default_min_chars": 7000,
+  "default_min_paragraphs": 30,
+  "default_min_dialogue_ratio": 0.15,
+  "default_max_dialogue_ratio": 0.50,
+  "default_min_sentences": 30,
+  "default_beat_count": 6,
+  "pacing_mode": "immersive",
+  "narrative_voice": "first_person",
+  "style_perspective": "第一人称"
+}

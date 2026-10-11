@@ -1,0 +1,1441 @@
+{
+  "snapshot_date": "2026-10-11",
+  "description": "Narrative knowledge assets with documented formatting and path normalization; file counts, not unique semantic records.",
+  "total_files": 271,
+  "total_bytes": 870885,
+  "source_total_bytes": 873656,
+  "categories": {
+    "(root)": 2,
+    "character_archetypes": 45,
+    "motif_library": 178,
+    "pacing": 5,
+    "platforms": 3,
+    "style_library": 11,
+    "technique_library": 27
+  },
+  "normalizations": [
+    {
+      "path": "assets/character_archetypes/lin-chong.md",
+      "change": "Removed extraction line-number prefixes; narrative text unchanged.",
+      "source_bytes": 2763,
+      "source_sha256": "1434b722ae75660c0b498ab6dfd038688d38ca25ecd2df63804224b4aa2a5ad6"
+    },
+    {
+      "path": "assets/character_archetypes/lu-zhi-shen.md",
+      "change": "Removed extraction line-number prefixes; narrative text unchanged.",
+      "source_bytes": 2415,
+      "source_sha256": "06f522da3b7c509e516b0886d9fa1e825ef0158aad9691c69ad1fb050eff8a44"
+    },
+    {
+      "path": "assets/character_archetypes/shi-jin.md",
+      "change": "Removed extraction line-number prefixes; narrative text unchanged.",
+      "source_bytes": 1844,
+      "source_sha256": "b25e4c5353378e0f649b6904e1e24640b4f287c256daadfd2250a74da5ed2984"
+    },
+    {
+      "path": "assets/character_archetypes/song-jiang.md",
+      "change": "Removed extraction line-number prefixes; narrative text unchanged.",
+      "source_bytes": 2537,
+      "source_sha256": "87249cfef633e94ee5526b90e8c572721aad4a2943cd3c0a2905a62d06740ee2"
+    },
+    {
+      "path": "assets/character_archetypes/wu-song.md",
+      "change": "Removed extraction line-number prefixes; narrative text unchanged.",
+      "source_bytes": 2502,
+      "source_sha256": "5ce78fd348f1e710c5826d60510bcdb5d6ba30cd4448a6887547e6ab129def54"
+    },
+    {
+      "path": "assets/character_archetypes/wu-yong.md",
+      "change": "Removed extraction line-number prefixes; narrative text unchanged.",
+      "source_bytes": 2234,
+      "source_sha256": "dec2565b518a7e9590a6f2f022eaaef9ba41b10681198eef17f9bf476a2fed1a"
+    },
+    {
+      "path": "assets/character_archetypes/yang-zhi.md",
+      "change": "Removed extraction line-number prefixes; narrative text unchanged.",
+      "source_bytes": 2118,
+      "source_sha256": "d1cf93f2159f1e395e1d39feb6fbcc110e51b0b7e50b8ea9bc4ce211e8b7d16b"
+    },
+    {
+      "path": "assets/motif_library/culture-hero.md",
+      "change": "Removed extraction line-number prefixes; narrative text unchanged.",
+      "source_bytes": 2431,
+      "source_sha256": "4723619a59edaafbd1ece56d793085ab5b9e31ae5efadec66d44721f94dc8b3a"
+    },
+    {
+      "path": "assets/motif_library/magical-duel.md",
+      "change": "Removed extraction line-number prefixes; narrative text unchanged.",
+      "source_bytes": 2983,
+      "source_sha256": "097016ae2276d8f831faaaa82252eb8fb261851ad26a6dc81fae4989ad3bf2f6"
+    },
+    {
+      "path": "assets/style_library/index.md",
+      "change": "Replaced an obsolete developer-specific absolute path with a relative filename.",
+      "source_bytes": 251,
+      "source_sha256": "46455aa222a3495f238f64f2da94364c78adb0ff4c5f9847b7aa21aa880dd11c"
+    }
+  ],
+  "duplicate_groups": [
+    [
+      "assets/pacing/real-data-pacing-benchmark.md",
+      "assets/technique_library/real-data-pacing-benchmark.md"
+    ]
+  ],
+  "files": [
+    {
+      "path": "assets/ai_patterns.md",
+      "bytes": 13969,
+      "sha256": "dbfa4c674d92f2d3fa4467a54ad66e09b3082360f03924f386cd43b5d43690e9"
+    },
+    {
+      "path": "assets/character_archetypes/abandoned-hero.md",
+      "bytes": 6038,
+      "sha256": "8480ab7539a287fb45d106919d5334d11acbeff20cf51c63afaaab68d76da95f"
+    },
+    {
+      "path": "assets/character_archetypes/arrogant-prodigy-limited-power.md",
+      "bytes": 2375,
+      "sha256": "7fe99de59a39e6adaab174492686ac7ddb21d2ae885b2007ce8f411963211e55"
+    },
+    {
+      "path": "assets/character_archetypes/cautious-immortal.md",
+      "bytes": 2368,
+      "sha256": "3e786f743126f5f1c40e7b18f3fb63be22e3e3f8ed3d21197c66a9b396b10aed"
+    },
+    {
+      "path": "assets/character_archetypes/chao-gai.md",
+      "bytes": 1635,
+      "sha256": "704ffd94823f4f000ac9504f005dfe73b4b391b70dfb30d5deb557fa2c8fd397"
+    },
+    {
+      "path": "assets/character_archetypes/classic-heroes.md",
+      "bytes": 8178,
+      "sha256": "d233b84a3b7e6ed49f9f51a2aecd0a0b090bf63e64b21f8d21283026e165ccf2"
+    },
+    {
+      "path": "assets/character_archetypes/clever-wife.md",
+      "bytes": 5702,
+      "sha256": "21032d4fe63b6c7477a2d50f002b04c26e04fbb78b1efefadf9d15e446ff1e7a"
+    },
+    {
+      "path": "assets/character_archetypes/culture-hero.md",
+      "bytes": 5584,
+      "sha256": "a19dc170ed99a42a6bd6801dac7f048433586a33633c55cd5f7ee054f19dae62"
+    },
+    {
+      "path": "assets/character_archetypes/disguised-predator.md",
+      "bytes": 5670,
+      "sha256": "2b2da1ba4535b2f00ca7a8a10c15d5a23f5fa669a35ae379556153b4e78c7ef6"
+    },
+    {
+      "path": "assets/character_archetypes/divine-child.md",
+      "bytes": 5741,
+      "sha256": "e0b79605a3642b1e2c871efb0604ea471e82752a4f959c92cc2f219c7b67c2f8"
+    },
+    {
+      "path": "assets/character_archetypes/father-tyrant.md",
+      "bytes": 5397,
+      "sha256": "102b22662b1c98c4f7974e769e11acb826ff8d46b9275f1b727be7deeffb6634"
+    },
+    {
+      "path": "assets/character_archetypes/flood-tamer.md",
+      "bytes": 6065,
+      "sha256": "c997aa0c3fc7b4a4736af2ecb9d2822782676e2db7bc9bd701105c33b5e303f2"
+    },
+    {
+      "path": "assets/character_archetypes/hu-sanniang.md",
+      "bytes": 1469,
+      "sha256": "a9e74441dc3715060559a618e2e560b872b834044a8421773e11eb9912ac9f74"
+    },
+    {
+      "path": "assets/character_archetypes/hypocritical-white-moonlight.md",
+      "bytes": 2358,
+      "sha256": "b9f7ee43ef345bc948232a3b9ca66b72f2b267cd8218bb0105cc7934e5d33fdb"
+    },
+    {
+      "path": "assets/character_archetypes/lei-heng-zhu-tong.md",
+      "bytes": 1523,
+      "sha256": "47508c19d0354a47e2d7f9a59d8b3c90d78f4ce461e76123b06f93fd6970129f"
+    },
+    {
+      "path": "assets/character_archetypes/li-kui.md",
+      "bytes": 1897,
+      "sha256": "84750a6ac07e8853c0a01358cb0df6dd9c7727c90c1f9f1b5003036190e9b95a"
+    },
+    {
+      "path": "assets/character_archetypes/lin-chong.md",
+      "bytes": 2476,
+      "sha256": "501ca64ab0b3240d87b7c83161c4834f743d2486336b3a47fa768f65fc01b05b"
+    },
+    {
+      "path": "assets/character_archetypes/loyal-companion.md",
+      "bytes": 2565,
+      "sha256": "3d19b934b22d0d464d338c3a12ba6fa54d31a9ffc6ddd02993d77e782166b31c"
+    },
+    {
+      "path": "assets/character_archetypes/lu-zhi-shen.md",
+      "bytes": 2128,
+      "sha256": "d80e9237bd07be1d63b25e7c4d61a206c3ef2050545004117d0c06d2d20ee753"
+    },
+    {
+      "path": "assets/character_archetypes/miraculous-birth.md",
+      "bytes": 5852,
+      "sha256": "3fab3ccd765cf9289a751baf976a00eee911e44511f594d9116e5502a7510500"
+    },
+    {
+      "path": "assets/character_archetypes/moral-grey-survivor.md",
+      "bytes": 2365,
+      "sha256": "8fa2e18e0615f9aafe4f94f00f2675f7f396c63778507743ca6e19080ab48ea5"
+    },
+    {
+      "path": "assets/character_archetypes/mother-goddess.md",
+      "bytes": 5727,
+      "sha256": "1d1ca20297f6020048dd01e1ab9c699d378a6412546577fb799455532e37b03d"
+    },
+    {
+      "path": "assets/character_archetypes/protective-elder.md",
+      "bytes": 2211,
+      "sha256": "a68dc55d170999a66ecfb035b124df8e0d8bf1751e0d64ae9a2c39819dbbe1f0"
+    },
+    {
+      "path": "assets/character_archetypes/rebellious-deity.md",
+      "bytes": 5997,
+      "sha256": "f5f8db3521d692b1e1e3471d483783049a840aa986a0b3bb47b908daff72c1ad"
+    },
+    {
+      "path": "assets/character_archetypes/reborn-avenger.md",
+      "bytes": 2336,
+      "sha256": "58badf10071664ee2dbc3ddf45bb6a6823abc0c3354b1e86ccf68616bf96436e"
+    },
+    {
+      "path": "assets/character_archetypes/relationship-roles.md",
+      "bytes": 8011,
+      "sha256": "304b98a51a88d4e4e0daa9337f04580e779f70349401c4bd75508ba52107d4c2"
+    },
+    {
+      "path": "assets/character_archetypes/reluctant-corporate-savior.md",
+      "bytes": 2324,
+      "sha256": "d9d6e8fb42757ebf8f00bf0ba4bf157edab287b54e13e78b2a737984d4713557"
+    },
+    {
+      "path": "assets/character_archetypes/sacred-king.md",
+      "bytes": 6057,
+      "sha256": "b394a4c8cc6ea602d387fe14bc6199428194bd08e96b0e981f9bf19ff9d074c7"
+    },
+    {
+      "path": "assets/character_archetypes/sacrificial-king.md",
+      "bytes": 5769,
+      "sha256": "0ff3620d815c7b8aa2e6d3c9136f15cad2f0c4c67901a69be3bb529d8eacea0c"
+    },
+    {
+      "path": "assets/character_archetypes/scapegoat.md",
+      "bytes": 5979,
+      "sha256": "7c51e3b65b7b1d0c647180f85b75edddc734930e36e06b4dcd5782fcb8bbca24"
+    },
+    {
+      "path": "assets/character_archetypes/shadow-personalities.md",
+      "bytes": 9170,
+      "sha256": "a64f8afd353171afd18b2cbceb374ea23dd96362a77ba73c0d1ad2517ec4316a"
+    },
+    {
+      "path": "assets/character_archetypes/shapeshifter.md",
+      "bytes": 5961,
+      "sha256": "819803ac9a2597d857d40c644941fa4dbc0801721cecc51564bd701bedf13204"
+    },
+    {
+      "path": "assets/character_archetypes/shi-jin.md",
+      "bytes": 1578,
+      "sha256": "a6c6f3d70db9be143de10ab43422a85e75a8f971f46abbd5e8c981f41080600a"
+    },
+    {
+      "path": "assets/character_archetypes/shi-xiu.md",
+      "bytes": 1697,
+      "sha256": "b3ed6209c071931815b119a38c5ac592392cef2e635164803e288e3ff7d7fd1c"
+    },
+    {
+      "path": "assets/character_archetypes/snail-maiden.md",
+      "bytes": 5883,
+      "sha256": "bf74e420515623daf421fab851b34c14fea46582b46cb57b4f8312082254de7e"
+    },
+    {
+      "path": "assets/character_archetypes/snake-husband.md",
+      "bytes": 5605,
+      "sha256": "7c0359853c934070db3e234251f5b69bc19375c98340e38b7c1f5eeecbb72ab3"
+    },
+    {
+      "path": "assets/character_archetypes/song-jiang.md",
+      "bytes": 2250,
+      "sha256": "e67b941405f75c852c6fed16200af0615d3a94488de1fadd50f0cf23fa89e31e"
+    },
+    {
+      "path": "assets/character_archetypes/threshold-guardian.md",
+      "bytes": 5945,
+      "sha256": "b6b1ea82be4ffe7214c4573d7bbddb424ebebcba9f2efad4334a57e618a0a6a7"
+    },
+    {
+      "path": "assets/character_archetypes/trash-turning-genius-mc.md",
+      "bytes": 2214,
+      "sha256": "ead81050e3f1740309e10be3ef1099b94ccac9d2350b43883dc99f0e9411422a"
+    },
+    {
+      "path": "assets/character_archetypes/trickster.md",
+      "bytes": 5919,
+      "sha256": "933114b3f0cb3ed41caf5363074e523138e6d37e907acdc06117961be8bcfc48"
+    },
+    {
+      "path": "assets/character_archetypes/vegetation-god.md",
+      "bytes": 6277,
+      "sha256": "e8f1bbe993b0c2f7e94f36b1dee7b880d9f3001c96396f802078dafb032511be"
+    },
+    {
+      "path": "assets/character_archetypes/wise-mentor.md",
+      "bytes": 6133,
+      "sha256": "a53cbadfb67a86e6b6e70651ddd7f3bf3bd026ccd8e08addcc1232d0929925a0"
+    },
+    {
+      "path": "assets/character_archetypes/wu-song.md",
+      "bytes": 2215,
+      "sha256": "0797ff5b6a77031a954c7b02486618b99cd9ecee8a0835015fe4ad45af454535"
+    },
+    {
+      "path": "assets/character_archetypes/wu-yong.md",
+      "bytes": 1947,
+      "sha256": "d8aa67a728aeba42dc7ee24b885477f84332adffe3d823683382704218ca6b86"
+    },
+    {
+      "path": "assets/character_archetypes/yan-qing.md",
+      "bytes": 1549,
+      "sha256": "89ec5426b9192ca917351084bec552f3ed3ca259b4293ac29c1507307e282950"
+    },
+    {
+      "path": "assets/character_archetypes/yang-zhi.md",
+      "bytes": 1845,
+      "sha256": "5e84df4f481d3f37b15b1b6d7b34ef1bceb1ea81fac30461fe91bda2e161bf2f"
+    },
+    {
+      "path": "assets/ingest_manifest.json",
+      "bytes": 385,
+      "sha256": "3fd781582bca42730feaef9737e85207b9c4b3865a56d04b7a457f5bdf6da0a9"
+    },
+    {
+      "path": "assets/motif_library/abandoned-child-hero.md",
+      "bytes": 2296,
+      "sha256": "70be46dda0b394383e4c1c5568c860e1360d06a613abf6ec4166638681828a4a"
+    },
+    {
+      "path": "assets/motif_library/abandoned-prince.md",
+      "bytes": 3509,
+      "sha256": "78296033243ff81cdd6338698c43d9b446e87fbe70b212a26edfe0a47a606b9c"
+    },
+    {
+      "path": "assets/motif_library/abandoned-womans-revenge.md",
+      "bytes": 2928,
+      "sha256": "f3703cab8ba3333cd90621714ad8e342f914368b8d92129889ddbf6fb20db780"
+    },
+    {
+      "path": "assets/motif_library/accidental-prophet.md",
+      "bytes": 2031,
+      "sha256": "4c11a48593308d2f3757cd792de7c25da9bfda4122ec8b9d389ec59ea25ee988"
+    },
+    {
+      "path": "assets/motif_library/apocalypse-doomsday.md",
+      "bytes": 2133,
+      "sha256": "da9366c94dd6618ad4cdb75fa552d9a6c7b14c2e13a38bc7519f68df85dfcbdd"
+    },
+    {
+      "path": "assets/motif_library/apotheosis.md",
+      "bytes": 2639,
+      "sha256": "2fe709f941f4027708b4a181f53886caba919a19c4ed2962367e4603d61aeef6"
+    },
+    {
+      "path": "assets/motif_library/appointed-city-god.md",
+      "bytes": 2264,
+      "sha256": "7c2cb8d9dbe4fb037ee59c546f581fca4ccad9fd16c3e97e5f24ca3327a1e60a"
+    },
+    {
+      "path": "assets/motif_library/atonement-with-father.md",
+      "bytes": 2689,
+      "sha256": "95966c102fe934d289502e5846bab17c88eb5aa814d65e30d50b3a97f0613146"
+    },
+    {
+      "path": "assets/motif_library/bear-wife-sacrifice.md",
+      "bytes": 1930,
+      "sha256": "b4a98748501df40e8e2fc38a6ed0150a837f68f89c59e19368a7e40078be908d"
+    },
+    {
+      "path": "assets/motif_library/beauty-sacrificed-for-peace.md",
+      "bytes": 2053,
+      "sha256": "acf8d629d98425968f59a7634e50f023a14ddeaf4e7a5a685d91a28bbaa3e158"
+    },
+    {
+      "path": "assets/motif_library/bee-matchmaker.md",
+      "bytes": 1806,
+      "sha256": "d41521fcc2c459fd554bba8e81a3755715522b16948ba323826d6fd5a2b64b0d"
+    },
+    {
+      "path": "assets/motif_library/belly-of-whale.md",
+      "bytes": 2561,
+      "sha256": "a172381e74f3c7ac32598dbdac2bae93ca14b193c8ae45eb07bc69e2c5283947"
+    },
+    {
+      "path": "assets/motif_library/bodhisattva-temptation.md",
+      "bytes": 1987,
+      "sha256": "dde22d439574546d23428624ae69c18c97e6c8323808ffb1052d39d573577647"
+    },
+    {
+      "path": "assets/motif_library/body-of-god-becomes-world.md",
+      "bytes": 2501,
+      "sha256": "7efeed0eb63b115ace99b3c4bf1bdcf889348dce3d4b3eaf89eafe0144a3b447"
+    },
+    {
+      "path": "assets/motif_library/brothers-betrayal.md",
+      "bytes": 2989,
+      "sha256": "3a5bace1da08c38df4384fb963aa44eb79e0bf019b00993e4eb6eb35e08db098"
+    },
+    {
+      "path": "assets/motif_library/butterfly-lovers.md",
+      "bytes": 2168,
+      "sha256": "0683e845069b2fc4cdff3e1a88f02a05bf6c0b8d7640383b95512c0046f6f6df"
+    },
+    {
+      "path": "assets/motif_library/cannibal_feast.md",
+      "bytes": 2429,
+      "sha256": "cb60c3a7f450461e95c2219bae289c8dcad6159bcc0e304117973fe8195608bf"
+    },
+    {
+      "path": "assets/motif_library/cat-dog-gratitude.md",
+      "bytes": 2265,
+      "sha256": "224002af66289ee0bd2f3ccd8eb6181d12142e5b979d6673fe23e6416df62e57"
+    },
+    {
+      "path": "assets/motif_library/chasing-the-sun.md",
+      "bytes": 2423,
+      "sha256": "5494d986f2ac8c21df4cc1bad39687f5d5a991937ce68f09cebad65326bd3022"
+    },
+    {
+      "path": "assets/motif_library/cloud-embroidered-shoe.md",
+      "bytes": 2266,
+      "sha256": "5782f1b44ccb602f1638f9a8fcae335833115896ef895541f9d1d0ae6cae6dab"
+    },
+    {
+      "path": "assets/motif_library/cobbler-prince.md",
+      "bytes": 1969,
+      "sha256": "26410e8f856b344ca9b8687314d3d4fbf906355a337c31809b17d33c8e33cf8e"
+    },
+    {
+      "path": "assets/motif_library/complementary_champions.md",
+      "bytes": 2614,
+      "sha256": "f4a9350c1f3dc57e56c6bab45509a5b85d82ab14e4c680184cbfbfcd79f3bdb5"
+    },
+    {
+      "path": "assets/motif_library/confession_inanimate.md",
+      "bytes": 2418,
+      "sha256": "789df17b323db658dd7f91a720173f3b190d81e94215e4b7f85915469d204305"
+    },
+    {
+      "path": "assets/motif_library/controlling-the-flood.md",
+      "bytes": 2380,
+      "sha256": "a16cd036aba3023c0aff4f857c31af98dbfc061b05a05b8678ba297952d0fcbc"
+    },
+    {
+      "path": "assets/motif_library/corn-mother-harvest.md",
+      "bytes": 4429,
+      "sha256": "fa4020ea7038d44dce53a58cb79a3cba5022a2037d9c1b1fa1d311379f3b8ab8"
+    },
+    {
+      "path": "assets/motif_library/cosmic-egg.md",
+      "bytes": 2377,
+      "sha256": "555b59715930ce54a05da0ebb5075001fcd3a529ff75be07aa8a6b652fa82b02"
+    },
+    {
+      "path": "assets/motif_library/cowherd-weaver.md",
+      "bytes": 2202,
+      "sha256": "ff0e89c76fa70bce6a40af87d18a73817dbba6fa3db21a6044406d66c68e2685"
+    },
+    {
+      "path": "assets/motif_library/craft-contest.md",
+      "bytes": 2952,
+      "sha256": "b94f85e296b525f4df5b5b8f97a88faf6304fa780ed2f10acafbaee4b6f59ce5"
+    },
+    {
+      "path": "assets/motif_library/creating-humans-from-clay.md",
+      "bytes": 2497,
+      "sha256": "cb482730c2a34c2167cd64906e9950c8547cd994be67bcd6e4e490dd0ac7c2f0"
+    },
+    {
+      "path": "assets/motif_library/creation-from-loneliness.md",
+      "bytes": 2608,
+      "sha256": "3c266847b963467153f5eaf5acea93206e73ad76a194df4aff0aaf26e0778dae"
+    },
+    {
+      "path": "assets/motif_library/cultural-hero-invents-culture.md",
+      "bytes": 2629,
+      "sha256": "47f4f53f3e7c36ce0fadacfc7690b62e637cb5c4a4ddaebd07a8b8286892499b"
+    },
+    {
+      "path": "assets/motif_library/culture-hero.md",
+      "bytes": 2081,
+      "sha256": "872e74f47d1b5f343bbb8d1c75b2c309627cedc88a14beff9110e3d8661b403e"
+    },
+    {
+      "path": "assets/motif_library/dancing_peacock.md",
+      "bytes": 2319,
+      "sha256": "4fe78b0086ef7f1e806c1690bb85e760faebafde64d1d7c99915d9f45c466cd5"
+    },
+    {
+      "path": "assets/motif_library/dead-ghost-returns.md",
+      "bytes": 1761,
+      "sha256": "d45e8bfc6621217f21da0b80847f7b2276645ab2e339cf4ce49d13c951a7364a"
+    },
+    {
+      "path": "assets/motif_library/dead_lovers_return.md",
+      "bytes": 2249,
+      "sha256": "39c2e2a1003cd51ce861ce3ec6369efb485f025d190cc70225e1fc6e2f00da7e"
+    },
+    {
+      "path": "assets/motif_library/demon-treasure-cave.md",
+      "bytes": 2415,
+      "sha256": "0b00bb2c34439400e4cf60d6d8ac531d696eb2b18152608cb817193dbb094915"
+    },
+    {
+      "path": "assets/motif_library/divine-elect.md",
+      "bytes": 2215,
+      "sha256": "c5eb580e62cc2ce871b9b21db52e67425827f1a81d956e1def14d59bcad5a461"
+    },
+    {
+      "path": "assets/motif_library/divine-human-conflict-flood.md",
+      "bytes": 2553,
+      "sha256": "25dbfe3f6da267b7ee9f7b4a0e2ebacc9a157860abc3362477b58f6492cc18e5"
+    },
+    {
+      "path": "assets/motif_library/divine-marriage.md",
+      "bytes": 2333,
+      "sha256": "5cf59a1c311bf41b8103721281d0c702c24c5bf3f4ec688591ddb895f8ca3d21"
+    },
+    {
+      "path": "assets/motif_library/divine-messenger.md",
+      "bytes": 2719,
+      "sha256": "db358ac24fd61e63d6a121bdd1f9273c3321bd27ccb9b4367ac578f05271ebfa"
+    },
+    {
+      "path": "assets/motif_library/dog-plows-field.md",
+      "bytes": 2198,
+      "sha256": "68b2da628a77d1fa1172ba64c9768c5eefedff70ce786004bca3a2cfda7a7f43"
+    },
+    {
+      "path": "assets/motif_library/dog-stealing-grain.md",
+      "bytes": 2410,
+      "sha256": "067d6ef17c63c02c9587e8e32fcd252103b21629700e09fd2b1ae188871bf646"
+    },
+    {
+      "path": "assets/motif_library/drilling-wood-for-fire.md",
+      "bytes": 2516,
+      "sha256": "f81291745c7eda399397e8dd9f6ba2b2c1398f9f4615a38ab817b4e4679386bd"
+    },
+    {
+      "path": "assets/motif_library/drought-demon-revived.md",
+      "bytes": 1907,
+      "sha256": "aa842a5a695d1c829b347a2ed500696f448da17ce1f7ed207012a8e20b7c7de1"
+    },
+    {
+      "path": "assets/motif_library/drought-demon.md",
+      "bytes": 1629,
+      "sha256": "58a86a7091d3586b9378996df549eb0d5b16554768a5a422cff9aca1f9d73917"
+    },
+    {
+      "path": "assets/motif_library/dying-god-vegetation.md",
+      "bytes": 4278,
+      "sha256": "d48ee6c2da67962cf9eae78d5110eda2ae009825b8b92d41bed452898fb5b539"
+    },
+    {
+      "path": "assets/motif_library/earth-mother.md",
+      "bytes": 2199,
+      "sha256": "7e62375aa064cdb56b4cee5db6bedcae75bdb0a8cece6a458d7f289e66f56bbc"
+    },
+    {
+      "path": "assets/motif_library/eavesdrop-animals.md",
+      "bytes": 2267,
+      "sha256": "9cdd3227711d8b776dc935f8b161791fe8fc7d495745e48097fbd5aa78c50751"
+    },
+    {
+      "path": "assets/motif_library/escaping-flood-in-gourd.md",
+      "bytes": 2527,
+      "sha256": "e373a0dee38f356c8ec23996c824b050dcf2292f199f88c33df86328a5469651"
+    },
+    {
+      "path": "assets/motif_library/eternal-punishment.md",
+      "bytes": 3063,
+      "sha256": "b6f3e4123fd69d948b3c6837dbaa0e7cc5d3bfd927998054b14ebfcbe60ce95c"
+    },
+    {
+      "path": "assets/motif_library/ethnic-fusion.md",
+      "bytes": 3060,
+      "sha256": "da68f07da6afb22335984ccb8eade888e9b974285eaa25c169f20508408a4ed7"
+    },
+    {
+      "path": "assets/motif_library/ethnic-warlord.md",
+      "bytes": 3244,
+      "sha256": "a2aee30b0834e18316bcb1d94cb9aef83ee8850cf75bc487c346e9a785592afa"
+    },
+    {
+      "path": "assets/motif_library/faithful_animal.md",
+      "bytes": 2400,
+      "sha256": "1116f6c270169c56e5022d09399944c86f62d63a000b02c32151ff1c43774678"
+    },
+    {
+      "path": "assets/motif_library/false-accusation.md",
+      "bytes": 3023,
+      "sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+    },
+    {
+      "path": "assets/motif_library/fate-of-three-robbers.md",
+      "bytes": 2323,
+      "sha256": "53279a53bb8243abf2acb90eda1b5d49015466b40416b326f5a9364e57c37182"
+    },
+    {
+      "path": "assets/motif_library/feathered-maiden.md",
+      "bytes": 2085,
+      "sha256": "afc753ef566d9bc1dc400298bf3833109e646cbb0e3a2a2e344f72b8ade80bc7"
+    },
+    {
+      "path": "assets/motif_library/feng-shui-ruined.md",
+      "bytes": 2288,
+      "sha256": "b01aef21f973092b263b19ff420404209b5272a780990c5301fab6efc202e2ae"
+    },
+    {
+      "path": "assets/motif_library/fire-purification-ritual.md",
+      "bytes": 4011,
+      "sha256": "452cc235a5873abdb03bf76cf1394568b1b17ed49e4e4f245a199e87c50de527"
+    },
+    {
+      "path": "assets/motif_library/flight-to-the-moon.md",
+      "bytes": 2522,
+      "sha256": "2965405dee27671550606a845132cec531e0b7aad06089af77f467aa3daec18f"
+    },
+    {
+      "path": "assets/motif_library/floating_chest.md",
+      "bytes": 2361,
+      "sha256": "41939f251cde0eca6f89a3e569d161a0fc369fe21d669b6f97fd7e27430a3de8"
+    },
+    {
+      "path": "assets/motif_library/flood-rebirth.md",
+      "bytes": 3163,
+      "sha256": "d070e9b1597c818f088da9615deb2c660f17f7de836492bd9aa6d8f5db956b9b"
+    },
+    {
+      "path": "assets/motif_library/flood-taming-hero.md",
+      "bytes": 3160,
+      "sha256": "4b7d7b83d39bdbde03617c4ed4911b7861b7b076e840891a1778dfe09cd5cad9"
+    },
+    {
+      "path": "assets/motif_library/fool-in-city.md",
+      "bytes": 1962,
+      "sha256": "a3d948c80b54b5d22da7abcf56fc3c7b8b43999c4a5167bf2de5948a5946b660"
+    },
+    {
+      "path": "assets/motif_library/fool-son-birthday.md",
+      "bytes": 1948,
+      "sha256": "3cbea2cba6e8bb93fa8fa71b13a6c35e058fd7e6e123d15b9e5b3e0dc3fba63a"
+    },
+    {
+      "path": "assets/motif_library/forbidden-knowledge.md",
+      "bytes": 2863,
+      "sha256": "158234c820623920364a97f952e91bd9b42e631de27e0fd0f3a45f6ca9371c14"
+    },
+    {
+      "path": "assets/motif_library/fortune-teller-prophecy.md",
+      "bytes": 1877,
+      "sha256": "b0bcae97f99f0c65a66f97f5b176cb4f4312fd8bc3f8b6336d390fc26082463e"
+    },
+    {
+      "path": "assets/motif_library/foundation_sacrifice.md",
+      "bytes": 2260,
+      "sha256": "f7d9daef14cccdd8a5b11e5713fb6e20a0496f5d1b5abc8e9ca996ad8264dd41"
+    },
+    {
+      "path": "assets/motif_library/fox-spirit-marriage.md",
+      "bytes": 2674,
+      "sha256": "825453eeee4a49d08a4b7700e6f9943400c69b91487963de733cd0f50c553334"
+    },
+    {
+      "path": "assets/motif_library/garment-hundred-birds.md",
+      "bytes": 2186,
+      "sha256": "d037e1be4c1987e994bbedf6b00698a3bdc3436d1b1e304ea030d1021a26ab79"
+    },
+    {
+      "path": "assets/motif_library/ghost-chases-living.md",
+      "bytes": 2112,
+      "sha256": "f83fa8fb2a3866ca452aa1cf9aa97013e6a752976878942a2b794f607c33e4c6"
+    },
+    {
+      "path": "assets/motif_library/ghost-mother-child.md",
+      "bytes": 2063,
+      "sha256": "bfc6783cdab2410e50d19b83b0872b7fd068ae6d26ec956bc979453e334e2923"
+    },
+    {
+      "path": "assets/motif_library/goat_and_vine.md",
+      "bytes": 2386,
+      "sha256": "804783731e9d816449adecedcecc6f80cf13c64d8a0f998101f4c0cf6a113aa1"
+    },
+    {
+      "path": "assets/motif_library/goddess-creation.md",
+      "bytes": 3162,
+      "sha256": "25f05555d50f3575f85ee9a5438c1cd646eb035a1aeba233aaccf43e279e166d"
+    },
+    {
+      "path": "assets/motif_library/golden-fleece-quest.md",
+      "bytes": 2949,
+      "sha256": "72d70bfed50d909748200ab1848165ff229a1cf84f0d6339d5fa4d14ddb627d1"
+    },
+    {
+      "path": "assets/motif_library/gorgon_mask.md",
+      "bytes": 2502,
+      "sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+    },
+    {
+      "path": "assets/motif_library/gorgon_slayer.md",
+      "bytes": 2867,
+      "sha256": "128e166e3d7c9c5c27737dbb69885d8d3a43f7d01f077333197db3b347d562aa"
+    },
+    {
+      "path": "assets/motif_library/han-peng-butterflies.md",
+      "bytes": 2098,
+      "sha256": "81554c678ec582997a4fedf19da294d0a605f149aeadfd6bf78d5679ff06fc7e"
+    },
+    {
+      "path": "assets/motif_library/heart-without-yellow-river.md",
+      "bytes": 2169,
+      "sha256": "22cd4fa8e31dcf1d33664ca399e9d377087f2ffc2ee3f639bbb9495b00a2a7cb"
+    },
+    {
+      "path": "assets/motif_library/helpful-ghost.md",
+      "bytes": 2100,
+      "sha256": "383eb592f7df1f9d616a1b5ba158a3add66ff79253a1bde644fff0173884e8d1"
+    },
+    {
+      "path": "assets/motif_library/hero-journey-monomyth.md",
+      "bytes": 3092,
+      "sha256": "c038db9719fe64eeb1924ccdea017aff0142827ddbd5db1a70d745c7e9a16a9f"
+    },
+    {
+      "path": "assets/motif_library/hero-vs-water-monster.md",
+      "bytes": 2879,
+      "sha256": "de46fb172919d30ce163f99d7c4346da99334115d218ae72b45f6e7888c76e8f"
+    },
+    {
+      "path": "assets/motif_library/homeward.md",
+      "bytes": 3042,
+      "sha256": "630d17ddf6417bcacad5bad54e72457238ca6f00e733e9cb6164f82b779a91b3"
+    },
+    {
+      "path": "assets/motif_library/hundred-bird-garment.md",
+      "bytes": 2318,
+      "sha256": "9d71e599138d1e61721a7e3d79e04ca97c394ea84096df319c1ca23172b9e8bb"
+    },
+    {
+      "path": "assets/motif_library/identity-mask.md",
+      "bytes": 3035,
+      "sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+    },
+    {
+      "path": "assets/motif_library/impersonation-of-god.md",
+      "bytes": 4268,
+      "sha256": "35c157f3f39a99716f945a45e751b90b0110a1247c4b6b622bab2b75534f5325"
+    },
+    {
+      "path": "assets/motif_library/infinite-liar.md",
+      "bytes": 1959,
+      "sha256": "b57f53745c3d616a3b44dd2fbd2d04e5c79c81a822ce6a2d565e614a50733d49"
+    },
+    {
+      "path": "assets/motif_library/invisibility-cap.md",
+      "bytes": 1969,
+      "sha256": "d3b529f41555cb9160d38ecb93af8047274e816fa07b2a8faf8fdb93339ef009"
+    },
+    {
+      "path": "assets/motif_library/journey-to-underworld.md",
+      "bytes": 2182,
+      "sha256": "7848f939159aaba50d84f7f9044c15675159af868e918443e4902d832c3f6aab"
+    },
+    {
+      "path": "assets/motif_library/judge-bao-ghost-case.md",
+      "bytes": 1862,
+      "sha256": "f3e4907a6638cf3e7cacd88a0c575577b92e0d0d0e7d79faf4dba5526226833e"
+    },
+    {
+      "path": "assets/motif_library/kings-choice.md",
+      "bytes": 3007,
+      "sha256": "1d08ada761d766575b97d9f7154ea63381c415d8cb60f38ef88a00792e9f6005"
+    },
+    {
+      "path": "assets/motif_library/labyrinth-descent.md",
+      "bytes": 3171,
+      "sha256": "30d126441a086f018c2c3be97badbcf3507c7b4a37ae55c1248bbe74362341c7"
+    },
+    {
+      "path": "assets/motif_library/lion-nursed-child.md",
+      "bytes": 2917,
+      "sha256": "e18846543303bec0a08a7f92fccbdfc9a7986aef2a8053e5e5a96170422700ef"
+    },
+    {
+      "path": "assets/motif_library/loss-of-paradise.md",
+      "bytes": 2446,
+      "sha256": "9d0cc2215d99c0c214c2b2521047324edc138695c56b7916c5ae9260a18467bb"
+    },
+    {
+      "path": "assets/motif_library/love-transforms.md",
+      "bytes": 2978,
+      "sha256": "63ff90e3cf9ccc48bfb6c502d8b5dfa0ed0e9a4a6b043b70bc839b3c69884f1f"
+    },
+    {
+      "path": "assets/motif_library/magic-duel.md",
+      "bytes": 2916,
+      "sha256": "e6b4643f9498d3f82cd70d491eabe8186d5148c91f2da1f4983227d13efed18d"
+    },
+    {
+      "path": "assets/motif_library/magic-flight.md",
+      "bytes": 2610,
+      "sha256": "2ce72121516703f4c61b80d239bac1eae6a1f2a10f26d306bf47868b7b271972"
+    },
+    {
+      "path": "assets/motif_library/magical-duel.md",
+      "bytes": 2605,
+      "sha256": "d59ab5f41d989125c13254500ef43337ecd9614f7eb4abc463bff77f97f8e34b"
+    },
+    {
+      "path": "assets/motif_library/magical-painter.md",
+      "bytes": 2106,
+      "sha256": "ed6434cee35fdf17103ccb8ae939becb9659530b75aa4eb55f2457920bd427c1"
+    },
+    {
+      "path": "assets/motif_library/magical_flight.md",
+      "bytes": 2494,
+      "sha256": "b0b645f79b15f23f55b982cb0c7610398053b842be3767a4afe72fc6129ede67"
+    },
+    {
+      "path": "assets/motif_library/marriage-of-gods.md",
+      "bytes": 2766,
+      "sha256": "bc6c51b5771441cbdc6a25c1b0a2b5ca3eeb18e5471c0fa2c3f473190f1e4752"
+    },
+    {
+      "path": "assets/motif_library/master-two-worlds.md",
+      "bytes": 2606,
+      "sha256": "01fe091065ecaf528997abd0d60608c857177e7aaf31c894976fd49782956b6e"
+    },
+    {
+      "path": "assets/motif_library/mazu-saves-shipwrecked.md",
+      "bytes": 1745,
+      "sha256": "ee9a616a03913548e8b817dc103a662d74b08926d7e67a46987906a74e6f9374"
+    },
+    {
+      "path": "assets/motif_library/meeting-goddess.md",
+      "bytes": 2752,
+      "sha256": "4c51d1450b4aee02f9438560a8adede06630363f9fbb64a10e286577b670b36f"
+    },
+    {
+      "path": "assets/motif_library/mending-the-sky.md",
+      "bytes": 2544,
+      "sha256": "a1a304c96faa1d18ff0fe392aa1d28cfc08b758aa67bc0e447c70f21ca655d72"
+    },
+    {
+      "path": "assets/motif_library/mentor-betrayal.md",
+      "bytes": 2938,
+      "sha256": "9a81e2a06587ab080a4cbfa77396558646aa02c5fd5430c36af1e141bee06ce8"
+    },
+    {
+      "path": "assets/motif_library/miraculous-conception.md",
+      "bytes": 2430,
+      "sha256": "f59ef0f160f914532ad9a6aee9da78d2f08baa579f853f0b5e21bb1250446783"
+    },
+    {
+      "path": "assets/motif_library/monkey-spirit-wife.md",
+      "bytes": 1941,
+      "sha256": "1736a4e8b10c5d8d9b2faeb1f61725fe30a7d7254b40d7de4bc711160b6c9deb"
+    },
+    {
+      "path": "assets/motif_library/moral-abyss.md",
+      "bytes": 2948,
+      "sha256": "a6ed90bc17aed9c8862999296c9a163cf2bea20c3f25d454f0c0169946165ceb"
+    },
+    {
+      "path": "assets/motif_library/multiple-creations-of-humans.md",
+      "bytes": 2981,
+      "sha256": "deba5e19d6621520cae865c9ce568b786497719e376945ac1d0909ad64e7ae67"
+    },
+    {
+      "path": "assets/motif_library/muslim-treasure-seer.md",
+      "bytes": 2413,
+      "sha256": "1ddd218a34f3c34745293624f433531cea878d1cfbcc6a4bc2b5bd2be8bc9529"
+    },
+    {
+      "path": "assets/motif_library/navel-of-the-world.md",
+      "bytes": 2084,
+      "sha256": "cd7ac3b419f138b048f6a84c93fa56f5eba335f50afc7a7ce9169d5249a489eb"
+    },
+    {
+      "path": "assets/motif_library/neglected_fairy.md",
+      "bytes": 2474,
+      "sha256": "58352a4f7da3ee488c0336e27106a12a5e34281dd49c3b13e683a86c32bfbe3b"
+    },
+    {
+      "path": "assets/motif_library/no-300-taels.md",
+      "bytes": 1728,
+      "sha256": "59349be5c7d7dc2b2f6a51779dec62ffa2a9d30060b184ae61be035ea42e2130"
+    },
+    {
+      "path": "assets/motif_library/old_older_oldest.md",
+      "bytes": 2468,
+      "sha256": "e4db08d0bafb57e86dfdb07d7533599f8dee3ff24e84d81848b84e8ddcc76178"
+    },
+    {
+      "path": "assets/motif_library/origin-of-death.md",
+      "bytes": 2647,
+      "sha256": "8d8e5602d53026a8a2e06ed20ad2d5d94c5267f2f3835b3d0c9acb9f41e0e2e6"
+    },
+    {
+      "path": "assets/motif_library/original-strange-bodies.md",
+      "bytes": 2773,
+      "sha256": "25b449090412dd7021b0e2701909f15000ea28dabc2a01b411d216299bf018c8"
+    },
+    {
+      "path": "assets/motif_library/otherworld-quest.md",
+      "bytes": 2961,
+      "sha256": "f58e1da80b00ddbfe9faf2c42264e34f5d8eaecd86fae8b680925a7f6ebcb816"
+    },
+    {
+      "path": "assets/motif_library/peng-zu-immortal.md",
+      "bytes": 2175,
+      "sha256": "04a0193acda4a2251e69ee4dd6686a2c154353fe3160d3eee67d01f303112235"
+    },
+    {
+      "path": "assets/motif_library/pengzu-cannot-die.md",
+      "bytes": 1766,
+      "sha256": "2d8d4ac0405658e18de83fc7fe9f6db13cf0640d0e9ae9454ad100a390a45946"
+    },
+    {
+      "path": "assets/motif_library/pilgrimage-mountain.md",
+      "bytes": 2035,
+      "sha256": "3976fdc1b51f87480da7d2ccba770802280ab24f392ea793190bca6dc8d045b8"
+    },
+    {
+      "path": "assets/motif_library/poor-man-rich-wife.md",
+      "bytes": 1795,
+      "sha256": "10fcab019805785ad954fac02b190eb89417a4547cdee4ed62e60a4b04c70a1a"
+    },
+    {
+      "path": "assets/motif_library/procne_philomela.md",
+      "bytes": 2824,
+      "sha256": "0ddcbc46b9205daba6f0212699f846f5fb77bc9b73af19023c7d3c172cafc3a5"
+    },
+    {
+      "path": "assets/motif_library/prophecy-defied.md",
+      "bytes": 3370,
+      "sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+    },
+    {
+      "path": "assets/motif_library/race-against-dawn.md",
+      "bytes": 2114,
+      "sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+    },
+    {
+      "path": "assets/motif_library/rebellious-deity.md",
+      "bytes": 3074,
+      "sha256": "1f91cd0e278fa7785c6bd21bcff5ccc339c5ece6a86b69a84f3eb35185e9a4af"
+    },
+    {
+      "path": "assets/motif_library/rebirth-resurrection.md",
+      "bytes": 2997,
+      "sha256": "f57936b29462c3f9e872f29f72924a3ac4945012b7469a9ce99d467e38de39eb"
+    },
+    {
+      "path": "assets/motif_library/reborn-wife.md",
+      "bytes": 2161,
+      "sha256": "57e52fe2c5511c612294a581e7e806de1fc249e28a47ed5650841f39c6985b2a"
+    },
+    {
+      "path": "assets/motif_library/refusal-return.md",
+      "bytes": 2508,
+      "sha256": "25754ef418b99a5bf99de5a2b0f6fa4c2ad6a98171f43eb4ef9601827c76bda7"
+    },
+    {
+      "path": "assets/motif_library/repopulating-after-flood.md",
+      "bytes": 2753,
+      "sha256": "68bf0e55692ca6f43067953ec23a0311dbe102da41a459b1571d94e8758ac92d"
+    },
+    {
+      "path": "assets/motif_library/rich-daughter-beggar.md",
+      "bytes": 2050,
+      "sha256": "96eff8947b135072e2db87e4fd5380a347a5ab2af1a3e28047bfe5d211169eb0"
+    },
+    {
+      "path": "assets/motif_library/road-of-trials.md",
+      "bytes": 2675,
+      "sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+    },
+    {
+      "path": "assets/motif_library/royal-taboo-system.md",
+      "bytes": 4376,
+      "sha256": "51f9cd594a22187a8c3a733698cc444cfb416321634d0343f45ed6826f1a13f3"
+    },
+    {
+      "path": "assets/motif_library/sacred-king-cycle.md",
+      "bytes": 4365,
+      "sha256": "f3b76eed27e1a092c7a6ebb550c10a933aaaa451abdc665a4b4a99002e589154"
+    },
+    {
+      "path": "assets/motif_library/sacrifice-for-humanity.md",
+      "bytes": 3138,
+      "sha256": "c904f70800ec1e63cdadc674121296a988d047022340417d6904d24cbb70abcf"
+    },
+    {
+      "path": "assets/motif_library/sacrificial-transformation.md",
+      "bytes": 2107,
+      "sha256": "8c90859de0c0db9209a0377e597b41acc05a5e19510286882497688578cdfd4d"
+    },
+    {
+      "path": "assets/motif_library/scapegoat-transfer.md",
+      "bytes": 4210,
+      "sha256": "a3a8e4708125f283dc5960138b6cb5a80cfc6162ae7b8bed5d728dde5e61df4e"
+    },
+    {
+      "path": "assets/motif_library/seeking-buddha.md",
+      "bytes": 2545,
+      "sha256": "25b664aeb2e83d9313314cc2fa72552b442a3e6a621e9a46e822a11788f29be3"
+    },
+    {
+      "path": "assets/motif_library/sexual-awakening.md",
+      "bytes": 3079,
+      "sha256": "41d07aab2ad451cd4280857fe81d71447f36c608b65bb4387eb01bce20592861"
+    },
+    {
+      "path": "assets/motif_library/shadow-archetype.md",
+      "bytes": 2499,
+      "sha256": "4abb951711bfa7fa6336fc33206ba445b86a999b1371b5963e2c03bd66d8f2d0"
+    },
+    {
+      "path": "assets/motif_library/shape-shifting-escape.md",
+      "bytes": 3053,
+      "sha256": "3e2983ecd9ae3ba64773bf47a220af2553ee6a6187a5b6a77d34566603c77be5"
+    },
+    {
+      "path": "assets/motif_library/shapeshifter-archetype.md",
+      "bytes": 2498,
+      "sha256": "20d74a1a6c8bc40346aa1086cd1cb6d927c62037ffd7d426bb351e4bc4531193"
+    },
+    {
+      "path": "assets/motif_library/shooting-the-sun.md",
+      "bytes": 2405,
+      "sha256": "b6b3429543f10bbcf927dee6c53a01caa9684d16fa67c5cfd23bfe9d3ab1a7b8"
+    },
+    {
+      "path": "assets/motif_library/sibling-marriage.md",
+      "bytes": 2541,
+      "sha256": "67703635c6c0ea680017ed3bd0f7c00a13f75b06db3bca6e3a05b036d8eddf24"
+    },
+    {
+      "path": "assets/motif_library/silver-runs-away.md",
+      "bytes": 2019,
+      "sha256": "e7d1ab0a76ced016ffccbe629fb104a5f5a76c1877b84868b8e3ac674ef07336"
+    },
+    {
+      "path": "assets/motif_library/snail-maiden.md",
+      "bytes": 2241,
+      "sha256": "cc9fcd1fcc5b1961f7814fa9de533d2406cb2c0e94dddb23c1fda22d93d7c7f1"
+    },
+    {
+      "path": "assets/motif_library/snake-gold-jar.md",
+      "bytes": 1969,
+      "sha256": "7a2a71f8f1c45d1cf1ac3946bbbb64d82ec63838cfb22c6a1e0a5cbac9fa2dfd"
+    },
+    {
+      "path": "assets/motif_library/snake-husband.md",
+      "bytes": 2130,
+      "sha256": "cdf52cbf0a49e357e5def27bec95481c264534a265de25d71e6dfaf7bc607794"
+    },
+    {
+      "path": "assets/motif_library/soul-flight-danger.md",
+      "bytes": 4460,
+      "sha256": "64457a17bbc61f5de7311ef8e61da26d59f64429c0210003168d7c3d963c04fe"
+    },
+    {
+      "path": "assets/motif_library/soul-journey.md",
+      "bytes": 3002,
+      "sha256": "1032ae40ed7d305abe15627bd2cf7517ea39b31118dd49357a1afc185cf9e78a"
+    },
+    {
+      "path": "assets/motif_library/spilled-water-regret.md",
+      "bytes": 2118,
+      "sha256": "7344bd67e81467bd2624e339560dc802c03d32aa1c2e38bfa10ee6c94dc9edb2"
+    },
+    {
+      "path": "assets/motif_library/stealing-fire.md",
+      "bytes": 2489,
+      "sha256": "8c7e6ad3c9df9ec5a0d6d4c34efa8140c4880de5d3cab82549c79a8869b1c310"
+    },
+    {
+      "path": "assets/motif_library/stone-horse-treasure.md",
+      "bytes": 1869,
+      "sha256": "83b869e7bc840037dec6a11a7f26e05c01bf69ca878a37fc114023d22a9ec8e6"
+    },
+    {
+      "path": "assets/motif_library/story-as-shield.md",
+      "bytes": 3013,
+      "sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+    },
+    {
+      "path": "assets/motif_library/swallow-gratitude.md",
+      "bytes": 2309,
+      "sha256": "154447263362b05edc11836239f4a6ade3be207a46bda8c118181b2e5e14b9bb"
+    },
+    {
+      "path": "assets/motif_library/sympathetic-magic-contagious.md",
+      "bytes": 4405,
+      "sha256": "62fd78bd7448e184ffe6057fd250a2b4e2baa230ac181ab846b6d8eb1bb7612a"
+    },
+    {
+      "path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+      "bytes": 4226,
+      "sha256": "269c5077231f4a4362a0de0f1bd0095ec074c9b298a7ba82a60c6edc591f933c"
+    },
+    {
+      "path": "assets/motif_library/taboo-violation-catastrophe.md",
+      "bytes": 4627,
+      "sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+    },
+    {
+      "path": "assets/motif_library/testing-ending-flood.md",
+      "bytes": 2571,
+      "sha256": "5d09da2acc84e900b216a140416fc26464a2f9a50354e9b920deee66baf60a79"
+    },
+    {
+      "path": "assets/motif_library/three-tiered-universe.md",
+      "bytes": 3360,
+      "sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+    },
+    {
+      "path": "assets/motif_library/three-wishes.md",
+      "bytes": 2311,
+      "sha256": "78fab0a35079945bb64f8c9143170bc34ec763a48f421a67b9c0c491fc65e40f"
+    },
+    {
+      "path": "assets/motif_library/three_fates.md",
+      "bytes": 2537,
+      "sha256": "c70b24af8b7ea6c6c417d470f6222dbef19d790df4297da2d64c017436f2dbb5"
+    },
+    {
+      "path": "assets/motif_library/threshold-guardian.md",
+      "bytes": 2735,
+      "sha256": "1c085b12960dd8e561c9624c1253b857a757b8970a1345069f76b24bbf36140c"
+    },
+    {
+      "path": "assets/motif_library/tiger-deer-wit.md",
+      "bytes": 2246,
+      "sha256": "35a18c75c600f3e4d4cf3037001e9a5b88e33f02cdf3e19d95f5dce6e21fc158"
+    },
+    {
+      "path": "assets/motif_library/tiger-grandmother.md",
+      "bytes": 2221,
+      "sha256": "77d8b8791923e6814635f93f23c00ff9dd10a2aa3132bf396ce5dc31cc21d8a3"
+    },
+    {
+      "path": "assets/motif_library/time-pressure.md",
+      "bytes": 3163,
+      "sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+    },
+    {
+      "path": "assets/motif_library/toad-son.md",
+      "bytes": 2251,
+      "sha256": "aabeb7ee01e2394b34427bf7fc16c19a7a33f81199593440ee6029c480adc421"
+    },
+    {
+      "path": "assets/motif_library/transference-of-evil.md",
+      "bytes": 4495,
+      "sha256": "c39b6272ebd531d2e042ff074715f6edbf4b5705867dea7fc512c86b442503a5"
+    },
+    {
+      "path": "assets/motif_library/trickster-archetype.md",
+      "bytes": 2683,
+      "sha256": "67f5fcab1e3a15dd807f16bcf0400c560a082b7b5ae9f8809f0224ecdaf0f70d"
+    },
+    {
+      "path": "assets/motif_library/truth-pursuit.md",
+      "bytes": 2897,
+      "sha256": "b0900e167687867d1408fc2e57d8ef2a0cc92c9d25209621084a198da1b2ad42"
+    },
+    {
+      "path": "assets/motif_library/twelve-labors.md",
+      "bytes": 3090,
+      "sha256": "68d8deefba79608fb69eba6ceaf502e8f4481de94bb6efc9654285aec08d905f"
+    },
+    {
+      "path": "assets/motif_library/ultimate-boon.md",
+      "bytes": 2546,
+      "sha256": "8f6312c6354a46f433efb9c52f4e6db265ed11bac396ec53b94c625c05a118eb"
+    },
+    {
+      "path": "assets/motif_library/uninvited_fairy.md",
+      "bytes": 1921,
+      "sha256": "0a4e3d4420b25b926b50d1ad6dcc734f788653ac4ef841bbc4d6a393c62fe2bf"
+    },
+    {
+      "path": "assets/motif_library/vegetation-wedding.md",
+      "bytes": 4110,
+      "sha256": "dc7d0596ac4e7e2ba18709231e0fec41d02bb64ffb8b52740f7b7e3c2cae5168"
+    },
+    {
+      "path": "assets/motif_library/water-ghost-fisherman.md",
+      "bytes": 2244,
+      "sha256": "4ed88b740892ce32d7c098e65b087c3ad2d4610e2786ef9fa56f02475cffdece"
+    },
+    {
+      "path": "assets/motif_library/weaving_story.md",
+      "bytes": 2433,
+      "sha256": "8ac8319cd6c5bbe58f9c6ee60a3b2dae12fe5127e74ff6cf58d3601535846e1d"
+    },
+    {
+      "path": "assets/motif_library/wild-spirit-nature.md",
+      "bytes": 4352,
+      "sha256": "f03865ae9baa3da28b1537e647375763afe2f26412be694b637b163971653df3"
+    },
+    {
+      "path": "assets/motif_library/wine-madness.md",
+      "bytes": 2983,
+      "sha256": "c5adb60e2233ae6fa9f901e010f9982212d32326d92897a3f81b0cfa21189b82"
+    },
+    {
+      "path": "assets/motif_library/wrong_child_murdered.md",
+      "bytes": 2337,
+      "sha256": "296ca4c7ea27b096a57fcea577699c0820a71d4e5fc1cdc4332c488ef93ab1aa"
+    },
+    {
+      "path": "assets/pacing/chapter-hooks.md",
+      "bytes": 7501,
+      "sha256": "378acab2baaa33f708506176400ccf60ea4b616cd3ab3ac4b03ca90a41e28de5"
+    },
+    {
+      "path": "assets/pacing/golden-three-chapters.md",
+      "bytes": 5898,
+      "sha256": "394684f5d5475ffe1c611d0e1a3a1217aaf72f83681b105e7bdd1b922c951bfb"
+    },
+    {
+      "path": "assets/pacing/pacing-curve.md",
+      "bytes": 7123,
+      "sha256": "36a894efcc984a75a06747949f761469ae03705a18333674a4f2b56b418c2683"
+    },
+    {
+      "path": "assets/pacing/real-data-pacing-benchmark.md",
+      "bytes": 14457,
+      "sha256": "a3a8508c6dd8a8b1f177ddb717de2fc0b3e0115f5b1c527f51be75d983b5c5e5"
+    },
+    {
+      "path": "assets/pacing/satisfaction-loop.md",
+      "bytes": 6643,
+      "sha256": "35d6ccc0d0afe51795774f39d15e56bf68da9aadd566b20970cf4dd62f4a2911"
+    },
+    {
+      "path": "assets/platforms/fanqie/config.json",
+      "bytes": 363,
+      "sha256": "c6e0d9a35e9a9d9179dd3eda8536c81745517face6b4b9969a5527fd765691cd"
+    },
+    {
+      "path": "assets/platforms/fanqie/genre-style-matrix.md",
+      "bytes": 1765,
+      "sha256": "b75e9f614881eaf2dc366087a766f88467fcb7223a3f0f80cd908430ff46b0b1"
+    },
+    {
+      "path": "assets/platforms/zhihu/config.json",
+      "bytes": 360,
+      "sha256": "8d7b45696c6a36b0aca0a1aa1956b488667b03edf9027b1b1ba1cf6738c441b4"
+    },
+    {
+      "path": "assets/style_library/guiMi-zhuzhi-style.md",
+      "bytes": 3392,
+      "sha256": "cc3f20c69ea266dd3fdaeae4ee15e5f2787b1137c8c6e99d8e7b07e5db68cc73"
+    },
+    {
+      "path": "assets/style_library/index.md",
+      "bytes": 182,
+      "sha256": "edfb232511b1dc7ffd8ef0c1ff55f21491bf7274612e44cc39c4c9452547a790"
+    },
+    {
+      "path": "assets/style_library/jingsong-paradise-style.md",
+      "bytes": 2967,
+      "sha256": "5ee6549378df56889b68f93ccc8eff48eea7d6ca36b516f5cc1f8d46ee2cf06a"
+    },
+    {
+      "path": "assets/style_library/mo-ri-jiang-lin-style.md",
+      "bytes": 6674,
+      "sha256": "12fcb87338a60a8f29d3d7c187800b52cc0a7a885eb83b7424564a55d81d1c67"
+    },
+    {
+      "path": "assets/style_library/shan-ye-cun-fu-style.md",
+      "bytes": 6631,
+      "sha256": "2c69205f6aa136ef93968da07643dcb84f8f720c51308312da0ff02ff963644a"
+    },
+    {
+      "path": "assets/style_library/shi-ting-style.md",
+      "bytes": 7241,
+      "sha256": "510dd2619d32adcf6b0be38b9017ceb56744e4b87d054cab2da781da9946d3fd"
+    },
+    {
+      "path": "assets/style_library/style-dd66a72d.md",
+      "bytes": 1015,
+      "sha256": "10f1c04792342ba7b6a04847aa34e35969a86a74d547276327a28834fc6c899d"
+    },
+    {
+      "path": "assets/style_library/tian-yuan-style.md",
+      "bytes": 6326,
+      "sha256": "544bb1124bc3df29aac1dac4ea3a512f971190db9a326751d08164d1d2f0febe"
+    },
+    {
+      "path": "assets/style_library/urban-suspense-fanqie.md",
+      "bytes": 4767,
+      "sha256": "c47fb29017299107354fb0e418faea456f5e1cdd2791c87f528b770e2faf142c"
+    },
+    {
+      "path": "assets/style_library/you-xi-ru-qin-style.md",
+      "bytes": 7208,
+      "sha256": "fcd5223f85953787d9afb5f041a4b4f36a5595000f3bd948b453ec90949ca945"
+    },
+    {
+      "path": "assets/style_library/zhu-shen-yu-xi-style.md",
+      "bytes": 7578,
+      "sha256": "f0e640ca0113fddefb8ebe35ce762272fd60fa30e64b2fb1420732797905e65c"
+    },
+    {
+      "path": "assets/technique_library/_scenarios/character-intro.md",
+      "bytes": 1200,
+      "sha256": "5642bdbee8b459ab919865fc01940cbbaed544d2c8d04349275b7ebe8933e2b9"
+    },
+    {
+      "path": "assets/technique_library/_scenarios/cliffhanger.md",
+      "bytes": 1328,
+      "sha256": "c3544d6b72827adc927364be41dbe1b37d3f263bc92d4aa0174a5a6c8829d13d"
+    },
+    {
+      "path": "assets/technique_library/_scenarios/climax.md",
+      "bytes": 1410,
+      "sha256": "306390321460bb795d7fe19650f12d7da4cc4fc4ddd8e0a8fe54bf7ffb27b1cc"
+    },
+    {
+      "path": "assets/technique_library/_scenarios/dialogue-tension.md",
+      "bytes": 1241,
+      "sha256": "0931562146a6abeab8296ce22382e8c0f08c09c325b88563b62a2e016f4d766a"
+    },
+    {
+      "path": "assets/technique_library/_scenarios/fight-scene.md",
+      "bytes": 1329,
+      "sha256": "7029d4f71a57d9802bce8a6ece036dddd40fe3bf5441c31ea6bc37283162594e"
+    },
+    {
+      "path": "assets/technique_library/_scenarios/opening.md",
+      "bytes": 1369,
+      "sha256": "2ebbf072adea2b52d4bcf1e91d6a847d3a382f0865879ea06ec90a8c615c82c4"
+    },
+    {
+      "path": "assets/technique_library/_scenarios/revelation.md",
+      "bytes": 1233,
+      "sha256": "57d9772aed5dde56ac5b9f99c521badf0551a84a55fd284242d15797c69b6455"
+    },
+    {
+      "path": "assets/technique_library/_scenarios/romance.md",
+      "bytes": 1164,
+      "sha256": "520b2728c0610bd87c3efbfc7b7e16bc1d94718c14614e2da2de9c20ee318ae2"
+    },
+    {
+      "path": "assets/technique_library/_scenarios/training.md",
+      "bytes": 1384,
+      "sha256": "43df9e3349de426a2334c25ee3760a31ea1d0537850e66bb9b121a22856fb265"
+    },
+    {
+      "path": "assets/technique_library/_scenarios/world-building.md",
+      "bytes": 1065,
+      "sha256": "a439408ed65e5e7968718d831ecb53f0a6e33b3e307b14611844854000b3825b"
+    },
+    {
+      "path": "assets/technique_library/cold-open.md",
+      "bytes": 8007,
+      "sha256": "1b084b505242c6046e47918aaf9777e63fc4705df956977b8b98be151ca1074b"
+    },
+    {
+      "path": "assets/technique_library/dialogue-subtext.md",
+      "bytes": 6774,
+      "sha256": "76f103bbe0a74cd004a4aa5b3b90e581f6f7833fb3f05d5f68b5d3751c983fa2"
+    },
+    {
+      "path": "assets/technique_library/horror-atmosphere.md",
+      "bytes": 3107,
+      "sha256": "fb49389481012df0c0c5306138b79d9f37ba7ea877ecd1a0e98f63e012d4f010"
+    },
+    {
+      "path": "assets/technique_library/humor-with-depth.md",
+      "bytes": 2797,
+      "sha256": "5f6f1340ec96b9ecc1550aa8a279dfd65b47751d2d6435f03cf5757f7cb78f26"
+    },
+    {
+      "path": "assets/technique_library/immersion-engineering.md",
+      "bytes": 2964,
+      "sha256": "9537f3ed2d09ac69e6d44007ea7aa5aeea9a7a9592c254b3bea4fcb120409fbd"
+    },
+    {
+      "path": "assets/technique_library/interior-monologue.md",
+      "bytes": 2941,
+      "sha256": "f914c573f3d1f1552ee38871cdcb6d91a98af75d98d9607e9cc6591237a8702b"
+    },
+    {
+      "path": "assets/technique_library/lightness-narrative.md",
+      "bytes": 3066,
+      "sha256": "eba845040eb061d1f4ca875cd68e8344db0e1993478a5b090f89ced659a87fb2"
+    },
+    {
+      "path": "assets/technique_library/metafiction-breaking-fourth-wall.md",
+      "bytes": 3183,
+      "sha256": "a7a86e4847ec2c0316e867db37fa1eee0e7f02a4d357876f08672b77ada4eb35"
+    },
+    {
+      "path": "assets/technique_library/multi-perspective-narration.md",
+      "bytes": 2976,
+      "sha256": "71de212d2bfe891085458321c9b9ae6fb324b0db6aaabd9932229cac89840132"
+    },
+    {
+      "path": "assets/technique_library/real-data-pacing-benchmark.md",
+      "bytes": 14457,
+      "sha256": "a3a8508c6dd8a8b1f177ddb717de2fc0b3e0115f5b1c527f51be75d983b5c5e5"
+    },
+    {
+      "path": "assets/technique_library/rhythm-variation.md",
+      "bytes": 10611,
+      "sha256": "dff3ffe8498df146fc41932c6f91b21934fb5311060d62fa6509c20c0c95a165"
+    },
+    {
+      "path": "assets/technique_library/satisfaction-design.md",
+      "bytes": 3212,
+      "sha256": "edf2becbe414616861cd64fe47c9db69eb5510f82b73dc205ce3d72a9802065d"
+    },
+    {
+      "path": "assets/technique_library/scene-description.md",
+      "bytes": 6618,
+      "sha256": "ac4b68fc43c454e08bfd0bba04e5edcea9877c438067a1c981aecf3c2cf0d3bb"
+    },
+    {
+      "path": "assets/technique_library/sensory-detail.md",
+      "bytes": 10890,
+      "sha256": "64e078be42a715d2ab2bbd3901b34bae5d2908aac5ceafec914c7e3133d83c38"
+    },
+    {
+      "path": "assets/technique_library/spatial-form-narrative.md",
+      "bytes": 3056,
+      "sha256": "1919ea4485fdb760d22472596326592223ab4f54d3f7c6d3296e391c18f68544"
+    },
+    {
+      "path": "assets/technique_library/suspense-laddering.md",
+      "bytes": 3103,
+      "sha256": "8c5473fda82814eaa4f7b75b5e4ef6462e6c6d7c0c204d1a409ab90546182ccc"
+    },
+    {
+      "path": "assets/technique_library/twist-ending.md",
+      "bytes": 3040,
+      "sha256": "65b036ef8f2b455be87f80a507befaada1e17aa6af134013d0abd96547f8dc62"
+    }
+  ]
+}
