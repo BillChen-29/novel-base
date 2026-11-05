@@ -291,28 +291,59 @@ def cmd_apply(args: argparse.Namespace, cfg: UpdaterConfig) -> Dict[str, Any]:
     errors: List[str] = []
 
     for u in updates:
+        if not isinstance(u, dict):
+            errors.append('更新指令必须是对象')
+            continue
         # 低置信度跳过（除非强制）
         if u.get("confidence") == "low" and not args.force_low_confidence:
             continue
 
         cmd_type = u.get("type")
         try:
+            update_chapter = u.get('chapter', chapter)
+            if type(update_chapter) is not int or update_chapter <= 0:
+                raise ValueError('更新必须有明确的正整数章节号')
+            if update_chapter != chapter:
+                raise ValueError('更新条目章节与本次 apply 章节不一致')
+            attrs = u.get('attrs', {})
+            if not isinstance(attrs, dict):
+                raise ValueError('更新 attrs 必须是对象')
+            attrs = dict(attrs)
+            position = attrs.get('source_position', {})
+            if not isinstance(position, dict):
+                raise ValueError('source_position 必须是对象')
+            if position.get('chapter', update_chapter) != update_chapter:
+                raise ValueError('source_position 与更新章节不一致')
+            if attrs.get('last_updated', update_chapter) != update_chapter:
+                raise ValueError('last_updated 与更新章节不一致')
+            offset = u.get('offset', position.get('end'))
+            if offset is not None and (type(offset) is not int or offset < 0):
+                raise ValueError('更新 offset 必须是非负整数')
+            if 'offset' in u and position.get('end', offset) != offset:
+                raise ValueError('offset 与 source_position 不一致')
+            # The builder owns snapshot history. Preserve explicit knowledge labels
+            # as supplied; neither participant detection nor a chapter title grants knowledge.
+            attrs['last_updated'] = update_chapter
+            attrs['source_position'] = {'chapter': update_chapter, 'end': offset}
+            attrs.pop('temporal_state_unknown', None)
             if cmd_type == "update-node":
                 cmd = [
                     sys.executable, str(builder), "update-node",
                     "--project-root", str(root),
                     "--node-id", u["node_id"],
-                    "--chapter", str(u.get("chapter", chapter)),
-                    "--attrs", json.dumps(u.get("attrs", {}), ensure_ascii=False),
+                    "--chapter", str(update_chapter),
+                    "--attrs", json.dumps(attrs, ensure_ascii=False),
                 ]
+                if offset is not None:
+                    cmd.extend(['--offset', str(offset)])
             elif cmd_type == "add-node":
                 cmd = [
                     sys.executable, str(builder), "add-node",
                     "--project-root", str(root),
                     "--type", u["node_type"],
                     "--name", u["name"],
-                    "--last-updated", str(u.get("chapter", chapter)),
-                    "--attrs", json.dumps(u.get("attrs", {}), ensure_ascii=False),
+                    "--last-updated", str(update_chapter),
+                    "--attrs", json.dumps(attrs, ensure_ascii=False),
                 ]
             else:
                 errors.append(f"未知指令类型: {cmd_type}")

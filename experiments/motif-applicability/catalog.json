@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "status": "experimental_operationalization",
+  "motifs": [
+    {
+      "id": "weaving_story",
+      "title": "织物传书：受阻表达经载体传递",
+      "source": {
+        "path": "assets/motif_library/weaving_story.md",
+        "sha256": "8ac8319cd6c5bbe58f9c6ee60a3b2dae12fe5127e74ff6cf58d3601535846e1d",
+        "evidence": [
+          {
+            "start": 48,
+            "end": 93,
+            "quote": "无法说话的受害者将自己遭遇的罪行织在布匹或绣袍上，通过物质媒介将真相传递给能够帮助她的人。"
+          },
+          {
+            "start": 106,
+            "end": 145,
+            "quote": "1. **禁声**：受害者被暴力剥夺了说话的能力（割去舌头、被囚禁、被威胁）。"
+          },
+          {
+            "start": 186,
+            "end": 222,
+            "quote": "3. **编织真相**：她将自己遭受的罪行织成图案或文字，记录在布匹上。"
+          },
+          {
+            "start": 223,
+            "end": 265,
+            "quote": "4. **秘密传递**：通过某个信任的人（仆人、鸟、风）将织物传送给能够帮助她的人。"
+          },
+          {
+            "start": 266,
+            "end": 301,
+            "quote": "5. **真相大白**：接收者看到织物上的图案，理解了真相，开始行动。"
+          },
+          {
+            "start": 406,
+            "end": 431,
+            "quote": "- 编码与解码：真相被编码在图案中，需要正确的解读"
+          }
+        ]
+      },
+      "roles": {
+        "sender": "character",
+        "receiver": "character",
+        "helper": "character",
+        "carrier": "object",
+        "key": "object"
+      },
+      "conditions": [
+        {
+          "id": "silenced",
+          "kind": "world_state",
+          "claim_template": "{sender}受到威胁，无法向他人直接说出自己遭遇的罪行。"
+        },
+        {
+          "id": "encoded",
+          "kind": "communication_event",
+          "claim_template": "{sender}已经把自己遭遇的罪行编码在{carrier}上。"
+        },
+        {
+          "id": "delivered",
+          "kind": "acquisition_event",
+          "claim_template": "{receiver}已经收到{carrier}。"
+        },
+        {
+          "id": "decoded",
+          "kind": "acquisition_event",
+          "claim_template": "{receiver}已经正确解读{carrier}，理解了{sender}遭遇的罪行。"
+        },
+        {
+          "id": "helper_available",
+          "kind": "world_state",
+          "claim_template": "{receiver}知道{helper}能够解读{carrier}，而且目前可以联系{helper}。"
+        },
+        {
+          "id": "key_available",
+          "kind": "world_state",
+          "claim_template": "{receiver}持有能够解读{carrier}的{key}。"
+        }
+      ],
+      "entry_conditions": [
+        "silenced",
+        "encoded"
+      ],
+      "stages": [
+        {
+          "id": "encoded",
+          "title": "已编码",
+          "requires": [
+            "silenced",
+            "encoded"
+          ],
+          "chronological": []
+        },
+        {
+          "id": "delivered",
+          "title": "已送达",
+          "requires": [
+            "silenced",
+            "encoded",
+            "delivered"
+          ],
+          "chronological": [
+            "encoded",
+            "delivered"
+          ]
+        },
+        {
+          "id": "decoded",
+          "title": "已解读，可考虑回应",
+          "requires": [
+            "silenced",
+            "encoded",
+            "delivered",
+            "decoded"
+          ],
+          "chronological": [
+            "encoded",
+            "delivered",
+            "decoded"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": "deliver_record",
+          "title": "安排记录的传递",
+          "from_stage": "encoded",
+          "requires": [],
+          "proposal": "选择可靠的传递方式，使记录抵达接收者；这是待写的行动，不是已发生的事实。"
+        },
+        {
+          "id": "ask_decoder",
+          "title": "向已知的解读者求助",
+          "from_stage": "delivered",
+          "requires": [
+            "helper_available"
+          ],
+          "proposal": "联系前文已确认能够解读记录的人，请其说明内容与依据；求助结果留待后续场景确认。"
+        },
+        {
+          "id": "compare_key",
+          "title": "用已有对照资料解码",
+          "from_stage": "delivered",
+          "requires": [
+            "key_available"
+          ],
+          "proposal": "使用前文已取得的对照资料核对记录，逐项呈现解读过程；不要预先宣布解读成功。"
+        },
+        {
+          "id": "respond_to_record",
+          "title": "基于已理解内容考虑回应",
+          "from_stage": "decoded",
+          "requires": [],
+          "proposal": "围绕已经理解的遭遇选择核验、保护或求援行动；具体行动及其结果仍是创作选择。"
+        }
+      ],
+      "operationalization_note": "只试验源文中的受阻表达、编码、传递、解码机制。找解读者和用对照表是本轮创作方案，不是原文已有变体；不验证原文经典案例归属。编号在此以明确事件次序核对，不推广为所有母题的通用五阶段。"
+    },
+    {
+      "id": "forbidden_knowledge",
+      "title": "禁忌之禁：被禁止的知识与代价",
+      "source": {
+        "path": "assets/motif_library/forbidden-knowledge.md",
+        "sha256": "158234c820623920364a97f952e91bd9b42e631de27e0fd0f3a45f6ca9371c14",
+        "evidence": [
+          {
+            "start": 42,
+            "end": 112,
+            "quote": "一种神圣的知识或力量被严格禁止凡人获取，有人出于求知欲、野心或命运的驱使去获取它，获得了超越凡人的力量，但同时也招致了不可挽回的灾难性后果。"
+          },
+          {
+            "start": 181,
+            "end": 232,
+            "quote": "2. **获取之路**：主角踏上危险的旅程，穿越重重障碍（怪兽、迷宫、深渊），最终到达知识的藏匿之处。"
+          },
+          {
+            "start": 233,
+            "end": 297,
+            "quote": "3. **获取与代价**：主角成功获取了知识，获得了超凡的力量（能看透万物、能起死回生、能改变自然），但守护知识的神灵已经知晓。"
+          },
+          {
+            "start": 298,
+            "end": 339,
+            "quote": "4. **神罚降临**：神灵对盗取知识者施以惩罚——夺走亲人、摧毁肉体、永远追逐。"
+          },
+          {
+            "start": 1030,
+            "end": 1056,
+            "quote": "- 知识本身没有被禁止时（普通的求知不构成\"禁忌\"）"
+          }
+        ]
+      },
+      "roles": {
+        "seeker": "character",
+        "authority": "object",
+        "knowledge": "object"
+      },
+      "conditions": [
+        {
+          "id": "prohibited",
+          "kind": "world_state",
+          "claim_template": "{authority}明确禁止{seeker}获取{knowledge}，并称其为神圣知识。"
+        },
+        {
+          "id": "seeking",
+          "kind": "world_state",
+          "claim_template": "{seeker}已经决定设法获取{knowledge}。"
+        },
+        {
+          "id": "acquired_power",
+          "kind": "acquisition_event",
+          "claim_template": "{seeker}已经获取{knowledge}，并因此获得超常力量。"
+        },
+        {
+          "id": "punished",
+          "kind": "world_state",
+          "claim_template": "{seeker}已经因为获取{knowledge}而受到{authority}的惩罚。"
+        }
+      ],
+      "entry_conditions": [
+        "prohibited",
+        "seeking"
+      ],
+      "stages": [
+        {
+          "id": "seeking",
+          "title": "禁令与求知动机已出现",
+          "requires": [
+            "prohibited",
+            "seeking"
+          ],
+          "chronological": []
+        },
+        {
+          "id": "acquired",
+          "title": "已获取力量",
+          "requires": [
+            "prohibited",
+            "seeking",
+            "acquired_power"
+          ],
+          "chronological": []
+        },
+        {
+          "id": "cost",
+          "title": "代价已经发生",
+          "requires": [
+            "prohibited",
+            "seeking",
+            "acquired_power",
+            "punished"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "pursue_knowledge",
+          "title": "安排接近知识的行动",
+          "from_stage": "seeking",
+          "requires": [],
+          "proposal": "围绕已经出现的禁令和求知决定，设计接近知识的行动与阻碍；获得力量及惩罚都属于待发展的可能。"
+        },
+        {
+          "id": "face_possible_cost",
+          "title": "安排力量使用与代价选择",
+          "from_stage": "acquired",
+          "requires": [],
+          "proposal": "考虑已获得的力量会引出哪些选择，并设计可能的代价；不要把模板中的神罚当作前文已经发生的事件。"
+        },
+        {
+          "id": "knowledge_aftermath",
+          "title": "考虑代价之后的知识去向",
+          "from_stage": "cost",
+          "requires": [],
+          "proposal": "基于已经发生的代价，提出保存或传播知识的可能；不预先宣称知识已留给他人。"
+        }
+      ],
+      "operationalization_note": "源文有结局式的不适用建议，本试点只把已明确的禁令和求知决定作为早期进入依据；未写到惩罚不视为反例，也不凭模板补写惩罚。"
+    }
+  ]
+}

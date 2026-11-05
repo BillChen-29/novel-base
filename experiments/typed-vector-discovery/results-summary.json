@@ -1,0 +1,3174 @@
+{
+  "schema_version": 1,
+  "assessment_scope": "full_plot_pool_current_structure_and_specific_fragment",
+  "whole_arc_completion": "not_assessed",
+  "review_source": "imported_current_ai_not_human_gold",
+  "unreviewed_types": [
+    "character",
+    "pacing",
+    "style",
+    "technique"
+  ],
+  "case_count": 6,
+  "reviewed_pairs": 72,
+  "positive_count": 2,
+  "proposal_ready_count": 1,
+  "corpus_sha256": "51d71613fe1ffca17a393fcd89bdb45cd6ff812eb2e7448af708db6f8b6661ac",
+  "model_sha256": "b5ce9d77a3fc4b3b39ccb5643c36777911cc4eb46a66962eadfa3f5f60490d63",
+  "dimensions": 768,
+  "limit": 3,
+  "cases": [
+    {
+      "case_id": "real-01",
+      "reviewed_plot_count": 12,
+      "assessment_counts": {
+        "current_structure": 0,
+        "specific_fragment": 0,
+        "insufficient_evidence": 12,
+        "contradicted": 0
+      },
+      "positive_count": 0,
+      "proposal_ready_count": 0,
+      "positive_paths": [],
+      "methods": {
+        "lexical_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/interior-monologue.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/forbidden-knowledge.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/false-accusation.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/story-as-shield.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "lexical_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 2,
+            "unassessed_count": 1,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 2,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/character_archetypes/trickster.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/motif_library/road-of-trials.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/road-of-trials.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/story-as-shield.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "vector_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/style_library/urban-suspense-fanqie.md",
+                "kind": "style",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/prophecy-defied.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/forbidden-knowledge.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "vector_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/style_library/urban-suspense-fanqie.md",
+                "kind": "style",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/revelation.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "hybrid_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/style_library/urban-suspense-fanqie.md",
+                "kind": "style",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/forbidden-knowledge.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/false-accusation.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "hybrid_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 2,
+            "unassessed_count": 1,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 2,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        }
+      }
+    },
+    {
+      "case_id": "real-02",
+      "reviewed_plot_count": 12,
+      "assessment_counts": {
+        "current_structure": 0,
+        "specific_fragment": 0,
+        "insufficient_evidence": 12,
+        "contradicted": 0
+      },
+      "positive_count": 0,
+      "proposal_ready_count": 0,
+      "positive_paths": [],
+      "methods": {
+        "lexical_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/style_library/urban-suspense-fanqie.md",
+                "kind": "style",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/road-of-trials.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/story-as-shield.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "lexical_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 1,
+            "unassessed_count": 2,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 1,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/character_archetypes/trickster.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/road-of-trials.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "vector_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/style_library/urban-suspense-fanqie.md",
+                "kind": "style",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/pacing-curve.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "vector_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/horror-atmosphere.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/revelation.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "hybrid_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/style_library/urban-suspense-fanqie.md",
+                "kind": "style",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/story-as-shield.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "hybrid_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/character_archetypes/trickster.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        }
+      }
+    },
+    {
+      "case_id": "real-03",
+      "reviewed_plot_count": 12,
+      "assessment_counts": {
+        "current_structure": 1,
+        "specific_fragment": 0,
+        "insufficient_evidence": 11,
+        "contradicted": 0
+      },
+      "positive_count": 1,
+      "proposal_ready_count": 1,
+      "positive_paths": [
+        "assets/technique_library/_scenarios/dialogue-tension.md"
+      ],
+      "methods": {
+        "lexical_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/character_archetypes/moral-grey-survivor.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/weaving_story.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          }
+        },
+        "lexical_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 1,
+            "unassessed_count": 2,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 1,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/character_archetypes/moral-grey-survivor.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/multi-perspective-narration.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/motif_library/story-as-shield.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/story-as-shield.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          }
+        },
+        "vector_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/pacing-curve.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/road-of-trials.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          }
+        },
+        "vector_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/character_archetypes/trickster.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 1,
+            "specific_fragment_hits": 0,
+            "positive_hits": 1,
+            "proposal_ready_hits": 1,
+            "unknown_count": 2,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/false-accusation.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+                "kind": "scenario",
+                "match_level": "current_structure",
+                "positive": true,
+                "proposal_ready": true
+              },
+              {
+                "source_path": "assets/motif_library/story-as-shield.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 1.0,
+            "missed_positive_paths": []
+          }
+        },
+        "hybrid_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/road-of-trials.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          }
+        },
+        "hybrid_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 1,
+            "unassessed_count": 2,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 1,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/character_archetypes/trickster.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/motif_library/story-as-shield.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 1,
+            "specific_fragment_hits": 0,
+            "positive_hits": 1,
+            "proposal_ready_hits": 1,
+            "unknown_count": 2,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/story-as-shield.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/false-accusation.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+                "kind": "scenario",
+                "match_level": "current_structure",
+                "positive": true,
+                "proposal_ready": true
+              }
+            ],
+            "positive_total": 1,
+            "recall": 1.0,
+            "missed_positive_paths": []
+          }
+        }
+      }
+    },
+    {
+      "case_id": "real-04",
+      "reviewed_plot_count": 12,
+      "assessment_counts": {
+        "current_structure": 1,
+        "specific_fragment": 0,
+        "insufficient_evidence": 11,
+        "contradicted": 0
+      },
+      "positive_count": 1,
+      "proposal_ready_count": 0,
+      "positive_paths": [
+        "assets/technique_library/_scenarios/dialogue-tension.md"
+      ],
+      "methods": {
+        "lexical_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/weaving_story.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/road-of-trials.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          }
+        },
+        "lexical_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 1,
+            "unassessed_count": 2,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 1,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/character_archetypes/trickster.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/character_archetypes/moral-grey-survivor.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          }
+        },
+        "vector_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/character_archetypes/trickster.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/pacing-curve.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/false-accusation.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          }
+        },
+        "vector_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 1,
+            "unassessed_count": 2,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 1,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/motif_library/false-accusation.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/false-accusation.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          }
+        },
+        "hybrid_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/character_archetypes/trickster.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/weaving_story.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          }
+        },
+        "hybrid_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 1,
+            "unassessed_count": 2,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 1,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 1,
+            "recall": 0.0,
+            "missed_positive_paths": [
+              "assets/technique_library/_scenarios/dialogue-tension.md"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case_id": "public-01",
+      "reviewed_plot_count": 12,
+      "assessment_counts": {
+        "current_structure": 0,
+        "specific_fragment": 0,
+        "insufficient_evidence": 12,
+        "contradicted": 0
+      },
+      "positive_count": 0,
+      "proposal_ready_count": 0,
+      "positive_paths": [],
+      "methods": {
+        "lexical_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/character_archetypes/lin-chong.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/pacing-curve.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/forbidden-knowledge.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/road-of-trials.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "lexical_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 2,
+            "unassessed_count": 1,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 2,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/_scenarios/revelation.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/style_library/urban-suspense-fanqie.md",
+                "kind": "style",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/_scenarios/revelation.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "vector_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/style_library/urban-suspense-fanqie.md",
+                "kind": "style",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/story-as-shield.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "vector_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 1,
+            "unassessed_count": 2,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 1,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/motif_library/weaving_story.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/weaving_story.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/forbidden-knowledge.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "hybrid_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/pacing-curve.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/character_archetypes/lin-chong.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/forbidden-knowledge.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "hybrid_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 2,
+            "unassessed_count": 1,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 2,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/revelation.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/style_library/urban-suspense-fanqie.md",
+                "kind": "style",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/revelation.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/weaving_story.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        }
+      }
+    },
+    {
+      "case_id": "public-02",
+      "reviewed_plot_count": 12,
+      "assessment_counts": {
+        "current_structure": 0,
+        "specific_fragment": 0,
+        "insufficient_evidence": 12,
+        "contradicted": 0
+      },
+      "positive_count": 0,
+      "proposal_ready_count": 0,
+      "positive_paths": [],
+      "methods": {
+        "lexical_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/pacing-curve.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/forbidden-knowledge.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/road-of-trials.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "lexical_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 2,
+            "unassessed_count": 1,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 2,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/character_archetypes/moral-grey-survivor.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/motif_library/weaving_story.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/weaving_story.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "vector_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/style_library/urban-suspense-fanqie.md",
+                "kind": "style",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/technique_library/rhythm-variation.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/identity-mask.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "vector_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 2,
+            "unassessed_count": 1,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 2,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/_scenarios/revelation.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/dialogue-subtext.md",
+                "kind": "technique",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/technique_library/_scenarios/revelation.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/weaving_story.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "hybrid_raw": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 0,
+            "unassessed_count": 3,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 0,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/pacing/chapter-hooks.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/pacing/pacing-curve.md",
+                "kind": "pacing",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              },
+              {
+                "source_path": "assets/style_library/urban-suspense-fanqie.md",
+                "kind": "style",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/forbidden-knowledge.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/time-pressure.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/motif_library/truth-pursuit.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        },
+        "hybrid_abstract": {
+          "global": {
+            "slots": 3,
+            "reviewed_plot_count": 2,
+            "unassessed_count": 1,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 2,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/weaving_story.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/character_archetypes/moral-grey-survivor.md",
+                "kind": "character",
+                "match_level": "not_assessed",
+                "positive": null,
+                "proposal_ready": null
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          },
+          "plot": {
+            "slots": 3,
+            "reviewed_plot_count": 3,
+            "unassessed_count": 0,
+            "current_structure_hits": 0,
+            "specific_fragment_hits": 0,
+            "positive_hits": 0,
+            "proposal_ready_hits": 0,
+            "unknown_count": 3,
+            "contradicted_count": 0,
+            "pov_unusable_count": 0,
+            "selected": [
+              {
+                "source_path": "assets/motif_library/weaving_story.md",
+                "kind": "motif",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              },
+              {
+                "source_path": "assets/technique_library/_scenarios/revelation.md",
+                "kind": "scenario",
+                "match_level": "insufficient_evidence",
+                "positive": false,
+                "proposal_ready": false
+              }
+            ],
+            "positive_total": 0,
+            "recall": null,
+            "missed_positive_paths": []
+          }
+        }
+      }
+    }
+  ],
+  "methods": {
+    "lexical_raw": {
+      "global": {
+        "slots": 18,
+        "reviewed_plot_count": 0,
+        "unassessed_count": 18,
+        "current_structure_hits": 0,
+        "specific_fragment_hits": 0,
+        "positive_hits": 0,
+        "proposal_ready_hits": 0,
+        "unknown_count": 0,
+        "contradicted_count": 0,
+        "pov_unusable_count": 0,
+        "positive_total": 2,
+        "micro_recall": 0.0,
+        "macro_recall_nonempty": 0.0,
+        "zero_positive_cases": 4
+      },
+      "plot": {
+        "slots": 18,
+        "reviewed_plot_count": 18,
+        "unassessed_count": 0,
+        "current_structure_hits": 0,
+        "specific_fragment_hits": 0,
+        "positive_hits": 0,
+        "proposal_ready_hits": 0,
+        "unknown_count": 18,
+        "contradicted_count": 0,
+        "pov_unusable_count": 0,
+        "positive_total": 2,
+        "micro_recall": 0.0,
+        "macro_recall_nonempty": 0.0,
+        "zero_positive_cases": 4
+      }
+    },
+    "lexical_abstract": {
+      "global": {
+        "slots": 18,
+        "reviewed_plot_count": 9,
+        "unassessed_count": 9,
+        "current_structure_hits": 0,
+        "specific_fragment_hits": 0,
+        "positive_hits": 0,
+        "proposal_ready_hits": 0,
+        "unknown_count": 9,
+        "contradicted_count": 0,
+        "pov_unusable_count": 0,
+        "positive_total": 2,
+        "micro_recall": 0.0,
+        "macro_recall_nonempty": 0.0,
+        "zero_positive_cases": 4
+      },
+      "plot": {
+        "slots": 18,
+        "reviewed_plot_count": 18,
+        "unassessed_count": 0,
+        "current_structure_hits": 0,
+        "specific_fragment_hits": 0,
+        "positive_hits": 0,
+        "proposal_ready_hits": 0,
+        "unknown_count": 18,
+        "contradicted_count": 0,
+        "pov_unusable_count": 0,
+        "positive_total": 2,
+        "micro_recall": 0.0,
+        "macro_recall_nonempty": 0.0,
+        "zero_positive_cases": 4
+      }
+    },
+    "vector_raw": {
+      "global": {
+        "slots": 18,
+        "reviewed_plot_count": 0,
+        "unassessed_count": 18,
+        "current_structure_hits": 0,
+        "specific_fragment_hits": 0,
+        "positive_hits": 0,
+        "proposal_ready_hits": 0,
+        "unknown_count": 0,
+        "contradicted_count": 0,
+        "pov_unusable_count": 0,
+        "positive_total": 2,
+        "micro_recall": 0.0,
+        "macro_recall_nonempty": 0.0,
+        "zero_positive_cases": 4
+      },
+      "plot": {
+        "slots": 18,
+        "reviewed_plot_count": 18,
+        "unassessed_count": 0,
+        "current_structure_hits": 0,
+        "specific_fragment_hits": 0,
+        "positive_hits": 0,
+        "proposal_ready_hits": 0,
+        "unknown_count": 18,
+        "contradicted_count": 0,
+        "pov_unusable_count": 0,
+        "positive_total": 2,
+        "micro_recall": 0.0,
+        "macro_recall_nonempty": 0.0,
+        "zero_positive_cases": 4
+      }
+    },
+    "vector_abstract": {
+      "global": {
+        "slots": 18,
+        "reviewed_plot_count": 4,
+        "unassessed_count": 14,
+        "current_structure_hits": 0,
+        "specific_fragment_hits": 0,
+        "positive_hits": 0,
+        "proposal_ready_hits": 0,
+        "unknown_count": 4,
+        "contradicted_count": 0,
+        "pov_unusable_count": 0,
+        "positive_total": 2,
+        "micro_recall": 0.0,
+        "macro_recall_nonempty": 0.0,
+        "zero_positive_cases": 4
+      },
+      "plot": {
+        "slots": 18,
+        "reviewed_plot_count": 18,
+        "unassessed_count": 0,
+        "current_structure_hits": 1,
+        "specific_fragment_hits": 0,
+        "positive_hits": 1,
+        "proposal_ready_hits": 1,
+        "unknown_count": 17,
+        "contradicted_count": 0,
+        "pov_unusable_count": 0,
+        "positive_total": 2,
+        "micro_recall": 0.5,
+        "macro_recall_nonempty": 0.5,
+        "zero_positive_cases": 4
+      }
+    },
+    "hybrid_raw": {
+      "global": {
+        "slots": 18,
+        "reviewed_plot_count": 0,
+        "unassessed_count": 18,
+        "current_structure_hits": 0,
+        "specific_fragment_hits": 0,
+        "positive_hits": 0,
+        "proposal_ready_hits": 0,
+        "unknown_count": 0,
+        "contradicted_count": 0,
+        "pov_unusable_count": 0,
+        "positive_total": 2,
+        "micro_recall": 0.0,
+        "macro_recall_nonempty": 0.0,
+        "zero_positive_cases": 4
+      },
+      "plot": {
+        "slots": 18,
+        "reviewed_plot_count": 18,
+        "unassessed_count": 0,
+        "current_structure_hits": 0,
+        "specific_fragment_hits": 0,
+        "positive_hits": 0,
+        "proposal_ready_hits": 0,
+        "unknown_count": 18,
+        "contradicted_count": 0,
+        "pov_unusable_count": 0,
+        "positive_total": 2,
+        "micro_recall": 0.0,
+        "macro_recall_nonempty": 0.0,
+        "zero_positive_cases": 4
+      }
+    },
+    "hybrid_abstract": {
+      "global": {
+        "slots": 18,
+        "reviewed_plot_count": 8,
+        "unassessed_count": 10,
+        "current_structure_hits": 0,
+        "specific_fragment_hits": 0,
+        "positive_hits": 0,
+        "proposal_ready_hits": 0,
+        "unknown_count": 8,
+        "contradicted_count": 0,
+        "pov_unusable_count": 0,
+        "positive_total": 2,
+        "micro_recall": 0.0,
+        "macro_recall_nonempty": 0.0,
+        "zero_positive_cases": 4
+      },
+      "plot": {
+        "slots": 18,
+        "reviewed_plot_count": 18,
+        "unassessed_count": 0,
+        "current_structure_hits": 1,
+        "specific_fragment_hits": 0,
+        "positive_hits": 1,
+        "proposal_ready_hits": 1,
+        "unknown_count": 17,
+        "contradicted_count": 0,
+        "pov_unusable_count": 0,
+        "positive_total": 2,
+        "micro_recall": 0.5,
+        "macro_recall_nonempty": 0.5,
+        "zero_positive_cases": 4
+      }
+    }
+  }
+}

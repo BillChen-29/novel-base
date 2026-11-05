@@ -1,0 +1,898 @@
+{
+  "cases": [
+    {
+      "case_id": "public-01",
+      "review": {
+        "schema_version": 1,
+        "packet_sha256": "e9a4b658580b4e8fc524d1768921ece16554449239dceb0adb2b978c1f631c8d",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "plot_pool_early"
+        },
+        "decisions": [
+          {
+            "source_path": "assets/motif_library/false-accusation.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的诬告、判罚或自证阶段。",
+            "reason": "交付暗号信没有涉及清白者遭指控或因诬告面临处刑；封信不能被预设为洗冤物证。",
+            "story_evidence": [
+              {
+                "start": 7,
+                "end": 19,
+                "quote": "许禾把一封封好的信交给他"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 39,
+                "end": 90,
+                "quote": "一个清白无辜的人被（通常是女性或权臣）栽赃陷害，面临死刑或流放，必须用智慧、故事或证据证明自己的清白。"
+              }
+            ],
+            "missing_conditions": [
+              "不实指控和受冤者",
+              "掌权者施加的惩罚威胁"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈仅收到信和口头用途说明，没有关于罪名或清白证据的信息。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/forbidden-knowledge.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的禁忌知识诱惑或获取阶段。",
+            "reason": "许禾称信里有进门暗号，只说明一种用途；秘密口令不等于被神禁止的知识，且信件内容尚未读取。",
+            "story_evidence": [
+              {
+                "start": 20,
+                "end": 44,
+                "quote": "说：“这是今晚进门要用的暗号，你到地方前记住。”"
+              },
+              {
+                "start": 57,
+                "end": 76,
+                "quote": "他还没有拆开信封，也没有看过信里的字。"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 42,
+                "end": 112,
+                "quote": "一种神圣的知识或力量被严格禁止凡人获取，有人出于求知欲、野心或命运的驱使去获取它，获得了超越凡人的力量，但同时也招致了不可挽回的灾难性后果。"
+              },
+              {
+                "start": 1032,
+                "end": 1056,
+                "quote": "知识本身没有被禁止时（普通的求知不构成\"禁忌\"）"
+              }
+            ],
+            "missing_conditions": [
+              "关于知识获取的明确禁令",
+              "超凡力量及越禁代价的关系"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈听到的是许禾对信件用途的说法，没有获知具体暗号、禁令或力量。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/identity-mask.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的隐藏真实身份生活。",
+            "reason": "进门需暗号不证明冒用身份，更没有替代身份的日常和自我认同冲突。",
+            "story_evidence": [
+              {
+                "start": 20,
+                "end": 44,
+                "quote": "说：“这是今晚进门要用的暗号，你到地方前记住。”"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 37,
+                "end": 76,
+                "quote": "主角隐藏真实身份生活，面具逐渐与真实自我融合，直到他分不清哪个才是真正的自己。"
+              },
+              {
+                "start": 89,
+                "end": 133,
+                "quote": "1. **触发**：主角因某种原因（逃避追杀/执行任务/自我保护）必须以另一个身份生活。"
+              }
+            ],
+            "missing_conditions": [
+              "真实身份与替代身份",
+              "必须用新身份生活的原因"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈知道有人交付所谓暗号，但没有双重身份信息。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/prophecy-defied.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的命运预言或阻断关系。",
+            "reason": "今晚进门是行动安排，到地方前记住是指令，均不是预言，也没有因抗拒预言促成命运的行动。",
+            "story_evidence": [
+              {
+                "start": 20,
+                "end": 44,
+                "quote": "说：“这是今晚进门要用的暗号，你到地方前记住。”"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 38,
+                "end": 86,
+                "quote": "掌权者得知一个将颠覆自己命运的预言，竭尽全力阻止其发生，却恰恰因为自己的阻止行为而推动预言成真。"
+              }
+            ],
+            "missing_conditions": [
+              "具体命运预言",
+              "掌权者因预言采取的阻断行为"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈没有接收到预言的信息。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/road-of-trials.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "尚无可确认的跨越阈限或连续考验。",
+            "reason": "人物站在门口并被交付未来进门用的信，不等于已经跨越叙事阈限进入神秘领域；记暗号也不是有内在递进关系的试炼。",
+            "story_evidence": [
+              {
+                "start": 0,
+                "end": 7,
+                "quote": "林澈站在门口。"
+              },
+              {
+                "start": 44,
+                "end": 57,
+                "quote": "林澈接过信，放进外套口袋。"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 119,
+                "end": 153,
+                "quote": "1. **进入秘境**：英雄跨越阈限后发现自己身处充满未知力量的领域"
+              },
+              {
+                "start": 154,
+                "end": 200,
+                "quote": "2. **连续考验**：一系列递进的困难任务——分拣混杂之物、取得不可能之物、从阴间取回宝物"
+              }
+            ],
+            "missing_conditions": [
+              "进入未知力量领域的事件",
+              "彼此递进并造成内在转变的考验"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈没有获得门后领域或试炼安排的信息，信件也尚未阅读。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/story-as-shield.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的临刑讲述或延期关系。",
+            "reason": "许禾说一句用途说明不是讲故事自救；林澈也没有受冤临刑、请求讲述或影响审判者。",
+            "story_evidence": [
+              {
+                "start": 20,
+                "end": 44,
+                "quote": "说：“这是今晚进门要用的暗号，你到地方前记住。”"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 38,
+                "end": 96,
+                "quote": "一个即将被处死的人，通过讲述一系列精彩的故事来拖延时间、打动审判者、启发真相，最终在故事讲完之前获得赦免或身世大白。"
+              }
+            ],
+            "missing_conditions": [
+              "受冤临刑与审判者",
+              "故事讲述换取延期的关系"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈没有获知刑罚或可借叙事求生的条件。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的模仿物、施术及交感信念。",
+            "reason": "信件是可能承载口令的物品，没有被制作成某对象的相似替身，也没有以对信的动作影响远处对象的信念。",
+            "story_evidence": [
+              {
+                "start": 44,
+                "end": 57,
+                "quote": "林澈接过信，放进外套口袋。"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 185,
+                "end": 224,
+                "quote": "2. **制作模仿物**：用蜡、泥、木头等材料制作与目标对象相似的偶像或模型。"
+              },
+              {
+                "start": 272,
+                "end": 315,
+                "quote": "4. **交感传递**：施法者相信通过\"相似联想\"，对模仿物的影响会传递到真实对象上。"
+              }
+            ],
+            "missing_conditions": [
+              "与真实对象对应的模仿物",
+              "模仿动作可传递效力的交感信念"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈收到信不代表了解任何模仿施术关系。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/time-pressure.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "有今晚使用和到达前记忆的安排，但未确立倒计时驱动。",
+            "reason": "时间措辞与任务目标已出现，但没有剩余时间紧迫、记忆障碍或逾期代价；日常行动顺序不足以成为资料的限时危机片段。",
+            "story_evidence": [
+              {
+                "start": 20,
+                "end": 44,
+                "quote": "说：“这是今晚进门要用的暗号，你到地方前记住。”"
+              },
+              {
+                "start": 76,
+                "end": 85,
+                "quote": "许禾站在一旁等他。"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 36,
+                "end": 74,
+                "quote": "有明确的截止时间，主角必须在时限内完成任务，每一秒的流逝都在增加压力和代价。"
+              },
+              {
+                "start": 87,
+                "end": 147,
+                "quote": "1. **触发**：主角收到一个明确的时间限制（炸弹倒计时/人质期限/证据销毁时间/解药有效期），任务的紧迫性瞬间确立。"
+              },
+              {
+                "start": 1166,
+                "end": 1188,
+                "quote": "时间压力仅是背景而非叙事驱动力时（母题错位）"
+              }
+            ],
+            "missing_conditions": [
+              "时限导致的实际紧迫性",
+              "任务难度或到期后果使时间构成叙事压力"
+            ],
+            "pov": {
+              "verdict": "supported",
+              "reason": "林澈亲耳听到今晚使用、到达前记住的要求；此安排可知，但不能据此推断已有时间危机。",
+              "evidence": [
+                {
+                  "start": 7,
+                  "end": 44,
+                  "quote": "许禾把一封封好的信交给他，说：“这是今晚进门要用的暗号，你到地方前记住。”"
+                }
+              ]
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/truth-pursuit.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的疑点追查决定。",
+            "reason": "持有未读的信只说明尚未获得内容；原文没有异常疑点、调查决定或因接近真相而受到阻力的关系。未知信息本身不是追寻真相。",
+            "story_evidence": [
+              {
+                "start": 57,
+                "end": 76,
+                "quote": "他还没有拆开信封，也没有看过信里的字。"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 90,
+                "end": 128,
+                "quote": "1. **触发**：主角发现一个疑点（失踪/死亡/异常事件），决定追查到底。"
+              },
+              {
+                "start": 37,
+                "end": 77,
+                "quote": "主角执着于追寻某个真相，但真相可能毁灭自己或身边的人——知道得越多，越无法回头。"
+              }
+            ],
+            "missing_conditions": [
+              "被发现并决定追查的具体疑点",
+              "获取真相与危险后果之间的关系"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈尚未读信，无法由持有信件推出其知道需要追查的线索。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/weaving_story.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "仅有媒介交付，没有确认禁声控诉或解码阶段。",
+            "reason": "许禾可口头说明用途，未知作者或受害者是否被禁声，也不知道信里是否记录罪行；不能把交信对应为受害者的秘密控诉，更不能认定收信者理解真相。",
+            "story_evidence": [
+              {
+                "start": 7,
+                "end": 44,
+                "quote": "许禾把一封封好的信交给他，说：“这是今晚进门要用的暗号，你到地方前记住。”"
+              },
+              {
+                "start": 57,
+                "end": 76,
+                "quote": "他还没有拆开信封，也没有看过信里的字。"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 48,
+                "end": 93,
+                "quote": "无法说话的受害者将自己遭遇的罪行织在布匹或绣袍上，通过物质媒介将真相传递给能够帮助她的人。"
+              },
+              {
+                "start": 266,
+                "end": 301,
+                "quote": "5. **真相大白**：接收者看到织物上的图案，理解了真相，开始行动。"
+              }
+            ],
+            "missing_conditions": [
+              "被禁声的受害者及其罪行记录",
+              "媒介秘密传递与求助关系",
+              "接收者读取并理解记录"
+            ],
+            "pov": {
+              "verdict": "contradicted",
+              "reason": "若把林澈作为已解读媒介真相的接收者，前文明确说他没有看过信里的字，直接否定该知情前提。",
+              "evidence": [
+                {
+                  "start": 57,
+                  "end": 76,
+                  "quote": "他还没有拆开信封，也没有看过信里的字。"
+                }
+              ]
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "只有交付说明，未形成具体对话冲突。",
+            "reason": "许禾的指令、林澈收信和许禾等待没有显现隐瞒意图、争执或情绪对立；不能因有一句台词和沉默便判为对话张力。",
+            "story_evidence": [
+              {
+                "start": 7,
+                "end": 44,
+                "quote": "许禾把一封封好的信交给他，说：“这是今晚进门要用的暗号，你到地方前记住。”"
+              },
+              {
+                "start": 76,
+                "end": 85,
+                "quote": "许禾站在一旁等他。"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 38,
+                "end": 62,
+                "quote": "通过对话中的潜台词、信息博弈和情感冲突制造张力。"
+              },
+              {
+                "start": 528,
+                "end": 543,
+                "quote": "1. 对话要有潜台词，不要直说"
+              }
+            ],
+            "missing_conditions": [
+              "对话中具体的隐含意图、信息争夺或情感冲突"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈可听到说明，但没有证据让他识别许禾存在未明说的意图或冲突。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/technique_library/_scenarios/revelation.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "尚无可确认的隐藏真相揭示。",
+            "reason": "许禾只声称信用于暗号，具体内容未向林澈或读者展开；封信交付不是揭秘，原文也未提供被改写的既有理解。",
+            "story_evidence": [
+              {
+                "start": 20,
+                "end": 44,
+                "quote": "说：“这是今晚进门要用的暗号，你到地方前记住。”"
+              },
+              {
+                "start": 57,
+                "end": 76,
+                "quote": "他还没有拆开信封，也没有看过信里的字。"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 33,
+                "end": 53,
+                "quote": "隐藏的真相被揭示，改变读者对剧情的理解。"
+              },
+              {
+                "start": 560,
+                "end": 584,
+                "quote": "3. 揭秘后要有后果：角色关系/剧情走向发生变化"
+              }
+            ],
+            "missing_conditions": [
+              "实际揭示的隐藏信息",
+              "揭示改写既有理解或关系的依据"
+            ],
+            "pov": {
+              "verdict": "contradicted",
+              "reason": "以林澈已知信中秘密为当前视角依据会直接违反未拆未读的明示事实；他目前仅知道许禾的用途说法。",
+              "evidence": [
+                {
+                  "start": 57,
+                  "end": 76,
+                  "quote": "他还没有拆开信封，也没有看过信里的字。"
+                }
+              ]
+            },
+            "next_transition": null
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "public-02",
+      "review": {
+        "schema_version": 1,
+        "packet_sha256": "e141746973500f73efed6208a521f78f56d7a6a6470ce2b2676c0933991dc967",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "plot_pool_later_root_adjudicated"
+        },
+        "decisions": [
+          {
+            "source_path": "assets/motif_library/false-accusation.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的栽赃与自证关系。",
+            "reason": "交付并阅读进门暗号没有虚假指控、惩处或自证危机，信件作为物件并不自动成为清白证据。",
+            "story_evidence": [],
+            "knowledge_evidence": [
+              {
+                "start": 39,
+                "end": 90,
+                "quote": "一个清白无辜的人被（通常是女性或权臣）栽赃陷害，面临死刑或流放，必须用智慧、故事或证据证明自己的清白。"
+              }
+            ],
+            "missing_conditions": [
+              "被栽赃的无辜者",
+              "虚假指控引发的惩处",
+              "证明清白的行动"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "当前视角没有获得使该母题关系成立的必要信息。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/forbidden-knowledge.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的禁忌知识获取关系。",
+            "reason": "林澈已经读到暗号，但文本只证明其内容和用途，没有规定此知识禁止凡人获取，也没有超凡力量及获取代价。",
+            "story_evidence": [
+              {
+                "start": 99,
+                "end": 138,
+                "quote": "纸上写着：“今晚暗号：松果。”他逐字读完，对许禾说：“暗号是松果，我记住了。”"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 42,
+                "end": 112,
+                "quote": "一种神圣的知识或力量被严格禁止凡人获取，有人出于求知欲、野心或命运的驱使去获取它，获得了超越凡人的力量，但同时也招致了不可挽回的灾难性后果。"
+              },
+              {
+                "start": 1032,
+                "end": 1056,
+                "quote": "知识本身没有被禁止时（普通的求知不构成\"禁忌\"）"
+              }
+            ],
+            "missing_conditions": [
+              "知识被严格禁止获取的依据",
+              "获得超越凡人力量的关系",
+              "获取与灾难性后果的因果"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈现已知道信中文字为暗号“松果”，但没有任何关于禁令、超凡力量或代价的知情证据。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/identity-mask.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的身份伪装生活阶段。",
+            "reason": "记住进门暗号能服务通行，不能证明他冒充另一人或隐藏真实身份，更不能推出身份认同危机。",
+            "story_evidence": [],
+            "knowledge_evidence": [
+              {
+                "start": 37,
+                "end": 76,
+                "quote": "主角隐藏真实身份生活，面具逐渐与真实自我融合，直到他分不清哪个才是真正的自己。"
+              },
+              {
+                "start": 99,
+                "end": 133,
+                "quote": "主角因某种原因（逃避追杀/执行任务/自我保护）必须以另一个身份生活。"
+              }
+            ],
+            "missing_conditions": [
+              "真实身份与替代身份",
+              "以替代身份生活的行为或必要性",
+              "新旧身份的认同冲突"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "当前视角没有获得使该母题关系成立的必要信息。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/prophecy-defied.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的预言及对抗关系。",
+            "reason": "“今晚”说明暗号使用时间，不是对命运的预言；取信、读信与记忆也不是阻止预言的行动。",
+            "story_evidence": [],
+            "knowledge_evidence": [
+              {
+                "start": 38,
+                "end": 86,
+                "quote": "掌权者得知一个将颠覆自己命运的预言，竭尽全力阻止其发生，却恰恰因为自己的阻止行为而推动预言成真。"
+              }
+            ],
+            "missing_conditions": [
+              "明确预言",
+              "为阻止其发生的行动",
+              "行动反促预言成真的因果"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "当前视角没有获得使该母题关系成立的必要信息。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/road-of-trials.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的越过阈限进入连续试炼阶段。",
+            "reason": "两人仍在门口且尚未出发；“进门”只是暗号的计划用途，不能把未发生的进入秘境、系列考验和人格蜕变补为事实。",
+            "story_evidence": [
+              {
+                "start": 145,
+                "end": 157,
+                "quote": "两人仍在门口，尚未出发。"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 38,
+                "end": 106,
+                "quote": "穿越阈限后，英雄在变幻莫测的神秘境地中经受一系列连续的考验，每个考验都剥夺他的一部分旧我，逐步净化灵魂、积蓄力量，为最终的启示做好准备。"
+              },
+              {
+                "start": 1006,
+                "end": 1023,
+                "quote": "试炼仅是外部动作场面而非灵魂的转变"
+              }
+            ],
+            "missing_conditions": [
+              "跨越阈限进入未知领域的已发生事件",
+              "连续且递进的考验",
+              "考验剥离旧我的关系"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈知道自己还在门口，尚未获得关于目的地为秘境或将受何种试炼的信息。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/story-as-shield.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的临刑叙事延期关系。",
+            "reason": "读出暗号是核对信息，没有被处死的威胁、听审关系或用于延期的故事。",
+            "story_evidence": [],
+            "knowledge_evidence": [
+              {
+                "start": 38,
+                "end": 96,
+                "quote": "一个即将被处死的人，通过讲述一系列精彩的故事来拖延时间、打动审判者、启发真相，最终在故事讲完之前获得赦免或身世大白。"
+              }
+            ],
+            "missing_conditions": [
+              "待执行的处刑",
+              "讲述故事求生",
+              "听者因叙事改变处刑安排"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "当前视角没有获得使该母题关系成立的必要信息。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的相似物与交感传递关系。",
+            "reason": "信上“松果”是通行暗号；读出一个名词不是制作松果替身或模仿某种效果，没有施法信念。",
+            "story_evidence": [],
+            "knowledge_evidence": [
+              {
+                "start": 69,
+                "end": 131,
+                "quote": "原始人相信\"同类相生\"——通过模仿所期望的结果，就能促使该结果真实发生。蜡像代表仇人，扎蜡像即伤害真人；孕妇播种则庄稼丰收。"
+              },
+              {
+                "start": 1349,
+                "end": 1373,
+                "quote": "没有模仿物或替代物（顺势巫术的核心是制造相似物）"
+              },
+              {
+                "start": 1376,
+                "end": 1401,
+                "quote": "施法者不认为模仿动作能影响真实对象（缺乏交感信念）"
+              }
+            ],
+            "missing_conditions": [
+              "与目标相似的模仿物",
+              "对替代物施行预期效果的动作",
+              "模仿影响真实对象的交感信念"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "当前视角没有获得使该母题关系成立的必要信息。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/time-pressure.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "仅有任务先后要求，尚无可确认的倒计时压力阶段。",
+            "reason": "“到地方前记住”给出先后要求，“今晚”给出使用时段；林澈当场读完并口头确认记住，没有证据表明时间不足、逾期代价或时间流逝驱动取舍。",
+            "story_evidence": [
+              {
+                "start": 23,
+                "end": 43,
+                "quote": "这是今晚进门要用的暗号，你到地方前记住。"
+              },
+              {
+                "start": 99,
+                "end": 138,
+                "quote": "纸上写着：“今晚暗号：松果。”他逐字读完，对许禾说：“暗号是松果，我记住了。”"
+              },
+              {
+                "start": 145,
+                "end": 157,
+                "quote": "两人仍在门口，尚未出发。"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 36,
+                "end": 74,
+                "quote": "有明确的截止时间，主角必须在时限内完成任务，每一秒的流逝都在增加压力和代价。"
+              },
+              {
+                "start": 1166,
+                "end": 1188,
+                "quote": "时间压力仅是背景而非叙事驱动力时（母题错位）"
+              }
+            ],
+            "missing_conditions": [
+              "具有实质后果的紧迫截止时间",
+              "时间不足或流逝增加代价的证据",
+              "期限实际驱动行动取舍的关系"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈知道暗号应在到达前记住，但没有得知超时后果或任何倒计时危机。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/truth-pursuit.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的疑点追查阶段。",
+            "reason": "拆信并阅读已经说明用途的暗号，是完成传递与记忆，没有追查死亡、失踪或异常的行动，也没有真相风险。",
+            "story_evidence": [],
+            "knowledge_evidence": [
+              {
+                "start": 37,
+                "end": 77,
+                "quote": "主角执着于追寻某个真相，但真相可能毁灭自己或身边的人——知道得越多，越无法回头。"
+              },
+              {
+                "start": 100,
+                "end": 128,
+                "quote": "主角发现一个疑点（失踪/死亡/异常事件），决定追查到底。"
+              }
+            ],
+            "missing_conditions": [
+              "可追查的具体疑点及追查决定",
+              "深入知情与危险加重的关系",
+              "真相可能毁灭本人或他人的后果"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "当前视角没有获得使该母题关系成立的必要信息。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/motif_library/weaving_story.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "已证实暗号的交付、读取与确认，尚未建立禁声控诉关系。",
+            "reason": "缺少受害者被禁声、将罪行编码进媒介以及接收者解码控诉的证据。许禾能说话不能排除因威胁而无法控诉，文本也未确定他就是信件作者或受害者；暗号的可见文字不证明不存在其他编码含义。",
+            "story_evidence": [
+              {
+                "start": 7,
+                "end": 44,
+                "quote": "许禾把一封封好的信交给他，说：“这是今晚进门要用的暗号，你到地方前记住。”"
+              },
+              {
+                "start": 99,
+                "end": 138,
+                "quote": "纸上写着：“今晚暗号：松果。”他逐字读完，对许禾说：“暗号是松果，我记住了。”"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 48,
+                "end": 93,
+                "quote": "无法说话的受害者将自己遭遇的罪行织在布匹或绣袍上，通过物质媒介将真相传递给能够帮助她的人。"
+              },
+              {
+                "start": 911,
+                "end": 925,
+                "quote": "当受害者有其他方式传递信息时"
+              }
+            ],
+            "missing_conditions": [
+              "受害者身份及其被剥夺或限制控诉的条件尚不明",
+              "未建立罪行编码进媒介及接收者理解控诉的关系"
+            ],
+            "pov": {
+              "verdict": "supported",
+              "reason": "林澈亲自收到并读完信，知道可见暗号及交付过程；这不足以让他知道禁声控诉关系是否存在。",
+              "evidence": [
+                {
+                  "start": 7,
+                  "end": 44,
+                  "quote": "许禾把一封封好的信交给他，说：“这是今晚进门要用的暗号，你到地方前记住。”"
+                },
+                {
+                  "start": 99,
+                  "end": 138,
+                  "quote": "纸上写着：“今晚暗号：松果。”他逐字读完，对许禾说：“暗号是松果，我记住了。”"
+                }
+              ]
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "无可确认的对话潜台词、信息博弈或情感冲突。",
+            "reason": "许禾交代用途、林澈复述确认、许禾点头，是顺畅的信息确认；没有竞争性意图、潜台词或情感冲突。适合写成对话不等于对话张力结构成立。",
+            "story_evidence": [
+              {
+                "start": 99,
+                "end": 145,
+                "quote": "纸上写着：“今晚暗号：松果。”他逐字读完，对许禾说：“暗号是松果，我记住了。”许禾点了点头。"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 38,
+                "end": 62,
+                "quote": "通过对话中的潜台词、信息博弈和情感冲突制造张力。"
+              }
+            ],
+            "missing_conditions": [
+              "实际对话中的隐含冲突或信息争夺",
+              "相互抵触的情感或目的经对话展开的证据"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈能知道双方明确说出的指令与确认，文本未给出他知道的隐含博弈或冲突。",
+              "evidence": []
+            },
+            "next_transition": null
+          },
+          {
+            "source_path": "assets/technique_library/_scenarios/revelation.md",
+            "match_level": "insufficient_evidence",
+            "matched_structure": "已完成暗号内容的读取，尚无可确认的隐藏真相反转。",
+            "reason": "信封从未拆到拆开，使林澈知道暗号具体是什么；这一内容落实了许禾原先的说明，没有揭出改变剧情理解的隐藏事实。普通信息取得不单独构成揭秘片段。",
+            "story_evidence": [
+              {
+                "start": 57,
+                "end": 76,
+                "quote": "他还没有拆开信封，也没有看过信里的字。"
+              },
+              {
+                "start": 99,
+                "end": 138,
+                "quote": "纸上写着：“今晚暗号：松果。”他逐字读完，对许禾说：“暗号是松果，我记住了。”"
+              }
+            ],
+            "knowledge_evidence": [
+              {
+                "start": 33,
+                "end": 53,
+                "quote": "隐藏的真相被揭示，改变读者对剧情的理解。"
+              },
+              {
+                "start": 563,
+                "end": 584,
+                "quote": "揭秘后要有后果：角色关系/剧情走向发生变化"
+              }
+            ],
+            "missing_conditions": [
+              "改变既有剧情理解的隐藏真相",
+              "之前遮蔽关系被揭穿的证据",
+              "揭秘引起的角色关系或剧情后果"
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈已经通过阅读获得暗号本身；他未获得能够重释先前事件的其他隐情或真相。",
+              "evidence": []
+            },
+            "next_transition": null
+          }
+        ]
+      }
+    }
+  ]
+}

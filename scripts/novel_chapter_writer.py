@@ -1118,13 +1118,16 @@ def write_chapter(
             else:
                 chapter_file = manuscript_dir / "第1章-开篇.md"
 
-    # 提取上下文
-    extractor = ContextExtractor(project_root)
-    context = extractor.extract_context(chapter_file, context_window)
-
-    # 生成提示词
-    prompt_generator = PromptGenerator(context)
-    full_prompt = prompt_generator.generate_prompt()
+    # A caller-provided prompt is already scoped to its narrative cutoff.
+    # Do not independently reload mutable global memories in this path.
+    if config.get("writing_prompt"):
+        chapter_no = ContextExtractor(project_root).extract_chapter_number(chapter_file)
+        context = ProjectContext(project_root=project_root, chapter_no=chapter_no)
+        full_prompt = str(config["writing_prompt"])
+    else:
+        extractor = ContextExtractor(project_root)
+        context = extractor.extract_context(chapter_file, context_window)
+        full_prompt = PromptGenerator(context).generate_prompt()
     system_prompt = get_system_prompt(context.chapter_no)
 
     # 允许外部（如 novel_flow_executor）通过 config_overrides 完全覆盖提示词。

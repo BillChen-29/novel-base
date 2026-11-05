@@ -1,0 +1,908 @@
+{
+  "schema_version": 1,
+  "annotation_method": "原创结构验证样例；条件、槽位和类别由本轮设计，候选必须重新接受当前AI审核。不是小说质量或语义准确率基准。",
+  "projects": [
+    {
+      "schema_version": 1,
+      "project_id": "atomic-password",
+      "title": "内容知道了，载体仍未获知",
+      "characters": [
+        "阿岚",
+        "阿弥",
+        "阿驰"
+      ],
+      "pov_character": "阿弥",
+      "goal": {
+        "id": "recover_and_investigate",
+        "description": "根据当前已经获知的内容选择下一步。"
+      },
+      "scenes": [
+        {
+          "id": "d1",
+          "order": 1,
+          "text": "这次值班交接约定的暗号是“松果”。阿岚在屋内读完信，信上写着这个暗号。阿弥等在门外，没有看见这封信。馆规允许所有值班人获取暗号，明确说明它只是普通交接信息，不是神圣知识，也不存在获取禁令。阿岚可以自由交流，没有受到威胁。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "阿岚"
+          ]
+        },
+        {
+          "id": "d2",
+          "order": 2,
+          "text": "阿岚出门告诉阿弥：“暗号是松果。”阿弥听清后复述：“松果，我记住了。”阿岚没有提信的存在。阿驰在远处戴着隔音耳机修车，没有听见这次对话。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "阿岚",
+            "阿弥"
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "f01",
+          "text": "值班暗号是“松果”。",
+          "scene_id": "d1",
+          "quote": "这次值班交接约定的暗号是“松果”。",
+          "known_by": [
+            "阿岚",
+            "阿弥",
+            "阿驰"
+          ]
+        },
+        {
+          "id": "f02",
+          "text": "阿岚读的这封信写着暗号“松果”。",
+          "scene_id": "d1",
+          "quote": "阿岚在屋内读完信，信上写着这个暗号。",
+          "known_by": [
+            "阿岚",
+            "阿弥",
+            "阿驰"
+          ]
+        },
+        {
+          "id": "f03",
+          "text": "阿岚已经阅读这封信并从中得知暗号。",
+          "scene_id": "d1",
+          "quote": "阿岚在屋内读完信，信上写着这个暗号。",
+          "known_by": [
+            "阿岚",
+            "阿弥",
+            "阿驰"
+          ]
+        },
+        {
+          "id": "f04",
+          "text": "阿岚已经向阿弥说出暗号“松果”。",
+          "scene_id": "d2",
+          "quote": "阿岚出门告诉阿弥：“暗号是松果。”",
+          "known_by": [
+            "阿岚",
+            "阿弥",
+            "阿驰"
+          ]
+        },
+        {
+          "id": "f05",
+          "text": "阿弥听清并复述了暗号“松果”。",
+          "scene_id": "d2",
+          "quote": "阿弥听清后复述：“松果，我记住了。”",
+          "known_by": [
+            "阿岚",
+            "阿弥",
+            "阿驰"
+          ]
+        },
+        {
+          "id": "f06",
+          "text": "馆规明确禁止阿弥获取值班暗号，并称其为神圣知识。",
+          "scene_id": "d1",
+          "quote": "馆规允许所有值班人获取暗号，明确说明它只是普通交接信息，不是神圣知识，也不存在获取禁令。",
+          "known_by": [
+            "阿岚",
+            "阿弥",
+            "阿驰"
+          ]
+        },
+        {
+          "id": "f07",
+          "text": "阿岚受到威胁，无法向他人直接说出自己遭遇的罪行。",
+          "scene_id": "d1",
+          "quote": "阿岚可以自由交流，没有受到威胁。",
+          "known_by": [
+            "阿岚",
+            "阿弥",
+            "阿驰"
+          ]
+        }
+      ],
+      "threads": [],
+      "motif_annotations": {
+        "catalog_sha256": "588a4ed0f3577f9d3da061e7d497d199b87d46fc9c1f75fd13a485c376b95a37",
+        "atoms": [
+          {
+            "fact_id": "f01",
+            "kind": "content"
+          },
+          {
+            "fact_id": "f02",
+            "kind": "carrier"
+          },
+          {
+            "fact_id": "f03",
+            "kind": "acquisition_event"
+          },
+          {
+            "fact_id": "f04",
+            "kind": "communication_event"
+          },
+          {
+            "fact_id": "f05",
+            "kind": "acquisition_event"
+          },
+          {
+            "fact_id": "f06",
+            "kind": "world_state"
+          },
+          {
+            "fact_id": "f07",
+            "kind": "world_state"
+          }
+        ],
+        "instances": [
+          {
+            "id": "forbidden",
+            "motif_id": "forbidden_knowledge",
+            "bindings": {
+              "seeker": "阿弥",
+              "authority": "馆规",
+              "knowledge": "值班暗号"
+            },
+            "condition_facts": {
+              "prohibited": "f06"
+            }
+          },
+          {
+            "id": "weaving",
+            "motif_id": "weaving_story",
+            "bindings": {
+              "sender": "阿岚",
+              "receiver": "阿弥",
+              "helper": "阿驰",
+              "carrier": "这封信",
+              "key": "对照表"
+            },
+            "condition_facts": {
+              "silenced": "f07"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "project_id": "atomic-woven",
+      "title": "收到绣布之后，怎样才算理解",
+      "characters": [
+        "青禾",
+        "乔宁",
+        "沈师傅"
+      ],
+      "pov_character": "乔宁",
+      "goal": {
+        "id": "recover_and_investigate",
+        "description": "根据当前已经获知的内容选择下一步。"
+      },
+      "scenes": [
+        {
+          "id": "w1",
+          "order": 1,
+          "text": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。乔宁在旁看到她完成绣图；青禾指着自己和绣图，写下“我的遭遇”，乔宁明白蓝绣布记录了青禾受害的经历，但还不知道图案具体讲了什么。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "青禾",
+            "乔宁"
+          ]
+        },
+        {
+          "id": "w2",
+          "order": 2,
+          "text": "青禾把蓝绣布交给乔宁，乔宁将它收好。乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。乔宁目前没有绣图对照表。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "青禾",
+            "乔宁"
+          ]
+        },
+        {
+          "id": "w3",
+          "order": 3,
+          "text": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "w4",
+          "order": 4,
+          "text": "乔宁逐项用对照表核对蓝绣布，正确读出了青禾被拘禁和殴打的经过。他终于理解了布上记录的罪行。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "乔宁"
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "f01",
+          "text": "青禾受到威胁，无法向他人直接说出自己遭遇的罪行。",
+          "scene_id": "w1",
+          "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f02",
+          "text": "青禾已经把自己遭遇的罪行编码在蓝绣布上。",
+          "scene_id": "w1",
+          "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f03",
+          "text": "乔宁已经收到蓝绣布。",
+          "scene_id": "w2",
+          "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f04",
+          "text": "乔宁已经正确解读蓝绣布，理解了青禾遭遇的罪行。",
+          "scene_id": "w2",
+          "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f05",
+          "text": "乔宁知道沈师傅能够解读蓝绣布，而且目前可以联系沈师傅。",
+          "scene_id": "w2",
+          "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f06",
+          "text": "乔宁持有能够解读蓝绣布的绣图对照表。",
+          "scene_id": "w3",
+          "quote": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        }
+      ],
+      "threads": [],
+      "motif_annotations": {
+        "catalog_sha256": "588a4ed0f3577f9d3da061e7d497d199b87d46fc9c1f75fd13a485c376b95a37",
+        "atoms": [
+          {
+            "fact_id": "f01",
+            "kind": "world_state"
+          },
+          {
+            "fact_id": "f02",
+            "kind": "communication_event"
+          },
+          {
+            "fact_id": "f03",
+            "kind": "acquisition_event"
+          },
+          {
+            "fact_id": "f04",
+            "kind": "acquisition_event"
+          },
+          {
+            "fact_id": "f05",
+            "kind": "world_state"
+          },
+          {
+            "fact_id": "f06",
+            "kind": "world_state"
+          }
+        ],
+        "instances": [
+          {
+            "id": "weaving",
+            "motif_id": "weaving_story",
+            "bindings": {
+              "sender": "青禾",
+              "receiver": "乔宁",
+              "helper": "沈师傅",
+              "carrier": "蓝绣布",
+              "key": "绣图对照表"
+            },
+            "condition_facts": {
+              "silenced": "f01",
+              "encoded": "f02",
+              "delivered": "f03",
+              "decoded": "f04",
+              "helper_available": "f05",
+              "key_available": "f06"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "project_id": "atomic-woven-decoded",
+      "title": "收到绣布之后，怎样才算理解",
+      "characters": [
+        "青禾",
+        "乔宁",
+        "沈师傅"
+      ],
+      "pov_character": "乔宁",
+      "goal": {
+        "id": "recover_and_investigate",
+        "description": "根据当前已经获知的内容选择下一步。"
+      },
+      "scenes": [
+        {
+          "id": "w1",
+          "order": 1,
+          "text": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。乔宁在旁看到她完成绣图；青禾指着自己和绣图，写下“我的遭遇”，乔宁明白蓝绣布记录了青禾受害的经历，但还不知道图案具体讲了什么。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "青禾",
+            "乔宁"
+          ]
+        },
+        {
+          "id": "w2",
+          "order": 2,
+          "text": "青禾把蓝绣布交给乔宁，乔宁将它收好。乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。乔宁目前没有绣图对照表。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "青禾",
+            "乔宁"
+          ]
+        },
+        {
+          "id": "w3",
+          "order": 3,
+          "text": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "w4",
+          "order": 4,
+          "text": "乔宁逐项用对照表核对蓝绣布，正确读出了青禾被拘禁和殴打的经过。他终于理解了布上记录的罪行。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "乔宁"
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "f01",
+          "text": "青禾受到威胁，无法向他人直接说出自己遭遇的罪行。",
+          "scene_id": "w1",
+          "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f02",
+          "text": "青禾已经把自己遭遇的罪行编码在蓝绣布上。",
+          "scene_id": "w1",
+          "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f03",
+          "text": "乔宁已经收到蓝绣布。",
+          "scene_id": "w2",
+          "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f04",
+          "text": "乔宁已经正确解读蓝绣布，理解了青禾遭遇的罪行。",
+          "scene_id": "w4",
+          "quote": "乔宁逐项用对照表核对蓝绣布，正确读出了青禾被拘禁和殴打的经过。他终于理解了布上记录的罪行。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f05",
+          "text": "乔宁知道沈师傅能够解读蓝绣布，而且目前可以联系沈师傅。",
+          "scene_id": "w2",
+          "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f06",
+          "text": "乔宁持有能够解读蓝绣布的绣图对照表。",
+          "scene_id": "w3",
+          "quote": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        }
+      ],
+      "threads": [],
+      "motif_annotations": {
+        "catalog_sha256": "588a4ed0f3577f9d3da061e7d497d199b87d46fc9c1f75fd13a485c376b95a37",
+        "atoms": [
+          {
+            "fact_id": "f01",
+            "kind": "world_state"
+          },
+          {
+            "fact_id": "f02",
+            "kind": "communication_event"
+          },
+          {
+            "fact_id": "f03",
+            "kind": "acquisition_event"
+          },
+          {
+            "fact_id": "f04",
+            "kind": "acquisition_event"
+          },
+          {
+            "fact_id": "f05",
+            "kind": "world_state"
+          },
+          {
+            "fact_id": "f06",
+            "kind": "world_state"
+          }
+        ],
+        "instances": [
+          {
+            "id": "weaving",
+            "motif_id": "weaving_story",
+            "bindings": {
+              "sender": "青禾",
+              "receiver": "乔宁",
+              "helper": "沈师傅",
+              "carrier": "蓝绣布",
+              "key": "绣图对照表"
+            },
+            "condition_facts": {
+              "silenced": "f01",
+              "encoded": "f02",
+              "delivered": "f03",
+              "decoded": "f04",
+              "helper_available": "f05",
+              "key_available": "f06"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "project_id": "atomic-forbidden",
+      "title": "获取力量之后，代价还没有发生",
+      "characters": [
+        "岑火",
+        "守庙人"
+      ],
+      "pov_character": "岑火",
+      "goal": {
+        "id": "recover_and_investigate",
+        "description": "根据当前已经获知的内容选择下一步。"
+      },
+      "scenes": [
+        {
+          "id": "k1",
+          "order": 1,
+          "text": "山神留下不可更改的禁令：凡人岑火不得获取返生秘术，那是神圣知识。岑火与守庙人一同读到禁令。岑火当着守庙人的面决定，仍要设法取得返生秘术。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "岑火",
+            "守庙人"
+          ]
+        },
+        {
+          "id": "k2",
+          "order": 2,
+          "text": "岑火穿过石门，读懂返生秘术，当即让一株枯死的小树重生。叙述者确认这是秘术赋予的超常力量。守庙人亲眼看见全程。此刻，山神尚未对岑火施加任何惩罚。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "岑火",
+            "守庙人"
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "f01",
+          "text": "山神明确禁止岑火获取返生秘术，并称其为神圣知识。",
+          "scene_id": "k1",
+          "quote": "山神留下不可更改的禁令：凡人岑火不得获取返生秘术，那是神圣知识。",
+          "known_by": [
+            "岑火",
+            "守庙人"
+          ]
+        },
+        {
+          "id": "f02",
+          "text": "岑火已经决定设法获取返生秘术。",
+          "scene_id": "k1",
+          "quote": "岑火当着守庙人的面决定，仍要设法取得返生秘术。",
+          "known_by": [
+            "岑火",
+            "守庙人"
+          ]
+        },
+        {
+          "id": "f03",
+          "text": "岑火已经获取返生秘术，并因此获得超常力量。",
+          "scene_id": "k2",
+          "quote": "岑火穿过石门，读懂返生秘术，当即让一株枯死的小树重生。叙述者确认这是秘术赋予的超常力量。",
+          "known_by": [
+            "岑火",
+            "守庙人"
+          ]
+        },
+        {
+          "id": "f04",
+          "text": "岑火已经因为获取返生秘术而受到山神的惩罚。",
+          "scene_id": "k2",
+          "quote": "此刻，山神尚未对岑火施加任何惩罚。",
+          "known_by": [
+            "岑火",
+            "守庙人"
+          ]
+        }
+      ],
+      "threads": [],
+      "motif_annotations": {
+        "catalog_sha256": "588a4ed0f3577f9d3da061e7d497d199b87d46fc9c1f75fd13a485c376b95a37",
+        "atoms": [
+          {
+            "fact_id": "f01",
+            "kind": "world_state"
+          },
+          {
+            "fact_id": "f02",
+            "kind": "world_state"
+          },
+          {
+            "fact_id": "f03",
+            "kind": "acquisition_event"
+          },
+          {
+            "fact_id": "f04",
+            "kind": "world_state"
+          }
+        ],
+        "instances": [
+          {
+            "id": "forbidden",
+            "motif_id": "forbidden_knowledge",
+            "bindings": {
+              "seeker": "岑火",
+              "authority": "山神",
+              "knowledge": "返生秘术"
+            },
+            "condition_facts": {
+              "prohibited": "f01",
+              "seeking": "f02",
+              "acquired_power": "f03",
+              "punished": "f04"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "project_id": "atomic-woven-informed",
+      "title": "说明对照表的用途后再选择解码",
+      "characters": [
+        "青禾",
+        "乔宁",
+        "沈师傅"
+      ],
+      "pov_character": "乔宁",
+      "goal": {
+        "id": "recover_and_investigate",
+        "description": "根据当前已经获知的内容选择下一步。"
+      },
+      "scenes": [
+        {
+          "id": "w1",
+          "order": 1,
+          "text": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。乔宁在旁看到她完成绣图；青禾指着自己和绣图，写下“我的遭遇”，乔宁明白蓝绣布记录了青禾受害的经历，但还不知道图案具体讲了什么。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "青禾",
+            "乔宁"
+          ]
+        },
+        {
+          "id": "w2",
+          "order": 2,
+          "text": "青禾把蓝绣布交给乔宁，乔宁将它收好。乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。乔宁目前没有绣图对照表。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "青禾",
+            "乔宁"
+          ]
+        },
+        {
+          "id": "w3",
+          "order": 3,
+          "text": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "w3b",
+          "order": 4,
+          "function": "dialogue",
+          "tension": 2,
+          "present_characters": [
+            "乔宁",
+            "沈师傅"
+          ],
+          "text": "沈师傅指着蓝绣布向乔宁说明：“你手上这张对照表，正是用来解读这块布的。你可以逐项照着核对。”乔宁听明白了，确认自己手中的表能解读蓝绣布，但尚未开始解码。"
+        },
+        {
+          "id": "w4",
+          "order": 5,
+          "text": "乔宁逐项用对照表核对蓝绣布，正确读出了青禾被拘禁和殴打的经过。他终于理解了布上记录的罪行。",
+          "function": "investigation",
+          "tension": 2,
+          "present_characters": [
+            "乔宁"
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "f01",
+          "text": "青禾受到威胁，无法向他人直接说出自己遭遇的罪行。",
+          "scene_id": "w1",
+          "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f02",
+          "text": "青禾已经把自己遭遇的罪行编码在蓝绣布上。",
+          "scene_id": "w1",
+          "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f03",
+          "text": "乔宁已经收到蓝绣布。",
+          "scene_id": "w2",
+          "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f04",
+          "text": "乔宁已经正确解读蓝绣布，理解了青禾遭遇的罪行。",
+          "scene_id": "w2",
+          "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f05",
+          "text": "乔宁知道沈师傅能够解读蓝绣布，而且目前可以联系沈师傅。",
+          "scene_id": "w2",
+          "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        },
+        {
+          "id": "f06",
+          "text": "乔宁持有能够解读蓝绣布的绣图对照表。",
+          "scene_id": "w3",
+          "quote": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。",
+          "known_by": [
+            "青禾",
+            "乔宁",
+            "沈师傅"
+          ]
+        }
+      ],
+      "threads": [],
+      "motif_annotations": {
+        "catalog_sha256": "588a4ed0f3577f9d3da061e7d497d199b87d46fc9c1f75fd13a485c376b95a37",
+        "atoms": [
+          {
+            "fact_id": "f01",
+            "kind": "world_state"
+          },
+          {
+            "fact_id": "f02",
+            "kind": "communication_event"
+          },
+          {
+            "fact_id": "f03",
+            "kind": "acquisition_event"
+          },
+          {
+            "fact_id": "f04",
+            "kind": "acquisition_event"
+          },
+          {
+            "fact_id": "f05",
+            "kind": "world_state"
+          },
+          {
+            "fact_id": "f06",
+            "kind": "world_state"
+          }
+        ],
+        "instances": [
+          {
+            "id": "weaving",
+            "motif_id": "weaving_story",
+            "bindings": {
+              "sender": "青禾",
+              "receiver": "乔宁",
+              "helper": "沈师傅",
+              "carrier": "蓝绣布",
+              "key": "绣图对照表"
+            },
+            "condition_facts": {
+              "silenced": "f01",
+              "encoded": "f02",
+              "delivered": "f03",
+              "decoded": "f04",
+              "helper_available": "f05",
+              "key_available": "f06"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "password-before",
+      "project_id": "atomic-password",
+      "cutoff_scene_id": "d1",
+      "title": "暗号尚未转告"
+    },
+    {
+      "id": "password-after",
+      "project_id": "atomic-password",
+      "cutoff_scene_id": "d2",
+      "title": "知道暗号，来源未获支持"
+    },
+    {
+      "id": "woven-encoded",
+      "project_id": "atomic-woven",
+      "cutoff_scene_id": "w1",
+      "title": "已编码，等待传递"
+    },
+    {
+      "id": "woven-delivered",
+      "project_id": "atomic-woven",
+      "cutoff_scene_id": "w2",
+      "title": "已送达，收到不等于理解"
+    },
+    {
+      "id": "woven-key",
+      "project_id": "atomic-woven",
+      "cutoff_scene_id": "w3",
+      "title": "拿到对照表，解码方案仍未放行"
+    },
+    {
+      "id": "woven-key-informed",
+      "project_id": "atomic-woven-informed",
+      "cutoff_scene_id": "w3b",
+      "title": "说明用途后，对照解码才可用"
+    },
+    {
+      "id": "woven-decoded",
+      "project_id": "atomic-woven-decoded",
+      "cutoff_scene_id": "w4",
+      "title": "确实解读后，才进入回应阶段"
+    },
+    {
+      "id": "forbidden-seeking",
+      "project_id": "atomic-forbidden",
+      "cutoff_scene_id": "k1",
+      "title": "有禁令与动机，尚未获得力量"
+    },
+    {
+      "id": "forbidden-acquired",
+      "project_id": "atomic-forbidden",
+      "cutoff_scene_id": "k2",
+      "title": "已获得力量，尚未遭受惩罚"
+    }
+  ]
+}

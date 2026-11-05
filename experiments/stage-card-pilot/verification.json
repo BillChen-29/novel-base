@@ -1,0 +1,126 @@
+{
+  "run_date": "2026-10-31",
+  "software_tests": {
+    "new_targeted": {
+      "passed": 14,
+      "total": 14
+    },
+    "full_python_suite": {
+      "passed": 441,
+      "total": 441
+    },
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/tests -p 'test_*.py'"
+  },
+  "experiment": {
+    "cards": 4,
+    "conditions_per_case": 16,
+    "cases": 8,
+    "original_prefix_cases": 6,
+    "original_episodes": 3,
+    "new_real_excerpt_cases": 2,
+    "reviewed_claims": 154,
+    "reviewed_pov_claims": 154,
+    "exact_evidence_refs_checked": 260,
+    "verdict_counts": {
+      "supported": 67,
+      "insufficient_evidence": 81,
+      "contradicted": 6
+    },
+    "pool_ready_case_card_pairs": 5,
+    "method_results": {
+      "bm25_raw": {
+        "ready_cards_retrieved": 4,
+        "pool_ready_cards": 5,
+        "micro_ready_card_recall": 0.8,
+        "zero_ready_cases": 3
+      },
+      "bm25_state": {
+        "ready_cards_retrieved": 5,
+        "pool_ready_cards": 5,
+        "micro_ready_card_recall": 1.0,
+        "zero_ready_cases": 3
+      },
+      "vector_raw": {
+        "ready_cards_retrieved": 5,
+        "pool_ready_cards": 5,
+        "micro_ready_card_recall": 1.0,
+        "zero_ready_cases": 3
+      },
+      "vector_state": {
+        "ready_cards_retrieved": 5,
+        "pool_ready_cards": 5,
+        "micro_ready_card_recall": 1.0,
+        "zero_ready_cases": 3
+      }
+    },
+    "max_cards_per_case_per_method": 2,
+    "actual_slots": {
+      "bm25_raw": 7,
+      "bm25_state": 11,
+      "vector_raw": 16,
+      "vector_state": 16
+    },
+    "semantic_corrections_before_retrieval": 2,
+    "human_gold_labels": false,
+    "automatic_state_extraction": false,
+    "catalog_changed_after_freeze": false,
+    "full_motif_recognition_claimed": false
+  },
+  "runtime": {
+    "model_sha256": "b5ce9d77a3fc4b3b39ccb5643c36777911cc4eb46a66962eadfa3f5f60490d63",
+    "model_file": "hf_ggml-org_embeddinggemma-300M-Q8_0.gguf",
+    "qmd_version": "2.1.0",
+    "runtime_version": "3.18.1",
+    "prefix": "qmd-format-functions-v1",
+    "requested_gpu": "metal",
+    "context_size": 2048,
+    "threads": 4,
+    "dimensions": 768,
+    "complete": true,
+    "total_inputs": 20,
+    "elapsed_seconds": 0.966429791
+  },
+  "reproducibility": {
+    "public_cases_replayed": 6,
+    "public_embedding_inputs": 16,
+    "public_complete": true,
+    "public_case_summaries_match_full_run_exactly": true
+  },
+  "preservation": {
+    "asset_files_checked": 271,
+    "asset_files_changed": 0,
+    "source_books_checked": 2,
+    "source_books_unchanged": true,
+    "source_excerpt_exact_and_unique": true,
+    "new_excerpt_overlap_with_previous_four": false,
+    "public_pairs_extend_exact_prefix": 3,
+    "cards_frozen_before_new_cases": true,
+    "source_card_review": "independent source review approved 4 hashes and 6 evidence spans",
+    "runtime_data_git_ignored": true,
+    "canonical_story_memory_written": false,
+    "git_commit_or_push": false
+  },
+  "review": {
+    "source": "APPROVE: 4 file hashes,6 source spans, source/design distinction checked",
+    "code": "APPROVE: integration and 13 initial tests; final directory check separately reviewed",
+    "security": "APPROVE after runtime-root symlink bypass fix; regression14/14",
+    "semantic": "Two separate AI reviewers, root review and reviewer reconsideration;2 corrections preserved before embeddings/rankings"
+  },
+  "files_sha256": {
+    "README.md": "42c5c17d2b65d9c7a2d58f0d6d91bfff105a6c472d0af582ac8dfe6f891edd92",
+    "scripts/tests/test_stage_card_pilot.py": "ca08feea666563f0333c6a68d36bd102b61140269266f39a63a28cf10785b156",
+    "experiments/stage-card-pilot/FORMAT-v0.2.md": "38f4a6390196e5aa5425c2037719cbeeee9a3865e8dc4feaef3e6ef5593f0f38",
+    "experiments/stage-card-pilot/PLAN.md": "a0b219f752ed5d3c0c9b02e28597345fa63c7f22d95592aa0ae338bf9e19ba99",
+    "experiments/stage-card-pilot/README.md": "60d91f09e5082be0b50dd1cf321223b5deb272d6a7771e3c1a899faf6a8d434c",
+    "experiments/stage-card-pilot/RESULTS.md": "da6d5f3b1e7ae924a96d6fb2864ccba60544ac59fa91db27141899515fceac74",
+    "experiments/stage-card-pilot/adjudication.json": "60ac2ebb68feb815fda7d67b4d6fc73d4d9d21a2bd7b0e0792fd107bc762c77f",
+    "experiments/stage-card-pilot/case-manifest.json": "edac753a7d0ebd4cb9f1fdb7d87db03e56f2c564b9a4bd63c1bc981df7157e36",
+    "experiments/stage-card-pilot/catalog.json": "2713b2114234fd5d420a5b3a50b64ad9a27fd42f97a2b3c379486aa79234ebc1",
+    "experiments/stage-card-pilot/fixtures-public.json": "365d54d3a9eeae2584701edec558bf7eb85b7ba94cc2d85f56c1d2d5231bf4f6",
+    "experiments/stage-card-pilot/freeze.json": "689410dee5d900cb1145c5e4412a732b74d43974ddbd33231319cf9b593b587d",
+    "experiments/stage-card-pilot/public-results-summary.json": "ef7241b11715af0499d71567bb4fdc76aae8e24dc48f41e385a0a1550d473a8b",
+    "experiments/stage-card-pilot/results-summary.json": "af5d661b7fa91127b4f4cece2039360482e51a634aa4062e61df2d804fea4a49",
+    "experiments/stage-card-pilot/reviews-public.json": "341189abdeb407b8fb0559cb0464b798a73eebd509e62ec484574b17ea6b30e8",
+    "experiments/stage-card-pilot/run_experiment.py": "93e08db0e5fd092a0f3fb96d4b2cff6f5f0924d43c3fb7582c21dac30e79aa90"
+  }
+}

@@ -11,6 +11,7 @@
 """
 
 import argparse
+import copy
 import datetime as dt
 import json
 import sys
@@ -22,7 +23,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
-from common import ensure_dir, load_json, save_json, slugify
+from common import ensure_dir, load_json, save_json, slugify, chapter_no_from_name
 
 # ── 常量 ──────────────────────────────────────────────────────────
 
@@ -183,9 +184,31 @@ def cmd_update_node(args: argparse.Namespace, cfg: GraphConfig) -> Dict[str, Any
     # id 和 type 不允许修改
     updates.pop("id", None)
     updates.pop("type", None)
-
+    updates.pop("state_history", None)  # History is maintained here, never replaced by attrs.
+    chapter = getattr(args, "chapter", 0)
+    offset = getattr(args, "offset", None)
+    if type(chapter) is not int or chapter < 0:
+        raise ValueError("更新章节必须是非负整数")
+    if offset is not None and (type(offset) is not int or offset < 0 or chapter <= 0):
+        raise ValueError("更新字符位置必须是非负整数且指定正章节号")
+    old = copy.deepcopy({k: v for k, v in target.items() if k != "state_history"})
+    old_chapter, old_end = _record_position(old)
+    if chapter > 0 and old_chapter is not None:
+        if chapter < old_chapter or (chapter == old_chapter and offset is not None
+                and (old_end is None or offset < old_end)):
+            raise ValueError('不能把当前完整状态的局部修改回填到更早截点；请先重建对应历史快照')
+    history = target.get("state_history", [])
+    history = copy.deepcopy(history) if isinstance(history, list) else []
+    history.append({"chapter": old_chapter, "end_offset": old_end, "state": old})
+    # A later update without a chapter cannot inherit the old timestamp and claim
+    # that its new location/knowledge already existed at that earlier point.
     target.update(updates)
-    target["last_updated"] = args.chapter or target.get("last_updated", 0)
+    target["state_history"] = history
+    target["last_updated"] = chapter
+    target["source_position"] = {"chapter": chapter, "end": offset}
+    target.pop("end_offset", None)
+    target.pop("source_end", None)
+    target["temporal_state_unknown"] = chapter == 0
     ok = _save_graph(path, graph, cfg)
     return {
         "ok": ok, "command": "update-node",
@@ -369,6 +392,107 @@ def cmd_validate(args: argparse.Namespace, cfg: GraphConfig) -> Dict[str, Any]:
     }
 
 
+def _record_position(record: Dict[str, Any]) -> tuple:
+    """Return the latest declared narrative position, never infer it from wall time."""
+    if record.get("temporal_state_unknown"):
+        return None, None
+    point = record.get("source_position")
+    point = point if isinstance(point, dict) else {}
+    values = [point.get("chapter"), record.get("last_updated"), record.get("chapter"),
+              record.get("since_chapter"), record.get("planted_chapter"), record.get("chapter_planted")]
+    chapters = [v for v in values if type(v) is int and v > 0]
+    chapter = max(chapters) if chapters else None
+    end = point.get("end") if point.get("chapter") == chapter else None
+    if end is None:
+        end = record.get("end_offset", record.get("source_end"))
+    if type(end) is not int or end < 0:
+        end = None
+    return chapter, end
+
+
+def _before_cutoff(position: tuple, chapter: Optional[int], offset: Optional[int]) -> bool:
+    if chapter is None:
+        return True
+    source_chapter, source_end = position
+    if chapter == 0 or source_chapter is None or source_chapter > chapter:
+        return False
+    if source_chapter < chapter or offset is None:
+        return True
+    return offset > 0 and source_end is not None and source_end <= offset
+
+
+def _project_record(record: Dict[str, Any], chapter: Optional[int], offset: Optional[int]) -> Optional[Dict[str, Any]]:
+    if chapter is None:
+        return copy.deepcopy({k: v for k, v in record.items() if k != "state_history"})
+    if record.get('temporal_state_unknown'):
+        return None  # An undated replacement cannot establish which snapshot is current.
+    versions = []
+    for version in record.get("state_history", []) or []:
+        if not isinstance(version, dict) or not isinstance(version.get("state"), dict):
+            continue
+        position = (version.get("chapter"), version.get("end_offset"))
+        if type(position[0]) is not int or position[0] <= 0:
+            position = (None, None)
+        if position[1] is not None and (type(position[1]) is not int or position[1] < 0):
+            continue
+        versions.append((position, version["state"]))
+    position = _record_position(record)
+    versions.append((position, record))
+    candidates = [(index, item) for index, item in enumerate(versions)
+                  if _before_cutoff(item[0], chapter, offset)]
+    if not candidates:
+        return None
+    chosen_index, (chosen_position, chosen) = max(candidates, key=lambda indexed: (
+        indexed[1][0][0], indexed[1][0][1] if indexed[1][0][1] is not None else float('inf'), indexed[0]))
+    for later_position, _ in versions[chosen_index + 1:]:
+        if later_position[0] is None or (offset is not None and offset > 0
+                and later_position[0] == chapter and later_position[1] is None):
+            return None  # A later undated change may already have invalidated this state.
+    result = copy.deepcopy({k: v for k, v in chosen.items() if k != "state_history"})
+    result['source_position'] = {'chapter': chosen_position[0], 'end': chosen_position[1]}
+    return result
+
+
+def _knows(record: Dict[str, Any], pov: Optional[str]) -> bool:
+    return pov is None or (isinstance(record.get("known_by"), list) and pov in record["known_by"])
+
+
+def _context_evidence(record: Dict[str, Any], chapter: Optional[int], offset: Optional[int],
+                      pov: Optional[str]) -> List[Dict[str, Any]]:
+    refs = record.get("source_refs", [])
+    if not isinstance(refs, list):
+        refs = []
+    if isinstance(record.get("evidence"), dict):
+        refs = refs + [record["evidence"]]
+    result = []
+    for ref in refs:
+        if not isinstance(ref, dict) or not isinstance(ref.get("quote"), str) or not ref['quote'].strip():
+            continue
+        # Evidence may inherit this claim's time/knowledge, but an explicit
+        # later/secret reference must never inherit the parent permission.
+        candidate = dict(ref)
+        if "known_by" not in candidate:
+            candidate['known_by'] = record.get('known_by')
+        ref_position = _record_position(candidate)
+        source = ref.get('source_path', ref.get('source'))
+        source_chapter = chapter_no_from_name(Path(str(source)).name) if source else 0
+        if source_chapter > 0:
+            if ref_position[0] is not None and ref_position[0] != source_chapter:
+                continue  # A cited chapter path cannot be relabelled as an older chapter.
+            ref_position = (source_chapter, ref_position[1])
+        elif ref_position[0] is None and not any(k in ref for k in ('chapter','source_position','last_updated')):
+            parent_source = record.get('source_path', record.get('source'))
+            if source and parent_source and str(source) == str(parent_source):
+                ref_position = _record_position(record)
+        if type(ref.get('end')) is int and ref.get('end') >= 0:
+            ref_position = (ref_position[0], ref['end'])
+        if _before_cutoff(ref_position, chapter, offset) and _knows(candidate, pov):
+            # Whitelist the rendered provenance instead of copying arbitrary metadata.
+            result.append({k: ref[k] for k in ('quote', 'source_path', 'source', 'chapter',
+                'start', 'end', 'start_line', 'end_line', 'source_sha256') if k in ref})
+    return result
+
+
 def cmd_context(args: argparse.Namespace, cfg: GraphConfig) -> Dict[str, Any]:
     """生成写作上下文摘要，注入写前 query。
 
@@ -382,28 +506,65 @@ def cmd_context(args: argparse.Namespace, cfg: GraphConfig) -> Dict[str, Any]:
     graph = _load_graph(_graph_path(root, cfg), cfg)
     nodes = graph.get("nodes", [])
 
-    chapter = args.chapter or 0
+    explicit_chapter = getattr(args, 'cutoff_chapter', None)
+    legacy_chapter = getattr(args, 'chapter', 0)
+    chapter = explicit_chapter if explicit_chapter is not None else (legacy_chapter or None)
+    offset = getattr(args, 'cutoff_offset', None)
+    pov = getattr(args, 'pov_character', None) or None
+    if chapter is not None and (type(chapter) is not int or chapter < 0):
+        raise ValueError('cutoff_chapter 必须是非负整数')
+    if offset is not None and (type(offset) is not int or offset < 0 or chapter is None or chapter <= 0):
+        raise ValueError('cutoff_offset 必须是非负整数且指定正章节截点')
+    if pov is not None and (not isinstance(pov, str) or not pov.strip()):
+        raise ValueError('pov_character 必须是非空字符串')
+    omissions = []
+    projected = []
+    for node in nodes:
+        if not isinstance(node, dict):
+            continue
+        item = _project_record(node, chapter, offset)
+        if item is None:
+            omissions.append({'kind': str(node.get('type', 'unknown')), 'reason': 'no_state_at_cutoff'})
+        elif not _knows(item, pov):
+            omissions.append({'kind': str(node.get('type', 'unknown')), 'reason': 'knowledge_not_confirmed'})
+        else:
+            projected.append(item)
+    nodes_at_cutoff = projected
     max_foreshadows = args.max_foreshadows
     max_events = args.max_events
 
     # 1. 角色当前状态
-    characters = [n for n in nodes if isinstance(n, dict) and n.get("type") == "character"]
+    characters = [n for n in nodes_at_cutoff if n.get("type") == "character"]
     char_lines = []
     for c in characters:
         name = c.get("name", c.get("id", "未知"))
         loc = c.get("location", "未知")
         status = c.get("status", "正常")
-        if status.lower() in {"dead", "deceased"}:
+        if str(status).lower() in {"dead", "deceased"}:
             continue  # 已死亡角色不注入
         char_lines.append(f"- {name}：当前位于「{loc}」，状态={status}")
 
     # 2. 未解决伏笔
-    foreshadows = [
-        n for n in nodes
-        if isinstance(n, dict)
-        and n.get("type") == "foreshadow"
-        and not n.get("resolved", False)
-    ]
+    foreshadows = []
+    for n in nodes_at_cutoff:
+        if n.get('type') != 'foreshadow':
+            continue
+        if n.get('resolved', False) or n.get('status') in {'resolved', 'paid_off'}:
+            resolved_chapter = n.get('resolved_chapter', n.get('chapter_resolved'))
+            resolved_end = n.get('resolved_offset')
+            if chapter is None:
+                continue
+            if type(resolved_chapter) is not int or resolved_chapter <= 0:
+                omissions.append({'kind': 'foreshadow', 'reason': 'resolution_time_unknown'})
+                continue
+            if resolved_end is not None and (type(resolved_end) is not int or resolved_end < 0):
+                resolved_end = None
+            if resolved_chapter == chapter and offset is not None and resolved_end is None:
+                omissions.append({'kind': 'foreshadow', 'reason': 'resolution_position_unknown'})
+                continue
+            if _before_cutoff((resolved_chapter, resolved_end), chapter, offset):
+                continue
+        foreshadows.append(n)
     # 兼容两种字段命名：story_graph_updater 写 planted_chapter，旧数据用 chapter_planted
     def _foreshadow_planted(n: Dict[str, Any]) -> int:
         return int(n.get("planted_chapter") or n.get("chapter_planted") or 0)
@@ -421,10 +582,8 @@ def cmd_context(args: argparse.Namespace, cfg: GraphConfig) -> Dict[str, Any]:
 
     # 3. 近期事件（兼容 participants 为名字列表）
     events = [
-        n for n in nodes
-        if isinstance(n, dict)
-        and n.get("type") == "event"
-        and (chapter == 0 or int(n.get("chapter", 0) or 0) <= chapter)
+        n for n in nodes_at_cutoff
+        if n.get("type") == "event"
     ]
     events_recent = sorted(
         events,
@@ -434,6 +593,8 @@ def cmd_context(args: argparse.Namespace, cfg: GraphConfig) -> Dict[str, Any]:
     event_lines = []
     for n in events_recent:
         desc = n.get("description") or n.get("name", "")
+        if n.get('epistemic_status'):
+            desc = f"[{n['epistemic_status']}] {desc}"
         participants = n.get("participants", [])
         participant_str = (
             "（参与角色：" + "、".join(str(p) for p in participants if str(p).strip()) + "）"
@@ -441,6 +602,25 @@ def cmd_context(args: argparse.Namespace, cfg: GraphConfig) -> Dict[str, Any]:
             else ""
         )
         event_lines.append(f"- 第{n.get('chapter', '')}章：{desc}{participant_str}")
+
+    visible_names = {str(n.get('id')): str(n.get('name') or n.get('id')) for n in nodes_at_cutoff}
+    relation_lines = []
+    relations = []
+    for edge in graph.get('edges', []):
+        if not isinstance(edge, dict):
+            continue
+        item = _project_record(edge, chapter, offset)
+        if item is None or not _knows(item, pov):
+            omissions.append({'kind': 'relation', 'reason': 'time_or_knowledge_not_confirmed'})
+            continue
+        relations.append(item)
+        source, target = str(item.get('source', '')), str(item.get('target', ''))
+        relation_lines.append(f"- {visible_names.get(source, source)} — {item.get('type', '关联')} → "
+            f"{visible_names.get(target, target)}：{item.get('description', '')}")
+    evidence_refs = []
+    for item in characters + foreshadows_sorted + events_recent + relations:
+        evidence_refs.extend(_context_evidence(item, chapter, offset, pov))
+    evidence_lines = [json.dumps(ref, ensure_ascii=False) for ref in evidence_refs]
 
     # 组合上下文 prompt
     sections = []
@@ -450,6 +630,10 @@ def cmd_context(args: argparse.Namespace, cfg: GraphConfig) -> Dict[str, Any]:
         sections.append("【待回收伏笔】\n" + "\n".join(foreshadow_lines))
     if event_lines:
         sections.append("【近期事件】\n" + "\n".join(event_lines))
+    if relation_lines:
+        sections.append("【关系】\n" + "\n".join(relation_lines))
+    if evidence_lines:
+        sections.append("【附带来源：尚未核验引文语义】\n" + "\n".join(evidence_lines))
 
     context_prompt = "\n\n".join(sections) if sections else ""
 
@@ -460,6 +644,11 @@ def cmd_context(args: argparse.Namespace, cfg: GraphConfig) -> Dict[str, Any]:
         "character_count": len(char_lines),
         "foreshadow_count": len(foreshadow_lines),
         "event_count": len(event_lines),
+        "relation_count": len(relation_lines),
+        "evidence_refs": evidence_refs,
+        "source_cutoff": {"chapter": chapter, "offset": offset},
+        "pov_character": pov,
+        "omissions": omissions,
         "graph_nodes_total": len(nodes),
         "message": "图谱上下文已生成" if context_prompt else "图谱为空，无上下文可注入",
     }
@@ -487,6 +676,7 @@ def parse_args() -> argparse.Namespace:
     s.add_argument("--project-root", required=True)
     s.add_argument("--node-id", required=True)
     s.add_argument("--chapter", type=int, default=0, help="触发更新的章节号")
+    s.add_argument("--offset", type=int, help="本次状态更新对应的原文字符半开末端")
     s.add_argument("--attrs", required=True, help='更新字段 JSON，如 \'{"status":"injured"}\'')
 
     s = sub.add_parser("add-edge", help="添加边")
@@ -512,6 +702,9 @@ def parse_args() -> argparse.Namespace:
     s_ctx = sub.add_parser("generate-context", help="生成写作上下文摘要")
     s_ctx.add_argument("--project-root", required=True)
     s_ctx.add_argument("--chapter", type=int, default=0, help="当前章节号（用于过滤近期事件）")
+    s_ctx.add_argument("--cutoff-chapter", type=int, help="可用前文章节上限；显式 0 表示无历史正文")
+    s_ctx.add_argument("--cutoff-offset", type=int, help="截点章的原文字符半开末端；该章无定位的状态会被省略")
+    s_ctx.add_argument("--pov-character", help="只保留 known_by 明确包含该人物 ID 的记录")
     s_ctx.add_argument("--max-foreshadows", type=int, default=5, help="最多展示未解决伏笔数")
     s_ctx.add_argument("--max-events", type=int, default=5, help="最多展示近期事件数")
 

@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "status": "experimental_operationalization",
+  "candidate_origin": "curated_shared_set_not_automatic_recall",
+  "motifs": [
+    {
+      "id": "truth_pursuit",
+      "title": "真相追寻：追查与阻力",
+      "knowledge_kind": "motif",
+      "source": {
+        "path": "assets/motif_library/truth-pursuit.md",
+        "sha256": "b0900e167687867d1408fc2e57d8ef2a0cc92c9d25209621084a198da1b2ad42",
+        "evidence": [
+          {
+            "start": 37,
+            "end": 77,
+            "quote": "主角执着于追寻某个真相，但真相可能毁灭自己或身边的人——知道得越多，越无法回头。"
+          },
+          {
+            "start": 90,
+            "end": 128,
+            "quote": "1. **触发**：主角发现一个疑点（失踪/死亡/异常事件），决定追查到底。"
+          },
+          {
+            "start": 175,
+            "end": 241,
+            "quote": "3. **冲突**：每接近真相一步，就有人警告他停下——威胁、利诱、甚至来自信任之人的阻挠。主角在\"继续查\"和\"保全自己\"之间拉扯。"
+          }
+        ]
+      },
+      "roles": {
+        "actor": "character",
+        "question": "object"
+      },
+      "conditions": [
+        {
+          "id": "investigating",
+          "kind": "world_state",
+          "claim_template": "{actor}已经开始主动追查{question}。"
+        },
+        {
+          "id": "obstructed",
+          "kind": "world_state",
+          "claim_template": "{actor}因追查{question}已经受到明确的阻挠或警告。"
+        }
+      ],
+      "entry_conditions": [
+        "investigating",
+        "obstructed"
+      ],
+      "stages": [
+        {
+          "id": "applicable",
+          "title": "当前操作条件得到支持",
+          "requires": [
+            "investigating",
+            "obstructed"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "truth_pursuit_continue",
+          "title": "在既有阻力下选择如何追查",
+          "from_stage": "applicable",
+          "requires": [],
+          "proposal": "根据已有调查线索与已发生的阻挠，选择继续核对、寻求支持或调整行动方式；不要补造更大的阴谋或调查结局。"
+        }
+      ],
+      "operationalization_note": "只操作化“追查＋明确阻力”这一部分机制；一般调查可有局部支持，不等于本母题整体成立。未来代价未发生不构成反证。"
+    },
+    {
+      "id": "identity_mask",
+      "title": "身份面具：以另一身份生活",
+      "knowledge_kind": "motif",
+      "source": {
+        "path": "assets/motif_library/identity-mask.md",
+        "sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8",
+        "evidence": [
+          {
+            "start": 37,
+            "end": 76,
+            "quote": "主角隐藏真实身份生活，面具逐渐与真实自我融合，直到他分不清哪个才是真正的自己。"
+          },
+          {
+            "start": 89,
+            "end": 133,
+            "quote": "1. **触发**：主角因某种原因（逃避追杀/执行任务/自我保护）必须以另一个身份生活。"
+          }
+        ]
+      },
+      "roles": {
+        "actor": "character"
+      },
+      "conditions": [
+        {
+          "id": "concealed_identity",
+          "kind": "world_state",
+          "claim_template": "{actor}正在以与真实身份不同的身份生活，并主动对他人隐瞒真实身份。"
+        }
+      ],
+      "entry_conditions": [
+        "concealed_identity"
+      ],
+      "stages": [
+        {
+          "id": "applicable",
+          "title": "当前操作条件得到支持",
+          "requires": [
+            "concealed_identity"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "identity_mask_continue",
+          "title": "检查维持身份带来的行动选择",
+          "from_stage": "applicable",
+          "requires": [],
+          "proposal": "围绕已经确立的双重身份安排一致性核对或暴露风险的选择；新风险属于提案，不宣称已经有人识破。"
+        }
+      ],
+      "operationalization_note": "身份未知不能证明身份伪装；此条件只识别早期机制，不自动推断长期自我认同冲突。"
+    },
+    {
+      "id": "homeopathic_magic",
+      "title": "模仿巫术：替代物与交感信念",
+      "knowledge_kind": "motif",
+      "source": {
+        "path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+        "sha256": "269c5077231f4a4362a0de0f1bd0095ec074c9b298a7ba82a60c6edc591f933c",
+        "evidence": [
+          {
+            "start": 69,
+            "end": 131,
+            "quote": "原始人相信\"同类相生\"——通过模仿所期望的结果，就能促使该结果真实发生。蜡像代表仇人，扎蜡像即伤害真人；孕妇播种则庄稼丰收。"
+          },
+          {
+            "start": 185,
+            "end": 224,
+            "quote": "2. **制作模仿物**：用蜡、泥、木头等材料制作与目标对象相似的偶像或模型。"
+          },
+          {
+            "start": 1374,
+            "end": 1401,
+            "quote": "- 施法者不认为模仿动作能影响真实对象（缺乏交感信念）"
+          }
+        ]
+      },
+      "roles": {
+        "topic": "object"
+      },
+      "conditions": [
+        {
+          "id": "surrogate",
+          "kind": "world_state",
+          "claim_template": "{topic}涉及一个用来代表真实目标的模仿物。"
+        },
+        {
+          "id": "belief",
+          "kind": "world_state",
+          "claim_template": "{topic}的执行者相信操纵模仿物可以影响真实目标。"
+        }
+      ],
+      "entry_conditions": [
+        "surrogate",
+        "belief"
+      ],
+      "stages": [
+        {
+          "id": "applicable",
+          "title": "当前操作条件得到支持",
+          "requires": [
+            "surrogate",
+            "belief"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "homeopathic_magic_continue",
+          "title": "围绕已存在的模仿物检验后果",
+          "from_stage": "applicable",
+          "requires": [],
+          "proposal": "如果前文已经建立模仿物与相应信念，可安排观察或检验行动；信念成立不代表巫术效果已经发生。"
+        }
+      ],
+      "operationalization_note": "模仿作案、超凡力量、样式相似都不能替代模仿物与交感信念两项条件。"
+    },
+    {
+      "id": "suspense_inquiry",
+      "title": "悬念阶梯：沿已有疑点核对",
+      "knowledge_kind": "technique",
+      "source": {
+        "path": "assets/technique_library/suspense-laddering.md",
+        "sha256": "8c5473fda82814eaa4f7b75b5e4ef6462e6c6d7c0c204d1a409ab90546182ccc",
+        "evidence": [
+          {
+            "start": 335,
+            "end": 401,
+            "quote": "悬念的运作遵循\"窥探\"逻辑：故事中存在隐藏的、读者欲知而未知的事物，这产生了悬念。读者跟随侦探/主角不断\"窥探\"真相，直到悬念破解。"
+          },
+          {
+            "start": 517,
+            "end": 561,
+            "quote": "3. **延宕原则**：不要急于揭示答案。每当读者快要接近真相时，引入新信息让谜题更复杂"
+          }
+        ]
+      },
+      "roles": {
+        "actor": "character",
+        "question": "object",
+        "clue": "object"
+      },
+      "conditions": [
+        {
+          "id": "unresolved",
+          "kind": "world_state",
+          "claim_template": "{actor}面前仍有尚未查明的问题：{question}。"
+        },
+        {
+          "id": "available_clue",
+          "kind": "world_state",
+          "claim_template": "{actor}已经接触{clue}。"
+        },
+        {
+          "id": "tentative_statement",
+          "kind": "communication_event",
+          "claim_template": "{actor}已经口述关于{question}的判断，措辞带有不确定性。"
+        }
+      ],
+      "entry_conditions": [
+        "available_clue"
+      ],
+      "stages": [
+        {
+          "id": "open_question",
+          "title": "有可核对的未解疑点",
+          "requires": [
+            "unresolved"
+          ],
+          "chronological": []
+        },
+        {
+          "id": "tentative_statement",
+          "title": "已提出带保留措辞的判断",
+          "requires": [
+            "tentative_statement"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "suspense_inquiry_continue",
+          "title": "先区分观察与推断，再核对疑点",
+          "from_stage": "open_question",
+          "requires": [],
+          "proposal": "从已知观察或已提出的假说中选择可核对的一项，继续观察、提问或比对；核对结果可以支持、修正或否定原假说，不预先写出答案。"
+        },
+        {
+          "id": "suspense_check_hypothesis",
+          "title": "围绕已经提出的判断核对依据",
+          "from_stage": "tentative_statement",
+          "requires": [],
+          "proposal": "围绕角色已经说出的判断，分别列出观察内容与推断步骤，选择一项可核对依据；不预先宣布判断正确，也不擅自补出凶手。"
+        }
+      ],
+      "operationalization_note": "选取前文疑点到继续核对的操作，不实施原文可选的倒叙方式，不强制每次增加谜题。 两项是替代操作入口，不是事件先后阶段；实际说出带保留措辞的判断，可以支持核验提案，而无需把“世界真相尚未查明”再断言为角色自知的事实。",
+      "stage_mode": "alternatives"
+    },
+    {
+      "id": "revelation",
+      "title": "揭秘情境：已有铺垫与确认答案",
+      "knowledge_kind": "situation",
+      "source": {
+        "path": "assets/technique_library/_scenarios/revelation.md",
+        "sha256": "57d9772aed5dde56ac5b9f99c521badf0551a84a55fd284242d15797c69b6455",
+        "evidence": [
+          {
+            "start": 33,
+            "end": 53,
+            "quote": "隐藏的真相被揭示，改变读者对剧情的理解。"
+          },
+          {
+            "start": 516,
+            "end": 536,
+            "quote": "1. 揭秘前必须有伏笔（至少3章前埋下）"
+          },
+          {
+            "start": 560,
+            "end": 584,
+            "quote": "3. 揭秘后要有后果：角色关系/剧情走向发生变化"
+          }
+        ]
+      },
+      "roles": {
+        "actor": "character",
+        "question": "object"
+      },
+      "conditions": [
+        {
+          "id": "setup",
+          "kind": "world_state",
+          "claim_template": "{actor}此前已经接触与{question}有关的线索。"
+        },
+        {
+          "id": "confirmed",
+          "kind": "world_state",
+          "claim_template": "{actor}已经查明{question}，而不是仅提出一个待核对的假说。"
+        }
+      ],
+      "entry_conditions": [
+        "setup",
+        "confirmed"
+      ],
+      "stages": [
+        {
+          "id": "applicable",
+          "title": "当前操作条件得到支持",
+          "requires": [
+            "setup",
+            "confirmed"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "revelation_continue",
+          "title": "围绕已确认答案安排揭示后的回应",
+          "from_stage": "applicable",
+          "requires": [],
+          "proposal": "只使用当前视角已经确认的具体内容，规划表达及其后果；不能把提出假说升级为破案，新增后果仍须作者选择。"
+        }
+      ],
+      "operationalization_note": "不采用原文“至少3章”作为普遍门槛；这里只检查已有线索与确认答案，不承诺文学冲击力。"
+    }
+  ]
+}

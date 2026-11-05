@@ -15,6 +15,11 @@ PY = "python3"
 
 
 def run_cmd(args):
+    # These legacy tests exercise deterministic demo prose and gate mechanics.
+    # Default auto mode now keeps prompts when no model is configured; its
+    # behavior is covered separately by test_continuity_writer.
+    if args and args[0] == "continue-write" and "--draft-provider" not in args:
+        args = [*args, "--draft-provider", "template"]
     proc = subprocess.run([PY, str(EXECUTOR), *args], capture_output=True, text=True)
     if proc.returncode not in (0, 1):
         raise AssertionError(f"命令异常: rc={proc.returncode}\nstdout={proc.stdout}\nstderr={proc.stderr}")
@@ -145,6 +150,15 @@ class TestNovelFlowExecutor(unittest.TestCase):
         self.assertTrue(p1.get("ok"))
         self.assertTrue(p2.get("ok"))
         self.assertTrue(p3.get("idempotent_hit"))
+        _, changed_candidates = run_cmd(["continue-write", "--project-root", str(self.tmpdir),
+            "--chapter-file", p1["chapter_file"], "--query", "主角在站台发现名单并与同伴发生冲突",
+            "--candidate-k", "1"])
+        self.assertFalse(changed_candidates.get("idempotent_hit"))
+        # An edit to earlier history must invalidate an accepted result too.
+        (self.tmpdir / "03_manuscript" / "第1章-开篇待写.md").write_text("此前的名单已被证实是伪造的。", encoding="utf-8")
+        _, p4 = run_cmd(["continue-write", "--project-root", str(self.tmpdir),
+            "--chapter-file", p1["chapter_file"], "--query", "主角在站台发现名单并与同伴发生冲突"])
+        self.assertFalse(p4.get("idempotent_hit"))
 
     def test_continue_write_rollback_on_failure(self):
         run_cmd([

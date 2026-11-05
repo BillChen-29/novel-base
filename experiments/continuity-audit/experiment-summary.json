@@ -1,0 +1,995 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-19",
+  "counts": {
+    "cases": 4,
+    "books": 2,
+    "entries": 178,
+    "context_candidates": 791
+  },
+  "embedding": {
+    "schema_version": 1,
+    "model_sha256": "b5ce9d77a3fc4b3b39ccb5643c36777911cc4eb46a66962eadfa3f5f60490d63",
+    "model_file": "hf_ggml-org_embeddinggemma-300M-Q8_0.gguf",
+    "qmd_version": "2.1.0",
+    "runtime_version": "3.18.1",
+    "prefix": "qmd-format-functions-v1",
+    "requested_gpu": "metal",
+    "context_size": 2048,
+    "threads": 4,
+    "input_sha256": "3867c9974e8298e7b9b6b61fe759e37e37ccae273a43a0a81d2eebe22e0e25a9",
+    "dataset_sha256": "e0ec1ad080c35c271c9fafe94c49edd406ddd7a0ca142949b4eb9b77c981e35b",
+    "dimensions": 768,
+    "complete": true,
+    "total_inputs": 977,
+    "elapsed_seconds": 22.549835041999998,
+    "gpu_layers": 25,
+    "runtime_build": "prebuilt"
+  },
+  "dataset_sha256": "e0ec1ad080c35c271c9fafe94c49edd406ddd7a0ca142949b4eb9b77c981e35b",
+  "selection_sha256": "af293507f1c1cc93af8ca105cb6670c1a166375db03bf64c9c7dafcd737ec45a",
+  "method": {
+    "continuation_used_in_queries": false,
+    "state_source": "AI-agent-reviewed prefix annotations; not automatic extraction or independent human gold",
+    "raw_query_limit_chars": 800,
+    "methods": [
+      "bm25",
+      "vector"
+    ],
+    "top_k_per_kind": 3,
+    "independent_local_event_segments": 2,
+    "cutpoints": 4,
+    "novel_generation": false
+  },
+  "cases": [
+    {
+      "id": "old-lord-monitor",
+      "book_id": "old_lord",
+      "title": "全球高武，我却是旧日之主",
+      "source_sha256": "3ce03cb667e991cb026df5a1201a6f81c7c442fd13252020a75dd8cce8db4007",
+      "encoding": "utf-8",
+      "prefix_span": [
+        10646,
+        10945
+      ],
+      "next_span": [
+        10945,
+        11306
+      ],
+      "prefix_chars": 299,
+      "sealed_next_chars": 361,
+      "annotation_count": 4,
+      "rankings": [
+        {
+          "query_mode": "raw",
+          "method": "bm25",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-journey-to-underworld",
+              "title": "母题：探阴间 (Journey to Underworld)",
+              "source_path": "assets/motif_library/journey-to-underworld.md",
+              "score": 22.525281494099957
+            },
+            {
+              "id": "entry-feng-shui-ruined",
+              "title": "母题：风水遭破坏 (Feng Shui Ruined)",
+              "source_path": "assets/motif_library/feng-shui-ruined.md",
+              "score": 21.98906884342299
+            },
+            {
+              "id": "entry-shadow-archetype",
+              "title": "母题：阴影原型 (Shadow Archetype)",
+              "source_path": "assets/motif_library/shadow-archetype.md",
+              "score": 20.563882276594082
+            }
+          ]
+        },
+        {
+          "query_mode": "raw",
+          "method": "bm25",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-ethnic-fusion-context-804",
+              "title": "母题：民族融合 (Ethnic Fusion) / 情境或案例候选",
+              "source_path": "assets/motif_library/ethnic-fusion.md",
+              "score": 20.8806265078133
+            },
+            {
+              "id": "entry-complementary_champions-context-706",
+              "title": "母题：英雄的冠军团——各有异能的伙伴 (Champions with Complementary Gifts) / 情境或案例候选",
+              "source_path": "assets/motif_library/complementary_champions.md",
+              "score": 18.70913246477464
+            },
+            {
+              "id": "entry-accidental-prophet-context-619",
+              "title": "母题：有言必中 (Accidental Prophet) / 情境或案例候选",
+              "source_path": "assets/motif_library/accidental-prophet.md",
+              "score": 16.07241218581657
+            }
+          ]
+        },
+        {
+          "query_mode": "raw",
+          "method": "vector",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-threshold-guardian",
+              "title": "母题：门槛守卫 (Threshold Guardian)",
+              "source_path": "assets/motif_library/threshold-guardian.md",
+              "score": 0.3129828494520556
+            },
+            {
+              "id": "entry-time-pressure",
+              "title": "母题：倒计时 (Time Pressure)",
+              "source_path": "assets/motif_library/time-pressure.md",
+              "score": 0.2868146525461375
+            },
+            {
+              "id": "entry-ghost-chases-living",
+              "title": "母题：死鬼追踪 (Ghost Chases the Living)",
+              "source_path": "assets/motif_library/ghost-chases-living.md",
+              "score": 0.28532972117617916
+            }
+          ]
+        },
+        {
+          "query_mode": "raw",
+          "method": "vector",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-threshold-guardian-context-679",
+              "title": "母题：门槛守卫 (Threshold Guardian) / 情境或案例候选",
+              "source_path": "assets/motif_library/threshold-guardian.md",
+              "score": 0.3241061245703467
+            },
+            {
+              "id": "entry-threshold-guardian-context-723",
+              "title": "母题：门槛守卫 (Threshold Guardian) / 情境或案例候选",
+              "source_path": "assets/motif_library/threshold-guardian.md",
+              "score": 0.32386771834264183
+            },
+            {
+              "id": "entry-threshold-guardian-context-643",
+              "title": "母题：门槛守卫 (Threshold Guardian) / 情境或案例候选",
+              "source_path": "assets/motif_library/threshold-guardian.md",
+              "score": 0.29620122054176473
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "bm25",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-identity-mask",
+              "title": "母题：身份面具 (Identity Mask)",
+              "source_path": "assets/motif_library/identity-mask.md",
+              "score": 17.91226156986544
+            },
+            {
+              "id": "entry-truth-pursuit",
+              "title": "母题：真相追寻 (Truth Pursuit)",
+              "source_path": "assets/motif_library/truth-pursuit.md",
+              "score": 17.24800480009791
+            },
+            {
+              "id": "entry-sympathetic-magic-homeopathic",
+              "title": "母题：顺势巫术/模仿巫术 (Sympathetic Magic: Homeopathic/Imitative)",
+              "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+              "score": 13.704427033873404
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "bm25",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-identity-mask-context-767",
+              "title": "母题：身份面具 (Identity Mask) / 情境或案例候选",
+              "source_path": "assets/motif_library/identity-mask.md",
+              "score": 24.741814642427794
+            },
+            {
+              "id": "entry-identity-mask-context-802",
+              "title": "母题：身份面具 (Identity Mask) / 情境或案例候选",
+              "source_path": "assets/motif_library/identity-mask.md",
+              "score": 18.621475174472703
+            },
+            {
+              "id": "entry-scapegoat-transfer-context-748",
+              "title": "母题：替罪羊 (Scapegoat Transfer) / 情境或案例候选",
+              "source_path": "assets/motif_library/scapegoat-transfer.md",
+              "score": 12.49407159191424
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "vector",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-time-pressure",
+              "title": "母题：倒计时 (Time Pressure)",
+              "source_path": "assets/motif_library/time-pressure.md",
+              "score": 0.3384215124817846
+            },
+            {
+              "id": "entry-identity-mask",
+              "title": "母题：身份面具 (Identity Mask)",
+              "source_path": "assets/motif_library/identity-mask.md",
+              "score": 0.33528863413207305
+            },
+            {
+              "id": "entry-threshold-guardian",
+              "title": "母题：门槛守卫 (Threshold Guardian)",
+              "source_path": "assets/motif_library/threshold-guardian.md",
+              "score": 0.33427880477968225
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "vector",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-threshold-guardian-context-679",
+              "title": "母题：门槛守卫 (Threshold Guardian) / 情境或案例候选",
+              "source_path": "assets/motif_library/threshold-guardian.md",
+              "score": 0.35720526312996687
+            },
+            {
+              "id": "entry-time-pressure-context-899",
+              "title": "母题：倒计时 (Time Pressure) / 情境或案例候选",
+              "source_path": "assets/motif_library/time-pressure.md",
+              "score": 0.3385065288215212
+            },
+            {
+              "id": "entry-time-pressure-context-757",
+              "title": "母题：倒计时 (Time Pressure) / 情境或案例候选",
+              "source_path": "assets/motif_library/time-pressure.md",
+              "score": 0.32421159590840765
+            }
+          ]
+        }
+      ],
+      "strict_quote_coverage": {
+        "raw": {
+          "covered": 2,
+          "total": 4
+        },
+        "state": {
+          "covered": 3,
+          "total": 4
+        }
+      },
+      "citation_checks": {
+        "valid_quotes_accepted": 4,
+        "absent_quote_rejected": true,
+        "semantic_entailment_checked": false,
+        "known_by_annotated_facts": 4
+      }
+    },
+    {
+      "id": "old-lord-standoff",
+      "book_id": "old_lord",
+      "title": "全球高武，我却是旧日之主",
+      "source_sha256": "3ce03cb667e991cb026df5a1201a6f81c7c442fd13252020a75dd8cce8db4007",
+      "encoding": "utf-8",
+      "prefix_span": [
+        10646,
+        11717
+      ],
+      "next_span": [
+        11717,
+        12238
+      ],
+      "prefix_chars": 1071,
+      "sealed_next_chars": 521,
+      "annotation_count": 5,
+      "rankings": [
+        {
+          "query_mode": "raw",
+          "method": "bm25",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-race-against-dawn",
+              "title": "母题：一夜之功 (Race Against Dawn)",
+              "source_path": "assets/motif_library/race-against-dawn.md",
+              "score": 48.6787319204578
+            },
+            {
+              "id": "entry-foundation_sacrifice",
+              "title": "母题：建桥者的牺牲 (Foundation Sacrifice: The Bridge of Arta)",
+              "source_path": "assets/motif_library/foundation_sacrifice.md",
+              "score": 39.110656234879215
+            },
+            {
+              "id": "entry-magical-painter",
+              "title": "母题：魔法画师 (Magical Painter)",
+              "source_path": "assets/motif_library/magical-painter.md",
+              "score": 37.27370151275177
+            }
+          ]
+        },
+        {
+          "query_mode": "raw",
+          "method": "bm25",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-race-against-dawn-context-656",
+              "title": "母题：一夜之功 (Race Against Dawn) / 情境或案例候选",
+              "source_path": "assets/motif_library/race-against-dawn.md",
+              "score": 47.137759613451195
+            },
+            {
+              "id": "entry-race-against-dawn-context-587",
+              "title": "母题：一夜之功 (Race Against Dawn) / 情境或案例候选",
+              "source_path": "assets/motif_library/race-against-dawn.md",
+              "score": 33.56459640441865
+            },
+            {
+              "id": "entry-race-against-dawn-context-608",
+              "title": "母题：一夜之功 (Race Against Dawn) / 情境或案例候选",
+              "source_path": "assets/motif_library/race-against-dawn.md",
+              "score": 33.44890840417058
+            }
+          ]
+        },
+        {
+          "query_mode": "raw",
+          "method": "vector",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-ghost-chases-living",
+              "title": "母题：死鬼追踪 (Ghost Chases the Living)",
+              "source_path": "assets/motif_library/ghost-chases-living.md",
+              "score": 0.28037634162270114
+            },
+            {
+              "id": "entry-feng-shui-ruined",
+              "title": "母题：风水遭破坏 (Feng Shui Ruined)",
+              "source_path": "assets/motif_library/feng-shui-ruined.md",
+              "score": 0.2755220977196422
+            },
+            {
+              "id": "entry-time-pressure",
+              "title": "母题：倒计时 (Time Pressure)",
+              "source_path": "assets/motif_library/time-pressure.md",
+              "score": 0.2710198146344821
+            }
+          ]
+        },
+        {
+          "query_mode": "raw",
+          "method": "vector",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-time-pressure-context-724",
+              "title": "母题：倒计时 (Time Pressure) / 情境或案例候选",
+              "source_path": "assets/motif_library/time-pressure.md",
+              "score": 0.2516980050597983
+            },
+            {
+              "id": "entry-fate-of-three-robbers-context-640",
+              "title": "母题：命运不可逃 (Fate of Three Robbers) / 情境或案例候选",
+              "source_path": "assets/motif_library/fate-of-three-robbers.md",
+              "score": 0.25162220657737777
+            },
+            {
+              "id": "entry-feng-shui-ruined-context-636",
+              "title": "母题：风水遭破坏 (Feng Shui Ruined) / 情境或案例候选",
+              "source_path": "assets/motif_library/feng-shui-ruined.md",
+              "score": 0.24830492908232163
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "bm25",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-cannibal_feast",
+              "title": "母题：食人筵席——以子为食的复仇 (The Cannibal Feast / Horrid Meal)",
+              "source_path": "assets/motif_library/cannibal_feast.md",
+              "score": 16.181056951512808
+            },
+            {
+              "id": "entry-sympathetic-magic-contagious",
+              "title": "母题：接触巫术 (Sympathetic Magic: Contagious)",
+              "source_path": "assets/motif_library/sympathetic-magic-contagious.md",
+              "score": 16.119232999317823
+            },
+            {
+              "id": "entry-seeking-buddha",
+              "title": "母题：求活佛型（代人问路）",
+              "source_path": "assets/motif_library/seeking-buddha.md",
+              "score": 13.425846420532498
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "bm25",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-identity-mask-context-767",
+              "title": "母题：身份面具 (Identity Mask) / 情境或案例候选",
+              "source_path": "assets/motif_library/identity-mask.md",
+              "score": 16.752722822182278
+            },
+            {
+              "id": "entry-origin-of-death-context-619",
+              "title": "母题：死亡的起源 (Origin of Death) / 情境或案例候选",
+              "source_path": "assets/motif_library/origin-of-death.md",
+              "score": 15.498341066192362
+            },
+            {
+              "id": "entry-scapegoat-transfer-context-748",
+              "title": "母题：替罪羊 (Scapegoat Transfer) / 情境或案例候选",
+              "source_path": "assets/motif_library/scapegoat-transfer.md",
+              "score": 12.49407159191424
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "vector",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-time-pressure",
+              "title": "母题：倒计时 (Time Pressure)",
+              "source_path": "assets/motif_library/time-pressure.md",
+              "score": 0.32655412183719584
+            },
+            {
+              "id": "entry-ghost-chases-living",
+              "title": "母题：死鬼追踪 (Ghost Chases the Living)",
+              "source_path": "assets/motif_library/ghost-chases-living.md",
+              "score": 0.31138530427483485
+            },
+            {
+              "id": "entry-wrong_child_murdered",
+              "title": "母题：错误的孩子——被掉包的谋杀 (The Wrong Child Murdered)",
+              "source_path": "assets/motif_library/wrong_child_murdered.md",
+              "score": 0.30591022288378655
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "vector",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-threshold-guardian-context-679",
+              "title": "母题：门槛守卫 (Threshold Guardian) / 情境或案例候选",
+              "source_path": "assets/motif_library/threshold-guardian.md",
+              "score": 0.3134943719368667
+            },
+            {
+              "id": "entry-time-pressure-context-724",
+              "title": "母题：倒计时 (Time Pressure) / 情境或案例候选",
+              "source_path": "assets/motif_library/time-pressure.md",
+              "score": 0.30832817184571937
+            },
+            {
+              "id": "entry-time-pressure-context-757",
+              "title": "母题：倒计时 (Time Pressure) / 情境或案例候选",
+              "source_path": "assets/motif_library/time-pressure.md",
+              "score": 0.3037246076655233
+            }
+          ]
+        }
+      ],
+      "strict_quote_coverage": {
+        "raw": {
+          "covered": 0,
+          "total": 5
+        },
+        "state": {
+          "covered": 3,
+          "total": 5
+        }
+      },
+      "citation_checks": {
+        "valid_quotes_accepted": 5,
+        "absent_quote_rejected": true,
+        "semantic_entailment_checked": false,
+        "known_by_annotated_facts": 5
+      }
+    },
+    {
+      "id": "organs-body-handover",
+      "book_id": "organs",
+      "title": "我的五脏六腑，皆为魔神",
+      "source_sha256": "64b3a011cd638de8a5fdf8981aa5a6f4019d293da318a20c62f15057360e4470",
+      "encoding": "utf-8",
+      "prefix_span": [
+        6835,
+        7460
+      ],
+      "next_span": [
+        7460,
+        7767
+      ],
+      "prefix_chars": 625,
+      "sealed_next_chars": 307,
+      "annotation_count": 4,
+      "rankings": [
+        {
+          "query_mode": "raw",
+          "method": "bm25",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-spilled-water-regret",
+              "title": "母题：覆水难收 (Wife's Regret / Spilled Water)",
+              "source_path": "assets/motif_library/spilled-water-regret.md",
+              "score": 25.707045097262096
+            },
+            {
+              "id": "entry-three-wishes",
+              "title": "母题：三个愿望 (Three Wishes)",
+              "source_path": "assets/motif_library/three-wishes.md",
+              "score": 23.09415723375316
+            },
+            {
+              "id": "entry-garment-hundred-birds",
+              "title": "母题：百鸟衣 (Garment of Hundred Birds)",
+              "source_path": "assets/motif_library/garment-hundred-birds.md",
+              "score": 21.345321135365523
+            }
+          ]
+        },
+        {
+          "query_mode": "raw",
+          "method": "bm25",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-royal-taboo-system-context-985",
+              "title": "母题：王室禁忌 (Royal Taboo System) / 情境或案例候选",
+              "source_path": "assets/motif_library/royal-taboo-system.md",
+              "score": 23.583647776480838
+            },
+            {
+              "id": "entry-royal-taboo-system-context-828",
+              "title": "母题：王室禁忌 (Royal Taboo System) / 情境或案例候选",
+              "source_path": "assets/motif_library/royal-taboo-system.md",
+              "score": 21.699281019151577
+            },
+            {
+              "id": "entry-sacred-king-cycle-context-909",
+              "title": "母题：神圣王循环 (Sacred King Cycle) / 情境或案例候选",
+              "source_path": "assets/motif_library/sacred-king-cycle.md",
+              "score": 20.514747705357404
+            }
+          ]
+        },
+        {
+          "query_mode": "raw",
+          "method": "vector",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-demon-treasure-cave",
+              "title": "母题：妖窟 (Demon's Treasure Cave)",
+              "source_path": "assets/motif_library/demon-treasure-cave.md",
+              "score": 0.24295131122588043
+            },
+            {
+              "id": "entry-swallow-gratitude",
+              "title": "母题：燕子报恩型（鸟的馈赠）",
+              "source_path": "assets/motif_library/swallow-gratitude.md",
+              "score": 0.23560678564062904
+            },
+            {
+              "id": "entry-pengzu-cannot-die",
+              "title": "母题：彭祖不死 (Pengzu Cannot Die)",
+              "source_path": "assets/motif_library/pengzu-cannot-die.md",
+              "score": 0.23107652040639587
+            }
+          ]
+        },
+        {
+          "query_mode": "raw",
+          "method": "vector",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-pengzu-cannot-die-context-520",
+              "title": "母题：彭祖不死 (Pengzu Cannot Die) / 情境或案例候选",
+              "source_path": "assets/motif_library/pengzu-cannot-die.md",
+              "score": 0.2567534784998209
+            },
+            {
+              "id": "entry-butterfly-lovers-context-651",
+              "title": "母题：蝴蝶恋人 (Butterfly Lovers) / 情境或案例候选",
+              "source_path": "assets/motif_library/butterfly-lovers.md",
+              "score": 0.2438407878277812
+            },
+            {
+              "id": "entry-butterfly-lovers-context-679",
+              "title": "母题：蝴蝶恋人 (Butterfly Lovers) / 情境或案例候选",
+              "source_path": "assets/motif_library/butterfly-lovers.md",
+              "score": 0.23787751057464307
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "bm25",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-han-peng-butterflies",
+              "title": "母题：韩朋化蝶 (Han Peng Butterflies)",
+              "source_path": "assets/motif_library/han-peng-butterflies.md",
+              "score": 17.22172027393821
+            },
+            {
+              "id": "entry-origin-of-death",
+              "title": "母题：死亡的起源 (Origin of Death)",
+              "source_path": "assets/motif_library/origin-of-death.md",
+              "score": 16.390641128667667
+            },
+            {
+              "id": "entry-sympathetic-magic-homeopathic",
+              "title": "母题：顺势巫术/模仿巫术 (Sympathetic Magic: Homeopathic/Imitative)",
+              "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+              "score": 16.303978263249952
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "bm25",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-ghost-mother-child-context-553",
+              "title": "母题：亡母护子 (Dead Mother Protects Child) / 情境或案例候选",
+              "source_path": "assets/motif_library/ghost-mother-child.md",
+              "score": 17.414400427750707
+            },
+            {
+              "id": "entry-otherworld-quest-context-675",
+              "title": "母题：彼岸追寻 (Otherworld Quest) / 情境或案例候选",
+              "source_path": "assets/motif_library/otherworld-quest.md",
+              "score": 16.90308400656573
+            },
+            {
+              "id": "entry-accidental-prophet-context-619",
+              "title": "母题：有言必中 (Accidental Prophet) / 情境或案例候选",
+              "source_path": "assets/motif_library/accidental-prophet.md",
+              "score": 15.680985849807723
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "vector",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-pengzu-cannot-die",
+              "title": "母题：彭祖不死 (Pengzu Cannot Die)",
+              "source_path": "assets/motif_library/pengzu-cannot-die.md",
+              "score": 0.304342266468184
+            },
+            {
+              "id": "entry-drought-demon-revived",
+              "title": "母题：旱魃 (Drought Demon)",
+              "source_path": "assets/motif_library/drought-demon-revived.md",
+              "score": 0.30250547231318653
+            },
+            {
+              "id": "entry-infinite-liar",
+              "title": "母题：谎话连篇 (Infinite Liar)",
+              "source_path": "assets/motif_library/infinite-liar.md",
+              "score": 0.29258467708507613
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "vector",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-pengzu-cannot-die-context-488",
+              "title": "母题：彭祖不死 (Pengzu Cannot Die) / 情境或案例候选",
+              "source_path": "assets/motif_library/pengzu-cannot-die.md",
+              "score": 0.328705379458854
+            },
+            {
+              "id": "entry-pengzu-cannot-die-context-520",
+              "title": "母题：彭祖不死 (Pengzu Cannot Die) / 情境或案例候选",
+              "source_path": "assets/motif_library/pengzu-cannot-die.md",
+              "score": 0.3208487775051708
+            },
+            {
+              "id": "entry-drought-demon-revived-context-573",
+              "title": "母题：旱魃 (Drought Demon) / 情境或案例候选",
+              "source_path": "assets/motif_library/drought-demon-revived.md",
+              "score": 0.31740442432457217
+            }
+          ]
+        }
+      ],
+      "strict_quote_coverage": {
+        "raw": {
+          "covered": 2,
+          "total": 4
+        },
+        "state": {
+          "covered": 1,
+          "total": 4
+        }
+      },
+      "citation_checks": {
+        "valid_quotes_accepted": 4,
+        "absent_quote_rejected": true,
+        "semantic_entailment_checked": false,
+        "known_by_annotated_facts": 4
+      }
+    },
+    {
+      "id": "organs-forensic-inference",
+      "book_id": "organs",
+      "title": "我的五脏六腑，皆为魔神",
+      "source_sha256": "64b3a011cd638de8a5fdf8981aa5a6f4019d293da318a20c62f15057360e4470",
+      "encoding": "utf-8",
+      "prefix_span": [
+        6835,
+        8081
+      ],
+      "next_span": [
+        8081,
+        8623
+      ],
+      "prefix_chars": 1246,
+      "sealed_next_chars": 542,
+      "annotation_count": 6,
+      "rankings": [
+        {
+          "query_mode": "raw",
+          "method": "bm25",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-body-of-god-becomes-world",
+              "title": "母题：神的身体化生万物 (Body of God Becomes the World)",
+              "source_path": "assets/motif_library/body-of-god-becomes-world.md",
+              "score": 35.665815853905855
+            },
+            {
+              "id": "entry-spilled-water-regret",
+              "title": "母题：覆水难收 (Wife's Regret / Spilled Water)",
+              "source_path": "assets/motif_library/spilled-water-regret.md",
+              "score": 35.117903921853205
+            },
+            {
+              "id": "entry-original-strange-bodies",
+              "title": "母题：人类原初的奇异身体 (Original Strange Bodies of Humans)",
+              "source_path": "assets/motif_library/original-strange-bodies.md",
+              "score": 34.82829613732608
+            }
+          ]
+        },
+        {
+          "query_mode": "raw",
+          "method": "bm25",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-invisibility-cap-context-590",
+              "title": "母题：隐身帽 (Invisibility Cap) / 情境或案例候选",
+              "source_path": "assets/motif_library/invisibility-cap.md",
+              "score": 28.24648660781558
+            },
+            {
+              "id": "entry-homeward-context-651",
+              "title": "母题：归乡 (Homeward) / 情境或案例候选",
+              "source_path": "assets/motif_library/homeward.md",
+              "score": 26.643694503784516
+            },
+            {
+              "id": "entry-feng-shui-ruined-context-613",
+              "title": "母题：风水遭破坏 (Feng Shui Ruined) / 情境或案例候选",
+              "source_path": "assets/motif_library/feng-shui-ruined.md",
+              "score": 23.496506331386623
+            }
+          ]
+        },
+        {
+          "query_mode": "raw",
+          "method": "vector",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-wrong_child_murdered",
+              "title": "母题：错误的孩子——被掉包的谋杀 (The Wrong Child Murdered)",
+              "source_path": "assets/motif_library/wrong_child_murdered.md",
+              "score": 0.3432575617702032
+            },
+            {
+              "id": "entry-judge-bao-ghost-case",
+              "title": "母题：包公断鬼案 (Judge Bao Ghost Case)",
+              "source_path": "assets/motif_library/judge-bao-ghost-case.md",
+              "score": 0.34324810140154105
+            },
+            {
+              "id": "entry-drought-demon-revived",
+              "title": "母题：旱魃 (Drought Demon)",
+              "source_path": "assets/motif_library/drought-demon-revived.md",
+              "score": 0.30836941315355965
+            }
+          ]
+        },
+        {
+          "query_mode": "raw",
+          "method": "vector",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-judge-bao-ghost-case-context-566",
+              "title": "母题：包公断鬼案 (Judge Bao Ghost Case) / 情境或案例候选",
+              "source_path": "assets/motif_library/judge-bao-ghost-case.md",
+              "score": 0.40030683113836757
+            },
+            {
+              "id": "entry-judge-bao-ghost-case-context-512",
+              "title": "母题：包公断鬼案 (Judge Bao Ghost Case) / 情境或案例候选",
+              "source_path": "assets/motif_library/judge-bao-ghost-case.md",
+              "score": 0.37834885850696626
+            },
+            {
+              "id": "entry-judge-bao-ghost-case-context-592",
+              "title": "母题：包公断鬼案 (Judge Bao Ghost Case) / 情境或案例候选",
+              "source_path": "assets/motif_library/judge-bao-ghost-case.md",
+              "score": 0.3779617631307511
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "bm25",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-identity-mask",
+              "title": "母题：身份面具 (Identity Mask)",
+              "source_path": "assets/motif_library/identity-mask.md",
+              "score": 27.304550684966216
+            },
+            {
+              "id": "entry-original-strange-bodies",
+              "title": "母题：人类原初的奇异身体 (Original Strange Bodies of Humans)",
+              "source_path": "assets/motif_library/original-strange-bodies.md",
+              "score": 22.20529057377604
+            },
+            {
+              "id": "entry-feng-shui-ruined",
+              "title": "母题：风水遭破坏 (Feng Shui Ruined)",
+              "source_path": "assets/motif_library/feng-shui-ruined.md",
+              "score": 21.09672279105493
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "bm25",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-identity-mask-context-802",
+              "title": "母题：身份面具 (Identity Mask) / 情境或案例候选",
+              "source_path": "assets/motif_library/identity-mask.md",
+              "score": 27.238330024895806
+            },
+            {
+              "id": "entry-butterfly-lovers-context-606",
+              "title": "母题：蝴蝶恋人 (Butterfly Lovers) / 情境或案例候选",
+              "source_path": "assets/motif_library/butterfly-lovers.md",
+              "score": 15.261562346020522
+            },
+            {
+              "id": "entry-muslim-treasure-seer-context-702",
+              "title": "母题：回回采宝 (Muslim's Treasure Recognition) / 情境或案例候选",
+              "source_path": "assets/motif_library/muslim-treasure-seer.md",
+              "score": 12.259621380943157
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "vector",
+          "kind": "pattern",
+          "hits": [
+            {
+              "id": "entry-judge-bao-ghost-case",
+              "title": "母题：包公断鬼案 (Judge Bao Ghost Case)",
+              "source_path": "assets/motif_library/judge-bao-ghost-case.md",
+              "score": 0.3507256049335861
+            },
+            {
+              "id": "entry-sympathetic-magic-homeopathic",
+              "title": "母题：顺势巫术/模仿巫术 (Sympathetic Magic: Homeopathic/Imitative)",
+              "source_path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+              "score": 0.3482482276029724
+            },
+            {
+              "id": "entry-fate-of-three-robbers",
+              "title": "母题：命运不可逃 (Fate of Three Robbers)",
+              "source_path": "assets/motif_library/fate-of-three-robbers.md",
+              "score": 0.324469557072723
+            }
+          ]
+        },
+        {
+          "query_mode": "state",
+          "method": "vector",
+          "kind": "situation",
+          "hits": [
+            {
+              "id": "entry-judge-bao-ghost-case-context-566",
+              "title": "母题：包公断鬼案 (Judge Bao Ghost Case) / 情境或案例候选",
+              "source_path": "assets/motif_library/judge-bao-ghost-case.md",
+              "score": 0.3680398189668603
+            },
+            {
+              "id": "entry-judge-bao-ghost-case-context-592",
+              "title": "母题：包公断鬼案 (Judge Bao Ghost Case) / 情境或案例候选",
+              "source_path": "assets/motif_library/judge-bao-ghost-case.md",
+              "score": 0.3665403864741198
+            },
+            {
+              "id": "entry-judge-bao-ghost-case-context-512",
+              "title": "母题：包公断鬼案 (Judge Bao Ghost Case) / 情境或案例候选",
+              "source_path": "assets/motif_library/judge-bao-ghost-case.md",
+              "score": 0.35244035372039495
+            }
+          ]
+        }
+      ],
+      "strict_quote_coverage": {
+        "raw": {
+          "covered": 2,
+          "total": 6
+        },
+        "state": {
+          "covered": 2,
+          "total": 6
+        }
+      },
+      "citation_checks": {
+        "valid_quotes_accepted": 6,
+        "absent_quote_rejected": true,
+        "semantic_entailment_checked": false,
+        "known_by_annotated_facts": 6
+      }
+    }
+  ],
+  "experiment_code_sha256": {
+    "scripts/continuity_experiment.py": "256291d17dc2c4df9c3497c35144e576107fa9118e2fe3c8e028badb62755b6c",
+    "scripts/retrieval_pilot_embed.mjs": "df19db7b08151dab49efc2c5f7df09d99cbdfc3e5d488aa7159c3b00c753f80c",
+    "experiments/continuity-audit/audit_runtime.py": "67d12b1889aec06367cf76490fc47fcbbed34d9e17b961a3ac004ac9aa731f94"
+  }
+}

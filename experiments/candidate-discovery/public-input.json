@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "case_id": "public-01",
+      "snapshot": {
+        "schema_version": 1,
+        "project_id": "public-01",
+        "pov_character": "林澈",
+        "cutoff_offset": 85,
+        "text": "林澈站在门口。许禾把一封封好的信交给他，说：“这是今晚进门要用的暗号，你到地方前记住。”林澈接过信，放进外套口袋。他还没有拆开信封，也没有看过信里的字。许禾站在一旁等他。",
+        "source_sha256": "1c12dd8d31f76fabfcea65ddf39d09ebebfda74181cae78c74e7cf1c397909c8",
+        "snapshot_sha256": "cb1f0dd2252857524c53cb981f9c5b88176baa5fb809c6f4468bdacb80464652"
+      }
+    },
+    {
+      "case_id": "public-02",
+      "snapshot": {
+        "schema_version": 1,
+        "project_id": "public-02",
+        "pov_character": "林澈",
+        "cutoff_offset": 157,
+        "text": "林澈站在门口。许禾把一封封好的信交给他，说：“这是今晚进门要用的暗号，你到地方前记住。”林澈接过信，放进外套口袋。他还没有拆开信封，也没有看过信里的字。许禾站在一旁等他。\n林澈随即取出信，拆开封口。纸上写着：“今晚暗号：松果。”他逐字读完，对许禾说：“暗号是松果，我记住了。”许禾点了点头。两人仍在门口，尚未出发。",
+        "source_sha256": "40e2dcc76f45faf4c934165f5e10e10483974cdc7b3f55578431834612e99e17",
+        "snapshot_sha256": "1de314ae0401371057dc6bed616cadbeacf08cec74a2fce633d3d971d03c9b78"
+      }
+    }
+  ]
+}

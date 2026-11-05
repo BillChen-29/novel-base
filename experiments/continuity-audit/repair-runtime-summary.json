@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-25",
+  "current_contract": true,
+  "method": "Real local functions and CLIs with isolated synthetic fixtures. No LLM/network calls. Unmet requirements remain failing assertions, no expectedFailure.",
+  "limitations": [
+    "边界审计不等于真实小说续写质量评价。",
+    "原型语义验证与自动知情抽取是尚未具备的能力；报告保留其声明范围。",
+    "当前合同显式传入截点/POV，阳性人物状态标注其有效章节；没有改变否定事实或放宽断言。"
+  ],
+  "source_sha256": {
+    "plot_rag_retriever.py": "d0b34425b99e9be5fe6621c4c09e967cb6f5968608fe5cfdad5e97e1c399977b",
+    "story_graph_builder.py": "de4a63acc6c9471eff54826b6966320d67c2f4914f181257dc70db154f18b527",
+    "narrative_prototype.py": "33eb998766d05bdee22b1da896ac56885368f5dba9321ea977a337da596fa60a",
+    "novel_flow_executor.py": "d2fd8ea84d92a24abfd5bc795dbe0596d0dc5ae2311647e01e9e9c1e5ef28daf",
+    "beat_sheet_generator.py": "2a9aeea97cbaf031ed128ceb503def7a37e54cda61c86cc65d587744cca14a13"
+  },
+  "counts": {
+    "pass": 18,
+    "fail": 2,
+    "error": 0
+  },
+  "checks": [
+    {
+      "id": "test_01_same_named_characters_are_isolated_when_project_indexes_match",
+      "requirement": "正常调用时两个项目的同名角色和正文独立。",
+      "status": "pass"
+    },
+    {
+      "id": "test_02_foreign_index_is_rejected_for_another_project",
+      "requirement": "错误传入另一项目索引时应拒绝，不读取外部小说路径。",
+      "status": "pass"
+    },
+    {
+      "id": "test_03_retrieval_can_enforce_a_past_continuation_cutoff",
+      "requirement": "续写第 2 章时，历史上下文不应包含第 3 章才揭晓的答案。",
+      "status": "pass"
+    },
+    {
+      "id": "test_04_auto_build_refreshes_modified_text",
+      "requirement": "常规修改后显式 auto-build 应更新缓存和正文。",
+      "status": "pass"
+    },
+    {
+      "id": "test_05_auto_build_removes_deleted_chapters",
+      "requirement": "删除章节并重建后，正文和元数据都应消失。",
+      "status": "pass"
+    },
+    {
+      "id": "test_06_default_query_does_not_serve_modified_cached_text",
+      "requirement": "默认 query 复查内容变化，不能继续返回已改写原文。",
+      "status": "pass"
+    },
+    {
+      "id": "test_07_default_query_does_not_serve_deleted_cached_text",
+      "requirement": "默认 query 不能继续返回已删除章节的缓存引文。",
+      "status": "pass"
+    },
+    {
+      "id": "test_08_auto_build_detects_content_change_with_preserved_mtime",
+      "requirement": "保留修改时间的替换也应触发内容校验。",
+      "status": "pass"
+    },
+    {
+      "id": "test_09_graph_events_obey_chapter_cutoff",
+      "requirement": "图谱事件已实现章节号过滤。",
+      "status": "pass"
+    },
+    {
+      "id": "test_10_graph_foreshadows_obey_chapter_cutoff",
+      "requirement": "未来才埋下的伏笔不能进入截点上下文。",
+      "status": "pass"
+    },
+    {
+      "id": "test_11_graph_latest_character_state_does_not_leak_backwards",
+      "requirement": "回到旧截点时不能使用后续章节更新的人物地点。",
+      "status": "pass"
+    },
+    {
+      "id": "test_12_graph_context_supports_pov_knowledge_filtering",
+      "requirement": "图谱上下文需区分视角人物未知的秘密。",
+      "status": "pass"
+    },
+    {
+      "id": "test_13_graph_context_preserves_relations_and_evidence",
+      "requirement": "关系边及事件证据应进入给写作器的上下文。",
+      "status": "pass"
+    },
+    {
+      "id": "test_14_graph_prompt_is_collected_by_main_flow",
+      "requirement": "主链写前约束确实调用图谱上下文。",
+      "status": "pass"
+    },
+    {
+      "id": "test_15_prototype_rejects_nonexistent_quote",
+      "requirement": "不存在于引用场景的原文引文会被拒绝。",
+      "status": "pass"
+    },
+    {
+      "id": "test_16_prototype_rejects_semantically_opposite_fact",
+      "requirement": "正确定位的引文不能为语义相反的事实背书。",
+      "status": "fail"
+    },
+    {
+      "id": "test_17_prototype_respects_correctly_labelled_pov_knowledge",
+      "requirement": "已正确标注的他人秘密不进入视角写作包。",
+      "status": "pass"
+    },
+    {
+      "id": "test_18_prototype_verifies_knowledge_labels_against_text",
+      "requirement": "错误的 known_by 标签不能覆盖明确的原文知识边界。",
+      "status": "fail"
+    },
+    {
+      "id": "test_19_beat_expansion_uses_previous_ending",
+      "requirement": "上章结尾应实际进入 Beat 扩写提示词。",
+      "status": "pass"
+    },
+    {
+      "id": "test_20_beat_pipeline_preserves_retrieved_and_graph_context",
+      "requirement": "主链送入的历史及图谱上下文应传到扩写提示词。",
+      "status": "pass"
+    }
+  ],
+  "regression_tests": {
+    "unittest_discovery_passed": 268,
+    "legacy_flow_passed": 10,
+    "legacy_graph_functions_passed": 7
+  },
+  "assets": {
+    "file_count": 271,
+    "manifest_hash_mismatches": 0
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "method": "bm25_source_retrieval_with_imported_ai_queries_and_independent_reviews",
+  "assessment_unit": "source_grounded_local_operation; not complete motif recognition or literary quality",
+  "case_count": 6,
+  "scope": "union_of_top_3_only; no exhaustive recall or human gold labels",
+  "cases": [
+    {
+      "case_id": "real-01",
+      "methods": {
+        "raw_prefix": {
+          "retrieved": 3,
+          "eligible": 2,
+          "paths": [
+            "assets/technique_library/interior-monologue.md",
+            "assets/technique_library/rhythm-variation.md",
+            "assets/pacing/chapter-hooks.md"
+          ]
+        },
+        "abstract_queries": {
+          "retrieved": 3,
+          "eligible": 0,
+          "paths": [
+            "assets/character_archetypes/trickster.md",
+            "assets/motif_library/road-of-trials.md",
+            "assets/motif_library/truth-pursuit.md"
+          ]
+        },
+        "fused": {
+          "retrieved": 3,
+          "eligible": 1,
+          "paths": [
+            "assets/technique_library/interior-monologue.md",
+            "assets/character_archetypes/trickster.md",
+            "assets/character_archetypes/moral-grey-survivor.md"
+          ]
+        }
+      },
+      "decisions": [
+        {
+          "source_path": "assets/character_archetypes/moral-grey-survivor.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/character_archetypes/trickster.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/motif_library/truth-pursuit.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/pacing/chapter-hooks.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/technique_library/interior-monologue.md",
+          "status": "eligible"
+        },
+        {
+          "source_path": "assets/technique_library/rhythm-variation.md",
+          "status": "eligible"
+        }
+      ]
+    },
+    {
+      "case_id": "real-02",
+      "methods": {
+        "raw_prefix": {
+          "retrieved": 3,
+          "eligible": 3,
+          "paths": [
+            "assets/technique_library/rhythm-variation.md",
+            "assets/style_library/urban-suspense-fanqie.md",
+            "assets/pacing/chapter-hooks.md"
+          ]
+        },
+        "abstract_queries": {
+          "retrieved": 3,
+          "eligible": 1,
+          "paths": [
+            "assets/character_archetypes/trickster.md",
+            "assets/pacing/chapter-hooks.md",
+            "assets/motif_library/time-pressure.md"
+          ]
+        },
+        "fused": {
+          "retrieved": 3,
+          "eligible": 2,
+          "paths": [
+            "assets/pacing/chapter-hooks.md",
+            "assets/technique_library/dialogue-subtext.md",
+            "assets/character_archetypes/trickster.md"
+          ]
+        }
+      },
+      "decisions": [
+        {
+          "source_path": "assets/character_archetypes/trickster.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/motif_library/time-pressure.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/pacing/chapter-hooks.md",
+          "status": "eligible"
+        },
+        {
+          "source_path": "assets/style_library/urban-suspense-fanqie.md",
+          "status": "eligible"
+        },
+        {
+          "source_path": "assets/technique_library/dialogue-subtext.md",
+          "status": "eligible"
+        },
+        {
+          "source_path": "assets/technique_library/rhythm-variation.md",
+          "status": "eligible"
+        }
+      ]
+    },
+    {
+      "case_id": "real-03",
+      "methods": {
+        "raw_prefix": {
+          "retrieved": 3,
+          "eligible": 2,
+          "paths": [
+            "assets/technique_library/dialogue-subtext.md",
+            "assets/character_archetypes/moral-grey-survivor.md",
+            "assets/technique_library/rhythm-variation.md"
+          ]
+        },
+        "abstract_queries": {
+          "retrieved": 3,
+          "eligible": 0,
+          "paths": [
+            "assets/character_archetypes/moral-grey-survivor.md",
+            "assets/technique_library/multi-perspective-narration.md",
+            "assets/motif_library/story-as-shield.md"
+          ]
+        },
+        "fused": {
+          "retrieved": 3,
+          "eligible": 1,
+          "paths": [
+            "assets/character_archetypes/moral-grey-survivor.md",
+            "assets/technique_library/dialogue-subtext.md",
+            "assets/pacing/pacing-curve.md"
+          ]
+        }
+      },
+      "decisions": [
+        {
+          "source_path": "assets/character_archetypes/moral-grey-survivor.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "status": "blocked"
+        },
+        {
+          "source_path": "assets/pacing/pacing-curve.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/technique_library/dialogue-subtext.md",
+          "status": "eligible"
+        },
+        {
+          "source_path": "assets/technique_library/multi-perspective-narration.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/technique_library/rhythm-variation.md",
+          "status": "eligible"
+        }
+      ]
+    },
+    {
+      "case_id": "real-04",
+      "methods": {
+        "raw_prefix": {
+          "retrieved": 3,
+          "eligible": 3,
+          "paths": [
+            "assets/technique_library/dialogue-subtext.md",
+            "assets/pacing/chapter-hooks.md",
+            "assets/technique_library/rhythm-variation.md"
+          ]
+        },
+        "abstract_queries": {
+          "retrieved": 3,
+          "eligible": 1,
+          "paths": [
+            "assets/character_archetypes/trickster.md",
+            "assets/motif_library/truth-pursuit.md",
+            "assets/character_archetypes/moral-grey-survivor.md"
+          ]
+        },
+        "fused": {
+          "retrieved": 3,
+          "eligible": 2,
+          "paths": [
+            "assets/pacing/chapter-hooks.md",
+            "assets/character_archetypes/trickster.md",
+            "assets/technique_library/dialogue-subtext.md"
+          ]
+        }
+      },
+      "decisions": [
+        {
+          "source_path": "assets/character_archetypes/moral-grey-survivor.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/character_archetypes/trickster.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/motif_library/truth-pursuit.md",
+          "status": "eligible"
+        },
+        {
+          "source_path": "assets/pacing/chapter-hooks.md",
+          "status": "eligible"
+        },
+        {
+          "source_path": "assets/technique_library/dialogue-subtext.md",
+          "status": "eligible"
+        },
+        {
+          "source_path": "assets/technique_library/rhythm-variation.md",
+          "status": "eligible"
+        }
+      ]
+    },
+    {
+      "case_id": "public-01",
+      "methods": {
+        "raw_prefix": {
+          "retrieved": 3,
+          "eligible": 0,
+          "paths": [
+            "assets/pacing/chapter-hooks.md",
+            "assets/character_archetypes/lin-chong.md",
+            "assets/pacing/pacing-curve.md"
+          ]
+        },
+        "abstract_queries": {
+          "retrieved": 3,
+          "eligible": 1,
+          "paths": [
+            "assets/technique_library/_scenarios/revelation.md",
+            "assets/style_library/urban-suspense-fanqie.md",
+            "assets/motif_library/truth-pursuit.md"
+          ]
+        },
+        "fused": {
+          "retrieved": 3,
+          "eligible": 1,
+          "paths": [
+            "assets/style_library/urban-suspense-fanqie.md",
+            "assets/character_archetypes/lin-chong.md",
+            "assets/pacing/chapter-hooks.md"
+          ]
+        }
+      },
+      "decisions": [
+        {
+          "source_path": "assets/character_archetypes/lin-chong.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/motif_library/truth-pursuit.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/pacing/chapter-hooks.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/pacing/pacing-curve.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/style_library/urban-suspense-fanqie.md",
+          "status": "eligible"
+        },
+        {
+          "source_path": "assets/technique_library/_scenarios/revelation.md",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "case_id": "public-02",
+      "methods": {
+        "raw_prefix": {
+          "retrieved": 3,
+          "eligible": 0,
+          "paths": [
+            "assets/pacing/chapter-hooks.md",
+            "assets/pacing/pacing-curve.md",
+            "assets/technique_library/dialogue-subtext.md"
+          ]
+        },
+        "abstract_queries": {
+          "retrieved": 3,
+          "eligible": 0,
+          "paths": [
+            "assets/character_archetypes/moral-grey-survivor.md",
+            "assets/motif_library/weaving_story.md",
+            "assets/technique_library/_scenarios/dialogue-tension.md"
+          ]
+        },
+        "fused": {
+          "retrieved": 3,
+          "eligible": 1,
+          "paths": [
+            "assets/pacing/chapter-hooks.md",
+            "assets/technique_library/rhythm-variation.md",
+            "assets/technique_library/dialogue-subtext.md"
+          ]
+        }
+      },
+      "decisions": [
+        {
+          "source_path": "assets/character_archetypes/moral-grey-survivor.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/motif_library/weaving_story.md",
+          "status": "blocked"
+        },
+        {
+          "source_path": "assets/pacing/chapter-hooks.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/pacing/pacing-curve.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/technique_library/dialogue-subtext.md",
+          "status": "needs_evidence"
+        },
+        {
+          "source_path": "assets/technique_library/rhythm-variation.md",
+          "status": "eligible"
+        }
+      ]
+    }
+  ]
+}

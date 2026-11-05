@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "selection": "union_of_preexisting_retrieval_and_motif_experiment_sources_before_new_query_analysis",
+  "documents": [
+    {
+      "id": "assets/character_archetypes/lin-chong.md",
+      "path": "assets/character_archetypes/lin-chong.md",
+      "title": "林冲式 — 中产阶级的隐忍者",
+      "layer": "creative",
+      "kind": "character",
+      "eligible": true,
+      "sha256": "501ca64ab0b3240d87b7c83161c4834f743d2486336b3a47fa768f65fc01b05b"
+    },
+    {
+      "id": "assets/character_archetypes/loyal-companion.md",
+      "path": "assets/character_archetypes/loyal-companion.md",
+      "title": "角色原型：忠犬型伙伴 (The Loyal Companion)",
+      "layer": "creative",
+      "kind": "character",
+      "eligible": true,
+      "sha256": "3d19b934b22d0d464d338c3a12ba6fa54d31a9ffc6ddd02993d77e782166b31c"
+    },
+    {
+      "id": "assets/character_archetypes/moral-grey-survivor.md",
+      "path": "assets/character_archetypes/moral-grey-survivor.md",
+      "title": "角色原型：道德灵活的求生者 (The Morally Grey Survivor)",
+      "layer": "creative",
+      "kind": "character",
+      "eligible": true,
+      "sha256": "8fa2e18e0615f9aafe4f94f00f2675f7f396c63778507743ca6e19080ab48ea5"
+    },
+    {
+      "id": "assets/character_archetypes/trickster.md",
+      "path": "assets/character_archetypes/trickster.md",
+      "title": "恶作剧者原型",
+      "layer": "creative",
+      "kind": "character",
+      "eligible": true,
+      "sha256": "933114b3f0cb3ed41caf5363074e523138e6d37e907acdc06117961be8bcfc48"
+    },
+    {
+      "id": "assets/motif_library/false-accusation.md",
+      "path": "assets/motif_library/false-accusation.md",
+      "title": "母题：诬陷求生 (False Accusation)",
+      "layer": "creative",
+      "kind": "motif",
+      "eligible": true,
+      "sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+    },
+    {
+      "id": "assets/motif_library/forbidden-knowledge.md",
+      "path": "assets/motif_library/forbidden-knowledge.md",
+      "title": "母题：禁忌之禁 (Forbidden Knowledge)",
+      "layer": "creative",
+      "kind": "motif",
+      "eligible": true,
+      "sha256": "158234c820623920364a97f952e91bd9b42e631de27e0fd0f3a45f6ca9371c14"
+    },
+    {
+      "id": "assets/motif_library/identity-mask.md",
+      "path": "assets/motif_library/identity-mask.md",
+      "title": "母题：身份面具 (Identity Mask)",
+      "layer": "creative",
+      "kind": "motif",
+      "eligible": true,
+      "sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+    },
+    {
+      "id": "assets/motif_library/prophecy-defied.md",
+      "path": "assets/motif_library/prophecy-defied.md",
+      "title": "母题：预言难逃 (Prophecy Defied)",
+      "layer": "creative",
+      "kind": "motif",
+      "eligible": true,
+      "sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+    },
+    {
+      "id": "assets/motif_library/road-of-trials.md",
+      "path": "assets/motif_library/road-of-trials.md",
+      "title": "母题：试炼之路 (Road of Trials)",
+      "layer": "creative",
+      "kind": "motif",
+      "eligible": true,
+      "sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+    },
+    {
+      "id": "assets/motif_library/story-as-shield.md",
+      "path": "assets/motif_library/story-as-shield.md",
+      "title": "母题：故事救命 (Story as Shield)",
+      "layer": "creative",
+      "kind": "motif",
+      "eligible": true,
+      "sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+    },
+    {
+      "id": "assets/motif_library/sympathetic-magic-homeopathic.md",
+      "path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+      "title": "母题：顺势巫术/模仿巫术 (Sympathetic Magic: Homeopathic/Imitative)",
+      "layer": "creative",
+      "kind": "motif",
+      "eligible": true,
+      "sha256": "269c5077231f4a4362a0de0f1bd0095ec074c9b298a7ba82a60c6edc591f933c"
+    },
+    {
+      "id": "assets/motif_library/time-pressure.md",
+      "path": "assets/motif_library/time-pressure.md",
+      "title": "母题：倒计时 (Time Pressure)",
+      "layer": "creative",
+      "kind": "motif",
+      "eligible": true,
+      "sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+    },
+    {
+      "id": "assets/motif_library/truth-pursuit.md",
+      "path": "assets/motif_library/truth-pursuit.md",
+      "title": "母题：真相追寻 (Truth Pursuit)",
+      "layer": "creative",
+      "kind": "motif",
+      "eligible": true,
+      "sha256": "b0900e167687867d1408fc2e57d8ef2a0cc92c9d25209621084a198da1b2ad42"
+    },
+    {
+      "id": "assets/motif_library/weaving_story.md",
+      "path": "assets/motif_library/weaving_story.md",
+      "title": "母题：织物传书——无声的控诉 (Weaving the Story)",
+      "layer": "creative",
+      "kind": "motif",
+      "eligible": true,
+      "sha256": "8ac8319cd6c5bbe58f9c6ee60a3b2dae12fe5127e74ff6cf58d3601535846e1d"
+    },
+    {
+      "id": "assets/pacing/chapter-hooks.md",
+      "path": "assets/pacing/chapter-hooks.md",
+      "title": "章末钩子四种类型",
+      "layer": "recommendation",
+      "kind": "pacing",
+      "eligible": true,
+      "sha256": "378acab2baaa33f708506176400ccf60ea4b616cd3ab3ac4b03ca90a41e28de5"
+    },
+    {
+      "id": "assets/pacing/pacing-curve.md",
+      "path": "assets/pacing/pacing-curve.md",
+      "title": "节奏曲线模板",
+      "layer": "recommendation",
+      "kind": "pacing",
+      "eligible": true,
+      "sha256": "36a894efcc984a75a06747949f761469ae03705a18333674a4f2b56b418c2683"
+    },
+    {
+      "id": "assets/style_library/urban-suspense-fanqie.md",
+      "path": "assets/style_library/urban-suspense-fanqie.md",
+      "title": "番茄都市悬疑风格模板 (Urban Suspense - Fanqie Style)",
+      "layer": "creative",
+      "kind": "style",
+      "eligible": true,
+      "sha256": "c47fb29017299107354fb0e418faea456f5e1cdd2791c87f528b770e2faf142c"
+    },
+    {
+      "id": "assets/technique_library/_scenarios/dialogue-tension.md",
+      "path": "assets/technique_library/_scenarios/dialogue-tension.md",
+      "title": "场景：对话张力（Dialogue Tension）",
+      "layer": "recommendation",
+      "kind": "scenario",
+      "eligible": true,
+      "sha256": "0931562146a6abeab8296ce22382e8c0f08c09c325b88563b62a2e016f4d766a"
+    },
+    {
+      "id": "assets/technique_library/_scenarios/revelation.md",
+      "path": "assets/technique_library/_scenarios/revelation.md",
+      "title": "场景：揭秘/反转（Revelation）",
+      "layer": "recommendation",
+      "kind": "scenario",
+      "eligible": true,
+      "sha256": "57d9772aed5dde56ac5b9f99c521badf0551a84a55fd284242d15797c69b6455"
+    },
+    {
+      "id": "assets/technique_library/dialogue-subtext.md",
+      "path": "assets/technique_library/dialogue-subtext.md",
+      "title": "对话潜台词技法",
+      "layer": "recommendation",
+      "kind": "technique",
+      "eligible": true,
+      "sha256": "76f103bbe0a74cd004a4aa5b3b90e581f6f7833fb3f05d5f68b5d3751c983fa2"
+    },
+    {
+      "id": "assets/technique_library/horror-atmosphere.md",
+      "path": "assets/technique_library/horror-atmosphere.md",
+      "title": "技法：恐怖氛围营造",
+      "layer": "recommendation",
+      "kind": "technique",
+      "eligible": true,
+      "sha256": "fb49389481012df0c0c5306138b79d9f37ba7ea877ecd1a0e98f63e012d4f010"
+    },
+    {
+      "id": "assets/technique_library/interior-monologue.md",
+      "path": "assets/technique_library/interior-monologue.md",
+      "title": "技法：意识流与内心独白",
+      "layer": "recommendation",
+      "kind": "technique",
+      "eligible": true,
+      "sha256": "f914c573f3d1f1552ee38871cdcb6d91a98af75d98d9607e9cc6591237a8702b"
+    },
+    {
+      "id": "assets/technique_library/multi-perspective-narration.md",
+      "path": "assets/technique_library/multi-perspective-narration.md",
+      "title": "技法：多角度叙述",
+      "layer": "recommendation",
+      "kind": "technique",
+      "eligible": true,
+      "sha256": "71de212d2bfe891085458321c9b9ae6fb324b0db6aaabd9932229cac89840132"
+    },
+    {
+      "id": "assets/technique_library/rhythm-variation.md",
+      "path": "assets/technique_library/rhythm-variation.md",
+      "title": "节奏变化技巧",
+      "layer": "recommendation",
+      "kind": "technique",
+      "eligible": true,
+      "sha256": "dff3ffe8498df146fc41932c6f91b21934fb5311060d62fa6509c20c0c95a165"
+    },
+    {
+      "id": "assets/technique_library/suspense-laddering.md",
+      "path": "assets/technique_library/suspense-laddering.md",
+      "title": "技法：悬念的阶梯式设置",
+      "layer": "recommendation",
+      "kind": "technique",
+      "eligible": true,
+      "sha256": "8c5473fda82814eaa4f7b75b5e4ef6462e6c6d7c0c204d1a409ab90546182ccc"
+    },
+    {
+      "id": "assets/technique_library/twist-ending.md",
+      "path": "assets/technique_library/twist-ending.md",
+      "title": "技法：欧·亨利式反转结尾",
+      "layer": "recommendation",
+      "kind": "technique",
+      "eligible": true,
+      "sha256": "65b036ef8f2b455be87f80a507befaada1e17aa6af134013d0abd96547f8dc62"
+    }
+  ]
+}

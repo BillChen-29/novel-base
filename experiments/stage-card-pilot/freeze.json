@@ -1,0 +1,10 @@
+{
+  "catalog_file_sha256": "2713b2114234fd5d420a5b3a50b64ad9a27fd42f97a2b3c379486aa79234ebc1",
+  "frozen_before_new_cases": true,
+  "card_count": 4,
+  "condition_count": 16,
+  "variant_count": 5,
+  "note": "来源资格不同：1母题阶段、1情境、1局部技巧、1新增通用流程；不可合并计为母题命中。",
+  "plan_sha256": "a0b219f752ed5d3c0c9b02e28597345fa63c7f22d95592aa0ae338bf9e19ba99",
+  "public_fixtures_sha256": "365d54d3a9eeae2584701edec558bf7eb85b7ba94cc2d85f56c1d2d5231bf4f6"
+}

@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "status": "experimental_operationalization",
+  "candidate_origin": "four_source_or_design_labeled_cards_frozen_before_new_cases",
+  "motifs": [
+    {
+      "id": "dialogue_active",
+      "title": "对话情境：既有分歧与当前交涉",
+      "knowledge_kind": "situation",
+      "basis": "source_structure_plus_authored_current_state_gates",
+      "source": {
+        "path": "assets/technique_library/_scenarios/dialogue-tension.md",
+        "sha256": "0931562146a6abeab8296ce22382e8c0f08c09c325b88563b62a2e016f4d766a",
+        "evidence": [
+          {
+            "start": 38,
+            "end": 62,
+            "quote": "通过对话中的潜台词、信息博弈和情感冲突制造张力。"
+          },
+          {
+            "start": 544,
+            "end": 569,
+            "quote": "2. 每句话要有目的：展示性格/传递信息/推动剧情"
+          }
+        ]
+      },
+      "roles": {
+        "actor": "character",
+        "focus": "object"
+      },
+      "conditions": [
+        {
+          "id": "conflict_observed",
+          "kind": "world_state",
+          "claim_template": "{actor}已经参与围绕同一事项的对话，对话中存在具体的立场分歧、信息博弈或表态与意图的冲突。（当前焦点：{focus}）"
+        },
+        {
+          "id": "conversation_active",
+          "kind": "world_state",
+          "claim_template": "{actor}与对话对象此刻仍在进行这一交涉，对方仍可当场回应。（当前焦点：{focus}）"
+        },
+        {
+          "id": "dispute_open",
+          "kind": "world_state",
+          "claim_template": "{actor}知道该争议此刻仍未解决，双方尚未达成结束此事的处理结果。（当前焦点：{focus}）"
+        }
+      ],
+      "entry_conditions": [],
+      "stage_mode": "alternatives",
+      "stages": [
+        {
+          "id": "observed",
+          "title": "前文已有具体对话冲突",
+          "requires": [
+            "conflict_observed"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "dialogue_active_respond",
+          "title": "承接尚在进行的分歧",
+          "from_stage": "observed",
+          "requires": [
+            "conversation_active",
+            "dispute_open"
+          ],
+          "proposal": "选择前文已经表达过的一项诉求，以回应、追问或行动表态推进交涉；保持既有议题，不替对方预定态度与结果。"
+        }
+      ],
+      "operationalization_note": "源文支持对话中的关系张力；当前交涉、尚未解决两项是本轮设计的承接门槛。过去发生过冲突不能单独触发继续争执。",
+      "retrieval_text": "对话 情感冲突 立场分歧 潜台词 交涉 双方仍在场 尚未解决 回应 追问 诉求"
+    },
+    {
+      "id": "truth_trigger",
+      "title": "母题阶段：发现疑点并决定追查",
+      "knowledge_kind": "motif",
+      "basis": "source_defined_stage_plus_authored_current_state_gates",
+      "source": {
+        "path": "assets/motif_library/truth-pursuit.md",
+        "sha256": "b0900e167687867d1408fc2e57d8ef2a0cc92c9d25209621084a198da1b2ad42",
+        "evidence": [
+          {
+            "start": 90,
+            "end": 128,
+            "quote": "1. **触发**：主角发现一个疑点（失踪/死亡/异常事件），决定追查到底。"
+          }
+        ]
+      },
+      "roles": {
+        "actor": "character",
+        "focus": "object"
+      },
+      "conditions": [
+        {
+          "id": "anomaly",
+          "kind": "world_state",
+          "claim_template": "{actor}已经发现一个具体的死亡、失踪或异常疑点。（当前焦点：{focus}）"
+        },
+        {
+          "id": "commitment",
+          "kind": "world_state",
+          "claim_template": "{actor}已经明确决定持续追查这个疑点直至弄清，而不仅是暂时查看或履行一次检查。（当前焦点：{focus}）"
+        },
+        {
+          "id": "question_open",
+          "kind": "world_state",
+          "claim_template": "{actor}知道这个疑点目前仍未查明。（当前焦点：{focus}）"
+        },
+        {
+          "id": "pursuit_active",
+          "kind": "world_state",
+          "claim_template": "{actor}当前仍在推进这一追查，没有已经结束或放弃该行动。（当前焦点：{focus}）"
+        }
+      ],
+      "entry_conditions": [],
+      "stage_mode": "alternatives",
+      "stages": [
+        {
+          "id": "trigger",
+          "title": "疑点与持续追查决定均有依据",
+          "requires": [
+            "anomaly",
+            "commitment"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "truth_trigger_continue",
+          "title": "承接追查决定",
+          "from_stage": "trigger",
+          "requires": [
+            "question_open",
+            "pursuit_active"
+          ],
+          "proposal": "沿已有疑点选择一个当前可执行的调查步骤，保留未知结果；不得把潜在威胁、阴谋或未来结局写成已发生事实。"
+        }
+      ],
+      "operationalization_note": "只对应原文触发阶段，不代表全母题成立。异常与持续追查决定分别审阅，未见决定不能视为默认承诺。",
+      "retrieval_text": "异常 疑点 失踪 死亡 决定追查到底 承诺 弄清真相 持续调查 尚未查明"
+    },
+    {
+      "id": "carrier_process",
+      "title": "通用流程：收到载体、读取与使用",
+      "knowledge_kind": "situation",
+      "basis": "authored_generic_process_inspired_by_source_not_motif_match",
+      "source": {
+        "path": "assets/motif_library/weaving_story.md",
+        "sha256": "8ac8319cd6c5bbe58f9c6ee60a3b2dae12fe5127e74ff6cf58d3601535846e1d",
+        "evidence": [
+          {
+            "start": 223,
+            "end": 265,
+            "quote": "4. **秘密传递**：通过某个信任的人（仆人、鸟、风）将织物传送给能够帮助她的人。"
+          },
+          {
+            "start": 266,
+            "end": 301,
+            "quote": "5. **真相大白**：接收者看到织物上的图案，理解了真相，开始行动。"
+          }
+        ]
+      },
+      "roles": {
+        "actor": "character",
+        "focus": "object"
+      },
+      "conditions": [
+        {
+          "id": "held",
+          "kind": "world_state",
+          "claim_template": "{actor}目前持有或能够直接访问该信息载体。（当前焦点：{focus}）"
+        },
+        {
+          "id": "unread",
+          "kind": "world_state",
+          "claim_template": "{actor}此刻尚未读取、理解该载体的具体内容，并知道自己还没有读取。（当前焦点：{focus}）"
+        },
+        {
+          "id": "understood",
+          "kind": "world_state",
+          "claim_template": "{actor}已经读取并理解该载体的具体内容。（当前焦点：{focus}）"
+        },
+        {
+          "id": "purpose_known",
+          "kind": "world_state",
+          "claim_template": "{actor}已经知道这份内容在当前任务中的明确用途。（当前焦点：{focus}）"
+        },
+        {
+          "id": "use_pending",
+          "kind": "world_state",
+          "claim_template": "{actor}知道依照这份内容执行的具体任务目前仍待完成。（当前焦点：{focus}）"
+        }
+      ],
+      "entry_conditions": [],
+      "stage_mode": "alternatives",
+      "stages": [
+        {
+          "id": "unread",
+          "title": "可访问但尚未读取",
+          "requires": [
+            "held",
+            "unread"
+          ],
+          "chronological": []
+        },
+        {
+          "id": "understood",
+          "title": "具体内容已经理解",
+          "requires": [
+            "understood"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "carrier_process_read",
+          "title": "先读取已有载体",
+          "from_stage": "unread",
+          "requires": [],
+          "proposal": "读取当前已经可访问的载体，区分看见文字、理解内容与内容真实性；不重复接收已经持有的载体，也不预先宣布内容可信。"
+        },
+        {
+          "id": "carrier_process_use",
+          "title": "将已知内容用于未完成任务",
+          "from_stage": "understood",
+          "requires": [
+            "purpose_known",
+            "use_pending"
+          ],
+          "proposal": "根据已理解的具体内容和已知用途推进尚未完成的任务；不得重复首次读取或假定任务已经成功。"
+        }
+      ],
+      "operationalization_note": "新增的通用信息流程，源文只提供传递与理解的启发。该卡不要求禁声、受害者或控诉，故其命中绝不计为织物传书母题命中。用已知内容执行任务仍为提案。",
+      "retrieval_text": "信息载体 信件 纸条 记录 收到 持有 未读 阅读 理解 信息内容 用途 执行 任务尚未完成"
+    },
+    {
+      "id": "clue_check",
+      "title": "局部技巧：核对尚未解决的线索",
+      "knowledge_kind": "technique",
+      "basis": "authored_local_operation_inspired_by_source",
+      "source": {
+        "path": "assets/technique_library/suspense-laddering.md",
+        "sha256": "8c5473fda82814eaa4f7b75b5e4ef6462e6c6d7c0c204d1a409ab90546182ccc",
+        "evidence": [
+          {
+            "start": 335,
+            "end": 401,
+            "quote": "悬念的运作遵循\"窥探\"逻辑：故事中存在隐藏的、读者欲知而未知的事物，这产生了悬念。读者跟随侦探/主角不断\"窥探\"真相，直到悬念破解。"
+          }
+        ]
+      },
+      "roles": {
+        "actor": "character",
+        "focus": "object"
+      },
+      "conditions": [
+        {
+          "id": "clue_available",
+          "kind": "world_state",
+          "claim_template": "{actor}已经接触到与疑点有关的具体线索或观察材料。（当前焦点：{focus}）"
+        },
+        {
+          "id": "question_open",
+          "kind": "world_state",
+          "claim_template": "{actor}知道与该线索有关的问题目前仍未查明。（当前焦点：{focus}）"
+        },
+        {
+          "id": "check_pending",
+          "kind": "world_state",
+          "claim_template": "{actor}知道有一项针对该线索的具体核对步骤尚未完成，且现在可以进行该步骤。（当前焦点：{focus}）"
+        },
+        {
+          "id": "inquiry_active",
+          "kind": "world_state",
+          "claim_template": "{actor}当前仍在调查或核对该疑点。（当前焦点：{focus}）"
+        }
+      ],
+      "entry_conditions": [],
+      "stage_mode": "alternatives",
+      "stages": [
+        {
+          "id": "clue",
+          "title": "已经接触具体线索",
+          "requires": [
+            "clue_available"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "clue_check_verify",
+          "title": "完成已有的待核对步骤",
+          "from_stage": "clue",
+          "requires": [
+            "question_open",
+            "check_pending",
+            "inquiry_active"
+          ],
+          "proposal": "执行已经明确且尚未完成的核对步骤，记录观察结果并再判断原假说；不能把假说直接写成答案，也不重复已经完成的那次检查。"
+        }
+      ],
+      "operationalization_note": "源文支持逐步探查未知；具体核对及防重复门槛是本轮设计的局部操作，非完整悬念阶梯。只保留顺叙，不采纳源文可选倒叙。",
+      "retrieval_text": "疑点 线索 观察 假说 核对 比对 检查 尚未查明 尚未完成 可执行 调查"
+    }
+  ]
+}

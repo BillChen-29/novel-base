@@ -1,0 +1,83 @@
+{
+  "run_date": "2026-10-28",
+  "software_tests": {
+    "full_python_suite": {
+      "passed": 427,
+      "total": 427
+    },
+    "new_targeted": {
+      "passed": 32,
+      "total": 32
+    },
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/tests -p 'test_*.py'"
+  },
+  "experiment": {
+    "corpus_documents": 26,
+    "plot_documents": 12,
+    "prefix_cases": 6,
+    "independent_story_episodes": 3,
+    "reviewed_case_document_pairs": 72,
+    "current_structure_pairs": 2,
+    "specific_fragment_pairs": 0,
+    "insufficient_evidence_pairs": 70,
+    "contradicted_pairs": 0,
+    "positive_pairs_refer_to_same_interaction": true,
+    "pool_proposal_ready_pairs": 1,
+    "final_evidence_references_checked": 238,
+    "raw_and_abstract_lexical_global_top3_matches_previous_round": 12,
+    "retrieval_parameter_tuning_after_results": false,
+    "human_gold_labels": false
+  },
+  "runtime": {
+    "model_sha256": "b5ce9d77a3fc4b3b39ccb5643c36777911cc4eb46a66962eadfa3f5f60490d63",
+    "model_file": "hf_ggml-org_embeddinggemma-300M-Q8_0.gguf",
+    "qmd_version": "2.1.0",
+    "runtime_version": "3.18.1",
+    "prefix": "qmd-format-functions-v1",
+    "requested_gpu": "metal",
+    "context_size": 2048,
+    "threads": 4,
+    "dimensions": 768,
+    "complete": true,
+    "total_inputs": 357,
+    "elapsed_seconds": 6.863510375,
+    "gpu_layers": 25,
+    "runtime_build": "prebuilt"
+  },
+  "reproducibility": {
+    "public_cases": 2,
+    "public_embeddings": 343,
+    "public_model_complete": true,
+    "public_top3_global_and_plot_paths_match_full_run": true,
+    "public_positive_count": 0
+  },
+  "preservation": {
+    "asset_files_checked": 271,
+    "asset_files_changed": 0,
+    "novel_files_checked": 2,
+    "novel_files_changed": 0,
+    "private_runtime_git_ignored": true,
+    "canonical_story_memory_written": false,
+    "git_commit_or_push": false
+  },
+  "review": {
+    "code": "APPROVE: independent module, runner, real replay and proposal isolation review",
+    "security": "APPROVE: output boundaries, source/model bindings and summary privacy",
+    "semantic": "Two independent first reviews and two independent second reviews; root adjudicated 3 revisions; no human gold"
+  },
+  "files_sha256": {
+    "scripts/typed_knowledge_discovery.py": "663aabb0ccfd3131c14f092e220443b96237bcf320723ff2d506ba81e00da976",
+    "scripts/tests/test_typed_knowledge_discovery.py": "c3ad58f883a3e0b3946136d1ad29bfd32b02a66e76239c23455e85d79a13fad2",
+    "scripts/tests/test_typed_vector_experiment.py": "b97490b18255709e56666d1f22ee923d60b4bdf1a7f77cb5bdae869deaff9afa",
+    "README.md": "fac47fd94dd5b6fee0b36abe165c2d2f5a4be27344fdbc5678c9a9645b40bccd",
+    "experiments/typed-vector-discovery/README.md": "8066708a8a72277d22db14c021dacd69db3b250d55a9c39420218c6777f42df0",
+    "experiments/typed-vector-discovery/RESULTS.md": "258f0da4faf0c74dba6740184f6dbecb82943a2b8e866f2500c431fbbfc3641b",
+    "experiments/typed-vector-discovery/adjudication.json": "6b6babccbc8f033198b6754b864d708bb9f27a9e2ac230eb5bcd096a31f6830d",
+    "experiments/typed-vector-discovery/assessment-protocol.json": "2a0b647e2e90d554c8cebe8c69974718fef35ef4593ba5d011c5de33ce333c38",
+    "experiments/typed-vector-discovery/input-public.json": "3e723d51135338eb01e637a2dd512bd87af8e460fb0b4e9d4c83faa2943ef5fe",
+    "experiments/typed-vector-discovery/public-results-summary.json": "2d08d0d43fd12002ae7fee77802a247e6d72dec085a3563d129fba8f55e13f64",
+    "experiments/typed-vector-discovery/results-summary.json": "c628815cdb2c9ba31fb335d7aef8ce479799fb7ce8fbc5cc263a922f2883af37",
+    "experiments/typed-vector-discovery/reviews-public.json": "b79eb6f8ff32239d43712c65b62c60b539ff62b70f6f9c9f391d135f6eed68fb",
+    "experiments/typed-vector-discovery/run_experiment.py": "4f3fde9f55bc80eecd91f22a9b5d5d6989ca90590f8365ad464154f0e946e41f"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "goal_scope": "reusable evidence-gated recommendation loop with imported current-AI reviews",
+  "python_regression": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/tests -p 'test_*.py'",
+    "total": 490,
+    "passed": 490,
+    "new_core_tests": 49,
+    "exit_code": 0,
+    "log_sha256": "500f19bce3f74d3d099206d54fee7060ee486040721ec85a25011e26fe5b0199"
+  },
+  "review": {
+    "code": "approved",
+    "security": "approved",
+    "peer_reviewed_new_tests": true,
+    "remaining_blocking_findings": 0
+  },
+  "actual_replay": {
+    "public_cuts": 7,
+    "local_real_cuts": 2,
+    "public_sessions": 2,
+    "public_vs_full_case_equality": true,
+    "public_vs_full_session_equality": true,
+    "proposals": 5,
+    "accepted_plans": 4,
+    "acceptance_preserves_source_and_state": true,
+    "old_source_batch_rejections": 4,
+    "evidence_refs": 294
+  },
+  "source_integrity": {
+    "asset_files": 271,
+    "assets_unchanged": true,
+    "asset_manifest_sha256": "0d9953506c10b3e3a1e9336d3ccf113fc88b568aa5777f660e4923e7e8fc2709",
+    "downloaded_books_checked": 2,
+    "downloaded_books_unchanged": true
+  },
+  "privacy": {
+    "private_runtime_git_ignored": true,
+    "real_novel_names_absent_from_public_outputs": true,
+    "public_fixture_original_fiction_only": true
+  },
+  "catalog_file_sha256": "65c51ee0c6b39e021f68879deaaaca6c136d8d0c6f543e38f7b17a4ca252f886",
+  "catalog_content_sha256": "723738e8998651d2c6717cc01ea4eb0b239f14c7176ac9130827f05a5dfde2c0",
+  "no_external_model_api": true,
+  "retrieval": "BM25 over reviewed original base facts; no oracle backfill",
+  "semantic_judgment_source": "current AI review imported as JSON; no human gold labels",
+  "git_commit_or_push": false,
+  "files_sha256": {
+    "README.md": "c86243c9884b9b7ac30ddcaf93e7118a4cf352ddb6db9a4490547245028cdf10",
+    "recommendation/action-catalog.json": "65c51ee0c6b39e021f68879deaaaca6c136d8d0c6f543e38f7b17a4ca252f886",
+    "scripts/recommendation_engine.py": "2e209fc087aa159e1e570ca1ea64ae12361f3c5e210537f8024ea63d067b302b",
+    "scripts/recommendation_session.py": "ff4a7100f98c2cdd2c8186c78f32d51686b499132240f6ac9f2b21b8d09b76ed",
+    "scripts/tests/test_recommendation_engine_boundaries.py": "ab00cfb62d6a45ec1a4fbd841c8a9734abffdd8250d3bb19a2d1372465150881",
+    "scripts/tests/test_recommendation_session.py": "b85e2db934604cf029fd639fe7715580c04550f0b18d48f6667913bbbba71e15",
+    "scripts/tests/test_recommendation_engine_review.py": "85e190cee5f1193a2929f0e45bbe2bf6f6e4bf74d4cf0741675ed87c3669c056",
+    "scripts/tests/test_recommendation_engine.py": "e3cf97cff10f65611a40def6bbdd2de57f6682aa4874091671b44e492e65c5db",
+    "scripts/tests/test_recommendation_engine_security.py": "6984d9a501f63b2b4d6fea8b5168fc5bf90f71e583fd561b67124048cd574dcc",
+    "experiments/recommendation-core/results-summary.json": "ad9e6b1a3d8a5f5fc9e440b1a141a5b240cdc4f1ac31ab2b86ae8048389ef907",
+    "experiments/recommendation-core/catalog-notes.md": "2093ac927c7af644e17312da7658bc786d577eaf617916075cca1e329efabeb1",
+    "experiments/recommendation-core/state-reviews-public.json": "a0e082355855f16ab2b322a66f5f5dfa29941a8fa754f8f9ad415e1101466dd4",
+    "experiments/recommendation-core/fixtures-public.json": "487102dc4e072f1802593c9e9757edacb4931cc67d955286dcc58848cf78d445",
+    "experiments/recommendation-core/adjudication.json": "8712ee4e1fd6c7e48bf0c1507ee0a095d3f4b99265974f232d8ff68e8c5281f6",
+    "experiments/recommendation-core/README.md": "6ab2f97f1c48ca6b2b05d7fe46b0d294697bd924d0cdc1951ef65ebebcd45c9a",
+    "experiments/recommendation-core/replay.py": "63db7e3528dda0dcf419850e979b741f803977a23f911c3b8849cda523e6c015",
+    "experiments/recommendation-core/RESULTS.md": "5dd27e2cdfb4faa5f73eccb891afb6c175b0660e560000a55b7d0dc5423e4435",
+    "experiments/recommendation-core/candidate-reviews-public.json": "aaf11dad14a6f730f9b81d91881a4401578e842c21389baa843c7a3e33289928",
+    "experiments/recommendation-core/initial-review/candidate-input-public.json": "8fd345234463316c8b2d213c36fbf7b5646c723e33802efc78d5a5bd739f946d",
+    "experiments/recommendation-core/initial-review/state-reviews-public.json": "f6cbbb81a393fcd54faf0a90139584a50119ed040fb71f64de5ec001c60ed6f2",
+    "experiments/recommendation-core/initial-review/fixtures-public.json": "e6bf98bc58b6d68b8d8ca0a55ad571109516be73e3d68ee6b0c70d3962e66ee0",
+    "experiments/recommendation-core/initial-review/state-input-public.json": "b956d1103885fe1e822b9b37553796dcbf0c25580a752cbe74595ffeffb7c617",
+    "experiments/recommendation-core/initial-review/candidate-reviews-public.json": "e086fecddee4d76c6868cdd30eb1f72a59a582761ebaa72bcf8dbdc288cb4d54"
+  },
+  "limits": [
+    "Finite four-card mechanism test, not full-library accuracy or literary-quality evaluation.",
+    "Whole-prefix state extraction and semantic review remain host/AI supplied.",
+    "Vector experiment is preserved, not integrated into this session API."
+  ]
+}

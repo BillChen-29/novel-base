@@ -1,0 +1,68 @@
+{
+  "run_date": "2026-10-28",
+  "software_tests": {
+    "targeted": {
+      "passed": 38,
+      "total": 38
+    },
+    "full_python_suite": {
+      "passed": 395,
+      "total": 395
+    },
+    "commands": [
+      "python3 -m unittest discover -s scripts/tests -p \"*discovery*.py\" -v",
+      "python3 -m unittest discover -s scripts/tests -v"
+    ]
+  },
+  "experiment": {
+    "corpus_documents": 26,
+    "real_prefix_cases": 4,
+    "public_control_cases": 2,
+    "independent_ai_reviewed_case_document_pairs": 38,
+    "local_operation_eligible": 14,
+    "needs_evidence": 21,
+    "blocked": 3,
+    "method_top3_eligible": {
+      "raw_prefix": 10,
+      "abstract_queries": 3,
+      "fused": 8
+    },
+    "positions_per_method": 18,
+    "counts_are_not_recommendation_accuracy": true,
+    "full_motif_recognition_assessed": false
+  },
+  "reproducibility": {
+    "public_cases_replayed": 2,
+    "python_hash_seeds": [
+      1,
+      2,
+      3
+    ],
+    "six_case_replay_digest": "8383a57f448a76b4cf9f276eb60d25b1ec3bae25cdc4f49ebe1d863f2d02a5fa",
+    "v1_to_v2_same_prefix_documents_candidates_order_and_decisions": true
+  },
+  "preservation": {
+    "unchanged_asset_files": 271,
+    "unchanged_source_books": 2,
+    "private_source_material_git_ignored": true,
+    "canonical_story_memory_written": false
+  },
+  "review": {
+    "code": "APPROVE: independent final review, 38 targeted tests and two public end-to-end replays",
+    "security": "APPROVE: cutoff, asset paths, imported null packets and output boundaries rechecked"
+  },
+  "files_sha256": {
+    "scripts/knowledge_discovery.py": "f80fab89edf854e9c6609847b25da9a69e351d51895bba20b21bdec079478a0d",
+    "scripts/retrieval_pilot.py": "e6b5f2e115995b93e6e284da6c884c31b72a0083508f7c13b91987442055e80f",
+    "scripts/tests/test_knowledge_discovery.py": "fc6745718bbbb49cc0175e9dc5867255a3beb44e3a60953ea694070a196415f3",
+    "scripts/tests/test_candidate_discovery_experiment.py": "316901ca28e3217e44c436e03dc4e891e55f77d24975d8029cbbeb4c160c043f",
+    "experiments/candidate-discovery/run_experiment.py": "55d86a5e86b9724a9c422fa388ed871361ba19ad986cbc5eb2e40f2189beb097",
+    "experiments/candidate-discovery/corpus.json": "d315ad362cf23c899303b76ccbbdc80cc3789773bfca85982abf9d393d90db5d",
+    "experiments/candidate-discovery/public-input.json": "03c0b393baba2c2cf509c681ecacb2a50b0c12956d6ce2c0417da7ded3c578a2",
+    "experiments/candidate-discovery/analysis-public.json": "a71a6cde9de02bb09341d63603623400e4663d5e0a4b1a7cefa24379df8c14ae",
+    "experiments/candidate-discovery/reviews-public.json": "66128763ffbad28c44c52bbd0ed106314846c419a29b7848c0d1cc415a2132fe",
+    "experiments/candidate-discovery/results-summary.json": "326c278800351e50ea31b2da7d799247112e922bec0d4c42e494c3d1f0ee0635",
+    "experiments/candidate-discovery/README.md": "6797bb2a4afbeea2632b8c5fb9a4cf98e3225abac9c334af6aa198e8e4eac1db",
+    "experiments/candidate-discovery/RESULTS.md": "5e7cfa1b36b4f3d91b9ff8a541962b05d22e93d08ade2dc8d88dc41e5d6a6f9e"
+  }
+}

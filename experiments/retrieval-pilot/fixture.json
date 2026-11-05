@@ -1,0 +1,506 @@
+{
+  "schema_version": 1,
+  "annotation": {
+    "method": "agent_authored_pilot",
+    "limitation": "由代理阅读固定20份资料后编写的初步相关性标注，不是用户或专家金标；查询由资料启发，存在措辞与选材偏差；仅评价固定样本内检索，不代表全库、续写质量或来源事实可信度。development/holdout在检索前固定，holdout只是未用于调整的保留题，不是独立外部测试集。"
+  },
+  "documents": [
+    {
+      "path": "assets/technique_library/dialogue-subtext.md",
+      "reason": "较长技巧文，包含表格、对白示例和自检清单。"
+    },
+    {
+      "path": "assets/technique_library/rhythm-variation.md",
+      "reason": "长篇节奏技巧，包含句段层次、章节曲线与限制。"
+    },
+    {
+      "path": "assets/technique_library/suspense-laddering.md",
+      "reason": "短篇技巧，包含操作、适用场景、常见错误。"
+    },
+    {
+      "path": "assets/technique_library/twist-ending.md",
+      "reason": "反转技巧，包含前置铺垫与人物逻辑限制。"
+    },
+    {
+      "path": "assets/technique_library/interior-monologue.md",
+      "reason": "内心技法，检验感官触发、动机与适用性检索。"
+    },
+    {
+      "path": "assets/technique_library/multi-perspective-narration.md",
+      "reason": "多视角技法，检验信息互补和混乱风险。"
+    },
+    {
+      "path": "assets/technique_library/horror-atmosphere.md",
+      "reason": "氛围技法，检验不依赖血腥的否定条件。"
+    },
+    {
+      "path": "assets/technique_library/_scenarios/dialogue-tension.md",
+      "reason": "短场景卡，有跨母题、角色、技法链接；与长文格式不同。"
+    },
+    {
+      "path": "assets/pacing/pacing-curve.md",
+      "reason": "节奏模板，含ASCII图、表格、切换规则与注意事项。"
+    },
+    {
+      "path": "assets/pacing/chapter-hooks.md",
+      "reason": "章末技巧，含类型、示例、限制；不将无出处平台数值视为实证。"
+    },
+    {
+      "path": "assets/character_archetypes/moral-grey-survivor.md",
+      "reason": "人物动机与行为模式；对话场景卡直接关联该人物。"
+    },
+    {
+      "path": "assets/character_archetypes/loyal-companion.md",
+      "reason": "伙伴角色，检验嘴上抱怨与实际忠诚的语义。"
+    },
+    {
+      "path": "assets/character_archetypes/lin-chong.md",
+      "reason": "只有H1和加粗标签的异构角色格式，用于检验分块覆盖。"
+    },
+    {
+      "path": "assets/character_archetypes/trickster.md",
+      "reason": "单篇包含多个角色子原型，检验局部语义与篇章聚合。"
+    },
+    {
+      "path": "assets/motif_library/time-pressure.md",
+      "reason": "完整母题模板，包含明确的不适用场景。"
+    },
+    {
+      "path": "assets/motif_library/false-accusation.md",
+      "reason": "诬陷母题与故事救命相关但不同，检验语义区分。"
+    },
+    {
+      "path": "assets/motif_library/prophecy-defied.md",
+      "reason": "自我实现预言母题，含不适用条件。"
+    },
+    {
+      "path": "assets/motif_library/road-of-trials.md",
+      "reason": "成长试炼母题，强调内在递进而非动作重复。"
+    },
+    {
+      "path": "assets/motif_library/story-as-shield.md",
+      "reason": "嵌套叙事母题，适合跨文档组合查询。"
+    },
+    {
+      "path": "assets/style_library/urban-suspense-fanqie.md",
+      "reason": "风格表格与示范文混合；检验资料格式而不验证平台成效。"
+    }
+  ],
+  "queries": [
+    {
+      "id": "q01",
+      "text": "对话潜台词技法中，角色说的、想的、做的三层应如何一起设计？",
+      "category": "original_terms",
+      "split": "development",
+      "relevant_paths": [
+        "assets/technique_library/dialogue-subtext.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/technique_library/dialogue-subtext.md",
+          "quote": "每一句台词背后至少有三层："
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q02",
+      "text": "两个角色都不肯把真正目的说出口，如何让表面的闲聊带有试探和压力？",
+      "category": "paraphrase",
+      "split": "development",
+      "relevant_paths": [
+        "assets/technique_library/dialogue-subtext.md",
+        "assets/technique_library/_scenarios/dialogue-tension.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/technique_library/dialogue-subtext.md",
+          "quote": "用日常话题暗指真正的目的。"
+        },
+        {
+          "path": "assets/technique_library/_scenarios/dialogue-tension.md",
+          "quote": "通过对话中的潜台词、信息博弈和情感冲突制造张力。"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q03",
+      "text": "前面刚连续写完追逐和搏斗，下一场想让读者喘口气，同时继续交代人物反应，该如何降速？",
+      "category": "pacing_state",
+      "split": "development",
+      "relevant_paths": [
+        "assets/technique_library/rhythm-variation.md",
+        "assets/pacing/pacing-curve.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/technique_library/rhythm-variation.md",
+          "quote": "收尾：情绪沉淀（节奏放慢）"
+        },
+        {
+          "path": "assets/pacing/pacing-curve.md",
+          "quote": "| 快 → 中 | 高潮结束、开始收尾、人物反思 |"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q04",
+      "text": "我想在结尾安排反转，但前文没有埋线索、反转还会违背人物性格，这种情况下需要先补什么？",
+      "category": "negative_constraints",
+      "split": "development",
+      "relevant_paths": [
+        "assets/technique_library/twist-ending.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/technique_library/twist-ending.md",
+          "quote": "**前期铺垫要扎实**：反转必须建立在充分的前期铺垫之上，所有线索都在文本中，只是被读者忽略或误读"
+        },
+        {
+          "path": "assets/technique_library/twist-ending.md",
+          "quote": "**为了反转牺牲人物**：反转不应违背人物性格的逻辑"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q05",
+      "text": "角色闻到一种气味后突然想起往事，记忆和当下交错，适合用什么心理描写方法？",
+      "category": "paraphrase",
+      "split": "development",
+      "relevant_paths": [
+        "assets/technique_library/interior-monologue.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/technique_library/interior-monologue.md",
+          "quote": "一个外部刺激（声音、气味、画面）可以瞬间触发一连串记忆、情感和联想。"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q06",
+      "text": "几个人分别讲同一桩事件，怎样让各人提供不同信息，而不是换个名字重复讲一遍？",
+      "category": "negative_constraints",
+      "split": "development",
+      "relevant_paths": [
+        "assets/technique_library/multi-perspective-narration.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/technique_library/multi-perspective-narration.md",
+          "quote": "**信息要互补而非重复**：每个视角应提供其他视角没有的信息，共同拼凑出完整图景"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q07",
+      "text": "不想靠血腥和怪物吓人，如何用封闭空间、反复出现的细节和人物不安营造恐惧？",
+      "category": "negative_constraints",
+      "split": "development",
+      "relevant_paths": [
+        "assets/technique_library/horror-atmosphere.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/technique_library/horror-atmosphere.md",
+          "quote": "恐怖氛围营造是通过特定空间设置、象征意象、重复节奏和不可靠叙述者等手法，在读者心理层面制造紧张、神秘、窒息的恐惧感，而非依赖血腥暴力的感官刺激。"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q08",
+      "text": "一个靠操控别人求生的人参加谈判，想把他的利益盘算藏在台词下面，有哪些角色和对话资料可以搭配？",
+      "category": "cross_document",
+      "split": "development",
+      "relevant_paths": [
+        "assets/character_archetypes/moral-grey-survivor.md",
+        "assets/technique_library/_scenarios/dialogue-tension.md",
+        "assets/technique_library/dialogue-subtext.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/character_archetypes/moral-grey-survivor.md",
+          "quote": "**双面人格**：对NPC和玩家都保持阳光笑容，但笑容背后是精密的利益计算"
+        },
+        {
+          "path": "assets/technique_library/_scenarios/dialogue-tension.md",
+          "quote": "moral-grey-survivor（道德灰色求生者）— 对话中的道德博弈"
+        },
+        {
+          "path": "assets/technique_library/dialogue-subtext.md",
+          "quote": "对话的本质不是信息传递，而是**人物关系的角力**。"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q09",
+      "text": "过渡章不想一直快节奏，但也不能只有吃饭聊天和空白描写，慢下来时应该保留什么推进？",
+      "category": "pacing_state",
+      "split": "development",
+      "relevant_paths": [
+        "assets/pacing/pacing-curve.md",
+        "assets/technique_library/rhythm-variation.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/pacing/pacing-curve.md",
+          "quote": "**慢不是拖**：慢节奏要有信息增量或情感推进，不是水字数"
+        },
+        {
+          "path": "assets/technique_library/rhythm-variation.md",
+          "quote": "过渡场景是否避免了无意义的长篇描写？"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q10",
+      "text": "章末留了问题，下一章却转去写别的事，这属于哪一种钩子错误？",
+      "category": "original_terms",
+      "split": "development",
+      "relevant_paths": [
+        "assets/pacing/chapter-hooks.md",
+        "assets/technique_library/suspense-laddering.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/pacing/chapter-hooks.md",
+          "quote": "**断裂钩子**：下一章完全不承接上一章的钩子"
+        },
+        {
+          "path": "assets/technique_library/suspense-laddering.md",
+          "quote": "**悬念设置后长期不回应**：读者等待太久会失去耐心"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q11",
+      "text": "主角总笑着做危险交易，关键时刻先衡量自己能得到什么，但偶尔会露出一点人性，该参考哪类人物动机？",
+      "category": "character_motivation",
+      "split": "development",
+      "relevant_paths": [
+        "assets/character_archetypes/moral-grey-survivor.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/character_archetypes/moral-grey-survivor.md",
+          "quote": "**精致利己**：所有行为的底层逻辑都是\"如何让自己活得更好\"，但在关键时刻也会展现出一线人性"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q12",
+      "text": "配角嘴上总嫌主角惹麻烦，主角出事时却最先赶来，还能缓解紧张气氛，这种伙伴怎样设计？",
+      "category": "character_motivation",
+      "split": "development",
+      "relevant_paths": [
+        "assets/character_archetypes/loyal-companion.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/character_archetypes/loyal-companion.md",
+          "quote": "**损友型**：嘴上嫌弃主角\"认识你真倒霉\"，但每次主角出事都第一个冲过来"
+        },
+        {
+          "path": "assets/character_archetypes/loyal-companion.md",
+          "quote": "**制造喜剧效果**：日常互坑、搞笑互动缓解紧张节奏"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q13",
+      "text": "职场里的技术骨干被反复欺负却一直退让，终于爆发后仍想找个安稳位置，他的核心执念是什么？",
+      "category": "character_motivation",
+      "split": "holdout",
+      "relevant_paths": [
+        "assets/character_archetypes/lin-chong.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/character_archetypes/lin-chong.md",
+          "quote": "**一句话描述**：在体制内岁月静好的普通人，被逼到绝境才爆发，但爆发之后依然在寻找下一个可以安稳的角落。"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q14",
+      "text": "一个亦敌亦友的人渴望被团队接纳，却因为长期被排斥而策划背叛，有什么角色原型可以帮助理解他？",
+      "category": "character_motivation",
+      "split": "holdout",
+      "relevant_paths": [
+        "assets/character_archetypes/trickster.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/character_archetypes/trickster.md",
+          "quote": "**一句话描述**：既是众神的朋友也是敌人，用谎言和诡计搅动一切，最终的背叛往往源于被忽视的伤痛。"
+        },
+        {
+          "path": "assets/character_archetypes/trickster.md",
+          "quote": "对被接纳有深层的渴望，但行为方式导致永远被排斥"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q15",
+      "text": "想给任务加一个倒数时限，但超时没有代价、主角也能轻松完成，这样还能形成真正的压力吗？",
+      "category": "negative_constraints",
+      "split": "holdout",
+      "relevant_paths": [
+        "assets/motif_library/time-pressure.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/motif_library/time-pressure.md",
+          "quote": "时间限制没有实质性后果时（缺乏紧迫感）"
+        },
+        {
+          "path": "assets/motif_library/time-pressure.md",
+          "quote": "主角可以轻松在时限内完成任务时（缺乏压力）"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q16",
+      "text": "主角确实犯了案，却声称自己无辜，这能直接套用被栽赃后自证清白的情节模板吗？",
+      "category": "negative_constraints",
+      "split": "holdout",
+      "relevant_paths": [
+        "assets/motif_library/false-accusation.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/motif_library/false-accusation.md",
+          "quote": "主角确实有罪时（不是\"诬陷\"而是\"揭发\"）"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q17",
+      "text": "掌权者越怕一个关于继承人的预告成真，越采取极端防范，结果正是防范造成了灾难，这属于什么故事结构？",
+      "category": "paraphrase",
+      "split": "holdout",
+      "relevant_paths": [
+        "assets/motif_library/prophecy-defied.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/motif_library/prophecy-defied.md",
+          "quote": "掌权者得知一个将颠覆自己命运的预言，竭尽全力阻止其发生，却恰恰因为自己的阻止行为而推动预言成真。"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q18",
+      "text": "冒险中的一连串关卡应该怎样改变主人公？我不想只是重复打怪，过关之后他还是原来的样子。",
+      "category": "negative_constraints",
+      "split": "holdout",
+      "relevant_paths": [
+        "assets/motif_library/road-of-trials.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/motif_library/road-of-trials.md",
+          "quote": "每通过一个考验，英雄失去一层旧的身份认同和执着"
+        },
+        {
+          "path": "assets/motif_library/road-of-trials.md",
+          "quote": "试炼仅是外部动作场面而非灵魂的转变"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q19",
+      "text": "无辜者被下令处死，他请求讲故事拖延审判，故事又映照自己的处境，最后等到证据出现；哪些母题应该组合参考？",
+      "category": "cross_document",
+      "split": "holdout",
+      "relevant_paths": [
+        "assets/motif_library/false-accusation.md",
+        "assets/motif_library/story-as-shield.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/motif_library/false-accusation.md",
+          "quote": "**智慧自救**：主角在临刑前通过讲故事、出示物证、或第三方介入来证明清白。"
+        },
+        {
+          "path": "assets/motif_library/story-as-shield.md",
+          "quote": "**故事嵌套**：主角讲的故事中包含另一个故事，故事与自己的处境形成巧妙的镜像或隐喻。"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q20",
+      "text": "我想参考面向手机阅读的都市悬疑文风：贴近主角、短段落、口语和书面语混用，可以找哪份整体风格模板？",
+      "category": "paraphrase",
+      "split": "holdout",
+      "relevant_paths": [
+        "assets/style_library/urban-suspense-fanqie.md"
+      ],
+      "evidence": [
+        {
+          "path": "assets/style_library/urban-suspense-fanqie.md",
+          "quote": "| **叙事视角** | 第三人称有限（贴近主角内心） |"
+        },
+        {
+          "path": "assets/style_library/urban-suspense-fanqie.md",
+          "quote": "| **用词** | 口语与书面混合，避免文言词汇 |"
+        }
+      ],
+      "notes": "资料对该问题有直接支持；相关性不等于认定资料主张已被外部研究证实。"
+    },
+    {
+      "id": "q21",
+      "text": "请指出我这本小说第十二章已经写下的密室密码，以及第一次出现这个密码的原句。",
+      "category": "unanswerable_project_fact",
+      "split": "development",
+      "relevant_paths": [],
+      "evidence": [],
+      "notes": "本次语料只有共享创作资料，没有这部小说第十二章，无法回答具体事实。"
+    },
+    {
+      "id": "q22",
+      "text": "请提供2026年9月番茄官方钩子A/B实验的原始日志、实验样本量和置信区间。",
+      "category": "unanswerable_evidence_request",
+      "split": "development",
+      "relevant_paths": [],
+      "evidence": [],
+      "notes": "选文存在未经外部核实的平台成效断言，但没有指定实验的原始日志、样本量或置信区间；相关词命中不构成答案。"
+    },
+    {
+      "id": "q23",
+      "text": "请根据我尚未提供的第二部小说正文，确认主角是否已经知道妹妹的真实身份。",
+      "category": "unanswerable_project_fact",
+      "split": "holdout",
+      "relevant_paths": [],
+      "evidence": [],
+      "notes": "没有第二部小说的正文、项目记忆或知情标注，不应由通用角色和技巧资料推断。"
+    },
+    {
+      "id": "q24",
+      "text": "给我一份可核验的唐代茶碗出土器型图录，需要每件器物的博物馆藏品编号和照片下载地址。",
+      "category": "unanswerable_domain_gap",
+      "split": "holdout",
+      "relevant_paths": [],
+      "evidence": [],
+      "notes": "20篇选文中没有考古器物图录、藏品编号或照片下载记录。"
+    }
+  ]
+}

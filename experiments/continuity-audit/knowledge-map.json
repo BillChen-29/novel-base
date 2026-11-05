@@ -1,0 +1,3934 @@
+{
+  "schema_version": "0.1",
+  "created_on": "2026-10-19",
+  "scope": {
+    "source_document_count": 10,
+    "root_motif_count": 8,
+    "extracted_prototype_count": 51,
+    "full_library_review": false,
+    "selection": "purposeful_representative_pilot; not_random_or_exhaustive"
+  },
+  "annotation": {
+    "author": "AI-assisted source audit",
+    "human_reviewed": false,
+    "policy": "Original quotations are verified; classifications and condition assignments are proposals. Source claims are not externally verified."
+  },
+  "type_definitions": {
+    "motif": "可复现的抽象因果、关系、约束或循环机制；不强制固定阶段数。",
+    "situation": "带角色处境、目标或障碍的可复用局部情境；可以关联多个母题。",
+    "case": "命名作品、人物、文化或文物的具体例子；本试点只核对库内原文，不验证其外部史实。",
+    "world_rule": "空间组织、能力或世界规则；通常不表示场景先后。",
+    "symbol": "承担某种象征或功能的意象；不能直接充当下一场情节。",
+    "technique": "实现叙事目的或解决情境问题的手段。",
+    "project_instance": "某本小说中角色与母题槽位的绑定、已到阶段和证据；需 project_id 与截点，存在独立项目记忆，本文件没有本书实例。"
+  },
+  "field_contract": {
+    "id": "稳定的试点标识；正式迁移前仍需审核。",
+    "kind": "拟议的知识作用类型，不依据源目录强定。",
+    "definition": "源定义或原型正文，未把案例补写成泛化场景。",
+    "source_refs": "UTF-8 原文精确引文、字符半开区间、1-based 行号和内容 SHA-256。",
+    "motif_ids": "多对多母题引用；每个额外关系必须声明来源或 annotation_proposed。",
+    "entry_conditions": "仅列可审核的进入条件提案；当前摘自源结构首项，enforcement=none，并非自动规则。",
+    "possible_changes": "源结构末项的变化提案；不能当作当前正文已发生事实或唯一正确后续。",
+    "review_status": "annotation_proposed 表示分类及结构用途待审核，非原文已证明的硬限制。"
+  },
+  "temporal_policy": {
+    "shared_reference_not_story_history": true,
+    "no_automatic_outcome_import": true,
+    "scene_sequence_eligibility": "案例和嵌套故事不能直接按叙述段落制造相邻场景标签；先标叙述顺序、故事时间、嵌套层级和截点。",
+    "project_instance_fields_when_implemented": [
+      "project_id",
+      "source_cutoff",
+      "motif_id",
+      "role_bindings",
+      "stage_hypotheses",
+      "evidence_refs",
+      "status"
+    ],
+    "missing_evidence": "unknown, not_false"
+  },
+  "counts_by_kind": {
+    "case": 21,
+    "motif": 8,
+    "situation": 24,
+    "symbol": 3,
+    "technique": 2,
+    "world_rule": 3
+  },
+  "records": [
+    {
+      "id": "kb:false-accusation",
+      "kind": "motif",
+      "title": "诬陷求生 (False Accusation)",
+      "definition": "一个清白无辜的人被（通常是女性或权臣）栽赃陷害，面临死刑或流放，必须用智慧、故事或证据证明自己的清白。",
+      "source_refs": [
+        {
+          "id": "385ab16127e9cb036019",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "一个清白无辜的人被（通常是女性或权臣）栽赃陷害，面临死刑或流放，必须用智慧、故事或证据证明自己的清白。",
+          "start": 39,
+          "end": 90,
+          "start_line": 4,
+          "end_line": 4,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        },
+        {
+          "id": "6e66ad3d24580de4e49c",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "1. **清白日常**：主角勤劳善良，在宫廷或家族中地位稳固，深得信任。",
+          "start": 103,
+          "end": 139,
+          "start_line": 8,
+          "end_line": 8,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        },
+        {
+          "id": "6a1b01ee82ba38c35291",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "2. **诱惑与拒绝**：一个女性（嫂嫂、妃子、继母）对主角产生不当情感，主角严词拒绝。",
+          "start": 140,
+          "end": 184,
+          "start_line": 9,
+          "end_line": 9,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        },
+        {
+          "id": "7020007549ead023e011",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "3. **倒打一耙**：被拒绝的女性（或嫉妒的权臣）先发制人，向掌权者诬告主角有不轨行为，表演受伤或哭泣以博取同情。",
+          "start": 185,
+          "end": 243,
+          "start_line": 10,
+          "end_line": 10,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        },
+        {
+          "id": "c2d95019e19cd42fc500",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "4. **掌权者震怒**：掌权者（国王、兄长、丈夫）不加调查，立即下令处死或驱逐主角。",
+          "start": 244,
+          "end": 287,
+          "start_line": 11,
+          "end_line": 11,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        },
+        {
+          "id": "faa308074497566827eb",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "5. **智慧自救**：主角在临刑前通过讲故事、出示物证、或第三方介入来证明清白。",
+          "start": 288,
+          "end": 329,
+          "start_line": 12,
+          "end_line": 12,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        },
+        {
+          "id": "d33bc79083ccaae7fe07",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "6. **真相大白**：诬陷者被揭穿，受到惩罚，主角恢复名誉和地位。",
+          "start": 330,
+          "end": 364,
+          "start_line": 13,
+          "end_line": 13,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        },
+        {
+          "id": "3a18ae0bc317a9f0ea08",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "- 主角确实有罪时（不是\"诬陷\"而是\"揭发\"）",
+          "start": 1069,
+          "end": 1092,
+          "start_line": 51,
+          "end_line": 51,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        },
+        {
+          "id": "2c47577c0c6e71672866",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "- 掌权者是英明的、能独立判断时（缺乏\"盲目\"的戏剧性）",
+          "start": 1093,
+          "end": 1121,
+          "start_line": 52,
+          "end_line": 52,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        },
+        {
+          "id": "9b9206fdc736863a25a0",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "- 没有\"讲故事自救\"或\"证据出现\"的转折时（纯粹的悲剧）",
+          "start": 1122,
+          "end": 1151,
+          "start_line": 53,
+          "end_line": 53,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        },
+        {
+          "id": "2d0d96d11a48eec7c177",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "- 诬陷者从一开始就被识破时（缺乏悬念）",
+          "start": 1152,
+          "end": 1172,
+          "start_line": 54,
+          "end_line": 54,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [],
+      "entry_conditions": [
+        {
+          "statement": "1. **清白日常**：主角勤劳善良，在宫廷或家族中地位稳固，深得信任。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "6e66ad3d24580de4e49c"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "possible_changes": [
+        {
+          "statement": "5. **智慧自救**：主角在临刑前通过讲故事、出示物证、或第三方介入来证明清白。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "faa308074497566827eb"
+          ],
+          "enforcement": "none"
+        },
+        {
+          "statement": "6. **真相大白**：诬陷者被揭穿，受到惩罚，主角恢复名誉和地位。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "d33bc79083ccaae7fe07"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "review_status": "annotation_proposed",
+      "pattern_shape": {
+        "value": "causal_process",
+        "status": "annotation_proposed"
+      },
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "structure_outline": [
+        {
+          "text": "1. **清白日常**：主角勤劳善良，在宫廷或家族中地位稳固，深得信任。",
+          "source_ref_ids": [
+            "6e66ad3d24580de4e49c"
+          ]
+        },
+        {
+          "text": "2. **诱惑与拒绝**：一个女性（嫂嫂、妃子、继母）对主角产生不当情感，主角严词拒绝。",
+          "source_ref_ids": [
+            "6a1b01ee82ba38c35291"
+          ]
+        },
+        {
+          "text": "3. **倒打一耙**：被拒绝的女性（或嫉妒的权臣）先发制人，向掌权者诬告主角有不轨行为，表演受伤或哭泣以博取同情。",
+          "source_ref_ids": [
+            "7020007549ead023e011"
+          ]
+        },
+        {
+          "text": "4. **掌权者震怒**：掌权者（国王、兄长、丈夫）不加调查，立即下令处死或驱逐主角。",
+          "source_ref_ids": [
+            "c2d95019e19cd42fc500"
+          ]
+        },
+        {
+          "text": "5. **智慧自救**：主角在临刑前通过讲故事、出示物证、或第三方介入来证明清白。",
+          "source_ref_ids": [
+            "faa308074497566827eb"
+          ]
+        },
+        {
+          "text": "6. **真相大白**：诬陷者被揭穿，受到惩罚，主角恢复名誉和地位。",
+          "source_ref_ids": [
+            "d33bc79083ccaae7fe07"
+          ]
+        }
+      ],
+      "usage_cautions": [
+        {
+          "text": "- 主角确实有罪时（不是\"诬陷\"而是\"揭发\"）",
+          "source_ref_ids": [
+            "3a18ae0bc317a9f0ea08"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 掌权者是英明的、能独立判断时（缺乏\"盲目\"的戏剧性）",
+          "source_ref_ids": [
+            "2c47577c0c6e71672866"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 没有\"讲故事自救\"或\"证据出现\"的转折时（纯粹的悲剧）",
+          "source_ref_ids": [
+            "9b9206fdc736863a25a0"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 诬陷者从一开始就被识破时（缺乏悬念）",
+          "source_ref_ids": [
+            "2d0d96d11a48eec7c177"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        }
+      ],
+      "sequence_policy": "do_not_assume_numbered_outline_is_event_order",
+      "contains_outcome": true
+    },
+    {
+      "id": "kb:false-accusation:prototype:1",
+      "kind": "situation",
+      "title": "嫂嫂诬陷小叔子",
+      "definition": "勤劳的弟弟拒绝嫂嫂的诱惑，嫂嫂向哥哥诬告弟弟调戏她（《两兄弟的故事》）",
+      "source_refs": [
+        {
+          "id": "58001524f5179150a50a",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "- **嫂嫂诬陷小叔子**：勤劳的弟弟拒绝嫂嫂的诱惑，嫂嫂向哥哥诬告弟弟调戏她（《两兄弟的故事》）",
+          "start": 633,
+          "end": 682,
+          "start_line": 35,
+          "end_line": 35,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        }
+      ],
+      "motif_ids": [
+        "kb:false-accusation"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:false-accusation": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:false-accusation:prototype:2",
+      "kind": "situation",
+      "title": "妃子诬陷宠臣",
+      "definition": "新宠的大臣因才华遭嫉，被诬陷与妃子有染（《巴赫堤亚尔的故事》《巴赫迪雅尔传》）",
+      "source_refs": [
+        {
+          "id": "c6592c34f01e5dac453f",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "- **妃子诬陷宠臣**：新宠的大臣因才华遭嫉，被诬陷与妃子有染（《巴赫堤亚尔的故事》《巴赫迪雅尔传》）",
+          "start": 683,
+          "end": 735,
+          "start_line": 36,
+          "end_line": 36,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        }
+      ],
+      "motif_ids": [
+        "kb:false-accusation"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:false-accusation": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:false-accusation:prototype:3",
+      "kind": "situation",
+      "title": "继母诬陷继子",
+      "definition": "白雪公主式的继母陷害继子/继女",
+      "source_refs": [
+        {
+          "id": "234027cc10b8969ca514",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "- **继母诬陷继子**：白雪公主式的继母陷害继子/继女",
+          "start": 736,
+          "end": 764,
+          "start_line": 37,
+          "end_line": 37,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        }
+      ],
+      "motif_ids": [
+        "kb:false-accusation"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:false-accusation": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:false-accusation:prototype:4",
+      "kind": "situation",
+      "title": "妻子诬陷丈夫",
+      "definition": "妻子与人通奸后反诬丈夫（波斯故事中的西蒂狄那尔反转）",
+      "source_refs": [
+        {
+          "id": "cca5b6ab54ddd3c04af3",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "- **妻子诬陷丈夫**：妻子与人通奸后反诬丈夫（波斯故事中的西蒂狄那尔反转）",
+          "start": 765,
+          "end": 804,
+          "start_line": 38,
+          "end_line": 38,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        }
+      ],
+      "motif_ids": [
+        "kb:false-accusation"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:false-accusation": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:false-accusation:prototype:5",
+      "kind": "situation",
+      "title": "权臣诬陷忠臣",
+      "definition": "朝廷中嫉妒的大臣设计陷害忠臣（《以斯帖记》中的哈曼vs末底改）",
+      "source_refs": [
+        {
+          "id": "13a663510dd781c96a9e",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "- **权臣诬陷忠臣**：朝廷中嫉妒的大臣设计陷害忠臣（《以斯帖记》中的哈曼vs末底改）",
+          "start": 805,
+          "end": 849,
+          "start_line": 39,
+          "end_line": 39,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        }
+      ],
+      "motif_ids": [
+        "kb:false-accusation"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:false-accusation": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:time-pressure",
+      "kind": "motif",
+      "title": "倒计时 (Time Pressure)",
+      "definition": "有明确的截止时间，主角必须在时限内完成任务，每一秒的流逝都在增加压力和代价。",
+      "source_refs": [
+        {
+          "id": "4139696e10658a0bac7d",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "有明确的截止时间，主角必须在时限内完成任务，每一秒的流逝都在增加压力和代价。",
+          "start": 36,
+          "end": 74,
+          "start_line": 5,
+          "end_line": 5,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        },
+        {
+          "id": "34420dfaad852cea0d20",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "1. **触发**：主角收到一个明确的时间限制（炸弹倒计时/人质期限/证据销毁时间/解药有效期），任务的紧迫性瞬间确立。",
+          "start": 87,
+          "end": 147,
+          "start_line": 9,
+          "end_line": 9,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        },
+        {
+          "id": "15b64b939c0279bd1e7c",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "2. **抵达**：主角开始行动，但很快发现任务比想象中复杂——需要的人不在、需要的信息不全、需要的工具缺少。时间在流逝。",
+          "start": 148,
+          "end": 209,
+          "start_line": 10,
+          "end_line": 10,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        },
+        {
+          "id": "9d6710c35bad7caf9cfb",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "3. **冲突**：时间压力迫使主角做出牺牲——放弃A计划选择B计划，牺牲次要目标保全主要目标，甚至牺牲原则来争取时间。同时，外部阻力（敌人/障碍/意外）不断出现。",
+          "start": 210,
+          "end": 292,
+          "start_line": 11,
+          "end_line": 11,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        },
+        {
+          "id": "63d607e014c22293207d",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "4. **高潮**：倒计时进入最后阶段，主角面临终极抉择——可能无法完成所有目标，必须选择救哪一个。时间耗尽的瞬间，结果揭晓。",
+          "start": 293,
+          "end": 356,
+          "start_line": 12,
+          "end_line": 12,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        },
+        {
+          "id": "6405d5633a521b83cdd5",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "5. **收束**：无论成功与否，时间压力改变了主角。他学会了在极端条件下的取舍，也付出了取舍的代价。时钟停了，但某些东西永远改变了。",
+          "start": 357,
+          "end": 424,
+          "start_line": 13,
+          "end_line": 13,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        },
+        {
+          "id": "e46220f904544fd10093",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "- 时间限制没有实质性后果时（缺乏紧迫感）",
+          "start": 1118,
+          "end": 1139,
+          "start_line": 53,
+          "end_line": 53,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        },
+        {
+          "id": "091272ebcad6490eb855",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "- 主角可以轻松在时限内完成任务时（缺乏压力）",
+          "start": 1140,
+          "end": 1163,
+          "start_line": 54,
+          "end_line": 54,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        },
+        {
+          "id": "261b775ff26fd5997b7f",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "- 时间压力仅是背景而非叙事驱动力时（母题错位）",
+          "start": 1164,
+          "end": 1188,
+          "start_line": 55,
+          "end_line": 55,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        },
+        {
+          "id": "b2785c8c6965eb80277d",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "- 故事的核心是情感而非行动时（倒计时母题需要动作感）",
+          "start": 1189,
+          "end": 1216,
+          "start_line": 56,
+          "end_line": 56,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [],
+      "entry_conditions": [
+        {
+          "statement": "1. **触发**：主角收到一个明确的时间限制（炸弹倒计时/人质期限/证据销毁时间/解药有效期），任务的紧迫性瞬间确立。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "34420dfaad852cea0d20"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "possible_changes": [
+        {
+          "statement": "4. **高潮**：倒计时进入最后阶段，主角面临终极抉择——可能无法完成所有目标，必须选择救哪一个。时间耗尽的瞬间，结果揭晓。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "63d607e014c22293207d"
+          ],
+          "enforcement": "none"
+        },
+        {
+          "statement": "5. **收束**：无论成功与否，时间压力改变了主角。他学会了在极端条件下的取舍，也付出了取舍的代价。时钟停了，但某些东西永远改变了。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "6405d5633a521b83cdd5"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "review_status": "annotation_proposed",
+      "pattern_shape": {
+        "value": "persistent_constraint",
+        "status": "annotation_proposed"
+      },
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "structure_outline": [
+        {
+          "text": "1. **触发**：主角收到一个明确的时间限制（炸弹倒计时/人质期限/证据销毁时间/解药有效期），任务的紧迫性瞬间确立。",
+          "source_ref_ids": [
+            "34420dfaad852cea0d20"
+          ]
+        },
+        {
+          "text": "2. **抵达**：主角开始行动，但很快发现任务比想象中复杂——需要的人不在、需要的信息不全、需要的工具缺少。时间在流逝。",
+          "source_ref_ids": [
+            "15b64b939c0279bd1e7c"
+          ]
+        },
+        {
+          "text": "3. **冲突**：时间压力迫使主角做出牺牲——放弃A计划选择B计划，牺牲次要目标保全主要目标，甚至牺牲原则来争取时间。同时，外部阻力（敌人/障碍/意外）不断出现。",
+          "source_ref_ids": [
+            "9d6710c35bad7caf9cfb"
+          ]
+        },
+        {
+          "text": "4. **高潮**：倒计时进入最后阶段，主角面临终极抉择——可能无法完成所有目标，必须选择救哪一个。时间耗尽的瞬间，结果揭晓。",
+          "source_ref_ids": [
+            "63d607e014c22293207d"
+          ]
+        },
+        {
+          "text": "5. **收束**：无论成功与否，时间压力改变了主角。他学会了在极端条件下的取舍，也付出了取舍的代价。时钟停了，但某些东西永远改变了。",
+          "source_ref_ids": [
+            "6405d5633a521b83cdd5"
+          ]
+        }
+      ],
+      "usage_cautions": [
+        {
+          "text": "- 时间限制没有实质性后果时（缺乏紧迫感）",
+          "source_ref_ids": [
+            "e46220f904544fd10093"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 主角可以轻松在时限内完成任务时（缺乏压力）",
+          "source_ref_ids": [
+            "091272ebcad6490eb855"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 时间压力仅是背景而非叙事驱动力时（母题错位）",
+          "source_ref_ids": [
+            "261b775ff26fd5997b7f"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 故事的核心是情感而非行动时（倒计时母题需要动作感）",
+          "source_ref_ids": [
+            "b2785c8c6965eb80277d"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        }
+      ],
+      "sequence_policy": "do_not_assume_numbered_outline_is_event_order",
+      "contains_outcome": true
+    },
+    {
+      "id": "kb:time-pressure:prototype:1",
+      "kind": "situation",
+      "title": "拆弹场景",
+      "definition": "必须在炸弹爆炸前完成拆解，每根线都关乎生死",
+      "source_refs": [
+        {
+          "id": "cf501c82495e49798ed0",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "- **拆弹场景**：必须在炸弹爆炸前完成拆解，每根线都关乎生死",
+          "start": 724,
+          "end": 756,
+          "start_line": 36,
+          "end_line": 36,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        }
+      ],
+      "motif_ids": [
+        "kb:time-pressure"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:time-pressure": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:time-pressure:prototype:2",
+      "kind": "situation",
+      "title": "人质救援",
+      "definition": "绑匪给出最后期限，警方必须在时限内找到人质",
+      "source_refs": [
+        {
+          "id": "7f49943587d520066ed6",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "- **人质救援**：绑匪给出最后期限，警方必须在时限内找到人质",
+          "start": 757,
+          "end": 789,
+          "start_line": 37,
+          "end_line": 37,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        }
+      ],
+      "motif_ids": [
+        "kb:time-pressure"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:time-pressure": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:time-pressure:prototype:3",
+      "kind": "situation",
+      "title": "证据销毁前",
+      "definition": "知道某人即将销毁关键证据，必须在对方行动前获取",
+      "source_refs": [
+        {
+          "id": "2368af574fe43c11296e",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "- **证据销毁前**：知道某人即将销毁关键证据，必须在对方行动前获取",
+          "start": 790,
+          "end": 825,
+          "start_line": 38,
+          "end_line": 38,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        }
+      ],
+      "motif_ids": [
+        "kb:time-pressure"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:time-pressure": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:time-pressure:prototype:4",
+      "kind": "situation",
+      "title": "解药寻找",
+      "definition": "中毒者的生命在倒计时，解药的配方需要在时限内破解",
+      "source_refs": [
+        {
+          "id": "42d1367e686cecdd2341",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "- **解药寻找**：中毒者的生命在倒计时，解药的配方需要在时限内破解",
+          "start": 826,
+          "end": 861,
+          "start_line": 39,
+          "end_line": 39,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        }
+      ],
+      "motif_ids": [
+        "kb:time-pressure"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:time-pressure": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:time-pressure:prototype:5",
+      "kind": "situation",
+      "title": "案件追诉期",
+      "definition": "即将超过追诉时效的悬案，必须在最后期限前找到真凶",
+      "source_refs": [
+        {
+          "id": "df957f767ca1953a3127",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "- **案件追诉期**：即将超过追诉时效的悬案，必须在最后期限前找到真凶",
+          "start": 862,
+          "end": 898,
+          "start_line": 40,
+          "end_line": 40,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        }
+      ],
+      "motif_ids": [
+        "kb:time-pressure"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:time-pressure": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:time-pressure:prototype:6",
+      "kind": "situation",
+      "title": "逃离密室",
+      "definition": "被困在即将被淹没/坍塌的空间，必须找到出路",
+      "source_refs": [
+        {
+          "id": "9549de9b9bec4b8d8f63",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "- **逃离密室**：被困在即将被淹没/坍塌的空间，必须找到出路",
+          "start": 899,
+          "end": 931,
+          "start_line": 41,
+          "end_line": 41,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        }
+      ],
+      "motif_ids": [
+        "kb:time-pressure"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:time-pressure": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:road-of-trials",
+      "kind": "motif",
+      "title": "试炼之路 (Road of Trials)",
+      "definition": "穿越阈限后，英雄在变幻莫测的神秘境地中经受一系列连续的考验，每个考验都剥夺他的一部分旧我，逐步净化灵魂、积蓄力量，为最终的启示做好准备。",
+      "source_refs": [
+        {
+          "id": "f40ff50ddc11ccd7b984",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "穿越阈限后，英雄在变幻莫测的神秘境地中经受一系列连续的考验，每个考验都剥夺他的一部分旧我，逐步净化灵魂、积蓄力量，为最终的启示做好准备。",
+          "start": 38,
+          "end": 106,
+          "start_line": 5,
+          "end_line": 5,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        },
+        {
+          "id": "32a0e561ec614fe1d886",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "1. **进入秘境**：英雄跨越阈限后发现自己身处充满未知力量的领域",
+          "start": 119,
+          "end": 153,
+          "start_line": 9,
+          "end_line": 9,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        },
+        {
+          "id": "926989180f9712fc9fb7",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "2. **连续考验**：一系列递进的困难任务——分拣混杂之物、取得不可能之物、从阴间取回宝物",
+          "start": 154,
+          "end": 200,
+          "start_line": 10,
+          "end_line": 10,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        },
+        {
+          "id": "9dc0bd296c56191ef9b0",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "3. **超自然援助**：在最危险的时刻，导师、精灵或动物帮助者出现给予关键指引",
+          "start": 201,
+          "end": 241,
+          "start_line": 11,
+          "end_line": 11,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        },
+        {
+          "id": "e54c7d13761a8d827da7",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "4. **旧我的剥离**：每通过一个考验，英雄失去一层旧的身份认同和执着",
+          "start": 242,
+          "end": 278,
+          "start_line": 12,
+          "end_line": 12,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        },
+        {
+          "id": "01fe0a3665b837b3bafb",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "5. **到达最低点**：试炼最终将英雄带到周期的最低处，面临终极考验",
+          "start": 279,
+          "end": 314,
+          "start_line": 13,
+          "end_line": 13,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        },
+        {
+          "id": "5159e96c58b62b974e3c",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "- 英雄轻易获得成功而无需真正付出代价",
+          "start": 968,
+          "end": 987,
+          "start_line": 51,
+          "end_line": 51,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        },
+        {
+          "id": "e8ec09107890adb60aa1",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "- 考验之间缺乏内在的递进逻辑",
+          "start": 988,
+          "end": 1003,
+          "start_line": 52,
+          "end_line": 52,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        },
+        {
+          "id": "02dc24a1d29041c7f05d",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "- 试炼仅是外部动作场面而非灵魂的转变",
+          "start": 1004,
+          "end": 1023,
+          "start_line": 53,
+          "end_line": 53,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        },
+        {
+          "id": "79e7fcf7290bfeea6907",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "- 英雄在考验中未失去任何旧我的执着",
+          "start": 1024,
+          "end": 1042,
+          "start_line": 54,
+          "end_line": 54,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [],
+      "entry_conditions": [
+        {
+          "statement": "1. **进入秘境**：英雄跨越阈限后发现自己身处充满未知力量的领域",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "32a0e561ec614fe1d886"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "possible_changes": [
+        {
+          "statement": "4. **旧我的剥离**：每通过一个考验，英雄失去一层旧的身份认同和执着",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "e54c7d13761a8d827da7"
+          ],
+          "enforcement": "none"
+        },
+        {
+          "statement": "5. **到达最低点**：试炼最终将英雄带到周期的最低处，面临终极考验",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "01fe0a3665b837b3bafb"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "review_status": "annotation_proposed",
+      "pattern_shape": {
+        "value": "repeated_trials",
+        "status": "annotation_proposed"
+      },
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "structure_outline": [
+        {
+          "text": "1. **进入秘境**：英雄跨越阈限后发现自己身处充满未知力量的领域",
+          "source_ref_ids": [
+            "32a0e561ec614fe1d886"
+          ]
+        },
+        {
+          "text": "2. **连续考验**：一系列递进的困难任务——分拣混杂之物、取得不可能之物、从阴间取回宝物",
+          "source_ref_ids": [
+            "926989180f9712fc9fb7"
+          ]
+        },
+        {
+          "text": "3. **超自然援助**：在最危险的时刻，导师、精灵或动物帮助者出现给予关键指引",
+          "source_ref_ids": [
+            "9dc0bd296c56191ef9b0"
+          ]
+        },
+        {
+          "text": "4. **旧我的剥离**：每通过一个考验，英雄失去一层旧的身份认同和执着",
+          "source_ref_ids": [
+            "e54c7d13761a8d827da7"
+          ]
+        },
+        {
+          "text": "5. **到达最低点**：试炼最终将英雄带到周期的最低处，面临终极考验",
+          "source_ref_ids": [
+            "01fe0a3665b837b3bafb"
+          ]
+        }
+      ],
+      "usage_cautions": [
+        {
+          "text": "- 英雄轻易获得成功而无需真正付出代价",
+          "source_ref_ids": [
+            "5159e96c58b62b974e3c"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 考验之间缺乏内在的递进逻辑",
+          "source_ref_ids": [
+            "e8ec09107890adb60aa1"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 试炼仅是外部动作场面而非灵魂的转变",
+          "source_ref_ids": [
+            "02dc24a1d29041c7f05d"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 英雄在考验中未失去任何旧我的执着",
+          "source_ref_ids": [
+            "79e7fcf7290bfeea6907"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        }
+      ],
+      "sequence_policy": "do_not_assume_numbered_outline_is_event_order",
+      "contains_outcome": true
+    },
+    {
+      "id": "kb:road-of-trials:prototype:1",
+      "kind": "case",
+      "title": "塞姬的任务",
+      "definition": "维纳斯交给塞姬一系列不可能的任务——分拣谷物、取金羊毛、取冥府之水",
+      "source_refs": [
+        {
+          "id": "3c079dd4ef86328d3586",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "- **塞姬的任务**：维纳斯交给塞姬一系列不可能的任务——分拣谷物、取金羊毛、取冥府之水",
+          "start": 595,
+          "end": 640,
+          "start_line": 35,
+          "end_line": 35,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        }
+      ],
+      "motif_ids": [
+        "kb:road-of-trials"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:road-of-trials": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:road-of-trials:prototype:2",
+      "kind": "case",
+      "title": "萨满的灵魂之旅",
+      "definition": "萨满进入死者王国寻找病人遗失的灵魂",
+      "source_refs": [
+        {
+          "id": "44ffb1d2007618b5ae3c",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "- **萨满的灵魂之旅**：萨满进入死者王国寻找病人遗失的灵魂",
+          "start": 641,
+          "end": 672,
+          "start_line": 36,
+          "end_line": 36,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        }
+      ],
+      "motif_ids": [
+        "kb:road-of-trials"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:road-of-trials": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:road-of-trials:prototype:3",
+      "kind": "case",
+      "title": "西游记的八十一难",
+      "definition": "师徒四人不断遭遇妖怪、困境，每一难都是对执念的考验",
+      "source_refs": [
+        {
+          "id": "ef3ff19febdb006cfdab",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "- **西游记的八十一难**：师徒四人不断遭遇妖怪、困境，每一难都是对执念的考验",
+          "start": 673,
+          "end": 713,
+          "start_line": 37,
+          "end_line": 37,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        }
+      ],
+      "motif_ids": [
+        "kb:road-of-trials"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:road-of-trials": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:road-of-trials:prototype:4",
+      "kind": "case",
+      "title": "地狱之旅",
+      "definition": "埃涅阿斯渡过冥河，面对地狱的层层考验",
+      "source_refs": [
+        {
+          "id": "205961eea1c44bb403e1",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "- **地狱之旅**：埃涅阿斯渡过冥河，面对地狱的层层考验",
+          "start": 714,
+          "end": 743,
+          "start_line": 38,
+          "end_line": 38,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        }
+      ],
+      "motif_ids": [
+        "kb:road-of-trials"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:road-of-trials": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:road-of-trials:prototype:5",
+      "kind": "case",
+      "title": "禅宗公案",
+      "definition": "修行者面对看似无解的悖论，直到理性思维被瓦解",
+      "source_refs": [
+        {
+          "id": "4c83701c30cfbb8ec1f8",
+          "source_path": "assets/motif_library/road-of-trials.md",
+          "quote": "- **禅宗公案**：修行者面对看似无解的悖论，直到理性思维被瓦解",
+          "start": 744,
+          "end": 777,
+          "start_line": 39,
+          "end_line": 39,
+          "source_sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7"
+        }
+      ],
+      "motif_ids": [
+        "kb:road-of-trials"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:road-of-trials": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:story-as-shield",
+      "kind": "motif",
+      "title": "故事救命 (Story as Shield)",
+      "definition": "一个即将被处死的人，通过讲述一系列精彩的故事来拖延时间、打动审判者、启发真相，最终在故事讲完之前获得赦免或身世大白。",
+      "source_refs": [
+        {
+          "id": "2b449c208d00f9d386d3",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "一个即将被处死的人，通过讲述一系列精彩的故事来拖延时间、打动审判者、启发真相，最终在故事讲完之前获得赦免或身世大白。",
+          "start": 38,
+          "end": 96,
+          "start_line": 4,
+          "end_line": 4,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        },
+        {
+          "id": "fa92624118d565c12a7d",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "1. **冤屈临刑**：主角被诬陷或误解，国王/掌权者下令处死，刽子手已待命。",
+          "start": 109,
+          "end": 148,
+          "start_line": 8,
+          "end_line": 8,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        },
+        {
+          "id": "7526e3e9d7f13330d274",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "2. **最后请求**：主角请求在死前讲一个故事作为最后的遗言，掌权者出于好奇或怜悯同意。",
+          "start": 149,
+          "end": 194,
+          "start_line": 9,
+          "end_line": 9,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        },
+        {
+          "id": "c38caabefb6b24e1783d",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "3. **故事嵌套**：主角讲的故事中包含另一个故事，故事与自己的处境形成巧妙的镜像或隐喻。",
+          "start": 195,
+          "end": 241,
+          "start_line": 10,
+          "end_line": 10,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        },
+        {
+          "id": "5964df71a490f22b15ce",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "4. **每日延期**：第一天讲完故事，掌权者被吸引，下令\"明天再杀\"；第二天再讲一个，又延期；如此反复多日。",
+          "start": 242,
+          "end": 297,
+          "start_line": 11,
+          "end_line": 11,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        },
+        {
+          "id": "33e4479d6eabc7c4db48",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "5. **真相浮现**：在最后一个故事讲完之前，关键证人出现、物证被发现、或掌权者终于领悟故事的寓意，主角获救。",
+          "start": 298,
+          "end": 354,
+          "start_line": 12,
+          "end_line": 12,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        },
+        {
+          "id": "b49a872dcce49c2b06cd",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "6. **反转结局**：诬陷者被揭穿和惩罚，主角不仅获救，还可能获得更高的地位。",
+          "start": 355,
+          "end": 395,
+          "start_line": 13,
+          "end_line": 13,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        },
+        {
+          "id": "566894c5de77de30b62a",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "- 主角没有被诬陷时（真正的罪犯讲故事不构成\"救命\"）",
+          "start": 1059,
+          "end": 1086,
+          "start_line": 51,
+          "end_line": 51,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        },
+        {
+          "id": "1dafc125f295692f5320",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "- 掌权者不听故事时（缺乏\"听者\"的转变）",
+          "start": 1087,
+          "end": 1108,
+          "start_line": 52,
+          "end_line": 52,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        },
+        {
+          "id": "9aae94e880b6edf97ee7",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "- 故事与主角处境没有镜像关系时（纯粹的娱乐不构成\"盾牌\"）",
+          "start": 1109,
+          "end": 1139,
+          "start_line": 53,
+          "end_line": 53,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        },
+        {
+          "id": "44ad0d0e314cb07c3065",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "- 主角在第一个故事讲完前就被杀时（缺乏延迟的张力）",
+          "start": 1140,
+          "end": 1166,
+          "start_line": 54,
+          "end_line": 54,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [],
+      "entry_conditions": [
+        {
+          "statement": "1. **冤屈临刑**：主角被诬陷或误解，国王/掌权者下令处死，刽子手已待命。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "fa92624118d565c12a7d"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "possible_changes": [
+        {
+          "statement": "5. **真相浮现**：在最后一个故事讲完之前，关键证人出现、物证被发现、或掌权者终于领悟故事的寓意，主角获救。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "33e4479d6eabc7c4db48"
+          ],
+          "enforcement": "none"
+        },
+        {
+          "statement": "6. **反转结局**：诬陷者被揭穿和惩罚，主角不仅获救，还可能获得更高的地位。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "b49a872dcce49c2b06cd"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "review_status": "annotation_proposed",
+      "pattern_shape": {
+        "value": "repeated_delay",
+        "status": "annotation_proposed"
+      },
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "structure_outline": [
+        {
+          "text": "1. **冤屈临刑**：主角被诬陷或误解，国王/掌权者下令处死，刽子手已待命。",
+          "source_ref_ids": [
+            "fa92624118d565c12a7d"
+          ]
+        },
+        {
+          "text": "2. **最后请求**：主角请求在死前讲一个故事作为最后的遗言，掌权者出于好奇或怜悯同意。",
+          "source_ref_ids": [
+            "7526e3e9d7f13330d274"
+          ]
+        },
+        {
+          "text": "3. **故事嵌套**：主角讲的故事中包含另一个故事，故事与自己的处境形成巧妙的镜像或隐喻。",
+          "source_ref_ids": [
+            "c38caabefb6b24e1783d"
+          ]
+        },
+        {
+          "text": "4. **每日延期**：第一天讲完故事，掌权者被吸引，下令\"明天再杀\"；第二天再讲一个，又延期；如此反复多日。",
+          "source_ref_ids": [
+            "5964df71a490f22b15ce"
+          ]
+        },
+        {
+          "text": "5. **真相浮现**：在最后一个故事讲完之前，关键证人出现、物证被发现、或掌权者终于领悟故事的寓意，主角获救。",
+          "source_ref_ids": [
+            "33e4479d6eabc7c4db48"
+          ]
+        },
+        {
+          "text": "6. **反转结局**：诬陷者被揭穿和惩罚，主角不仅获救，还可能获得更高的地位。",
+          "source_ref_ids": [
+            "b49a872dcce49c2b06cd"
+          ]
+        }
+      ],
+      "usage_cautions": [
+        {
+          "text": "- 主角没有被诬陷时（真正的罪犯讲故事不构成\"救命\"）",
+          "source_ref_ids": [
+            "566894c5de77de30b62a"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 掌权者不听故事时（缺乏\"听者\"的转变）",
+          "source_ref_ids": [
+            "1dafc125f295692f5320"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 故事与主角处境没有镜像关系时（纯粹的娱乐不构成\"盾牌\"）",
+          "source_ref_ids": [
+            "9aae94e880b6edf97ee7"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 主角在第一个故事讲完前就被杀时（缺乏延迟的张力）",
+          "source_ref_ids": [
+            "44ad0d0e314cb07c3065"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        }
+      ],
+      "sequence_policy": "do_not_assume_numbered_outline_is_event_order",
+      "contains_outcome": true
+    },
+    {
+      "id": "kb:story-as-shield:prototype:1",
+      "kind": "case",
+      "title": "波斯弃王子讲故事",
+      "definition": "巴赫堤亚尔被诬陷醉闯国王寝宫，每天讲一个故事自救，讲了十个故事后身世大白",
+      "source_refs": [
+        {
+          "id": "0dbf20ff1d2f9bc20b2a",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "- **波斯弃王子讲故事**：巴赫堤亚尔被诬陷醉闯国王寝宫，每天讲一个故事自救，讲了十个故事后身世大白",
+          "start": 678,
+          "end": 729,
+          "start_line": 35,
+          "end_line": 35,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        },
+        {
+          "id": "791f6f6ebd67cd42072d",
+          "source_path": "assets/motif_library/false-accusation.md",
+          "quote": "- **《巴赫堤亚尔的故事》**：波斯故事，宠臣被诬陷醉闯国王寝宫，讲十个故事自救",
+          "start": 904,
+          "end": 945,
+          "start_line": 44,
+          "end_line": 44,
+          "source_sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33"
+        }
+      ],
+      "motif_ids": [
+        "kb:story-as-shield",
+        "kb:false-accusation"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:story-as-shield": "source_section_membership",
+        "kb:false-accusation": "explicit_same_named_case_in_source"
+      }
+    },
+    {
+      "id": "kb:story-as-shield:prototype:2",
+      "kind": "case",
+      "title": "马来王子讲故事",
+      "definition": "巴赫迪雅尔被大臣栽赃，讲四个故事自救，最终父子相认",
+      "source_refs": [
+        {
+          "id": "048767993da102abdffc",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "- **马来王子讲故事**：巴赫迪雅尔被大臣栽赃，讲四个故事自救，最终父子相认",
+          "start": 730,
+          "end": 769,
+          "start_line": 36,
+          "end_line": 36,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        }
+      ],
+      "motif_ids": [
+        "kb:story-as-shield"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:story-as-shield": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:story-as-shield:prototype:3",
+      "kind": "case",
+      "title": "一千零一夜",
+      "definition": "山鲁佐德用故事拖延处刑，最终改变国王",
+      "source_refs": [
+        {
+          "id": "5c6c70bad22a357e4636",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "- **一千零一夜**：山鲁佐德用故事拖延处刑，最终改变国王",
+          "start": 770,
+          "end": 800,
+          "start_line": 37,
+          "end_line": 37,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        }
+      ],
+      "motif_ids": [
+        "kb:story-as-shield"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:story-as-shield": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:story-as-shield:prototype:4",
+      "kind": "case",
+      "title": "印度五卷书",
+      "definition": "毗湿奴笈多用故事教育王子",
+      "source_refs": [
+        {
+          "id": "223cb42eda102bc0d24b",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "- **印度五卷书**：毗湿奴笈多用故事教育王子",
+          "start": 801,
+          "end": 825,
+          "start_line": 38,
+          "end_line": 38,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        }
+      ],
+      "motif_ids": [
+        "kb:story-as-shield"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:story-as-shield": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:story-as-shield:prototype:5",
+      "kind": "case",
+      "title": "列那狐的故事",
+      "definition": "列那狐用巧言脱罪",
+      "source_refs": [
+        {
+          "id": "a5dcf5facb569609675a",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "- **列那狐的故事**：列那狐用巧言脱罪",
+          "start": 826,
+          "end": 847,
+          "start_line": 39,
+          "end_line": 39,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        }
+      ],
+      "motif_ids": [
+        "kb:story-as-shield"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:story-as-shield": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:identity-mask",
+      "kind": "motif",
+      "title": "身份面具 (Identity Mask)",
+      "definition": "主角隐藏真实身份生活，面具逐渐与真实自我融合，直到他分不清哪个才是真正的自己。",
+      "source_refs": [
+        {
+          "id": "b4171851eb42af7ac1fc",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "主角隐藏真实身份生活，面具逐渐与真实自我融合，直到他分不清哪个才是真正的自己。",
+          "start": 37,
+          "end": 76,
+          "start_line": 5,
+          "end_line": 5,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        },
+        {
+          "id": "9dd932501248c78fb778",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "1. **触发**：主角因某种原因（逃避追杀/执行任务/自我保护）必须以另一个身份生活。",
+          "start": 89,
+          "end": 133,
+          "start_line": 9,
+          "end_line": 9,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        },
+        {
+          "id": "9f8258ddfcee6292bd9a",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "2. **抵达**：新身份的日常逐渐展开，主角开始适应——甚至享受——这个\"角色\"。他发现自己比真实身份更自在。",
+          "start": 134,
+          "end": 190,
+          "start_line": 10,
+          "end_line": 10,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        },
+        {
+          "id": "ae31cdcd213b9144af1f",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "3. **冲突**：真实身份的线索开始浮现，有人在追查他的过去。同时，新身份下的关系（爱人/朋友/同事）越来越真实，他害怕失去这一切。",
+          "start": 191,
+          "end": 258,
+          "start_line": 11,
+          "end_line": 11,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        },
+        {
+          "id": "0884e79ebc60e0341a44",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "4. **高潮**：面具被撕开的瞬间——可能是敌人找到他，也可能是他主动选择暴露。新旧身份的冲突达到顶点：他必须选择成为谁。",
+          "start": 259,
+          "end": 321,
+          "start_line": 12,
+          "end_line": 12,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        },
+        {
+          "id": "5f08aa6e512c0aee30b0",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "5. **收束**：主角意识到身份不是固定的面具，而是流动的选择。他可能两个身份都失去，也可能两个身份都保留——但代价已经付出。",
+          "start": 322,
+          "end": 386,
+          "start_line": 13,
+          "end_line": 13,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        },
+        {
+          "id": "3c140685675ca2c2206c",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "- 主角对自己的身份毫无困惑时（缺乏内心冲突）",
+          "start": 1069,
+          "end": 1092,
+          "start_line": 52,
+          "end_line": 52,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        },
+        {
+          "id": "db2b292a7eaabc97076b",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "- 面具被揭穿后没有实质性后果时（缺乏戏剧性）",
+          "start": 1093,
+          "end": 1116,
+          "start_line": 53,
+          "end_line": 53,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        },
+        {
+          "id": "e3f8bba1192d7982ea21",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "- 故事不涉及身份认同的哲学探讨时（仅作为悬疑手法而非母题）",
+          "start": 1117,
+          "end": 1147,
+          "start_line": 54,
+          "end_line": 54,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        },
+        {
+          "id": "487b54c74fd5a8065b49",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "- 身份切换过于轻松、没有代价时（缺乏张力）",
+          "start": 1148,
+          "end": 1170,
+          "start_line": 55,
+          "end_line": 55,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [],
+      "entry_conditions": [
+        {
+          "statement": "1. **触发**：主角因某种原因（逃避追杀/执行任务/自我保护）必须以另一个身份生活。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "9dd932501248c78fb778"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "possible_changes": [
+        {
+          "statement": "4. **高潮**：面具被撕开的瞬间——可能是敌人找到他，也可能是他主动选择暴露。新旧身份的冲突达到顶点：他必须选择成为谁。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "0884e79ebc60e0341a44"
+          ],
+          "enforcement": "none"
+        },
+        {
+          "statement": "5. **收束**：主角意识到身份不是固定的面具，而是流动的选择。他可能两个身份都失去，也可能两个身份都保留——但代价已经付出。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "5f08aa6e512c0aee30b0"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "review_status": "annotation_proposed",
+      "pattern_shape": {
+        "value": "identity_conflict",
+        "status": "annotation_proposed"
+      },
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "structure_outline": [
+        {
+          "text": "1. **触发**：主角因某种原因（逃避追杀/执行任务/自我保护）必须以另一个身份生活。",
+          "source_ref_ids": [
+            "9dd932501248c78fb778"
+          ]
+        },
+        {
+          "text": "2. **抵达**：新身份的日常逐渐展开，主角开始适应——甚至享受——这个\"角色\"。他发现自己比真实身份更自在。",
+          "source_ref_ids": [
+            "9f8258ddfcee6292bd9a"
+          ]
+        },
+        {
+          "text": "3. **冲突**：真实身份的线索开始浮现，有人在追查他的过去。同时，新身份下的关系（爱人/朋友/同事）越来越真实，他害怕失去这一切。",
+          "source_ref_ids": [
+            "ae31cdcd213b9144af1f"
+          ]
+        },
+        {
+          "text": "4. **高潮**：面具被撕开的瞬间——可能是敌人找到他，也可能是他主动选择暴露。新旧身份的冲突达到顶点：他必须选择成为谁。",
+          "source_ref_ids": [
+            "0884e79ebc60e0341a44"
+          ]
+        },
+        {
+          "text": "5. **收束**：主角意识到身份不是固定的面具，而是流动的选择。他可能两个身份都失去，也可能两个身份都保留——但代价已经付出。",
+          "source_ref_ids": [
+            "5f08aa6e512c0aee30b0"
+          ]
+        }
+      ],
+      "usage_cautions": [
+        {
+          "text": "- 主角对自己的身份毫无困惑时（缺乏内心冲突）",
+          "source_ref_ids": [
+            "3c140685675ca2c2206c"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 面具被揭穿后没有实质性后果时（缺乏戏剧性）",
+          "source_ref_ids": [
+            "db2b292a7eaabc97076b"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 故事不涉及身份认同的哲学探讨时（仅作为悬疑手法而非母题）",
+          "source_ref_ids": [
+            "e3f8bba1192d7982ea21"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 身份切换过于轻松、没有代价时（缺乏张力）",
+          "source_ref_ids": [
+            "487b54c74fd5a8065b49"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        }
+      ],
+      "sequence_policy": "do_not_assume_numbered_outline_is_event_order",
+      "contains_outcome": true
+    },
+    {
+      "id": "kb:identity-mask:prototype:1",
+      "kind": "situation",
+      "title": "卧底警察",
+      "definition": "深入犯罪组织，逐渐被犯罪世界的生活方式同化",
+      "source_refs": [
+        {
+          "id": "d714edbba0adc19ec08e",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "- **卧底警察**：深入犯罪组织，逐渐被犯罪世界的生活方式同化",
+          "start": 698,
+          "end": 730,
+          "start_line": 36,
+          "end_line": 36,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        }
+      ],
+      "motif_ids": [
+        "kb:identity-mask"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:identity-mask": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:identity-mask:prototype:2",
+      "kind": "situation",
+      "title": "逃亡者",
+      "definition": "背负过去的人用新身份重新开始，旧身份的幽灵如影随形",
+      "source_refs": [
+        {
+          "id": "bd4ada2166d3cfeb1426",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "- **逃亡者**：背负过去的人用新身份重新开始，旧身份的幽灵如影随形",
+          "start": 731,
+          "end": 766,
+          "start_line": 37,
+          "end_line": 37,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        }
+      ],
+      "motif_ids": [
+        "kb:identity-mask"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:identity-mask": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:identity-mask:prototype:3",
+      "kind": "situation",
+      "title": "商业间谍",
+      "definition": "以假身份接近目标企业，却与同事建立了真实的情感",
+      "source_refs": [
+        {
+          "id": "69feb7264420f126f08e",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "- **商业间谍**：以假身份接近目标企业，却与同事建立了真实的情感",
+          "start": 767,
+          "end": 801,
+          "start_line": 38,
+          "end_line": 38,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        }
+      ],
+      "motif_ids": [
+        "kb:identity-mask"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:identity-mask": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:identity-mask:prototype:4",
+      "kind": "situation",
+      "title": "证人保护",
+      "definition": "被安排新身份的证人发现，新生活比旧生活更值得珍惜",
+      "source_refs": [
+        {
+          "id": "67e80481d1f3493dbb30",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "- **证人保护**：被安排新身份的证人发现，新生活比旧生活更值得珍惜",
+          "start": 802,
+          "end": 837,
+          "start_line": 39,
+          "end_line": 39,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        }
+      ],
+      "motif_ids": [
+        "kb:identity-mask"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:identity-mask": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:identity-mask:prototype:5",
+      "kind": "situation",
+      "title": "网络身份",
+      "definition": "线上与线下身份的巨大反差，最终被某个线下事件打破",
+      "source_refs": [
+        {
+          "id": "786ed73f09cf715b2b03",
+          "source_path": "assets/motif_library/identity-mask.md",
+          "quote": "- **网络身份**：线上与线下身份的巨大反差，最终被某个线下事件打破",
+          "start": 838,
+          "end": 873,
+          "start_line": 40,
+          "end_line": 40,
+          "source_sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8"
+        }
+      ],
+      "motif_ids": [
+        "kb:identity-mask"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:identity-mask": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:prophecy-defied",
+      "kind": "motif",
+      "title": "预言难逃 (Prophecy Defied)",
+      "definition": "掌权者得知一个将颠覆自己命运的预言，竭尽全力阻止其发生，却恰恰因为自己的阻止行为而推动预言成真。",
+      "source_refs": [
+        {
+          "id": "2e7a293788847fc1a46f",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "掌权者得知一个将颠覆自己命运的预言，竭尽全力阻止其发生，却恰恰因为自己的阻止行为而推动预言成真。",
+          "start": 38,
+          "end": 86,
+          "start_line": 4,
+          "end_line": 4,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        },
+        {
+          "id": "baa14d204528926dd80d",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "1. **预言降临**：先知、魔法师或神谕宣布一个可怕的预言——某人将取代王位、某孩子将弑父、某个王朝将终结。",
+          "start": 99,
+          "end": 154,
+          "start_line": 8,
+          "end_line": 8,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        },
+        {
+          "id": "87b0220a59a07f31c657",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "2. **暴力阻断**：掌权者采取极端手段试图阻止预言：杀死所有符合条件的人、囚禁孕妇、遗弃婴儿、封锁消息。",
+          "start": 155,
+          "end": 209,
+          "start_line": 9,
+          "end_line": 9,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        },
+        {
+          "id": "8d5ceea1ec2f20db7a13",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "3. **命运偏转**：预言并未被阻止，反而以意想不到的方式绕过了所有障碍——被遗弃的婴儿存活、被杀的人死而复生、替代者出现。",
+          "start": 210,
+          "end": 273,
+          "start_line": 10,
+          "end_line": 10,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        },
+        {
+          "id": "da839cfec31578f65803",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "4. **预言成真**：多年后，掌权者最害怕的事情发生，而这一切恰恰是他自己当年阻断行为的直接后果。",
+          "start": 274,
+          "end": 324,
+          "start_line": 11,
+          "end_line": 11,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        },
+        {
+          "id": "eb8fb9f302f5eaafee62",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "5. **宿命回响**：掌权者面对不可逆转的命运，或哀叹，或接受，或在绝望中走向毁灭。",
+          "start": 325,
+          "end": 368,
+          "start_line": 12,
+          "end_line": 12,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        },
+        {
+          "id": "fb0849e1b1877cdca663",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "- 预言被成功阻止时（缺乏宿命的悲剧性）",
+          "start": 1171,
+          "end": 1191,
+          "start_line": 49,
+          "end_line": 49,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        },
+        {
+          "id": "1c82a630d82d3bcbc8ae",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "- 主角主动接受并拥抱预言时（没有\"对抗\"就没有戏剧张力）",
+          "start": 1192,
+          "end": 1221,
+          "start_line": 50,
+          "end_line": 50,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        },
+        {
+          "id": "79e794625a43279d908d",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "- 预言是模糊的、可以有多种解释时（需要明确的\"试图阻止却促成\"的结构）",
+          "start": 1222,
+          "end": 1258,
+          "start_line": 51,
+          "end_line": 51,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        },
+        {
+          "id": "2a8f1e06f23b0f64f84a",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "- 纯粹的命定叙事，没有掌权者的挣扎时",
+          "start": 1259,
+          "end": 1278,
+          "start_line": 52,
+          "end_line": 52,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [],
+      "entry_conditions": [
+        {
+          "statement": "1. **预言降临**：先知、魔法师或神谕宣布一个可怕的预言——某人将取代王位、某孩子将弑父、某个王朝将终结。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "baa14d204528926dd80d"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "possible_changes": [
+        {
+          "statement": "4. **预言成真**：多年后，掌权者最害怕的事情发生，而这一切恰恰是他自己当年阻断行为的直接后果。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "da839cfec31578f65803"
+          ],
+          "enforcement": "none"
+        },
+        {
+          "statement": "5. **宿命回响**：掌权者面对不可逆转的命运，或哀叹，或接受，或在绝望中走向毁灭。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "eb8fb9f302f5eaafee62"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "review_status": "annotation_proposed",
+      "pattern_shape": {
+        "value": "self_fulfilling_causation",
+        "status": "annotation_proposed"
+      },
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "structure_outline": [
+        {
+          "text": "1. **预言降临**：先知、魔法师或神谕宣布一个可怕的预言——某人将取代王位、某孩子将弑父、某个王朝将终结。",
+          "source_ref_ids": [
+            "baa14d204528926dd80d"
+          ]
+        },
+        {
+          "text": "2. **暴力阻断**：掌权者采取极端手段试图阻止预言：杀死所有符合条件的人、囚禁孕妇、遗弃婴儿、封锁消息。",
+          "source_ref_ids": [
+            "87b0220a59a07f31c657"
+          ]
+        },
+        {
+          "text": "3. **命运偏转**：预言并未被阻止，反而以意想不到的方式绕过了所有障碍——被遗弃的婴儿存活、被杀的人死而复生、替代者出现。",
+          "source_ref_ids": [
+            "8d5ceea1ec2f20db7a13"
+          ]
+        },
+        {
+          "text": "4. **预言成真**：多年后，掌权者最害怕的事情发生，而这一切恰恰是他自己当年阻断行为的直接后果。",
+          "source_ref_ids": [
+            "da839cfec31578f65803"
+          ]
+        },
+        {
+          "text": "5. **宿命回响**：掌权者面对不可逆转的命运，或哀叹，或接受，或在绝望中走向毁灭。",
+          "source_ref_ids": [
+            "eb8fb9f302f5eaafee62"
+          ]
+        }
+      ],
+      "usage_cautions": [
+        {
+          "text": "- 预言被成功阻止时（缺乏宿命的悲剧性）",
+          "source_ref_ids": [
+            "fb0849e1b1877cdca663"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 主角主动接受并拥抱预言时（没有\"对抗\"就没有戏剧张力）",
+          "source_ref_ids": [
+            "1c82a630d82d3bcbc8ae"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 预言是模糊的、可以有多种解释时（需要明确的\"试图阻止却促成\"的结构）",
+          "source_ref_ids": [
+            "79e794625a43279d908d"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 纯粹的命定叙事，没有掌权者的挣扎时",
+          "source_ref_ids": [
+            "2a8f1e06f23b0f64f84a"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        }
+      ],
+      "sequence_policy": "do_not_assume_numbered_outline_is_event_order",
+      "contains_outcome": true
+    },
+    {
+      "id": "kb:prophecy-defied:prototype:1",
+      "kind": "situation",
+      "title": "弑父预言",
+      "definition": "预言说儿子将杀死父亲，父亲遗弃婴儿，婴儿长大后无意中弑父（《俄狄甫斯》）",
+      "source_refs": [
+        {
+          "id": "687a9b0724c88abc176a",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "- **弑父预言**：预言说儿子将杀死父亲，父亲遗弃婴儿，婴儿长大后无意中弑父（《俄狄甫斯》）",
+          "start": 665,
+          "end": 712,
+          "start_line": 33,
+          "end_line": 33,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        }
+      ],
+      "motif_ids": [
+        "kb:prophecy-defied"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:prophecy-defied": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:prophecy-defied:prototype:2",
+      "kind": "situation",
+      "title": "王朝更替预言",
+      "definition": "法老得知三胞胎将建立新王朝，搜捕所有孕妇，预言依然实现（《法老和魔法师的故事》）",
+      "source_refs": [
+        {
+          "id": "2bab71f5c0c485db029a",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "- **王朝更替预言**：法老得知三胞胎将建立新王朝，搜捕所有孕妇，预言依然实现（《法老和魔法师的故事》）",
+          "start": 713,
+          "end": 766,
+          "start_line": 34,
+          "end_line": 34,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        }
+      ],
+      "motif_ids": [
+        "kb:prophecy-defied"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:prophecy-defied": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:prophecy-defied:prototype:3",
+      "kind": "situation",
+      "title": "篡位预言",
+      "definition": "国王得知预言中的孩子将取代自己，试图消灭，孩子却在异乡长大后回来夺位（多文化共通）",
+      "source_refs": [
+        {
+          "id": "e0ee1fb0cc3f7a580da9",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "- **篡位预言**：国王得知预言中的孩子将取代自己，试图消灭，孩子却在异乡长大后回来夺位（多文化共通）",
+          "start": 767,
+          "end": 819,
+          "start_line": 35,
+          "end_line": 35,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        }
+      ],
+      "motif_ids": [
+        "kb:prophecy-defied"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:prophecy-defied": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:prophecy-defied:prototype:4",
+      "kind": "situation",
+      "title": "死亡预言",
+      "definition": "英雄得知自己将死于某地，刻意回避，却偏偏走向那个地方（阿喀琉斯之踵）",
+      "source_refs": [
+        {
+          "id": "69dfac9ce4c69513edc3",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "- **死亡预言**：英雄得知自己将死于某地，刻意回避，却偏偏走向那个地方（阿喀琉斯之踵）",
+          "start": 820,
+          "end": 865,
+          "start_line": 36,
+          "end_line": 36,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        }
+      ],
+      "motif_ids": [
+        "kb:prophecy-defied"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:prophecy-defied": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:prophecy-defied:prototype:5",
+      "kind": "situation",
+      "title": "神子降生预言",
+      "definition": "暴君得知神之子将降生，屠杀所有婴儿，婴儿却奇迹般存活（希律王与耶稣）",
+      "source_refs": [
+        {
+          "id": "cf70f4b3e74bc0ad7de0",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "- **神子降生预言**：暴君得知神之子将降生，屠杀所有婴儿，婴儿却奇迹般存活（希律王与耶稣）",
+          "start": 866,
+          "end": 913,
+          "start_line": 37,
+          "end_line": 37,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        }
+      ],
+      "motif_ids": [
+        "kb:prophecy-defied"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:prophecy-defied": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:race-against-dawn",
+      "kind": "motif",
+      "title": "一夜之功 (Race Against Dawn)",
+      "definition": "神仙或鬼魂必须在一夜之间完成一项巨大的工程（建塔、砌墙、造楼梯），但在最后时刻公鸡提前打鸣，功亏一篑——永远留下了一半未完成的工程。",
+      "source_refs": [
+        {
+          "id": "3b3e9d932f7f10e3d81a",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "神仙或鬼魂必须在一夜之间完成一项巨大的工程（建塔、砌墙、造楼梯），但在最后时刻公鸡提前打鸣，功亏一篑——永远留下了一半未完成的工程。",
+          "start": 41,
+          "end": 107,
+          "start_line": 5,
+          "end_line": 5,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        },
+        {
+          "id": "b6cfb9633067ee272516",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "1. **接受任务**：一个人（通常是仙人、鬼魂或鲁班）必须在一夜之间完成一项不可能的工程。",
+          "start": 120,
+          "end": 166,
+          "start_line": 9,
+          "end_line": 9,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        },
+        {
+          "id": "befde5dd836fc35c0bfc",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "2. **神秘施工**：夜深人静时，他开始施工。材料自动搬运，工程飞速进展。",
+          "start": 167,
+          "end": 205,
+          "start_line": 10,
+          "end_line": 10,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        },
+        {
+          "id": "359f2209f06380adb6e5",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "3. **竞争**：有时有另一个人也在同时施工，两人展开竞赛。",
+          "start": 206,
+          "end": 237,
+          "start_line": 11,
+          "end_line": 11,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        },
+        {
+          "id": "ab2944642ad10d021662",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "4. **功亏一篑**：就在工程快要完成时，公鸡提前打鸣了（有人故意学鸡叫，或者公鸡被惊醒）。",
+          "start": 238,
+          "end": 285,
+          "start_line": 12,
+          "end_line": 12,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        },
+        {
+          "id": "a0675cdee09b98b3a7c1",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "5. **未完**：天亮了，法术消失，工程永远停在了差一点完成的状态。人们至今还能看到那个未完成的建筑。",
+          "start": 286,
+          "end": 338,
+          "start_line": 13,
+          "end_line": 13,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        },
+        {
+          "id": "f8a35218d9bdaed63f05",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "- 没有时间限制时（一夜是关键条件）",
+          "start": 778,
+          "end": 796,
+          "start_line": 47,
+          "end_line": 47,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        },
+        {
+          "id": "05286bb1523c17aceb9b",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "- 工程顺利完成时（需要功亏一篑）",
+          "start": 797,
+          "end": 814,
+          "start_line": 48,
+          "end_line": 48,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        },
+        {
+          "id": "84fd84eb4855e2aa4912",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "- 没有公鸡打鸣时（鸡鸣是关键转折）",
+          "start": 815,
+          "end": 833,
+          "start_line": 49,
+          "end_line": 49,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [],
+      "entry_conditions": [
+        {
+          "statement": "1. **接受任务**：一个人（通常是仙人、鬼魂或鲁班）必须在一夜之间完成一项不可能的工程。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "b6cfb9633067ee272516"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "possible_changes": [
+        {
+          "statement": "4. **功亏一篑**：就在工程快要完成时，公鸡提前打鸣了（有人故意学鸡叫，或者公鸡被惊醒）。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "ab2944642ad10d021662"
+          ],
+          "enforcement": "none"
+        },
+        {
+          "statement": "5. **未完**：天亮了，法术消失，工程永远停在了差一点完成的状态。人们至今还能看到那个未完成的建筑。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "a0675cdee09b98b3a7c1"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "review_status": "annotation_proposed",
+      "pattern_shape": {
+        "value": "deadline_failure",
+        "status": "annotation_proposed"
+      },
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "structure_outline": [
+        {
+          "text": "1. **接受任务**：一个人（通常是仙人、鬼魂或鲁班）必须在一夜之间完成一项不可能的工程。",
+          "source_ref_ids": [
+            "b6cfb9633067ee272516"
+          ]
+        },
+        {
+          "text": "2. **神秘施工**：夜深人静时，他开始施工。材料自动搬运，工程飞速进展。",
+          "source_ref_ids": [
+            "befde5dd836fc35c0bfc"
+          ]
+        },
+        {
+          "text": "3. **竞争**：有时有另一个人也在同时施工，两人展开竞赛。",
+          "source_ref_ids": [
+            "359f2209f06380adb6e5"
+          ]
+        },
+        {
+          "text": "4. **功亏一篑**：就在工程快要完成时，公鸡提前打鸣了（有人故意学鸡叫，或者公鸡被惊醒）。",
+          "source_ref_ids": [
+            "ab2944642ad10d021662"
+          ]
+        },
+        {
+          "text": "5. **未完**：天亮了，法术消失，工程永远停在了差一点完成的状态。人们至今还能看到那个未完成的建筑。",
+          "source_ref_ids": [
+            "a0675cdee09b98b3a7c1"
+          ]
+        }
+      ],
+      "usage_cautions": [
+        {
+          "text": "- 没有时间限制时（一夜是关键条件）",
+          "source_ref_ids": [
+            "f8a35218d9bdaed63f05"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 工程顺利完成时（需要功亏一篑）",
+          "source_ref_ids": [
+            "05286bb1523c17aceb9b"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 没有公鸡打鸣时（鸡鸣是关键转折）",
+          "source_ref_ids": [
+            "84fd84eb4855e2aa4912"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        }
+      ],
+      "sequence_policy": "do_not_assume_numbered_outline_is_event_order",
+      "contains_outcome": true
+    },
+    {
+      "id": "kb:race-against-dawn:prototype:1",
+      "kind": "situation",
+      "title": "与时间赛跑",
+      "definition": "必须在天亮前完成",
+      "source_refs": [
+        {
+          "id": "6afe7608b511b0505e95",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "- **与时间赛跑**：必须在天亮前完成",
+          "start": 587,
+          "end": 607,
+          "start_line": 33,
+          "end_line": 33,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        },
+        {
+          "id": "4139696e10658a0bac7d",
+          "source_path": "assets/motif_library/time-pressure.md",
+          "quote": "有明确的截止时间，主角必须在时限内完成任务，每一秒的流逝都在增加压力和代价。",
+          "start": 36,
+          "end": 74,
+          "start_line": 5,
+          "end_line": 5,
+          "source_sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec"
+        }
+      ],
+      "motif_ids": [
+        "kb:race-against-dawn",
+        "kb:time-pressure"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:race-against-dawn": "source_section_membership",
+        "kb:time-pressure": "annotation_proposed"
+      },
+      "relation_notes": [
+        {
+          "target_id": "kb:time-pressure",
+          "status": "annotation_proposed",
+          "reason": "原文明确天亮前的期限；与倒计时的抽象定义相交，但是否有失败代价仍需由具体故事判断。"
+        }
+      ]
+    },
+    {
+      "id": "kb:race-against-dawn:prototype:2",
+      "kind": "situation",
+      "title": "神功未竟",
+      "definition": "神仙的工程被凡人打断",
+      "source_refs": [
+        {
+          "id": "2461a78e86972b768afd",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "- **神功未竟**：神仙的工程被凡人打断",
+          "start": 608,
+          "end": 629,
+          "start_line": 34,
+          "end_line": 34,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        }
+      ],
+      "motif_ids": [
+        "kb:race-against-dawn"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:race-against-dawn": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:race-against-dawn:prototype:3",
+      "kind": "situation",
+      "title": "学鸡叫的计谋",
+      "definition": "小人物用小聪明打败大人物",
+      "source_refs": [
+        {
+          "id": "05641f55882d17f452e8",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "- **学鸡叫的计谋**：小人物用小聪明打败大人物",
+          "start": 630,
+          "end": 655,
+          "start_line": 35,
+          "end_line": 35,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        }
+      ],
+      "motif_ids": [
+        "kb:race-against-dawn"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:race-against-dawn": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:race-against-dawn:prototype:4",
+      "kind": "technique",
+      "title": "建筑的传说",
+      "definition": "为现存的奇怪建筑编造来历",
+      "source_refs": [
+        {
+          "id": "e7bd84ded71a0e44d1ce",
+          "source_path": "assets/motif_library/race-against-dawn.md",
+          "quote": "- **建筑的传说**：为现存的奇怪建筑编造来历",
+          "start": 656,
+          "end": 680,
+          "start_line": 36,
+          "end_line": 36,
+          "source_sha256": "e7d1774673f5112db6df209b7e0b00aaa6ced1377d7e3943cceced187afed1ce"
+        }
+      ],
+      "motif_ids": [
+        "kb:race-against-dawn"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:race-against-dawn": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:taboo-violation-catastrophe",
+      "kind": "motif",
+      "title": "禁忌破戒与灾难 (Taboo Violation Catastrophe)",
+      "definition": "违反神圣规则（禁忌）会导致灾难性的后果——庄稼歉收、瘟疫蔓延、国王死亡、自然秩序混乱。禁忌是巫术的消极应用，违反禁忌等同于触犯了宇宙法则。",
+      "source_refs": [
+        {
+          "id": "dff3a3fef5a06d397bf3",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "违反神圣规则（禁忌）会导致灾难性的后果——庄稼歉收、瘟疫蔓延、国王死亡、自然秩序混乱。禁忌是巫术的消极应用，违反禁忌等同于触犯了宇宙法则。",
+          "start": 54,
+          "end": 123,
+          "start_line": 5,
+          "end_line": 5,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        },
+        {
+          "id": "f1ddc6d7409e389082d7",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "1. **禁忌建立**：为了保护神圣之人或维护自然秩序，制定了各种禁忌——饮食禁忌、行为禁忌、接触禁忌、语言禁忌等。",
+          "start": 136,
+          "end": 194,
+          "start_line": 9,
+          "end_line": 9,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        },
+        {
+          "id": "1b1a191e0a5a446e986a",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "2. **禁忌的逻辑基础**：禁忌基于交感巫术的\"相似定律\"和\"接触定律\"——相似的事物会相互影响，接触过的事物会持续交感。",
+          "start": 195,
+          "end": 257,
+          "start_line": 10,
+          "end_line": 10,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        },
+        {
+          "id": "be0ab6f6c20afa0b3713",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "3. **禁忌被违反**：某人（国王、祭司、普通人）有意或无意地违反了禁忌。",
+          "start": 258,
+          "end": 296,
+          "start_line": 11,
+          "end_line": 11,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        },
+        {
+          "id": "90f0a63ac7167fc5ba33",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "4. **灾难降临**：违反禁忌导致灾难——旱灾、饥荒、瘟疫、暴风雨、个人疾病或死亡。",
+          "start": 297,
+          "end": 340,
+          "start_line": 12,
+          "end_line": 12,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        },
+        {
+          "id": "0827b898aeba00c50018",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "5. **惩罚/修复**：违反者受到惩罚（鞭打、监禁、废黜、处决），或举行修复仪式以恢复秩序。",
+          "start": 341,
+          "end": 388,
+          "start_line": 13,
+          "end_line": 13,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        },
+        {
+          "id": "735b19fe6007f930e454",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "- 没有需要保护的神圣秩序（禁忌的前提是有需要维护的宇宙法则）",
+          "start": 1367,
+          "end": 1398,
+          "start_line": 54,
+          "end_line": 54,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        },
+        {
+          "id": "d32e2cfe2f4a00f604f7",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "- 违反规则没有超自然后果（禁忌不同于普通法律——违反禁忌导致的是想象的灾祸而非实在的后果）",
+          "start": 1399,
+          "end": 1445,
+          "start_line": 55,
+          "end_line": 55,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        },
+        {
+          "id": "eb1280ca61d7e87f1f62",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "- 没有\"相似联想\"或\"接触联想\"的基础（禁忌的逻辑基础是交感巫术）",
+          "start": 1446,
+          "end": 1480,
+          "start_line": 56,
+          "end_line": 56,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        },
+        {
+          "id": "a57afad61fd0c695e04d",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "- 规则基于理性而非迷信（如\"不要把手放在火中\"是常识而非禁忌）",
+          "start": 1481,
+          "end": 1513,
+          "start_line": 57,
+          "end_line": 57,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [],
+      "entry_conditions": [
+        {
+          "statement": "1. **禁忌建立**：为了保护神圣之人或维护自然秩序，制定了各种禁忌——饮食禁忌、行为禁忌、接触禁忌、语言禁忌等。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "f1ddc6d7409e389082d7"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "possible_changes": [
+        {
+          "statement": "4. **灾难降临**：违反禁忌导致灾难——旱灾、饥荒、瘟疫、暴风雨、个人疾病或死亡。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "90f0a63ac7167fc5ba33"
+          ],
+          "enforcement": "none"
+        },
+        {
+          "statement": "5. **惩罚/修复**：违反者受到惩罚（鞭打、监禁、废黜、处决），或举行修复仪式以恢复秩序。",
+          "status": "annotation_proposed",
+          "source_ref_ids": [
+            "0827b898aeba00c50018"
+          ],
+          "enforcement": "none"
+        }
+      ],
+      "review_status": "annotation_proposed",
+      "pattern_shape": {
+        "value": "rule_breach_consequence",
+        "status": "annotation_proposed"
+      },
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "structure_outline": [
+        {
+          "text": "1. **禁忌建立**：为了保护神圣之人或维护自然秩序，制定了各种禁忌——饮食禁忌、行为禁忌、接触禁忌、语言禁忌等。",
+          "source_ref_ids": [
+            "f1ddc6d7409e389082d7"
+          ]
+        },
+        {
+          "text": "2. **禁忌的逻辑基础**：禁忌基于交感巫术的\"相似定律\"和\"接触定律\"——相似的事物会相互影响，接触过的事物会持续交感。",
+          "source_ref_ids": [
+            "1b1a191e0a5a446e986a"
+          ]
+        },
+        {
+          "text": "3. **禁忌被违反**：某人（国王、祭司、普通人）有意或无意地违反了禁忌。",
+          "source_ref_ids": [
+            "be0ab6f6c20afa0b3713"
+          ]
+        },
+        {
+          "text": "4. **灾难降临**：违反禁忌导致灾难——旱灾、饥荒、瘟疫、暴风雨、个人疾病或死亡。",
+          "source_ref_ids": [
+            "90f0a63ac7167fc5ba33"
+          ]
+        },
+        {
+          "text": "5. **惩罚/修复**：违反者受到惩罚（鞭打、监禁、废黜、处决），或举行修复仪式以恢复秩序。",
+          "source_ref_ids": [
+            "0827b898aeba00c50018"
+          ]
+        }
+      ],
+      "usage_cautions": [
+        {
+          "text": "- 没有需要保护的神圣秩序（禁忌的前提是有需要维护的宇宙法则）",
+          "source_ref_ids": [
+            "735b19fe6007f930e454"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 违反规则没有超自然后果（禁忌不同于普通法律——违反禁忌导致的是想象的灾祸而非实在的后果）",
+          "source_ref_ids": [
+            "d32e2cfe2f4a00f604f7"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 没有\"相似联想\"或\"接触联想\"的基础（禁忌的逻辑基础是交感巫术）",
+          "source_ref_ids": [
+            "eb1280ca61d7e87f1f62"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 规则基于理性而非迷信（如\"不要把手放在火中\"是常识而非禁忌）",
+          "source_ref_ids": [
+            "a57afad61fd0c695e04d"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        }
+      ],
+      "sequence_policy": "do_not_assume_numbered_outline_is_event_order",
+      "contains_outcome": true
+    },
+    {
+      "id": "kb:taboo-violation-catastrophe:prototype:1",
+      "kind": "case",
+      "title": "因纽特儿童禁忌",
+      "definition": "不许小孩子玩\"翻花绳\"游戏，以免将来被鱼叉绳缠住手指",
+      "source_refs": [
+        {
+          "id": "515ac6f0b23a9f7ff7f1",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "- **因纽特儿童禁忌**：不许小孩子玩\"翻花绳\"游戏，以免将来被鱼叉绳缠住手指",
+          "start": 804,
+          "end": 844,
+          "start_line": 36,
+          "end_line": 36,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        }
+      ],
+      "motif_ids": [
+        "kb:taboo-violation-catastrophe"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:taboo-violation-catastrophe": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:taboo-violation-catastrophe:prototype:2",
+      "kind": "case",
+      "title": "纺锤禁忌",
+      "definition": "古代意大利禁止女人一边走路一边纺纱，因为旋转的纺锤会使作物减产",
+      "source_refs": [
+        {
+          "id": "5772e150bd4493c86ab8",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "- **纺锤禁忌**：古代意大利禁止女人一边走路一边纺纱，因为旋转的纺锤会使作物减产",
+          "start": 845,
+          "end": 887,
+          "start_line": 37,
+          "end_line": 37,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        }
+      ],
+      "motif_ids": [
+        "kb:taboo-violation-catastrophe"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:taboo-violation-catastrophe": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:taboo-violation-catastrophe:prototype:3",
+      "kind": "case",
+      "title": "孕妇的交叉禁忌",
+      "definition": "特兰西瓦尼亚的日耳曼人在产妇分娩时打开家里所有的锁——打开束缚以利分娩",
+      "source_refs": [
+        {
+          "id": "206f2bfc6c9b062f2a36",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "- **孕妇的交叉禁忌**：特兰西瓦尼亚的日耳曼人在产妇分娩时打开家里所有的锁——打开束缚以利分娩",
+          "start": 888,
+          "end": 937,
+          "start_line": 38,
+          "end_line": 38,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        }
+      ],
+      "motif_ids": [
+        "kb:taboo-violation-catastrophe"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:taboo-violation-catastrophe": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:taboo-violation-catastrophe:prototype:4",
+      "kind": "case",
+      "title": "食物禁忌",
+      "definition": "马达加斯加士兵不能吃刺猬肉（以免胆小）、不能吃战败死的公鸡（以免战死）",
+      "source_refs": [
+        {
+          "id": "b09585563e07c6cb7477",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "- **食物禁忌**：马达加斯加士兵不能吃刺猬肉（以免胆小）、不能吃战败死的公鸡（以免战死）",
+          "start": 938,
+          "end": 984,
+          "start_line": 39,
+          "end_line": 39,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        }
+      ],
+      "motif_ids": [
+        "kb:taboo-violation-catastrophe"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:taboo-violation-catastrophe": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:taboo-violation-catastrophe:prototype:5",
+      "kind": "case",
+      "title": "剩饭禁忌",
+      "definition": "因剩饭腐坏可能引发瘟疫，很多原始人销毁剩饭——间接强化了共食的神圣义务",
+      "source_refs": [
+        {
+          "id": "03dc01584e4e5b5b17af",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "- **剩饭禁忌**：因剩饭腐坏可能引发瘟疫，很多原始人销毁剩饭——间接强化了共食的神圣义务",
+          "start": 985,
+          "end": 1031,
+          "start_line": 40,
+          "end_line": 40,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        }
+      ],
+      "motif_ids": [
+        "kb:taboo-violation-catastrophe"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:taboo-violation-catastrophe": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:taboo-violation-catastrophe:prototype:6",
+      "kind": "case",
+      "title": "国王的禁忌违反",
+      "definition": "日本天皇如果违反禁忌会导致自然灾难；国王身体的任何不合常规都会打破宇宙平衡",
+      "source_refs": [
+        {
+          "id": "6a1743937e352ec77d0d",
+          "source_path": "assets/motif_library/taboo-violation-catastrophe.md",
+          "quote": "- **国王的禁忌违反**：日本天皇如果违反禁忌会导致自然灾难；国王身体的任何不合常规都会打破宇宙平衡",
+          "start": 1032,
+          "end": 1083,
+          "start_line": 41,
+          "end_line": 41,
+          "source_sha256": "6f8ba1bc136867466bd981b7902158a415cf8ab4a8746b5cb40ea626cbec3a8a"
+        }
+      ],
+      "motif_ids": [
+        "kb:taboo-violation-catastrophe"
+      ],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:taboo-violation-catastrophe": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:three-tiered-universe",
+      "kind": "world_rule",
+      "title": "三界宇宙 (Three-Tiered Universe)",
+      "definition": "原始人将宇宙想象为三层结构——天堂、人间、冥界自上而下垂直衔接，加上横向存在的仙境，构成了神话上演的大舞台。",
+      "source_refs": [
+        {
+          "id": "14a91128d262e7bf554f",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "原始人将宇宙想象为三层结构——天堂、人间、冥界自上而下垂直衔接，加上横向存在的仙境，构成了神话上演的大舞台。",
+          "start": 45,
+          "end": 99,
+          "start_line": 5,
+          "end_line": 5,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        },
+        {
+          "id": "c5ffd0d2f37047574cc9",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "1. **混沌的世界**：原始人的心智还不发达，他们既不能将人与自然界相区别，也往往将人与动物相混同，世界是人、兽、鬼、神共同生活的舞台。",
+          "start": 112,
+          "end": 181,
+          "start_line": 9,
+          "end_line": 9,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        },
+        {
+          "id": "366c2a29f7bca5db8f80",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "2. **三层结构**：天堂在最上层，是神的居所（昆仑山有凉风之山、悬圃、天庭三层）；人间在中层，是人类活动的大地；冥界在最下层，是鬼魂的世界。",
+          "start": 182,
+          "end": 254,
+          "start_line": 10,
+          "end_line": 10,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        },
+        {
+          "id": "7d6a2f76d01ffc278a36",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "3. **横向扩展**：在人间大地的深山中和环绕大地的海洋中，还存在着仙境——蓬莱仙山等超自然空间。",
+          "start": 255,
+          "end": 305,
+          "start_line": 11,
+          "end_line": 11,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        },
+        {
+          "id": "b4d48209657f99e5ad44",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "4. **通道相连**：天堂、人间、冥界并非完全隔断，而是可以相互往来——天河连接天地，昆仑山可攀登而上，鬼门连接人间与冥界。",
+          "start": 306,
+          "end": 369,
+          "start_line": 12,
+          "end_line": 12,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        },
+        {
+          "id": "82fc8ab2ec04a9bbec98",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "5. **马王堆帛画**：汉代帛画形象地再现了三层宇宙——上层天堂、中层人间、下层冥界巨人托举大地。",
+          "start": 370,
+          "end": 420,
+          "start_line": 13,
+          "end_line": 13,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        },
+        {
+          "id": "a9a49177dbbc6144a8bc",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "- 宇宙没有分层结构时（此母题的核心是三层/多层宇宙观）",
+          "start": 1153,
+          "end": 1181,
+          "start_line": 50,
+          "end_line": 50,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        },
+        {
+          "id": "4f6932e5bd3ffc4a29ee",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "- 没有天堂和冥界的对立时（此母题需要上下两个超自然空间）",
+          "start": 1182,
+          "end": 1211,
+          "start_line": 51,
+          "end_line": 51,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        },
+        {
+          "id": "4c93534662ff7f10e09f",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "- 人间世界与其他层次完全隔绝时（通道的存在是此母题的关键）",
+          "start": 1212,
+          "end": 1242,
+          "start_line": 52,
+          "end_line": 52,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        },
+        {
+          "id": "52e3f5603293ef9ba0bd",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "- 没有仙境的横向扩展时（仙境是三界宇宙的补充空间）",
+          "start": 1243,
+          "end": 1269,
+          "start_line": 53,
+          "end_line": 53,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "pattern_shape": {
+        "value": "spatial_organization",
+        "status": "annotation_proposed"
+      },
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "structure_outline": [
+        {
+          "text": "1. **混沌的世界**：原始人的心智还不发达，他们既不能将人与自然界相区别，也往往将人与动物相混同，世界是人、兽、鬼、神共同生活的舞台。",
+          "source_ref_ids": [
+            "c5ffd0d2f37047574cc9"
+          ]
+        },
+        {
+          "text": "2. **三层结构**：天堂在最上层，是神的居所（昆仑山有凉风之山、悬圃、天庭三层）；人间在中层，是人类活动的大地；冥界在最下层，是鬼魂的世界。",
+          "source_ref_ids": [
+            "366c2a29f7bca5db8f80"
+          ]
+        },
+        {
+          "text": "3. **横向扩展**：在人间大地的深山中和环绕大地的海洋中，还存在着仙境——蓬莱仙山等超自然空间。",
+          "source_ref_ids": [
+            "7d6a2f76d01ffc278a36"
+          ]
+        },
+        {
+          "text": "4. **通道相连**：天堂、人间、冥界并非完全隔断，而是可以相互往来——天河连接天地，昆仑山可攀登而上，鬼门连接人间与冥界。",
+          "source_ref_ids": [
+            "b4d48209657f99e5ad44"
+          ]
+        },
+        {
+          "text": "5. **马王堆帛画**：汉代帛画形象地再现了三层宇宙——上层天堂、中层人间、下层冥界巨人托举大地。",
+          "source_ref_ids": [
+            "82fc8ab2ec04a9bbec98"
+          ]
+        }
+      ],
+      "usage_cautions": [
+        {
+          "text": "- 宇宙没有分层结构时（此母题的核心是三层/多层宇宙观）",
+          "source_ref_ids": [
+            "a9a49177dbbc6144a8bc"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 没有天堂和冥界的对立时（此母题需要上下两个超自然空间）",
+          "source_ref_ids": [
+            "4f6932e5bd3ffc4a29ee"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 人间世界与其他层次完全隔绝时（通道的存在是此母题的关键）",
+          "source_ref_ids": [
+            "4c93534662ff7f10e09f"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 没有仙境的横向扩展时（仙境是三界宇宙的补充空间）",
+          "source_ref_ids": [
+            "52e3f5603293ef9ba0bd"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        }
+      ],
+      "sequence_policy": "do_not_assume_numbered_outline_is_event_order",
+      "contains_outcome": true
+    },
+    {
+      "id": "kb:three-tiered-universe:prototype:1",
+      "kind": "world_rule",
+      "title": "昆仑三层",
+      "definition": "登上第一层凉风之山可长生不死，再上悬圃可呼风唤雨，最上天庭是上帝居所",
+      "source_refs": [
+        {
+          "id": "43b0635a33e13e7089d9",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "- **昆仑三层**：登上第一层凉风之山可长生不死，再上悬圃可呼风唤雨，最上天庭是上帝居所",
+          "start": 728,
+          "end": 773,
+          "start_line": 35,
+          "end_line": 35,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [
+        "kb:three-tiered-universe"
+      ],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:three-tiered-universe": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:three-tiered-universe:prototype:2",
+      "kind": "case",
+      "title": "屈原《天问》",
+      "definition": "\"天有九重，它们是谁设计的？\"反映先秦人心目中天廷有九层",
+      "source_refs": [
+        {
+          "id": "cf4f81adf199f961e707",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "- **屈原《天问》**：\"天有九重，它们是谁设计的？\"反映先秦人心目中天廷有九层",
+          "start": 774,
+          "end": 815,
+          "start_line": 36,
+          "end_line": 36,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [
+        "kb:three-tiered-universe"
+      ],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:three-tiered-universe": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:three-tiered-universe:prototype:3",
+      "kind": "case",
+      "title": "马王堆汉墓帛画",
+      "definition": "上层天堂有日月神鸟飞龙，中层人间有房屋器皿，下层冥界有巨人托举大地",
+      "source_refs": [
+        {
+          "id": "e382198e30a421416b92",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "- **马王堆汉墓帛画**：上层天堂有日月神鸟飞龙，中层人间有房屋器皿，下层冥界有巨人托举大地",
+          "start": 816,
+          "end": 863,
+          "start_line": 37,
+          "end_line": 37,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [
+        "kb:three-tiered-universe"
+      ],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:three-tiered-universe": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:three-tiered-universe:prototype:4",
+      "kind": "case",
+      "title": "《招魂》中的冥界",
+      "definition": "土伯身体像牛、虎头三眼、头上尖角，在地下追逐死人灵魂",
+      "source_refs": [
+        {
+          "id": "1e60ef7fc34d1c07eb92",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "- **《招魂》中的冥界**：土伯身体像牛、虎头三眼、头上尖角，在地下追逐死人灵魂",
+          "start": 864,
+          "end": 905,
+          "start_line": 38,
+          "end_line": 38,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [
+        "kb:three-tiered-universe"
+      ],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:three-tiered-universe": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:three-tiered-universe:prototype:5",
+      "kind": "case",
+      "title": "蓬莱仙境",
+      "definition": "战国时期产生的海上仙山传说，秦始皇派人出海求仙",
+      "source_refs": [
+        {
+          "id": "8efe248301b20b655357",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "- **蓬莱仙境**：战国时期产生的海上仙山传说，秦始皇派人出海求仙",
+          "start": 906,
+          "end": 940,
+          "start_line": 39,
+          "end_line": 39,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [
+        "kb:three-tiered-universe"
+      ],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:three-tiered-universe": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:gorgon_mask",
+      "kind": "symbol",
+      "title": "蛇发女妖的面具——辟邪与恐怖 (The Gorgon's Head: Apotropaic Terror)",
+      "definition": "一张狰狞的面具被画在盾牌、建筑或城墙上，其恐怖的力量可以吓退敌人、驱除邪恶——直到珀尔修斯斩下了真正的蛇发女妖的头。",
+      "source_refs": [
+        {
+          "id": "6e5c13b59478c122489b",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "一张狰狞的面具被画在盾牌、建筑或城墙上，其恐怖的力量可以吓退敌人、驱除邪恶——直到珀尔修斯斩下了真正的蛇发女妖的头。",
+          "start": 70,
+          "end": 128,
+          "start_line": 5,
+          "end_line": 5,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        },
+        {
+          "id": "aae5da0240de45bd905a",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "1. **辟邪面具**：在远古时代，人们在盾牌、建筑或城墙上画上狰狞的面孔（蛇发、瞪眼、獠牙），用以吓退敌人和恶灵。",
+          "start": 141,
+          "end": 199,
+          "start_line": 9,
+          "end_line": 9,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        },
+        {
+          "id": "9b17c64a0ce65abd84ab",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "2. **神话化**：这张面具被想象为一个真实存在的怪物——蛇发女妖美杜莎。",
+          "start": 200,
+          "end": 238,
+          "start_line": 10,
+          "end_line": 10,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        },
+        {
+          "id": "ed406867fb6d59985b02",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "3. **英雄斩杀**：珀尔修斯斩下了美杜莎的头，成为泛希腊传说。",
+          "start": 239,
+          "end": 272,
+          "start_line": 11,
+          "end_line": 11,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        },
+        {
+          "id": "4e6977af3292d82267b2",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "4. **武器化**：美杜莎的头被用来石化敌人（波吕德克忒斯、阿特拉斯等）。",
+          "start": 273,
+          "end": 311,
+          "start_line": 12,
+          "end_line": 12,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        },
+        {
+          "id": "692669d094db7f082593",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "5. **永恒的恐惧**：蛇发女妖的面具至今仍出现在建筑和艺术中。",
+          "start": 312,
+          "end": 345,
+          "start_line": 13,
+          "end_line": 13,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        },
+        {
+          "id": "4489902e31678bcd73c8",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "- 当故事不需要\"辟邪\"这一核心功能时",
+          "start": 941,
+          "end": 960,
+          "start_line": 52,
+          "end_line": 52,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        },
+        {
+          "id": "95df86209d9cdbd2de20",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "- 当叙事不需要从仪式到神话的转变过程时",
+          "start": 961,
+          "end": 981,
+          "start_line": 53,
+          "end_line": 53,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        },
+        {
+          "id": "30ddad83eb3e53d7ad73",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "- 当主题不涉及恐怖与美的辩证关系时",
+          "start": 982,
+          "end": 1000,
+          "start_line": 54,
+          "end_line": 54,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "pattern_shape": {
+        "value": "protective_terror",
+        "status": "annotation_proposed"
+      },
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "structure_outline": [
+        {
+          "text": "1. **辟邪面具**：在远古时代，人们在盾牌、建筑或城墙上画上狰狞的面孔（蛇发、瞪眼、獠牙），用以吓退敌人和恶灵。",
+          "source_ref_ids": [
+            "aae5da0240de45bd905a"
+          ]
+        },
+        {
+          "text": "2. **神话化**：这张面具被想象为一个真实存在的怪物——蛇发女妖美杜莎。",
+          "source_ref_ids": [
+            "9b17c64a0ce65abd84ab"
+          ]
+        },
+        {
+          "text": "3. **英雄斩杀**：珀尔修斯斩下了美杜莎的头，成为泛希腊传说。",
+          "source_ref_ids": [
+            "ed406867fb6d59985b02"
+          ]
+        },
+        {
+          "text": "4. **武器化**：美杜莎的头被用来石化敌人（波吕德克忒斯、阿特拉斯等）。",
+          "source_ref_ids": [
+            "4e6977af3292d82267b2"
+          ]
+        },
+        {
+          "text": "5. **永恒的恐惧**：蛇发女妖的面具至今仍出现在建筑和艺术中。",
+          "source_ref_ids": [
+            "692669d094db7f082593"
+          ]
+        }
+      ],
+      "usage_cautions": [
+        {
+          "text": "- 当故事不需要\"辟邪\"这一核心功能时",
+          "source_ref_ids": [
+            "4489902e31678bcd73c8"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 当叙事不需要从仪式到神话的转变过程时",
+          "source_ref_ids": [
+            "95df86209d9cdbd2de20"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        },
+        {
+          "text": "- 当主题不涉及恐怖与美的辩证关系时",
+          "source_ref_ids": [
+            "30ddad83eb3e53d7ad73"
+          ],
+          "status": "source_claim_unreviewed",
+          "enforcement": "none"
+        }
+      ],
+      "sequence_policy": "do_not_assume_numbered_outline_is_event_order",
+      "contains_outcome": true
+    },
+    {
+      "id": "kb:gorgon_mask:prototype:1",
+      "kind": "symbol",
+      "title": "盾牌上的美杜莎",
+      "definition": "战士的辟邪装备",
+      "source_refs": [
+        {
+          "id": "4921c29f166b98803c93",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "- **盾牌上的美杜莎**：战士的辟邪装备",
+          "start": 638,
+          "end": 659,
+          "start_line": 35,
+          "end_line": 35,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [
+        "kb:gorgon_mask"
+      ],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:gorgon_mask": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:gorgon_mask:prototype:2",
+      "kind": "symbol",
+      "title": "建筑入口的狰狞面具",
+      "definition": "门户的守护者",
+      "source_refs": [
+        {
+          "id": "c322af1821b360c43e92",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "- **建筑入口的狰狞面具**：门户的守护者",
+          "start": 660,
+          "end": 682,
+          "start_line": 36,
+          "end_line": 36,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [
+        "kb:gorgon_mask"
+      ],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:gorgon_mask": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:gorgon_mask:prototype:3",
+      "kind": "world_rule",
+      "title": "美杜莎的石化之力",
+      "definition": "恐怖的终极武器",
+      "source_refs": [
+        {
+          "id": "836368d3a1a664a3451b",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "- **美杜莎的石化之力**：恐怖的终极武器",
+          "start": 683,
+          "end": 705,
+          "start_line": 37,
+          "end_line": 37,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [
+        "kb:gorgon_mask"
+      ],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:gorgon_mask": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:gorgon_mask:prototype:4",
+      "kind": "technique",
+      "title": "镜面策略",
+      "definition": "通过反射间接面对不可直视之物",
+      "source_refs": [
+        {
+          "id": "070c84716ae196c8df03",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "- **镜面策略**：通过反射间接面对不可直视之物",
+          "start": 706,
+          "end": 731,
+          "start_line": 38,
+          "end_line": 38,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [
+        "kb:gorgon_mask"
+      ],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:gorgon_mask": "source_section_membership"
+      }
+    },
+    {
+      "id": "kb:gorgon_mask:prototype:5",
+      "kind": "case",
+      "title": "美杜莎面具的现代使用",
+      "definition": "时装、建筑、艺术",
+      "source_refs": [
+        {
+          "id": "77092201139fdbebd446",
+          "source_path": "assets/motif_library/gorgon_mask.md",
+          "quote": "- **美杜莎面具的现代使用**：时装、建筑、艺术",
+          "start": 732,
+          "end": 757,
+          "start_line": 39,
+          "end_line": 39,
+          "source_sha256": "360a1fa33e0fca4d77c1e644ce54bf6a73039e643efc4d9dfe94d36f40ed5a9f"
+        }
+      ],
+      "motif_ids": [],
+      "related_ids": [
+        "kb:gorgon_mask"
+      ],
+      "entry_conditions": [],
+      "possible_changes": [],
+      "review_status": "annotation_proposed",
+      "classification_status": "annotation_proposed",
+      "text_status": "source_extracted",
+      "source_section": "常见情境原型",
+      "condition_policy": "not_decomposed; do_not_treat_full_summary_as_entry_condition",
+      "outcome_policy": "may_contain_outcome; planning_reference_only",
+      "relation_status": {
+        "kb:gorgon_mask": "source_section_membership"
+      }
+    }
+  ],
+  "review_issues": [
+    {
+      "id": "review:story-education",
+      "title": "教育王子与临刑自救不是同一情境",
+      "status": "needs_human_review",
+      "source_refs": [
+        {
+          "id": "223cb42eda102bc0d24b",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "- **印度五卷书**：毗湿奴笈多用故事教育王子",
+          "start": 801,
+          "end": 825,
+          "start_line": 38,
+          "end_line": 38,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        },
+        {
+          "id": "566894c5de77de30b62a",
+          "source_path": "assets/motif_library/story-as-shield.md",
+          "quote": "- 主角没有被诬陷时（真正的罪犯讲故事不构成\"救命\"）",
+          "start": 1059,
+          "end": 1086,
+          "start_line": 51,
+          "end_line": 51,
+          "source_sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28"
+        }
+      ],
+      "runtime_action": "do_not_promote_usage_caution_to_hard_rule"
+    },
+    {
+      "id": "review:prophecy-changed",
+      "title": "成功改变未来的变形案例与排除条件口径不同",
+      "status": "needs_human_review",
+      "source_refs": [
+        {
+          "id": "becbfabd7a3e498e0aa8",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "- **《圣诞颂歌》（变形）**：虽非传统预言，但Scrooge试图阻止未来却改变了未来",
+          "start": 1022,
+          "end": 1066,
+          "start_line": 43,
+          "end_line": 43,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        },
+        {
+          "id": "fb0849e1b1877cdca663",
+          "source_path": "assets/motif_library/prophecy-defied.md",
+          "quote": "- 预言被成功阻止时（缺乏宿命的悲剧性）",
+          "start": 1171,
+          "end": 1191,
+          "start_line": 49,
+          "end_line": 49,
+          "source_sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b"
+        }
+      ],
+      "runtime_action": "do_not_promote_usage_caution_to_hard_rule"
+    },
+    {
+      "id": "review:world-outline",
+      "title": "宇宙组成与文物例证不能被当成五个依次发生的剧情阶段",
+      "status": "needs_human_review",
+      "source_refs": [
+        {
+          "id": "366c2a29f7bca5db8f80",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "2. **三层结构**：天堂在最上层，是神的居所（昆仑山有凉风之山、悬圃、天庭三层）；人间在中层，是人类活动的大地；冥界在最下层，是鬼魂的世界。",
+          "start": 182,
+          "end": 254,
+          "start_line": 10,
+          "end_line": 10,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        },
+        {
+          "id": "82fc8ab2ec04a9bbec98",
+          "source_path": "assets/motif_library/three-tiered-universe.md",
+          "quote": "5. **马王堆帛画**：汉代帛画形象地再现了三层宇宙——上层天堂、中层人间、下层冥界巨人托举大地。",
+          "start": 370,
+          "end": 420,
+          "start_line": 13,
+          "end_line": 13,
+          "source_sha256": "abd2ea63c99d1dce16f47c35306125d0785fb5cfdbb1a7aad2412f49d157c8fe"
+        }
+      ],
+      "runtime_action": "do_not_promote_usage_caution_to_hard_rule"
+    }
+  ]
+}

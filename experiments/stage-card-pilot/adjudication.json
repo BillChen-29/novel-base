@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "initial_reviews_preserved": true,
+  "done_before_embedding_and_ranking": true,
+  "changes": [
+    {
+      "case_id": "case-06",
+      "fact_id": "probe_0012",
+      "from": "contradicted",
+      "to": "insufficient_evidence",
+      "reason": "出库单逐项核对已经完成，缺货调查仍在推进；当前命题没有将具体使用任务唯一绑定为出库单核对，故不能反驳所有内容使用任务仍待完成，也不能推定另一项任务已成立。"
+    },
+    {
+      "case_id": "case-06",
+      "fact_id": "probe_0015",
+      "from": "contradicted",
+      "to": "insufficient_evidence",
+      "reason": "出库单核对完成只能反驳这一项检查未完成，不能反驳存在其他待核对步骤；电话询问是否属于针对该线索的具体核对也未明确，动作绑定不足。"
+    }
+  ],
+  "result": "当前焦点尚不能替代具体动作/载体/任务实例绑定；这一缺口保留为结果，不修改冻结卡片。"
+}

@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "catalog_sha256": "723738e8998651d2c6717cc01ea4eb0b239f14c7176ac9130827f05a5dfde2c0",
+  "reviewed_source_cuts": 9,
+  "public_sequential_cuts": 7,
+  "real_local_cuts": 2,
+  "public_episodes": 2,
+  "candidate_instances": 5,
+  "proposals": 5,
+  "accepted_plans": 4,
+  "all_acceptances_preserved_facts": true,
+  "old_revision_checks": 4,
+  "old_revision_checks_passed": 4,
+  "semantic_claims": 77,
+  "knowledge_decisions": 77,
+  "verdicts": {
+    "supported": 68,
+    "insufficient_evidence": 4,
+    "contradicted": 5
+  },
+  "exact_evidence_refs": 294,
+  "results": [
+    {
+      "case_id": "letter_1",
+      "episode_id": "letter_loop",
+      "revision": 1,
+      "source_sha256": "17c8198703fd711a76b55400fb770ac1c18c22ac75ad5638f5e313183b651396",
+      "state_sha256": "0525ed56affc06a0899b217dae89f61382c5f890bf158202a48bf5cc2a23f274",
+      "batch_sha256": "6e4a152121cea678099c00cce7d118334614965eb3122e539a57e924f03ed763",
+      "retrieved_cards": [
+        "carrier_process",
+        "truth_trigger"
+      ],
+      "reviewed_instances": 1,
+      "action_states": {
+        "read_note": "proposed",
+        "use_code": "unknown"
+      },
+      "proposals": [
+        {
+          "id": "proposal_71d53ae051cd357ffaf3eec03d5db6a7",
+          "actor_id": "pov",
+          "task_id": "pickup",
+          "action_id": "read_note",
+          "target_ids": [
+            "note"
+          ],
+          "operation": "read",
+          "card_id": "carrier_process",
+          "variant_id": "carrier_process_read",
+          "knowledge_kind": "situation",
+          "text": "开始读取纸条上的内容：沈遥针对三号柜取件纸条推进三号柜取件。读取与该任务对应的载体内容，区分所见内容、理解与真实性；不预先宣布内容可信，也不假定已读到哪一处。",
+          "status": "creative_proposal",
+          "evidence_fact_ids": [
+            "i_18a0d5c798d7e2a557496165:probe_0001",
+            "i_18a0d5c798d7e2a557496165:probe_0002",
+            "i_18a0d5c798d7e2a557496165:probe_0006",
+            "core_binding_read_note",
+            "core_fresh_read_note"
+          ]
+        }
+      ],
+      "blocked_actions": [
+        {
+          "action_id": "use_code",
+          "reason": "binding_not_pov_established"
+        }
+      ],
+      "accepted_action": "read_note",
+      "plan_count": 1,
+      "acceptance_preserved_facts": true,
+      "old_revision_acceptance_rejected": null
+    },
+    {
+      "case_id": "letter_2",
+      "episode_id": "letter_loop",
+      "revision": 2,
+      "source_sha256": "72d990d02f17f2f5aa08502520252127b0af65bbbee0a17f1fa19e34195eaa88",
+      "state_sha256": "9331a143e559b12df2d6e5f31c090790745a4a695c8d06220a880fb19c398fd3",
+      "batch_sha256": "ec3e804d9e10ba5a850430aa6a0afad3c38c74deb8a07438c2c2cc92fc9d4442",
+      "retrieved_cards": [
+        "carrier_process",
+        "truth_trigger"
+      ],
+      "reviewed_instances": 1,
+      "action_states": {
+        "read_note": "completed",
+        "use_code": "pending"
+      },
+      "proposals": [
+        {
+          "id": "proposal_6cec132bd23d19721da44b94197aca2a",
+          "actor_id": "pov",
+          "task_id": "pickup",
+          "action_id": "use_code",
+          "target_ids": [
+            "note"
+          ],
+          "operation": "use",
+          "card_id": "carrier_process",
+          "variant_id": "carrier_process_use",
+          "knowledge_kind": "situation",
+          "text": "开始将纸条上的取件编号输入三号柜：沈遥针对三号柜取件纸条推进三号柜取件。依照已经理解的具体内容及其已知用途处理该未完成事项，保留执行结果；不重复首次读取或假定任务成功。",
+          "status": "creative_proposal",
+          "evidence_fact_ids": [
+            "i_6d2e06aef51df70c233757c4:probe_0004",
+            "i_6d2e06aef51df70c233757c4:probe_0005",
+            "i_6d2e06aef51df70c233757c4:probe_0006",
+            "core_binding_use_code",
+            "core_status_use_code"
+          ]
+        }
+      ],
+      "blocked_actions": [
+        {
+          "action_id": "read_note",
+          "reason": "action_completed"
+        }
+      ],
+      "accepted_action": "use_code",
+      "plan_count": 2,
+      "acceptance_preserved_facts": true,
+      "old_revision_acceptance_rejected": true
+    },
+    {
+      "case_id": "letter_3",
+      "episode_id": "letter_loop",
+      "revision": 3,
+      "source_sha256": "a38b9cd3559a5ddd754d5fcb205864d5133f4ea6b07a6fdb754b1d074d8556ed",
+      "state_sha256": "7103852d51016f0839eb084221a5391d7c5418e9690a51aa596420119f0f6b36",
+      "batch_sha256": "7cabf2ba6774e44a29775b04e96bc24123c5824bff8395f2159fa44d073a2fc7",
+      "retrieved_cards": [
+        "carrier_process"
+      ],
+      "reviewed_instances": 0,
+      "action_states": {
+        "read_note": "completed",
+        "use_code": "completed"
+      },
+      "proposals": [],
+      "blocked_actions": [
+        {
+          "action_id": "read_note",
+          "reason": "action_completed"
+        },
+        {
+          "action_id": "use_code",
+          "reason": "action_completed"
+        }
+      ],
+      "accepted_action": null,
+      "plan_count": 2,
+      "acceptance_preserved_facts": true,
+      "old_revision_acceptance_rejected": true
+    },
+    {
+      "case_id": "inventory_1",
+      "episode_id": "inventory_loop",
+      "revision": 1,
+      "source_sha256": "4a5cd473f8cba220d7be68648955a17e8795535bf5664430654c6b0427110936",
+      "state_sha256": "d40e8e2e16277c36b19d45f76a5c4b2d8935287b1a634e0b732cc510dd04577f",
+      "batch_sha256": "30a7690f575a02bfbab19eb41bce6d3ad4eea6a801f2a0d1c3d8705731f0506b",
+      "retrieved_cards": [
+        "clue_check",
+        "truth_trigger"
+      ],
+      "reviewed_instances": 1,
+      "action_states": {
+        "check_old": "completed",
+        "check_new": "proposed"
+      },
+      "proposals": [
+        {
+          "id": "proposal_9157650582c226a2bbae3d480b7260ff",
+          "actor_id": "pov",
+          "task_id": "missing_box",
+          "action_id": "check_new",
+          "target_ids": [
+            "new_sheet"
+          ],
+          "operation": "check",
+          "card_id": "clue_check",
+          "variant_id": "clue_check_verify",
+          "knowledge_kind": "technique",
+          "text": "开始核对今天出库单与库存记录：许知针对今天出库单推进查明缺少一箱货的去向。按该具体核对步骤检查线索并记录可观察的结果，再判断原假说；不把假说直接写成答案，不预先宣布核对成功。",
+          "status": "creative_proposal",
+          "evidence_fact_ids": [
+            "i_eee5ef7a91aec4fecaaaefe7:probe_0001",
+            "i_eee5ef7a91aec4fecaaaefe7:probe_0002",
+            "i_eee5ef7a91aec4fecaaaefe7:probe_0003",
+            "core_binding_check_new",
+            "core_fresh_check_new",
+            "core_distinct_e014ceb01d2cad15bb0a60667df240df506d9f8f76dfd86b09f98da159ea07b2"
+          ]
+        }
+      ],
+      "blocked_actions": [
+        {
+          "action_id": "check_old",
+          "reason": "action_completed"
+        }
+      ],
+      "accepted_action": "check_new",
+      "plan_count": 1,
+      "acceptance_preserved_facts": true,
+      "old_revision_acceptance_rejected": null
+    },
+    {
+      "case_id": "inventory_2",
+      "episode_id": "inventory_loop",
+      "revision": 2,
+      "source_sha256": "2c84f15551191325446d3b4a935b16b14ee29e453a5c26e066381f6559fe74b6",
+      "state_sha256": "907c9c8d644356d9cabc9c69ef11116ab95f2d0860c676d5c9a59a6543cb4513",
+      "batch_sha256": "98d5710bae3a4d6b1922148630087c876d538686ca0fcad4aa9f7c6636c1ae5d",
+      "retrieved_cards": [
+        "clue_check",
+        "truth_trigger"
+      ],
+      "reviewed_instances": 1,
+      "action_states": {
+        "check_old": "completed",
+        "check_new": "in_progress"
+      },
+      "proposals": [
+        {
+          "id": "proposal_9267058bf1cc227e8ff003b6bdd8c7bf",
+          "actor_id": "pov",
+          "task_id": "missing_box",
+          "action_id": "check_new",
+          "target_ids": [
+            "new_sheet"
+          ],
+          "operation": "check",
+          "card_id": "clue_check",
+          "variant_id": "clue_check_verify_continue",
+          "knowledge_kind": "technique",
+          "text": "继续核对今天出库单与库存记录：许知针对今天出库单推进查明缺少一箱货的去向。按该具体核对步骤检查线索并记录可观察的结果，再判断原假说；不把假说直接写成答案，不预先宣布核对成功。",
+          "status": "creative_proposal",
+          "evidence_fact_ids": [
+            "i_eee5ef7a91aec4fecaaaefe7:probe_0001",
+            "i_eee5ef7a91aec4fecaaaefe7:probe_0002",
+            "i_eee5ef7a91aec4fecaaaefe7:probe_0003",
+            "core_binding_check_new",
+            "core_status_check_new",
+            "core_distinct_e014ceb01d2cad15bb0a60667df240df506d9f8f76dfd86b09f98da159ea07b2"
+          ]
+        }
+      ],
+      "blocked_actions": [
+        {
+          "action_id": "check_old",
+          "reason": "action_completed"
+        }
+      ],
+      "accepted_action": null,
+      "plan_count": 1,
+      "acceptance_preserved_facts": true,
+      "old_revision_acceptance_rejected": true
+    },
+    {
+      "case_id": "inventory_3",
+      "episode_id": "inventory_loop",
+      "revision": 3,
+      "source_sha256": "0c4ce24dfe1a3124306491fcc301eafecf7f95d1a5407290dac2f0d1fa3fb67a",
+      "state_sha256": "3cb812432bb500cb19cea106d9481c59863f58a172fd980a0a964d9e7e8c34a0",
+      "batch_sha256": "5e6ffad97009cc4f3843589efedd16b394112be7bc28582ce864c5f215e9230e",
+      "retrieved_cards": [
+        "dialogue_active",
+        "truth_trigger"
+      ],
+      "reviewed_instances": 0,
+      "action_states": {
+        "check_old": "completed",
+        "check_new": "completed"
+      },
+      "proposals": [],
+      "blocked_actions": [
+        {
+          "action_id": "check_old",
+          "reason": "action_completed"
+        },
+        {
+          "action_id": "check_new",
+          "reason": "action_completed"
+        }
+      ],
+      "accepted_action": null,
+      "plan_count": 1,
+      "acceptance_preserved_facts": true,
+      "old_revision_acceptance_rejected": true
+    },
+    {
+      "case_id": "inventory_4",
+      "episode_id": "inventory_loop",
+      "revision": 4,
+      "source_sha256": "76ed0ed8b2dcd5b6ab159158d6b48a32330098420e7c39af2124d4dbd6c1b406",
+      "state_sha256": "03c6ac80e816557af2faff233e4244325e04bf7efbfb5eb3187ba50a7a82cb81",
+      "batch_sha256": "4a6e21dbdf64f103c18f268f232c92f3bad06fd30f161d90b1fd0a97574b5190",
+      "retrieved_cards": [
+        "clue_check",
+        "truth_trigger"
+      ],
+      "reviewed_instances": 1,
+      "action_states": {
+        "check_old": "completed",
+        "check_new": "completed",
+        "recheck_old": "proposed"
+      },
+      "proposals": [
+        {
+          "id": "proposal_14412f7ece5397a35f76fcf6294d7f6b",
+          "actor_id": "pov",
+          "task_id": "missing_box",
+          "action_id": "recheck_old",
+          "target_ids": [
+            "old_sheet"
+          ],
+          "operation": "check",
+          "card_id": "clue_check",
+          "variant_id": "clue_check_verify",
+          "knowledge_kind": "technique",
+          "text": "开始核对昨天出库单新显露的补记：许知针对昨天出库单推进查明缺少一箱货的去向。按该具体核对步骤检查线索并记录可观察的结果，再判断原假说；不把假说直接写成答案，不预先宣布核对成功。",
+          "status": "creative_proposal",
+          "evidence_fact_ids": [
+            "i_8d39dbe2b7de1c8b4709601e:probe_0001",
+            "i_8d39dbe2b7de1c8b4709601e:probe_0002",
+            "i_8d39dbe2b7de1c8b4709601e:probe_0003",
+            "core_binding_recheck_old",
+            "core_fresh_recheck_old",
+            "core_retry_recheck_old",
+            "core_distinct_e014ceb01d2cad15bb0a60667df240df506d9f8f76dfd86b09f98da159ea07b2"
+          ]
+        }
+      ],
+      "blocked_actions": [
+        {
+          "action_id": "check_old",
+          "reason": "action_completed"
+        },
+        {
+          "action_id": "check_new",
+          "reason": "action_completed"
+        }
+      ],
+      "accepted_action": "recheck_old",
+      "plan_count": 2,
+      "acceptance_preserved_facts": true,
+      "old_revision_acceptance_rejected": null
+    },
+    {
+      "case_id": "real_1",
+      "episode_id": "real_1",
+      "revision": 1,
+      "source_sha256": "1a47d31132fcc327992a970d0a8caa34d1269e6506359e23f1b061be1508e3ff",
+      "state_sha256": "39a663342845e0ed11a6e11fbea978fac07a67002c79255f0c421dcd05352f77",
+      "batch_sha256": "e2696e94c85a29abe53fd44418f3f78385b9cfd41ca83cd0b75476a1fe128399",
+      "retrieved_cards": [
+        "truth_trigger"
+      ],
+      "reviewed_instances": 0,
+      "action_states": {
+        "check_compass": "unknown"
+      },
+      "proposals": [],
+      "blocked_actions": [
+        {
+          "action_id": "check_compass",
+          "reason": "action_unknown"
+        }
+      ],
+      "accepted_action": null,
+      "plan_count": 0,
+      "acceptance_preserved_facts": true,
+      "old_revision_acceptance_rejected": null
+    },
+    {
+      "case_id": "real_2",
+      "episode_id": "real_2",
+      "revision": 1,
+      "source_sha256": "aeaea054ad1fce35d8691c63819b2282431ce1e2c82a184201200a2f23902a57",
+      "state_sha256": "64e2867c294495eda5d93bf80dc757bcb6290ad503d637908dbf7dbd756feea0",
+      "batch_sha256": "63c82a79db3250ba0b1f1101964fc48cdd79ca2cb98fb6d418b1b9ba78134498",
+      "retrieved_cards": [
+        "dialogue_active"
+      ],
+      "reviewed_instances": 0,
+      "action_states": {
+        "reply_coffee": "unknown"
+      },
+      "proposals": [],
+      "blocked_actions": [
+        {
+          "action_id": "reply_coffee",
+          "reason": "action_unknown"
+        }
+      ],
+      "accepted_action": null,
+      "plan_count": 0,
+      "acceptance_preserved_facts": true,
+      "old_revision_acceptance_rejected": null
+    }
+  ],
+  "limitations": [
+    "语义判断由本轮 AI 审阅导入；不是程序自动理解正文。",
+    "样本和操作化目录用于机制验收，不是独立小说推荐准确率。",
+    "未调用写作模型；新增正文来自预先编写的原创连续案例。"
+  ]
+}

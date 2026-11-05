@@ -1,0 +1,866 @@
+{
+  "schema_version": 1,
+  "scope": "authored_cards_imported_ai_conditions_not_human_gold",
+  "case_count": 8,
+  "card_count": 4,
+  "top_k": 2,
+  "model_sha256": "b5ce9d77a3fc4b3b39ccb5643c36777911cc4eb46a66962eadfa3f5f60490d63",
+  "dimensions": 768,
+  "cases": [
+    {
+      "case_id": "case-01",
+      "pool_ready_variant_ids": [
+        "carrier_process_read"
+      ],
+      "cards": [
+        {
+          "card_id": "dialogue_active",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "conflict_observed",
+            "conversation_active",
+            "dispute_open"
+          ]
+        },
+        {
+          "card_id": "truth_trigger",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "anomaly",
+            "commitment",
+            "question_open",
+            "pursuit_active"
+          ]
+        },
+        {
+          "card_id": "carrier_process",
+          "supported_stage_ids": [
+            "unread"
+          ],
+          "supported_condition_ids": [
+            "held",
+            "unread",
+            "purpose_known",
+            "use_pending"
+          ],
+          "contradicted_condition_ids": [
+            "understood"
+          ],
+          "unknown_condition_ids": []
+        },
+        {
+          "card_id": "clue_check",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "clue_available",
+            "question_open",
+            "check_pending",
+            "inquiry_active"
+          ]
+        }
+      ],
+      "methods": {
+        "bm25_raw": {
+          "ranked_card_ids": [
+            "carrier_process"
+          ],
+          "ready_variant_ids": [
+            "carrier_process_read"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "bm25_state": {
+          "ranked_card_ids": [
+            "carrier_process"
+          ],
+          "ready_variant_ids": [
+            "carrier_process_read"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "vector_raw": {
+          "ranked_card_ids": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ready_variant_ids": [
+            "carrier_process_read"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "vector_state": {
+          "ranked_card_ids": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ready_variant_ids": [
+            "carrier_process_read"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "case-02",
+      "pool_ready_variant_ids": [
+        "carrier_process_use"
+      ],
+      "cards": [
+        {
+          "card_id": "dialogue_active",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "conflict_observed",
+            "conversation_active",
+            "dispute_open"
+          ]
+        },
+        {
+          "card_id": "truth_trigger",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "anomaly",
+            "commitment",
+            "question_open",
+            "pursuit_active"
+          ]
+        },
+        {
+          "card_id": "carrier_process",
+          "supported_stage_ids": [
+            "understood"
+          ],
+          "supported_condition_ids": [
+            "held",
+            "understood",
+            "purpose_known",
+            "use_pending"
+          ],
+          "contradicted_condition_ids": [
+            "unread"
+          ],
+          "unknown_condition_ids": []
+        },
+        {
+          "card_id": "clue_check",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "clue_available",
+            "question_open",
+            "check_pending",
+            "inquiry_active"
+          ]
+        }
+      ],
+      "methods": {
+        "bm25_raw": {
+          "ranked_card_ids": [
+            "carrier_process",
+            "clue_check"
+          ],
+          "ready_variant_ids": [
+            "carrier_process_use"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "bm25_state": {
+          "ranked_card_ids": [
+            "carrier_process",
+            "clue_check"
+          ],
+          "ready_variant_ids": [
+            "carrier_process_use"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "vector_raw": {
+          "ranked_card_ids": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ready_variant_ids": [
+            "carrier_process_use"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "vector_state": {
+          "ranked_card_ids": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ready_variant_ids": [
+            "carrier_process_use"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "case-03",
+      "pool_ready_variant_ids": [
+        "dialogue_active_respond"
+      ],
+      "cards": [
+        {
+          "card_id": "dialogue_active",
+          "supported_stage_ids": [
+            "observed"
+          ],
+          "supported_condition_ids": [
+            "conflict_observed",
+            "conversation_active",
+            "dispute_open"
+          ],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": []
+        },
+        {
+          "card_id": "truth_trigger",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "anomaly",
+            "commitment",
+            "question_open",
+            "pursuit_active"
+          ]
+        },
+        {
+          "card_id": "carrier_process",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "held",
+            "unread",
+            "understood",
+            "purpose_known",
+            "use_pending"
+          ]
+        },
+        {
+          "card_id": "clue_check",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "clue_available",
+            "question_open",
+            "check_pending",
+            "inquiry_active"
+          ]
+        }
+      ],
+      "methods": {
+        "bm25_raw": {
+          "ranked_card_ids": [],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 0.0
+        },
+        "bm25_state": {
+          "ranked_card_ids": [
+            "dialogue_active"
+          ],
+          "ready_variant_ids": [
+            "dialogue_active_respond"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "vector_raw": {
+          "ranked_card_ids": [
+            "dialogue_active",
+            "clue_check"
+          ],
+          "ready_variant_ids": [
+            "dialogue_active_respond"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "vector_state": {
+          "ranked_card_ids": [
+            "dialogue_active",
+            "clue_check"
+          ],
+          "ready_variant_ids": [
+            "dialogue_active_respond"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "case-04",
+      "pool_ready_variant_ids": [],
+      "cards": [
+        {
+          "card_id": "dialogue_active",
+          "supported_stage_ids": [
+            "observed"
+          ],
+          "supported_condition_ids": [
+            "conflict_observed"
+          ],
+          "contradicted_condition_ids": [
+            "conversation_active",
+            "dispute_open"
+          ],
+          "unknown_condition_ids": []
+        },
+        {
+          "card_id": "truth_trigger",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "anomaly",
+            "commitment",
+            "question_open",
+            "pursuit_active"
+          ]
+        },
+        {
+          "card_id": "carrier_process",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "held",
+            "unread",
+            "understood",
+            "purpose_known",
+            "use_pending"
+          ]
+        },
+        {
+          "card_id": "clue_check",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "clue_available",
+            "question_open",
+            "check_pending",
+            "inquiry_active"
+          ]
+        }
+      ],
+      "methods": {
+        "bm25_raw": {
+          "ranked_card_ids": [],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 0,
+          "ready_card_recall": null
+        },
+        "bm25_state": {
+          "ranked_card_ids": [
+            "dialogue_active"
+          ],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 0,
+          "ready_card_recall": null
+        },
+        "vector_raw": {
+          "ranked_card_ids": [
+            "dialogue_active",
+            "clue_check"
+          ],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 0,
+          "ready_card_recall": null
+        },
+        "vector_state": {
+          "ranked_card_ids": [
+            "dialogue_active",
+            "clue_check"
+          ],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 0,
+          "ready_card_recall": null
+        }
+      }
+    },
+    {
+      "case_id": "case-05",
+      "pool_ready_variant_ids": [
+        "clue_check_verify"
+      ],
+      "cards": [
+        {
+          "card_id": "dialogue_active",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "conflict_observed",
+            "conversation_active",
+            "dispute_open"
+          ]
+        },
+        {
+          "card_id": "truth_trigger",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [
+            "anomaly",
+            "question_open",
+            "pursuit_active"
+          ],
+          "contradicted_condition_ids": [
+            "commitment"
+          ],
+          "unknown_condition_ids": []
+        },
+        {
+          "card_id": "carrier_process",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [
+            "held",
+            "purpose_known",
+            "use_pending"
+          ],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "unread",
+            "understood"
+          ]
+        },
+        {
+          "card_id": "clue_check",
+          "supported_stage_ids": [
+            "clue"
+          ],
+          "supported_condition_ids": [
+            "clue_available",
+            "question_open",
+            "check_pending",
+            "inquiry_active"
+          ],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": []
+        }
+      ],
+      "methods": {
+        "bm25_raw": {
+          "ranked_card_ids": [
+            "truth_trigger",
+            "clue_check"
+          ],
+          "ready_variant_ids": [
+            "clue_check_verify"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "bm25_state": {
+          "ranked_card_ids": [
+            "truth_trigger",
+            "clue_check"
+          ],
+          "ready_variant_ids": [
+            "clue_check_verify"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "vector_raw": {
+          "ranked_card_ids": [
+            "truth_trigger",
+            "clue_check"
+          ],
+          "ready_variant_ids": [
+            "clue_check_verify"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "vector_state": {
+          "ranked_card_ids": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "ready_variant_ids": [
+            "clue_check_verify"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "case-06",
+      "pool_ready_variant_ids": [
+        "truth_trigger_continue"
+      ],
+      "cards": [
+        {
+          "card_id": "dialogue_active",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [
+            "conversation_active"
+          ],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "conflict_observed",
+            "dispute_open"
+          ]
+        },
+        {
+          "card_id": "truth_trigger",
+          "supported_stage_ids": [
+            "trigger"
+          ],
+          "supported_condition_ids": [
+            "anomaly",
+            "commitment",
+            "question_open",
+            "pursuit_active"
+          ],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": []
+        },
+        {
+          "card_id": "carrier_process",
+          "supported_stage_ids": [
+            "understood"
+          ],
+          "supported_condition_ids": [
+            "held",
+            "understood",
+            "purpose_known"
+          ],
+          "contradicted_condition_ids": [
+            "unread"
+          ],
+          "unknown_condition_ids": [
+            "use_pending"
+          ]
+        },
+        {
+          "card_id": "clue_check",
+          "supported_stage_ids": [
+            "clue"
+          ],
+          "supported_condition_ids": [
+            "clue_available",
+            "question_open",
+            "inquiry_active"
+          ],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "check_pending"
+          ]
+        }
+      ],
+      "methods": {
+        "bm25_raw": {
+          "ranked_card_ids": [
+            "truth_trigger",
+            "clue_check"
+          ],
+          "ready_variant_ids": [
+            "truth_trigger_continue"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "bm25_state": {
+          "ranked_card_ids": [
+            "truth_trigger",
+            "clue_check"
+          ],
+          "ready_variant_ids": [
+            "truth_trigger_continue"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "vector_raw": {
+          "ranked_card_ids": [
+            "truth_trigger",
+            "clue_check"
+          ],
+          "ready_variant_ids": [
+            "truth_trigger_continue"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        },
+        "vector_state": {
+          "ranked_card_ids": [
+            "truth_trigger",
+            "clue_check"
+          ],
+          "ready_variant_ids": [
+            "truth_trigger_continue"
+          ],
+          "ready_cards_retrieved": 1,
+          "pool_ready_cards": 1,
+          "ready_card_recall": 1.0
+        }
+      }
+    },
+    {
+      "case_id": "case-07",
+      "pool_ready_variant_ids": [],
+      "cards": [
+        {
+          "card_id": "dialogue_active",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [
+            "conversation_active"
+          ],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "conflict_observed",
+            "dispute_open"
+          ]
+        },
+        {
+          "card_id": "truth_trigger",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [
+            "anomaly",
+            "question_open",
+            "pursuit_active"
+          ],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "commitment"
+          ]
+        },
+        {
+          "card_id": "carrier_process",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "held",
+            "unread",
+            "understood",
+            "purpose_known",
+            "use_pending"
+          ]
+        },
+        {
+          "card_id": "clue_check",
+          "supported_stage_ids": [
+            "clue"
+          ],
+          "supported_condition_ids": [
+            "clue_available",
+            "question_open",
+            "inquiry_active"
+          ],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "check_pending"
+          ]
+        }
+      ],
+      "methods": {
+        "bm25_raw": {
+          "ranked_card_ids": [],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 0,
+          "ready_card_recall": null
+        },
+        "bm25_state": {
+          "ranked_card_ids": [
+            "truth_trigger"
+          ],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 0,
+          "ready_card_recall": null
+        },
+        "vector_raw": {
+          "ranked_card_ids": [
+            "truth_trigger",
+            "clue_check"
+          ],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 0,
+          "ready_card_recall": null
+        },
+        "vector_state": {
+          "ranked_card_ids": [
+            "truth_trigger",
+            "clue_check"
+          ],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 0,
+          "ready_card_recall": null
+        }
+      }
+    },
+    {
+      "case_id": "case-08",
+      "pool_ready_variant_ids": [],
+      "cards": [
+        {
+          "card_id": "dialogue_active",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [
+            "conversation_active"
+          ],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "conflict_observed",
+            "dispute_open"
+          ]
+        },
+        {
+          "card_id": "truth_trigger",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "anomaly",
+            "commitment",
+            "question_open",
+            "pursuit_active"
+          ]
+        },
+        {
+          "card_id": "carrier_process",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "held",
+            "unread",
+            "understood",
+            "purpose_known",
+            "use_pending"
+          ]
+        },
+        {
+          "card_id": "clue_check",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "contradicted_condition_ids": [],
+          "unknown_condition_ids": [
+            "clue_available",
+            "question_open",
+            "check_pending",
+            "inquiry_active"
+          ]
+        }
+      ],
+      "methods": {
+        "bm25_raw": {
+          "ranked_card_ids": [],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 0,
+          "ready_card_recall": null
+        },
+        "bm25_state": {
+          "ranked_card_ids": [
+            "dialogue_active"
+          ],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 0,
+          "ready_card_recall": null
+        },
+        "vector_raw": {
+          "ranked_card_ids": [
+            "clue_check",
+            "dialogue_active"
+          ],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 0,
+          "ready_card_recall": null
+        },
+        "vector_state": {
+          "ranked_card_ids": [
+            "dialogue_active",
+            "clue_check"
+          ],
+          "ready_variant_ids": [],
+          "ready_cards_retrieved": 0,
+          "pool_ready_cards": 0,
+          "ready_card_recall": null
+        }
+      }
+    }
+  ],
+  "methods": {
+    "bm25_raw": {
+      "ready_cards_retrieved": 4,
+      "pool_ready_cards": 5,
+      "micro_ready_card_recall": 0.8,
+      "zero_ready_cases": 3
+    },
+    "bm25_state": {
+      "ready_cards_retrieved": 5,
+      "pool_ready_cards": 5,
+      "micro_ready_card_recall": 1.0,
+      "zero_ready_cases": 3
+    },
+    "vector_raw": {
+      "ready_cards_retrieved": 5,
+      "pool_ready_cards": 5,
+      "micro_ready_card_recall": 1.0,
+      "zero_ready_cases": 3
+    },
+    "vector_state": {
+      "ready_cards_retrieved": 5,
+      "pool_ready_cards": 5,
+      "micro_ready_card_recall": 1.0,
+      "zero_ready_cases": 3
+    }
+  }
+}

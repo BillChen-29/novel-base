@@ -1,0 +1,3001 @@
+{
+  "reviews": [
+    {
+      "case_id": "case-01",
+      "review": {
+        "schema_version": 1,
+        "project_id": "case-01",
+        "project_sha256": "257ece69aeeced4261dfbd8ec3fb7843c04e8968d6a4ef5e84faa3e64c2d7caf",
+        "packet_sha256": "dfbd5ee172589bc4fc708e80ab0d03f4c4c3b8da2c5b7ef71cc96b5ea4311922",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "stage_early"
+        },
+        "decisions": [
+          {
+            "fact_id": "base_01",
+            "verdict": "supported",
+            "epistemic_type": "reported",
+            "reason": "纸条交付及阿岚说明用途明确发生；纸条实际写有取件编号这一部分仅由阿岚口述支持，封口尚未打开，故整项保留为报告层级。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 47,
+                "quote": "沈遥来到闸机前，阿岚递给她一张封口的纸条：“里面是本次取件的四位编号，输入后可以打开三号柜。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 47,
+                "end": 82,
+                "quote": "沈遥把纸条拿在手中，封口还完好。她还没读过里面的数字，想着先拆开看看。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "沈遥亲自接收纸条，阿岚直接向她说明其中是开柜编号，支持她知悉交付和该说明；不表示她已读到具体数字或核验内容。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 47,
+                    "quote": "沈遥来到闸机前，阿岚递给她一张封口的纸条：“里面是本次取件的四位编号，输入后可以打开三号柜。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 47,
+                    "end": 82,
+                    "quote": "沈遥把纸条拿在手中，封口还完好。她还没读过里面的数字，想着先拆开看看。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接说明纸条在手、封口完好，且她未读数字并打算拆开。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 47,
+                "end": 82,
+                "quote": "沈遥把纸条拿在手中，封口还完好。她还没读过里面的数字，想着先拆开看看。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "原文直接呈现沈遥未读数字的自身状态及拆看打算。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 47,
+                    "end": 82,
+                    "quote": "沈遥把纸条拿在手中，封口还完好。她还没读过里面的数字，想着先拆开看看。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_03",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "截点末尾明确说明柜门仍关着，沈遥未输入编号。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 82,
+                "end": 98,
+                "quote": "三号柜仍关着，她还没有输入编号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "柜门当前状态与她尚未实施的输入动作均在本人所处场景中明确呈现。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 82,
+                    "end": 98,
+                    "quote": "三号柜仍关着，她还没有输入编号。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0001",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "只有阿岚交付纸条并说明用途，未出现与取件任务有关的立场分歧、信息博弈或言行意图冲突。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有沈遥接触或认识到具体对话冲突的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "交付说明后，叙事转向沈遥持条和拆看打算；未表明截点末尾仍在交涉或阿岚仍可当场回应。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有沈遥此刻继续与阿岚交涉、等待回应或确认对方仍在场的证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "未建立具体争议；取件尚未完成不能等同于双方争议未解决。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "沈遥知道尚未输入编号，但没有她知道某项双方争议仍未解决的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0004",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "封口纸条和尚未打开的柜子属于普通取件流程，原文未呈现死亡、失踪或异常疑点。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "未见沈遥把当前取件事项认作异常或疑点。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0005",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "想拆开纸条看看只是一项读取打算，未表明存在疑点或已决定持续追查到底。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 63,
+                "end": 82,
+                "quote": "她还没读过里面的数字，想着先拆开看看。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "沈遥的想法只涉及先拆看纸条，没有持续追查决定的心理或言说证据。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 63,
+                    "end": 82,
+                    "quote": "她还没读过里面的数字，想着先拆开看看。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0006",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "未读编号不等于异常疑点尚未查明；当前焦点中没有已建立的疑点。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有沈遥认知某项异常疑点仍待查明的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0007",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "当前动作是持有纸条并准备拆看，未建立针对疑点的追查行动。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有沈遥知悉自己正在推进某项追查的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0008",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "当前信息载体明确绑定为这张纸条，原文直接说明沈遥拿在手中。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 47,
+                "end": 63,
+                "quote": "沈遥把纸条拿在手中，封口还完好。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "沈遥亲手持有纸条，对其可访问性有直接经验。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 47,
+                    "end": 63,
+                    "quote": "沈遥把纸条拿在手中，封口还完好。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0009",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "纸条尚未拆封，叙述明确说明她未读数字并想着先拆开看看。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 47,
+                "end": 82,
+                "quote": "沈遥把纸条拿在手中，封口还完好。她还没读过里面的数字，想着先拆开看看。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "她准备先拆开看看这一自身打算与明确的未读状态共同支持她知道尚未读取。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 47,
+                    "end": 82,
+                    "quote": "沈遥把纸条拿在手中，封口还完好。她还没读过里面的数字，想着先拆开看看。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0010",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "原文明确说沈遥还没读过里面的数字，与已经读取并理解具体内容相反。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 63,
+                "end": 82,
+                "quote": "她还没读过里面的数字，想着先拆开看看。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "contradicted",
+                "reason": "沈遥此时意识到需先拆开看看，不能被判为已知悉自己完成读取理解。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 63,
+                    "end": 82,
+                    "quote": "她还没读过里面的数字，想着先拆开看看。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0011",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "阿岚已直接告知纸条中的编号用于输入并打开三号柜，内容的指定用途明确；不要求她已知具体数字。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 47,
+                "quote": "沈遥来到闸机前，阿岚递给她一张封口的纸条：“里面是本次取件的四位编号，输入后可以打开三号柜。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "用途说明直接说给沈遥，随后她持条准备查看，支持她已知当前取件中的指定用途。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 47,
+                    "quote": "沈遥来到闸机前，阿岚递给她一张封口的纸条：“里面是本次取件的四位编号，输入后可以打开三号柜。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 63,
+                    "end": 82,
+                    "quote": "她还没读过里面的数字，想着先拆开看看。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0012",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "指定任务是输入编号开三号柜；截点末尾柜门仍关、编号未输入，任务明确待完成。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 47,
+                "quote": "沈遥来到闸机前，阿岚递给她一张封口的纸条：“里面是本次取件的四位编号，输入后可以打开三号柜。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 82,
+                "end": 98,
+                "quote": "三号柜仍关着，她还没有输入编号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "沈遥直接获知开柜用途，并知道自己尚未输入编号，支持她知悉该任务仍待实施。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 47,
+                    "quote": "沈遥来到闸机前，阿岚递给她一张封口的纸条：“里面是本次取件的四位编号，输入后可以打开三号柜。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 82,
+                    "end": 98,
+                    "quote": "三号柜仍关着，她还没有输入编号。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0013",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "纸条承载取件编号，但原文没有与之相关的异常疑点，不能将普通取件信息自动视为调查线索。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有沈遥接触到针对某个疑点的线索或观察材料的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0014",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "尚未读取编号并不建立一项与调查线索有关的未决问题。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有沈遥认识到某项线索关联问题尚未查明的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0015",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "拆开读取是取件流程的下一步，原文未将它设为针对异常线索的核对步骤。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "沈遥有拆看打算，但没有她知道某项调查核对步骤待做且可做的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0016",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "场景只建立取件和读取准备，没有正在调查或核对疑点的活动。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有沈遥认知自己正在调查疑点的依据。",
+                "evidence": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case-02",
+      "review": {
+        "schema_version": 1,
+        "project_id": "case-02",
+        "project_sha256": "4d5b051941fe67834b6c0c877ea838b3b5ebb49016b03db11500e0f28f90b72d",
+        "packet_sha256": "f54b80e12c5c636a5db43ee69cf7a8c054b2a54410de4fbaa6a56cc8175f5dec",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "stage_later"
+        },
+        "decisions": [
+          {
+            "fact_id": "base_01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文明示阿岚当面说明纸条内四位编号的用途；命题确认的是告知事件，不另行证明柜锁一定接受该编号。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 47,
+                "quote": "沈遥来到闸机前，阿岚递给她一张封口的纸条：“里面是本次取件的四位编号，输入后可以打开三号柜。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "沈遥是这句话的直接受告知者，且随后理解它是取件编号。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 47,
+                    "quote": "沈遥来到闸机前，阿岚递给她一张封口的纸条：“里面是本次取件的四位编号，输入后可以打开三号柜。”"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "后段明确写出撕开封口、读完4816和理解其为取件编号，早先未读的状态已更新。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 99,
+                "end": 155,
+                "quote": "沈遥随即撕开封口，纸上只有“4816”四个数字。她逐个读完，把数字和屏幕上的四位输入框对上，明白这就是取件编号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "读取和理解都是沈遥自己的明确经历。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 99,
+                    "end": 155,
+                    "quote": "沈遥随即撕开封口，纸上只有“4816”四个数字。她逐个读完，把数字和屏幕上的四位输入框对上，明白这就是取件编号。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_03",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "截点末尾纸条仍在她可控制的屏幕旁，且明确尚未输入任何数字、柜门尚未打开。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 155,
+                "end": 193,
+                "quote": "她将纸条平放在屏幕旁，手指停在按键上，还没有按下第一个数字，柜门也尚未打开。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "她亲自摆放纸条并把手停在按键上，能够直接知道自己尚未输入及面前柜门未开。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 155,
+                    "end": 193,
+                    "quote": "她将纸条平放在屏幕旁，手指停在按键上，还没有按下第一个数字，柜门也尚未打开。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0001",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "阿岚说明取件方式，沈遥随后操作；没有具体的立场分歧、信息博弈或表态与意图冲突。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有文本支持沈遥知晓此次取件交谈中存在上述冲突。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "原文只有阿岚最初的说明；结尾转为沈遥读纸条和准备按键，未明确交涉仍在进行或阿岚此刻仍可回应。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "沈遥听过说明不能单独证明她知道截点时仍有持续交涉。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "取件尚未执行并不等于双方存在尚未解决的争议；原文没有建立这场争议。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有争议及其处理状态的证据，不能赋予沈遥相应知情。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0004",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "纸条、编号与未开的柜门构成正常取件过程，没有给出死亡、失踪或异常疑点。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有文本表明沈遥将该取件任务识别为异常疑点。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0005",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "沈遥想拆纸条并开始输入前准备，没有决定持续追查某个疑点直至弄清。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有她作出持续追查决定的言语、思考或行动证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0006",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "当前焦点中未确立异常疑点，不能把尚未开柜改写为疑点尚未查明。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "未提供沈遥认识到某个调查疑点仍未查明的证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0007",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "结尾是在准备取件，没有已建立且仍在推进的追查行动。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "她对自己取件动作的知情不能扩展为对调查进度的知情。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0008",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "纸条是承载四位编号的具体信息载体，沈遥亲自放在面前屏幕旁，仍能直接访问。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 99,
+                "end": 123,
+                "quote": "沈遥随即撕开封口，纸上只有“4816”四个数字。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 155,
+                "end": 193,
+                "quote": "她将纸条平放在屏幕旁，手指停在按键上，还没有按下第一个数字，柜门也尚未打开。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "她亲自阅读和摆放纸条，知道它仍在自己面前可用。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 99,
+                    "end": 123,
+                    "quote": "沈遥随即撕开封口，纸上只有“4816”四个数字。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 155,
+                    "end": 193,
+                    "quote": "她将纸条平放在屏幕旁，手指停在按键上，还没有按下第一个数字，柜门也尚未打开。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0009",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "截点前已经读完4816并理解其用途，直接否定此刻仍未读取、理解及自知未读的说法。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 99,
+                "end": 155,
+                "quote": "沈遥随即撕开封口，纸上只有“4816”四个数字。她逐个读完，把数字和屏幕上的四位输入框对上，明白这就是取件编号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "contradicted",
+                "reason": "她自己的读取和理解被明确叙述，不能仍把她标成知道自己尚未读取。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 99,
+                    "end": 155,
+                    "quote": "沈遥随即撕开封口，纸上只有“4816”四个数字。她逐个读完，把数字和屏幕上的四位输入框对上，明白这就是取件编号。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0010",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "后段明确完成读取并理解纸条的具体编号。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 99,
+                "end": 155,
+                "quote": "沈遥随即撕开封口，纸上只有“4816”四个数字。她逐个读完，把数字和屏幕上的四位输入框对上，明白这就是取件编号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "这是她亲自完成且被明示理解的认知过程。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 99,
+                    "end": 155,
+                    "quote": "沈遥随即撕开封口，纸上只有“4816”四个数字。她逐个读完，把数字和屏幕上的四位输入框对上，明白这就是取件编号。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0011",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "阿岚告知编号用于打开三号柜，沈遥又将数字对应输入框并明确理解它是取件编号。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 47,
+                "quote": "沈遥来到闸机前，阿岚递给她一张封口的纸条：“里面是本次取件的四位编号，输入后可以打开三号柜。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 123,
+                "end": 155,
+                "quote": "她逐个读完，把数字和屏幕上的四位输入框对上，明白这就是取件编号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "直接告知加上明确的理解描写支持沈遥知道编号在当前取件任务中的用途。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 47,
+                    "quote": "沈遥来到闸机前，阿岚递给她一张封口的纸条：“里面是本次取件的四位编号，输入后可以打开三号柜。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 123,
+                    "end": 155,
+                    "quote": "她逐个读完，把数字和屏幕上的四位输入框对上，明白这就是取件编号。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0012",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "使用编号开柜的任务有明确用途，而截点末尾尚未按下任何数字，柜门也未打开。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 47,
+                "quote": "沈遥来到闸机前，阿岚递给她一张封口的纸条：“里面是本次取件的四位编号，输入后可以打开三号柜。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 155,
+                "end": 193,
+                "quote": "她将纸条平放在屏幕旁，手指停在按键上，还没有按下第一个数字，柜门也尚未打开。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "沈遥知道编号用途，又直接知道自己的输入动作尚未开始，因此有依据知道此项取件操作尚待完成。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 47,
+                    "quote": "沈遥来到闸机前，阿岚递给她一张封口的纸条：“里面是本次取件的四位编号，输入后可以打开三号柜。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 155,
+                    "end": 193,
+                    "quote": "她将纸条平放在屏幕旁，手指停在按键上，还没有按下第一个数字，柜门也尚未打开。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0013",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "已接触纸条和编号，但原文没有把它们关联到任何具体异常疑点；不能仅凭物件把它们视为调查线索。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有沈遥知道纸条是某一疑点线索的证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0014",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "未确立与线索相关的调查问题；未知柜内取件结果不自动成为尚未查明的疑点。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有她知晓某个线索问题仍未查明的文本。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0015",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "按编号开柜是已知取件任务，文本没有提出针对疑点线索的具体核对步骤。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "沈遥知道尚未输入，但没有证据证明她知道一项尚待执行的线索核对。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0016",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "准备按键执行取件不能单独证明正在调查或核对异常疑点。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有她对当前调查行动知情的依据。",
+                "evidence": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case-03",
+      "review": {
+        "schema_version": 1,
+        "project_id": "case-03",
+        "project_sha256": "e074b3296cbb1263e77b7a6d7cdf175de6cf3151378cdb05187abfd1ca0a756f",
+        "packet_sha256": "83a1aba7d898e1e4fdb21f866f403954b33cb3196042b9d6d5d3de9d48acdf0d",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "stage_early"
+        },
+        "decisions": [
+          {
+            "fact_id": "base_01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "陆宁明确要求现在归还钥匙，乔川明确要求先结清押金，候选仅陈述两人的诉求。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 68,
+                "quote": "陆宁把钥匙压在桌边：“说好今天还给我。”乔川握住钥匙的另一端：“你先把欠我的押金结清。”陆宁当面回答：“账目可以再算，钥匙现在就得还。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "supported",
+                "reason": "陆宁亲自提出要求并当面回应乔川的押金条件，显示她已听取双方诉求。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 68,
+                    "quote": "陆宁把钥匙压在桌边：“说好今天还给我。”乔川握住钥匙的另一端：“你先把欠我的押金结清。”陆宁当面回答：“账目可以再算，钥匙现在就得还。”"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "截点末尾明确说明双方仍在桌旁、未接受条件、陆宁等待回答。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 68,
+                "end": 105,
+                "quote": "乔川没有松手，两人仍坐在桌旁，谁也没接受对方的条件。陆宁看着他，等他回答。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "supported",
+                "reason": "陆宁正看着没有松手的乔川等待回答，支持她知悉僵持及自己等待的状态。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 68,
+                    "end": 105,
+                    "quote": "乔川没有松手，两人仍坐在桌旁，谁也没接受对方的条件。陆宁看着他，等他回答。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0001",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "归还钥匙是否必须先退押金构成具体的先后条件冲突，陆宁已直接参与对话。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 68,
+                "quote": "陆宁把钥匙压在桌边：“说好今天还给我。”乔川握住钥匙的另一端：“你先把欠我的押金结清。”陆宁当面回答：“账目可以再算，钥匙现在就得还。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "supported",
+                "reason": "陆宁当面反驳先退押金的条件，直接表现出她理解此项分歧。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 68,
+                    "quote": "陆宁把钥匙压在桌边：“说好今天还给我。”乔川握住钥匙的另一端：“你先把欠我的押金结清。”陆宁当面回答：“账目可以再算，钥匙现在就得还。”"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "双方仍在桌边，乔川未松手，陆宁正等待其回答，交涉在截点处仍在进行。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 68,
+                "end": 105,
+                "quote": "乔川没有松手，两人仍坐在桌旁，谁也没接受对方的条件。陆宁看着他，等他回答。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "supported",
+                "reason": "陆宁看着乔川等他回应，直接支持她知道当前交涉仍有现场回应可能。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 68,
+                    "end": 105,
+                    "quote": "乔川没有松手，两人仍坐在桌旁，谁也没接受对方的条件。陆宁看着他，等他回答。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "谁也没有接受对方条件且陆宁仍在等待回答，明确表明争议尚未形成处理结果。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 68,
+                "end": 105,
+                "quote": "乔川没有松手，两人仍坐在桌旁，谁也没接受对方的条件。陆宁看着他，等他回答。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "supported",
+                "reason": "陆宁自身未接受条件，并面对乔川不松手的行为等待回答，支持她知道争议未解。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 68,
+                    "end": 105,
+                    "quote": "乔川没有松手，两人仍坐在桌旁，谁也没接受对方的条件。陆宁看着他，等他回答。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0004",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "当前是钥匙与押金的条件争执，没有具体死亡、失踪或异常疑点。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "未见陆宁发现此类疑点的观察或认知。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0005",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "坚持立刻归还钥匙是一项诉求，未建立持续追查疑点的决定。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "陆宁说出的是归还要求，没有持续查明真相的承诺或内心决定。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0006",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "双方条件未达成并不等于某个异常疑点未查明。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "陆宁知道争执未解，但没有她认知调查疑点未明的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0007",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "原文显示持续交涉，没有针对疑点的追查行动。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "未见陆宁知道自己正在进行某项追查的证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0008",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "钥匙是争执中的实物，原文没有赋予它承载待读取信息的作用，也没有其他明确载体。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "陆宁触及钥匙不等于她持有或能访问一份相关信息载体。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0009",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "没有建立信息载体及其具体内容，无法判断尚未读取，更不能由缺少阅读描写推出未读。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "没有陆宁知道自己尚未读取特定载体的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0010",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "原文没有任何载体读取理解事件；口头听取押金条件不能替代载体阅读。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "陆宁回应口头条件不能证明她已读懂一份载体内容。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0011",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "当前只有钥匙归还与押金诉求，未建立某份载体内容及其指定用途。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "没有陆宁知悉某份内容在任务中如何使用的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0012",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "未决争执不是依照特定载体内容执行的任务，原文没有这样的内容使用流程。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "陆宁知悉交涉尚未结束，不足以证明她知道内容使用任务仍待完成。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0013",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "钥匙和押金条件不是已被建立的异常调查线索，场景未提供相关观察材料。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "没有陆宁接触与异常疑点相关线索的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0014",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "争议未解与线索所涉问题尚未查明不同，后者的疑点和线索均未建立。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "陆宁知道谈判条件未达成，不等于知道某项线索问题未解。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0015",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "“账目可以再算”只是交涉中的表态，未指定当前可执行且尚未完成的疑点核对步骤。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "没有陆宁已知某项具体线索核对步骤及其当前可执行性的证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0016",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "陆宁当前正在等待归还钥匙争执的回应，未显示调查或核对疑点。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "没有陆宁知悉自己正在进行疑点调查的依据。",
+                "evidence": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case-04",
+      "review": {
+        "schema_version": 1,
+        "project_id": "case-04",
+        "project_sha256": "e491d471259e3b7f12359d5c2510359a17c691bed2240eb4b4305d39c9e0d298",
+        "packet_sha256": "1e1c6e6c8d86d97f9dd7c38c7e676fa89a7cd288396bd9cbb759515f57f9ff93",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "stage_later"
+        },
+        "decisions": [
+          {
+            "fact_id": "base_01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "前段双方分别提出立即还钥匙和先结押金的条件，且都未接受对方条件，足以支持曾发生争执。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 94,
+                "quote": "陆宁把钥匙压在桌边：“说好今天还给我。”乔川握住钥匙的另一端：“你先把欠我的押金结清。”陆宁当面回答：“账目可以再算，钥匙现在就得还。”乔川没有松手，两人仍坐在桌旁，谁也没接受对方的条件。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "supported",
+                "reason": "陆宁直接提出诉求并当面反驳对方条件，是争执的参与者。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 94,
+                    "quote": "陆宁把钥匙压在桌边：“说好今天还给我。”乔川握住钥匙的另一端：“你先把欠我的押金结清。”陆宁当面回答：“账目可以再算，钥匙现在就得还。”乔川没有松手，两人仍坐在桌旁，谁也没接受对方的条件。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "乔川归还钥匙并提议次日对账，陆宁明确答应、两人点头，当前争执已有双方接受的处理结果。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 106,
+                "end": 165,
+                "quote": "乔川终于松开手，把钥匙推给陆宁：“钥匙你拿走，押金明天一起对账。”陆宁拿起钥匙：“行，这件事就这么定。”两人都点了头。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "supported",
+                "reason": "陆宁亲自收回钥匙并口头同意安排，知道双方已达成该结果。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 106,
+                    "end": 165,
+                    "quote": "乔川终于松开手，把钥匙推给陆宁：“钥匙你拿走，押金明天一起对账。”陆宁拿起钥匙：“行，这件事就这么定。”两人都点了头。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_03",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "结尾直接叙述乔川离开、陆宁独自收拾书架及钥匙已放进她口袋。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 165,
+                "end": 199,
+                "quote": "乔川起身离开，房门合上；陆宁独自去收拾书架，钥匙已经放进自己的口袋。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "supported",
+                "reason": "乔川从同一现场离开、房门合上，陆宁随后独自行动并持有钥匙，这些是她可直接经验的状态。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 165,
+                    "end": 199,
+                    "quote": "乔川起身离开，房门合上；陆宁独自去收拾书架，钥匙已经放进自己的口袋。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0001",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "命题说已经参与，前段具体的还钥匙顺序与结清押金条件之争确实发生；后来和解不抹去该历史。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 94,
+                "quote": "陆宁把钥匙压在桌边：“说好今天还给我。”乔川握住钥匙的另一端：“你先把欠我的押金结清。”陆宁当面回答：“账目可以再算，钥匙现在就得还。”乔川没有松手，两人仍坐在桌旁，谁也没接受对方的条件。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "supported",
+                "reason": "她亲自提出立即归还的立场并听到对方先结押金的相反条件。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 94,
+                    "quote": "陆宁把钥匙压在桌边：“说好今天还给我。”乔川握住钥匙的另一端：“你先把欠我的押金结清。”陆宁当面回答：“账目可以再算，钥匙现在就得还。”乔川没有松手，两人仍坐在桌旁，谁也没接受对方的条件。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "截点时乔川已离开且房门合上，陆宁独自做别的事，直接否定两人此刻仍在当场交涉。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 165,
+                "end": 199,
+                "quote": "乔川起身离开，房门合上；陆宁独自去收拾书架，钥匙已经放进自己的口袋。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "contradicted",
+                "reason": "离场发生在两人交涉结束后，陆宁已独自行动，不能把她视为仍知道对方可当场回应。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 165,
+                    "end": 199,
+                    "quote": "乔川起身离开，房门合上；陆宁独自去收拾书架，钥匙已经放进自己的口袋。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "陆宁明确同意钥匙归还、押金明天对账的安排，双方点头；押金结算延后不等于当前争执尚无处理结果。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 106,
+                "end": 165,
+                "quote": "乔川终于松开手，把钥匙推给陆宁：“钥匙你拿走，押金明天一起对账。”陆宁拿起钥匙：“行，这件事就这么定。”两人都点了头。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "contradicted",
+                "reason": "她亲口说这件事就这么定，直接反驳她知道双方尚未达成处理结果的说法。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 106,
+                    "end": 165,
+                    "quote": "乔川终于松开手，把钥匙推给陆宁：“钥匙你拿走，押金明天一起对账。”陆宁拿起钥匙：“行，这件事就这么定。”两人都点了头。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0004",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "还钥匙与押金的分歧没有构成文本中的死亡、失踪或异常疑点。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "没有陆宁发现具体异常疑点的感知或判断证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0005",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "她提出返还要求并同意对账，没有明确作出持续调查到底的承诺。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "不能把她坚持还钥匙的立场转换成她知晓自己已作出追查承诺。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0006",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "争执和解涉及处理安排，文本没有另立一个目前尚未查明的调查疑点。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "陆宁知道明天对账，不能据此认定她知道某个异常问题仍未查明。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0007",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "没有已被建立的追查行动；结尾收拾书架也没有提供推进调查的证据。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "没有陆宁知晓自己正推进持续追查的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0008",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "钥匙确在陆宁口袋里，但它在此处是归还对象，未被写成承载待读取内容的信息载体。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "她知道自己持有钥匙，并不足以证明她知道自己持有命题所指的信息载体。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0009",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "当前焦点中没有识别出承载具体内容的载体，也没有未读且自知未读的描写。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "缺乏陆宁尚未读取某份载体内容及对此自知的证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0010",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "双方说过话并取得一致，但没有读取、理解某个信息载体的事件。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "她理解口头安排不能直接等同于知道自己已读取该载体。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0011",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "知道钥匙归谁和明天对账的约定，不等于知道某份载体内容的任务用途；该载体内容并未建立。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "无证据将陆宁的安排认知绑定到一份具体载体内容及其用途。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0012",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "明天对账是双方口头安排，但当前焦点中没有一份已读载体内容可供绑定，不能据此支持依照该内容执行的待办任务。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "陆宁知道未来对账安排，但这不证明她知晓命题所指的载体使用任务未完成。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0013",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "钥匙和押金是争执标的，未被呈现为与具体异常疑点有关的观察材料或线索。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "没有陆宁把这些物件或账目识别为疑点线索的证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0014",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "双方约定以后对账不自动建立一项线索所对应的未查明异常问题。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "没有她知晓具体线索问题仍未查明的描写。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0015",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "原文有次日对账约定，但没有针对异常线索且现在即可执行的待核对步骤；不能把约定本身改成调查检查。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "没有陆宁知道现在存在这样一项线索核对步骤的证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0016",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "结尾只写她独自收拾书架；文本没有建立当前仍在调查或核对的异常疑点。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "陆宁",
+                "verdict": "insufficient_evidence",
+                "reason": "缺乏她知道自己正在进行疑点调查或核对的依据。",
+                "evidence": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case-05",
+      "review": {
+        "schema_version": 1,
+        "project_id": "case-05",
+        "project_sha256": "d43f3c9afbc6f7cef53a786e6349930e2b4b497d8b79d8351b28c391603cb97e",
+        "packet_sha256": "6614529e04cc7afb35f054cbea6d396f40d77b64f1b27d9aee4eec43522dfc0b",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "stage_early"
+        },
+        "decisions": [
+          {
+            "fact_id": "base_01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接说明许澄发现账面十二箱与实物十一箱不符，且她不清楚缺箱去向。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 43,
+                "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。缺的一箱去了哪里，她还不清楚。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "发现与不清楚均明确归属于许澄本人，直接支持她知道差异及自身未知。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 43,
+                    "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。缺的一箱去了哪里，她还不清楚。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "她已要求将当班出库单放到桌上，随后坐到单前；逐项核对明确尚未开始。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 43,
+                "end": 72,
+                "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 111,
+                "end": 125,
+                "quote": "许澄坐到出库单前，拿起了笔。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "许澄亲自调取单据并坐到其前，核对是她当前尚未启动的计划。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 43,
+                    "end": 72,
+                    "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 111,
+                    "end": 125,
+                    "quote": "许澄坐到出库单前，拿起了笔。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_03",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "许澄明确说先做一次例行核对，尚未决定一直追查。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 72,
+                "end": 111,
+                "quote": "同事问要不要继续查下去，她回答：“先做这一次例行核对，我还没决定要一直追查。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "这是许澄自己对当下计划和未作持续追查决定的直接表述。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 72,
+                    "end": 111,
+                    "quote": "同事问要不要继续查下去，她回答：“先做这一次例行核对，我还没决定要一直追查。”"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_04",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "截点末尾直接写出许澄坐到出库单前并拿起笔。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 111,
+                "end": 125,
+                "quote": "许澄坐到出库单前，拿起了笔。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "坐下、面对出库单及提笔均为许澄本人的直接行动。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 111,
+                    "end": 125,
+                    "quote": "许澄坐到出库单前，拿起了笔。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0001",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "同事询问是否继续查，许澄说明当前计划，未显示对立立场、信息博弈或表态与意图冲突。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "insufficient_evidence",
+                "reason": "许澄参与了问答，但没有她识别具体对话冲突的证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "回答同事后她坐到单据前准备核对，未表明当前仍在交涉或对方仍在等待回应。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "insufficient_evidence",
+                "reason": "没有许澄在截点末尾继续交涉、等待回答或确认同事仍可回应的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "缺箱原因未明是一项调查问题，原文未建立双方争议或未达成的处理条件。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "insufficient_evidence",
+                "reason": "许澄知道缺箱去向未知，不等于她知道某项双方争议尚未解决。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0004",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "账本十二箱与货架十一箱的明确差异构成当前缺货异常，许澄已亲自发现。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 43,
+                "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。缺的一箱去了哪里，她还不清楚。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "原文直接以许澄为发现者，并写明她不清楚缺箱去向。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 43,
+                    "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。缺的一箱去了哪里，她还不清楚。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0005",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "许澄明确说自己还没决定一直追查，与已经明确决定持续追查到底相反。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 72,
+                "end": 111,
+                "quote": "同事问要不要继续查下去，她回答：“先做这一次例行核对，我还没决定要一直追查。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "contradicted",
+                "reason": "许澄亲口表述尚未作出持续追查决定，反证她已知悉自己作出此决定。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 72,
+                    "end": 111,
+                    "quote": "同事问要不要继续查下去，她回答：“先做这一次例行核对，我还没决定要一直追查。”"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0006",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文明确写出她还不清楚缺少一箱货的去向，截点处核对也尚未开始。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 28,
+                "end": 43,
+                "quote": "缺的一箱去了哪里，她还不清楚。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 43,
+                "end": 72,
+                "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "“她还不清楚”直接标明许澄知道自己尚不了解缺箱去向。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 28,
+                    "end": 43,
+                    "quote": "缺的一箱去了哪里，她还不清楚。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0007",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "调取当班出库单、准备逐项核对并坐下提笔，表明针对缺箱问题的当前查验正在推进；不包含持续追查承诺。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 43,
+                "end": 72,
+                "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 111,
+                "end": 125,
+                "quote": "许澄坐到出库单前，拿起了笔。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "许澄亲自调单并准备核对，知道自己仍在推进这一次查验。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 43,
+                    "end": 72,
+                    "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 72,
+                    "end": 111,
+                    "quote": "同事问要不要继续查下去，她回答：“先做这一次例行核对，我还没决定要一直追查。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 111,
+                    "end": 125,
+                    "quote": "许澄坐到出库单前，拿起了笔。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0008",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "载体固定为当前缺箱查验所用的当班出库单；许澄已经坐到该单前，可直接访问。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 43,
+                "end": 72,
+                "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 111,
+                "end": 125,
+                "quote": "许澄坐到出库单前，拿起了笔。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "许澄亲自调取出库单并面对它提笔，直接支持她知悉可访问这份载体。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 43,
+                    "end": 72,
+                    "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 111,
+                    "end": 125,
+                    "quote": "许澄坐到出库单前，拿起了笔。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0009",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "以当前待核对的出库单为载体，原文只说逐项核对尚未开始，未说明是否已经读过内容；不能把未核对等同未读取。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 43,
+                "end": 72,
+                "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "insufficient_evidence",
+                "reason": "没有许澄明确意识到自己尚未读过出库单的证据；知道核对未开始不足以支持这一知情命题。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 43,
+                    "end": 72,
+                    "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0010",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "载体固定为当前出库单，未见读取并理解其具体内容的描述；她已知道账本数字不能替代对出库单的读取。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 43,
+                "end": 72,
+                "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 111,
+                "end": 125,
+                "quote": "许澄坐到出库单前，拿起了笔。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "insufficient_evidence",
+                "reason": "许澄面对出库单准备核对，不足以证明她已经理解其中具体记录。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 43,
+                    "end": 72,
+                    "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 111,
+                    "end": 125,
+                    "quote": "许澄坐到出库单前，拿起了笔。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0011",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "许澄为缺箱问题调来当班出库单并准备逐项核对，表明她已明确这份记录在当前查验中的用途。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 43,
+                "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。缺的一箱去了哪里，她还不清楚。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 43,
+                "end": 72,
+                "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "调取和核对计划均由许澄提出，支持她知道应以出库记录核查缺箱事项。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 43,
+                    "end": 72,
+                    "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0012",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "依照当班出库单逐项核对这一具体任务明确尚未开始，截点末尾只是坐下提笔。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 43,
+                "end": 72,
+                "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 111,
+                "end": 125,
+                "quote": "许澄坐到出库单前，拿起了笔。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "许澄直接表示先做一次例行核对并准备开始，知道该次任务仍待完成。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 43,
+                    "end": 72,
+                    "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 72,
+                    "end": 111,
+                    "quote": "同事问要不要继续查下去，她回答：“先做这一次例行核对，我还没决定要一直追查。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 111,
+                    "end": 125,
+                    "quote": "许澄坐到出库单前，拿起了笔。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0013",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "她亲自观察到账实数量不符，并已获得用于查验的当班出库单，具体观察材料和线索已存在。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 43,
+                "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。缺的一箱去了哪里，她还不清楚。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 43,
+                "end": 72,
+                "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 111,
+                "end": 125,
+                "quote": "许澄坐到出库单前，拿起了笔。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "许澄是数量差异的发现者，也是出库单的调取者，有直接接触这些材料的依据。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 43,
+                    "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。缺的一箱去了哪里，她还不清楚。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 43,
+                    "end": 72,
+                    "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0014",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "账实差异所关联的缺箱去向明确仍不清楚，后续核对尚未开始。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 43,
+                "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。缺的一箱去了哪里，她还不清楚。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 43,
+                "end": 72,
+                "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "原文直接说明许澄还不清楚缺箱去向，支持她知悉该问题未明。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 28,
+                    "end": 43,
+                    "quote": "缺的一箱去了哪里，她还不清楚。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0015",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "具体步骤是对当班出库单逐项核对；原文明说未开始，单据已到面前且她已提笔，可立即进行。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 43,
+                "end": 72,
+                "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 111,
+                "end": 125,
+                "quote": "许澄坐到出库单前，拿起了笔。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "许澄自己安排该核对步骤并坐下提笔，支持她知道步骤尚未完成且当前材料已经可用。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 43,
+                    "end": 72,
+                    "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 111,
+                    "end": 125,
+                    "quote": "许澄坐到出库单前，拿起了笔。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0016",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "许澄为缺箱异常调取材料并准备开始核对，当前查验行动在推进，尚未结束。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 43,
+                "end": 72,
+                "quote": "她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 72,
+                "end": 111,
+                "quote": "同事问要不要继续查下去，她回答：“先做这一次例行核对，我还没决定要一直追查。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 111,
+                "end": 125,
+                "quote": "许澄坐到出库单前，拿起了笔。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "许澄亲口说明先做这次核对并实际坐下提笔，直接支持她知悉自己正在进行查验。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 72,
+                    "end": 111,
+                    "quote": "同事问要不要继续查下去，她回答：“先做这一次例行核对，我还没决定要一直追查。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 111,
+                    "end": 125,
+                    "quote": "许澄坐到出库单前，拿起了笔。"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case-06",
+      "review": {
+        "schema_version": 1,
+        "project_id": "case-06",
+        "project_sha256": "d5bbb35e6547e0316e2ffa260b24e209a755e17cfa2218e93ddbfc72422f4a1a",
+        "packet_sha256": "a2cf5b62cc884df52ca00e624ecaafab43fc5867633575e5c9e1b739001e16a4",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "stage_later_root_adjudicated"
+        },
+        "decisions": [
+          {
+            "fact_id": "base_01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "许澄直接清点发现账本十二箱、货架十一箱，数量差一箱。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 28,
+                "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "这是许澄自己点货发现的数量差异。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 28,
+                    "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "后段逐项核对已完、没有一张解释缺箱，并由她明确说检查完成而原因仍不清楚。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 126,
+                "end": 190,
+                "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "她亲自完成核对，并亲口确认原因仍未知。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 126,
+                    "end": 190,
+                    "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_03",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "她在完成例行核对后明确改为决定查到底，并拨通主管电话提出钥匙保管人的问题。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 190,
+                "end": 244,
+                "quote": "她合上文件夹，拨通仓库主管的电话：“我决定把这件事查到底，直到弄清那一箱去了哪里。先请你说明钥匙由谁保管。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "持续追查的决定和具体询问都由许澄本人明确说出。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 190,
+                    "end": 244,
+                    "quote": "她合上文件夹，拨通仓库主管的电话：“我决定把这件事查到底，直到弄清那一箱去了哪里。先请你说明钥匙由谁保管。”"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "base_04",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "结尾明示电话已接通、她正在等主管答复。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 244,
+                "end": 259,
+                "quote": "电话已接通，她正在等主管答复。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "许澄是已接通电话的发问者，正主动等待答复。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 244,
+                    "end": 259,
+                    "quote": "电话已接通，她正在等主管答复。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0001",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "同事问是否继续查、许澄说明自己的决定，主管尚未回答；没有明确的双方立场分歧、信息博弈或言行冲突。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "insufficient_evidence",
+                "reason": "她知道缺货与自己的调查计划，但未显示她知道交谈中存在上述冲突。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "她刚向主管提出具体问题，电话已接通且正在等答复，当前围绕缺货调查的交流仍在进行。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 190,
+                "end": 244,
+                "quote": "她合上文件夹，拨通仓库主管的电话：“我决定把这件事查到底，直到弄清那一箱去了哪里。先请你说明钥匙由谁保管。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 244,
+                "end": 259,
+                "quote": "电话已接通，她正在等主管答复。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "她亲自发问并等待已接通线路上的对方回应，知道交流尚在进行；这不额外证明双方存在分歧。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 190,
+                    "end": 244,
+                    "quote": "她合上文件夹，拨通仓库主管的电话：“我决定把这件事查到底，直到弄清那一箱去了哪里。先请你说明钥匙由谁保管。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 244,
+                    "end": 259,
+                    "quote": "电话已接通，她正在等主管答复。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "缺箱原因尚未知是调查问题未决，原文没有建立双方争议，更没有描写双方尚未达成争议处理结果。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "insufficient_evidence",
+                "reason": "许澄知道原因未知，但不能据此认定她知道一场人际争议仍未解决。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0004",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "账本十二箱而实物十一箱，是她明确发现的具体数量异常。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 43,
+                "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。缺的一箱去了哪里，她还不清楚。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "发现差异和不知道缺箱去向均直接归属于许澄。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 43,
+                    "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。缺的一箱去了哪里，她还不清楚。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0005",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "后段她明确说决定查到底直至弄清，更新了前段尚未决定的状态。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 208,
+                "end": 231,
+                "quote": "我决定把这件事查到底，直到弄清那一箱去了哪里。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "许澄亲口表达本人已作出的持续追查决定。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 208,
+                    "end": 231,
+                    "quote": "我决定把这件事查到底，直到弄清那一箱去了哪里。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0006",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "逐项核对没有解释缺货，她明确说原因仍不清楚，结尾也仅在等待进一步答复。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 126,
+                "end": 190,
+                "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 244,
+                "end": 259,
+                "quote": "电话已接通，她正在等主管答复。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "她在自己的总结中明确承认原因仍未知，且尚未得到主管答复。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 126,
+                    "end": 190,
+                    "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 244,
+                    "end": 259,
+                    "quote": "电话已接通，她正在等主管答复。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0007",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "完成出库单核对后，她继续拨通主管电话询问钥匙保管人，截点正等回应，说明追查仍在推进。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 190,
+                "end": 244,
+                "quote": "她合上文件夹，拨通仓库主管的电话：“我决定把这件事查到底，直到弄清那一箱去了哪里。先请你说明钥匙由谁保管。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 244,
+                "end": 259,
+                "quote": "电话已接通，她正在等主管答复。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "她本人作出决定并正在执行后续询问，知晓追查仍在继续。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 190,
+                    "end": 244,
+                    "quote": "她合上文件夹，拨通仓库主管的电话：“我决定把这件事查到底，直到弄清那一箱去了哪里。先请你说明钥匙由谁保管。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 244,
+                    "end": 259,
+                    "quote": "电话已接通，她正在等主管答复。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0008",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "信息载体可具体绑定为她刚逐项核对、打勾并放入文件夹的出库单；她刚合上该文件夹，仍直接控制这些材料。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 126,
+                "end": 190,
+                "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 190,
+                "end": 207,
+                "quote": "她合上文件夹，拨通仓库主管的电话："
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "她亲手处理并归置这些出库单，知道载体就在自己刚使用的文件夹内。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 126,
+                    "end": 190,
+                    "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 190,
+                    "end": 207,
+                    "quote": "她合上文件夹，拨通仓库主管的电话："
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0009",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "与缺货核对有关的出库单已被她逐项核对完，直接否定当前尚未读取、理解的状态。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 126,
+                "end": 190,
+                "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "contradicted",
+                "reason": "许澄亲自完成并确认检查已做完，不能仍认为她知道自己没有读过这些材料。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 126,
+                    "end": 190,
+                    "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0010",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "她对出库单逐项核对并判断没有任何一张可解释缺箱，说明已读取并理解这些记录用于核对的具体内容。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 126,
+                "end": 190,
+                "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "她是逐项核对和作出检查结论的人，认知不只是作者对物件的描述。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 126,
+                    "end": 190,
+                    "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0011",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "她因发现缺箱而索取出库单逐项核对，随后判断能否解释缺箱，材料用途明确是核查数量差异。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 28,
+                "end": 72,
+                "quote": "缺的一箱去了哪里，她还不清楚。她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 126,
+                "end": 151,
+                "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "她主动索取材料并按该目的实际使用，知道出库单在缺货查验中的用途。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 28,
+                    "end": 72,
+                    "quote": "缺的一箱去了哪里，她还不清楚。她叫同事把当班出库单放到桌上，准备逐项核对，但还没有开始。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 126,
+                    "end": 151,
+                    "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0012",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "出库单逐项核对已经完成，缺货调查仍在推进；当前命题没有将具体使用任务唯一绑定为出库单核对，故不能反驳所有内容使用任务仍待完成，也不能推定另一项任务已成立。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 126,
+                "end": 190,
+                "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "insufficient_evidence",
+                "reason": "人物亲历已完成检查和当前调查，但命题的动作指向不唯一，无法确认该具体命题的知情。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 126,
+                    "end": 190,
+                    "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0013",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "账本与货架的数量对照以及随后核对的出库单都是与缺箱疑点具体关联的观察和材料。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 28,
+                "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 126,
+                "end": 151,
+                "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "她亲自点货并逐项核对，明确接触到这些材料及其与缺箱的关系。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 28,
+                    "quote": "许澄在仓库点货，发现账本记着十二箱，货架上却只有十一箱。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 126,
+                    "end": 151,
+                    "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0014",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "已核对的出库单未解释缺箱，许澄明确承认原因还是不清楚；疑点并未因检查完成而解决。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 126,
+                "end": 190,
+                "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "她亲口表达检查后的未知状态，支持她知道相关问题仍未查明。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 126,
+                    "end": 190,
+                    "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0015",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "出库单核对完成只能反驳这一项检查未完成，不能反驳存在其他待核对步骤；电话询问是否属于针对该线索的具体核对也未明确，动作绑定不足。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 126,
+                "end": 190,
+                "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 231,
+                "end": 243,
+                "quote": "先请你说明钥匙由谁保管。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "insufficient_evidence",
+                "reason": "人物亲历已完成检查和当前调查，但命题的动作指向不唯一，无法确认该具体命题的知情。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 126,
+                    "end": 190,
+                    "quote": "许澄将出库单逐项核对完，没有一张能解释缺少的箱子。她把每张都打上勾，放进“已核对”的文件夹：“这项检查做完了，原因还是不清楚。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 231,
+                    "end": 243,
+                    "quote": "先请你说明钥匙由谁保管。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0016",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "她在检查后继续致电主管询问钥匙保管人，并仍在等待答复，当前调查动作明确存在。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 190,
+                "end": 244,
+                "quote": "她合上文件夹，拨通仓库主管的电话：“我决定把这件事查到底，直到弄清那一箱去了哪里。先请你说明钥匙由谁保管。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 244,
+                "end": 259,
+                "quote": "电话已接通，她正在等主管答复。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许澄",
+                "verdict": "supported",
+                "reason": "她亲自执行当前询问并等待结果，足以支持对自己正在调查的知情。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 190,
+                    "end": 244,
+                    "quote": "她合上文件夹，拨通仓库主管的电话：“我决定把这件事查到底，直到弄清那一箱去了哪里。先请你说明钥匙由谁保管。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 244,
+                    "end": 259,
+                    "quote": "电话已接通，她正在等主管答复。"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

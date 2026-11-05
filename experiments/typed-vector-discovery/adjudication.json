@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "basis": "same frozen protocol; independent second AI review before final labels; no human gold",
+  "reviewed_pairs": 72,
+  "changes": [
+    {
+      "case_id": "real-03",
+      "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+      "field": "next_transition",
+      "change": "承接已经完成交接的状态，改为安置而非再次接收。",
+      "match_level_changed": false
+    },
+    {
+      "case_id": "real-04",
+      "source_path": "assets/motif_library/truth-pursuit.md",
+      "field": "match_level",
+      "from": "specific_fragment",
+      "to": "insufficient_evidence",
+      "change": "知识原文的触发阶段包含追查到底的决定；一般查验不足以单独支持该阶段。"
+    },
+    {
+      "case_id": "public-02",
+      "source_path": "assets/motif_library/weaving_story.md",
+      "field": "match_level",
+      "from": "contradicted",
+      "to": "insufficient_evidence",
+      "change": "能说话不等于能公开控诉；传递者不必是作者或受害者。缺证保留未知。"
+    }
+  ],
+  "retrieval_parameters_changed": false,
+  "initial_evidence_references_verified": 237
+}

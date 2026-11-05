@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "source": "root AI review with independent reviewer agreement",
+  "items": [
+    {
+      "case": "letter_1",
+      "initial_action_description": "读取纸条上的取件编号",
+      "issue": "内容尚未读到，仅有阿岚的说明；动作措辞暗含纸上确有取件编号。",
+      "initial_binding_verdict": "supported",
+      "strict_original_claim_verdict": "insufficient_evidence",
+      "resolution": "统一改为读取纸条上的内容，三个截点使用同一稳定动作定义；重新审阅变更命题及条件、重建所有绑定哈希。",
+      "unchanged": "原文、卡片、取件步骤均未改动；没有以单据或纸条初审输出作为准确率。",
+      "retained_initial_files": [
+        "initial-review/fixtures-public.json",
+        "initial-review/state-input-public.json",
+        "initial-review/state-reviews-public.json",
+        "initial-review/candidate-input-public.json",
+        "initial-review/candidate-reviews-public.json"
+      ]
+    },
+    {
+      "case": "new_proposed_action",
+      "issue": "只有当前注册表完成状态还不足以保护首次导入：前文已做过的动作可能被误登记成新提案。",
+      "resolution": "增加这一次具体操作尚未开始的独立审核，不以新ID或缺少完成登记证明未发生。",
+      "impact": "真实回应样例被判已有回应；真实工具核对缺少未开始依据；最终均在状态门槛阻断。",
+      "history": "补强前的完整审核与运行结果保留于私有运行目录 before-fresh-*。"
+    }
+  ]
+}

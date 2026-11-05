@@ -1,0 +1,876 @@
+{
+  "reviews": [
+    {
+      "case_id": "public-obstructed-inquiry",
+      "review": {
+        "schema_version": 1,
+        "project_id": "public-obstructed-inquiry",
+        "project_sha256": "486695ea199ea9263b01e6f422ccd0ebae61f930465a55df5e760eaa4aeccb93",
+        "packet_sha256": "5c98920f44905fdd2ff91287626e32941c1718594c83e53d67bd5f3a6302d515",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "Codex independent public-prefix condition review"
+        },
+        "decisions": [
+          {
+            "fact_id": "f001",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文直接叙述闻溪开始查案、查阅并看到小船记录，且尚未弄清失踪者去向。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 50,
+                "quote": "闻溪开始追查渡口失踪案。她查阅值班记录，看到案发夜有一艘未登记的小船靠岸，但仍没弄清失踪者去了哪里。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "闻溪",
+                "verdict": "supported",
+                "reason": "她亲自开展调查并查看记录，叙述同时明示她仍未查明去向。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 50,
+                    "quote": "闻溪开始追查渡口失踪案。她查阅值班记录，看到案发夜有一艘未登记的小船靠岸，但仍没弄清失踪者去了哪里。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f002",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "守长明确以继续追查为撤职警告的条件，并实际收走通行证。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 50,
+                "end": 91,
+                "quote": "守长知道她在查案，当面警告：继续追查就撤去她的职务，并收走了她进入档案室的通行证。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "闻溪",
+                "verdict": "supported",
+                "reason": "撤职警告当面向她发出，通行证也从她手中收走。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 50,
+                    "end": 91,
+                    "quote": "守长知道她在查案，当面警告：继续追查就撤去她的职务，并收走了她进入档案室的通行证。"
+                  }
+                ]
+              },
+              {
+                "character_id": "守长",
+                "verdict": "supported",
+                "reason": "守长本人发出警告并收走通行证，且明确知道她正在查案。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 50,
+                    "end": 91,
+                    "quote": "守长知道她在查案，当面警告：继续追查就撤去她的职务，并收走了她进入档案室的通行证。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f003",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "保留抄录、一直使用本名和没有冒用身份均由叙述直接确定。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 91,
+                "end": 124,
+                "quote": "闻溪把已经抄好的记录留在手里。她一直使用自己的本名，没有冒用身份。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "闻溪",
+                "verdict": "supported",
+                "reason": "她主动保留自己的抄录，并使用自己的本名，属于她自身的行为和身份状态。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 91,
+                    "end": 124,
+                    "quote": "闻溪把已经抄好的记录留在手里。她一直使用自己的本名，没有冒用身份。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0001",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "开始追查失踪案并查看案发夜记录，足以支持已主动调查失踪者去向。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 50,
+                "quote": "闻溪开始追查渡口失踪案。她查阅值班记录，看到案发夜有一艘未登记的小船靠岸，但仍没弄清失踪者去了哪里。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 50,
+                "end": 58,
+                "quote": "守长知道她在查案"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "闻溪",
+                "verdict": "supported",
+                "reason": "她亲自开始查案并查阅记录。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 50,
+                    "quote": "闻溪开始追查渡口失踪案。她查阅值班记录，看到案发夜有一艘未登记的小船靠岸，但仍没弄清失踪者去了哪里。"
+                  }
+                ]
+              },
+              {
+                "character_id": "守长",
+                "verdict": "supported",
+                "reason": "原文明确说明守长知道她在查案，此处指前文的渡口失踪案。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 50,
+                    "end": 58,
+                    "quote": "守长知道她在查案"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "继续追查会被撤职的当面警告以及收走通行证，构成已经发生的明确阻挠。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 50,
+                "end": 91,
+                "quote": "守长知道她在查案，当面警告：继续追查就撤去她的职务，并收走了她进入档案室的通行证。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "闻溪",
+                "verdict": "supported",
+                "reason": "她当面受到警告并被收走通行证。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 50,
+                    "end": 91,
+                    "quote": "守长知道她在查案，当面警告：继续追查就撤去她的职务，并收走了她进入档案室的通行证。"
+                  }
+                ]
+              },
+              {
+                "character_id": "守长",
+                "verdict": "supported",
+                "reason": "守长本人实施了这次警告和阻挠。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 50,
+                    "end": 91,
+                    "quote": "守长知道她在查案，当面警告：继续追查就撤去她的职务，并收走了她进入档案室的通行证。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "原文明示她一直用本名且没有冒用身份，与使用另一身份并主动隐瞒真实身份的断言冲突。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 106,
+                "end": 124,
+                "quote": "她一直使用自己的本名，没有冒用身份。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "闻溪",
+                "verdict": "contradicted",
+                "reason": "她一直使用自己的真实姓名，原文排除了其冒用身份的行为。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 106,
+                    "end": 124,
+                    "quote": "她一直使用自己的本名，没有冒用身份。"
+                  }
+                ]
+              },
+              {
+                "character_id": "守长",
+                "verdict": "insufficient_evidence",
+                "reason": "守长知道她在查案，但原文没有交代他是否了解她的真实身份或是否知晓她未冒用身份。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 50,
+                    "end": 58,
+                    "quote": "守长知道她在查案"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0004",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "前缀没有出现模仿物或其代表真实目标的关系；未登记小船不能自行认定为模仿物。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "闻溪",
+                "verdict": "insufficient_evidence",
+                "reason": "她接触的是小船记录，原文没有写她得知模仿物或代表关系。",
+                "evidence": []
+              },
+              {
+                "character_id": "守长",
+                "verdict": "insufficient_evidence",
+                "reason": "原文没有写守长知道任何模仿物或代表关系。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0005",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "前缀未交代案件执行者、模仿物或操纵模仿物影响目标的信念。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "闻溪",
+                "verdict": "insufficient_evidence",
+                "reason": "没有她得知执行者持有该信念的文本依据。",
+                "evidence": []
+              },
+              {
+                "character_id": "守长",
+                "verdict": "insufficient_evidence",
+                "reason": "没有守长得知执行者持有该信念的文本依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0006",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接说明闻溪仍未弄清失踪者去了哪里。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 37,
+                "end": 50,
+                "quote": "但仍没弄清失踪者去了哪里。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "闻溪",
+                "verdict": "supported",
+                "reason": "未弄清的认识状态明确归属于闻溪。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 37,
+                    "end": 50,
+                    "quote": "但仍没弄清失踪者去了哪里。"
+                  }
+                ]
+              },
+              {
+                "character_id": "守长",
+                "verdict": "insufficient_evidence",
+                "reason": "知道闻溪在查案不等于知道她目前尚未查明失踪者的去向。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 50,
+                    "end": 58,
+                    "quote": "守长知道她在查案"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0007",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文明确写她查阅值班记录并看到案发夜未登记小船靠岸。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 12,
+                "end": 36,
+                "quote": "她查阅值班记录，看到案发夜有一艘未登记的小船靠岸"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "闻溪",
+                "verdict": "supported",
+                "reason": "她亲自查阅并看到记录。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 12,
+                    "end": 36,
+                    "quote": "她查阅值班记录，看到案发夜有一艘未登记的小船靠岸"
+                  }
+                ]
+              },
+              {
+                "character_id": "守长",
+                "verdict": "insufficient_evidence",
+                "reason": "守长知道查案并收走通行证，但原文未说明他知道她已看到这条小船记录。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 50,
+                    "end": 91,
+                    "quote": "守长知道她在查案，当面警告：继续追查就撤去她的职务，并收走了她进入档案室的通行证。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0008",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "在失踪案调查中查到案发夜未登记小船靠岸的记录，构成已经接触案件线索。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 50,
+                "quote": "闻溪开始追查渡口失踪案。她查阅值班记录，看到案发夜有一艘未登记的小船靠岸，但仍没弄清失踪者去了哪里。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "闻溪",
+                "verdict": "supported",
+                "reason": "她亲自查阅这条案发夜记录，已接触调查线索。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 12,
+                    "end": 36,
+                    "quote": "她查阅值班记录，看到案发夜有一艘未登记的小船靠岸"
+                  }
+                ]
+              },
+              {
+                "character_id": "守长",
+                "verdict": "insufficient_evidence",
+                "reason": "原文没有把闻溪已查阅的具体记录或线索告知守长。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 50,
+                    "end": 58,
+                    "quote": "守长知道她在查案"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0009",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "已经查明失踪者去向与原文仍没弄清去向直接矛盾。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 37,
+                "end": 50,
+                "quote": "但仍没弄清失踪者去了哪里。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "闻溪",
+                "verdict": "contradicted",
+                "reason": "原文明示她仍未弄清去向，排除了她已掌握确证答案。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 37,
+                    "end": 50,
+                    "quote": "但仍没弄清失踪者去了哪里。"
+                  }
+                ]
+              },
+              {
+                "character_id": "守长",
+                "verdict": "insufficient_evidence",
+                "reason": "原文没有说明守长知道闻溪是否查明了去向，也没有他获知答案的情节。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 50,
+                    "end": 58,
+                    "quote": "守长知道她在查案"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "chronology_review": {
+          "verdict": "insufficient_evidence",
+          "relation": "forward_occurrence",
+          "scene_ids": [
+            "s1"
+          ],
+          "reason": "当前调查中嵌入案发夜小船靠岸的记录，结尾又概述一直使用本名的持续状态。可以确认查阅、警告等局部叙事先后，但不足以断言整个前缀的所有事件均按实际发生时间向前展开。"
+        },
+        "binding_renewal": {
+          "method": "identical_review_packet_content",
+          "previous_project_sha256": "1ae55b1b2e2202c4c6efd5cd8c854fb81d0e25a6930df61e82022fd75a13e524",
+          "previous_packet_sha256": "71b8bcf02eb4de8a7f041fcb662c1cdda270cd851cf86ff77fae50f7b87b8242",
+          "reason": "external candidate operation metadata changed; review-visible packet unchanged"
+        }
+      }
+    },
+    {
+      "case_id": "public-confirmed-answer",
+      "review": {
+        "schema_version": 1,
+        "project_id": "public-confirmed-answer",
+        "project_sha256": "7d81c0896b035e2a55dfebc9b54cda44032f09a6275811a45791014710231aa4",
+        "packet_sha256": "a9d4a22dd2a1e9c8361126ce49dbebae507e969fb3ba1b822e51a10664c998a6",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "Codex independent public-prefix condition review"
+        },
+        "decisions": [
+          {
+            "fact_id": "f001",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文明确将假名阿川与季衡归为同一人，并说明他向同事隐瞒姓名及调查员身份。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 31,
+                "quote": "季衡一直用假名阿川在库房任职，向同事隐瞒真实姓名与调查员身份。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "季衡",
+                "verdict": "supported",
+                "reason": "使用假名并向同事隐瞒身份是季衡主动实施的行为。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 31,
+                    "quote": "季衡一直用假名阿川在库房任职，向同事隐瞒真实姓名与调查员身份。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f002",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文直接说明此前检查过门缝中的燃油痕迹，代词他承接季衡。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 31,
+                "end": 46,
+                "quote": "此前他检查过门缝中的燃油痕迹。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "季衡",
+                "verdict": "supported",
+                "reason": "检查燃油痕迹是他本人已完成的行为。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 31,
+                    "end": 46,
+                    "quote": "此前他检查过门缝中的燃油痕迹。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f003",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "完整监控呈现故意泼油点火全过程，叙述确认纵火原因及季衡已经查明，并明确保存了副本。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 46,
+                "end": 75,
+                "quote": "今天，他找到保存完整的监控，看到仓管故意泼油点火的全过程。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 75,
+                "end": 113,
+                "quote": "库房的火确实是仓管纵火造成的；季衡通过这份记录查明了起火原因，已不只是猜测。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 113,
+                "end": 130,
+                "quote": "他把记录另存了一份，准备说明发现。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "季衡",
+                "verdict": "supported",
+                "reason": "他亲自观看监控，明确查明起因，又亲自另存记录。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 46,
+                    "end": 75,
+                    "quote": "今天，他找到保存完整的监控，看到仓管故意泼油点火的全过程。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 75,
+                    "end": 113,
+                    "quote": "库房的火确实是仓管纵火造成的；季衡通过这份记录查明了起火原因，已不只是猜测。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 113,
+                    "end": 130,
+                    "quote": "他把记录另存了一份，准备说明发现。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0001",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "此前检查燃油痕迹、找到监控并查明起因，直接支持调查已经开始。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 31,
+                "end": 46,
+                "quote": "此前他检查过门缝中的燃油痕迹。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 46,
+                "end": 75,
+                "quote": "今天，他找到保存完整的监控，看到仓管故意泼油点火的全过程。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 75,
+                "end": 113,
+                "quote": "库房的火确实是仓管纵火造成的；季衡通过这份记录查明了起火原因，已不只是猜测。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "季衡",
+                "verdict": "supported",
+                "reason": "检查痕迹、寻找观看监控及查明原因均为他本人的调查活动。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 31,
+                    "end": 46,
+                    "quote": "此前他检查过门缝中的燃油痕迹。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 46,
+                    "end": 75,
+                    "quote": "今天，他找到保存完整的监控，看到仓管故意泼油点火的全过程。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 75,
+                    "end": 113,
+                    "quote": "库房的火确实是仓管纵火造成的；季衡通过这份记录查明了起火原因，已不只是猜测。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "原文没有阻挠或警告情节；隐瞒调查员身份本身不能证明已遭到阻挠。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "季衡",
+                "verdict": "insufficient_evidence",
+                "reason": "没有季衡受到或得知针对其调查的明确阻挠、警告的文本依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "季衡以假名在库房任职，主动隐瞒真实姓名及调查员身份，符合使用另一身份并隐瞒的命题。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 31,
+                "quote": "季衡一直用假名阿川在库房任职，向同事隐瞒真实姓名与调查员身份。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "季衡",
+                "verdict": "supported",
+                "reason": "这是季衡本人主动使用假名并隐藏身份的行为。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 31,
+                    "quote": "季衡一直用假名阿川在库房任职，向同事隐瞒真实姓名与调查员身份。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0004",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "前缀确定了泼油纵火，但没有出现模仿物或代表真实目标的关系，不能凭缺席断言其不存在。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "季衡",
+                "verdict": "insufficient_evidence",
+                "reason": "原文没有写季衡接触或知道模仿物及其代表关系。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0005",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "仓管故意纵火得到确认，但仓管是否相信操纵模仿物影响真实目标并未交代。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "季衡",
+                "verdict": "insufficient_evidence",
+                "reason": "季衡看到了纵火过程，没有文本说明他获知仓管持有该种信念。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0006",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "原文明确写季衡已经查明起火原因且不只是猜测，否定该问题仍未查明。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 75,
+                "end": 113,
+                "quote": "库房的火确实是仓管纵火造成的；季衡通过这份记录查明了起火原因，已不只是猜测。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "季衡",
+                "verdict": "contradicted",
+                "reason": "他已通过记录查明原因，因而其认识状态不是仍未查明。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 75,
+                    "end": 113,
+                    "quote": "库房的火确实是仓管纵火造成的；季衡通过这份记录查明了起火原因，已不只是猜测。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0007",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文直接说明季衡找到保存完整的监控，并观看了纵火全过程。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 46,
+                "end": 75,
+                "quote": "今天，他找到保存完整的监控，看到仓管故意泼油点火的全过程。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "季衡",
+                "verdict": "supported",
+                "reason": "监控由他亲自找到并观看。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 46,
+                    "end": 75,
+                    "quote": "今天，他找到保存完整的监控，看到仓管故意泼油点火的全过程。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0008",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "此前检查门缝中的燃油痕迹是已接触与起火原因有关的线索，后文确认泼油纵火。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 31,
+                "end": 46,
+                "quote": "此前他检查过门缝中的燃油痕迹。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 46,
+                "end": 75,
+                "quote": "今天，他找到保存完整的监控，看到仓管故意泼油点火的全过程。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "季衡",
+                "verdict": "supported",
+                "reason": "他亲自检查过燃油痕迹，已接触该线索。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 31,
+                    "end": 46,
+                    "quote": "此前他检查过门缝中的燃油痕迹。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0009",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述同时确认实际纵火原因与季衡通过完整记录查明原因，并明确排除仅为猜测。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 46,
+                "end": 75,
+                "quote": "今天，他找到保存完整的监控，看到仓管故意泼油点火的全过程。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 75,
+                "end": 113,
+                "quote": "库房的火确实是仓管纵火造成的；季衡通过这份记录查明了起火原因，已不只是猜测。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "季衡",
+                "verdict": "supported",
+                "reason": "查明原因的认识结果明确归属于季衡，且以他亲眼观看完整监控为依据。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 46,
+                    "end": 75,
+                    "quote": "今天，他找到保存完整的监控，看到仓管故意泼油点火的全过程。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 75,
+                    "end": 113,
+                    "quote": "库房的火确实是仓管纵火造成的；季衡通过这份记录查明了起火原因，已不只是猜测。"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "chronology_review": {
+          "verdict": "insufficient_evidence",
+          "relation": "forward_occurrence",
+          "scene_ids": [
+            "s1"
+          ],
+          "reason": "前缀概述持续使用假名的状态，回述此前检查痕迹，再写今天观看监控；监控又呈现过去的纵火过程。局部调查推进明确，但整段包含回溯和嵌入的往事，不能据此证明全局事件发生顺序一律向前。"
+        },
+        "binding_renewal": {
+          "method": "identical_review_packet_content",
+          "previous_project_sha256": "9783f9ab368173d8d84778fc10278988b6f08ad5d1a6653a302b270c88d4ac46",
+          "previous_packet_sha256": "f4bae5e16bc98736498ebc25aa705bdc851ac547a34e5a8b2b9cc1e83aa61976",
+          "reason": "external candidate operation metadata changed; review-visible packet unchanged"
+        }
+      }
+    }
+  ]
+}

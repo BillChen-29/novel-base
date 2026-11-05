@@ -1,0 +1,42 @@
+{
+  "run_date": "2026-10-26",
+  "all_unit_tests_passed": 357,
+  "targeted_tests_passed": 68,
+  "presentation_tests_passed": 8,
+  "workflow": {
+    "all_passed": 16,
+    "all_total": 16,
+    "public_passed": 8,
+    "public_total": 8
+  },
+  "assets": {
+    "count": 271,
+    "changed": 0
+  },
+  "source_books": [
+    {
+      "project_id": "review-old-lord-monitor",
+      "sha256": "3ce03cb667e991cb026df5a1201a6f81c7c442fd13252020a75dd8cce8db4007",
+      "prefix_chars": 299
+    },
+    {
+      "project_id": "review-organs-forensic-inference",
+      "sha256": "64b3a011cd638de8a5fdf8981aa5a6f4019d293da318a20c62f15057360e4470",
+      "prefix_chars": 1246
+    }
+  ],
+  "code_review": "APPROVE; chronological field documentation corrected",
+  "security_review": "APPROVE; final independent alternatives/POV/projection verification passed",
+  "source_sha256": {
+    "scripts/knowledge_candidate_preparer.py": "3a5814290982402a740af927ec30da2d8761106dee5c9eac69cafff1f9e93493",
+    "scripts/motif_matcher.py": "a2b5c0351edbc0739f4a1b9cce5cd33f66a85ed0c1b980c3c620171fe677bb77",
+    "scripts/tests/test_knowledge_candidate_preparer.py": "9c7a1f5b81a75fffac2e66766ebdea66ab7d553367a993a59e9415069347a23c",
+    "scripts/tests/test_motif_matcher.py": "506343f6ecdecac2fef35242e38fb28f8c04f9301991390f8752c956e75d0aad",
+    "scripts/tests/test_real_candidate_matching.py": "73fc4d25a06061fafcb3d7d17fd88f8d27dafdce25fc607270d03e3e5cdefd4a",
+    "experiments/real-candidate-matching/run_experiment.py": "b327df0a4b48ebbc7d6329f9df284178572b33780a6da54c49f07abdc3215633",
+    "experiments/real-candidate-matching/recipes.py": "40d7c9fe40dbb02a480cdd6e708712dae698120cd59f57776b5ae3eca5f7d4ee",
+    "experiments/real-candidate-matching/catalog.json": "a92dbc00fce83e6f523d2413b7f567d2dd34979535b2a9ec337219e6ca67740c",
+    "experiments/real-candidate-matching/public-fixtures.json": "e12f026bd73f00ca1af700c87cee1c6906481e0fd8dc27af6c786fe41cc26a2a",
+    "experiments/real-candidate-matching/reviews-public.json": "393333fe8ca947ae70ecedd4b1867080835d21049f0332f75dfa0082e2545982"
+  }
+}

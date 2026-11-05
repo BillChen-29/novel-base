@@ -1,0 +1,35 @@
+{
+  "run_date": "2026-10-25",
+  "unit_tests": {
+    "all_passed": 289,
+    "new_semantic_and_experiment_passed": 21
+  },
+  "workflow_checks": {
+    "local_projects": 5,
+    "local_candidates": 32,
+    "local_passed": 32,
+    "local_total": 32,
+    "public_projects": 3,
+    "public_candidates": 18,
+    "public_passed": 20,
+    "public_total": 20
+  },
+  "automatic_capability_audit": {
+    "pass": 18,
+    "fail": 2,
+    "error": 0
+  },
+  "assets": {
+    "count": 271,
+    "changed": 0
+  },
+  "review_type": "current_agent_imported_decisions_no_extra_api",
+  "source_sha256": {
+    "scripts/semantic_review.py": "8e86ea31c1d2053fe3c3da33fde6cc6dfc51f90e050fac4d3a4205d0d1e0415f",
+    "scripts/tests/test_semantic_review.py": "ee2702d9d3ec6eab170bd423d12a0af4915a1145931d986f2880659a9e49072b",
+    "scripts/tests/test_semantic_experiment.py": "26b93c825a2d6f0ed5f915b34d02f7c4cb258125ce8518d56e3cb5cf7f0075fd",
+    "experiments/semantic-review/run_experiment.py": "de5e1627dc8e1f8764ff27b4fb7f7caa0e4e7caba8dda91a93440cddebfdf468",
+    "experiments/semantic-review/fixtures.json": "3d8bcdf632ff613303fb8566ab8579d0cf3ceed3650093e92d001d962fbafd38",
+    "experiments/semantic-review/reviews-public.json": "3cb492754777bce30ac7b3e7fc28ba762fe4d4bad7f11b897545b1f2d60ec46b"
+  }
+}

@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "experiment_version": "retrieval-pilot-v1",
+  "scorer_version": "unique-quotes-v2",
+  "fixture_sha256": "3bb5105305ac224583bb88d46d5800c4be4b113fa07b34377c408516e2fa8850",
+  "annotation": {
+    "method": "agent_authored_pilot",
+    "limitation": "由代理阅读固定20份资料后编写的初步相关性标注，不是用户或专家金标；查询由资料启发，存在措辞与选材偏差；仅评价固定样本内检索，不代表全库、续写质量或来源事实可信度。development/holdout在检索前固定，holdout只是未用于调整的保留题，不是独立外部测试集。"
+  },
+  "parameters": {
+    "max_chars": 800,
+    "overlap": 120,
+    "bm25_k1": 1.2,
+    "bm25_b": 0.75,
+    "rrf_k": 60,
+    "k": 5,
+    "scope": "shared",
+    "query_expansion": false,
+    "reranking": false
+  },
+  "counts": {
+    "documents": 20,
+    "queries": 24,
+    "chunks": {
+      "window": 56,
+      "structure": 294
+    }
+  },
+  "aggregate": [
+    {
+      "mode": "window",
+      "method": "bm25",
+      "split": "development",
+      "answerable_queries": 12,
+      "no_answer_queries": 2,
+      "recall_at_k": 1.0,
+      "mrr_at_k": 0.9444444444444445,
+      "hit_at_k": 1.0,
+      "evidence_recall_at_k": 0.7222222222222222,
+      "complete_evidence_at_k": 0.5,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 3563.285714285714
+    },
+    {
+      "mode": "window",
+      "method": "bm25",
+      "split": "holdout",
+      "answerable_queries": 8,
+      "no_answer_queries": 2,
+      "recall_at_k": 0.875,
+      "mrr_at_k": 0.875,
+      "hit_at_k": 0.875,
+      "evidence_recall_at_k": 0.75,
+      "complete_evidence_at_k": 0.75,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 3860.0
+    },
+    {
+      "mode": "window",
+      "method": "bm25",
+      "split": "all",
+      "answerable_queries": 20,
+      "no_answer_queries": 4,
+      "recall_at_k": 0.95,
+      "mrr_at_k": 0.9166666666666666,
+      "hit_at_k": 0.95,
+      "evidence_recall_at_k": 0.7333333333333333,
+      "complete_evidence_at_k": 0.6,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 3686.9166666666665
+    },
+    {
+      "mode": "window",
+      "method": "vector",
+      "split": "development",
+      "answerable_queries": 12,
+      "no_answer_queries": 2,
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "hit_at_k": 1.0,
+      "evidence_recall_at_k": 0.34722222222222227,
+      "complete_evidence_at_k": 0.16666666666666666,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 3057.214285714286
+    },
+    {
+      "mode": "window",
+      "method": "vector",
+      "split": "holdout",
+      "answerable_queries": 8,
+      "no_answer_queries": 2,
+      "recall_at_k": 1.0,
+      "mrr_at_k": 0.875,
+      "hit_at_k": 1.0,
+      "evidence_recall_at_k": 0.4375,
+      "complete_evidence_at_k": 0.375,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 3206.6
+    },
+    {
+      "mode": "window",
+      "method": "vector",
+      "split": "all",
+      "answerable_queries": 20,
+      "no_answer_queries": 4,
+      "recall_at_k": 1.0,
+      "mrr_at_k": 0.95,
+      "hit_at_k": 1.0,
+      "evidence_recall_at_k": 0.38333333333333336,
+      "complete_evidence_at_k": 0.25,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 3119.4583333333335
+    },
+    {
+      "mode": "window",
+      "method": "hybrid",
+      "split": "development",
+      "answerable_queries": 12,
+      "no_answer_queries": 2,
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "hit_at_k": 1.0,
+      "evidence_recall_at_k": 0.7083333333333334,
+      "complete_evidence_at_k": 0.5833333333333334,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 3443.4285714285716
+    },
+    {
+      "mode": "window",
+      "method": "hybrid",
+      "split": "holdout",
+      "answerable_queries": 8,
+      "no_answer_queries": 2,
+      "recall_at_k": 0.875,
+      "mrr_at_k": 0.875,
+      "hit_at_k": 0.875,
+      "evidence_recall_at_k": 0.75,
+      "complete_evidence_at_k": 0.75,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 3807.7
+    },
+    {
+      "mode": "window",
+      "method": "hybrid",
+      "split": "all",
+      "answerable_queries": 20,
+      "no_answer_queries": 4,
+      "recall_at_k": 0.95,
+      "mrr_at_k": 0.95,
+      "hit_at_k": 0.95,
+      "evidence_recall_at_k": 0.725,
+      "complete_evidence_at_k": 0.65,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 3595.2083333333335
+    },
+    {
+      "mode": "structure",
+      "method": "bm25",
+      "split": "development",
+      "answerable_queries": 12,
+      "no_answer_queries": 2,
+      "recall_at_k": 0.8472222222222222,
+      "mrr_at_k": 0.7777777777777778,
+      "hit_at_k": 0.9166666666666666,
+      "evidence_recall_at_k": 0.3333333333333333,
+      "complete_evidence_at_k": 0.16666666666666666,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 858.5714285714286
+    },
+    {
+      "mode": "structure",
+      "method": "bm25",
+      "split": "holdout",
+      "answerable_queries": 8,
+      "no_answer_queries": 2,
+      "recall_at_k": 0.875,
+      "mrr_at_k": 0.875,
+      "hit_at_k": 0.875,
+      "evidence_recall_at_k": 0.125,
+      "complete_evidence_at_k": 0.0,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 749.3
+    },
+    {
+      "mode": "structure",
+      "method": "bm25",
+      "split": "all",
+      "answerable_queries": 20,
+      "no_answer_queries": 4,
+      "recall_at_k": 0.8583333333333334,
+      "mrr_at_k": 0.8166666666666667,
+      "hit_at_k": 0.9,
+      "evidence_recall_at_k": 0.25,
+      "complete_evidence_at_k": 0.1,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 813.0416666666666
+    },
+    {
+      "mode": "structure",
+      "method": "vector",
+      "split": "development",
+      "answerable_queries": 12,
+      "no_answer_queries": 2,
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "hit_at_k": 1.0,
+      "evidence_recall_at_k": 0.3888888888888889,
+      "complete_evidence_at_k": 0.16666666666666666,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 920.8571428571429
+    },
+    {
+      "mode": "structure",
+      "method": "vector",
+      "split": "holdout",
+      "answerable_queries": 8,
+      "no_answer_queries": 2,
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "hit_at_k": 1.0,
+      "evidence_recall_at_k": 0.1875,
+      "complete_evidence_at_k": 0.125,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 1035.6
+    },
+    {
+      "mode": "structure",
+      "method": "vector",
+      "split": "all",
+      "answerable_queries": 20,
+      "no_answer_queries": 4,
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "hit_at_k": 1.0,
+      "evidence_recall_at_k": 0.30833333333333335,
+      "complete_evidence_at_k": 0.15,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 968.6666666666666
+    },
+    {
+      "mode": "structure",
+      "method": "hybrid",
+      "split": "development",
+      "answerable_queries": 12,
+      "no_answer_queries": 2,
+      "recall_at_k": 1.0,
+      "mrr_at_k": 0.9583333333333334,
+      "hit_at_k": 1.0,
+      "evidence_recall_at_k": 0.3611111111111111,
+      "complete_evidence_at_k": 0.16666666666666666,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 883.0
+    },
+    {
+      "mode": "structure",
+      "method": "hybrid",
+      "split": "holdout",
+      "answerable_queries": 8,
+      "no_answer_queries": 2,
+      "recall_at_k": 1.0,
+      "mrr_at_k": 0.9166666666666666,
+      "hit_at_k": 1.0,
+      "evidence_recall_at_k": 0.125,
+      "complete_evidence_at_k": 0.0,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 751.9
+    },
+    {
+      "mode": "structure",
+      "method": "hybrid",
+      "split": "all",
+      "answerable_queries": 20,
+      "no_answer_queries": 4,
+      "recall_at_k": 1.0,
+      "mrr_at_k": 0.9416666666666667,
+      "hit_at_k": 1.0,
+      "evidence_recall_at_k": 0.26666666666666666,
+      "complete_evidence_at_k": 0.1,
+      "no_answer_return_rate": 1.0,
+      "mean_returned_characters": 828.375
+    }
+  ],
+  "run_date": "2026-10-15",
+  "base_commit": "ca7e531dadec2e5fd9dbdb81496d7944a7ed3ab8",
+  "embedding": {
+    "schema_version": 1,
+    "model_sha256": "b5ce9d77a3fc4b3b39ccb5643c36777911cc4eb46a66962eadfa3f5f60490d63",
+    "model_file": "hf_ggml-org_embeddinggemma-300M-Q8_0.gguf",
+    "qmd_version": "2.1.0",
+    "runtime_version": "3.18.1",
+    "prefix": "qmd-format-functions-v1",
+    "requested_gpu": "metal",
+    "context_size": 2048,
+    "threads": 4,
+    "input_sha256": "6ef7420bac0cf06a6f44d8edaf884d88367771a1c3f93fd4c1ccb16b411fdffa",
+    "dataset_sha256": "8a9e1b0e2009af4a3caba89574348e04fd5cf729a645f5c66771448dd2d044c6",
+    "dimensions": 768,
+    "complete": true,
+    "total_inputs": 371,
+    "elapsed_seconds": 9.906269,
+    "gpu_layers": 25,
+    "runtime_build": "prebuilt"
+  },
+  "sources": [
+    {
+      "path": "assets/technique_library/dialogue-subtext.md",
+      "sha256": "76f103bbe0a74cd004a4aa5b3b90e581f6f7833fb3f05d5f68b5d3751c983fa2",
+      "characters": 2956
+    },
+    {
+      "path": "assets/technique_library/rhythm-variation.md",
+      "sha256": "dff3ffe8498df146fc41932c6f91b21934fb5311060d62fa6509c20c0c95a165",
+      "characters": 4551
+    },
+    {
+      "path": "assets/technique_library/suspense-laddering.md",
+      "sha256": "8c5473fda82814eaa4f7b75b5e4ef6462e6c6d7c0c204d1a409ab90546182ccc",
+      "characters": 1180
+    },
+    {
+      "path": "assets/technique_library/twist-ending.md",
+      "sha256": "65b036ef8f2b455be87f80a507befaada1e17aa6af134013d0abd96547f8dc62",
+      "characters": 1182
+    },
+    {
+      "path": "assets/technique_library/interior-monologue.md",
+      "sha256": "f914c573f3d1f1552ee38871cdcb6d91a98af75d98d9607e9cc6591237a8702b",
+      "characters": 1105
+    },
+    {
+      "path": "assets/technique_library/multi-perspective-narration.md",
+      "sha256": "71de212d2bfe891085458321c9b9ae6fb324b0db6aaabd9932229cac89840132",
+      "characters": 1144
+    },
+    {
+      "path": "assets/technique_library/horror-atmosphere.md",
+      "sha256": "fb49389481012df0c0c5306138b79d9f37ba7ea877ecd1a0e98f63e012d4f010",
+      "characters": 1165
+    },
+    {
+      "path": "assets/technique_library/_scenarios/dialogue-tension.md",
+      "sha256": "0931562146a6abeab8296ce22382e8c0f08c09c325b88563b62a2e016f4d766a",
+      "characters": 605
+    },
+    {
+      "path": "assets/pacing/pacing-curve.md",
+      "sha256": "36a894efcc984a75a06747949f761469ae03705a18333674a4f2b56b418c2683",
+      "characters": 3305
+    },
+    {
+      "path": "assets/pacing/chapter-hooks.md",
+      "sha256": "378acab2baaa33f708506176400ccf60ea4b616cd3ab3ac4b03ca90a41e28de5",
+      "characters": 3053
+    },
+    {
+      "path": "assets/character_archetypes/moral-grey-survivor.md",
+      "sha256": "8fa2e18e0615f9aafe4f94f00f2675f7f396c63778507743ca6e19080ab48ea5",
+      "characters": 934
+    },
+    {
+      "path": "assets/character_archetypes/loyal-companion.md",
+      "sha256": "3d19b934b22d0d464d338c3a12ba6fa54d31a9ffc6ddd02993d77e782166b31c",
+      "characters": 993
+    },
+    {
+      "path": "assets/character_archetypes/lin-chong.md",
+      "sha256": "501ca64ab0b3240d87b7c83161c4834f743d2486336b3a47fa768f65fc01b05b",
+      "characters": 942
+    },
+    {
+      "path": "assets/character_archetypes/trickster.md",
+      "sha256": "933114b3f0cb3ed41caf5363074e523138e6d37e907acdc06117961be8bcfc48",
+      "characters": 2327
+    },
+    {
+      "path": "assets/motif_library/time-pressure.md",
+      "sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec",
+      "characters": 1217
+    },
+    {
+      "path": "assets/motif_library/false-accusation.md",
+      "sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33",
+      "characters": 1173
+    },
+    {
+      "path": "assets/motif_library/prophecy-defied.md",
+      "sha256": "f464f73ffae7cb8f93b0dd2a1d08c7c6f9137298ddfd1de29577c7316d49532b",
+      "characters": 1279
+    },
+    {
+      "path": "assets/motif_library/road-of-trials.md",
+      "sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7",
+      "characters": 1043
+    },
+    {
+      "path": "assets/motif_library/story-as-shield.md",
+      "sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28",
+      "characters": 1167
+    },
+    {
+      "path": "assets/style_library/urban-suspense-fanqie.md",
+      "sha256": "c47fb29017299107354fb0e418faea456f5e1cdd2791c87f528b770e2faf142c",
+      "characters": 2117
+    }
+  ]
+}

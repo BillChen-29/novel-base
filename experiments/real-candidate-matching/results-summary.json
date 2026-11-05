@@ -1,0 +1,377 @@
+{
+  "run_date": "2026-10-26",
+  "method": "fixed_curated_candidate_set_current_ai_review_no_extra_api",
+  "case_count": 4,
+  "real_prefixes": 2,
+  "candidate_judgments": 57,
+  "judgments": {
+    "supported": 34,
+    "contradicted": 5,
+    "insufficient_evidence": 18
+  },
+  "workflow_passed": 16,
+  "workflow_total": 16,
+  "cases": [
+    {
+      "case_id": "review-old-lord-monitor",
+      "title": "真实片段 A：监控观察",
+      "checks": {
+        "five_shared_candidates": true,
+        "writer_facts_pov_supported": true,
+        "writer_contains_exact_packet": true,
+        "kinds_preserved": true
+      },
+      "candidates": [
+        {
+          "motif_id": "truth_pursuit",
+          "knowledge_kind": "motif",
+          "entry_status": "needs_evidence",
+          "applicability_status": "needs_evidence",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "unknown_condition_ids": [
+            "investigating",
+            "obstructed"
+          ],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "identity_mask",
+          "knowledge_kind": "motif",
+          "entry_status": "needs_evidence",
+          "applicability_status": "needs_evidence",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "unknown_condition_ids": [
+            "concealed_identity"
+          ],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "homeopathic_magic",
+          "knowledge_kind": "motif",
+          "entry_status": "needs_evidence",
+          "applicability_status": "needs_evidence",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "unknown_condition_ids": [
+            "surrogate",
+            "belief"
+          ],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "suspense_inquiry",
+          "knowledge_kind": "technique",
+          "entry_status": "eligible",
+          "applicability_status": "eligible",
+          "supported_stage_ids": [
+            "open_question"
+          ],
+          "supported_condition_ids": [
+            "unresolved",
+            "available_clue"
+          ],
+          "unknown_condition_ids": [
+            "tentative_statement"
+          ],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "revelation",
+          "knowledge_kind": "situation",
+          "entry_status": "needs_evidence",
+          "applicability_status": "needs_evidence",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "unknown_condition_ids": [
+            "setup",
+            "confirmed"
+          ],
+          "contradicted_condition_ids": []
+        }
+      ],
+      "proposals": [
+        {
+          "id": "suspense_inquiry_continue",
+          "knowledge_kind": "technique"
+        }
+      ]
+    },
+    {
+      "case_id": "review-organs-forensic-inference",
+      "title": "真实片段 B：验尸推断",
+      "checks": {
+        "five_shared_candidates": true,
+        "writer_facts_pov_supported": true,
+        "writer_contains_exact_packet": true,
+        "kinds_preserved": true
+      },
+      "candidates": [
+        {
+          "motif_id": "truth_pursuit",
+          "knowledge_kind": "motif",
+          "entry_status": "needs_evidence",
+          "applicability_status": "needs_evidence",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [
+            "investigating"
+          ],
+          "unknown_condition_ids": [
+            "obstructed"
+          ],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "identity_mask",
+          "knowledge_kind": "motif",
+          "entry_status": "needs_evidence",
+          "applicability_status": "needs_evidence",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "unknown_condition_ids": [
+            "concealed_identity"
+          ],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "homeopathic_magic",
+          "knowledge_kind": "motif",
+          "entry_status": "needs_evidence",
+          "applicability_status": "needs_evidence",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "unknown_condition_ids": [
+            "surrogate",
+            "belief"
+          ],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "suspense_inquiry",
+          "knowledge_kind": "technique",
+          "entry_status": "eligible",
+          "applicability_status": "eligible",
+          "supported_stage_ids": [
+            "tentative_statement"
+          ],
+          "supported_condition_ids": [
+            "available_clue",
+            "tentative_statement"
+          ],
+          "unknown_condition_ids": [
+            "unresolved"
+          ],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "revelation",
+          "knowledge_kind": "situation",
+          "entry_status": "needs_evidence",
+          "applicability_status": "needs_evidence",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [
+            "setup"
+          ],
+          "unknown_condition_ids": [
+            "confirmed"
+          ],
+          "contradicted_condition_ids": []
+        }
+      ],
+      "proposals": [
+        {
+          "id": "suspense_check_hypothesis",
+          "knowledge_kind": "technique"
+        }
+      ]
+    },
+    {
+      "case_id": "public-obstructed-inquiry",
+      "title": "原创对照：调查遭到阻挠",
+      "checks": {
+        "five_shared_candidates": true,
+        "writer_facts_pov_supported": true,
+        "writer_contains_exact_packet": true,
+        "kinds_preserved": true
+      },
+      "candidates": [
+        {
+          "motif_id": "truth_pursuit",
+          "knowledge_kind": "motif",
+          "entry_status": "eligible",
+          "applicability_status": "eligible",
+          "supported_stage_ids": [
+            "applicable"
+          ],
+          "supported_condition_ids": [
+            "investigating",
+            "obstructed"
+          ],
+          "unknown_condition_ids": [],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "identity_mask",
+          "knowledge_kind": "motif",
+          "entry_status": "blocked",
+          "applicability_status": "blocked",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "unknown_condition_ids": [],
+          "contradicted_condition_ids": [
+            "concealed_identity"
+          ]
+        },
+        {
+          "motif_id": "homeopathic_magic",
+          "knowledge_kind": "motif",
+          "entry_status": "needs_evidence",
+          "applicability_status": "needs_evidence",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "unknown_condition_ids": [
+            "surrogate",
+            "belief"
+          ],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "suspense_inquiry",
+          "knowledge_kind": "technique",
+          "entry_status": "eligible",
+          "applicability_status": "eligible",
+          "supported_stage_ids": [
+            "open_question"
+          ],
+          "supported_condition_ids": [
+            "unresolved",
+            "available_clue"
+          ],
+          "unknown_condition_ids": [
+            "tentative_statement"
+          ],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "revelation",
+          "knowledge_kind": "situation",
+          "entry_status": "blocked",
+          "applicability_status": "blocked",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [
+            "setup"
+          ],
+          "unknown_condition_ids": [],
+          "contradicted_condition_ids": [
+            "confirmed"
+          ]
+        }
+      ],
+      "proposals": [
+        {
+          "id": "truth_pursuit_continue",
+          "knowledge_kind": "motif"
+        },
+        {
+          "id": "suspense_inquiry_continue",
+          "knowledge_kind": "technique"
+        }
+      ]
+    },
+    {
+      "case_id": "public-confirmed-answer",
+      "title": "原创对照：答案已经确认",
+      "checks": {
+        "five_shared_candidates": true,
+        "writer_facts_pov_supported": true,
+        "writer_contains_exact_packet": true,
+        "kinds_preserved": true
+      },
+      "candidates": [
+        {
+          "motif_id": "truth_pursuit",
+          "knowledge_kind": "motif",
+          "entry_status": "needs_evidence",
+          "applicability_status": "needs_evidence",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [
+            "investigating"
+          ],
+          "unknown_condition_ids": [
+            "obstructed"
+          ],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "identity_mask",
+          "knowledge_kind": "motif",
+          "entry_status": "eligible",
+          "applicability_status": "eligible",
+          "supported_stage_ids": [
+            "applicable"
+          ],
+          "supported_condition_ids": [
+            "concealed_identity"
+          ],
+          "unknown_condition_ids": [],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "homeopathic_magic",
+          "knowledge_kind": "motif",
+          "entry_status": "needs_evidence",
+          "applicability_status": "needs_evidence",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [],
+          "unknown_condition_ids": [
+            "surrogate",
+            "belief"
+          ],
+          "contradicted_condition_ids": []
+        },
+        {
+          "motif_id": "suspense_inquiry",
+          "knowledge_kind": "technique",
+          "entry_status": "eligible",
+          "applicability_status": "needs_evidence",
+          "supported_stage_ids": [],
+          "supported_condition_ids": [
+            "available_clue"
+          ],
+          "unknown_condition_ids": [
+            "tentative_statement"
+          ],
+          "contradicted_condition_ids": [
+            "unresolved"
+          ]
+        },
+        {
+          "motif_id": "revelation",
+          "knowledge_kind": "situation",
+          "entry_status": "eligible",
+          "applicability_status": "eligible",
+          "supported_stage_ids": [
+            "applicable"
+          ],
+          "supported_condition_ids": [
+            "setup",
+            "confirmed"
+          ],
+          "unknown_condition_ids": [],
+          "contradicted_condition_ids": []
+        }
+      ],
+      "proposals": [
+        {
+          "id": "identity_mask_continue",
+          "knowledge_kind": "motif"
+        },
+        {
+          "id": "revelation_continue",
+          "knowledge_kind": "situation"
+        }
+      ]
+    }
+  ]
+}

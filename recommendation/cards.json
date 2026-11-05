@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "experimental",
+  "provenance": "本原型人工设计的推荐规则；关联资产提供写作参考，规则优先级需要创作试验验证。",
+  "cards": [
+    {
+      "id": "aftermath_clue",
+      "title": "处理后果，沿既有线索推进",
+      "description": "为连续紧张场景留下处理后果的空间，同时保持调查目标。",
+      "goals": ["recover_and_investigate"],
+      "function": "aftermath",
+      "target_tension": "降低外部动作强度，保留未完成问题",
+      "requires": ["open_thread"],
+      "source_paths": ["assets/pacing/pacing-curve.md", "assets/technique_library/rhythm-variation.md", "assets/technique_library/suspense-laddering.md"],
+      "query_terms": ["后果", "节奏", "线索", "悬疑", "人物关系"],
+      "operations": ["从视角人物已经知道的事实中，选择一项需要处理的后果。", "围绕已铺设线索提出一个待核对的问题，暂不补写未知答案。", "以一个待作者确认的行动选择结束本场，为后续推进保留空间。"],
+      "expected_effect": "改变场景功能，处理前文后果，并维持线索的连续性。",
+      "avoid_when": ["作者希望继续推进高潮时，不强制降低动作强度。", "没有前文依据时，不自行添加伤势、资源或线索关系。"]
+    },
+    {
+      "id": "subtext_probe",
+      "title": "通过对话试探，推进人物关系",
+      "description": "让当前在场人物围绕共同知道的事情交流，以提问和回应形成关系变化。",
+      "goals": ["recover_and_investigate"],
+      "function": "dialogue",
+      "target_tension": "减少动作，保留交流中的不确定性",
+      "requires": ["two_characters"],
+      "source_paths": ["assets/technique_library/dialogue-subtext.md", "assets/technique_library/_scenarios/dialogue-tension.md"],
+      "query_terms": ["对话", "潜台词", "关系", "信任", "伙伴"],
+      "operations": ["选取在场人物共同知道的一条事实作为交流起点。", "让视角人物提出开放问题；人物是否回避、隐瞒以及为什么，由作者确定。", "记录这次交流需要带来的关系变化，再由作者决定具体回应。"],
+      "expected_effect": "用交流推进关系与调查，同时保留人物知识边界。",
+      "avoid_when": ["信息不对称本身不能证明人物撒谎或怀有恶意。", "不要让人物直接说出其尚未获知的事实。"]
+    },
+    {
+      "id": "escalate_pressure",
+      "title": "保持压力，推进未完成目标",
+      "description": "围绕现有未完成线索增加行动要求，让人物面对下一步选择。",
+      "goals": ["raise_pressure"],
+      "function": "action",
+      "target_tension": "保持或提高外部动作强度",
+      "requires": ["open_thread"],
+      "source_paths": ["assets/technique_library/suspense-laddering.md", "assets/technique_library/_scenarios/climax.md"],
+      "query_terms": ["危机", "冲突", "行动", "悬念", "目标"],
+      "operations": ["选择一条视角人物已知铺垫的未完成线索。", "围绕这条线索提出行动选择，把新增障碍标为创作提案而非既定事实。", "明确本场推进了哪项任务，同时保留尚无证据的答案。"],
+      "expected_effect": "延续行动压力，使未完成目标获得具体推进。",
+      "avoid_when": ["连续使用相同场景功能时，需检查是否只是在重复上一个冲突。", "新障碍与资源变化需作者确认后才能成为故事事实。"]
+    },
+    {
+      "id": "earned_reveal",
+      "title": "依据铺垫，揭示已具备条件的真相",
+      "description": "在铺垫、人物知识和作者许可同时满足时，提出揭示计划。",
+      "goals": ["reveal_truth"],
+      "function": "revelation",
+      "target_tension": "通过信息变化形成转折",
+      "requires": ["reveal_ready"],
+      "source_paths": ["assets/technique_library/twist-ending.md", "assets/technique_library/_scenarios/revelation.md"],
+      "query_terms": ["揭示", "反转", "身份", "伏笔", "真相"],
+      "operations": ["回读早于答案出现、且视角人物已知的铺垫事实。", "围绕已获知的答案安排揭示，不跨越角色知识与作者许可。", "提出揭示之后的关系或行动后果，交由作者确认。"],
+      "expected_effect": "兑现一条已有线索，并为其后果建立新的场景任务。",
+      "avoid_when": ["没有先前铺垫、视角人物尚不知情或作者未允许揭示时，阻止此计划。", "来源文档中的固定章节间隔不作为本原型的硬性规则。"]
+    }
+  ]
+}

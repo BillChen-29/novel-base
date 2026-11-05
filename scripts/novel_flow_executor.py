@@ -446,7 +446,7 @@ def _rewrite_chapter_with_llm(
         return _write_with_mcp_codex(project_root, chapter_path, prompt)
     try:
         from novel_chapter_writer import write_chapter  # type: ignore[import]
-        overrides: Dict[str, object] = {"writing_prompt": prompt}
+        overrides: Dict[str, object] = {"writing_prompt": prompt, "auto_update_memory": False}
         if getattr(args, "llm_provider", None):
             overrides["ai_provider"] = args.llm_provider
         if getattr(args, "llm_model", None):
@@ -548,7 +548,7 @@ def _decompose_beat_scenes(
     """
     import json as _json
 
-    beat_summary = expand_prompt[:600].strip()
+    beat_summary = expand_prompt.strip()
     moment_count = 6
     chars_per_moment = max(80, word_target // moment_count)
 
@@ -662,7 +662,9 @@ def run_python(script: Path, args: List[str]) -> Tuple[int, str, str, Optional[D
 
 
 def _collect_writing_constraints(
-    project_root: Path, chapter_path: Path, query: str
+    project_root: Path, chapter_path: Path, query: str, *,
+    cutoff_chapter: Optional[int] = None, cutoff_offset: Optional[int] = None,
+    pov_character: Optional[str] = None,
 ) -> Dict[str, object]:
     """写前调用三个辅助脚本，汇总约束信息供后续注入 query。"""
     chapter_no = chapter_no_from_name(chapter_path.name)
@@ -693,17 +695,77 @@ def _collect_writing_constraints(
     # 图谱上下文注入（已初始化图谱时生效）
     graph_file = project_root / "00_memory" / "story_graph.json"
     if graph_file.exists():
+        graph_args = ["generate-context", "--project-root", str(project_root),
+                      "--cutoff-chapter", str(chapter_no - 1 if cutoff_chapter is None else cutoff_chapter),
+                      "--max-foreshadows", "5", "--max-events", "5"]
+        if cutoff_offset is not None:
+            graph_args += ["--cutoff-offset", str(cutoff_offset)]
+        if pov_character:
+            graph_args += ["--pov-character", pov_character]
         g_code, g_out, _g_err, g_payload = run_python(
             SCRIPT_DIR / "story_graph_builder.py",
-            ["generate-context",
-             "--project-root", str(project_root),
-             "--chapter", str(max(chapter_no, 0)),
-             "--max-foreshadows", "5",
-             "--max-events", "5"],
+            graph_args,
         )
         if g_code == 0 and isinstance(g_payload, dict) and g_payload.get("ok"):
             constraints["graph_context"] = g_payload
+        else:
+            raise ValueError("graph_context_unavailable: " + str(g_payload or _g_err))
     return constraints
+
+
+def _continuity_tail(project_root: Path, cutoff_chapter: int,
+                     cutoff_offset: Optional[int] = None) -> Dict[str, object]:
+    """Read the last permitted prose, independently of relevance ranking."""
+    project_root = project_root.resolve()
+    if type(cutoff_chapter) is not int or cutoff_chapter < 0:
+        raise ValueError("invalid_cutoff_chapter")
+    if cutoff_offset is not None and (type(cutoff_offset) is not int or cutoff_offset < 0):
+        raise ValueError("invalid_cutoff_offset")
+    manuscript = (project_root / "03_manuscript").resolve()
+    if not manuscript.is_relative_to(project_root):
+        raise ValueError("manuscript_outside_project")
+    paths = sorted(manuscript.glob("*.md"), key=lambda p: (chapter_no_from_name(p.name), p.name), reverse=True)
+    result: Dict[str, object] = {"previous_ending": "", "source_cutoff": {
+        "chapter": cutoff_chapter, "offset": cutoff_offset}, "project_root": str(project_root.resolve())}
+    boundary_paths = [p for p in paths if chapter_no_from_name(p.name) == cutoff_chapter]
+    if cutoff_offset is not None and len(boundary_paths) != 1:
+        raise ValueError("offset_requires_one_boundary_chapter")
+    if cutoff_offset is not None:
+        boundary = boundary_paths[0]
+        if not boundary.resolve().is_relative_to(manuscript):
+            raise ValueError("chapter_outside_project")
+        if cutoff_offset > len(boundary.read_bytes().decode("utf-8")):
+            raise ValueError("cutoff_offset_out_of_range")
+    for path in paths:
+        number = chapter_no_from_name(path.name)
+        if not 0 < number <= cutoff_chapter:
+            continue
+        if not path.resolve().is_relative_to(manuscript):
+            raise ValueError("chapter_outside_project")
+        raw = path.read_bytes().decode("utf-8")
+        allowed = raw[:cutoff_offset] if number == cutoff_chapter and cutoff_offset is not None else raw
+        if not allowed.strip() or STUB_MARKER in allowed or BEAT_SHEET_STUB_MARKER in allowed or '[待写]' in allowed:
+            continue
+        start = max(0, len(allowed) - 2000)
+        result.update(previous_ending=allowed[start:], previous_source={
+            "path": str(path.relative_to(project_root)), "start": start, "end": len(allowed),
+            "content_sha1": sha1_text(raw), "tail_limit_chars": 2000})
+        break
+    return result
+
+
+def _guard_story_write_paths(project_root: Path) -> None:
+    """Reject existing links in writable artifact trees before any subprocess writes."""
+    root = project_root.resolve()
+    for name in (".flow", "00_memory", "03_manuscript"):
+        base = root / name
+        if base.is_symlink():
+            raise ValueError("linked_project_output: " + name)
+        if not base.exists():
+            continue
+        for path in [base, *base.rglob("*")]:
+            if path.is_symlink() or (path.is_file() and path.stat().st_nlink != 1):
+                raise ValueError("linked_project_output: " + str(path.relative_to(root)))
 
 
 def _try_create_lock(lock_file: Path, payload: Dict[str, object]) -> bool:
@@ -801,6 +863,15 @@ def restore_snapshot(snapshot_path: Path, original_path: Path, current_path: Pat
     return original_path
 
 
+def _continuity_signature(project_root: Path, boundary: Dict[str, object], retrieval: Dict[str, object]) -> str:
+    return sha1_text(json.dumps({
+        "boundary": boundary,
+        "index_signature": retrieval.get("result", {}).get("index_signature"),
+        "memory_versions": {name: file_sha1(project_root / "00_memory" / name)
+            for name in ("story_graph.json", "outline_anchors.json", "event_matrix.json", "novel_plan.md")},
+    }, ensure_ascii=False, sort_keys=True))
+
+
 def make_request_id(args: argparse.Namespace, chapter_path: Path, query: str, chapter_hash_before: str, project_root: Path = None) -> str:
     # 使用相对路径避免符号链接解析导致缓存键不一致
     try:
@@ -815,6 +886,7 @@ def make_request_id(args: argparse.Namespace, chapter_path: Path, query: str, ch
         path_key,
         query.strip(),
         str(args.top_k),
+        str(args.candidate_k),
         str(args.min_chars),
         str(args.min_paragraphs),
         str(args.min_dialogue_ratio),
@@ -824,6 +896,12 @@ def make_request_id(args: argparse.Namespace, chapter_path: Path, query: str, ch
         str(args.auto_improve),
         str(args.auto_retry),
         chapter_hash_before,
+        str(getattr(args, "_continuity_signature", "")),
+        str(getattr(args, "pov_character", "") or ""),
+        str(getattr(args, "draft_provider", "auto")),
+        str(getattr(args, "use_beat_sheet", True)),
+        str(getattr(args, "enable_constraints", True)),
+        str(getattr(args, "pacing_mode", "standard")),
     ])
     return sha1_text(raw)
 
@@ -1402,25 +1480,21 @@ def _generate_beat_draft(
     成功时 chapter_path 已被写入合成草稿。
     失败时返回 (False, error_reason)，调用方应回退到普通 draft 模式。
     """
-    chapter_goal = query[:200]  # 截断保证参数合法
+    _guard_story_write_paths(project_root)
+    chapter_goal = str((writing_constraints or {}).get("query") or query)
 
     pacing_depth = _resolve_pacing_mode(getattr(args, "pacing_mode", "standard"))
 
-    # 从 writing_constraints 提取大纲约束和事件推荐，丰富章节目标描述
-    # 使 beat 骨架 / 扩写 prompt 获得真实的剧情约束而非空泛目标
-    enriched_goal = chapter_goal
-    if writing_constraints:
-        parts: List[str] = [chapter_goal]
-        outline_c = writing_constraints.get("outline_constraints", "")
-        if outline_c:
-            parts.append(f"大纲约束：{str(outline_c)[:120]}")
-        event_rec = writing_constraints.get("event_recommendation", "")
-        if event_rec:
-            parts.append(f"推荐事件：{str(event_rec)[:120]}")
-        graph_ctx = writing_constraints.get("graph_context", "")
-        if graph_ctx:
-            parts.append(f"人物关系：{str(graph_ctx)[:100]}")
-        enriched_goal = " | ".join(p for p in parts if p)[:400]
+    # Store the evidence separately; never squeeze it into a short chapter title.
+    writing_context = dict(writing_constraints or {})
+    writing_context["writing_query"] = query
+    continuity = writing_context.get("continuity_context", {})
+    previous_ending = continuity.get("previous_ending", "") if isinstance(continuity, dict) else ""
+    beats_dir = project_root / "00_memory" / "beats"
+    beats_dir.mkdir(parents=True, exist_ok=True)
+    context_path = beats_dir / f"ch{chapter_no:04d}_context.json"
+    if not save_json(context_path, writing_context, indent=2):
+        return False, "beat_context_save_failed"
 
     # Step 1: 生成 Beat Sheet 骨架
     b_code, _b_out, _b_err, b_payload = run_python(
@@ -1428,7 +1502,9 @@ def _generate_beat_draft(
         ["generate",
          "--project-root", str(project_root),
          "--chapter", str(chapter_no),
-         "--chapter-goal", enriched_goal,
+         "--chapter-goal", chapter_goal,
+         "--previous-ending", str(previous_ending),
+         "--context-file", str(context_path),
          "--pacing-depth", pacing_depth,
          "--beat-count", str(getattr(args, "beat_count", 4))],
     )
@@ -1460,10 +1536,12 @@ def _generate_beat_draft(
              "--pacing-depth", pacing_depth,
              "--beat-id", str(beat_id)],
         )
-        if e_code != 0 or not isinstance(e_payload, dict):
-            continue
+        if e_code != 0 or not isinstance(e_payload, dict) or not e_payload.get("ok"):
+            return False, f"beat_expand_failed:{beat_id}"
 
         expand_prompt = e_payload.get("expand_prompt", "")
+        if not isinstance(expand_prompt, str) or not expand_prompt.strip():
+            return False, f"beat_expand_empty:{beat_id}"
         beat_file = beats_dir / f"ch{chapter_no:04d}_beat{beat_id:02d}_expand.md"
 
         # 从 beat sheet 获取该 beat 的字数目标
@@ -1473,7 +1551,7 @@ def _generate_beat_draft(
         if draft_provider == "llm" and expand_prompt:
             try:
                 from novel_chapter_writer import write_chapter  # type: ignore[import]
-                overrides: Dict[str, object] = {}
+                overrides: Dict[str, object] = {"auto_update_memory": False}
                 if getattr(args, "llm_provider", None):
                     overrides["ai_provider"] = args.llm_provider
                 if getattr(args, "llm_model", None):
@@ -1621,6 +1699,8 @@ def apply_targeted_quality_fix(
     quality: Dict[str, object],
     args: argparse.Namespace,
     query: str,
+    *,
+    writing_context: Optional[str] = None,
 ) -> List[str]:
     txt = read_text(chapter_path).rstrip()
     failures_raw = quality.get("failures", [])
@@ -1641,7 +1721,7 @@ def apply_targeted_quality_fix(
         f.startswith("pacing_skip_density_critical") or f.startswith("pacing_skip_density_too_high")
         for f in failures
     ):
-        prompt = _build_pacing_rewrite_prompt(query, failures)
+        prompt = _build_pacing_rewrite_prompt(writing_context or query, failures)
         if _rewrite_chapter_with_llm(project_root, chapter_path, args, prompt):
             txt = read_text(chapter_path).rstrip()
             txt = _normalize_paragraph_variance(_rebalance_dialogue_heavy_text(txt, query))
@@ -1693,13 +1773,15 @@ def apply_targeted_quality_fix(
     cur_chars = len(re.sub(r"\s+", "", clean_for_stats(txt)))
     if cur_chars < args.min_chars:
         needed = args.min_chars - cur_chars
-        repeat = max(1, needed // 80)
         extra = []
-        for i in range(repeat):
-            extra.append(
-                f"补充推进{i+1}：围绕“{query}”补写一段行动执行、风险反馈与下一步目标，"
+        added_chars = 0
+        while added_chars < needed:
+            block = (
+                f"补充推进{next_progress_idx + len(extra)}：围绕“{query}”补写一段行动执行、风险反馈与下一步目标，"
                 "确保情节、人物与线索三者同时前进。"
             )
+            extra.append(block)
+            added_chars += len(re.sub(r"\s+", "", clean_for_stats(block)))
         txt += "\n\n" + "\n\n".join(extra)
         actions.append(f"补足字符数 +{needed}")
 
@@ -1814,6 +1896,7 @@ def write_gate_artifacts(
                         config_overrides={
                             "ai_provider": llm_provider,
                             "writing_prompt": humanize_prompt,
+                            "auto_update_memory": False,
                         },
                         dry_run=False,
                     )
@@ -1962,6 +2045,8 @@ def auto_fix_after_gate_failure(
     query_payload: Optional[Dict[str, object]],
     gate_payload: Dict[str, object],
     args: argparse.Namespace,
+    *,
+    author_query: Optional[str] = None,
 ) -> Tuple[Path, List[str], Dict[str, object]]:
     actions: List[str] = []
     failures_raw = gate_payload.get("failures", []) if isinstance(gate_payload, dict) else []
@@ -1998,7 +2083,10 @@ def auto_fix_after_gate_failure(
 
     if "quality_baseline" in fail_text and args.auto_fix_quality:
         old_quality = dict(quality)
-        quality_actions = apply_targeted_quality_fix(project_root, chapter_path, quality, args, query)
+        quality_actions = apply_targeted_quality_fix(
+            project_root, chapter_path, quality, args,
+            author_query if author_query is not None else query, writing_context=query,
+        )
         if quality_actions:
             actions.extend([f"质量最小修复：{x}" for x in quality_actions])
             quality = evaluate_quality(read_text(chapter_path), args)
@@ -2015,6 +2103,10 @@ def auto_fix_after_gate_failure(
 
 def continue_write(args: argparse.Namespace) -> Dict[str, object]:
     project_root = Path(args.project_root).expanduser().resolve()
+    try:
+        _guard_story_write_paths(project_root)
+    except ValueError as error:
+        return {"ok": False, "command": "continue-write", "error": str(error)}
     project_structure(project_root)
     manuscript_dir = project_root / "03_manuscript"
     ensure_dir(manuscript_dir)
@@ -2072,6 +2164,29 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
     idempotent_hit = False
 
     try:
+        # Resolve the destination before reading any story history.
+        if args.chapter_file:
+            chapter_path, path_error = validate_chapter_path(project_root, args.chapter_file)
+            if path_error:
+                return {"ok": False, "error": path_error}
+        else:
+            chapter_path = (manuscript_dir / next_chapter_filename(manuscript_dir, title=args.chapter_title)).resolve()
+        original_chapter_path = chapter_path
+        target_chapter = chapter_no_from_name(chapter_path.name)
+        if target_chapter <= 0:
+            raise ValueError("invalid_target_chapter")
+        prepare_only = bool(getattr(args, "prepare_only", False))
+        cutoff_chapter = getattr(args, "cutoff_chapter", None)
+        if cutoff_chapter is None:
+            cutoff_chapter = target_chapter - 1
+        cutoff_offset = getattr(args, "cutoff_offset", None)
+        pov_character = getattr(args, "pov_character", None)
+        if cutoff_chapter > target_chapter:
+            raise ValueError("cutoff_after_target_chapter")
+        if cutoff_chapter >= target_chapter and not prepare_only:
+            raise ValueError("in_chapter_cutoff_requires_prepare_only: 正文内续写须先准备上下文，不能隐式覆盖后缀")
+        continuity_context = _continuity_tail(project_root, cutoff_chapter, cutoff_offset)
+        continuity_context["pov_character"] = pov_character
         query_cmd = [
             "query",
             "--project-root",
@@ -2083,21 +2198,19 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
             "--candidate-k",
             str(args.candidate_k),
             "--auto-build",
+            "--cutoff-chapter", str(cutoff_chapter),
         ]
+        if cutoff_offset is not None:
+            query_cmd += ["--cutoff-offset", str(cutoff_offset)]
         if args.force_retrieval:
             query_cmd.append("--force")
         q_code, q_out, q_err, q_payload = run_python(SCRIPT_DIR / "plot_rag_retriever.py", query_cmd)
-
-        if args.chapter_file:
-            chapter_path, path_error = validate_chapter_path(project_root, args.chapter_file)
-            if path_error:
-                return {"ok": False, "error": path_error}
-        else:
-            chapter_path = (manuscript_dir / next_chapter_filename(manuscript_dir, title=args.chapter_title)).resolve()
-        original_chapter_path = chapter_path
+        if q_code != 0 or not isinstance(q_payload, dict):
+            raise ValueError("bounded_retrieval_failed: " + str(q_payload or q_err))
+        args._continuity_signature = _continuity_signature(project_root, continuity_context, q_payload)
 
         created_chapter_stub = False
-        if not chapter_path.exists():
+        if not chapter_path.exists() and not prepare_only:
             created_chapter_stub = True
             write_text(
                 chapter_path,
@@ -2107,7 +2220,7 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
         chapter_hash_before = file_sha1(chapter_path)
         request_id = make_request_id(args, chapter_path, query, chapter_hash_before, project_root)
 
-        if args.idempotent_cache and not args.force_run:
+        if args.idempotent_cache and not args.force_run and not prepare_only:
             cache = load_continue_cache(flow_dir)
             entries_raw = cache.get("entries")
             entries = entries_raw if isinstance(entries_raw, dict) else {}
@@ -2149,7 +2262,8 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
         writing_constraints: Optional[Dict[str, object]] = None
         injected_lines: List[str] = []
         if args.enable_constraints and chapter_path:
-            writing_constraints = _collect_writing_constraints(project_root, chapter_path, query)
+            writing_constraints = _collect_writing_constraints(project_root, chapter_path, query,
+                cutoff_chapter=cutoff_chapter, cutoff_offset=cutoff_offset, pov_character=pov_character)
             outline_c = writing_constraints.get("outline_constraints")
             if isinstance(outline_c, dict):
                 outline_prompt = outline_c.get("constraints_prompt")
@@ -2200,19 +2314,54 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
 
         # 拼装最终写作查询：原始意图 + 相关历史剧情 + 写作约束
         query_sections = [query]
+        if continuity_context.get("previous_ending"):
+            query_sections.append("[截点前正文结尾]\n" + str(continuity_context["previous_ending"]))
         if rag_lines:
             query_sections.append("[相关历史剧情]\n" + "\n".join(f"- {line}" for line in rag_lines))
         if injected_lines:
             query_sections.append("[写作约束]\n" + "\n".join(f"- {line}" for line in injected_lines))
         writing_query = "\n\n".join(query_sections)
+        writing_constraints = dict(writing_constraints or {"query": query})
+        writing_constraints["continuity_context"] = continuity_context
+        writing_constraints["historical_evidence"] = q_payload.get("result", {}).get("retrieved", [])
+        writing_constraints["information_policy"] = (
+            "检索正文为作者可见证据，不代表视角人物都知情。人物说法、推断、未来安排不能自动确认为已发生事实。"
+        )
+        context_path = flow_dir / f"writing_context_ch{target_chapter:04d}.json"
+        if not save_json(context_path, writing_constraints, indent=2):
+            raise ValueError("writing_context_save_failed")
+        if prepare_only:
+            code, _out, err, payload = run_python(SCRIPT_DIR / "beat_sheet_generator.py", [
+                "generate", "--project-root", str(project_root), "--chapter", str(target_chapter),
+                "--chapter-goal", query, "--previous-ending", str(continuity_context["previous_ending"]),
+                "--context-file", str(context_path), "--beat-count", str(args.beat_count),
+                "--pacing-depth", pacing_mode])
+            if code != 0 or not isinstance(payload, dict) or not payload.get("ok"):
+                raise ValueError("prepare_beat_failed: " + str(payload or err))
+            code, _out, err, expanded = run_python(SCRIPT_DIR / "beat_sheet_generator.py", [
+                "expand", "--project-root", str(project_root), "--chapter", str(target_chapter), "--beat-id", "1"])
+            if code != 0 or not isinstance(expanded, dict) or not expanded.get("ok"):
+                raise ValueError("prepare_expand_failed: " + str(expanded or err))
+            return {"ok": True, "command": "continue-write", "prepared_only": True,
+                "chapter_file": str(chapter_path), "prepared_context_file": str(context_path),
+                "prepared_prompt_file": expanded["expand_file"], "source_cutoff": continuity_context["source_cutoff"],
+                "query_result": q_payload, "writing_constraints": writing_constraints,
+                "model_called": False, "manuscript_changed": False}
 
         auto_draft_applied = False
         draft_provider_used = _resolve_draft_provider(args, project_root)
         fallback_applied = False
         llm_error_msg = None
+        explicit_demo_template = str(getattr(args, "draft_provider", "auto")) == "template"
+
+        def preserve_pending_prompt():
+            # A fixed prose template cannot enforce evidence or knowledge constraints.
+            # Keep the reviewable prompt instead of presenting filler as a finished chapter.
+            write_text(chapter_path, f"# {chapter_path.stem}\n\n{BEAT_SHEET_STUB_MARKER}\n\n"
+                + writing_query + "\n\n[来源与约束]\n" + json.dumps(writing_constraints, ensure_ascii=False, indent=2))
 
         # Beat Sheet 流水线（优先于普通 draft，默认开启）
-        if getattr(args, "use_beat_sheet", True) and chapter_is_draft_stub(chapter_path):
+        if args.auto_draft and getattr(args, "use_beat_sheet", True) and chapter_is_draft_stub(chapter_path):
             _beat_chapter_no = chapter_no_from_name(chapter_path.name)
             if _beat_chapter_no > 0:
                 beat_applied, beat_mode = _generate_beat_draft(
@@ -2228,7 +2377,8 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
                 # 尝试使用 LLM 写作
                 try:
                     from novel_chapter_writer import write_chapter
-                    config_overrides = {}
+                    config_overrides = {"writing_prompt": writing_query + "\n\n[来源与约束]\n" +
+                        json.dumps(writing_constraints, ensure_ascii=False), "auto_update_memory": False}
                     if args.llm_provider:
                         config_overrides['ai_provider'] = args.llm_provider
                     if args.llm_model:
@@ -2256,20 +2406,21 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
                     else:
                         # LLM 调用失败，回退到模板
                         llm_error_msg = llm_result.get("error", "unknown error")
-                        draft = generate_draft_text(project_root, chapter_path, query, min_chars=args.min_chars)
-                        write_text(chapter_path, draft)
-                        draft_provider_used = "template"
+                        preserve_pending_prompt()
+                        draft_provider_used = "prompt_only"
                         fallback_applied = True
                         auto_draft_applied = True
 
                 except Exception as e:
                     # 导入或调用异常，回退到模板
                     llm_error_msg = str(e)
-                    draft = generate_draft_text(project_root, chapter_path, query, min_chars=args.min_chars)
-                    write_text(chapter_path, draft)
-                    draft_provider_used = "template"
+                    preserve_pending_prompt()
+                    draft_provider_used = "prompt_only"
                     fallback_applied = True
                     auto_draft_applied = True
+            elif draft_provider_used == "beat_sheet_template" and not explicit_demo_template:
+                # The Beat expander already saved all sources in a prompt-only stub.
+                draft_provider_used = "prompt_only"
             elif draft_provider_used == "beat_sheet_template":
                 # beat_sheet_template 模式：beat 合成已产出结构化写作指引（BEAT_SHEET_STUB），
                 # 用 beat sheet JSON 中的 chapter_goal 和各 beat 摘要构造富语义 query，
@@ -2295,11 +2446,14 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
                 )
                 write_text(chapter_path, draft)
                 auto_draft_applied = True
-            else:
+            elif explicit_demo_template:
                 # 纯 template 模式
                 draft = generate_draft_text(project_root, chapter_path, query, min_chars=args.min_chars)
                 write_text(chapter_path, draft)
                 auto_draft_applied = True
+            else:
+                preserve_pending_prompt()
+                draft_provider_used = "prompt_only"
 
         draft_mode = chapter_is_draft_stub(chapter_path)
 
@@ -2334,7 +2488,7 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
         if not draft_mode and args.auto_improve:
             while (not quality_after["passed"]) and improve_rounds < args.auto_improve_rounds:
                 txt = read_text(chapter_path)
-                write_text(chapter_path, improve_text_minimally(txt, writing_query))
+                write_text(chapter_path, improve_text_minimally(txt, query))
                 quality_after = evaluate_quality(read_text(chapter_path), args)
                 improve_rounds += 1
 
@@ -2367,6 +2521,7 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
                     q_payload,
                     gate_payload if gate_payload else {},
                     args,
+                    author_query=query,
                 )
                 if not actions:
                     break
@@ -2578,6 +2733,9 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
             "chapter_hash_after": file_sha1(chapter_path) if chapter_path and chapter_path.exists() else "",
             "research_gaps": research_gaps,
             "writing_constraints": writing_constraints,
+            "source_cutoff": continuity_context["source_cutoff"],
+            "prepared_context_file": str(context_path),
+            "demo_template": explicit_demo_template,
             "graph_update_file": graph_update_file,
             "graph_update_count": graph_update_count,
             "batch_review_task": batch_review_task,
@@ -2586,7 +2744,9 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
             "observer_prompt_file": observer_prompt_file,
         }
 
-        if draft_mode and not args.auto_draft:
+        if draft_mode and draft_provider_used == "prompt_only":
+            result["next_step"] = "前文依据和扩写提示已保存，尚未生成正文；配置生成模型后继续，或由作者按提示写作。"
+        elif draft_mode and not args.auto_draft:
             result["next_step"] = "章节仍是占位草稿，请补全正文后再次执行 /继续写，或启用 --auto-draft。"
         elif draft_mode:
             result["next_step"] = "已尝试自动成稿但仍检测到占位标记，请手动补全正文后再执行。"
@@ -2621,6 +2781,22 @@ def continue_write(args: argparse.Namespace) -> Dict[str, object]:
                 "chapter_hash_before": chapter_hash_before,
                 "result": result,
             }
+            # Accepting a chapter updates planning state and the index. Cache the
+            # resulting state too, so repeating this same accepted operation is
+            # idempotent without ignoring any later source or memory edits.
+            if gate_passed_final:
+                post_code, _, _, post_query = run_python(SCRIPT_DIR / "plot_rag_retriever.py", query_cmd)
+                if post_code == 0 and isinstance(post_query, dict):
+                    post_boundary = _continuity_tail(project_root, cutoff_chapter, cutoff_offset)
+                    post_boundary["pov_character"] = pov_character
+                    args._continuity_signature = _continuity_signature(project_root, post_boundary, post_query)
+                    post_hash = file_sha1(chapter_path)
+                    post_id = make_request_id(args, chapter_path, query, post_hash, project_root)
+                    entries_raw[post_id] = {
+                        "saved_at": dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                        "chapter_hash_before": post_hash,
+                        "result": result,
+                    }
             save_continue_cache(flow_dir, cache)
         return result
 
@@ -3233,6 +3409,10 @@ def parse_args() -> argparse.Namespace:
     p_cont.add_argument("--project-root", required=True)
     p_cont.add_argument("--query", default="推进下一章剧情")
     p_cont.add_argument("--chapter-file")
+    p_cont.add_argument("--prepare-only", action="store_true", help="只保存截点上下文和扩写提示，不调用模型、不改正文")
+    p_cont.add_argument("--cutoff-chapter", type=int, help="历史正文最多读到的章号；默认目标章之前一章，0为空历史")
+    p_cont.add_argument("--cutoff-offset", type=int, help="截点章内可读字符数；正文内截点仅用于 --prepare-only")
+    p_cont.add_argument("--pov-character", help="图谱知情过滤使用的人物稳定 ID；不提供则为作者视角")
     p_cont.add_argument("--chapter-title", default="待写")
     p_cont.add_argument("--top-k", type=int, default=4)
     p_cont.add_argument("--candidate-k", type=int, default=12)
@@ -3276,7 +3456,7 @@ def parse_args() -> argparse.Namespace:
     p_cont.add_argument("--auto-research", dest="auto_research", action="store_true", default=True,
                         help="写前自动检测知识缺口并提示调研")
     p_cont.add_argument("--draft-provider", choices=["auto", "template", "llm"], default="auto",
-                        help="Draft strategy: auto (Two-Phase if LLM configured), template, or llm")
+                        help="auto/llm 使用模型；无模型或失败时保留提示。显式 template 为旧版固定正文演示，不保证连续性")
     p_cont.add_argument("--llm-provider", default=None,
                         help="LLM提供商(openai/anthropic/kimi/glm/minimax)，需配合--draft-provider llm")
     p_cont.add_argument("--llm-model", default=None,

@@ -1,0 +1,39 @@
+{
+  "run_date": "2026-10-26",
+  "all_unit_tests_passed": 330,
+  "new_unit_tests_passed": 41,
+  "workflow_checks": {
+    "cases": 9,
+    "candidate_judgments": 43,
+    "judgments": {
+      "supported": 35,
+      "contradicted": 8
+    },
+    "workflow_passed": 36,
+    "workflow_total": 36,
+    "knowledge_judgments": {
+      "supported": 57,
+      "insufficient_evidence": 43,
+      "contradicted": 23
+    },
+    "knowledge_total": 123,
+    "event_anchors": 10,
+    "chronology_reviews": 9
+  },
+  "assets": {
+    "count": 271,
+    "changed": []
+  },
+  "code_review": "APPROVE; occurrence ordering and repeated-action fallback findings fixed and independently retested",
+  "security_review": "input, template, output, HTML, and POV isolation checked; no blockers",
+  "source_sha256": {
+    "scripts/motif_matcher.py": "74f35cf0679074b4327e7c9b19674e8fab14823fd00a0217e2105c225603ce8f",
+    "scripts/tests/test_motif_matcher.py": "455741079c15d105879c2d282124c90afbb5a645f8fe3c6ebc7272e9f072c0d2",
+    "scripts/tests/test_motif_experiment.py": "fea8718f88f4a93fd50c74ee3233cf746d431f97dad40b67fcbef83745d35bee",
+    "experiments/motif-applicability/run_experiment.py": "0afed374dd146d961b3d7c6686e13d7d01a2bd656b1119ba5d3110c937a26b54",
+    "experiments/motif-applicability/catalog.json": "57cc8f376c79a4111deb5ca6cfb0559fe4b1cf04f7131898286584d37a5e1803",
+    "experiments/motif-applicability/fixtures.json": "9e789be88d1507c91508472a3df5845fab005089837d87edfc00ba0f6ca1d72d",
+    "experiments/motif-applicability/reviews.json": "bd9138e859507ba8cdc2ba22b71c4fe662531cc1c626dcc5a6dfeec968ac878e"
+  },
+  "presentation_regression_passed": 7
+}

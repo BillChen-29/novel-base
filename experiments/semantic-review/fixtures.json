@@ -1,0 +1,353 @@
+{
+  "schema_version": 1,
+  "annotation": "原创工程试点，候选包含故意错误与证据不足；事实标签等待独立AI阅读判断。",
+  "projects": [
+    {
+      "schema_version": 1,
+      "project_id": "review-copper-key",
+      "title": "铜钥匙：事实与知情审核",
+      "annotation_method": "本轮原创审核试点；包含故意设置的错误候选，不是已确认事实。",
+      "pov_character": "林舟",
+      "characters": [
+        "林舟",
+        "许岚",
+        "周岑"
+      ],
+      "goal": {
+        "id": "reveal_truth",
+        "description": "检查当前证据是否足以揭示铜钥匙的用途。"
+      },
+      "scenes": [
+        {
+          "id": "s01",
+          "order": 1,
+          "function": "setup",
+          "tension": 3,
+          "present_characters": [
+            "林舟",
+            "许岚"
+          ],
+          "text": "雨从旧报亭的铁皮顶落下来。许岚将一把铜钥匙交给林舟，钥匙背面刻着数字七。周岑已经失踪两天，林舟和许岚都在找他。许岚说，钥匙是周岑失踪前留下的。林舟把它放进外套内袋，决定先弄清钥匙能打开什么。"
+        },
+        {
+          "id": "s02",
+          "order": 2,
+          "function": "action",
+          "tension": 5,
+          "present_characters": [
+            "林舟",
+            "许岚"
+          ],
+          "text": "两人刚穿过车站，身后便有人追了上来。他们钻过封闭的检票口，跑向货运通道。林舟翻过铁栏时划伤了左臂，许岚看见袖口渗出了血。他没有停下，只用另一只手按住内袋里的钥匙。"
+        },
+        {
+          "id": "s03",
+          "order": 3,
+          "function": "action",
+          "tension": 5,
+          "present_characters": [
+            "林舟",
+            "许岚"
+          ],
+          "text": "脚步声一直追到天桥下。林舟和许岚靠在桥墩背后，等巡过路口的灯光移开。铜钥匙仍在林舟的内袋里。许岚知道，这把钥匙打开的是旧档案馆的地下柜。她没有把这件事告诉林舟。林舟只低声问，他们接下来该从哪里查起。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "f_key",
+          "text": "许岚交给林舟一把背面刻着数字七的铜钥匙。",
+          "scene_id": "s01",
+          "quote": "许岚将一把铜钥匙交给林舟，钥匙背面刻着数字七。",
+          "known_by": [
+            "林舟",
+            "许岚"
+          ]
+        },
+        {
+          "id": "f_missing",
+          "text": "周岑失踪两天，林舟和许岚正在寻找他。",
+          "scene_id": "s01",
+          "quote": "周岑已经失踪两天，林舟和许岚都在找他。",
+          "known_by": [
+            "林舟",
+            "许岚"
+          ]
+        },
+        {
+          "id": "f_injury",
+          "text": "林舟的左臂被铁栏划伤，许岚目睹了伤势。",
+          "scene_id": "s02",
+          "quote": "林舟翻过铁栏时划伤了左臂，许岚看见袖口渗出了血。",
+          "known_by": [
+            "林舟",
+            "许岚"
+          ]
+        },
+        {
+          "id": "f_location",
+          "text": "林舟和许岚暂时停在天桥桥墩背后。",
+          "scene_id": "s03",
+          "quote": "林舟和许岚靠在桥墩背后，等巡过路口的灯光移开。",
+          "known_by": [
+            "林舟",
+            "许岚"
+          ]
+        },
+        {
+          "id": "f_possession",
+          "text": "铜钥匙仍由林舟随身保管。",
+          "scene_id": "s03",
+          "quote": "铜钥匙仍在林舟的内袋里。",
+          "known_by": [
+            "林舟"
+          ]
+        },
+        {
+          "id": "f_secret",
+          "text": "铜钥匙打开旧档案馆的地下柜。",
+          "scene_id": "s03",
+          "quote": "许岚知道，这把钥匙打开的是旧档案馆的地下柜。",
+          "known_by": [
+            "许岚",
+            "林舟"
+          ]
+        },
+        {
+          "id": "f_injury_wrong",
+          "text": "林舟的左臂完好无伤，翻过铁栏时没有受伤。",
+          "scene_id": "s02",
+          "quote": "林舟翻过铁栏时划伤了左臂，许岚看见袖口渗出了血。",
+          "known_by": [
+            "林舟",
+            "许岚"
+          ]
+        },
+        {
+          "id": "f_route",
+          "text": "林舟已经确认铜钥匙能打开海关仓库的大门。",
+          "scene_id": "s01",
+          "quote": "许岚将一把铜钥匙交给林舟，钥匙背面刻着数字七。",
+          "known_by": [
+            "林舟"
+          ]
+        },
+        {
+          "id": "f_origin_world",
+          "text": "铜钥匙确实是周岑失踪前留下的。",
+          "scene_id": "s01",
+          "quote": "许岚说，钥匙是周岑失踪前留下的。",
+          "known_by": [
+            "林舟",
+            "许岚"
+          ]
+        },
+        {
+          "id": "f_origin_report",
+          "text": "许岚告诉林舟，这把钥匙是周岑失踪前留下的。",
+          "scene_id": "s01",
+          "quote": "许岚说，钥匙是周岑失踪前留下的。",
+          "known_by": [
+            "林舟",
+            "许岚"
+          ]
+        }
+      ],
+      "threads": [
+        {
+          "id": "t_key",
+          "description": "查明铜钥匙的用途",
+          "status": "open",
+          "setup_fact_ids": [
+            "f_key"
+          ],
+          "resolution_fact_id": "f_secret",
+          "reveal_allowed": true
+        },
+        {
+          "id": "t_missing",
+          "description": "找到失踪的周岑",
+          "status": "open",
+          "setup_fact_ids": [
+            "f_missing"
+          ],
+          "resolution_fact_id": null,
+          "reveal_allowed": false
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "project_id": "review-disclosure",
+      "title": "门内与门外：知情变化",
+      "pov_character": "阿弥",
+      "characters": [
+        "阿岚",
+        "阿弥",
+        "阿驰"
+      ],
+      "goal": {
+        "id": "recover_and_investigate",
+        "description": "根据已经获知的线索安排下一步行动。"
+      },
+      "scenes": [
+        {
+          "id": "d1",
+          "order": 1,
+          "text": "阿岚在屋内拆开封信，信上写着暗号“松果”。她把信收入口袋。阿弥一直等在门外，没有看到信的内容。",
+          "function": "setup",
+          "tension": 2,
+          "present_characters": [
+            "阿岚"
+          ]
+        },
+        {
+          "id": "d2",
+          "order": 2,
+          "text": "阿岚走到门口，清楚地对阿弥说：“暗号是松果。”阿弥重复了一遍暗号。远处的阿驰正戴着隔音耳机修车。",
+          "function": "dialogue",
+          "tension": 2,
+          "present_characters": [
+            "阿岚",
+            "阿弥"
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "d_code",
+          "text": "信上写着暗号“松果”。",
+          "scene_id": "d1",
+          "quote": "信上写着暗号“松果”。",
+          "known_by": [
+            "阿岚",
+            "阿弥",
+            "阿驰"
+          ]
+        },
+        {
+          "id": "d_untold",
+          "text": "截至当前，阿岚还没有把暗号告诉阿弥。",
+          "scene_id": "d1",
+          "quote": "阿弥一直等在门外，没有看到信的内容。",
+          "known_by": [
+            "阿岚",
+            "阿弥"
+          ]
+        },
+        {
+          "id": "d_told",
+          "text": "阿岚向阿弥说出了暗号，阿弥重复了一遍。",
+          "scene_id": "d2",
+          "quote": "阿岚走到门口，清楚地对阿弥说：“暗号是松果。”阿弥重复了一遍暗号。",
+          "known_by": [
+            "阿岚",
+            "阿弥"
+          ]
+        },
+        {
+          "id": "d_motive",
+          "text": "阿驰因为嫉妒阿弥，故意拒绝听取暗号。",
+          "scene_id": "d2",
+          "quote": "远处的阿驰正戴着隔音耳机修车。",
+          "known_by": [
+            "阿岚",
+            "阿弥",
+            "阿驰"
+          ]
+        }
+      ],
+      "threads": [
+        {
+          "id": "d_thread",
+          "description": "核对暗号对应的行动",
+          "status": "open",
+          "setup_fact_ids": [
+            "d_code"
+          ],
+          "resolution_fact_id": null,
+          "reveal_allowed": false
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "project_id": "review-uncertainty",
+      "title": "温热的门把：观察与推断",
+      "pov_character": "顾宁",
+      "characters": [
+        "顾宁",
+        "沈越"
+      ],
+      "goal": {
+        "id": "recover_and_investigate",
+        "description": "核对门把温热的原因，先保留不同解释。"
+      },
+      "scenes": [
+        {
+          "id": "u1",
+          "order": 1,
+          "text": "黄昏，顾宁握住门把，感觉门把仍然温热。她对沈越说：“门把还是热的，可能刚有人离开。”沈越摇头：“也可能是下午晒热的，我没有见到任何人。”两人决定先检查门窗。",
+          "function": "investigation",
+          "tension": 3,
+          "present_characters": [
+            "顾宁",
+            "沈越"
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "u_warm",
+          "text": "顾宁握住门把，感觉门把仍然温热。",
+          "scene_id": "u1",
+          "quote": "顾宁握住门把，感觉门把仍然温热。",
+          "known_by": [
+            "顾宁"
+          ]
+        },
+        {
+          "id": "u_hypothesis",
+          "text": "顾宁向沈越提出了可能刚有人离开的猜测。",
+          "scene_id": "u1",
+          "quote": "她对沈越说：“门把还是热的，可能刚有人离开。”",
+          "known_by": [
+            "顾宁",
+            "沈越"
+          ]
+        },
+        {
+          "id": "u_departed",
+          "text": "刚刚一定有人从屋里离开。",
+          "scene_id": "u1",
+          "quote": "她对沈越说：“门把还是热的，可能刚有人离开。”",
+          "known_by": [
+            "顾宁",
+            "沈越"
+          ]
+        },
+        {
+          "id": "u_empty",
+          "text": "屋内现在确定没有人。",
+          "scene_id": "u1",
+          "quote": "沈越摇头：“也可能是下午晒热的，我没有见到任何人。”",
+          "known_by": [
+            "顾宁",
+            "沈越"
+          ]
+        }
+      ],
+      "threads": [
+        {
+          "id": "u_thread",
+          "description": "核对门把温热的原因",
+          "status": "open",
+          "setup_fact_ids": [
+            "u_warm"
+          ],
+          "resolution_fact_id": null,
+          "reveal_allowed": false
+        }
+      ]
+    }
+  ]
+}

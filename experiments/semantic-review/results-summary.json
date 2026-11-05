@@ -1,0 +1,282 @@
+{
+  "run_date": "2026-10-25",
+  "method": "Current Codex agent reviewed frozen packets; program validated and imported reviews; no extra model API",
+  "project_count": 5,
+  "candidate_count": 32,
+  "passed_projects": 5,
+  "checks_passed": 32,
+  "checks_total": 32,
+  "source_books_unchanged": true,
+  "limitations": [
+    "AI review is not independent human gold or accuracy measurement.",
+    "This imports explicit judgments; the default writer and old 20-check audit do not automatically acquire semantic understanding.",
+    "Existing four strategy cards are used; motif/situation/variant applicability is not implemented.",
+    "Scene functions, tension and author goals remain experiment annotations."
+  ],
+  "verdict_counts": {
+    "supported": 21,
+    "contradicted": 4,
+    "insufficient_evidence": 7
+  },
+  "knowledge_verdict_counts": {
+    "supported": 35,
+    "contradicted": 8,
+    "insufficient_evidence": 19
+  },
+  "cases": [
+    {
+      "project_id": "review-copper-key",
+      "candidate_count": 10,
+      "verdict_counts": {
+        "supported": 7,
+        "contradicted": 1,
+        "insufficient_evidence": 2
+      },
+      "epistemic_counts": {
+        "established": 8,
+        "uncertain": 1,
+        "reported": 1
+      },
+      "knowledge_verdict_counts": {
+        "supported": 12,
+        "contradicted": 3,
+        "insufficient_evidence": 3
+      },
+      "known_before": [
+        "f001",
+        "f002",
+        "f003",
+        "f004",
+        "f005",
+        "f006",
+        "f007",
+        "f008",
+        "f009",
+        "f010"
+      ],
+      "known_after": [
+        "f001",
+        "f002",
+        "f003",
+        "f004",
+        "f005",
+        "f010"
+      ],
+      "recommendations_before": [
+        "earned_reveal",
+        "aftermath_clue",
+        "subtext_probe"
+      ],
+      "recommendations_after": [
+        "aftermath_clue",
+        "subtext_probe",
+        "escalate_pressure"
+      ],
+      "checks": {
+        "positive_facts_survive": true,
+        "known_facts_match_gate": true,
+        "context_packet_facts_subset_of_gate": true,
+        "context_facts_supported_by_imported_review": true,
+        "nonempty_recommendations": true,
+        "actual_prompt_contains_current_packets": true,
+        "wrong_knowledge_reveal_was_available_before": true,
+        "wrong_knowledge_reveal_blocked_after": true
+      },
+      "passed": true
+    },
+    {
+      "project_id": "review-disclosure",
+      "candidate_count": 4,
+      "verdict_counts": {
+        "supported": 2,
+        "contradicted": 1,
+        "insufficient_evidence": 1
+      },
+      "epistemic_counts": {
+        "established": 3,
+        "uncertain": 1
+      },
+      "knowledge_verdict_counts": {
+        "supported": 3,
+        "insufficient_evidence": 5,
+        "contradicted": 2
+      },
+      "known_before": [
+        "f001",
+        "f002",
+        "f003",
+        "f004"
+      ],
+      "known_after": [
+        "f003"
+      ],
+      "recommendations_before": [
+        "aftermath_clue",
+        "subtext_probe",
+        "escalate_pressure"
+      ],
+      "recommendations_after": [
+        "subtext_probe"
+      ],
+      "checks": {
+        "positive_facts_survive": true,
+        "known_facts_match_gate": true,
+        "context_packet_facts_subset_of_gate": true,
+        "context_facts_supported_by_imported_review": true,
+        "nonempty_recommendations": true,
+        "actual_prompt_contains_current_packets": true
+      },
+      "passed": true
+    },
+    {
+      "project_id": "review-uncertainty",
+      "candidate_count": 4,
+      "verdict_counts": {
+        "supported": 2,
+        "insufficient_evidence": 2
+      },
+      "epistemic_counts": {
+        "established": 2,
+        "inferred": 1,
+        "uncertain": 1
+      },
+      "knowledge_verdict_counts": {
+        "supported": 3,
+        "insufficient_evidence": 4
+      },
+      "known_before": [
+        "f001",
+        "f002",
+        "f003",
+        "f004"
+      ],
+      "known_after": [
+        "f001",
+        "f002"
+      ],
+      "recommendations_before": [
+        "aftermath_clue",
+        "subtext_probe",
+        "escalate_pressure"
+      ],
+      "recommendations_after": [
+        "aftermath_clue",
+        "subtext_probe",
+        "escalate_pressure"
+      ],
+      "checks": {
+        "positive_facts_survive": true,
+        "known_facts_match_gate": true,
+        "context_packet_facts_subset_of_gate": true,
+        "context_facts_supported_by_imported_review": true,
+        "nonempty_recommendations": true,
+        "actual_prompt_contains_current_packets": true
+      },
+      "passed": true
+    },
+    {
+      "project_id": "review-old-lord-monitor",
+      "candidate_count": 6,
+      "verdict_counts": {
+        "supported": 4,
+        "contradicted": 1,
+        "insufficient_evidence": 1
+      },
+      "epistemic_counts": {
+        "established": 5,
+        "uncertain": 1
+      },
+      "knowledge_verdict_counts": {
+        "supported": 4,
+        "contradicted": 1,
+        "insufficient_evidence": 1
+      },
+      "known_before": [
+        "f001",
+        "f002",
+        "f003",
+        "f004",
+        "f005",
+        "f006"
+      ],
+      "known_after": [
+        "f001",
+        "f002",
+        "f003",
+        "f004"
+      ],
+      "recommendations_before": [
+        "aftermath_clue",
+        "escalate_pressure"
+      ],
+      "recommendations_after": [
+        "aftermath_clue",
+        "escalate_pressure"
+      ],
+      "checks": {
+        "positive_facts_survive": true,
+        "known_facts_match_gate": true,
+        "context_packet_facts_subset_of_gate": true,
+        "context_facts_supported_by_imported_review": true,
+        "nonempty_recommendations": true,
+        "actual_prompt_contains_current_packets": true
+      },
+      "passed": true
+    },
+    {
+      "project_id": "review-organs-forensic-inference",
+      "candidate_count": 8,
+      "verdict_counts": {
+        "supported": 6,
+        "contradicted": 1,
+        "insufficient_evidence": 1
+      },
+      "epistemic_counts": {
+        "established": 7,
+        "uncertain": 1
+      },
+      "knowledge_verdict_counts": {
+        "supported": 13,
+        "insufficient_evidence": 6,
+        "contradicted": 2
+      },
+      "known_before": [
+        "f001",
+        "f002",
+        "f003",
+        "f004",
+        "f005",
+        "f006",
+        "f007",
+        "f008"
+      ],
+      "known_after": [
+        "f001",
+        "f002",
+        "f003",
+        "f004",
+        "f005",
+        "f006"
+      ],
+      "recommendations_before": [
+        "aftermath_clue",
+        "subtext_probe",
+        "escalate_pressure"
+      ],
+      "recommendations_after": [
+        "aftermath_clue",
+        "subtext_probe",
+        "escalate_pressure"
+      ],
+      "checks": {
+        "positive_facts_survive": true,
+        "known_facts_match_gate": true,
+        "context_packet_facts_subset_of_gate": true,
+        "context_facts_supported_by_imported_review": true,
+        "nonempty_recommendations": true,
+        "actual_prompt_contains_current_packets": true
+      },
+      "passed": true
+    }
+  ]
+}

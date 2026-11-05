@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "case_id": "case-01",
+      "episode": "public-carrier",
+      "prefix_sha256": "2d8d421c405c077192a641aec9df785c76f77737c6457d39f5313a4154e529b4",
+      "prefix_chars": 98
+    },
+    {
+      "case_id": "case-02",
+      "episode": "public-carrier",
+      "prefix_sha256": "77023f4aab63b6baec49e2785f5ba760893f0c5907d020a7028bcf094d640060",
+      "prefix_chars": 193
+    },
+    {
+      "case_id": "case-03",
+      "episode": "public-dialogue",
+      "prefix_sha256": "c9c4f8e7e2de3e039c092f343f5661488403f35723ba4b0fce007676017fb59b",
+      "prefix_chars": 105
+    },
+    {
+      "case_id": "case-04",
+      "episode": "public-dialogue",
+      "prefix_sha256": "79f792e40ceb3263a7adbf0e02f5829dddf7792592569aa90adccd99d46a3d3c",
+      "prefix_chars": 199
+    },
+    {
+      "case_id": "case-05",
+      "episode": "public-inquiry",
+      "prefix_sha256": "d064cb1de5b13ada37cb756dbcca69a3b9d17d16b8dfc62cd9fd26b7f1bc3f4b",
+      "prefix_chars": 125
+    },
+    {
+      "case_id": "case-06",
+      "episode": "public-inquiry",
+      "prefix_sha256": "b0989f08d9ccc452784cde744d639c72c90084fe0e63ace3818cceaf543716d3",
+      "prefix_chars": 259
+    },
+    {
+      "case_id": "case-07",
+      "episode": "real-inquiry",
+      "prefix_sha256": "098e65ab1e31ada1f09d1f8ae50dbc81ba1dafffaa1a114120df3dfd327fdbe2",
+      "prefix_chars": 344
+    },
+    {
+      "case_id": "case-08",
+      "episode": "real-coffee",
+      "prefix_sha256": "b49e1aada943290663c8e762be0f596a742c046ecf76c8d01407f8f556467bf4",
+      "prefix_chars": 344
+    }
+  ],
+  "basis": "6 authored challenge cutpoints in 3 stories plus 2 new exact local source excerpts; base facts authored then independently reviewed; not a blind natural-distribution benchmark"
+}

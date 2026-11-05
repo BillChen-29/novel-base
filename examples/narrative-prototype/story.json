@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "project_id": "rainy-night-key",
+  "title": "雨夜的铜钥匙",
+  "annotation_method": "原创演示文本与故事状态均为人工设定，用于验证数据流。",
+  "pov_character": "林舟",
+  "characters": ["林舟", "许岚", "周岑"],
+  "goal": {
+    "id": "recover_and_investigate",
+    "description": "连续追逐之后处理行动的后果，围绕铜钥匙推进寻找周岑的调查。"
+  },
+  "scenes": [
+    {
+      "id": "s01",
+      "order": 1,
+      "function": "setup",
+      "tension": 3,
+      "present_characters": ["林舟", "许岚"],
+      "text": "雨从旧报亭的铁皮顶落下来。许岚将一把铜钥匙交给林舟，钥匙背面刻着数字七。周岑已经失踪两天，林舟和许岚都在找他。许岚说，钥匙是周岑失踪前留下的。林舟把它放进外套内袋，决定先弄清钥匙能打开什么。"
+    },
+    {
+      "id": "s02",
+      "order": 2,
+      "function": "action",
+      "tension": 5,
+      "present_characters": ["林舟", "许岚"],
+      "text": "两人刚穿过车站，身后便有人追了上来。他们钻过封闭的检票口，跑向货运通道。林舟翻过铁栏时划伤了左臂，许岚看见袖口渗出了血。他没有停下，只用另一只手按住内袋里的钥匙。"
+    },
+    {
+      "id": "s03",
+      "order": 3,
+      "function": "action",
+      "tension": 5,
+      "present_characters": ["林舟", "许岚"],
+      "text": "脚步声一直追到天桥下。林舟和许岚靠在桥墩背后，等巡过路口的灯光移开。铜钥匙仍在林舟的内袋里。许岚知道，这把钥匙打开的是旧档案馆的地下柜。她没有把这件事告诉林舟。林舟只低声问，他们接下来该从哪里查起。"
+    }
+  ],
+  "facts": [
+    {"id": "f_key", "text": "许岚交给林舟一把背面刻着数字七的铜钥匙。", "scene_id": "s01", "quote": "许岚将一把铜钥匙交给林舟，钥匙背面刻着数字七。", "known_by": ["林舟", "许岚"]},
+    {"id": "f_missing", "text": "周岑失踪两天，林舟和许岚正在寻找他。", "scene_id": "s01", "quote": "周岑已经失踪两天，林舟和许岚都在找他。", "known_by": ["林舟", "许岚"]},
+    {"id": "f_injury", "text": "林舟的左臂被铁栏划伤，许岚目睹了伤势。", "scene_id": "s02", "quote": "林舟翻过铁栏时划伤了左臂，许岚看见袖口渗出了血。", "known_by": ["林舟", "许岚"]},
+    {"id": "f_location", "text": "林舟和许岚暂时停在天桥桥墩背后。", "scene_id": "s03", "quote": "林舟和许岚靠在桥墩背后，等巡过路口的灯光移开。", "known_by": ["林舟", "许岚"]},
+    {"id": "f_possession", "text": "铜钥匙仍由林舟随身保管。", "scene_id": "s03", "quote": "铜钥匙仍在林舟的内袋里。", "known_by": ["林舟"]},
+    {"id": "f_secret", "text": "铜钥匙打开旧档案馆的地下柜。", "scene_id": "s03", "quote": "许岚知道，这把钥匙打开的是旧档案馆的地下柜。", "known_by": ["许岚"]}
+  ],
+  "threads": [
+    {"id": "t_key", "description": "查明铜钥匙的用途", "status": "open", "setup_fact_ids": ["f_key"], "resolution_fact_id": "f_secret", "reveal_allowed": false},
+    {"id": "t_missing", "description": "找到失踪的周岑", "status": "open", "setup_fact_ids": ["f_missing"], "resolution_fact_id": null, "reveal_allowed": false}
+  ]
+}

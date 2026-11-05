@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-10-26",
+  "method": "replay_current_ai_reviews_no_external_api",
+  "limits": [
+    "原创小样检验结构与条件执行；不是语义准确率或续写质量评测。",
+    "母题条件、角色槽位和变体由本轮设计；当前AI判断实例命题，程序不做自由文本抽取。",
+    "母题资料的典型作品归属未作外部查证；新情节均为候选，不写回项目记忆。"
+  ],
+  "summary": {
+    "cases": 9,
+    "candidate_judgments": 43,
+    "judgments": {
+      "supported": 35,
+      "contradicted": 8
+    },
+    "workflow_passed": 36,
+    "workflow_total": 36,
+    "knowledge_judgments": {
+      "supported": 57,
+      "insufficient_evidence": 43,
+      "contradicted": 23
+    },
+    "knowledge_total": 123,
+    "event_anchors": 10,
+    "chronology_reviews": 9
+  },
+  "cases": [
+    {
+      "case_id": "password-before",
+      "title": "暗号尚未转告",
+      "candidate_count": 5,
+      "checks": {
+        "review_bound_to_current_prefix": true,
+        "writer_facts_within_prefix": true,
+        "writer_facts_supported_for_pov": true,
+        "writer_prompt_contains_exact_packet": true
+      },
+      "motifs": [
+        {
+          "motif_id": "forbidden_knowledge",
+          "entry_status": "blocked",
+          "current_stage": null
+        },
+        {
+          "motif_id": "weaving_story",
+          "entry_status": "blocked",
+          "current_stage": null
+        }
+      ],
+      "proposal_ids": []
+    },
+    {
+      "case_id": "password-after",
+      "title": "知道暗号，来源未获支持",
+      "candidate_count": 7,
+      "checks": {
+        "review_bound_to_current_prefix": true,
+        "writer_facts_within_prefix": true,
+        "writer_facts_supported_for_pov": true,
+        "writer_prompt_contains_exact_packet": true
+      },
+      "motifs": [
+        {
+          "motif_id": "forbidden_knowledge",
+          "entry_status": "blocked",
+          "current_stage": null
+        },
+        {
+          "motif_id": "weaving_story",
+          "entry_status": "blocked",
+          "current_stage": null
+        }
+      ],
+      "proposal_ids": []
+    },
+    {
+      "case_id": "woven-encoded",
+      "title": "已编码，等待传递",
+      "candidate_count": 2,
+      "checks": {
+        "review_bound_to_current_prefix": true,
+        "writer_facts_within_prefix": true,
+        "writer_facts_supported_for_pov": true,
+        "writer_prompt_contains_exact_packet": true
+      },
+      "motifs": [
+        {
+          "motif_id": "weaving_story",
+          "entry_status": "eligible",
+          "current_stage": "encoded"
+        }
+      ],
+      "proposal_ids": [
+        "deliver_record"
+      ]
+    },
+    {
+      "case_id": "woven-delivered",
+      "title": "已送达，收到不等于理解",
+      "candidate_count": 5,
+      "checks": {
+        "review_bound_to_current_prefix": true,
+        "writer_facts_within_prefix": true,
+        "writer_facts_supported_for_pov": true,
+        "writer_prompt_contains_exact_packet": true
+      },
+      "motifs": [
+        {
+          "motif_id": "weaving_story",
+          "entry_status": "eligible",
+          "current_stage": "delivered"
+        }
+      ],
+      "proposal_ids": [
+        "ask_decoder"
+      ]
+    },
+    {
+      "case_id": "woven-key",
+      "title": "拿到对照表，解码方案仍未放行",
+      "candidate_count": 6,
+      "checks": {
+        "review_bound_to_current_prefix": true,
+        "writer_facts_within_prefix": true,
+        "writer_facts_supported_for_pov": true,
+        "writer_prompt_contains_exact_packet": true
+      },
+      "motifs": [
+        {
+          "motif_id": "weaving_story",
+          "entry_status": "eligible",
+          "current_stage": "delivered"
+        }
+      ],
+      "proposal_ids": [
+        "ask_decoder"
+      ]
+    },
+    {
+      "case_id": "woven-key-informed",
+      "title": "说明用途后，对照解码才可用",
+      "candidate_count": 6,
+      "checks": {
+        "review_bound_to_current_prefix": true,
+        "writer_facts_within_prefix": true,
+        "writer_facts_supported_for_pov": true,
+        "writer_prompt_contains_exact_packet": true
+      },
+      "motifs": [
+        {
+          "motif_id": "weaving_story",
+          "entry_status": "eligible",
+          "current_stage": "delivered"
+        }
+      ],
+      "proposal_ids": [
+        "ask_decoder",
+        "compare_key"
+      ]
+    },
+    {
+      "case_id": "woven-decoded",
+      "title": "确实解读后，才进入回应阶段",
+      "candidate_count": 6,
+      "checks": {
+        "review_bound_to_current_prefix": true,
+        "writer_facts_within_prefix": true,
+        "writer_facts_supported_for_pov": true,
+        "writer_prompt_contains_exact_packet": true
+      },
+      "motifs": [
+        {
+          "motif_id": "weaving_story",
+          "entry_status": "eligible",
+          "current_stage": "decoded"
+        }
+      ],
+      "proposal_ids": [
+        "respond_to_record"
+      ]
+    },
+    {
+      "case_id": "forbidden-seeking",
+      "title": "有禁令与动机，尚未获得力量",
+      "candidate_count": 2,
+      "checks": {
+        "review_bound_to_current_prefix": true,
+        "writer_facts_within_prefix": true,
+        "writer_facts_supported_for_pov": true,
+        "writer_prompt_contains_exact_packet": true
+      },
+      "motifs": [
+        {
+          "motif_id": "forbidden_knowledge",
+          "entry_status": "eligible",
+          "current_stage": "seeking"
+        }
+      ],
+      "proposal_ids": [
+        "pursue_knowledge"
+      ]
+    },
+    {
+      "case_id": "forbidden-acquired",
+      "title": "已获得力量，尚未遭受惩罚",
+      "candidate_count": 4,
+      "checks": {
+        "review_bound_to_current_prefix": true,
+        "writer_facts_within_prefix": true,
+        "writer_facts_supported_for_pov": true,
+        "writer_prompt_contains_exact_packet": true
+      },
+      "motifs": [
+        {
+          "motif_id": "forbidden_knowledge",
+          "entry_status": "eligible",
+          "current_stage": "acquired"
+        }
+      ],
+      "proposal_ids": [
+        "face_possible_cost"
+      ]
+    }
+  ]
+}

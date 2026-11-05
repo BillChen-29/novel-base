@@ -1,0 +1,847 @@
+{
+  "reviews": [
+    {
+      "schema_version": 1,
+      "project_id": "review-copper-key",
+      "project_sha256": "d69ab350272448ff331867444d3e34cd3a9ef1dd74058d2a56b54987910e0d53",
+      "packet_sha256": "099824c157d7f2881f107010a4d071573438e47b77a1b76d4486613ed947488b",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "Codex independent source review"
+      },
+      "decisions": [
+        {
+          "fact_id": "f001",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述直接记载铜钥匙的交接及背面的数字七。",
+          "evidence": [
+            {
+              "scene_id": "s01",
+              "start": 13,
+              "end": 36,
+              "quote": "许岚将一把铜钥匙交给林舟，钥匙背面刻着数字七。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "林舟",
+              "verdict": "supported",
+              "reason": "林舟亲自接收这把钥匙，是该实物交接的直接参与者。",
+              "evidence": [
+                {
+                  "scene_id": "s01",
+                  "start": 13,
+                  "end": 36,
+                  "quote": "许岚将一把铜钥匙交给林舟，钥匙背面刻着数字七。"
+                }
+              ]
+            },
+            {
+              "character_id": "许岚",
+              "verdict": "supported",
+              "reason": "许岚亲手交付这把钥匙，其行动直接涉及所述实物。",
+              "evidence": [
+                {
+                  "scene_id": "s01",
+                  "start": 13,
+                  "end": 36,
+                  "quote": "许岚将一把铜钥匙交给林舟，钥匙背面刻着数字七。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f002",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述明确交代失踪时长和两人正在寻找周岑。",
+          "evidence": [
+            {
+              "scene_id": "s01",
+              "start": 36,
+              "end": 55,
+              "quote": "周岑已经失踪两天，林舟和许岚都在找他。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "林舟",
+              "verdict": "supported",
+              "reason": "叙述把林舟的寻找行动与周岑失踪两天直接相连。",
+              "evidence": [
+                {
+                  "scene_id": "s01",
+                  "start": 36,
+                  "end": 55,
+                  "quote": "周岑已经失踪两天，林舟和许岚都在找他。"
+                }
+              ]
+            },
+            {
+              "character_id": "许岚",
+              "verdict": "supported",
+              "reason": "叙述把许岚的寻找行动与周岑失踪两天直接相连。",
+              "evidence": [
+                {
+                  "scene_id": "s01",
+                  "start": 36,
+                  "end": 55,
+                  "quote": "周岑已经失踪两天，林舟和许岚都在找他。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f003",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "左臂划伤及许岚看见出血均由叙述明示。",
+          "evidence": [
+            {
+              "scene_id": "s02",
+              "start": 36,
+              "end": 60,
+              "quote": "林舟翻过铁栏时划伤了左臂，许岚看见袖口渗出了血。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "林舟",
+              "verdict": "supported",
+              "reason": "林舟是翻栏受伤的直接经历者。",
+              "evidence": [
+                {
+                  "scene_id": "s02",
+                  "start": 36,
+                  "end": 60,
+                  "quote": "林舟翻过铁栏时划伤了左臂，许岚看见袖口渗出了血。"
+                }
+              ]
+            },
+            {
+              "character_id": "许岚",
+              "verdict": "supported",
+              "reason": "原文明说许岚看见袖口渗血，具有直接观察证据。",
+              "evidence": [
+                {
+                  "scene_id": "s02",
+                  "start": 36,
+                  "end": 60,
+                  "quote": "林舟翻过铁栏时划伤了左臂，许岚看见袖口渗出了血。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f004",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "两人靠在桥墩后等待灯光移开，符合暂时停留。",
+          "evidence": [
+            {
+              "scene_id": "s03",
+              "start": 11,
+              "end": 34,
+              "quote": "林舟和许岚靠在桥墩背后，等巡过路口的灯光移开。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "林舟",
+              "verdict": "supported",
+              "reason": "林舟亲自靠在桥墩后等待。",
+              "evidence": [
+                {
+                  "scene_id": "s03",
+                  "start": 11,
+                  "end": 34,
+                  "quote": "林舟和许岚靠在桥墩背后，等巡过路口的灯光移开。"
+                }
+              ]
+            },
+            {
+              "character_id": "许岚",
+              "verdict": "supported",
+              "reason": "许岚亲自靠在桥墩后等待。",
+              "evidence": [
+                {
+                  "scene_id": "s03",
+                  "start": 11,
+                  "end": 34,
+                  "quote": "林舟和许岚靠在桥墩背后，等巡过路口的灯光移开。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f005",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "截至截点钥匙仍在林舟内袋，随身保管状态持续。",
+          "evidence": [
+            {
+              "scene_id": "s03",
+              "start": 34,
+              "end": 46,
+              "quote": "铜钥匙仍在林舟的内袋里。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "林舟",
+              "verdict": "supported",
+              "reason": "他此前主动按住内袋里的钥匙，后文确认钥匙仍在那里。",
+              "evidence": [
+                {
+                  "scene_id": "s02",
+                  "start": 60,
+                  "end": 81,
+                  "quote": "他没有停下，只用另一只手按住内袋里的钥匙。"
+                },
+                {
+                  "scene_id": "s03",
+                  "start": 34,
+                  "end": 46,
+                  "quote": "铜钥匙仍在林舟的内袋里。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f006",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述以许岚知道的事实直接给出钥匙所开柜子。",
+          "evidence": [
+            {
+              "scene_id": "s03",
+              "start": 46,
+              "end": 68,
+              "quote": "许岚知道，这把钥匙打开的是旧档案馆的地下柜。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "许岚",
+              "verdict": "supported",
+              "reason": "原文明示许岚知道钥匙的用途。",
+              "evidence": [
+                {
+                  "scene_id": "s03",
+                  "start": 46,
+                  "end": 68,
+                  "quote": "许岚知道，这把钥匙打开的是旧档案馆的地下柜。"
+                }
+              ]
+            },
+            {
+              "character_id": "林舟",
+              "verdict": "contradicted",
+              "reason": "林舟仍要弄清钥匙用途，许岚又明确未将地下柜一事告诉他。",
+              "evidence": [
+                {
+                  "scene_id": "s01",
+                  "start": 71,
+                  "end": 95,
+                  "quote": "林舟把它放进外套内袋，决定先弄清钥匙能打开什么。"
+                },
+                {
+                  "scene_id": "s03",
+                  "start": 68,
+                  "end": 99,
+                  "quote": "她没有把这件事告诉林舟。林舟只低声问，他们接下来该从哪里查起。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f007",
+          "verdict": "contradicted",
+          "epistemic_type": "established",
+          "reason": "原文明确说左臂被划伤且渗血，直接否定完好无伤。",
+          "evidence": [
+            {
+              "scene_id": "s02",
+              "start": 36,
+              "end": 60,
+              "quote": "林舟翻过铁栏时划伤了左臂，许岚看见袖口渗出了血。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "林舟",
+              "verdict": "contradicted",
+              "reason": "林舟直接经历划伤，与他知悉自己未受伤的说法相反。",
+              "evidence": [
+                {
+                  "scene_id": "s02",
+                  "start": 36,
+                  "end": 60,
+                  "quote": "林舟翻过铁栏时划伤了左臂，许岚看见袖口渗出了血。"
+                }
+              ]
+            },
+            {
+              "character_id": "许岚",
+              "verdict": "contradicted",
+              "reason": "许岚亲眼看见出血，所见与未受伤相反。",
+              "evidence": [
+                {
+                  "scene_id": "s02",
+                  "start": 36,
+                  "end": 60,
+                  "quote": "林舟翻过铁栏时划伤了左臂，许岚看见袖口渗出了血。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f008",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "前文没有海关仓库或确认开启其大门的事件；林舟还准备查明钥匙用途。不能由另一把锁的用途断言此门必打不开。",
+          "evidence": [
+            {
+              "scene_id": "s01",
+              "start": 71,
+              "end": 95,
+              "quote": "林舟把它放进外套内袋，决定先弄清钥匙能打开什么。"
+            },
+            {
+              "scene_id": "s03",
+              "start": 68,
+              "end": 99,
+              "quote": "她没有把这件事告诉林舟。林舟只低声问，他们接下来该从哪里查起。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "林舟",
+              "verdict": "insufficient_evidence",
+              "reason": "没有他确认海关仓库用途的知觉或言说证据，已叙行动仍是准备查明用途。",
+              "evidence": [
+                {
+                  "scene_id": "s01",
+                  "start": 71,
+                  "end": 95,
+                  "quote": "林舟把它放进外套内袋，决定先弄清钥匙能打开什么。"
+                },
+                {
+                  "scene_id": "s03",
+                  "start": 68,
+                  "end": 99,
+                  "quote": "她没有把这件事告诉林舟。林舟只低声问，他们接下来该从哪里查起。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f009",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "reported",
+          "reason": "来源只有许岚的说法，尚无独立叙述或观察确认周岑留下钥匙；不足以支持“确实”的断言。",
+          "evidence": [
+            {
+              "scene_id": "s01",
+              "start": 55,
+              "end": 71,
+              "quote": "许岚说，钥匙是周岑失踪前留下的。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "林舟",
+              "verdict": "insufficient_evidence",
+              "reason": "能确认他在交接谈话中获得这一说法，不能确认他已知该来源为真。",
+              "evidence": [
+                {
+                  "scene_id": "s01",
+                  "start": 55,
+                  "end": 95,
+                  "quote": "许岚说，钥匙是周岑失踪前留下的。林舟把它放进外套内袋，决定先弄清钥匙能打开什么。"
+                }
+              ]
+            },
+            {
+              "character_id": "许岚",
+              "verdict": "insufficient_evidence",
+              "reason": "她作出来源陈述，但文中未交代其亲见或其他核实依据。",
+              "evidence": [
+                {
+                  "scene_id": "s01",
+                  "start": 55,
+                  "end": 71,
+                  "quote": "许岚说，钥匙是周岑失踪前留下的。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f010",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "交接中许岚向接收钥匙的林舟说明来源；候选断言的是言说事件。",
+          "evidence": [
+            {
+              "scene_id": "s01",
+              "start": 13,
+              "end": 36,
+              "quote": "许岚将一把铜钥匙交给林舟，钥匙背面刻着数字七。"
+            },
+            {
+              "scene_id": "s01",
+              "start": 55,
+              "end": 95,
+              "quote": "许岚说，钥匙是周岑失踪前留下的。林舟把它放进外套内袋，决定先弄清钥匙能打开什么。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "林舟",
+              "verdict": "supported",
+              "reason": "来源说明处在对他的钥匙交接中，随后他收好钥匙并决定调查，属于该谈话的接收者。",
+              "evidence": [
+                {
+                  "scene_id": "s01",
+                  "start": 13,
+                  "end": 36,
+                  "quote": "许岚将一把铜钥匙交给林舟，钥匙背面刻着数字七。"
+                },
+                {
+                  "scene_id": "s01",
+                  "start": 55,
+                  "end": 95,
+                  "quote": "许岚说，钥匙是周岑失踪前留下的。林舟把它放进外套内袋，决定先弄清钥匙能打开什么。"
+                }
+              ]
+            },
+            {
+              "character_id": "许岚",
+              "verdict": "supported",
+              "reason": "许岚是这段来源说明的说话者。",
+              "evidence": [
+                {
+                  "scene_id": "s01",
+                  "start": 55,
+                  "end": 71,
+                  "quote": "许岚说，钥匙是周岑失踪前留下的。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "project_id": "review-disclosure",
+      "project_sha256": "9c3a425588501978045729c091d2a201a23d30e6a60d5d804540067f7a06b096",
+      "packet_sha256": "2afe65f97b7e91f795c13fdd3cc8ff0ef51158cbe03b796785f4de376a0869d7",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "Codex independent source review"
+      },
+      "decisions": [
+        {
+          "fact_id": "f001",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述直接记载信上的暗号内容为松果。",
+          "evidence": [
+            {
+              "scene_id": "d1",
+              "start": 0,
+              "end": 29,
+              "quote": "阿岚在屋内拆开封信，信上写着暗号“松果”。她把信收入口袋。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "阿岚",
+              "verdict": "supported",
+              "reason": "她拆信后向阿弥准确说出暗号，行动与后续言说共同支持其读知内容。",
+              "evidence": [
+                {
+                  "scene_id": "d1",
+                  "start": 0,
+                  "end": 29,
+                  "quote": "阿岚在屋内拆开封信，信上写着暗号“松果”。她把信收入口袋。"
+                },
+                {
+                  "scene_id": "d2",
+                  "start": 0,
+                  "end": 33,
+                  "quote": "阿岚走到门口，清楚地对阿弥说：“暗号是松果。”阿弥重复了一遍暗号。"
+                }
+              ]
+            },
+            {
+              "character_id": "阿弥",
+              "verdict": "insufficient_evidence",
+              "reason": "后文重复暗号证明她已获知“松果”，但没有告知信件来源；严格按候选全句，尚不能确认她知道它写在信上。",
+              "evidence": [
+                {
+                  "scene_id": "d1",
+                  "start": 29,
+                  "end": 47,
+                  "quote": "阿弥一直等在门外，没有看到信的内容。"
+                },
+                {
+                  "scene_id": "d2",
+                  "start": 0,
+                  "end": 33,
+                  "quote": "阿岚走到门口，清楚地对阿弥说：“暗号是松果。”阿弥重复了一遍暗号。"
+                }
+              ]
+            },
+            {
+              "character_id": "阿驰",
+              "verdict": "insufficient_evidence",
+              "reason": "仅见他远处戴隔音耳机修车，没有读信、接收转告或回应暗号的证据。",
+              "evidence": [
+                {
+                  "scene_id": "d2",
+                  "start": 33,
+                  "end": 48,
+                  "quote": "远处的阿驰正戴着隔音耳机修车。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f002",
+          "verdict": "contradicted",
+          "epistemic_type": "established",
+          "reason": "后续场景已明确说出暗号且阿弥重复，截至当前“还没有告诉”已不成立。",
+          "evidence": [
+            {
+              "scene_id": "d2",
+              "start": 0,
+              "end": 33,
+              "quote": "阿岚走到门口，清楚地对阿弥说：“暗号是松果。”阿弥重复了一遍暗号。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "阿岚",
+              "verdict": "contradicted",
+              "reason": "她本人已经向阿弥说出暗号，与尚未告知相反。",
+              "evidence": [
+                {
+                  "scene_id": "d2",
+                  "start": 0,
+                  "end": 33,
+                  "quote": "阿岚走到门口，清楚地对阿弥说：“暗号是松果。”阿弥重复了一遍暗号。"
+                }
+              ]
+            },
+            {
+              "character_id": "阿弥",
+              "verdict": "contradicted",
+              "reason": "阿弥明确重复了听到的暗号，与尚未获告相反。",
+              "evidence": [
+                {
+                  "scene_id": "d2",
+                  "start": 0,
+                  "end": 33,
+                  "quote": "阿岚走到门口，清楚地对阿弥说：“暗号是松果。”阿弥重复了一遍暗号。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f003",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "说出暗号和重复暗号两个言说动作均有明文。",
+          "evidence": [
+            {
+              "scene_id": "d2",
+              "start": 0,
+              "end": 33,
+              "quote": "阿岚走到门口，清楚地对阿弥说：“暗号是松果。”阿弥重复了一遍暗号。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "阿岚",
+              "verdict": "supported",
+              "reason": "她是告知者，阿弥紧接着重复形成明确的对话回应。",
+              "evidence": [
+                {
+                  "scene_id": "d2",
+                  "start": 0,
+                  "end": 33,
+                  "quote": "阿岚走到门口，清楚地对阿弥说：“暗号是松果。”阿弥重复了一遍暗号。"
+                }
+              ]
+            },
+            {
+              "character_id": "阿弥",
+              "verdict": "supported",
+              "reason": "阿弥以重复暗号明确证明听取并参与了这段对话。",
+              "evidence": [
+                {
+                  "scene_id": "d2",
+                  "start": 0,
+                  "end": 33,
+                  "quote": "阿岚走到门口，清楚地对阿弥说：“暗号是松果。”阿弥重复了一遍暗号。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f004",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "戴耳机修车不足以推出嫉妒或有意拒听，原文未给出这类动机。",
+          "evidence": [
+            {
+              "scene_id": "d2",
+              "start": 33,
+              "end": 48,
+              "quote": "远处的阿驰正戴着隔音耳机修车。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "阿岚",
+              "verdict": "insufficient_evidence",
+              "reason": "没有阿岚听到或观察到嫉妒、拒听意图的证据。",
+              "evidence": []
+            },
+            {
+              "character_id": "阿弥",
+              "verdict": "insufficient_evidence",
+              "reason": "没有阿弥获知阿驰嫉妒或故意拒听的证据。",
+              "evidence": []
+            },
+            {
+              "character_id": "阿驰",
+              "verdict": "insufficient_evidence",
+              "reason": "没有阿驰的相关言说、心理或动机叙述，不能补造其自知的嫉妒意图。",
+              "evidence": [
+                {
+                  "scene_id": "d2",
+                  "start": 33,
+                  "end": 48,
+                  "quote": "远处的阿驰正戴着隔音耳机修车。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "project_id": "review-uncertainty",
+      "project_sha256": "f6d2d7b2a60717d3c26eb361b13207c11ee70f277062e8e5215155c72afa4ccc",
+      "packet_sha256": "1420c511c3c076a086a9fd69a5d2c0c34d2d57fa658f50f8937d9a8200ef342d",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "Codex independent source review"
+      },
+      "decisions": [
+        {
+          "fact_id": "f001",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "握住门把及感到温热都是直接叙述的动作与感觉。",
+          "evidence": [
+            {
+              "scene_id": "u1",
+              "start": 3,
+              "end": 19,
+              "quote": "顾宁握住门把，感觉门把仍然温热。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "顾宁",
+              "verdict": "supported",
+              "reason": "原文明示这是顾宁本人的触觉感受。",
+              "evidence": [
+                {
+                  "scene_id": "u1",
+                  "start": 3,
+                  "end": 19,
+                  "quote": "顾宁握住门把，感觉门把仍然温热。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f002",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "顾宁确实向沈越提出有人刚离开的可能性；候选限定为猜测言说。",
+          "evidence": [
+            {
+              "scene_id": "u1",
+              "start": 19,
+              "end": 42,
+              "quote": "她对沈越说：“门把还是热的，可能刚有人离开。”"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "顾宁",
+              "verdict": "supported",
+              "reason": "顾宁亲自说出这一猜测。",
+              "evidence": [
+                {
+                  "scene_id": "u1",
+                  "start": 19,
+                  "end": 42,
+                  "quote": "她对沈越说：“门把还是热的，可能刚有人离开。”"
+                }
+              ]
+            },
+            {
+              "character_id": "沈越",
+              "verdict": "supported",
+              "reason": "沈越紧接着摇头并提出日晒的替代解释，明确回应了该猜测。",
+              "evidence": [
+                {
+                  "scene_id": "u1",
+                  "start": 19,
+                  "end": 42,
+                  "quote": "她对沈越说：“门把还是热的，可能刚有人离开。”"
+                },
+                {
+                  "scene_id": "u1",
+                  "start": 42,
+                  "end": 68,
+                  "quote": "沈越摇头：“也可能是下午晒热的，我没有见到任何人。”"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f003",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "inferred",
+          "reason": "温热仅引出“可能”有人离开的推断，沈越提出另一解释；无法据此确认“一定”有人从屋里离开。",
+          "evidence": [
+            {
+              "scene_id": "u1",
+              "start": 19,
+              "end": 42,
+              "quote": "她对沈越说：“门把还是热的，可能刚有人离开。”"
+            },
+            {
+              "scene_id": "u1",
+              "start": 42,
+              "end": 68,
+              "quote": "沈越摇头：“也可能是下午晒热的，我没有见到任何人。”"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "顾宁",
+              "verdict": "insufficient_evidence",
+              "reason": "她自身只说可能，未观察到人从屋里离开。",
+              "evidence": [
+                {
+                  "scene_id": "u1",
+                  "start": 19,
+                  "end": 42,
+                  "quote": "她对沈越说：“门把还是热的，可能刚有人离开。”"
+                }
+              ]
+            },
+            {
+              "character_id": "沈越",
+              "verdict": "insufficient_evidence",
+              "reason": "他表示未见任何人并给出替代解释，没有确认离开者。",
+              "evidence": [
+                {
+                  "scene_id": "u1",
+                  "start": 42,
+                  "end": 68,
+                  "quote": "沈越摇头：“也可能是下午晒热的，我没有见到任何人。”"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "f004",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "没有见到人不等于屋内无人，两人仍准备检查门窗。",
+          "evidence": [
+            {
+              "scene_id": "u1",
+              "start": 42,
+              "end": 68,
+              "quote": "沈越摇头：“也可能是下午晒热的，我没有见到任何人。”"
+            },
+            {
+              "scene_id": "u1",
+              "start": 68,
+              "end": 78,
+              "quote": "两人决定先检查门窗。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "顾宁",
+              "verdict": "insufficient_evidence",
+              "reason": "她只有门把触觉与待检查计划，没有确认屋内无人。",
+              "evidence": [
+                {
+                  "scene_id": "u1",
+                  "start": 3,
+                  "end": 19,
+                  "quote": "顾宁握住门把，感觉门把仍然温热。"
+                },
+                {
+                  "scene_id": "u1",
+                  "start": 68,
+                  "end": 78,
+                  "quote": "两人决定先检查门窗。"
+                }
+              ]
+            },
+            {
+              "character_id": "沈越",
+              "verdict": "insufficient_evidence",
+              "reason": "他只否认自己见到人，并未说已经查明屋内无人。",
+              "evidence": [
+                {
+                  "scene_id": "u1",
+                  "start": 42,
+                  "end": 68,
+                  "quote": "沈越摇头：“也可能是下午晒热的，我没有见到任何人。”"
+                },
+                {
+                  "scene_id": "u1",
+                  "start": 68,
+                  "end": 78,
+                  "quote": "两人决定先检查门窗。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

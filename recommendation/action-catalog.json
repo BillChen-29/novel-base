@@ -1,0 +1,455 @@
+{
+  "schema_version": 1,
+  "status": "experimental_operationalization",
+  "candidate_origin": "action_bound_revision_of_frozen_stage_card_pilot",
+  "motifs": [
+    {
+      "id": "dialogue_active",
+      "title": "对话情境：既有分歧与当前交涉",
+      "knowledge_kind": "situation",
+      "basis": "source_structure_plus_authored_current_state_gates",
+      "source": {
+        "path": "assets/technique_library/_scenarios/dialogue-tension.md",
+        "sha256": "0931562146a6abeab8296ce22382e8c0f08c09c325b88563b62a2e016f4d766a",
+        "evidence": [
+          {
+            "start": 38,
+            "end": 62,
+            "quote": "通过对话中的潜台词、信息博弈和情感冲突制造张力。"
+          },
+          {
+            "start": 544,
+            "end": 569,
+            "quote": "2. 每句话要有目的：展示性格/传递信息/推动剧情"
+          }
+        ]
+      },
+      "roles": {
+        "actor": "character",
+        "target": "object",
+        "task": "object",
+        "action": "object"
+      },
+      "conditions": [
+        {
+          "id": "conflict_observed",
+          "kind": "world_state",
+          "claim_template": "{actor}在任务“{task}”中围绕目标“{target}”参与的既有交涉已经显现具体的立场分歧、信息博弈或表态与意图的冲突；行动“{action}”回应的正是这场交涉。"
+        },
+        {
+          "id": "conversation_open",
+          "kind": "world_state",
+          "claim_template": "{actor}在任务“{task}”中围绕目标“{target}”进行的这场交涉此刻仍未结束，行动“{action}”对应的交涉仍保持开放。"
+        },
+        {
+          "id": "partners_available",
+          "kind": "world_state",
+          "claim_template": "任务“{task}”中围绕目标“{target}”与{actor}交涉的既有对话对象此刻仍可当场回应行动“{action}”。"
+        },
+        {
+          "id": "dispute_open",
+          "kind": "world_state",
+          "claim_template": "任务“{task}”中围绕目标“{target}”的上述争议仍未解决，{actor}的行动“{action}”所回应的具体争议尚无结束此事的处理结果。"
+        }
+      ],
+      "entry_conditions": [],
+      "stage_mode": "alternatives",
+      "stages": [
+        {
+          "id": "observed",
+          "title": "已有与本任务和目标对应的具体交涉分歧",
+          "requires": [
+            "conflict_observed"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "dialogue_active_respond_begin",
+          "title": "开始针对既有交涉的回应",
+          "from_stage": "observed",
+          "requires": [
+            "conversation_open",
+            "partners_available",
+            "dispute_open"
+          ],
+          "operations": [
+            "respond"
+          ],
+          "action_states": [
+            "proposed",
+            "pending"
+          ],
+          "proposal": "承接既有诉求与争议，作出回应、追问或行动表态；不替对话对象预定态度或交涉结果。",
+          "proposal_template": "开始{action}：{actor}针对{target}推进{task}。承接既有诉求与争议，作出回应、追问或行动表态；不替对话对象预定态度或交涉结果。"
+        },
+        {
+          "id": "dialogue_active_respond_continue",
+          "title": "继续当前的交涉回应",
+          "from_stage": "observed",
+          "requires": [
+            "conversation_open",
+            "partners_available",
+            "dispute_open"
+          ],
+          "operations": [
+            "respond"
+          ],
+          "action_states": [
+            "in_progress"
+          ],
+          "proposal": "承接既有诉求与争议，作出回应、追问或行动表态；不替对话对象预定态度或交涉结果。",
+          "proposal_template": "继续{action}：{actor}针对{target}推进{task}。承接既有诉求与争议，作出回应、追问或行动表态；不替对话对象预定态度或交涉结果。"
+        }
+      ],
+      "operationalization_note": "源文支持对话中的关系张力及每句话的目的；交涉开放、对方可回应、具体争议未解决以及目标/任务/行动绑定均为作者设计的适用门槛。历史分歧不能单独推出当前可回应。行动身份、当前状态由适配层另行核验。",
+      "retrieval_text": "任务 目标 行动 对话 交涉 回应 追问 立场分歧 信息博弈 交涉尚未结束 对话对象可回应 争议未解决"
+    },
+    {
+      "id": "truth_trigger",
+      "title": "母题阶段：发现疑点并决定追查",
+      "knowledge_kind": "motif",
+      "basis": "source_defined_stage_plus_authored_current_state_gates",
+      "source": {
+        "path": "assets/motif_library/truth-pursuit.md",
+        "sha256": "b0900e167687867d1408fc2e57d8ef2a0cc92c9d25209621084a198da1b2ad42",
+        "evidence": [
+          {
+            "start": 90,
+            "end": 128,
+            "quote": "1. **触发**：主角发现一个疑点（失踪/死亡/异常事件），决定追查到底。"
+          }
+        ]
+      },
+      "roles": {
+        "actor": "character",
+        "target": "object",
+        "task": "object",
+        "action": "object"
+      },
+      "conditions": [
+        {
+          "id": "anomaly",
+          "kind": "world_state",
+          "claim_template": "{actor}已经发现任务“{task}”要查明的、具体关联目标“{target}”的死亡、失踪或异常疑点，行动“{action}”调查的正是这个疑点。"
+        },
+        {
+          "id": "commitment",
+          "kind": "world_state",
+          "claim_template": "{actor}已经明确决定在任务“{task}”中持续追查目标“{target}”所涉的这个疑点直至弄清；行动“{action}”针对的疑点正是这项持续追查承诺的对象。"
+        },
+        {
+          "id": "question_open",
+          "kind": "world_state",
+          "claim_template": "任务“{task}”中目标“{target}”所涉的上述疑点目前仍未查明，{actor}的行动“{action}”要调查的具体问题仍未解决。"
+        }
+      ],
+      "entry_conditions": [],
+      "stage_mode": "alternatives",
+      "stages": [
+        {
+          "id": "trigger",
+          "title": "本目标疑点与本任务持续追查承诺均有依据",
+          "requires": [
+            "anomaly",
+            "commitment"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "truth_trigger_begin",
+          "title": "开始兑现本任务的持续追查承诺",
+          "from_stage": "trigger",
+          "requires": [
+            "question_open"
+          ],
+          "operations": [
+            "investigate"
+          ],
+          "action_states": [
+            "proposed",
+            "pending"
+          ],
+          "proposal": "执行与既有疑点相连的调查步骤，保留未知结果；不把潜在威胁、阴谋或未来结局写成已发生事实。",
+          "proposal_template": "开始{action}：{actor}针对{target}推进{task}。执行与既有疑点相连的调查步骤，保留未知结果；不把潜在威胁、阴谋或未来结局写成已发生事实。"
+        },
+        {
+          "id": "truth_trigger_continue",
+          "title": "继续本任务中的调查行动",
+          "from_stage": "trigger",
+          "requires": [
+            "question_open"
+          ],
+          "operations": [
+            "investigate"
+          ],
+          "action_states": [
+            "in_progress"
+          ],
+          "proposal": "执行与既有疑点相连的调查步骤，保留未知结果；不把潜在威胁、阴谋或未来结局写成已发生事实。",
+          "proposal_template": "继续{action}：{actor}针对{target}推进{task}。执行与既有疑点相连的调查步骤，保留未知结果；不把潜在威胁、阴谋或未来结局写成已发生事实。"
+        }
+      ],
+      "operationalization_note": "原文直接给出发现疑点并决定追查到底的触发阶段；疑点未解决和目标/任务/行动绑定是作者设计的当前适用门槛。持续追查承诺针对这项任务与疑点，不要求新提出的具体调查步骤此前已经被计划。只对应触发阶段，不代表全母题成立；当前行动状态由适配层核验。",
+      "retrieval_text": "任务 目标 行动 疑点 异常 死亡 失踪 调查 持续追查承诺 决定追查到底 尚未查明"
+    },
+    {
+      "id": "carrier_process",
+      "title": "通用流程：收到载体、读取与使用",
+      "knowledge_kind": "situation",
+      "basis": "authored_generic_process_inspired_by_source_not_motif_match",
+      "source": {
+        "path": "assets/motif_library/weaving_story.md",
+        "sha256": "8ac8319cd6c5bbe58f9c6ee60a3b2dae12fe5127e74ff6cf58d3601535846e1d",
+        "evidence": [
+          {
+            "start": 223,
+            "end": 265,
+            "quote": "4. **秘密传递**：通过某个信任的人（仆人、鸟、风）将织物传送给能够帮助她的人。"
+          },
+          {
+            "start": 266,
+            "end": 301,
+            "quote": "5. **真相大白**：接收者看到织物上的图案，理解了真相，开始行动。"
+          }
+        ]
+      },
+      "roles": {
+        "actor": "character",
+        "target": "object",
+        "task": "object",
+        "action": "object"
+      },
+      "conditions": [
+        {
+          "id": "held",
+          "kind": "world_state",
+          "claim_template": "{actor}目前持有或能够直接访问目标“{target}”这个信息载体，任务“{task}”中的行动“{action}”所要读取的正是这个载体。"
+        },
+        {
+          "id": "unread",
+          "kind": "world_state",
+          "claim_template": "{actor}尚未读取目标“{target}”中与任务“{task}”的行动“{action}”对应的具体内容。"
+        },
+        {
+          "id": "reading_not_finished",
+          "kind": "world_state",
+          "claim_template": "目标“{target}”中任务“{task}”的行动“{action}”所需读取的具体内容，{actor}目前仍未读完。"
+        },
+        {
+          "id": "understood",
+          "kind": "world_state",
+          "claim_template": "{actor}已经读取并理解目标“{target}”中任务“{task}”的行动“{action}”所需使用的具体内容。"
+        },
+        {
+          "id": "purpose_known",
+          "kind": "world_state",
+          "claim_template": "{actor}已经知道目标“{target}”的这些已理解内容在任务“{task}”的行动“{action}”中的明确用途。"
+        },
+        {
+          "id": "task_open",
+          "kind": "world_state",
+          "claim_template": "{actor}承担的任务“{task}”中，目标“{target}”对应的具体事项仍未完成，行动“{action}”服务的正是这一未完成事项。"
+        }
+      ],
+      "entry_conditions": [
+        "task_open"
+      ],
+      "stage_mode": "alternatives",
+      "stages": [
+        {
+          "id": "unread",
+          "title": "本任务所需载体可访问且相关内容尚未读取",
+          "requires": [
+            "held",
+            "unread"
+          ],
+          "chronological": []
+        },
+        {
+          "id": "reading",
+          "title": "本任务所需载体可访问且相关内容尚未读完",
+          "requires": [
+            "held",
+            "reading_not_finished"
+          ],
+          "chronological": []
+        },
+        {
+          "id": "understood",
+          "title": "本任务需要使用的载体内容已经理解",
+          "requires": [
+            "understood"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "carrier_process_read",
+          "title": "开始读取本任务所需载体内容",
+          "from_stage": "unread",
+          "requires": [],
+          "operations": [
+            "read"
+          ],
+          "action_states": [
+            "proposed",
+            "pending"
+          ],
+          "proposal": "读取与该任务对应的载体内容，区分所见内容、理解与真实性；不预先宣布内容可信，也不假定已读到哪一处。",
+          "proposal_template": "开始{action}：{actor}针对{target}推进{task}。读取与该任务对应的载体内容，区分所见内容、理解与真实性；不预先宣布内容可信，也不假定已读到哪一处。"
+        },
+        {
+          "id": "carrier_process_read_continue",
+          "title": "继续尚未读完的载体内容",
+          "from_stage": "reading",
+          "requires": [],
+          "operations": [
+            "read"
+          ],
+          "action_states": [
+            "in_progress"
+          ],
+          "proposal": "读取与该任务对应的载体内容，区分所见内容、理解与真实性；不预先宣布内容可信，也不假定已读到哪一处。",
+          "proposal_template": "继续{action}：{actor}针对{target}推进{task}。读取与该任务对应的载体内容，区分所见内容、理解与真实性；不预先宣布内容可信，也不假定已读到哪一处。"
+        },
+        {
+          "id": "carrier_process_use",
+          "title": "开始使用已理解的载体内容",
+          "from_stage": "understood",
+          "requires": [
+            "purpose_known"
+          ],
+          "operations": [
+            "use"
+          ],
+          "action_states": [
+            "proposed",
+            "pending"
+          ],
+          "proposal": "依照已经理解的具体内容及其已知用途处理该未完成事项，保留执行结果；不重复首次读取或假定任务成功。",
+          "proposal_template": "开始{action}：{actor}针对{target}推进{task}。依照已经理解的具体内容及其已知用途处理该未完成事项，保留执行结果；不重复首次读取或假定任务成功。"
+        },
+        {
+          "id": "carrier_process_use_continue",
+          "title": "继续使用已理解的载体内容",
+          "from_stage": "understood",
+          "requires": [
+            "purpose_known"
+          ],
+          "operations": [
+            "use"
+          ],
+          "action_states": [
+            "in_progress"
+          ],
+          "proposal": "依照已经理解的具体内容及其已知用途处理该未完成事项，保留执行结果；不重复首次读取或假定任务成功。",
+          "proposal_template": "继续{action}：{actor}针对{target}推进{task}。依照已经理解的具体内容及其已知用途处理该未完成事项，保留执行结果；不重复首次读取或假定任务成功。"
+        }
+      ],
+      "operationalization_note": "这是作者设计的通用信息流程；源文只提供传递、理解及行动的启发，不构成织物传书母题命中。未读与尚未读完分开审阅；没有完成记录不能自动支持未读或未读完。开始读取仅用于 proposed/pending，继续读取仅用于 in_progress，并须另有尚未读完的依据，不能从未读阶段推定读取进度。使用已知内容可依靠已经掌握的信息，不额外要求仍持有载体。任务开放、用途已知和绑定门槛均为设计条件。",
+      "retrieval_text": "任务 目标 行动 信息载体 信件 记录 可访问 未读 尚未读完 阅读 已理解 用途已知 使用内容 未完成事项"
+    },
+    {
+      "id": "clue_check",
+      "title": "局部技巧：核对尚未解决的线索",
+      "knowledge_kind": "technique",
+      "basis": "authored_local_operation_inspired_by_source",
+      "source": {
+        "path": "assets/technique_library/suspense-laddering.md",
+        "sha256": "8c5473fda82814eaa4f7b75b5e4ef6462e6c6d7c0c204d1a409ab90546182ccc",
+        "evidence": [
+          {
+            "start": 335,
+            "end": 401,
+            "quote": "悬念的运作遵循\"窥探\"逻辑：故事中存在隐藏的、读者欲知而未知的事物，这产生了悬念。读者跟随侦探/主角不断\"窥探\"真相，直到悬念破解。"
+          }
+        ]
+      },
+      "roles": {
+        "actor": "character",
+        "target": "object",
+        "task": "object",
+        "action": "object"
+      },
+      "conditions": [
+        {
+          "id": "clue_available",
+          "kind": "world_state",
+          "claim_template": "{actor}目前可以接触并核对目标“{target}”这项具体线索或观察材料；任务“{task}”中的行动“{action}”针对的正是这项材料。"
+        },
+        {
+          "id": "question_open",
+          "kind": "world_state",
+          "claim_template": "任务“{task}”中与目标“{target}”这项线索有关的具体问题仍未查明，{actor}的行动“{action}”要核对的正是这个未解决问题。"
+        },
+        {
+          "id": "check_can_perform_current",
+          "kind": "world_state",
+          "claim_template": "{actor}现在具备针对目标“{target}”进行具体核对行动“{action}”所需的条件，任务“{task}”当前情境允许执行这项核对。"
+        }
+      ],
+      "entry_conditions": [],
+      "stage_mode": "alternatives",
+      "stages": [
+        {
+          "id": "clue",
+          "title": "本次核对的具体线索当前可访问",
+          "requires": [
+            "clue_available"
+          ],
+          "chronological": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "clue_check_verify",
+          "title": "开始本任务中的具体核对",
+          "from_stage": "clue",
+          "requires": [
+            "question_open",
+            "check_can_perform_current"
+          ],
+          "operations": [
+            "check"
+          ],
+          "action_states": [
+            "proposed",
+            "pending"
+          ],
+          "proposal": "按该具体核对步骤检查线索并记录可观察的结果，再判断原假说；不把假说直接写成答案，不预先宣布核对成功。",
+          "proposal_template": "开始{action}：{actor}针对{target}推进{task}。按该具体核对步骤检查线索并记录可观察的结果，再判断原假说；不把假说直接写成答案，不预先宣布核对成功。"
+        },
+        {
+          "id": "clue_check_verify_continue",
+          "title": "继续本任务中的具体核对",
+          "from_stage": "clue",
+          "requires": [
+            "question_open",
+            "check_can_perform_current"
+          ],
+          "operations": [
+            "check"
+          ],
+          "action_states": [
+            "in_progress"
+          ],
+          "proposal": "按该具体核对步骤检查线索并记录可观察的结果，再判断原假说；不把假说直接写成答案，不预先宣布核对成功。",
+          "proposal_template": "继续{action}：{actor}针对{target}推进{task}。按该具体核对步骤检查线索并记录可观察的结果，再判断原假说；不把假说直接写成答案，不预先宣布核对成功。"
+        }
+      ],
+      "operationalization_note": "源文支持逐步探查未知；具体核对及当前可执行性是作者设计的局部操作，非完整悬念阶梯。核对可为当前新提出的行动，不要求前文已有该步骤的计划。具体行动是否已完成、已放弃或状态冲突由适配层依据身份与状态核验；未见完成证据不能单独推出从未检查。只保留顺叙，不采纳源文可选倒叙。",
+      "retrieval_text": "任务 目标 行动 具体线索 观察材料 核对 比对 检查 问题未解决 当前可执行 记录观察结果 假说"
+    }
+  ],
+  "catalog_revision": "recommendation-core/action-bound-v1",
+  "derived_from": {
+    "path": "experiments/stage-card-pilot/catalog.json",
+    "sha256": "2713b2114234fd5d420a5b3a50b64ad9a27fd42f97a2b3c379486aa79234ebc1",
+    "modification_policy": "The source pilot and raw assets remain unchanged; all executable gates below are authored operationalizations."
+  }
+}

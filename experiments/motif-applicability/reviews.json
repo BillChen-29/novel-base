@@ -1,0 +1,2706 @@
+{
+  "reviews": [
+    {
+      "case_id": "password-before",
+      "review": {
+        "schema_version": 1,
+        "project_id": "atomic-password",
+        "project_sha256": "7026221bcd84ff263d4247c7f964dc913b34a25d827962d153c2862dce2f396b",
+        "packet_sha256": "85678a044af972db16481491d380debd7b254d45a00edada50524096d5bc05d2",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "Codex independent atomic-information review"
+        },
+        "decisions": [
+          {
+            "fact_id": "f01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认本次交接暗号。",
+            "evidence": [
+              {
+                "scene_id": "d1",
+                "start": 0,
+                "end": 17,
+                "quote": "这次值班交接约定的暗号是“松果”。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "阿岚",
+                "verdict": "supported",
+                "reason": "阿岚读完写有该暗号的普通信件，后续没有理解障碍的叙述。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 0,
+                    "end": 17,
+                    "quote": "这次值班交接约定的暗号是“松果”。"
+                  },
+                  {
+                    "scene_id": "d1",
+                    "start": 17,
+                    "end": 35,
+                    "quote": "阿岚在屋内读完信，信上写着这个暗号。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿弥",
+                "verdict": "insufficient_evidence",
+                "reason": "阿弥没有看见信件；此前也未记载其他获知暗号的途径，无法据此确定知情。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 35,
+                    "end": 50,
+                    "quote": "阿弥等在门外，没有看见这封信。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿驰",
+                "verdict": "insufficient_evidence",
+                "reason": "前缀未提供阿驰阅读、听闻或先前知道暗号的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "f02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文明确该信写着已确定的暗号“松果”。",
+            "evidence": [
+              {
+                "scene_id": "d1",
+                "start": 0,
+                "end": 17,
+                "quote": "这次值班交接约定的暗号是“松果”。"
+              },
+              {
+                "scene_id": "d1",
+                "start": 17,
+                "end": 35,
+                "quote": "阿岚在屋内读完信，信上写着这个暗号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "阿岚",
+                "verdict": "supported",
+                "reason": "阿岚亲自读完该信，能够知道它承载了暗号。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 0,
+                    "end": 17,
+                    "quote": "这次值班交接约定的暗号是“松果”。"
+                  },
+                  {
+                    "scene_id": "d1",
+                    "start": 17,
+                    "end": 35,
+                    "quote": "阿岚在屋内读完信，信上写着这个暗号。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿弥",
+                "verdict": "insufficient_evidence",
+                "reason": "阿弥未见该信，前缀没有其他方式向其说明信件内容。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 35,
+                    "end": 50,
+                    "quote": "阿弥等在门外，没有看见这封信。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿驰",
+                "verdict": "insufficient_evidence",
+                "reason": "没有阿驰见到信件或被告知信件内容的证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "f03",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "阿岚完成对写有暗号的普通信件的阅读，支持该阅读及获知事件；无需附加未写明的加密障碍。",
+            "evidence": [
+              {
+                "scene_id": "d1",
+                "start": 0,
+                "end": 17,
+                "quote": "这次值班交接约定的暗号是“松果”。"
+              },
+              {
+                "scene_id": "d1",
+                "start": 17,
+                "end": 35,
+                "quote": "阿岚在屋内读完信，信上写着这个暗号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "阿岚",
+                "verdict": "supported",
+                "reason": "阿岚是阅读并理解普通信件内容的当事人。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 0,
+                    "end": 17,
+                    "quote": "这次值班交接约定的暗号是“松果”。"
+                  },
+                  {
+                    "scene_id": "d1",
+                    "start": 17,
+                    "end": 35,
+                    "quote": "阿岚在屋内读完信，信上写着这个暗号。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿弥",
+                "verdict": "insufficient_evidence",
+                "reason": "知道暗号不等于知道阿岚的阅读经历或信息来源；前缀没有将阅读事件传达给阿弥。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 35,
+                    "end": 50,
+                    "quote": "阿弥等在门外，没有看见这封信。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿驰",
+                "verdict": "insufficient_evidence",
+                "reason": "前缀没有阿驰观察或获悉阿岚阅读事件的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "f06",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "原文明确允许获取、否认神圣性质并否认获取禁令，直接反驳候选。",
+            "evidence": [
+              {
+                "scene_id": "d1",
+                "start": 50,
+                "end": 94,
+                "quote": "馆规允许所有值班人获取暗号，明确说明它只是普通交接信息，不是神圣知识，也不存在获取禁令。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "阿岚",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 50,
+                    "end": 94,
+                    "quote": "馆规允许所有值班人获取暗号，明确说明它只是普通交接信息，不是神圣知识，也不存在获取禁令。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿弥",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 50,
+                    "end": 94,
+                    "quote": "馆规允许所有值班人获取暗号，明确说明它只是普通交接信息，不是神圣知识，也不存在获取禁令。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿驰",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 50,
+                    "end": 94,
+                    "quote": "馆规允许所有值班人获取暗号，明确说明它只是普通交接信息，不是神圣知识，也不存在获取禁令。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f07",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "原文明确阿岚可以自由交流且没有受到威胁，直接反驳候选中的受威胁和无法直说。",
+            "evidence": [
+              {
+                "scene_id": "d1",
+                "start": 94,
+                "end": 110,
+                "quote": "阿岚可以自由交流，没有受到威胁。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "阿岚",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 94,
+                    "end": 110,
+                    "quote": "阿岚可以自由交流，没有受到威胁。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿弥",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 94,
+                    "end": 110,
+                    "quote": "阿岚可以自由交流，没有受到威胁。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿驰",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 94,
+                    "end": 110,
+                    "quote": "阿岚可以自由交流，没有受到威胁。"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "chronology_review": {
+          "verdict": "supported",
+          "relation": "forward_occurrence",
+          "scene_ids": [
+            "d1"
+          ],
+          "reason": "唯一场景直接呈现当前交接暗号、屋内阅读及门外等待等状态，没有将这些行为框定为回忆、预告或转述中的事件；可按当下发生理解。"
+        },
+        "binding_renewal": {
+          "method": "identical_review_packet_content",
+          "previous_project_sha256": "6898faa937713aab49de1f8e332e97af80b747bc42de9399eda2bb57e23a758c",
+          "previous_packet_sha256": "ee1c561f460b23cc50f34eb91d4f5a12b88a2e6f9f383f36b7b974cb891068ad",
+          "reason": "only external stage label metadata changed; entire review-visible content equal"
+        }
+      }
+    },
+    {
+      "case_id": "password-after",
+      "review": {
+        "schema_version": 1,
+        "project_id": "atomic-password",
+        "project_sha256": "7026221bcd84ff263d4247c7f964dc913b34a25d827962d153c2862dce2f396b",
+        "packet_sha256": "2a23eb76c96d53c5244f6e78fcd788399bbcff570511bad4ca5c518edebf757b",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "Codex independent atomic-information review"
+        },
+        "decisions": [
+          {
+            "fact_id": "f01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认本次交接暗号。",
+            "evidence": [
+              {
+                "scene_id": "d1",
+                "start": 0,
+                "end": 17,
+                "quote": "这次值班交接约定的暗号是“松果”。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "阿岚",
+                "verdict": "supported",
+                "reason": "阿岚读完写有该暗号的普通信件，后续没有理解障碍的叙述。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 0,
+                    "end": 17,
+                    "quote": "这次值班交接约定的暗号是“松果”。"
+                  },
+                  {
+                    "scene_id": "d1",
+                    "start": 17,
+                    "end": 35,
+                    "quote": "阿岚在屋内读完信，信上写着这个暗号。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿弥",
+                "verdict": "supported",
+                "reason": "阿弥明确听清并复述暗号，已经获知其内容。",
+                "evidence": [
+                  {
+                    "scene_id": "d2",
+                    "start": 0,
+                    "end": 35,
+                    "quote": "阿岚出门告诉阿弥：“暗号是松果。”阿弥听清后复述：“松果，我记住了。”"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿驰",
+                "verdict": "insufficient_evidence",
+                "reason": "没有阿驰获知暗号的记载；未听见这次对话也不能单独证明其从来不知道暗号。",
+                "evidence": [
+                  {
+                    "scene_id": "d2",
+                    "start": 45,
+                    "end": 68,
+                    "quote": "阿驰在远处戴着隔音耳机修车，没有听见这次对话。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文明确该信写着已确定的暗号“松果”。",
+            "evidence": [
+              {
+                "scene_id": "d1",
+                "start": 0,
+                "end": 17,
+                "quote": "这次值班交接约定的暗号是“松果”。"
+              },
+              {
+                "scene_id": "d1",
+                "start": 17,
+                "end": 35,
+                "quote": "阿岚在屋内读完信，信上写着这个暗号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "阿岚",
+                "verdict": "supported",
+                "reason": "阿岚亲自读完该信，能够知道它承载了暗号。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 0,
+                    "end": 17,
+                    "quote": "这次值班交接约定的暗号是“松果”。"
+                  },
+                  {
+                    "scene_id": "d1",
+                    "start": 17,
+                    "end": 35,
+                    "quote": "阿岚在屋内读完信，信上写着这个暗号。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿弥",
+                "verdict": "insufficient_evidence",
+                "reason": "听懂暗号内容不能推出知道承载它的信件；阿弥未见信，阿岚也未提信。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 35,
+                    "end": 50,
+                    "quote": "阿弥等在门外，没有看见这封信。"
+                  },
+                  {
+                    "scene_id": "d2",
+                    "start": 35,
+                    "end": 45,
+                    "quote": "阿岚没有提信的存在。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿驰",
+                "verdict": "insufficient_evidence",
+                "reason": "没有阿驰见到信件或被告知信件内容的证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "f03",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "阿岚完成对写有暗号的普通信件的阅读，支持该阅读及获知事件；无需附加未写明的加密障碍。",
+            "evidence": [
+              {
+                "scene_id": "d1",
+                "start": 0,
+                "end": 17,
+                "quote": "这次值班交接约定的暗号是“松果”。"
+              },
+              {
+                "scene_id": "d1",
+                "start": 17,
+                "end": 35,
+                "quote": "阿岚在屋内读完信，信上写着这个暗号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "阿岚",
+                "verdict": "supported",
+                "reason": "阿岚是阅读并理解普通信件内容的当事人。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 0,
+                    "end": 17,
+                    "quote": "这次值班交接约定的暗号是“松果”。"
+                  },
+                  {
+                    "scene_id": "d1",
+                    "start": 17,
+                    "end": 35,
+                    "quote": "阿岚在屋内读完信，信上写着这个暗号。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿弥",
+                "verdict": "insufficient_evidence",
+                "reason": "知道暗号不等于知道阿岚的阅读经历或信息来源；前缀没有将阅读事件传达给阿弥。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 35,
+                    "end": 50,
+                    "quote": "阿弥等在门外，没有看见这封信。"
+                  },
+                  {
+                    "scene_id": "d2",
+                    "start": 35,
+                    "end": 45,
+                    "quote": "阿岚没有提信的存在。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿驰",
+                "verdict": "insufficient_evidence",
+                "reason": "前缀没有阿驰观察或获悉阿岚阅读事件的依据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "f04",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文直接叙述阿岚向阿弥说出暗号的言说事件。",
+            "evidence": [
+              {
+                "scene_id": "d2",
+                "start": 0,
+                "end": 17,
+                "quote": "阿岚出门告诉阿弥：“暗号是松果。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "阿岚",
+                "verdict": "supported",
+                "reason": "阿岚是该言说事件的说话者。",
+                "evidence": [
+                  {
+                    "scene_id": "d2",
+                    "start": 0,
+                    "end": 17,
+                    "quote": "阿岚出门告诉阿弥：“暗号是松果。”"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿弥",
+                "verdict": "supported",
+                "reason": "阿弥听清并回应，能够知道阿岚已向自己说出暗号。",
+                "evidence": [
+                  {
+                    "scene_id": "d2",
+                    "start": 0,
+                    "end": 35,
+                    "quote": "阿岚出门告诉阿弥：“暗号是松果。”阿弥听清后复述：“松果，我记住了。”"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿驰",
+                "verdict": "insufficient_evidence",
+                "reason": "阿驰明确未听见对话，也没有获悉该次言说的其他记载；缺少知情依据。",
+                "evidence": [
+                  {
+                    "scene_id": "d2",
+                    "start": 45,
+                    "end": 68,
+                    "quote": "阿驰在远处戴着隔音耳机修车，没有听见这次对话。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f05",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认阿弥听清并复述。",
+            "evidence": [
+              {
+                "scene_id": "d2",
+                "start": 17,
+                "end": 35,
+                "quote": "阿弥听清后复述：“松果，我记住了。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "阿岚",
+                "verdict": "supported",
+                "reason": "阿弥紧接阿岚的告知作出明确复述回应，这一直接交流支持阿岚获悉其听清和复述。",
+                "evidence": [
+                  {
+                    "scene_id": "d2",
+                    "start": 0,
+                    "end": 35,
+                    "quote": "阿岚出门告诉阿弥：“暗号是松果。”阿弥听清后复述：“松果，我记住了。”"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿弥",
+                "verdict": "supported",
+                "reason": "阿弥亲自听清、复述并表示记住，能够知道自己的行为。",
+                "evidence": [
+                  {
+                    "scene_id": "d2",
+                    "start": 17,
+                    "end": 35,
+                    "quote": "阿弥听清后复述：“松果，我记住了。”"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿驰",
+                "verdict": "insufficient_evidence",
+                "reason": "阿驰未听见这次交流，文本也没有其他传达复述事件的途径。",
+                "evidence": [
+                  {
+                    "scene_id": "d2",
+                    "start": 45,
+                    "end": 68,
+                    "quote": "阿驰在远处戴着隔音耳机修车，没有听见这次对话。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f06",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "原文明确允许获取、否认神圣性质并否认获取禁令，直接反驳候选。",
+            "evidence": [
+              {
+                "scene_id": "d1",
+                "start": 50,
+                "end": 94,
+                "quote": "馆规允许所有值班人获取暗号，明确说明它只是普通交接信息，不是神圣知识，也不存在获取禁令。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "阿岚",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 50,
+                    "end": 94,
+                    "quote": "馆规允许所有值班人获取暗号，明确说明它只是普通交接信息，不是神圣知识，也不存在获取禁令。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿弥",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 50,
+                    "end": 94,
+                    "quote": "馆规允许所有值班人获取暗号，明确说明它只是普通交接信息，不是神圣知识，也不存在获取禁令。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿驰",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 50,
+                    "end": 94,
+                    "quote": "馆规允许所有值班人获取暗号，明确说明它只是普通交接信息，不是神圣知识，也不存在获取禁令。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f07",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "原文明确阿岚可以自由交流且没有受到威胁，直接反驳候选中的受威胁和无法直说。",
+            "evidence": [
+              {
+                "scene_id": "d1",
+                "start": 94,
+                "end": 110,
+                "quote": "阿岚可以自由交流，没有受到威胁。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "阿岚",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 94,
+                    "end": 110,
+                    "quote": "阿岚可以自由交流，没有受到威胁。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿弥",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 94,
+                    "end": 110,
+                    "quote": "阿岚可以自由交流，没有受到威胁。"
+                  }
+                ]
+              },
+              {
+                "character_id": "阿驰",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "d1",
+                    "start": 94,
+                    "end": 110,
+                    "quote": "阿岚可以自由交流，没有受到威胁。"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "chronology_review": {
+          "verdict": "supported",
+          "relation": "forward_occurrence",
+          "scene_ids": [
+            "d1",
+            "d2"
+          ],
+          "reason": "先写屋内阅读和门外等待，随后写阿岚出门告知及阿弥复述，人物行动连续推进；两场景没有倒叙、预告或嵌套复述标记。"
+        },
+        "binding_renewal": {
+          "method": "identical_review_packet_content",
+          "previous_project_sha256": "6898faa937713aab49de1f8e332e97af80b747bc42de9399eda2bb57e23a758c",
+          "previous_packet_sha256": "1aa89a843fe1b1687673bfc50e70fe9de946b18c4e0622caf0289a3c763f0a54",
+          "reason": "only external stage label metadata changed; entire review-visible content equal"
+        }
+      }
+    },
+    {
+      "case_id": "woven-encoded",
+      "review": {
+        "schema_version": 1,
+        "project_id": "atomic-woven",
+        "project_sha256": "0cc8635c8b5ad69cc6da018a5d86bbd4d5f96c12f942ce821ca58048e10db326",
+        "packet_sha256": "b58a0e0a9dcac7fbb4d53c6cec011079c339eeb24730412e2cdb66e37b329ac1",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "Codex independent atomic-information review"
+        },
+        "decisions": [
+          {
+            "fact_id": "f01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述确认具体威胁及其迫使青禾沉默的结果。",
+            "evidence": [
+              {
+                "scene_id": "w1",
+                "start": 0,
+                "end": 40,
+                "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾直接承受威胁并被迫沉默，知晓这种限制。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 0,
+                    "end": 40,
+                    "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "乔宁被明确写为亲眼看到威胁，能够知道青禾受胁迫而沉默。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 0,
+                    "end": 40,
+                    "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "前缀没有沈师傅目击威胁或获悉威胁的记载。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "f02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认青禾把自己的受害经历编成绣图并缝上蓝绣布。",
+            "evidence": [
+              {
+                "scene_id": "w1",
+                "start": 40,
+                "end": 63,
+                "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾亲自将自己的经历编码并制作绣图，知晓编码行为及其载体。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 40,
+                    "end": 63,
+                    "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "原文明确乔宁已明白绣布记录青禾的遭遇；这里知道的是载体与经历的关系，不要求已读懂具体编码。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 63,
+                    "end": 126,
+                    "quote": "乔宁在旁看到她完成绣图；青禾指着自己和绣图，写下“我的遭遇”，乔宁明白蓝绣布记录了青禾受害的经历，但还不知道图案具体讲了什么。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "前缀没有沈师傅看见编码过程或得知蓝绣布内容来源的依据。",
+                "evidence": []
+              }
+            ],
+            "event_anchor": {
+              "scene_id": "w1",
+              "start": 40,
+              "end": 63,
+              "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。",
+              "relation": "occurs_here"
+            }
+          }
+        ],
+        "chronology_review": {
+          "verdict": "supported",
+          "relation": "forward_occurrence",
+          "scene_ids": [
+            "w1"
+          ],
+          "reason": "场景先直接呈现威胁与沉默，再以“后来”明确推进到制作绣图，接着呈现乔宁当场看到和理解载体关系。编码锚点描绘实际制作，不是对过去编码的回忆或预告。"
+        },
+        "binding_renewal": {
+          "method": "identical_review_packet_content",
+          "previous_project_sha256": "bcfbb9098f73fbdbc1e3be40838422b565f799ece1d75f22fc9de9a8780e9f85",
+          "previous_packet_sha256": "2a6d85cd9794b52f8596a5280a96ade404c133ea2982712df75fba218455603c",
+          "reason": "only external stage label metadata changed; entire review-visible content equal"
+        }
+      }
+    },
+    {
+      "case_id": "woven-delivered",
+      "review": {
+        "schema_version": 1,
+        "project_id": "atomic-woven",
+        "project_sha256": "0cc8635c8b5ad69cc6da018a5d86bbd4d5f96c12f942ce821ca58048e10db326",
+        "packet_sha256": "94263b7afb3e4c22c0f68661f58bb24ecb20d983dfcdcc325d502085ab3384b2",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "Codex independent atomic-information review"
+        },
+        "decisions": [
+          {
+            "fact_id": "f01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述确认具体威胁及其迫使青禾沉默的结果。",
+            "evidence": [
+              {
+                "scene_id": "w1",
+                "start": 0,
+                "end": 40,
+                "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾直接承受威胁并被迫沉默，知晓这种限制。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 0,
+                    "end": 40,
+                    "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "乔宁被明确写为亲眼看到威胁，能够知道青禾受胁迫而沉默。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 0,
+                    "end": 40,
+                    "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "前缀没有沈师傅目击威胁或获悉威胁的记载。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "f02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认青禾把自己的受害经历编成绣图并缝上蓝绣布。",
+            "evidence": [
+              {
+                "scene_id": "w1",
+                "start": 40,
+                "end": 63,
+                "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾亲自将自己的经历编码并制作绣图，知晓编码行为及其载体。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 40,
+                    "end": 63,
+                    "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "原文明确乔宁已明白绣布记录青禾的遭遇；这里知道的是载体与经历的关系，不要求已读懂具体编码。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 63,
+                    "end": 126,
+                    "quote": "乔宁在旁看到她完成绣图；青禾指着自己和绣图，写下“我的遭遇”，乔宁明白蓝绣布记录了青禾受害的经历，但还不知道图案具体讲了什么。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "懂这种编码或提供对照表，不足以证明沈师傅知道这块布由青禾编码了自己的遭遇。",
+                "evidence": []
+              }
+            ],
+            "event_anchor": {
+              "scene_id": "w1",
+              "start": 40,
+              "end": 63,
+              "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。",
+              "relation": "occurs_here"
+            }
+          },
+          {
+            "fact_id": "f03",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "实际交付及收好的动作直接确认乔宁已收到绣布。",
+            "evidence": [
+              {
+                "scene_id": "w2",
+                "start": 0,
+                "end": 18,
+                "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。"
+              },
+              {
+                "scene_id": "w2",
+                "start": 0,
+                "end": 10,
+                "quote": "青禾把蓝绣布交给乔宁"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾亲手向乔宁交付绣布，是交付当事人。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 0,
+                    "end": 18,
+                    "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "乔宁亲手收好绣布，是接收当事人。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 0,
+                    "end": 18,
+                    "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "没有沈师傅观察该次交付或获悉乔宁已收到绣布的明确记载。",
+                "evidence": []
+              }
+            ],
+            "event_anchor": {
+              "scene_id": "w2",
+              "start": 0,
+              "end": 10,
+              "quote": "青禾把蓝绣布交给乔宁",
+              "relation": "occurs_here"
+            }
+          },
+          {
+            "fact_id": "f04",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "原文明确乔宁此刻还看不懂编码。收到绣布没有改变这一状态。",
+            "evidence": [
+              {
+                "scene_id": "w2",
+                "start": 18,
+                "end": 44,
+                "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 18,
+                    "end": 44,
+                    "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 18,
+                    "end": 44,
+                    "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 18,
+                    "end": 44,
+                    "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f05",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认乔宁知道沈师傅懂这种编码；刚收到对方消息也提供实际联系渠道。",
+            "evidence": [
+              {
+                "scene_id": "w2",
+                "start": 44,
+                "end": 82,
+                "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "insufficient_evidence",
+                "reason": "没有青禾获悉乔宁的这项知识或沈师傅联系状态的记载。",
+                "evidence": []
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "知识明确归属于乔宁，且消息向乔宁提供即时联系信息。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 44,
+                    "end": 82,
+                    "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "沈师傅知道自己的能力并主动联系，不足以证明他知道乔宁已经知道其解读能力；候选包含乔宁的认知状态。",
+                "evidence": []
+              }
+            ]
+          }
+        ],
+        "chronology_review": {
+          "verdict": "supported",
+          "relation": "forward_occurrence",
+          "scene_ids": [
+            "w1",
+            "w2"
+          ],
+          "reason": "前场景以“后来”推进到制作绣图，下一场景直接呈现交付与收好已经制作的同一绣布。编码和交付锚点是连续主叙事中的实际发生；有关消息及既往受害经历的提及不另作编码或交付事件。"
+        },
+        "binding_renewal": {
+          "method": "identical_review_packet_content",
+          "previous_project_sha256": "bcfbb9098f73fbdbc1e3be40838422b565f799ece1d75f22fc9de9a8780e9f85",
+          "previous_packet_sha256": "c33595077e74c043f41c7715ee3ed6f0a8b96d2478e561aa57bb015941c3680e",
+          "reason": "only external stage label metadata changed; entire review-visible content equal"
+        }
+      }
+    },
+    {
+      "case_id": "woven-key",
+      "review": {
+        "schema_version": 1,
+        "project_id": "atomic-woven",
+        "project_sha256": "0cc8635c8b5ad69cc6da018a5d86bbd4d5f96c12f942ce821ca58048e10db326",
+        "packet_sha256": "29ff2db430295aa0993efbc88af3950b8c78b09bed89ed4fb6e83f25436b1b81",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "Codex independent atomic-information review"
+        },
+        "decisions": [
+          {
+            "fact_id": "f01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述确认具体威胁及其迫使青禾沉默的结果。",
+            "evidence": [
+              {
+                "scene_id": "w1",
+                "start": 0,
+                "end": 40,
+                "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾直接承受威胁并被迫沉默，知晓这种限制。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 0,
+                    "end": 40,
+                    "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "乔宁被明确写为亲眼看到威胁，能够知道青禾受胁迫而沉默。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 0,
+                    "end": 40,
+                    "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "前缀没有沈师傅目击威胁或获悉威胁的记载。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "f02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认青禾把自己的受害经历编成绣图并缝上蓝绣布。",
+            "evidence": [
+              {
+                "scene_id": "w1",
+                "start": 40,
+                "end": 63,
+                "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾亲自将自己的经历编码并制作绣图，知晓编码行为及其载体。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 40,
+                    "end": 63,
+                    "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "原文明确乔宁已明白绣布记录青禾的遭遇；这里知道的是载体与经历的关系，不要求已读懂具体编码。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 63,
+                    "end": 126,
+                    "quote": "乔宁在旁看到她完成绣图；青禾指着自己和绣图，写下“我的遭遇”，乔宁明白蓝绣布记录了青禾受害的经历，但还不知道图案具体讲了什么。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "懂这种编码或提供对照表，不足以证明沈师傅知道这块布由青禾编码了自己的遭遇。",
+                "evidence": []
+              }
+            ],
+            "event_anchor": {
+              "scene_id": "w1",
+              "start": 40,
+              "end": 63,
+              "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。",
+              "relation": "occurs_here"
+            }
+          },
+          {
+            "fact_id": "f03",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "实际交付及收好的动作直接确认乔宁已收到绣布。",
+            "evidence": [
+              {
+                "scene_id": "w2",
+                "start": 0,
+                "end": 18,
+                "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。"
+              },
+              {
+                "scene_id": "w2",
+                "start": 0,
+                "end": 10,
+                "quote": "青禾把蓝绣布交给乔宁"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾亲手向乔宁交付绣布，是交付当事人。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 0,
+                    "end": 18,
+                    "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "乔宁亲手收好绣布，是接收当事人。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 0,
+                    "end": 18,
+                    "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "没有沈师傅观察该次交付或获悉乔宁已收到绣布的明确记载。",
+                "evidence": []
+              }
+            ],
+            "event_anchor": {
+              "scene_id": "w2",
+              "start": 0,
+              "end": 10,
+              "quote": "青禾把蓝绣布交给乔宁",
+              "relation": "occurs_here"
+            }
+          },
+          {
+            "fact_id": "f04",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "原文明确乔宁此刻还看不懂编码。后来拿到对照表也尚未开始核对，不能将持有工具当作已完成解码。",
+            "evidence": [
+              {
+                "scene_id": "w2",
+                "start": 18,
+                "end": 44,
+                "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。"
+              },
+              {
+                "scene_id": "w3",
+                "start": 29,
+                "end": 47,
+                "quote": "乔宁把表握在手里，尚未开始逐项核对。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 18,
+                    "end": 44,
+                    "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。"
+                  },
+                  {
+                    "scene_id": "w3",
+                    "start": 29,
+                    "end": 47,
+                    "quote": "乔宁把表握在手里，尚未开始逐项核对。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 18,
+                    "end": 44,
+                    "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。"
+                  },
+                  {
+                    "scene_id": "w3",
+                    "start": 29,
+                    "end": 47,
+                    "quote": "乔宁把表握在手里，尚未开始逐项核对。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 18,
+                    "end": 44,
+                    "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。"
+                  },
+                  {
+                    "scene_id": "w3",
+                    "start": 29,
+                    "end": 47,
+                    "quote": "乔宁把表握在手里，尚未开始逐项核对。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f05",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认乔宁知道沈师傅懂这种编码；刚收到对方消息也提供实际联系渠道。随后沈师傅到场交表，进一步确认可接触。",
+            "evidence": [
+              {
+                "scene_id": "w2",
+                "start": 44,
+                "end": 82,
+                "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。"
+              },
+              {
+                "scene_id": "w3",
+                "start": 0,
+                "end": 18,
+                "quote": "沈师傅到来后，把绣图对照表交给乔宁；"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "insufficient_evidence",
+                "reason": "没有青禾获悉乔宁的这项知识或沈师傅联系状态的记载。",
+                "evidence": []
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "知识明确归属于乔宁，且消息向乔宁提供即时联系信息。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 44,
+                    "end": 82,
+                    "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。"
+                  },
+                  {
+                    "scene_id": "w3",
+                    "start": 0,
+                    "end": 18,
+                    "quote": "沈师傅到来后，把绣图对照表交给乔宁；"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "沈师傅知道自己的能力并主动联系，不足以证明他知道乔宁已经知道其解读能力；候选包含乔宁的认知状态。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "f06",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认对照表能够解读蓝绣布，且乔宁已经握有它；持有工具本身不等于解码完成。",
+            "evidence": [
+              {
+                "scene_id": "w3",
+                "start": 0,
+                "end": 47,
+                "quote": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "insufficient_evidence",
+                "reason": "前缀没有青禾见到交表或获悉表的持有与效用的记载。",
+                "evidence": []
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "insufficient_evidence",
+                "reason": "乔宁明确知道自己持有对照表，但表确能解读蓝绣布的功能由叙述者确认；他尚未核对，文本未明确他已获知这一具体效用，复合命题的全部知情依据不足。",
+                "evidence": [
+                  {
+                    "scene_id": "w3",
+                    "start": 0,
+                    "end": 47,
+                    "quote": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "supported",
+                "reason": "沈师傅被明确说明懂这种绣图编码，并亲自交付匹配的对照表，支持其知晓乔宁已持有相应解读工具。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 44,
+                    "end": 82,
+                    "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。"
+                  },
+                  {
+                    "scene_id": "w3",
+                    "start": 0,
+                    "end": 47,
+                    "quote": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "chronology_review": {
+          "verdict": "supported",
+          "relation": "forward_occurrence",
+          "scene_ids": [
+            "w1",
+            "w2",
+            "w3"
+          ],
+          "reason": "先直接描绘编码，再交付绣布，随后沈师傅到来交表，乔宁仍未开始核对。物品状态和接续行动支持向前推进，编码与交付锚点均非回忆、预告或转述。"
+        },
+        "binding_renewal": {
+          "method": "identical_review_packet_content",
+          "previous_project_sha256": "bcfbb9098f73fbdbc1e3be40838422b565f799ece1d75f22fc9de9a8780e9f85",
+          "previous_packet_sha256": "7ed2a6ce0c149e02036494dbe75d2a065151cc06e0a31fe1243a9756938732aa",
+          "reason": "only external stage label metadata changed; entire review-visible content equal"
+        }
+      }
+    },
+    {
+      "case_id": "woven-decoded",
+      "review": {
+        "schema_version": 1,
+        "project_id": "atomic-woven-decoded",
+        "project_sha256": "ef12bec396069f503f3d01146cf84c65ddf6cd5f8825a6b7fb1c63f11278a368",
+        "packet_sha256": "e3f68a3ae5c0f9044011d285872a881683fc7a55cc2347290c6f7421e6901db3",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "Codex independent atomic-information review"
+        },
+        "decisions": [
+          {
+            "fact_id": "f01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述确认具体威胁及其迫使青禾沉默的结果。",
+            "evidence": [
+              {
+                "scene_id": "w1",
+                "start": 0,
+                "end": 40,
+                "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾直接承受威胁并被迫沉默，知晓这种限制。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 0,
+                    "end": 40,
+                    "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "乔宁被明确写为亲眼看到威胁，能够知道青禾受胁迫而沉默。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 0,
+                    "end": 40,
+                    "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "前缀没有沈师傅目击威胁或获悉威胁的记载。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "f02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认青禾把自己的受害经历编成绣图并缝上蓝绣布。",
+            "evidence": [
+              {
+                "scene_id": "w1",
+                "start": 40,
+                "end": 63,
+                "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾亲自将自己的经历编码并制作绣图，知晓编码行为及其载体。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 40,
+                    "end": 63,
+                    "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "原文明确乔宁已明白绣布记录青禾的遭遇；这里知道的是载体与经历的关系，不要求已读懂具体编码。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 63,
+                    "end": 126,
+                    "quote": "乔宁在旁看到她完成绣图；青禾指着自己和绣图，写下“我的遭遇”，乔宁明白蓝绣布记录了青禾受害的经历，但还不知道图案具体讲了什么。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "懂这种编码或提供对照表，不足以证明沈师傅知道这块布由青禾编码了自己的遭遇。",
+                "evidence": []
+              }
+            ],
+            "event_anchor": {
+              "scene_id": "w1",
+              "start": 40,
+              "end": 63,
+              "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。",
+              "relation": "occurs_here"
+            }
+          },
+          {
+            "fact_id": "f03",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "实际交付及收好的动作直接确认乔宁已收到绣布。",
+            "evidence": [
+              {
+                "scene_id": "w2",
+                "start": 0,
+                "end": 18,
+                "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。"
+              },
+              {
+                "scene_id": "w2",
+                "start": 0,
+                "end": 10,
+                "quote": "青禾把蓝绣布交给乔宁"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾亲手向乔宁交付绣布，是交付当事人。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 0,
+                    "end": 18,
+                    "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "乔宁亲手收好绣布，是接收当事人。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 0,
+                    "end": 18,
+                    "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "没有沈师傅观察该次交付或获悉乔宁已收到绣布的明确记载。",
+                "evidence": []
+              }
+            ],
+            "event_anchor": {
+              "scene_id": "w2",
+              "start": 0,
+              "end": 10,
+              "quote": "青禾把蓝绣布交给乔宁",
+              "relation": "occurs_here"
+            }
+          },
+          {
+            "fact_id": "f04",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "最新场景明确完成正确解读并理解，已更新此前尚未解码的状态。",
+            "evidence": [
+              {
+                "scene_id": "w4",
+                "start": 0,
+                "end": 45,
+                "quote": "乔宁逐项用对照表核对蓝绣布，正确读出了青禾被拘禁和殴打的经过。他终于理解了布上记录的罪行。"
+              },
+              {
+                "scene_id": "w4",
+                "start": 0,
+                "end": 31,
+                "quote": "乔宁逐项用对照表核对蓝绣布，正确读出了青禾被拘禁和殴打的经过。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "insufficient_evidence",
+                "reason": "青禾知道自己的遭遇，不等于知道乔宁后来已经完成正确解读；没有向她传达完成情况的证据。",
+                "evidence": []
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "乔宁亲自完成解读，原文还直接确认其理解。",
+                "evidence": [
+                  {
+                    "scene_id": "w4",
+                    "start": 0,
+                    "end": 45,
+                    "quote": "乔宁逐项用对照表核对蓝绣布，正确读出了青禾被拘禁和殴打的经过。他终于理解了布上记录的罪行。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "提供解读工具不等于获知乔宁实际完成了解码；本段没有沈师傅观察或收到完成反馈的记载。",
+                "evidence": []
+              }
+            ],
+            "event_anchor": {
+              "scene_id": "w4",
+              "start": 0,
+              "end": 31,
+              "quote": "乔宁逐项用对照表核对蓝绣布，正确读出了青禾被拘禁和殴打的经过。",
+              "relation": "occurs_here"
+            }
+          },
+          {
+            "fact_id": "f05",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认乔宁知道沈师傅懂这种编码；刚收到对方消息也提供实际联系渠道。随后沈师傅到场交表，进一步确认可接触。",
+            "evidence": [
+              {
+                "scene_id": "w2",
+                "start": 44,
+                "end": 82,
+                "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。"
+              },
+              {
+                "scene_id": "w3",
+                "start": 0,
+                "end": 18,
+                "quote": "沈师傅到来后，把绣图对照表交给乔宁；"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "insufficient_evidence",
+                "reason": "没有青禾获悉乔宁的这项知识或沈师傅联系状态的记载。",
+                "evidence": []
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "知识明确归属于乔宁，且消息向乔宁提供即时联系信息。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 44,
+                    "end": 82,
+                    "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。"
+                  },
+                  {
+                    "scene_id": "w3",
+                    "start": 0,
+                    "end": 18,
+                    "quote": "沈师傅到来后，把绣图对照表交给乔宁；"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "沈师傅知道自己的能力并主动联系，不足以证明他知道乔宁已经知道其解读能力；候选包含乔宁的认知状态。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "f06",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认对照表能够解读蓝绣布，且乔宁已经握有它；持有工具本身不等于解码完成。",
+            "evidence": [
+              {
+                "scene_id": "w3",
+                "start": 0,
+                "end": 47,
+                "quote": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "insufficient_evidence",
+                "reason": "前缀没有青禾见到交表或获悉表的持有与效用的记载。",
+                "evidence": []
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "乔宁持有对照表，且后来亲自用它完成正确解读，足以知道该工具的持有与效用。",
+                "evidence": [
+                  {
+                    "scene_id": "w3",
+                    "start": 0,
+                    "end": 47,
+                    "quote": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。"
+                  },
+                  {
+                    "scene_id": "w4",
+                    "start": 0,
+                    "end": 45,
+                    "quote": "乔宁逐项用对照表核对蓝绣布，正确读出了青禾被拘禁和殴打的经过。他终于理解了布上记录的罪行。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "supported",
+                "reason": "沈师傅被明确说明懂这种绣图编码，并亲自交付匹配的对照表，支持其知晓乔宁已持有相应解读工具。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 44,
+                    "end": 82,
+                    "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。"
+                  },
+                  {
+                    "scene_id": "w3",
+                    "start": 0,
+                    "end": 47,
+                    "quote": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "chronology_review": {
+          "verdict": "supported",
+          "relation": "forward_occurrence",
+          "scene_ids": [
+            "w1",
+            "w2",
+            "w3",
+            "w4"
+          ],
+          "reason": "主叙事依次呈现制作绣布、交付、交表且尚未核对、实际核对并正确解读；“终于理解”完成前面的待解读状态。各发生锚点按该顺序连续推进，没有闪回或预告框架。"
+        },
+        "binding_renewal": {
+          "method": "identical_review_packet_content",
+          "previous_project_sha256": "64a12444129bb551d5cdfc2aeb813a42626d4b4a8930682cb2bf77060a3bd86f",
+          "previous_packet_sha256": "8ad7a3b324aa9a734775ef75d06387118f0d3dd04a4b2e5e3846f0a7aa44a8b2",
+          "reason": "only external stage label metadata changed; entire review-visible content equal"
+        }
+      }
+    },
+    {
+      "case_id": "forbidden-seeking",
+      "review": {
+        "schema_version": 1,
+        "project_id": "atomic-forbidden",
+        "project_sha256": "8a9aa7cd781fbb37e6e0cc085a1b90460211281e07990a8e01d59fca3cf40dac",
+        "packet_sha256": "2c6f998a4790800ace7628bddd870359053d07286a2e1cc2551719c640acca69",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "Codex independent atomic-information review"
+        },
+        "decisions": [
+          {
+            "fact_id": "f01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文直接确立禁令及其对秘术的神圣知识定位。",
+            "evidence": [
+              {
+                "scene_id": "k1",
+                "start": 0,
+                "end": 32,
+                "quote": "山神留下不可更改的禁令：凡人岑火不得获取返生秘术，那是神圣知识。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "岑火",
+                "verdict": "supported",
+                "reason": "岑火明确读到禁令。",
+                "evidence": [
+                  {
+                    "scene_id": "k1",
+                    "start": 0,
+                    "end": 32,
+                    "quote": "山神留下不可更改的禁令：凡人岑火不得获取返生秘术，那是神圣知识。"
+                  },
+                  {
+                    "scene_id": "k1",
+                    "start": 32,
+                    "end": 45,
+                    "quote": "岑火与守庙人一同读到禁令。"
+                  }
+                ]
+              },
+              {
+                "character_id": "守庙人",
+                "verdict": "supported",
+                "reason": "守庙人与岑火一同读到禁令。",
+                "evidence": [
+                  {
+                    "scene_id": "k1",
+                    "start": 0,
+                    "end": 32,
+                    "quote": "山神留下不可更改的禁令：凡人岑火不得获取返生秘术，那是神圣知识。"
+                  },
+                  {
+                    "scene_id": "k1",
+                    "start": 32,
+                    "end": 45,
+                    "quote": "岑火与守庙人一同读到禁令。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认岑火作出获取秘术的决定；这是已发生的心理事件。",
+            "evidence": [
+              {
+                "scene_id": "k1",
+                "start": 45,
+                "end": 68,
+                "quote": "岑火当着守庙人的面决定，仍要设法取得返生秘术。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "岑火",
+                "verdict": "supported",
+                "reason": "决定明确归属于岑火，支持其知晓自己的意向。",
+                "evidence": [
+                  {
+                    "scene_id": "k1",
+                    "start": 45,
+                    "end": 68,
+                    "quote": "岑火当着守庙人的面决定，仍要设法取得返生秘术。"
+                  }
+                ]
+              },
+              {
+                "character_id": "守庙人",
+                "verdict": "insufficient_evidence",
+                "reason": "“当着守庙人的面”只明确在场，未说明岑火说出决定或以其他方式传达其内容；不足以确认守庙人知道这一心理事件。",
+                "evidence": [
+                  {
+                    "scene_id": "k1",
+                    "start": 45,
+                    "end": 68,
+                    "quote": "岑火当着守庙人的面决定，仍要设法取得返生秘术。"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "chronology_review": {
+          "verdict": "supported",
+          "relation": "forward_occurrence",
+          "scene_ids": [
+            "k1"
+          ],
+          "reason": "场景依次交代现存禁令、两人读到禁令和岑火随后作出决定。禁令存在是当下决定的背景，未出现将阅读或决定框定为回忆、预测或嵌套讲述的文字。"
+        },
+        "binding_renewal": {
+          "method": "identical_review_packet_content",
+          "previous_project_sha256": "c8d134c8abbad9bc2c9d47ea2368d5d97cb62462cf9f1fc4e6f309903186a9d4",
+          "previous_packet_sha256": "d6438ef26aff9435a46f3ec5eb92c580ed32a558f9d047809c619efa1d28ad48",
+          "reason": "only external stage label metadata changed; entire review-visible content equal"
+        }
+      }
+    },
+    {
+      "case_id": "forbidden-acquired",
+      "review": {
+        "schema_version": 1,
+        "project_id": "atomic-forbidden",
+        "project_sha256": "8a9aa7cd781fbb37e6e0cc085a1b90460211281e07990a8e01d59fca3cf40dac",
+        "packet_sha256": "1ffabd96d8d8290a5574fa3feecf812ee06cda0ce4c24906309790fe7eb61e7b",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "Codex independent atomic-information review"
+        },
+        "decisions": [
+          {
+            "fact_id": "f01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文直接确立禁令及其对秘术的神圣知识定位。",
+            "evidence": [
+              {
+                "scene_id": "k1",
+                "start": 0,
+                "end": 32,
+                "quote": "山神留下不可更改的禁令：凡人岑火不得获取返生秘术，那是神圣知识。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "岑火",
+                "verdict": "supported",
+                "reason": "岑火明确读到禁令。",
+                "evidence": [
+                  {
+                    "scene_id": "k1",
+                    "start": 0,
+                    "end": 32,
+                    "quote": "山神留下不可更改的禁令：凡人岑火不得获取返生秘术，那是神圣知识。"
+                  },
+                  {
+                    "scene_id": "k1",
+                    "start": 32,
+                    "end": 45,
+                    "quote": "岑火与守庙人一同读到禁令。"
+                  }
+                ]
+              },
+              {
+                "character_id": "守庙人",
+                "verdict": "supported",
+                "reason": "守庙人与岑火一同读到禁令。",
+                "evidence": [
+                  {
+                    "scene_id": "k1",
+                    "start": 0,
+                    "end": 32,
+                    "quote": "山神留下不可更改的禁令：凡人岑火不得获取返生秘术，那是神圣知识。"
+                  },
+                  {
+                    "scene_id": "k1",
+                    "start": 32,
+                    "end": 45,
+                    "quote": "岑火与守庙人一同读到禁令。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认岑火作出获取秘术的决定；这是已发生的心理事件。",
+            "evidence": [
+              {
+                "scene_id": "k1",
+                "start": 45,
+                "end": 68,
+                "quote": "岑火当着守庙人的面决定，仍要设法取得返生秘术。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "岑火",
+                "verdict": "supported",
+                "reason": "决定明确归属于岑火，支持其知晓自己的意向。",
+                "evidence": [
+                  {
+                    "scene_id": "k1",
+                    "start": 45,
+                    "end": 68,
+                    "quote": "岑火当着守庙人的面决定，仍要设法取得返生秘术。"
+                  }
+                ]
+              },
+              {
+                "character_id": "守庙人",
+                "verdict": "insufficient_evidence",
+                "reason": "“当着守庙人的面”只明确在场，未说明岑火说出决定或以其他方式传达其内容；不足以确认守庙人知道这一心理事件。",
+                "evidence": [
+                  {
+                    "scene_id": "k1",
+                    "start": 45,
+                    "end": 68,
+                    "quote": "岑火当着守庙人的面决定，仍要设法取得返生秘术。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f03",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文既写明读懂和运用秘术，也直接确认超常力量来源于秘术。",
+            "evidence": [
+              {
+                "scene_id": "k2",
+                "start": 0,
+                "end": 44,
+                "quote": "岑火穿过石门，读懂返生秘术，当即让一株枯死的小树重生。叙述者确认这是秘术赋予的超常力量。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "岑火",
+                "verdict": "supported",
+                "reason": "岑火亲自读懂秘术并立即施展其力量，具有直接体验和运用依据。",
+                "evidence": [
+                  {
+                    "scene_id": "k2",
+                    "start": 0,
+                    "end": 44,
+                    "quote": "岑火穿过石门，读懂返生秘术，当即让一株枯死的小树重生。叙述者确认这是秘术赋予的超常力量。"
+                  }
+                ]
+              },
+              {
+                "character_id": "守庙人",
+                "verdict": "supported",
+                "reason": "守庙人明确亲眼看见获取与使枯树重生的全过程，结合既知秘术背景，支持其知道获取及力量结果。",
+                "evidence": [
+                  {
+                    "scene_id": "k2",
+                    "start": 0,
+                    "end": 44,
+                    "quote": "岑火穿过石门，读懂返生秘术，当即让一株枯死的小树重生。叙述者确认这是秘术赋予的超常力量。"
+                  },
+                  {
+                    "scene_id": "k2",
+                    "start": 44,
+                    "end": 54,
+                    "quote": "守庙人亲眼看见全程。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f04",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "截点明确尚无任何惩罚，不能把违反禁令或取得力量补成已经受罚。",
+            "evidence": [
+              {
+                "scene_id": "k2",
+                "start": 54,
+                "end": 71,
+                "quote": "此刻，山神尚未对岑火施加任何惩罚。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "岑火",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "k2",
+                    "start": 54,
+                    "end": 71,
+                    "quote": "此刻，山神尚未对岑火施加任何惩罚。"
+                  }
+                ]
+              },
+              {
+                "character_id": "守庙人",
+                "verdict": "contradicted",
+                "reason": "原文明确否定该命题，因此它不能成为该角色确知的事实；此结论不推定角色持有什么信念。",
+                "evidence": [
+                  {
+                    "scene_id": "k2",
+                    "start": 54,
+                    "end": 71,
+                    "quote": "此刻，山神尚未对岑火施加任何惩罚。"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "chronology_review": {
+          "verdict": "supported",
+          "relation": "forward_occurrence",
+          "scene_ids": [
+            "k1",
+            "k2"
+          ],
+          "reason": "前场景读禁令并决定获取，后场景直接描写穿门、读懂和施展力量，并以“此刻”说明尚未受罚；行为接续推动事件向前，不是先前事件的回顾或未来预告。"
+        },
+        "binding_renewal": {
+          "method": "identical_review_packet_content",
+          "previous_project_sha256": "c8d134c8abbad9bc2c9d47ea2368d5d97cb62462cf9f1fc4e6f309903186a9d4",
+          "previous_packet_sha256": "09bf97d0233c912ee1fe7aea19d05407aa1df7a6340a772f0b0e7e8bfcc990c3",
+          "reason": "only external stage label metadata changed; entire review-visible content equal"
+        }
+      }
+    },
+    {
+      "case_id": "woven-key-informed",
+      "review": {
+        "schema_version": 1,
+        "project_id": "atomic-woven-informed",
+        "project_sha256": "bc435c84f0c0061397a2e57876dd149d76dd6a8b1edb79ff8a974730f50d151b",
+        "packet_sha256": "3951e94d1fed14fc94a18b5201842ae72890c48ae3f823ab56da08a65f7412b4",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "Codex independent atomic-information review"
+        },
+        "decisions": [
+          {
+            "fact_id": "f01",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "前缀直接叙述看守以伤害家人威胁青禾，及青禾被迫沉默的结果。",
+            "evidence": [
+              {
+                "scene_id": "w1",
+                "start": 0,
+                "end": 40,
+                "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾亲身受到威胁并因此沉默，知晓这种限制。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 0,
+                    "end": 40,
+                    "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "原文明确乔宁亲眼看见威胁，足以支持其知情。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 0,
+                    "end": 40,
+                    "quote": "乔宁亲眼看到看守威胁青禾：若向人说出她遭受的暴行，就伤害她的家人。青禾被迫沉默。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "后续到场和指导解码没有说明沈师傅获悉先前威胁。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "f02",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述直接确认青禾把自己的受害经历编成绣图并缝在蓝绣布上。",
+            "evidence": [
+              {
+                "scene_id": "w1",
+                "start": 40,
+                "end": 63,
+                "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾亲自制作编码，知道绣布记录的是自己的遭遇。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 40,
+                    "end": 63,
+                    "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "原文明确乔宁理解绣布记录青禾受害经历；知道这一载体关系并不要求已经解码细节。",
+                "evidence": [
+                  {
+                    "scene_id": "w1",
+                    "start": 63,
+                    "end": 126,
+                    "quote": "乔宁在旁看到她完成绣图；青禾指着自己和绣图，写下“我的遭遇”，乔宁明白蓝绣布记录了青禾受害的经历，但还不知道图案具体讲了什么。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "沈师傅后来认识这块布的编码方式并说明工具用途，但没有证据证明其知道编码者及编码内容是青禾的亲身遭遇。",
+                "evidence": [
+                  {
+                    "scene_id": "w3b",
+                    "start": 0,
+                    "end": 46,
+                    "quote": "沈师傅指着蓝绣布向乔宁说明：“你手上这张对照表，正是用来解读这块布的。你可以逐项照着核对。”"
+                  }
+                ]
+              }
+            ],
+            "event_anchor": {
+              "scene_id": "w1",
+              "start": 40,
+              "end": 63,
+              "quote": "青禾后来把这些罪行逐一编成绣图，缝在蓝绣布上。",
+              "relation": "occurs_here"
+            }
+          },
+          {
+            "fact_id": "f03",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "青禾实际交付，乔宁实际收好，直接确立收到绣布这一事件。",
+            "evidence": [
+              {
+                "scene_id": "w2",
+                "start": 0,
+                "end": 18,
+                "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。"
+              },
+              {
+                "scene_id": "w2",
+                "start": 0,
+                "end": 10,
+                "quote": "青禾把蓝绣布交给乔宁"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "supported",
+                "reason": "青禾是亲手交付者，知道交付已经发生。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 0,
+                    "end": 18,
+                    "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。"
+                  },
+                  {
+                    "scene_id": "w2",
+                    "start": 0,
+                    "end": 10,
+                    "quote": "青禾把蓝绣布交给乔宁"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "乔宁亲手接收并收好绣布，知道自己已经收到。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 0,
+                    "end": 18,
+                    "quote": "青禾把蓝绣布交给乔宁，乔宁将它收好。"
+                  },
+                  {
+                    "scene_id": "w2",
+                    "start": 0,
+                    "end": 10,
+                    "quote": "青禾把蓝绣布交给乔宁"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "后来指着现场绣布说明用途，只能确认沈师傅见到绣布，不能自动证明其知道乔宁此前收到它的事件。",
+                "evidence": [
+                  {
+                    "scene_id": "w3b",
+                    "start": 0,
+                    "end": 46,
+                    "quote": "沈师傅指着蓝绣布向乔宁说明：“你手上这张对照表，正是用来解读这块布的。你可以逐项照着核对。”"
+                  }
+                ]
+              }
+            ],
+            "event_anchor": {
+              "scene_id": "w2",
+              "start": 0,
+              "end": 10,
+              "quote": "青禾把蓝绣布交给乔宁",
+              "relation": "occurs_here"
+            }
+          },
+          {
+            "fact_id": "f04",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "最新场景仍明确尚未开始解码；听懂对照表用途不等于已经读懂绣布中的罪行。",
+            "evidence": [
+              {
+                "scene_id": "w2",
+                "start": 18,
+                "end": 44,
+                "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。"
+              },
+              {
+                "scene_id": "w3b",
+                "start": 46,
+                "end": 76,
+                "quote": "乔宁听明白了，确认自己手中的表能解读蓝绣布，但尚未开始解码。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "contradicted",
+                "reason": "原文明确尚未开始解码，故该已完成解码命题不能成为角色确知的事实；这不推定角色的其他信念。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 18,
+                    "end": 44,
+                    "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。"
+                  },
+                  {
+                    "scene_id": "w3b",
+                    "start": 46,
+                    "end": 76,
+                    "quote": "乔宁听明白了，确认自己手中的表能解读蓝绣布，但尚未开始解码。"
+                  }
+                ]
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "contradicted",
+                "reason": "原文明确尚未开始解码，故该已完成解码命题不能成为角色确知的事实；这不推定角色的其他信念。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 18,
+                    "end": 44,
+                    "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。"
+                  },
+                  {
+                    "scene_id": "w3b",
+                    "start": 46,
+                    "end": 76,
+                    "quote": "乔宁听明白了，确认自己手中的表能解读蓝绣布，但尚未开始解码。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "contradicted",
+                "reason": "原文明确尚未开始解码，故该已完成解码命题不能成为角色确知的事实；这不推定角色的其他信念。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 18,
+                    "end": 44,
+                    "quote": "乔宁知道蓝绣布仍需解读，自己此刻还看不懂其中的编码。"
+                  },
+                  {
+                    "scene_id": "w3b",
+                    "start": 46,
+                    "end": 76,
+                    "quote": "乔宁听明白了，确认自己手中的表能解读蓝绣布，但尚未开始解码。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f05",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述明确乔宁知道沈师傅懂这种编码；消息、到场及当面讲解也确认目前可直接接触。",
+            "evidence": [
+              {
+                "scene_id": "w2",
+                "start": 44,
+                "end": 82,
+                "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。"
+              },
+              {
+                "scene_id": "w3b",
+                "start": 0,
+                "end": 46,
+                "quote": "沈师傅指着蓝绣布向乔宁说明：“你手上这张对照表，正是用来解读这块布的。你可以逐项照着核对。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "insufficient_evidence",
+                "reason": "没有青禾获悉乔宁这项认知及沈师傅联系状态的记载。",
+                "evidence": []
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "该能力知识明确归属于乔宁，且他正接受沈师傅当面讲解。",
+                "evidence": [
+                  {
+                    "scene_id": "w2",
+                    "start": 44,
+                    "end": 82,
+                    "quote": "乔宁知道沈师傅懂这种绣图编码；沈师傅刚发来消息，说自己在隔壁，可以随时联系。"
+                  },
+                  {
+                    "scene_id": "w3b",
+                    "start": 0,
+                    "end": 46,
+                    "quote": "沈师傅指着蓝绣布向乔宁说明：“你手上这张对照表，正是用来解读这块布的。你可以逐项照着核对。”"
+                  },
+                  {
+                    "scene_id": "w3b",
+                    "start": 46,
+                    "end": 76,
+                    "quote": "乔宁听明白了，确认自己手中的表能解读蓝绣布，但尚未开始解码。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "insufficient_evidence",
+                "reason": "讲解表的用途不能单独证明沈师傅知道乔宁已知道其个人解读能力；乔宁的理解由叙述者确认，未明确向沈师傅表达。",
+                "evidence": [
+                  {
+                    "scene_id": "w3b",
+                    "start": 0,
+                    "end": 46,
+                    "quote": "沈师傅指着蓝绣布向乔宁说明：“你手上这张对照表，正是用来解读这块布的。你可以逐项照着核对。”"
+                  },
+                  {
+                    "scene_id": "w3b",
+                    "start": 46,
+                    "end": 76,
+                    "quote": "乔宁听明白了，确认自己手中的表能解读蓝绣布，但尚未开始解码。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "f06",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "叙述确认乔宁持有可解读此布的对照表；后续专门说明及理解确认进一步确立乔宁对工具效用的知情。",
+            "evidence": [
+              {
+                "scene_id": "w3",
+                "start": 0,
+                "end": 47,
+                "quote": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。"
+              },
+              {
+                "scene_id": "w3b",
+                "start": 0,
+                "end": 46,
+                "quote": "沈师傅指着蓝绣布向乔宁说明：“你手上这张对照表，正是用来解读这块布的。你可以逐项照着核对。”"
+              },
+              {
+                "scene_id": "w3b",
+                "start": 46,
+                "end": 76,
+                "quote": "乔宁听明白了，确认自己手中的表能解读蓝绣布，但尚未开始解码。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "青禾",
+                "verdict": "insufficient_evidence",
+                "reason": "没有青禾目击交表、听见讲解或收到相关信息的记载。",
+                "evidence": []
+              },
+              {
+                "character_id": "乔宁",
+                "verdict": "supported",
+                "reason": "新场景明确乔宁听懂说明，确认自己手中的表能解读蓝绣布，覆盖持有与具体效用两部分。",
+                "evidence": [
+                  {
+                    "scene_id": "w3b",
+                    "start": 46,
+                    "end": 76,
+                    "quote": "乔宁听明白了，确认自己手中的表能解读蓝绣布，但尚未开始解码。"
+                  }
+                ]
+              },
+              {
+                "character_id": "沈师傅",
+                "verdict": "supported",
+                "reason": "沈师傅亲手交表，并指明乔宁手中这张表正用于解读现场蓝绣布，直接表达对此复合命题的知情。",
+                "evidence": [
+                  {
+                    "scene_id": "w3",
+                    "start": 0,
+                    "end": 47,
+                    "quote": "沈师傅到来后，把绣图对照表交给乔宁；这张表能够解读蓝绣布。乔宁把表握在手里，尚未开始逐项核对。"
+                  },
+                  {
+                    "scene_id": "w3b",
+                    "start": 0,
+                    "end": 46,
+                    "quote": "沈师傅指着蓝绣布向乔宁说明：“你手上这张对照表，正是用来解读这块布的。你可以逐项照着核对。”"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "chronology_review": {
+          "verdict": "supported",
+          "relation": "forward_occurrence",
+          "scene_ids": [
+            "w1",
+            "w2",
+            "w3",
+            "w3b"
+          ],
+          "reason": "先编码、后交付，再交表，最后在已持有表的状态下当面说明用途并确认尚未解码；对象状态和行动连续向前。最后对白是当下发生的讲解，没有把编码、交付或解码锚点变成嵌套转述。"
+        },
+        "binding_renewal": {
+          "method": "identical_review_packet_content",
+          "previous_project_sha256": "2fcd39723333b840d76e657a21dead2ba447bef003ba0672a1e88cb8e6d4f817",
+          "previous_packet_sha256": "f2e7318d830fb884d511130eae3507002ba44b76a305e78cd93f76c2fbe718f3",
+          "reason": "only external stage label metadata changed; entire review-visible content equal"
+        }
+      }
+    }
+  ]
+}

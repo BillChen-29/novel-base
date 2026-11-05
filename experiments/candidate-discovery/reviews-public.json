@@ -1,0 +1,1105 @@
+{
+  "cases": [
+    {
+      "case_id": "public-01",
+      "review": {
+        "schema_version": 1,
+        "packet_sha256": "30968ea752616a30e884c80806f2fa143a239c78784f8fff8978dd1bc9c118fc",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "independent_early_candidate_review"
+        },
+        "decisions": [
+          {
+            "source_path": "assets/character_archetypes/lin-chong.md",
+            "reason": "收信放进口袋只是一次动作，不能据此判断隐忍、求稳或受压不反抗。",
+            "operation": "待审：让林澈在面临侵害时为了安稳再次退让；当前缺少侵害、体制处境及反复隐忍行为，不能把未拆信写成林冲式性格。",
+            "knowledge_evidence": [
+              {
+                "start": 183,
+                "end": 201,
+                "quote": "最大愿望是安稳度日，不愿打破现有秩序"
+              },
+              {
+                "start": 204,
+                "end": 221,
+                "quote": "面对侵害先忍让，忍到无路可退才反抗"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "林澈已处在有明确侵害与反抗代价的关系中",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [],
+                "knowledge_evidence": [
+                  {
+                    "start": 204,
+                    "end": 221,
+                    "quote": "面对侵害先忍让，忍到无路可退才反抗"
+                  }
+                ]
+              },
+              {
+                "claim": "已有反复求稳、合理化侵害或忍让的稳定行为",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [],
+                "knowledge_evidence": [
+                  {
+                    "start": 806,
+                    "end": 832,
+                    "quote": "角色在「忍无可忍」与「再忍一次」之间反复拉扯的叙事。"
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "接信与未拆信不提供求稳动机和受害处境的信息。",
+              "evidence": [
+                {
+                  "start": 44,
+                  "end": 57,
+                  "quote": "林澈接过信，放进外套口袋。"
+                }
+              ]
+            }
+          },
+          {
+            "source_path": "assets/motif_library/truth-pursuit.md",
+            "reason": "“暗号”是许禾的说法，尚无异常、冲突证据或追查意愿；接信不能自动启动真相追寻。",
+            "operation": "待审：将接信发展为发现异常并追问许禾的调查触发环节；需要先读到或听到真实的矛盾线索，且仍缺执着追查与代价，不能认定信中已有阴谋。",
+            "knowledge_evidence": [
+              {
+                "start": 100,
+                "end": 128,
+                "quote": "主角发现一个疑点（失踪/死亡/异常事件），决定追查到底。"
+              },
+              {
+                "start": 37,
+                "end": 63,
+                "quote": "主角执着于追寻某个真相，但真相可能毁灭自己或身边的人"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "当前已出现具体异常或矛盾，而不只是被告知有进门暗号",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [],
+                "knowledge_evidence": [
+                  {
+                    "start": 100,
+                    "end": 128,
+                    "quote": "主角发现一个疑点（失踪/死亡/异常事件），决定追查到底。"
+                  }
+                ]
+              },
+              {
+                "claim": "主角有追查的情感投入、潜在代价或阻力依据",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [],
+                "knowledge_evidence": [
+                  {
+                    "start": 37,
+                    "end": 63,
+                    "quote": "主角执着于追寻某个真相，但真相可能毁灭自己或身边的人"
+                  },
+                  {
+                    "start": 1074,
+                    "end": 1098,
+                    "quote": "真相的揭示过程过于顺利时（缺乏阻力就没有戏剧性）"
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈知道许禾交代他记住暗号，但尚未见信文，不能识别其中的异常。",
+              "evidence": [
+                {
+                  "start": 20,
+                  "end": 44,
+                  "quote": "说：“这是今晚进门要用的暗号，你到地方前记住。”"
+                },
+                {
+                  "start": 57,
+                  "end": 76,
+                  "quote": "他还没有拆开信封，也没有看过信里的字。"
+                }
+              ]
+            }
+          },
+          {
+            "source_path": "assets/pacing/chapter-hooks.md",
+            "reason": "未拆信提供待获取的信息，但尚不知是否是有效章末悬念，也无章节位置与此前钩子历史。",
+            "operation": "待审：在读信前短暂停顿，以“信里究竟写什么”留到下章；须先确认章末位置、内容的重要性和承接节奏，不能只靠无理由延迟拆信制造钩子。",
+            "knowledge_evidence": [
+              {
+                "start": 263,
+                "end": 272,
+                "quote": "给出线索但不给结论"
+              },
+              {
+                "start": 2529,
+                "end": 2532,
+                "quote": "假钩子"
+              },
+              {
+                "start": 2460,
+                "end": 2470,
+                "quote": "不要连续3章都是强钩"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "有具体且尚未读取的信息载体",
+                "verdict": "supported",
+                "epistemic_type": "established",
+                "story_evidence": [
+                  {
+                    "start": 7,
+                    "end": 19,
+                    "quote": "许禾把一封封好的信交给他"
+                  },
+                  {
+                    "start": 57,
+                    "end": 76,
+                    "quote": "他还没有拆开信封，也没有看过信里的字。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 136,
+                    "end": 149,
+                    "quote": "读者知道一半，另一半被截断"
+                  }
+                ]
+              },
+              {
+                "claim": "未读内容确有能够承担章末悬念的张力，不只是例行口令",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [],
+                "knowledge_evidence": [
+                  {
+                    "start": 2535,
+                    "end": 2550,
+                    "quote": "钩子太弱，读者看一眼就知道答案"
+                  }
+                ]
+              },
+              {
+                "claim": "已知章末位置、前序钩子趋势及下一章承接条件",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [],
+                "knowledge_evidence": [
+                  {
+                    "start": 42,
+                    "end": 64,
+                    "quote": "章末钩子是在每章结尾故意制造**未完成感**"
+                  },
+                  {
+                    "start": 2460,
+                    "end": 2470,
+                    "quote": "不要连续3章都是强钩"
+                  },
+                  {
+                    "start": 2563,
+                    "end": 2577,
+                    "quote": "下一章完全不承接上一章的钩子"
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "supported",
+              "reason": "可以写林澈在未拆信前的动作停顿，不能写他因信内具体内容而震惊。",
+              "evidence": [
+                {
+                  "start": 57,
+                  "end": 76,
+                  "quote": "他还没有拆开信封，也没有看过信里的字。"
+                }
+              ]
+            }
+          },
+          {
+            "source_path": "assets/pacing/pacing-curve.md",
+            "reason": "短暂交接无法提供卷级位置或强度趋势，也没有依据认定接下来必须揭秘加速。",
+            "operation": "待审：依卷级节奏把接信过渡到一次高强度揭秘；当前须先补足卷段、前序节奏和真正的揭秘触发条件。",
+            "knowledge_evidence": [
+              {
+                "start": 38,
+                "end": 57,
+                "quote": "节奏曲线是整卷/整本书的情绪波动图谱。"
+              },
+              {
+                "start": 2843,
+                "end": 2869,
+                "quote": "| 中 → 快 | 战斗开始、真相揭露、矛盾爆发 |"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "当前卷段和章节位置已知，可选择目标强度",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [],
+                "knowledge_evidence": [
+                  {
+                    "start": 653,
+                    "end": 659,
+                    "quote": "五个阶段详解"
+                  }
+                ]
+              },
+              {
+                "claim": "此前章节强度及换档过程已知，可判断自然过渡",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [],
+                "knowledge_evidence": [
+                  {
+                    "start": 3197,
+                    "end": 3213,
+                    "quote": "不要突然从极慢跳到极快，需要过渡"
+                  }
+                ]
+              },
+              {
+                "claim": "已建立战斗、真相揭露或矛盾爆发等加速触发",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [],
+                "knowledge_evidence": [
+                  {
+                    "start": 2843,
+                    "end": 2869,
+                    "quote": "| 中 → 快 | 战斗开始、真相揭露、矛盾爆发 |"
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈尚未读信，没有可用于揭秘加速的具体内容。",
+              "evidence": [
+                {
+                  "start": 57,
+                  "end": 76,
+                  "quote": "他还没有拆开信封，也没有看过信里的字。"
+                }
+              ]
+            }
+          },
+          {
+            "source_path": "assets/style_library/urban-suspense-fanqie.md",
+            "reason": "可局部借用有限视角和动作短句，让信息随拆读进入；不据此认定整部作品属于都市犯罪或已存在强烈恐惧。",
+            "operation": "下一步按林澈能做和能看到的顺序写：从口袋取出信、拆开、开始阅读，一句一个动作；任何信内文字只在读到后呈现，若需核实再向仍在场的许禾提问。只采用有限视角与短动作句。",
+            "knowledge_evidence": [
+              {
+                "start": 100,
+                "end": 114,
+                "quote": "第三人称有限（贴近主角内心）"
+              },
+              {
+                "start": 674,
+                "end": 686,
+                "quote": "一句一个动作，不要复合句"
+              },
+              {
+                "start": 633,
+                "end": 647,
+                "quote": "用对话推动剧情，不用对话说教"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "信已由主角持有，取出拆读是具备物理前提的未来行动",
+                "verdict": "supported",
+                "epistemic_type": "established",
+                "story_evidence": [
+                  {
+                    "start": 44,
+                    "end": 57,
+                    "quote": "林澈接过信，放进外套口袋。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 674,
+                    "end": 686,
+                    "quote": "一句一个动作，不要复合句"
+                  }
+                ]
+              },
+              {
+                "claim": "当前知识边界明确，动作顺序必须从未拆未读开始",
+                "verdict": "supported",
+                "epistemic_type": "established",
+                "story_evidence": [
+                  {
+                    "start": 57,
+                    "end": 76,
+                    "quote": "他还没有拆开信封，也没有看过信里的字。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 100,
+                    "end": 114,
+                    "quote": "第三人称有限（贴近主角内心）"
+                  }
+                ]
+              },
+              {
+                "claim": "如需用一句询问推进，信息交付者仍在现场",
+                "verdict": "supported",
+                "epistemic_type": "established",
+                "story_evidence": [
+                  {
+                    "start": 76,
+                    "end": 85,
+                    "quote": "许禾站在一旁等他。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 633,
+                    "end": 647,
+                    "quote": "用对话推动剧情，不用对话说教"
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "supported",
+              "reason": "操作从未知开始，通过未来拆读获得信息，没有把持有信件等同读懂暗号。",
+              "evidence": [
+                {
+                  "start": 44,
+                  "end": 57,
+                  "quote": "林澈接过信，放进外套口袋。"
+                },
+                {
+                  "start": 57,
+                  "end": 76,
+                  "quote": "他还没有拆开信封，也没有看过信里的字。"
+                },
+                {
+                  "start": 76,
+                  "end": 85,
+                  "quote": "许禾站在一旁等他。"
+                }
+              ]
+            }
+          },
+          {
+            "source_path": "assets/technique_library/_scenarios/revelation.md",
+            "reason": "未读信不足以执行揭秘，且三章前伏笔、冲击对象与后果均无依据。",
+            "operation": "待审：让信中文字揭示足以改变林澈判断的真相，并引发关系或行动后果；当前先须实际拆读并建立对应伏笔，不能从接信直接跳到认出真相。",
+            "knowledge_evidence": [
+              {
+                "start": 519,
+                "end": 536,
+                "quote": "揭秘前必须有伏笔（至少3章前埋下）"
+              },
+              {
+                "start": 540,
+                "end": 547,
+                "quote": "揭秘要有冲击力"
+              },
+              {
+                "start": 563,
+                "end": 570,
+                "quote": "揭秘后要有后果"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "林澈已经读到能用于此刻揭秘的具体信文",
+                "verdict": "contradicted",
+                "epistemic_type": "established",
+                "story_evidence": [
+                  {
+                    "start": 57,
+                    "end": 76,
+                    "quote": "他还没有拆开信封，也没有看过信里的字。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 33,
+                    "end": 53,
+                    "quote": "隐藏的真相被揭示，改变读者对剧情的理解。"
+                  }
+                ]
+              },
+              {
+                "claim": "至少三章前已有可回扣的伏笔",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [],
+                "knowledge_evidence": [
+                  {
+                    "start": 519,
+                    "end": 536,
+                    "quote": "揭秘前必须有伏笔（至少3章前埋下）"
+                  }
+                ]
+              },
+              {
+                "claim": "已有被推翻的认知及关系或剧情后果，能支撑揭示的冲击",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [],
+                "knowledge_evidence": [
+                  {
+                    "start": 540,
+                    "end": 547,
+                    "quote": "揭秘要有冲击力"
+                  },
+                  {
+                    "start": 563,
+                    "end": 584,
+                    "quote": "揭秘后要有后果：角色关系/剧情走向发生变化"
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "contradicted",
+              "reason": "直接用信文作此刻真相判断与明确的未拆未读状态冲突；可以未来读信，但当前不能声称已知。",
+              "evidence": [
+                {
+                  "start": 57,
+                  "end": 76,
+                  "quote": "他还没有拆开信封，也没有看过信里的字。"
+                }
+              ]
+            }
+          }
+        ],
+        "binding_renewal": {
+          "prior_packet_sha256": "d40dd388aff30f9e9d6596eaa0a1f36ab0edcb6fc9c035b414f76a371c259560",
+          "reason": "stable BM25 floating-point accumulation; exact same prefix, complete knowledge documents, candidates and ranking order; decisions unchanged"
+        }
+      }
+    },
+    {
+      "case_id": "public-02",
+      "review": {
+        "schema_version": 1,
+        "packet_sha256": "9729f8840bf28d60c7ca19daf6164392193695d622b24cb686d9bd69bf9ec3cb",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "independent_later_candidate_review"
+        },
+        "decisions": [
+          {
+            "source_path": "assets/character_archetypes/moral-grey-survivor.md",
+            "reason": "接信、读信和复述暗号未展示欺诈、操控、利己交易或极端求生；原型缺关键门槛。",
+            "operation": "待审：让林澈表面确认暗号、暗中算计交易或欺骗同伴。现有前文不足以赋予这种稳定人格。",
+            "knowledge_evidence": [
+              {
+                "start": 126,
+                "end": 137,
+                "quote": "以欺诈和操控为生存手段"
+              },
+              {
+                "start": 138,
+                "end": 152,
+                "quote": "外表阳光开朗实则内心冷酷算计"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "林澈已有稳定欺诈操控与双面行为证据。",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [
+                  {
+                    "start": 114,
+                    "end": 138,
+                    "quote": "他逐字读完，对许禾说：“暗号是松果，我记住了。”"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 126,
+                    "end": 137,
+                    "quote": "以欺诈和操控为生存手段"
+                  },
+                  {
+                    "start": 138,
+                    "end": 152,
+                    "quote": "外表阳光开朗实则内心冷酷算计"
+                  }
+                ]
+              },
+              {
+                "claim": "当前有以利己计算应对的极端求生困境。",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [
+                  {
+                    "start": 145,
+                    "end": 157,
+                    "quote": "两人仍在门口，尚未出发。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 440,
+                    "end": 462,
+                    "quote": "所有行为的底层逻辑都是\"如何让自己活得更好\""
+                  },
+                  {
+                    "start": 616,
+                    "end": 630,
+                    "quote": "在极端环境中追问\"什么是人\""
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈知道暗号，但没有已写出的欺骗目标或冷酷算计动机。",
+              "evidence": [
+                {
+                  "start": 99,
+                  "end": 119,
+                  "quote": "纸上写着：“今晚暗号：松果。”他逐字读完"
+                }
+              ]
+            }
+          },
+          {
+            "source_path": "assets/motif_library/weaving_story.md",
+            "reason": "读信条件已满足，仍不具备受害者禁声、记录罪行和无声控诉等核心条件；普通暗号信不能等同完整母题。",
+            "operation": "待审：让林澈读懂物质媒介中的受害者控诉并采取援助行动。当前只可说他已读懂暗号，不能扩写成获知罪行真相。",
+            "knowledge_evidence": [
+              {
+                "start": 48,
+                "end": 72,
+                "quote": "无法说话的受害者将自己遭遇的罪行织在布匹或绣袍上"
+              },
+              {
+                "start": 278,
+                "end": 301,
+                "quote": "接收者看到织物上的图案，理解了真相，开始行动。"
+              },
+              {
+                "start": 911,
+                "end": 925,
+                "quote": "当受害者有其他方式传递信息时"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "林澈已经实际阅读载体内容，而非仅持有未拆信。",
+                "verdict": "supported",
+                "epistemic_type": "established",
+                "story_evidence": [
+                  {
+                    "start": 86,
+                    "end": 119,
+                    "quote": "林澈随即取出信，拆开封口。纸上写着：“今晚暗号：松果。”他逐字读完"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 278,
+                    "end": 301,
+                    "quote": "接收者看到织物上的图案，理解了真相，开始行动。"
+                  }
+                ]
+              },
+              {
+                "claim": "这封信承载受害者遭受罪行的叙述。",
+                "verdict": "contradicted",
+                "epistemic_type": "established",
+                "story_evidence": [
+                  {
+                    "start": 99,
+                    "end": 114,
+                    "quote": "纸上写着：“今晚暗号：松果。”"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 198,
+                    "end": 222,
+                    "quote": "她将自己遭受的罪行织成图案或文字，记录在布匹上。"
+                  }
+                ]
+              },
+              {
+                "claim": "传信者遭受禁声且无法以口头方式传达信息，构成沉默抵抗。",
+                "verdict": "contradicted",
+                "epistemic_type": "established",
+                "story_evidence": [
+                  {
+                    "start": 7,
+                    "end": 44,
+                    "quote": "许禾把一封封好的信交给他，说：“这是今晚进门要用的暗号，你到地方前记住。”"
+                  },
+                  {
+                    "start": 114,
+                    "end": 145,
+                    "quote": "他逐字读完，对许禾说：“暗号是松果，我记住了。”许禾点了点头。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 116,
+                    "end": 130,
+                    "quote": "受害者被暴力剥夺了说话的能力"
+                  },
+                  {
+                    "start": 911,
+                    "end": 925,
+                    "quote": "当受害者有其他方式传递信息时"
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈已读到并记住“松果”，但并未从载体获知任何受害经过；援助所需信息不存在。",
+              "evidence": [
+                {
+                  "start": 99,
+                  "end": 138,
+                  "quote": "纸上写着：“今晚暗号：松果。”他逐字读完，对许禾说：“暗号是松果，我记住了。”"
+                }
+              ]
+            }
+          },
+          {
+            "source_path": "assets/pacing/chapter-hooks.md",
+            "reason": "暗号内容已经明确揭晓。能否进门尚未发生，但没有障碍或代价，暂不足以据此制造有效章末悬念。",
+            "operation": "待审：以“记住暗号之后能否顺利进门”作为章末钩；需要先建立具体阻碍或失败后果，不能继续吊住“信里写了什么”这一已答问题。",
+            "knowledge_evidence": [
+              {
+                "start": 263,
+                "end": 272,
+                "quote": "给出线索但不给结论"
+              },
+              {
+                "start": 2535,
+                "end": 2550,
+                "quote": "钩子太弱，读者看一眼就知道答案"
+              },
+              {
+                "start": 163,
+                "end": 178,
+                "quote": "紧张/愤怒/好奇/感动没有释放"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "进门结果尚未发生，可以作为将来行动的待定结果。",
+                "verdict": "supported",
+                "epistemic_type": "established",
+                "story_evidence": [
+                  {
+                    "start": 145,
+                    "end": 157,
+                    "quote": "两人仍在门口，尚未出发。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 263,
+                    "end": 272,
+                    "quote": "给出线索但不给结论"
+                  }
+                ]
+              },
+              {
+                "claim": "进门结果带有已建立的冲突、阻碍或重要代价，足以形成情绪未完成感。",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [
+                  {
+                    "start": 7,
+                    "end": 44,
+                    "quote": "许禾把一封封好的信交给他，说：“这是今晚进门要用的暗号，你到地方前记住。”"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 163,
+                    "end": 178,
+                    "quote": "紧张/愤怒/好奇/感动没有释放"
+                  },
+                  {
+                    "start": 2535,
+                    "end": 2550,
+                    "quote": "钩子太弱，读者看一眼就知道答案"
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈已知暗号，尚无进门风险或异常线索可供悬念化；不能假装他仍不知道信的内容。",
+              "evidence": [
+                {
+                  "start": 114,
+                  "end": 138,
+                  "quote": "他逐字读完，对许禾说：“暗号是松果，我记住了。”"
+                },
+                {
+                  "start": 145,
+                  "end": 157,
+                  "quote": "两人仍在门口，尚未出发。"
+                }
+              ]
+            }
+          },
+          {
+            "source_path": "assets/pacing/pacing-curve.md",
+            "reason": "157字只显示准备出发，无法识别卷级阶段、此前章节趋势或升速触发点。",
+            "operation": "待审：据节奏曲线确定当前应由中速转为高潮快节奏，并在出发后安排强钩；章节趋势和冲突升级依据不足，暂不执行。",
+            "knowledge_evidence": [
+              {
+                "start": 38,
+                "end": 57,
+                "quote": "节奏曲线是整卷/整本书的情绪波动图谱。"
+              },
+              {
+                "start": 2845,
+                "end": 2850,
+                "quote": "中 → 快"
+              },
+              {
+                "start": 2853,
+                "end": 2867,
+                "quote": "战斗开始、真相揭露、矛盾爆发"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "已知当前在卷内的位置及此前章节的情绪强度走势。",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [],
+                "knowledge_evidence": [
+                  {
+                    "start": 38,
+                    "end": 57,
+                    "quote": "节奏曲线是整卷/整本书的情绪波动图谱。"
+                  },
+                  {
+                    "start": 64,
+                    "end": 75,
+                    "quote": "开头紧、中段松、结尾紧"
+                  }
+                ]
+              },
+              {
+                "claim": "当前发生战斗、重大真相揭露或矛盾爆发，具备中转快的具体触发。",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [
+                  {
+                    "start": 114,
+                    "end": 157,
+                    "quote": "他逐字读完，对许禾说：“暗号是松果，我记住了。”许禾点了点头。两人仍在门口，尚未出发。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 2845,
+                    "end": 2850,
+                    "quote": "中 → 快"
+                  },
+                  {
+                    "start": 2853,
+                    "end": 2867,
+                    "quote": "战斗开始、真相揭露、矛盾爆发"
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "林澈掌握出发所需暗号，未掌握目的地冲突或足以写成高潮的信息；作者侧也缺章节走势。",
+              "evidence": [
+                {
+                  "start": 99,
+                  "end": 114,
+                  "quote": "纸上写着：“今晚暗号：松果。”"
+                },
+                {
+                  "start": 145,
+                  "end": 157,
+                  "quote": "两人仍在门口，尚未出发。"
+                }
+              ]
+            }
+          },
+          {
+            "source_path": "assets/technique_library/_scenarios/dialogue-tension.md",
+            "reason": "当前是公开确认信息，缺少信息博弈、冲突目标或隐瞒意图，无法直接套用对话张力。",
+            "operation": "待审：让林澈和许禾围绕暗号短句试探，以沉默暴露意图冲突；需先建立试探对象和人物分歧。",
+            "knowledge_evidence": [
+              {
+                "start": 38,
+                "end": 62,
+                "quote": "通过对话中的潜台词、信息博弈和情感冲突制造张力。"
+              },
+              {
+                "start": 531,
+                "end": 543,
+                "quote": "对话要有潜台词，不要直说"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "在场两人已有可交锋的不同目标、隐瞒内容或情绪冲突。",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [
+                  {
+                    "start": 114,
+                    "end": 145,
+                    "quote": "他逐字读完，对许禾说：“暗号是松果，我记住了。”许禾点了点头。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 38,
+                    "end": 62,
+                    "quote": "通过对话中的潜台词、信息博弈和情感冲突制造张力。"
+                  }
+                ]
+              },
+              {
+                "claim": "拟安排的短问和沉默有具体试探目的，能推动现有情节而非凭空制造误会。",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [
+                  {
+                    "start": 76,
+                    "end": 85,
+                    "quote": "许禾站在一旁等他。"
+                  },
+                  {
+                    "start": 145,
+                    "end": 157,
+                    "quote": "两人仍在门口，尚未出发。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 547,
+                    "end": 569,
+                    "quote": "每句话要有目的：展示性格/传递信息/推动剧情"
+                  },
+                  {
+                    "start": 593,
+                    "end": 605,
+                    "quote": "对话中的沉默比语言更有力"
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "他知道暗号，但前文没有提供要试探许禾的缘由或隐藏问题。",
+              "evidence": [
+                {
+                  "start": 99,
+                  "end": 119,
+                  "quote": "纸上写着：“今晚暗号：松果。”他逐字读完"
+                }
+              ]
+            }
+          },
+          {
+            "source_path": "assets/technique_library/dialogue-subtext.md",
+            "reason": "普通确认暗号可继续对话，却没有已建立的言外意图；知道暗号不等于具备潜台词所需的人物角力。",
+            "operation": "待审：让林澈口头说“记住了”，动作却表达试探或不信任，并通过三层对照写成潜台词；当前缺少该真实意图的依据，不宜直接添加。",
+            "knowledge_evidence": [
+              {
+                "start": 60,
+                "end": 86,
+                "quote": "对话的本质不是信息传递，而是**人物关系的角力**。"
+              },
+              {
+                "start": 2823,
+                "end": 2847,
+                "quote": "至少有一句台词有潜台词（字面意思 ≠ 真实意图）"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "林澈已实际读懂暗号，具有围绕内容发言的知识。",
+                "verdict": "supported",
+                "epistemic_type": "established",
+                "story_evidence": [
+                  {
+                    "start": 99,
+                    "end": 138,
+                    "quote": "纸上写着：“今晚暗号：松果。”他逐字读完，对许禾说：“暗号是松果，我记住了。”"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 143,
+                    "end": 149,
+                    "quote": "**说的**"
+                  },
+                  {
+                    "start": 173,
+                    "end": 179,
+                    "quote": "**想的**"
+                  }
+                ]
+              },
+              {
+                "claim": "他说“记住了”之外还有被前文支持的试探、不信任或其他隐藏意图。",
+                "verdict": "insufficient_evidence",
+                "epistemic_type": "uncertain",
+                "story_evidence": [
+                  {
+                    "start": 114,
+                    "end": 145,
+                    "quote": "他逐字读完，对许禾说：“暗号是松果，我记住了。”许禾点了点头。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 2823,
+                    "end": 2847,
+                    "quote": "至少有一句台词有潜台词（字面意思 ≠ 真实意图）"
+                  },
+                  {
+                    "start": 60,
+                    "end": 86,
+                    "quote": "对话的本质不是信息传递，而是**人物关系的角力**。"
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "insufficient_evidence",
+              "reason": "内容知识已经具备，拟写的不信任动机尚无依据；不能把动作配台词本身视为已有潜台词。",
+              "evidence": [
+                {
+                  "start": 114,
+                  "end": 145,
+                  "quote": "他逐字读完，对许禾说：“暗号是松果，我记住了。”许禾点了点头。"
+                }
+              ]
+            }
+          },
+          {
+            "source_path": "assets/technique_library/rhythm-variation.md",
+            "reason": "可做局部动作和对话的句式交替，但无法从短片段判断整章节奏趋势或强行加速到高潮。",
+            "operation": "在下一段出发过渡中，先用一条简短动作句让林澈收好读过的信，再用一条略长的当下感知句，最后接一句出发确认。仅实施长短句交替；不推断整章节奏失衡，不重复制造未读信悬念。",
+            "knowledge_evidence": [
+              {
+                "start": 240,
+                "end": 278,
+                "quote": "句子的物理长度直接影响阅读速度。短句快，长句慢。**交替使用制造呼吸感。**"
+              },
+              {
+                "start": 2058,
+                "end": 2063,
+                "quote": "日常/过渡"
+              }
+            ],
+            "conditions": [
+              {
+                "claim": "眼前存在尚待完成的出发过渡，能够容纳下一步动作与确认对话。",
+                "verdict": "supported",
+                "epistemic_type": "established",
+                "story_evidence": [
+                  {
+                    "start": 145,
+                    "end": 157,
+                    "quote": "两人仍在门口，尚未出发。"
+                  },
+                  {
+                    "start": 76,
+                    "end": 85,
+                    "quote": "许禾站在一旁等他。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 2058,
+                    "end": 2063,
+                    "quote": "日常/过渡"
+                  },
+                  {
+                    "start": 2084,
+                    "end": 2093,
+                    "quote": "叙述为主，对话点缀"
+                  }
+                ]
+              },
+              {
+                "claim": "已经完成读信并确认内容，下一步可以从处理信件和出发的当下动作推进，无需新设信息或回忆。",
+                "verdict": "supported",
+                "epistemic_type": "established",
+                "story_evidence": [
+                  {
+                    "start": 86,
+                    "end": 99,
+                    "quote": "林澈随即取出信，拆开封口。"
+                  },
+                  {
+                    "start": 114,
+                    "end": 145,
+                    "quote": "他逐字读完，对许禾说：“暗号是松果，我记住了。”许禾点了点头。"
+                  }
+                ],
+                "knowledge_evidence": [
+                  {
+                    "start": 266,
+                    "end": 276,
+                    "quote": "交替使用制造呼吸感。"
+                  },
+                  {
+                    "start": 292,
+                    "end": 302,
+                    "quote": "短-长-短（最常用）"
+                  }
+                ]
+              }
+            ],
+            "pov": {
+              "verdict": "supported",
+              "reason": "林澈在门口并已读信，可写其收信、当下观察和准备出发；操作不要求未知身份或目的地信息。",
+              "evidence": [
+                {
+                  "start": 86,
+                  "end": 99,
+                  "quote": "林澈随即取出信，拆开封口。"
+                },
+                {
+                  "start": 145,
+                  "end": 157,
+                  "quote": "两人仍在门口，尚未出发。"
+                }
+              ]
+            }
+          }
+        ],
+        "binding_renewal": {
+          "prior_packet_sha256": "5596ce123c2ab6a233bcd0e60346c4d8389bd1d929ccf0143763b78ee065aacb",
+          "reason": "stable BM25 floating-point accumulation; exact same prefix, complete knowledge documents, candidates and ranking order; decisions unchanged"
+        }
+      }
+    }
+  ]
+}
