@@ -1,0 +1,24 @@
+{
+  "review_method": "Independent current-AI pass on new packets for the two previously diagnosed cases, blinded to ranking and first-pass verdicts. Original primary judgments retained. Not a human gold standard.",
+  "unique_packets": 3,
+  "agreement": {
+    "claims": 15,
+    "knowledge": 15,
+    "world_agree": 14,
+    "knowledge_agree": 14
+  },
+  "sensitivity": {
+    "case_id": "wording_letter_use",
+    "condition": "held",
+    "primary": "insufficient_evidence",
+    "secondary": "supported",
+    "primary_variants": [
+      "carrier_process_use"
+    ],
+    "secondary_variants": [
+      "carrier_process_use"
+    ],
+    "primary_retained": true,
+    "reason": "The compound condition asserts the current input action needs to read the carrier. Access and previous reading are established, but rereading for use is not. The use variant does not require held."
+  }
+}

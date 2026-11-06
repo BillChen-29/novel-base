@@ -1,0 +1,110 @@
+{
+  "source": "original public letter_1 (independent writing branch)",
+  "writer_mode": "Current AI author given only writer_packet and selected future proposal ID; locally imported decisions, no remote model API.",
+  "writer_input": {
+    "writer_packet": {
+      "facts": [
+        {
+          "id": "fact_36332660a6b850607dee5116b47c197bcda70a448c4a23730cf33d49bbf24111",
+          "text": "沈遥持有封口完好的未读纸条。"
+        },
+        {
+          "id": "fact_0247f966deab6e3ccc6a24f9bb8da9d2a4b98f66df249efe366732159ce51d22",
+          "text": "阿岚告诉沈遥纸条里是取件编号；这只是阿岚的说明。"
+        },
+        {
+          "id": "fact_c1af59b6ab4f1751bb0713fbc321f3a86e9c5602e5ae29d1263741d58d7d6e9c",
+          "text": "沈遥的三号柜取件任务尚未完成。"
+        },
+        {
+          "id": "fact_4f081723734f6b87dd8d2924d30e487049cbffc6c0ff4f9219a68f46f0fdeffb",
+          "text": "沈遥目前持有或能够直接访问目标“三号柜取件纸条”这个信息载体，任务“三号柜取件”中的行动“读取纸条上的内容”所要读取的正是这个载体。"
+        },
+        {
+          "id": "fact_79095d48ccd3829e16b8f2bc8728e24eeeff40fc0ea90aaeaa74c931dfaf4495",
+          "text": "沈遥尚未读取目标“三号柜取件纸条”中与任务“三号柜取件”的行动“读取纸条上的内容”对应的具体内容。"
+        },
+        {
+          "id": "fact_d2091dfdc467b3a4781fb438c6a54fa862b8b171d277142be57c8ba37c2dcba9",
+          "text": "沈遥承担的任务“三号柜取件”中，目标“三号柜取件纸条”对应的具体事项仍未完成，行动“读取纸条上的内容”服务的正是这一未完成事项。"
+        },
+        {
+          "id": "fact_0a4f4c255fbc918f32344af25f478fb4f8c8f177e586693ddf5e179f0a03c8ef",
+          "text": "此动作绑定准确对应当前前文中的人物、对象和任务，动作描述未暗含未经确认的结果；该动作可以是尚未采纳的提案，不表示已经发生。（人物：沈遥；对象：三号柜取件纸条；任务：三号柜取件；具体动作：读取纸条上的内容）"
+        },
+        {
+          "id": "fact_1a8a4b69873fbab22bf7ebe77cca1b1f6ad6e6a3bc3ef41e89cbe767cd81134e",
+          "text": "截至当前前文末尾，这次具体操作尚未开始；不是把已开始或已完成的操作重新命名成新提案。这需要前文依据，不能仅凭未登记完成记录或新编号认定；不要求人物此前已作出计划。（人物：沈遥；对象：三号柜取件纸条；任务：三号柜取件；具体动作：读取纸条上的内容）"
+        }
+      ],
+      "proposals": [
+        {
+          "id": "proposal_ab2b436a0263661ce5f4e800e795760e",
+          "text": "开始读取纸条上的内容：沈遥针对三号柜取件纸条推进三号柜取件。读取与该任务对应的载体内容，区分所见内容、理解与真实性；不预先宣布内容可信，也不假定已读到哪一处。",
+          "status": "creative_proposal",
+          "knowledge_kind": "situation",
+          "evidence_fact_ids": [
+            "fact_4f081723734f6b87dd8d2924d30e487049cbffc6c0ff4f9219a68f46f0fdeffb",
+            "fact_79095d48ccd3829e16b8f2bc8728e24eeeff40fc0ea90aaeaa74c931dfaf4495",
+            "fact_d2091dfdc467b3a4781fb438c6a54fa862b8b171d277142be57c8ba37c2dcba9",
+            "fact_0a4f4c255fbc918f32344af25f478fb4f8c8f177e586693ddf5e179f0a03c8ef",
+            "fact_1a8a4b69873fbab22bf7ebe77cca1b1f6ad6e6a3bc3ef41e89cbe767cd81134e"
+          ]
+        }
+      ],
+      "instruction": "仅 facts 可作为当前视角事实；proposals 是未来选择，采纳不代表已经发生。"
+    },
+    "selected_proposal": "proposal_ab2b436a0263661ce5f4e800e795760e"
+  },
+  "draft": "沈遥用指甲一点点挑起封口，还是撕下了一小块纸。展开来，里面写着“取件号”，底下是三个数字。头两个很好认，零，四。最后一个落在折痕上。沈遥把纸条摊在手心，用拇指捋了两下，这才看清是个七。",
+  "initial_revision": 1,
+  "after_append_revision": 2,
+  "selected_variant": "carrier_process_read",
+  "accepted_intent_did_not_change_source_or_state": true,
+  "repeat_accept_idempotent": true,
+  "reviewed_new_facts": [
+    "沈遥已经拆开并展开纸条。",
+    "沈遥看到纸条上写着“取件号”。",
+    "沈遥已看清纸条上的三个数字是零四七。"
+  ],
+  "current_actions": {
+    "read_note": "completed",
+    "use_code": "unknown"
+  },
+  "blocked_actions": [
+    {
+      "action_id": "read_note",
+      "reason": "action_completed"
+    },
+    {
+      "action_id": "use_code",
+      "reason": "binding_not_pov_established"
+    }
+  ],
+  "next_proposals": 0,
+  "previous_reviewed_request_invalidated": true,
+  "old_proposal_rejected": true,
+  "cross_project_review_rejected": "review_binding_mismatch:project_id",
+  "cross_project_embedding_rejected": "embedding_dataset_mismatch",
+  "other_project_same_query_miss": {
+    "document_count": 12,
+    "query_count": 1,
+    "reused_documents": 12,
+    "reused_queries": 0,
+    "new_documents": 0,
+    "new_queries": 1,
+    "total_inputs": 1
+  },
+  "source_edit_revision": 3,
+  "edited_source_requires_new_review": true,
+  "encoding": {
+    "document_count": 12,
+    "query_count": 1,
+    "reused_documents": 12,
+    "reused_queries": 0,
+    "new_documents": 0,
+    "new_queries": 1,
+    "total_inputs": 1,
+    "model_seconds": 1.011
+  }
+}

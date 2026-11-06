@@ -1,0 +1,1471 @@
+{
+  "date": "2026-11-05",
+  "catalog_cards": 12,
+  "case_count": 14,
+  "top_k": 2,
+  "review_packets": 12,
+  "claim_counts": {
+    "supported": 32,
+    "contradicted": 5,
+    "insufficient_evidence": 20
+  },
+  "knowledge_decisions": 57,
+  "methods": {
+    "bm25": {
+      "cases": 14,
+      "accepted": 4,
+      "acceptance_preserved_facts": true,
+      "cross_revision_checks": 4,
+      "cross_revision_rejected": 4,
+      "original_proposals": 5,
+      "wording_proposals": 0,
+      "old_real_proposals": 0,
+      "new_real_proposals": 0,
+      "retrieved_cards": 20,
+      "reviewed_instances": 7,
+      "results": [
+        {
+          "case_id": "letter_1",
+          "revision": 1,
+          "ranking": [
+            {
+              "chunk_id": "carrier_process",
+              "source_path": "carrier_process",
+              "score": 7.493797682868049
+            },
+            {
+              "chunk_id": "trial_guidance_use",
+              "source_path": "trial_guidance_use",
+              "score": 3.657152282021078
+            }
+          ],
+          "action_states": {
+            "read_note": "proposed",
+            "use_code": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "use_code",
+              "reason": "binding_not_pov_established"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": "read_note",
+          "plan_count": 1,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "carrier_process",
+              "variant_id": "carrier_process_read",
+              "operation": "read"
+            }
+          ]
+        },
+        {
+          "case_id": "letter_2",
+          "revision": 2,
+          "ranking": [
+            {
+              "chunk_id": "carrier_process",
+              "source_path": "carrier_process",
+              "score": 10.371582199307893
+            },
+            {
+              "chunk_id": "trial_guidance_use",
+              "source_path": "trial_guidance_use",
+              "score": 4.9464072583645375
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "pending"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 2,
+          "accepted_action": "use_code",
+          "plan_count": 2,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposals": [
+            {
+              "card_id": "carrier_process",
+              "variant_id": "carrier_process_use",
+              "operation": "use"
+            }
+          ]
+        },
+        {
+          "case_id": "letter_3",
+          "revision": 3,
+          "ranking": [
+            {
+              "chunk_id": "trial_guidance_use",
+              "source_path": "trial_guidance_use",
+              "score": 2.90910209196912
+            },
+            {
+              "chunk_id": "carrier_process",
+              "source_path": "carrier_process",
+              "score": 1.7646545649393863
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "completed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "use_code",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 2,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposals": []
+        },
+        {
+          "case_id": "inventory_1",
+          "revision": 1,
+          "ranking": [
+            {
+              "chunk_id": "clue_check",
+              "source_path": "clue_check",
+              "score": 6.483282891449796
+            },
+            {
+              "chunk_id": "truth_trigger",
+              "source_path": "truth_trigger",
+              "score": 3.6958613220720173
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": "check_new",
+          "plan_count": 1,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "clue_check",
+              "variant_id": "clue_check_verify",
+              "operation": "check"
+            }
+          ]
+        },
+        {
+          "case_id": "inventory_2",
+          "revision": 2,
+          "ranking": [
+            {
+              "chunk_id": "clue_check",
+              "source_path": "clue_check",
+              "score": 6.608280642885869
+            },
+            {
+              "chunk_id": "truth_trigger",
+              "source_path": "truth_trigger",
+              "score": 6.128076331650509
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "in_progress"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": null,
+          "plan_count": 1,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposals": [
+            {
+              "card_id": "clue_check",
+              "variant_id": "clue_check_verify_continue",
+              "operation": "check"
+            }
+          ]
+        },
+        {
+          "case_id": "inventory_3",
+          "revision": 3,
+          "ranking": [
+            {
+              "chunk_id": "truth_pressure_response",
+              "source_path": "truth_pressure_response",
+              "score": 4.814709012682055
+            },
+            {
+              "chunk_id": "deadline_investigation",
+              "source_path": "deadline_investigation",
+              "score": 4.669557049235845
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "completed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "check_new",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 1,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposals": []
+        },
+        {
+          "case_id": "inventory_4",
+          "revision": 4,
+          "ranking": [
+            {
+              "chunk_id": "clue_check",
+              "source_path": "clue_check",
+              "score": 5.140396749027119
+            },
+            {
+              "chunk_id": "forbidden_knowledge_read",
+              "source_path": "forbidden_knowledge_read",
+              "score": 2.58875886927863
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "completed",
+            "recheck_old": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "check_new",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": "recheck_old",
+          "plan_count": 2,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "clue_check",
+              "variant_id": "clue_check_verify",
+              "operation": "check"
+            }
+          ]
+        },
+        {
+          "case_id": "wording_letter_unread",
+          "revision": 1,
+          "ranking": [],
+          "action_states": {
+            "read_note": "proposed",
+            "use_code": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "use_code",
+              "reason": "binding_not_pov_established"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "wording_letter_use",
+          "revision": 1,
+          "ranking": [],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "pending"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "wording_inventory",
+          "revision": 1,
+          "ranking": [],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "real_1",
+          "revision": 1,
+          "ranking": [
+            {
+              "chunk_id": "identity_mask_response",
+              "source_path": "identity_mask_response",
+              "score": 4.130508290570228
+            },
+            {
+              "chunk_id": "truth_trigger",
+              "source_path": "truth_trigger",
+              "score": 2.4322150095784916
+            }
+          ],
+          "action_states": {
+            "check_compass": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_compass",
+              "reason": "action_unknown"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "real_2",
+          "revision": 1,
+          "ranking": [
+            {
+              "chunk_id": "dialogue_active",
+              "source_path": "dialogue_active",
+              "score": 1.5075923900671697
+            },
+            {
+              "chunk_id": "story_shield_response",
+              "source_path": "story_shield_response",
+              "score": 1.0236653576366046
+            }
+          ],
+          "action_states": {
+            "reply_coffee": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "reply_coffee",
+              "reason": "action_unknown"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "real_body_pending",
+          "revision": 1,
+          "ranking": [
+            {
+              "chunk_id": "truth_pressure_response",
+              "source_path": "truth_pressure_response",
+              "score": 3.3201826681537367
+            },
+            {
+              "chunk_id": "clue_check",
+              "source_path": "clue_check",
+              "score": 2.311420738892169
+            }
+          ],
+          "action_states": {
+            "check_body": "pending"
+          },
+          "blocked_actions": [],
+          "reviewed_instances": 1,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "real_monitor_progress",
+          "revision": 1,
+          "ranking": [],
+          "action_states": {
+            "check_monitor_map": "in_progress"
+          },
+          "blocked_actions": [],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        }
+      ]
+    },
+    "vector": {
+      "cases": 14,
+      "accepted": 4,
+      "acceptance_preserved_facts": true,
+      "cross_revision_checks": 4,
+      "cross_revision_rejected": 4,
+      "original_proposals": 5,
+      "wording_proposals": 2,
+      "old_real_proposals": 0,
+      "new_real_proposals": 0,
+      "retrieved_cards": 28,
+      "reviewed_instances": 10,
+      "results": [
+        {
+          "case_id": "letter_1",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.34152705042360504
+            },
+            {
+              "source_path": "trial_guidance_use",
+              "chunk_id": "trial_guidance_use",
+              "score": 0.27644177786860774
+            }
+          ],
+          "action_states": {
+            "read_note": "proposed",
+            "use_code": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "use_code",
+              "reason": "binding_not_pov_established"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": "read_note",
+          "plan_count": 1,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "carrier_process",
+              "variant_id": "carrier_process_read",
+              "operation": "read"
+            }
+          ]
+        },
+        {
+          "case_id": "letter_2",
+          "revision": 2,
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.30545504995441336
+            },
+            {
+              "source_path": "forbidden_knowledge_read",
+              "chunk_id": "forbidden_knowledge_read",
+              "score": 0.26184525487936994
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "pending"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": "use_code",
+          "plan_count": 2,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposals": [
+            {
+              "card_id": "carrier_process",
+              "variant_id": "carrier_process_use",
+              "operation": "use"
+            }
+          ]
+        },
+        {
+          "case_id": "letter_3",
+          "revision": 3,
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.24432298214899026
+            },
+            {
+              "source_path": "forbidden_knowledge_read",
+              "chunk_id": "forbidden_knowledge_read",
+              "score": 0.19672751199204358
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "completed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "use_code",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 2,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposals": []
+        },
+        {
+          "case_id": "inventory_1",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.3007817309643948
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.2618824147175074
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": "check_new",
+          "plan_count": 1,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "clue_check",
+              "variant_id": "clue_check_verify",
+              "operation": "check"
+            }
+          ]
+        },
+        {
+          "case_id": "inventory_2",
+          "revision": 2,
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.33753142923214363
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.320623848545271
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "in_progress"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": null,
+          "plan_count": 1,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposals": [
+            {
+              "card_id": "clue_check",
+              "variant_id": "clue_check_verify_continue",
+              "operation": "check"
+            }
+          ]
+        },
+        {
+          "case_id": "inventory_3",
+          "revision": 3,
+          "ranking": [
+            {
+              "source_path": "deadline_investigation",
+              "chunk_id": "deadline_investigation",
+              "score": 0.3184690726572521
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.2940504004624631
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "completed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "check_new",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 1,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposals": []
+        },
+        {
+          "case_id": "inventory_4",
+          "revision": 4,
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.3268444335007382
+            },
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.2731370116182899
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "completed",
+            "recheck_old": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "check_new",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": "recheck_old",
+          "plan_count": 2,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "clue_check",
+              "variant_id": "clue_check_verify",
+              "operation": "check"
+            }
+          ]
+        },
+        {
+          "case_id": "wording_letter_unread",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "forbidden_knowledge_read",
+              "chunk_id": "forbidden_knowledge_read",
+              "score": 0.32494844168625975
+            },
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.24987445099015324
+            }
+          ],
+          "action_states": {
+            "read_note": "proposed",
+            "use_code": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "use_code",
+              "reason": "binding_not_pov_established"
+            }
+          ],
+          "reviewed_instances": 2,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "carrier_process",
+              "variant_id": "carrier_process_read",
+              "operation": "read"
+            }
+          ]
+        },
+        {
+          "case_id": "wording_letter_use",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "trial_guidance_use",
+              "chunk_id": "trial_guidance_use",
+              "score": 0.2370235891967187
+            },
+            {
+              "source_path": "forbidden_knowledge_read",
+              "chunk_id": "forbidden_knowledge_read",
+              "score": 0.22299844299620472
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "pending"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "wording_inventory",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "forbidden_knowledge_read",
+              "chunk_id": "forbidden_knowledge_read",
+              "score": 0.29370673291983346
+            },
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.2816691560663225
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "clue_check",
+              "variant_id": "clue_check_verify",
+              "operation": "check"
+            }
+          ]
+        },
+        {
+          "case_id": "real_1",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.24335274833376708
+            },
+            {
+              "source_path": "deadline_investigation",
+              "chunk_id": "deadline_investigation",
+              "score": 0.1894378606159498
+            }
+          ],
+          "action_states": {
+            "check_compass": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_compass",
+              "reason": "action_unknown"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "real_2",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "story_shield_response",
+              "chunk_id": "story_shield_response",
+              "score": 0.1323006217062375
+            },
+            {
+              "source_path": "dialogue_active",
+              "chunk_id": "dialogue_active",
+              "score": 0.1287046897070791
+            }
+          ],
+          "action_states": {
+            "reply_coffee": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "reply_coffee",
+              "reason": "action_unknown"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "real_body_pending",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.2923822197186003
+            },
+            {
+              "source_path": "deadline_investigation",
+              "chunk_id": "deadline_investigation",
+              "score": 0.22951826587244067
+            }
+          ],
+          "action_states": {
+            "check_body": "pending"
+          },
+          "blocked_actions": [],
+          "reviewed_instances": 1,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "real_monitor_progress",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "trial_guidance_use",
+              "chunk_id": "trial_guidance_use",
+              "score": 0.2597975357305573
+            },
+            {
+              "source_path": "identity_mask_response",
+              "chunk_id": "identity_mask_response",
+              "score": 0.22348317480573282
+            }
+          ],
+          "action_states": {
+            "check_monitor_map": "in_progress"
+          },
+          "blocked_actions": [],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        }
+      ]
+    },
+    "hybrid": {
+      "cases": 14,
+      "accepted": 4,
+      "acceptance_preserved_facts": true,
+      "cross_revision_checks": 4,
+      "cross_revision_rejected": 4,
+      "original_proposals": 5,
+      "wording_proposals": 2,
+      "old_real_proposals": 0,
+      "new_real_proposals": 0,
+      "retrieved_cards": 28,
+      "reviewed_instances": 9,
+      "results": [
+        {
+          "case_id": "letter_1",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "trial_guidance_use",
+              "chunk_id": "trial_guidance_use",
+              "score": 0.03225806451612903
+            }
+          ],
+          "action_states": {
+            "read_note": "proposed",
+            "use_code": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "use_code",
+              "reason": "binding_not_pov_established"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": "read_note",
+          "plan_count": 1,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "carrier_process",
+              "variant_id": "carrier_process_read",
+              "operation": "read"
+            }
+          ]
+        },
+        {
+          "case_id": "letter_2",
+          "revision": 2,
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "forbidden_knowledge_read",
+              "chunk_id": "forbidden_knowledge_read",
+              "score": 0.03200204813108039
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "pending"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": "use_code",
+          "plan_count": 2,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposals": [
+            {
+              "card_id": "carrier_process",
+              "variant_id": "carrier_process_use",
+              "operation": "use"
+            }
+          ]
+        },
+        {
+          "case_id": "letter_3",
+          "revision": 3,
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.03252247488101534
+            },
+            {
+              "source_path": "trial_guidance_use",
+              "chunk_id": "trial_guidance_use",
+              "score": 0.032266458495966696
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "completed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "use_code",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 2,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposals": []
+        },
+        {
+          "case_id": "inventory_1",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.03225806451612903
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": "check_new",
+          "plan_count": 1,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "clue_check",
+              "variant_id": "clue_check_verify",
+              "operation": "check"
+            }
+          ]
+        },
+        {
+          "case_id": "inventory_2",
+          "revision": 2,
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.03225806451612903
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "in_progress"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": null,
+          "plan_count": 1,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposals": [
+            {
+              "card_id": "clue_check",
+              "variant_id": "clue_check_verify_continue",
+              "operation": "check"
+            }
+          ]
+        },
+        {
+          "case_id": "inventory_3",
+          "revision": 3,
+          "ranking": [
+            {
+              "source_path": "deadline_investigation",
+              "chunk_id": "deadline_investigation",
+              "score": 0.03252247488101534
+            },
+            {
+              "source_path": "truth_pressure_response",
+              "chunk_id": "truth_pressure_response",
+              "score": 0.032018442622950824
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "completed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "check_new",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 1,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposals": []
+        },
+        {
+          "case_id": "inventory_4",
+          "revision": 4,
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.0315136476426799
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "completed",
+            "recheck_old": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "check_new",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": "recheck_old",
+          "plan_count": 2,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "clue_check",
+              "variant_id": "clue_check_verify",
+              "operation": "check"
+            }
+          ]
+        },
+        {
+          "case_id": "wording_letter_unread",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "forbidden_knowledge_read",
+              "chunk_id": "forbidden_knowledge_read",
+              "score": 0.01639344262295082
+            },
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.016129032258064516
+            }
+          ],
+          "action_states": {
+            "read_note": "proposed",
+            "use_code": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "use_code",
+              "reason": "binding_not_pov_established"
+            }
+          ],
+          "reviewed_instances": 2,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "carrier_process",
+              "variant_id": "carrier_process_read",
+              "operation": "read"
+            }
+          ]
+        },
+        {
+          "case_id": "wording_letter_use",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "trial_guidance_use",
+              "chunk_id": "trial_guidance_use",
+              "score": 0.01639344262295082
+            },
+            {
+              "source_path": "forbidden_knowledge_read",
+              "chunk_id": "forbidden_knowledge_read",
+              "score": 0.016129032258064516
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "pending"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "wording_inventory",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "forbidden_knowledge_read",
+              "chunk_id": "forbidden_knowledge_read",
+              "score": 0.01639344262295082
+            },
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.016129032258064516
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "reviewed_instances": 1,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": [
+            {
+              "card_id": "clue_check",
+              "variant_id": "clue_check_verify",
+              "operation": "check"
+            }
+          ]
+        },
+        {
+          "case_id": "real_1",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.03252247488101534
+            },
+            {
+              "source_path": "identity_mask_response",
+              "chunk_id": "identity_mask_response",
+              "score": 0.03177805800756621
+            }
+          ],
+          "action_states": {
+            "check_compass": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_compass",
+              "reason": "action_unknown"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "real_2",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "dialogue_active",
+              "chunk_id": "dialogue_active",
+              "score": 0.03252247488101534
+            },
+            {
+              "source_path": "story_shield_response",
+              "chunk_id": "story_shield_response",
+              "score": 0.03252247488101534
+            }
+          ],
+          "action_states": {
+            "reply_coffee": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "reply_coffee",
+              "reason": "action_unknown"
+            }
+          ],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "real_body_pending",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "truth_pressure_response",
+              "chunk_id": "truth_pressure_response",
+              "score": 0.03131881575727918
+            },
+            {
+              "source_path": "trial_guidance_use",
+              "chunk_id": "trial_guidance_use",
+              "score": 0.03125763125763126
+            }
+          ],
+          "action_states": {
+            "check_body": "pending"
+          },
+          "blocked_actions": [],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        },
+        {
+          "case_id": "real_monitor_progress",
+          "revision": 1,
+          "ranking": [
+            {
+              "source_path": "trial_guidance_use",
+              "chunk_id": "trial_guidance_use",
+              "score": 0.01639344262295082
+            },
+            {
+              "source_path": "identity_mask_response",
+              "chunk_id": "identity_mask_response",
+              "score": 0.016129032258064516
+            }
+          ],
+          "action_states": {
+            "check_monitor_map": "in_progress"
+          },
+          "blocked_actions": [],
+          "reviewed_instances": 0,
+          "accepted_action": null,
+          "plan_count": 0,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposals": []
+        }
+      ]
+    }
+  }
+}

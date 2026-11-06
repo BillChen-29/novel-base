@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-05",
+  "phase": "before local model encoding and ranking",
+  "fixture_sha256": "778abb44d2f1130bac70bf81d647027f93b1c552de1295ee9d1156eb26749c68",
+  "card_file_sha256": "65c51ee0c6b39e021f68879deaaaca6c136d8d0c6f543e38f7b17a4ca252f886",
+  "methods": [
+    "bm25",
+    "vector",
+    "hybrid"
+  ],
+  "top_k": 2,
+  "rrf_k": 60,
+  "base_public_cuts": 7,
+  "wording_stress_cases": 3,
+  "real_local_cuts": 2,
+  "query_changes": [
+    {
+      "case_id": "wording_letter_unread",
+      "base_case_id": "letter_1",
+      "review_candidate": "沈遥手里的纸仍封着，她还没看过上面的字句，柜里的东西也没取出来。"
+    },
+    {
+      "case_id": "wording_letter_use",
+      "base_case_id": "letter_2",
+      "review_candidate": "沈遥看清并懂得那四个数字的意思了，面前的装置正等着她把它们敲进去，她的手指还没落下。"
+    },
+    {
+      "case_id": "wording_inventory",
+      "base_case_id": "inventory_1",
+      "review_candidate": "许知已把昨日那张逐项过完，却仍不知道一箱之差因何而来。今日那张还没挨项查验，手边的记载可以拿来比照。"
+    }
+  ],
+  "note": "Original scenes/catalog fixed; new cases alter reviewed base-state wording only and are not an independent natural-distribution accuracy sample."
+}

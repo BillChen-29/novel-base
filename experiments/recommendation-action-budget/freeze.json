@@ -1,0 +1,122 @@
+{
+  "date": "2026-11-06",
+  "design": "paired replay, fixed fourteen chronological case snapshots, twelve cards and the same three rankers, same reviews when the complete prepared project and packet are unchanged",
+  "rankers": [
+    "bm25",
+    "vector",
+    "hybrid"
+  ],
+  "policies": [
+    "global",
+    "action_compatible"
+  ],
+  "budget_unit": "up to two distinct card IDs shared across eligible actions; a card may create multiple review instances",
+  "top_k": 2,
+  "primary_measures": [
+    "retrieved cards",
+    "eligible instances",
+    "recovered/lost action+card+variant proposals",
+    "actual condition review workload",
+    "inadmissible distractors and evidence-insufficient cases",
+    "facts preserved on acceptance and stale revision rejection"
+  ],
+  "targeted_case_ids": [
+    "wording_letter_use",
+    "real_monitor_progress"
+  ],
+  "target_scope": "Post-diagnostic test on the original sample, not independent evaluation or applicability of unconstrained generation.",
+  "freeze_files": {
+    "manifest.json": "534cf7cebef50cf2040ccb92990653681bc72c25f447701c28d30211a0e145c3",
+    "fixtures.json": "06d6a597e10966efebad2606c2ca0d6835aba8a5ea799b77340a7d6dfc4b85c0",
+    "state-reviews.json": "0f74c3bf4a83a57ca26aaf7a029dc2b98a6fc831b613cec70f3996b6c3772543",
+    "catalog.json": "dc6843aeccc1d890a396682ec923daef849a4577e85750baf06b889443f70ac1"
+  },
+  "case_inputs_sha256": {
+    "letter_1": {
+      "dataset.json": "98b676d2c36232c352a85841936d062d83572ef4995f2f1cd62f58624510c47b",
+      "embedding-input.json": "9ddfa47a2c5751aa69549dd88f6c3e4ff60c30dbf5cab39dd760362c027cd37c",
+      "embeddings.json": "2bb4056423f4d8732b1e32013d30509476476224610e471051cd340b350fa3cc"
+    },
+    "letter_2": {
+      "dataset.json": "f7f73547e12d8b7658befc60bcc13d0e870c0000681adde7d34a003544d3e49c",
+      "embedding-input.json": "a6bdb3bdc167a951347a191e1211068b7c45ca4396c90297f70f638aa98812e5",
+      "embeddings.json": "d7dd14d029441aa2507695354b17a649b7d9333a0c94af1eb8c0b262a15cb1c5"
+    },
+    "letter_3": {
+      "dataset.json": "7d1963d920fe3821cb93d127ae6cefafe958e4d9e292a9f37a47e982fc8640c3",
+      "embedding-input.json": "a486ebe39c9381df1743966de530adaa0852afa1c29c3e2d0643bd5aca696c08",
+      "embeddings.json": "c3ed7893ef168594680cde0eea03a08e7854cd2d3de5e0cea369c7bcafedc87b"
+    },
+    "inventory_1": {
+      "dataset.json": "96ee55f69b2acfd4b543db8fb599f18ec4aa0cbe6d90623cc6610fd8507202dd",
+      "embedding-input.json": "467cd86492470c8132f7a30e01804a5ddcce6150399f0aa04438f5b99ee69b5e",
+      "embeddings.json": "e1aa2327bb410dcc6792aae4f8bfcb22afbfdadbea107ab0d7a144ab90017272"
+    },
+    "inventory_2": {
+      "dataset.json": "46e4e65ba8bc36800a5f8e4e4a641660d32ce0052ce431862e5285d317b6f796",
+      "embedding-input.json": "b3457f89535b26c0e1539db97158b4e7993b36c3c1704a120b20dd7dac29d269",
+      "embeddings.json": "74ac319fa9b423026a9b55ccafc65fd1dbbdf68c2d9a90df33c0e95930b11b6f"
+    },
+    "inventory_3": {
+      "dataset.json": "57469ba0caf32152371e8baff7bfc0248f8915801fed01c3f7e5bf5aa7203852",
+      "embedding-input.json": "3d1e076c5df33248e378ce3ec87f8a523dd4a6b01d15019cb3623919f13aa47c",
+      "embeddings.json": "59c9fcb088b3772d1d6de8fdc831da161cb2e3584092661cce4a2e2df92027fc"
+    },
+    "inventory_4": {
+      "dataset.json": "cb84fa084b47db9a330d26541f223b0b8a3c9822348778f4cd93c05780ac226a",
+      "embedding-input.json": "595eed86a6184b9f31d644b52ba63d216ae6fe96364d376dd25aecb9d7380e26",
+      "embeddings.json": "41302c2b8984a52e66da9137be22b87626bb484cfa679691163bc170e7757739"
+    },
+    "wording_letter_unread": {
+      "dataset.json": "7c96dfc34d22344f7e0df37dcc164194a9946d384988b3540b41a667b2c14442",
+      "embedding-input.json": "dbdf822362aaec83f4454594ed41d9c0b1d5312a5ce07210e87823dffabe58e0",
+      "embeddings.json": "63100d8caea82cd72fb613ed838e3c09b426c2de89270524240c298e9031c738"
+    },
+    "wording_letter_use": {
+      "dataset.json": "01313dd7479b160c93e3d01f3828ce5ecf81fde1ddb4c403e46b15dac92be59e",
+      "embedding-input.json": "0593a3b9b9293145d05659aceb42925c73fb6f7664944d6965e3b2004f137892",
+      "embeddings.json": "2c1bf6fdcd68f27f8ef568507bd00951bcde1cfaab565e0648293259f7b2f190"
+    },
+    "wording_inventory": {
+      "dataset.json": "ce1758f7450f6e64109547e1881db55f727e8337664b6730f9fc18807d0715a5",
+      "embedding-input.json": "011895add53dd415d047bceb4d34a9d5e90fb8ca3cc2d3fbd299a395d632700d",
+      "embeddings.json": "5440378e9feec07436d72ac8c84d4dd374378225529df5bd980c59b64c3aecc7"
+    },
+    "real_1": {
+      "dataset.json": "8e1d262d85811161e6716e0cb30a6dc92126f0aa53516b5a074c0541cad5ddeb",
+      "embedding-input.json": "73c2863ddf703cca5fe9e9fe6e7584b386c29e95da2d0dc5bc0bb5ecb2de4298",
+      "embeddings.json": "ee101fc9593479c6955def9e3c5e8c8b7906f8d0afdaf231aa0a0b526748550f"
+    },
+    "real_2": {
+      "dataset.json": "10508b124c1a140a35d9ad33227adc65daedf0df5250b9e0d883121d02a051c2",
+      "embedding-input.json": "eb583c9e21c4864cad62559fdc41a1dd2e5df0145ec0289eae619b2613318816",
+      "embeddings.json": "df653157de7eaa0078dd10068c09392dc673308871c87fffad834bb3f151a62a"
+    },
+    "real_body_pending": {
+      "dataset.json": "aaa65f5f4fa2cf5e435abeccd6a4c3813fac57654b1362292a93f1462a8d2213",
+      "embedding-input.json": "a01fb1c3cae917267a339ff714640715ce9379073aeda86c7b5b73b0b152f1ca",
+      "embeddings.json": "acd7a2e8ed17cc867a3525f4c2c0819575461ebded65636cb7871ddcaedab8c3"
+    },
+    "real_monitor_progress": {
+      "dataset.json": "e1865f3389f5579e5c96251d73647a65f2099f31bdf1e8b29add3516c37de08e",
+      "embedding-input.json": "61bbb3370e020c42b8d340493c6fd2db846eb69d7c5828f35990d15bb58c785a",
+      "embeddings.json": "ceba92ee1a67374b2bf8cc4b6460b0ce51f5b2565230e1921389812e54edebee"
+    }
+  },
+  "engine_before": {
+    "scripts/recommendation_engine.py": "a89a89b43177dd11409a723ad9d16f76e500792ba055006023b1fa370fa4bd3b",
+    "scripts/recommendation_retrieval.py": "b34aa645967a3deb45718fb86032e0481ede97a761b258767b46974582afef3a",
+    "experiments/recommendation-vector/run_experiment.py": "f451c9aca24ff78998038d18c47746091fd5c0420d7c32c1fa1f6b082b2f697f"
+  },
+  "old_outputs_sha256": {
+    "candidates-bm25.json": "bf8b8cac274cfb3e56d73b900b392b2e8bb0f5be6a6b9ad7adcc1700d327951c",
+    "candidate-reviews-bm25.json": "da0198e406f9431387612ecb9e887a7e2d57b1097ac6f6a05a2f1d25c7ca3956",
+    "results-bm25.json": "8aa0cbc179b1471b655b7151b7f3e4d47b1514e1b8206dd43116c432bb24763b",
+    "candidates-vector.json": "93c0664ec1d68f72424ad67e698882f96b13f91a0e61969b079736af9ed9f630",
+    "candidate-reviews-vector.json": "95c6dd92ff2374adb680ea5efcc356bd8324130b14e71e0d8588176716e999f0",
+    "results-vector.json": "8d79e1c8bc32f0a6595e55c72ef900431cce3fc3293e48035671921ca09d782c",
+    "candidates-hybrid.json": "7f45328752e85f77929b62a20372703b6fd1ff3fee6af844464ed475a1bdd75f",
+    "candidate-reviews-hybrid.json": "e1b122c2d32b5dfde9e53f7db0a7f1128da9dbfadd4e28b2b82acdc0fc2636b4",
+    "results-hybrid.json": "2779925aa5f8d52c801e9193bc440cbda6090436ba78fd1a10cbabbdd1f941ab"
+  }
+}

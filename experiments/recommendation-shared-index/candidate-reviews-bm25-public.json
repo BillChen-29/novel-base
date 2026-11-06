@@ -1,0 +1,1050 @@
+{
+  "reviews": {
+    "letter_1": {
+      "i_18a0d5c798d7e2a557496165": {
+        "schema_version": 1,
+        "project_id": "letter_loop",
+        "project_sha256": "e4a037ac9ef6541fab71806b79240f9f41fbff7bc3ee9b48641768127edd6b4c",
+        "packet_sha256": "05287f1ed382015fc2977aa4eb3b6e67df0f6d5ec46012b1ab5dce61ca72839c",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "current-ai-shared-conditions-a"
+        },
+        "decisions": [
+          {
+            "fact_id": "probe_0001",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "纸条被递到沈遥手中并由她握持，载体当前可访问；这里只确认被交付的纸条，不确认阿岚所述内部内容。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 15,
+                "end": 42,
+                "quote": "阿岚把一张封口纸条递到她手中，说：“里面是取件编号。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 42,
+                "end": 55,
+                "quote": "沈遥握着纸条，封口仍完好。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "她亲自接收、握持纸条，可以知道自己持有这一载体。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 15,
+                    "end": 42,
+                    "quote": "阿岚把一张封口纸条递到她手中，说：“里面是取件编号。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 42,
+                    "end": 55,
+                    "quote": "沈遥握着纸条，封口仍完好。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文直接说明她没看过纸上内容，读取尚未发生。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 55,
+                "end": 64,
+                "quote": "她没看过纸上的内容"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "这是她自身尚未阅读的状态，未因听到他人说明而成为已读。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 55,
+                    "end": 64,
+                    "quote": "她没看过纸上的内容"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "尚未看过内容直接蕴含阅读未完成；这里的“未读完”不预设已经开始阅读。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 55,
+                "end": 64,
+                "quote": "她没看过纸上的内容"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "她对自身未阅读状态有直接认知依据。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 55,
+                    "end": 64,
+                    "quote": "她没看过纸上的内容"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0004",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "“已经读取并理解”包含已读取这一必要部分，与原文明示没有看过内容冲突。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 55,
+                "end": 64,
+                "quote": "她没看过纸上的内容"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "contradicted",
+                "reason": "不能把沈遥标为已经读取并理解；她自身尚未阅读有明确反证。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 55,
+                    "end": 64,
+                    "quote": "她没看过纸上的内容"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0005",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "阿岚仅介绍纸条内是取件编号，沈遥尚未查看具体内容；这不足以证明她已经理解具体内容及其明确用途。未读也不单独证明她不可能从其他渠道知道用途，因此不判为反面已证实。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 30,
+                "end": 42,
+                "quote": "说：“里面是取件编号。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 55,
+                "end": 64,
+                "quote": "她没看过纸上的内容"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "可以确认她听到用途说明，但不能据此确认她已理解纸条的具体内容与完整用途。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 30,
+                    "end": 42,
+                    "quote": "说：“里面是取件编号。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 55,
+                    "end": 64,
+                    "quote": "她没看过纸上的内容"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0006",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文明确三号柜取件仍未办完；与该取件相关的纸条正由她持有且尚未读取，读取服务于这一未完成事项。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 0,
+                "end": 15,
+                "quote": "沈遥站在三号柜前，柜门还关着。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 15,
+                "end": 42,
+                "quote": "阿岚把一张封口纸条递到她手中，说：“里面是取件编号。”"
+              },
+              {
+                "scene_id": "s1",
+                "start": 55,
+                "end": 77,
+                "quote": "她没看过纸上的内容，三号柜的取件也还没办完。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "沈遥在关闭的柜前持有尚未查看的取件纸条，原文直接呈现她的未完成取件状态。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 0,
+                    "end": 15,
+                    "quote": "沈遥站在三号柜前，柜门还关着。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 15,
+                    "end": 42,
+                    "quote": "阿岚把一张封口纸条递到她手中，说：“里面是取件编号。”"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 55,
+                    "end": 77,
+                    "quote": "她没看过纸上的内容，三号柜的取件也还没办完。"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "letter_2": {
+      "i_6d2e06aef51df70c233757c4": {
+        "schema_version": 1,
+        "project_id": "letter_loop",
+        "project_sha256": "5e2d3021e25fe1837560d69d817e46604db648c80f8b6956b48afe6e51a6c49f",
+        "packet_sha256": "a36027dd3836094f6157455d1ba70b9c33f6ec24c2236a27e963d1f07428e71c",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "current-ai-shared-conditions-b"
+        },
+        "decisions": [
+          {
+            "fact_id": "probe_0001",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "纸条可访问且是已读编号的来源有依据；但候选还称接下来的输入行动所要读取的就是该载体。原文仅确立已读完后准备输入，没有交代输入时还需读取纸条，完整复合命题证据不足。",
+            "evidence": [
+              {
+                "scene_id": "s2",
+                "start": 0,
+                "end": 42,
+                "quote": "沈遥撕开封口，看到纸上只有“4816”四个数字。她逐个读完，明白它们是本次取件编号。"
+              },
+              {
+                "scene_id": "s2",
+                "start": 42,
+                "end": 91,
+                "quote": "三号柜的屏幕提示：“请输入四位取件编号。”她知道要把这四个数字输入屏幕，手指还没落下，柜门仍关着。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "沈遥明知数字及其用途，但未交代她认为输入操作还须读取纸条，不能补全候选的这一部分。",
+                "evidence": [
+                  {
+                    "scene_id": "s2",
+                    "start": 0,
+                    "end": 42,
+                    "quote": "沈遥撕开封口，看到纸上只有“4816”四个数字。她逐个读完，明白它们是本次取件编号。"
+                  },
+                  {
+                    "scene_id": "s2",
+                    "start": 42,
+                    "end": 91,
+                    "quote": "三号柜的屏幕提示：“请输入四位取件编号。”她知道要把这四个数字输入屏幕，手指还没落下，柜门仍关着。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "截点处已逐个读完纸上全部四位数字，明确否定尚未读取；不能沿用上一场的未读状态。",
+            "evidence": [
+              {
+                "scene_id": "s2",
+                "start": 0,
+                "end": 42,
+                "quote": "沈遥撕开封口，看到纸上只有“4816”四个数字。她逐个读完，明白它们是本次取件编号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "contradicted",
+                "reason": "她亲自看到并读完数字，当前知情状态与尚未读取相反。",
+                "evidence": [
+                  {
+                    "scene_id": "s2",
+                    "start": 0,
+                    "end": 42,
+                    "quote": "沈遥撕开封口，看到纸上只有“4816”四个数字。她逐个读完，明白它们是本次取件编号。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "contradicted",
+            "epistemic_type": "established",
+            "reason": "原文明言逐个读完且纸上只有四个数字，否定当前仍未读完；输入尚未开始不等于阅读未完成。",
+            "evidence": [
+              {
+                "scene_id": "s2",
+                "start": 0,
+                "end": 42,
+                "quote": "沈遥撕开封口，看到纸上只有“4816”四个数字。她逐个读完，明白它们是本次取件编号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "contradicted",
+                "reason": "她已经完成并理解这次阅读，未读完不能作为她当前的知识。",
+                "evidence": [
+                  {
+                    "scene_id": "s2",
+                    "start": 0,
+                    "end": 42,
+                    "quote": "沈遥撕开封口，看到纸上只有“4816”四个数字。她逐个读完，明白它们是本次取件编号。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0004",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "四个数字已全部读完，并被明确理解为本次取件编号，满足输入所需内容已读懂。",
+            "evidence": [
+              {
+                "scene_id": "s2",
+                "start": 0,
+                "end": 42,
+                "quote": "沈遥撕开封口，看到纸上只有“4816”四个数字。她逐个读完，明白它们是本次取件编号。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "看到、逐个读完及明白均直接归属于沈遥。",
+                "evidence": [
+                  {
+                    "scene_id": "s2",
+                    "start": 0,
+                    "end": 42,
+                    "quote": "沈遥撕开封口，看到纸上只有“4816”四个数字。她逐个读完，明白它们是本次取件编号。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0005",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "柜屏要求四位取件编号，且叙述明确她知道将已读四个数字输入屏幕，具体用途成立。",
+            "evidence": [
+              {
+                "scene_id": "s2",
+                "start": 42,
+                "end": 91,
+                "quote": "三号柜的屏幕提示：“请输入四位取件编号。”她知道要把这四个数字输入屏幕，手指还没落下，柜门仍关着。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "她知道这一表述直接证明沈遥已掌握对应的使用方法。",
+                "evidence": [
+                  {
+                    "scene_id": "s2",
+                    "start": 42,
+                    "end": 91,
+                    "quote": "三号柜的屏幕提示：“请输入四位取件编号。”她知道要把这四个数字输入屏幕，手指还没落下，柜门仍关着。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0006",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "手指未落下、柜门仍关闭，表明编号输入和取件事项仍未完成；已知输入目的把行动与事项连接。",
+            "evidence": [
+              {
+                "scene_id": "s2",
+                "start": 42,
+                "end": 91,
+                "quote": "三号柜的屏幕提示：“请输入四位取件编号。”她知道要把这四个数字输入屏幕，手指还没落下，柜门仍关着。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "她正准备亲自输入，且知道数字要输入柜屏，有依据知道尚待完成的具体操作。",
+                "evidence": [
+                  {
+                    "scene_id": "s2",
+                    "start": 42,
+                    "end": 91,
+                    "quote": "三号柜的屏幕提示：“请输入四位取件编号。”她知道要把这四个数字输入屏幕，手指还没落下，柜门仍关着。"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "i_948b825fa34cc123f0559057": {
+        "schema_version": 1,
+        "project_id": "letter_loop",
+        "project_sha256": "7d624f4d85ce6553adc106c5c8dc57856e382fce64c88a9b594d7acc97b07d62",
+        "packet_sha256": "d9a63b8a146baef9564add3cf63353c1da92a47005653498c60dfc9559caf711",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "current-ai-shared-conditions-a"
+        },
+        "decisions": [
+          {
+            "fact_id": "probe_0001",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "正文只有收到纸条、读出编号及准备输入；没有跨越阈限或进入未知试炼领域的叙述。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "没有证据显示沈遥知道自己跨越了阈限并进入试炼领域。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "普通取件流程的几个步骤不能证明连续递进的多项考验，也没有证据把纸条对应到其中一次试炼。",
+            "evidence": [],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "她理解取件编号，并不构成她知悉多项递进试炼的证据。",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "手指尚未落下且柜门仍关，支持取件操作尚未完成；但整句还预设存在“当前这一次具体试炼”，正文没有建立这一前提。",
+            "evidence": [
+              {
+                "scene_id": "s2",
+                "start": 78,
+                "end": 91,
+                "quote": "手指还没落下，柜门仍关着。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "她可以知道尚未输入编号，但没有依据确认她知道一项已成立的具体试炼尚未完成。",
+                "evidence": [
+                  {
+                    "scene_id": "s2",
+                    "start": 78,
+                    "end": 91,
+                    "quote": "手指还没落下，柜门仍关着。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0004",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "阿岚交付纸条并介绍取件编号，足以证明与取件相关的帮助；没有依据把这一帮助关联到已成立的“当前这一次试炼”，故整句证据不足。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 15,
+                "end": 42,
+                "quote": "阿岚把一张封口纸条递到她手中，说：“里面是取件编号。”"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "她接收了阿岚的材料和说明，但没有证据证明她知悉其与某次具体试炼的联系。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 15,
+                    "end": 42,
+                    "quote": "阿岚把一张封口纸条递到她手中，说：“里面是取件编号。”"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0005",
+            "verdict": "insufficient_evidence",
+            "epistemic_type": "uncertain",
+            "reason": "原文明确她理解编号及输入用途；但未确立“当前试炼”的存在，不能把对取件用途的理解升级为对试炼用途的完整知识。",
+            "evidence": [
+              {
+                "scene_id": "s2",
+                "start": 24,
+                "end": 42,
+                "quote": "她逐个读完，明白它们是本次取件编号。"
+              },
+              {
+                "scene_id": "s2",
+                "start": 63,
+                "end": 77,
+                "quote": "她知道要把这四个数字输入屏幕"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "insufficient_evidence",
+                "reason": "她对数字输入屏幕的理解有证据，对“当前试炼”这一额外前提的知情没有依据。",
+                "evidence": [
+                  {
+                    "scene_id": "s2",
+                    "start": 24,
+                    "end": 42,
+                    "quote": "她逐个读完，明白它们是本次取件编号。"
+                  },
+                  {
+                    "scene_id": "s2",
+                    "start": 63,
+                    "end": 77,
+                    "quote": "她知道要把这四个数字输入屏幕"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0006",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "这一条本身没有添加试炼存在前提。数字已经读出，屏幕正在要求输入四位编号，她知道输入方式且手指尚未落下，所述使用指引的操作条件当前具备。",
+            "evidence": [
+              {
+                "scene_id": "s2",
+                "start": 0,
+                "end": 24,
+                "quote": "沈遥撕开封口，看到纸上只有“4816”四个数字。"
+              },
+              {
+                "scene_id": "s2",
+                "start": 42,
+                "end": 91,
+                "quote": "三号柜的屏幕提示：“请输入四位取件编号。”她知道要把这四个数字输入屏幕，手指还没落下，柜门仍关着。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "沈遥",
+                "verdict": "supported",
+                "reason": "原文直接说明她知道把四个数字输入屏幕，且已读懂编号、面对当前输入提示，支持她知情。",
+                "evidence": [
+                  {
+                    "scene_id": "s2",
+                    "start": 0,
+                    "end": 24,
+                    "quote": "沈遥撕开封口，看到纸上只有“4816”四个数字。"
+                  },
+                  {
+                    "scene_id": "s2",
+                    "start": 42,
+                    "end": 91,
+                    "quote": "三号柜的屏幕提示：“请输入四位取件编号。”她知道要把这四个数字输入屏幕，手指还没落下，柜门仍关着。"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "letter_3": {},
+    "inventory_1": {
+      "i_eee5ef7a91aec4fecaaaefe7": {
+        "schema_version": 1,
+        "project_id": "inventory_loop",
+        "project_sha256": "e6137b3d5052f831ad914d05900c50431b8e1c8e25bf2711130c1df1dffb6116",
+        "packet_sha256": "16414250602c45f0a7888dffeb08dcd63f30be4f0c61994a9c34c17891f7bf48",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "current-ai-shared-conditions-b"
+        },
+        "decisions": [
+          {
+            "fact_id": "probe_0001",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "今天出库单在桌边，库存记录在手边，原文还明确数量可以逐项比较，材料及核对对象均有依据。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 63,
+                "end": 99,
+                "quote": "桌边还有今天的出库单，她尚未核对，上面的数量可以和手边库存记录逐项比较。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许知",
+                "verdict": "supported",
+                "reason": "材料位于许知当前处理的桌边与手边，她正在调查并尚未核对今天单据，有具体操作情境支持知情。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 63,
+                    "end": 99,
+                    "quote": "桌边还有今天的出库单，她尚未核对，上面的数量可以和手边库存记录逐项比较。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "十二箱与十一箱的差额仍未解释，她仍调查该箱货去向，今天单据是尚待核对且可与库存比较的相关材料。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 26,
+                "end": 47,
+                "quote": "但账面十二箱、库中十一箱的疑点仍没有解释。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 99,
+                "end": 111,
+                "quote": "她仍在查这一箱货的去向。"
+              },
+              {
+                "scene_id": "s1",
+                "start": 63,
+                "end": 99,
+                "quote": "桌边还有今天的出库单，她尚未核对，上面的数量可以和手边库存记录逐项比较。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许知",
+                "verdict": "supported",
+                "reason": "她仍在查这一箱货，且尚未核对今天的单据；其持续调查和处理状态支持她知道问题未解。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 26,
+                    "end": 47,
+                    "quote": "但账面十二箱、库中十一箱的疑点仍没有解释。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 99,
+                    "end": 111,
+                    "quote": "她仍在查这一箱货的去向。"
+                  },
+                  {
+                    "scene_id": "s1",
+                    "start": 63,
+                    "end": 99,
+                    "quote": "桌边还有今天的出库单，她尚未核对，上面的数量可以和手边库存记录逐项比较。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "两项待比较材料就在桌边和手边，且正文明确可以逐项比较，当前核对条件具备。",
+            "evidence": [
+              {
+                "scene_id": "s1",
+                "start": 63,
+                "end": 99,
+                "quote": "桌边还有今天的出库单，她尚未核对，上面的数量可以和手边库存记录逐项比较。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许知",
+                "verdict": "supported",
+                "reason": "许知当前可以访问两份材料，正在进行相关调查，数量可比较的操作条件在她当前工作环境中明确给出。",
+                "evidence": [
+                  {
+                    "scene_id": "s1",
+                    "start": 63,
+                    "end": 99,
+                    "quote": "桌边还有今天的出库单，她尚未核对，上面的数量可以和手边库存记录逐项比较。"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "inventory_2": {
+      "i_eee5ef7a91aec4fecaaaefe7": {
+        "schema_version": 1,
+        "project_id": "inventory_loop",
+        "project_sha256": "cb94c2471ab9a855aef047d4cace499363eefcef6a929dcdec31155dc60f6aa3",
+        "packet_sha256": "7c01a05ba2742d3083c3b9dcbe32a5a031164204730797bd8395af796f4099c6",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "current-ai-shared-conditions-a"
+        },
+        "decisions": [
+          {
+            "fact_id": "probe_0001",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "许知已经开始核对今天出库单与库存记录，两份材料仍在桌上，当前可接触且目标一致。",
+            "evidence": [
+              {
+                "scene_id": "s2",
+                "start": 0,
+                "end": 21,
+                "quote": "许知开始把今天的出库单与库存记录逐项核对。"
+              },
+              {
+                "scene_id": "s2",
+                "start": 37,
+                "end": 47,
+                "quote": "单据和记录都在桌上。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许知",
+                "verdict": "supported",
+                "reason": "她亲自进行这项核对，知道目标材料和记录可用。",
+                "evidence": [
+                  {
+                    "scene_id": "s2",
+                    "start": 0,
+                    "end": 21,
+                    "quote": "许知开始把今天的出库单与库存记录逐项核对。"
+                  },
+                  {
+                    "scene_id": "s2",
+                    "start": 37,
+                    "end": 47,
+                    "quote": "单据和记录都在桌上。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "原文明确缺少一箱货仍没有解释，今天出库单只核完上半页，她决定把该次核对继续做完；当前核对对应的缺货问题仍开放。",
+            "evidence": [
+              {
+                "scene_id": "s2",
+                "start": 21,
+                "end": 47,
+                "quote": "她刚核完上半页，下半页还没有查，单据和记录都在桌上。"
+              },
+              {
+                "scene_id": "s2",
+                "start": 47,
+                "end": 74,
+                "quote": "缺少的一箱货仍没有找到解释，她决定继续把这次核对做完。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许知",
+                "verdict": "supported",
+                "reason": "她正为未解决缺货问题核对，并主动决定继续，支持她知道问题尚未解决。",
+                "evidence": [
+                  {
+                    "scene_id": "s2",
+                    "start": 21,
+                    "end": 47,
+                    "quote": "她刚核完上半页，下半页还没有查，单据和记录都在桌上。"
+                  },
+                  {
+                    "scene_id": "s2",
+                    "start": 47,
+                    "end": 74,
+                    "quote": "缺少的一箱货仍没有找到解释，她决定继续把这次核对做完。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "核对已经实际开始，下半页尚待核对，所需单据和库存记录仍在桌上，当前可继续。",
+            "evidence": [
+              {
+                "scene_id": "s2",
+                "start": 0,
+                "end": 21,
+                "quote": "许知开始把今天的出库单与库存记录逐项核对。"
+              },
+              {
+                "scene_id": "s2",
+                "start": 21,
+                "end": 47,
+                "quote": "她刚核完上半页，下半页还没有查，单据和记录都在桌上。"
+              },
+              {
+                "scene_id": "s2",
+                "start": 61,
+                "end": 74,
+                "quote": "她决定继续把这次核对做完。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许知",
+                "verdict": "supported",
+                "reason": "她亲自核完上半页并决定继续，掌握所需材料及下一步操作。",
+                "evidence": [
+                  {
+                    "scene_id": "s2",
+                    "start": 0,
+                    "end": 21,
+                    "quote": "许知开始把今天的出库单与库存记录逐项核对。"
+                  },
+                  {
+                    "scene_id": "s2",
+                    "start": 21,
+                    "end": 47,
+                    "quote": "她刚核完上半页，下半页还没有查，单据和记录都在桌上。"
+                  },
+                  {
+                    "scene_id": "s2",
+                    "start": 61,
+                    "end": 74,
+                    "quote": "她决定继续把这次核对做完。"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "inventory_3": {},
+    "inventory_4": {
+      "i_8d39dbe2b7de1c8b4709601e": {
+        "schema_version": 1,
+        "project_id": "inventory_loop",
+        "project_sha256": "8ee7be0a5ee889acd9a49e7faaefcaa1765ec28b7f9b9ad8f10575817d9fd5c0",
+        "packet_sha256": "29ae5f1cad5e500d8c8933f249b68a2881fad2940166ec41a2675fd21e1f23d2",
+        "reviewer": {
+          "kind": "agent_review",
+          "name": "current-ai-shared-conditions-b"
+        },
+        "decisions": [
+          {
+            "fact_id": "probe_0001",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "新补记显露于昨天单据，许知亲眼看见，并已拿出库存记录准备专门核对，材料可接触且目标对应明确。",
+            "evidence": [
+              {
+                "scene_id": "s4",
+                "start": 0,
+                "end": 52,
+                "quote": "一滴水落在昨天已核完的出库单上，遮住末行的墨层化开，露出一行先前没看见的补记。许知亲眼看见了这条新记录。"
+              },
+              {
+                "scene_id": "s4",
+                "start": 52,
+                "end": 101,
+                "quote": "昨天那轮核对已结束，但这条补记没有被检查过；她拿出库存记录，准备专门重新核对昨天单据的新显露部分。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许知",
+                "verdict": "supported",
+                "reason": "亲眼看见新记录并准备重新核对，直接证明她知道现有目标及可接触性。",
+                "evidence": [
+                  {
+                    "scene_id": "s4",
+                    "start": 0,
+                    "end": 52,
+                    "quote": "一滴水落在昨天已核完的出库单上，遮住末行的墨层化开，露出一行先前没看见的补记。许知亲眼看见了这条新记录。"
+                  },
+                  {
+                    "scene_id": "s4",
+                    "start": 52,
+                    "end": 101,
+                    "quote": "昨天那轮核对已结束，但这条补记没有被检查过；她拿出库存记录，准备专门重新核对昨天单据的新显露部分。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0002",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "此前虽已核完两张单据，但缺货问题仍未查明；现在新显露补记未检查，重查针对同一仍开放的调查。",
+            "evidence": [
+              {
+                "scene_id": "s3",
+                "start": 53,
+                "end": 72,
+                "quote": "缺少的一箱货仍没有查明，调查没有结束。"
+              },
+              {
+                "scene_id": "s4",
+                "start": 0,
+                "end": 52,
+                "quote": "一滴水落在昨天已核完的出库单上，遮住末行的墨层化开，露出一行先前没看见的补记。许知亲眼看见了这条新记录。"
+              },
+              {
+                "scene_id": "s4",
+                "start": 52,
+                "end": 101,
+                "quote": "昨天那轮核对已结束，但这条补记没有被检查过；她拿出库存记录，准备专门重新核对昨天单据的新显露部分。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许知",
+                "verdict": "supported",
+                "reason": "她亲自拿出库存记录以重查新补记，知情依据是持续调查及明确重查决定，而非单据标题。",
+                "evidence": [
+                  {
+                    "scene_id": "s3",
+                    "start": 53,
+                    "end": 72,
+                    "quote": "缺少的一箱货仍没有查明，调查没有结束。"
+                  },
+                  {
+                    "scene_id": "s4",
+                    "start": 0,
+                    "end": 52,
+                    "quote": "一滴水落在昨天已核完的出库单上，遮住末行的墨层化开，露出一行先前没看见的补记。许知亲眼看见了这条新记录。"
+                  },
+                  {
+                    "scene_id": "s4",
+                    "start": 52,
+                    "end": 101,
+                    "quote": "昨天那轮核对已结束，但这条补记没有被检查过；她拿出库存记录，准备专门重新核对昨天单据的新显露部分。"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fact_id": "probe_0003",
+            "verdict": "supported",
+            "epistemic_type": "established",
+            "reason": "新内容已显露且她亲眼可见，库存记录已经取出，当前可以执行这次限定于新显露部分的比较。",
+            "evidence": [
+              {
+                "scene_id": "s4",
+                "start": 0,
+                "end": 52,
+                "quote": "一滴水落在昨天已核完的出库单上，遮住末行的墨层化开，露出一行先前没看见的补记。许知亲眼看见了这条新记录。"
+              },
+              {
+                "scene_id": "s4",
+                "start": 52,
+                "end": 101,
+                "quote": "昨天那轮核对已结束，但这条补记没有被检查过；她拿出库存记录，准备专门重新核对昨天单据的新显露部分。"
+              }
+            ],
+            "knowledge": [
+              {
+                "character_id": "许知",
+                "verdict": "supported",
+                "reason": "看见新内容并拿出库存记录准备比较，直接支持许知已知操作条件。",
+                "evidence": [
+                  {
+                    "scene_id": "s4",
+                    "start": 0,
+                    "end": 52,
+                    "quote": "一滴水落在昨天已核完的出库单上，遮住末行的墨层化开，露出一行先前没看见的补记。许知亲眼看见了这条新记录。"
+                  },
+                  {
+                    "scene_id": "s4",
+                    "start": 52,
+                    "end": 101,
+                    "quote": "昨天那轮核对已结束，但这条补记没有被检查过；她拿出库存记录，准备专门重新核对昨天单据的新显露部分。"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "wording_letter_unread": {},
+    "wording_letter_use": {},
+    "wording_inventory": {}
+  }
+}

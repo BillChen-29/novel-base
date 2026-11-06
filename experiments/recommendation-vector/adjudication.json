@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-05",
+  "phase": "before model encoding/ranking",
+  "case_id": "wording_letter_unread",
+  "fact_id": "core_binding_use_code",
+  "initial_verdict": "supported",
+  "final_verdict": "insufficient_evidence",
+  "reason": "仅改写基础状态的控制案例保留相同正文及动作绑定。正文未提供编号输入装置或操作方法；沿用既有严格判据，不将可想象的未来操作当作已具备依据的绑定。新审核将它解释为假设性提案，根代理复核后采用证据不足。fresh 仍为未知，未靠此修正增加可用动作。",
+  "initial_file": "wording-state-reviews-initial.json",
+  "effects": "Only imported judgment and source-bound hashes updated; frozen prose/query/catalog unchanged. Unencoded v1 inputs retained, evaluation uses v2."
+}

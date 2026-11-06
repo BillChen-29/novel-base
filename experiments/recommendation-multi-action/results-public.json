@@ -1,0 +1,1529 @@
+{
+  "schema_version": 1,
+  "input_hashes": {
+    "fixtures": "575f6baced4d8a1a68ae02ce1243e42ec7693d51ffc0d7268ca79b1ea5b9e737",
+    "state_reviews": "3cac00c694cc913366a80840e6823bcffdc6b334fcac38e0f452f50b453ea67f",
+    "catalog": "dc6843aeccc1d890a396682ec923daef849a4577e85750baf06b889443f70ac1"
+  },
+  "top_k": 2,
+  "unique_packets": 14,
+  "condition_count": 66,
+  "results": {
+    "bm25": {
+      "action_compatible": {
+        "metrics": {
+          "cases": 6,
+          "accepted": 0,
+          "acceptance_preserved_facts": true,
+          "cross_revision_checks": 0,
+          "cross_revision_rejected": 0
+        },
+        "cases": [
+          {
+            "case_id": "lantern_1",
+            "revision": 1,
+            "eligible_actions": [
+              "check_stage_photo",
+              "read_lamp_leaf"
+            ],
+            "cards": [],
+            "review_pairs": [],
+            "covered_actions": [],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "read_lamp_leaf": "pending",
+              "check_stage_photo": "pending"
+            },
+            "source_sha256": "b731529bcb67d0519159b21332a52ad42c3a83f70676490a626860a4398ab733",
+            "state_sha256": "d568a29854dafd04cc37f8e3d20cc0d33eb5e8ed38970457cb679186ecb53888",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "lantern_2",
+            "revision": 2,
+            "eligible_actions": [
+              "check_stage_photo"
+            ],
+            "cards": [],
+            "review_pairs": [],
+            "covered_actions": [],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "in_progress"
+            },
+            "source_sha256": "b08e3a89716674055dc605811137461b2b59025206ffdd69ae7a7a379adc8298",
+            "state_sha256": "43fae162a5684a8a9c389e02080136aa8c46591a5623595a9e823f9659caaaeb",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "lantern_3",
+            "revision": 3,
+            "eligible_actions": [],
+            "cards": [],
+            "review_pairs": [],
+            "covered_actions": [],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "completed"
+            },
+            "source_sha256": "fa4eb9fbf2ad2b90d39fe999ec51327c1aca8819a0c3bf47d1bf7f0c7952419d",
+            "state_sha256": "bb7ef0e977cfd0eb76783edd89db47e2da3d29eacdb9b028e7aab331ec238c12",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "screening",
+            "revision": 1,
+            "eligible_actions": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "cards": [
+              "identity_mask_response",
+              "false_accusation_proof"
+            ],
+            "review_pairs": [
+              [
+                "apply_offset",
+                "false_accusation_proof"
+              ],
+              [
+                "answer_lender",
+                "identity_mask_response"
+              ]
+            ],
+            "covered_actions": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "apply_offset": "pending",
+              "answer_lender": "pending"
+            },
+            "source_sha256": "9ea3c5fc91b8ed178075c56b906e416d839a2b97c4eb6394a4d9a5cbb678ae7f",
+            "state_sha256": "61f8fcd248f4a971587412b334dd5d0cbff0ade289086ecc2cbc91a02d541b59",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "drugshop",
+            "revision": 1,
+            "eligible_actions": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "cards": [
+              "clue_check"
+            ],
+            "review_pairs": [
+              [
+                "compare_facade",
+                "clue_check"
+              ],
+              [
+                "compare_sketch",
+                "clue_check"
+              ]
+            ],
+            "covered_actions": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "proposals": [
+              [
+                "compare_facade",
+                "clue_check",
+                "clue_check_verify_continue"
+              ],
+              [
+                "compare_sketch",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "compare_facade": "in_progress",
+              "compare_sketch": "pending"
+            },
+            "source_sha256": "b2d5749ae9f3343fb65fd52d265f28054697f861018b57286342242f134d1842",
+            "state_sha256": "e2a141d3053bf14607076c64183890da9f453c4ccceec8334472edc5545b1799",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "repair_bench",
+            "revision": 1,
+            "eligible_actions": [
+              "inspect_line",
+              "place_felt"
+            ],
+            "cards": [
+              "trial_guidance_use"
+            ],
+            "review_pairs": [
+              [
+                "place_felt",
+                "trial_guidance_use"
+              ]
+            ],
+            "covered_actions": [
+              "place_felt"
+            ],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "place_felt": "pending",
+              "inspect_line": "pending"
+            },
+            "source_sha256": "5ea426c9a8b82bb7fa3f8f66bf656ed856b72b94cad7703efe855bc03c2c0e1c",
+            "state_sha256": "9b3c1766f3b35474be1e89e0a7cdb643c040e377be1c93ebf620ea69e7d877c2",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          }
+        ]
+      },
+      "action_coverage": {
+        "metrics": {
+          "cases": 6,
+          "accepted": 0,
+          "acceptance_preserved_facts": true,
+          "cross_revision_checks": 0,
+          "cross_revision_rejected": 0
+        },
+        "cases": [
+          {
+            "case_id": "lantern_1",
+            "revision": 1,
+            "eligible_actions": [
+              "check_stage_photo",
+              "read_lamp_leaf"
+            ],
+            "cards": [],
+            "review_pairs": [],
+            "covered_actions": [],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "read_lamp_leaf": "pending",
+              "check_stage_photo": "pending"
+            },
+            "source_sha256": "b731529bcb67d0519159b21332a52ad42c3a83f70676490a626860a4398ab733",
+            "state_sha256": "d568a29854dafd04cc37f8e3d20cc0d33eb5e8ed38970457cb679186ecb53888",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "lantern_2",
+            "revision": 2,
+            "eligible_actions": [
+              "check_stage_photo"
+            ],
+            "cards": [],
+            "review_pairs": [],
+            "covered_actions": [],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "in_progress"
+            },
+            "source_sha256": "b08e3a89716674055dc605811137461b2b59025206ffdd69ae7a7a379adc8298",
+            "state_sha256": "43fae162a5684a8a9c389e02080136aa8c46591a5623595a9e823f9659caaaeb",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "lantern_3",
+            "revision": 3,
+            "eligible_actions": [],
+            "cards": [],
+            "review_pairs": [],
+            "covered_actions": [],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "completed"
+            },
+            "source_sha256": "fa4eb9fbf2ad2b90d39fe999ec51327c1aca8819a0c3bf47d1bf7f0c7952419d",
+            "state_sha256": "bb7ef0e977cfd0eb76783edd89db47e2da3d29eacdb9b028e7aab331ec238c12",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "screening",
+            "revision": 1,
+            "eligible_actions": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "cards": [
+              "identity_mask_response",
+              "false_accusation_proof"
+            ],
+            "review_pairs": [
+              [
+                "apply_offset",
+                "false_accusation_proof"
+              ],
+              [
+                "answer_lender",
+                "identity_mask_response"
+              ]
+            ],
+            "covered_actions": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "apply_offset": "pending",
+              "answer_lender": "pending"
+            },
+            "source_sha256": "9ea3c5fc91b8ed178075c56b906e416d839a2b97c4eb6394a4d9a5cbb678ae7f",
+            "state_sha256": "61f8fcd248f4a971587412b334dd5d0cbff0ade289086ecc2cbc91a02d541b59",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "drugshop",
+            "revision": 1,
+            "eligible_actions": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "cards": [
+              "clue_check"
+            ],
+            "review_pairs": [
+              [
+                "compare_facade",
+                "clue_check"
+              ],
+              [
+                "compare_sketch",
+                "clue_check"
+              ]
+            ],
+            "covered_actions": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "proposals": [
+              [
+                "compare_facade",
+                "clue_check",
+                "clue_check_verify_continue"
+              ],
+              [
+                "compare_sketch",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "compare_facade": "in_progress",
+              "compare_sketch": "pending"
+            },
+            "source_sha256": "b2d5749ae9f3343fb65fd52d265f28054697f861018b57286342242f134d1842",
+            "state_sha256": "e2a141d3053bf14607076c64183890da9f453c4ccceec8334472edc5545b1799",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "repair_bench",
+            "revision": 1,
+            "eligible_actions": [
+              "inspect_line",
+              "place_felt"
+            ],
+            "cards": [
+              "trial_guidance_use"
+            ],
+            "review_pairs": [
+              [
+                "place_felt",
+                "trial_guidance_use"
+              ]
+            ],
+            "covered_actions": [
+              "place_felt"
+            ],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "place_felt": "pending",
+              "inspect_line": "pending"
+            },
+            "source_sha256": "5ea426c9a8b82bb7fa3f8f66bf656ed856b72b94cad7703efe855bc03c2c0e1c",
+            "state_sha256": "9b3c1766f3b35474be1e89e0a7cdb643c040e377be1c93ebf620ea69e7d877c2",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          }
+        ]
+      }
+    },
+    "vector": {
+      "action_compatible": {
+        "metrics": {
+          "cases": 6,
+          "accepted": 1,
+          "acceptance_preserved_facts": true,
+          "cross_revision_checks": 2,
+          "cross_revision_rejected": 2
+        },
+        "cases": [
+          {
+            "case_id": "lantern_1",
+            "revision": 1,
+            "eligible_actions": [
+              "check_stage_photo",
+              "read_lamp_leaf"
+            ],
+            "cards": [
+              "forbidden_knowledge_read",
+              "clue_check"
+            ],
+            "review_pairs": [
+              [
+                "read_lamp_leaf",
+                "forbidden_knowledge_read"
+              ],
+              [
+                "check_stage_photo",
+                "clue_check"
+              ]
+            ],
+            "covered_actions": [
+              "check_stage_photo",
+              "read_lamp_leaf"
+            ],
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "check_stage_photo"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "read_lamp_leaf": "pending",
+              "check_stage_photo": "pending"
+            },
+            "source_sha256": "b731529bcb67d0519159b21332a52ad42c3a83f70676490a626860a4398ab733",
+            "state_sha256": "d568a29854dafd04cc37f8e3d20cc0d33eb5e8ed38970457cb679186ecb53888",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "lantern_2",
+            "revision": 2,
+            "eligible_actions": [
+              "check_stage_photo"
+            ],
+            "cards": [
+              "clue_check",
+              "deadline_investigation"
+            ],
+            "review_pairs": [
+              [
+                "check_stage_photo",
+                "clue_check"
+              ],
+              [
+                "check_stage_photo",
+                "deadline_investigation"
+              ]
+            ],
+            "covered_actions": [
+              "check_stage_photo"
+            ],
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify_continue"
+              ]
+            ],
+            "actions_with_proposal": [
+              "check_stage_photo"
+            ],
+            "accepted_action": "check_stage_photo",
+            "plan_count": 1,
+            "action_states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "in_progress"
+            },
+            "source_sha256": "b08e3a89716674055dc605811137461b2b59025206ffdd69ae7a7a379adc8298",
+            "state_sha256": "43fae162a5684a8a9c389e02080136aa8c46591a5623595a9e823f9659caaaeb",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": true
+          },
+          {
+            "case_id": "lantern_3",
+            "revision": 3,
+            "eligible_actions": [],
+            "cards": [],
+            "review_pairs": [],
+            "covered_actions": [],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 1,
+            "action_states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "completed"
+            },
+            "source_sha256": "fa4eb9fbf2ad2b90d39fe999ec51327c1aca8819a0c3bf47d1bf7f0c7952419d",
+            "state_sha256": "bb7ef0e977cfd0eb76783edd89db47e2da3d29eacdb9b028e7aab331ec238c12",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": true
+          },
+          {
+            "case_id": "screening",
+            "revision": 1,
+            "eligible_actions": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "cards": [
+              "dialogue_active",
+              "carrier_process"
+            ],
+            "review_pairs": [
+              [
+                "apply_offset",
+                "carrier_process"
+              ],
+              [
+                "answer_lender",
+                "dialogue_active"
+              ]
+            ],
+            "covered_actions": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "proposals": [
+              [
+                "apply_offset",
+                "carrier_process",
+                "carrier_process_use"
+              ],
+              [
+                "answer_lender",
+                "dialogue_active",
+                "dialogue_active_respond_begin"
+              ]
+            ],
+            "actions_with_proposal": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "apply_offset": "pending",
+              "answer_lender": "pending"
+            },
+            "source_sha256": "9ea3c5fc91b8ed178075c56b906e416d839a2b97c4eb6394a4d9a5cbb678ae7f",
+            "state_sha256": "61f8fcd248f4a971587412b334dd5d0cbff0ade289086ecc2cbc91a02d541b59",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "drugshop",
+            "revision": 1,
+            "eligible_actions": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "cards": [
+              "clue_check",
+              "deadline_investigation"
+            ],
+            "review_pairs": [
+              [
+                "compare_facade",
+                "clue_check"
+              ],
+              [
+                "compare_facade",
+                "deadline_investigation"
+              ],
+              [
+                "compare_sketch",
+                "clue_check"
+              ],
+              [
+                "compare_sketch",
+                "deadline_investigation"
+              ]
+            ],
+            "covered_actions": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "proposals": [
+              [
+                "compare_facade",
+                "clue_check",
+                "clue_check_verify_continue"
+              ],
+              [
+                "compare_sketch",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "compare_facade": "in_progress",
+              "compare_sketch": "pending"
+            },
+            "source_sha256": "b2d5749ae9f3343fb65fd52d265f28054697f861018b57286342242f134d1842",
+            "state_sha256": "e2a141d3053bf14607076c64183890da9f453c4ccceec8334472edc5545b1799",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "repair_bench",
+            "revision": 1,
+            "eligible_actions": [
+              "inspect_line",
+              "place_felt"
+            ],
+            "cards": [
+              "clue_check",
+              "trial_guidance_use"
+            ],
+            "review_pairs": [
+              [
+                "place_felt",
+                "trial_guidance_use"
+              ],
+              [
+                "inspect_line",
+                "clue_check"
+              ]
+            ],
+            "covered_actions": [
+              "inspect_line",
+              "place_felt"
+            ],
+            "proposals": [
+              [
+                "inspect_line",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "inspect_line"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "place_felt": "pending",
+              "inspect_line": "pending"
+            },
+            "source_sha256": "5ea426c9a8b82bb7fa3f8f66bf656ed856b72b94cad7703efe855bc03c2c0e1c",
+            "state_sha256": "9b3c1766f3b35474be1e89e0a7cdb643c040e377be1c93ebf620ea69e7d877c2",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          }
+        ]
+      },
+      "action_coverage": {
+        "metrics": {
+          "cases": 6,
+          "accepted": 1,
+          "acceptance_preserved_facts": true,
+          "cross_revision_checks": 2,
+          "cross_revision_rejected": 2
+        },
+        "cases": [
+          {
+            "case_id": "lantern_1",
+            "revision": 1,
+            "eligible_actions": [
+              "check_stage_photo",
+              "read_lamp_leaf"
+            ],
+            "cards": [
+              "forbidden_knowledge_read",
+              "clue_check"
+            ],
+            "review_pairs": [
+              [
+                "read_lamp_leaf",
+                "forbidden_knowledge_read"
+              ],
+              [
+                "check_stage_photo",
+                "clue_check"
+              ]
+            ],
+            "covered_actions": [
+              "check_stage_photo",
+              "read_lamp_leaf"
+            ],
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "check_stage_photo"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "read_lamp_leaf": "pending",
+              "check_stage_photo": "pending"
+            },
+            "source_sha256": "b731529bcb67d0519159b21332a52ad42c3a83f70676490a626860a4398ab733",
+            "state_sha256": "d568a29854dafd04cc37f8e3d20cc0d33eb5e8ed38970457cb679186ecb53888",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "lantern_2",
+            "revision": 2,
+            "eligible_actions": [
+              "check_stage_photo"
+            ],
+            "cards": [
+              "clue_check",
+              "deadline_investigation"
+            ],
+            "review_pairs": [
+              [
+                "check_stage_photo",
+                "clue_check"
+              ],
+              [
+                "check_stage_photo",
+                "deadline_investigation"
+              ]
+            ],
+            "covered_actions": [
+              "check_stage_photo"
+            ],
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify_continue"
+              ]
+            ],
+            "actions_with_proposal": [
+              "check_stage_photo"
+            ],
+            "accepted_action": "check_stage_photo",
+            "plan_count": 1,
+            "action_states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "in_progress"
+            },
+            "source_sha256": "b08e3a89716674055dc605811137461b2b59025206ffdd69ae7a7a379adc8298",
+            "state_sha256": "43fae162a5684a8a9c389e02080136aa8c46591a5623595a9e823f9659caaaeb",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": true
+          },
+          {
+            "case_id": "lantern_3",
+            "revision": 3,
+            "eligible_actions": [],
+            "cards": [],
+            "review_pairs": [],
+            "covered_actions": [],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 1,
+            "action_states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "completed"
+            },
+            "source_sha256": "fa4eb9fbf2ad2b90d39fe999ec51327c1aca8819a0c3bf47d1bf7f0c7952419d",
+            "state_sha256": "bb7ef0e977cfd0eb76783edd89db47e2da3d29eacdb9b028e7aab331ec238c12",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": true
+          },
+          {
+            "case_id": "screening",
+            "revision": 1,
+            "eligible_actions": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "cards": [
+              "dialogue_active",
+              "carrier_process"
+            ],
+            "review_pairs": [
+              [
+                "apply_offset",
+                "carrier_process"
+              ],
+              [
+                "answer_lender",
+                "dialogue_active"
+              ]
+            ],
+            "covered_actions": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "proposals": [
+              [
+                "apply_offset",
+                "carrier_process",
+                "carrier_process_use"
+              ],
+              [
+                "answer_lender",
+                "dialogue_active",
+                "dialogue_active_respond_begin"
+              ]
+            ],
+            "actions_with_proposal": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "apply_offset": "pending",
+              "answer_lender": "pending"
+            },
+            "source_sha256": "9ea3c5fc91b8ed178075c56b906e416d839a2b97c4eb6394a4d9a5cbb678ae7f",
+            "state_sha256": "61f8fcd248f4a971587412b334dd5d0cbff0ade289086ecc2cbc91a02d541b59",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "drugshop",
+            "revision": 1,
+            "eligible_actions": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "cards": [
+              "clue_check",
+              "deadline_investigation"
+            ],
+            "review_pairs": [
+              [
+                "compare_facade",
+                "clue_check"
+              ],
+              [
+                "compare_facade",
+                "deadline_investigation"
+              ],
+              [
+                "compare_sketch",
+                "clue_check"
+              ],
+              [
+                "compare_sketch",
+                "deadline_investigation"
+              ]
+            ],
+            "covered_actions": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "proposals": [
+              [
+                "compare_facade",
+                "clue_check",
+                "clue_check_verify_continue"
+              ],
+              [
+                "compare_sketch",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "compare_facade": "in_progress",
+              "compare_sketch": "pending"
+            },
+            "source_sha256": "b2d5749ae9f3343fb65fd52d265f28054697f861018b57286342242f134d1842",
+            "state_sha256": "e2a141d3053bf14607076c64183890da9f453c4ccceec8334472edc5545b1799",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "repair_bench",
+            "revision": 1,
+            "eligible_actions": [
+              "inspect_line",
+              "place_felt"
+            ],
+            "cards": [
+              "clue_check",
+              "trial_guidance_use"
+            ],
+            "review_pairs": [
+              [
+                "place_felt",
+                "trial_guidance_use"
+              ],
+              [
+                "inspect_line",
+                "clue_check"
+              ]
+            ],
+            "covered_actions": [
+              "inspect_line",
+              "place_felt"
+            ],
+            "proposals": [
+              [
+                "inspect_line",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "inspect_line"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "place_felt": "pending",
+              "inspect_line": "pending"
+            },
+            "source_sha256": "5ea426c9a8b82bb7fa3f8f66bf656ed856b72b94cad7703efe855bc03c2c0e1c",
+            "state_sha256": "9b3c1766f3b35474be1e89e0a7cdb643c040e377be1c93ebf620ea69e7d877c2",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          }
+        ]
+      }
+    },
+    "hybrid": {
+      "action_compatible": {
+        "metrics": {
+          "cases": 6,
+          "accepted": 1,
+          "acceptance_preserved_facts": true,
+          "cross_revision_checks": 2,
+          "cross_revision_rejected": 2
+        },
+        "cases": [
+          {
+            "case_id": "lantern_1",
+            "revision": 1,
+            "eligible_actions": [
+              "check_stage_photo",
+              "read_lamp_leaf"
+            ],
+            "cards": [
+              "forbidden_knowledge_read",
+              "clue_check"
+            ],
+            "review_pairs": [
+              [
+                "read_lamp_leaf",
+                "forbidden_knowledge_read"
+              ],
+              [
+                "check_stage_photo",
+                "clue_check"
+              ]
+            ],
+            "covered_actions": [
+              "check_stage_photo",
+              "read_lamp_leaf"
+            ],
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "check_stage_photo"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "read_lamp_leaf": "pending",
+              "check_stage_photo": "pending"
+            },
+            "source_sha256": "b731529bcb67d0519159b21332a52ad42c3a83f70676490a626860a4398ab733",
+            "state_sha256": "d568a29854dafd04cc37f8e3d20cc0d33eb5e8ed38970457cb679186ecb53888",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "lantern_2",
+            "revision": 2,
+            "eligible_actions": [
+              "check_stage_photo"
+            ],
+            "cards": [
+              "clue_check",
+              "deadline_investigation"
+            ],
+            "review_pairs": [
+              [
+                "check_stage_photo",
+                "clue_check"
+              ],
+              [
+                "check_stage_photo",
+                "deadline_investigation"
+              ]
+            ],
+            "covered_actions": [
+              "check_stage_photo"
+            ],
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify_continue"
+              ]
+            ],
+            "actions_with_proposal": [
+              "check_stage_photo"
+            ],
+            "accepted_action": "check_stage_photo",
+            "plan_count": 1,
+            "action_states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "in_progress"
+            },
+            "source_sha256": "b08e3a89716674055dc605811137461b2b59025206ffdd69ae7a7a379adc8298",
+            "state_sha256": "43fae162a5684a8a9c389e02080136aa8c46591a5623595a9e823f9659caaaeb",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": true
+          },
+          {
+            "case_id": "lantern_3",
+            "revision": 3,
+            "eligible_actions": [],
+            "cards": [],
+            "review_pairs": [],
+            "covered_actions": [],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 1,
+            "action_states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "completed"
+            },
+            "source_sha256": "fa4eb9fbf2ad2b90d39fe999ec51327c1aca8819a0c3bf47d1bf7f0c7952419d",
+            "state_sha256": "bb7ef0e977cfd0eb76783edd89db47e2da3d29eacdb9b028e7aab331ec238c12",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": true
+          },
+          {
+            "case_id": "screening",
+            "revision": 1,
+            "eligible_actions": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "cards": [
+              "dialogue_active",
+              "carrier_process"
+            ],
+            "review_pairs": [
+              [
+                "apply_offset",
+                "carrier_process"
+              ],
+              [
+                "answer_lender",
+                "dialogue_active"
+              ]
+            ],
+            "covered_actions": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "proposals": [
+              [
+                "apply_offset",
+                "carrier_process",
+                "carrier_process_use"
+              ],
+              [
+                "answer_lender",
+                "dialogue_active",
+                "dialogue_active_respond_begin"
+              ]
+            ],
+            "actions_with_proposal": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "apply_offset": "pending",
+              "answer_lender": "pending"
+            },
+            "source_sha256": "9ea3c5fc91b8ed178075c56b906e416d839a2b97c4eb6394a4d9a5cbb678ae7f",
+            "state_sha256": "61f8fcd248f4a971587412b334dd5d0cbff0ade289086ecc2cbc91a02d541b59",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "drugshop",
+            "revision": 1,
+            "eligible_actions": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "cards": [
+              "clue_check",
+              "deadline_investigation"
+            ],
+            "review_pairs": [
+              [
+                "compare_facade",
+                "clue_check"
+              ],
+              [
+                "compare_facade",
+                "deadline_investigation"
+              ],
+              [
+                "compare_sketch",
+                "clue_check"
+              ],
+              [
+                "compare_sketch",
+                "deadline_investigation"
+              ]
+            ],
+            "covered_actions": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "proposals": [
+              [
+                "compare_facade",
+                "clue_check",
+                "clue_check_verify_continue"
+              ],
+              [
+                "compare_sketch",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "compare_facade": "in_progress",
+              "compare_sketch": "pending"
+            },
+            "source_sha256": "b2d5749ae9f3343fb65fd52d265f28054697f861018b57286342242f134d1842",
+            "state_sha256": "e2a141d3053bf14607076c64183890da9f453c4ccceec8334472edc5545b1799",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "repair_bench",
+            "revision": 1,
+            "eligible_actions": [
+              "inspect_line",
+              "place_felt"
+            ],
+            "cards": [
+              "trial_guidance_use",
+              "clue_check"
+            ],
+            "review_pairs": [
+              [
+                "place_felt",
+                "trial_guidance_use"
+              ],
+              [
+                "inspect_line",
+                "clue_check"
+              ]
+            ],
+            "covered_actions": [
+              "inspect_line",
+              "place_felt"
+            ],
+            "proposals": [
+              [
+                "inspect_line",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "inspect_line"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "place_felt": "pending",
+              "inspect_line": "pending"
+            },
+            "source_sha256": "5ea426c9a8b82bb7fa3f8f66bf656ed856b72b94cad7703efe855bc03c2c0e1c",
+            "state_sha256": "9b3c1766f3b35474be1e89e0a7cdb643c040e377be1c93ebf620ea69e7d877c2",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          }
+        ]
+      },
+      "action_coverage": {
+        "metrics": {
+          "cases": 6,
+          "accepted": 1,
+          "acceptance_preserved_facts": true,
+          "cross_revision_checks": 2,
+          "cross_revision_rejected": 2
+        },
+        "cases": [
+          {
+            "case_id": "lantern_1",
+            "revision": 1,
+            "eligible_actions": [
+              "check_stage_photo",
+              "read_lamp_leaf"
+            ],
+            "cards": [
+              "forbidden_knowledge_read",
+              "clue_check"
+            ],
+            "review_pairs": [
+              [
+                "read_lamp_leaf",
+                "forbidden_knowledge_read"
+              ],
+              [
+                "check_stage_photo",
+                "clue_check"
+              ]
+            ],
+            "covered_actions": [
+              "check_stage_photo",
+              "read_lamp_leaf"
+            ],
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "check_stage_photo"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "read_lamp_leaf": "pending",
+              "check_stage_photo": "pending"
+            },
+            "source_sha256": "b731529bcb67d0519159b21332a52ad42c3a83f70676490a626860a4398ab733",
+            "state_sha256": "d568a29854dafd04cc37f8e3d20cc0d33eb5e8ed38970457cb679186ecb53888",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "lantern_2",
+            "revision": 2,
+            "eligible_actions": [
+              "check_stage_photo"
+            ],
+            "cards": [
+              "clue_check",
+              "deadline_investigation"
+            ],
+            "review_pairs": [
+              [
+                "check_stage_photo",
+                "clue_check"
+              ],
+              [
+                "check_stage_photo",
+                "deadline_investigation"
+              ]
+            ],
+            "covered_actions": [
+              "check_stage_photo"
+            ],
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify_continue"
+              ]
+            ],
+            "actions_with_proposal": [
+              "check_stage_photo"
+            ],
+            "accepted_action": "check_stage_photo",
+            "plan_count": 1,
+            "action_states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "in_progress"
+            },
+            "source_sha256": "b08e3a89716674055dc605811137461b2b59025206ffdd69ae7a7a379adc8298",
+            "state_sha256": "43fae162a5684a8a9c389e02080136aa8c46591a5623595a9e823f9659caaaeb",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": true
+          },
+          {
+            "case_id": "lantern_3",
+            "revision": 3,
+            "eligible_actions": [],
+            "cards": [],
+            "review_pairs": [],
+            "covered_actions": [],
+            "proposals": [],
+            "actions_with_proposal": [],
+            "accepted_action": null,
+            "plan_count": 1,
+            "action_states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "completed"
+            },
+            "source_sha256": "fa4eb9fbf2ad2b90d39fe999ec51327c1aca8819a0c3bf47d1bf7f0c7952419d",
+            "state_sha256": "bb7ef0e977cfd0eb76783edd89db47e2da3d29eacdb9b028e7aab331ec238c12",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": true
+          },
+          {
+            "case_id": "screening",
+            "revision": 1,
+            "eligible_actions": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "cards": [
+              "dialogue_active",
+              "carrier_process"
+            ],
+            "review_pairs": [
+              [
+                "apply_offset",
+                "carrier_process"
+              ],
+              [
+                "answer_lender",
+                "dialogue_active"
+              ]
+            ],
+            "covered_actions": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "proposals": [
+              [
+                "apply_offset",
+                "carrier_process",
+                "carrier_process_use"
+              ],
+              [
+                "answer_lender",
+                "dialogue_active",
+                "dialogue_active_respond_begin"
+              ]
+            ],
+            "actions_with_proposal": [
+              "answer_lender",
+              "apply_offset"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "apply_offset": "pending",
+              "answer_lender": "pending"
+            },
+            "source_sha256": "9ea3c5fc91b8ed178075c56b906e416d839a2b97c4eb6394a4d9a5cbb678ae7f",
+            "state_sha256": "61f8fcd248f4a971587412b334dd5d0cbff0ade289086ecc2cbc91a02d541b59",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "drugshop",
+            "revision": 1,
+            "eligible_actions": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "cards": [
+              "clue_check",
+              "deadline_investigation"
+            ],
+            "review_pairs": [
+              [
+                "compare_facade",
+                "clue_check"
+              ],
+              [
+                "compare_facade",
+                "deadline_investigation"
+              ],
+              [
+                "compare_sketch",
+                "clue_check"
+              ],
+              [
+                "compare_sketch",
+                "deadline_investigation"
+              ]
+            ],
+            "covered_actions": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "proposals": [
+              [
+                "compare_facade",
+                "clue_check",
+                "clue_check_verify_continue"
+              ],
+              [
+                "compare_sketch",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "compare_facade",
+              "compare_sketch"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "compare_facade": "in_progress",
+              "compare_sketch": "pending"
+            },
+            "source_sha256": "b2d5749ae9f3343fb65fd52d265f28054697f861018b57286342242f134d1842",
+            "state_sha256": "e2a141d3053bf14607076c64183890da9f453c4ccceec8334472edc5545b1799",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          },
+          {
+            "case_id": "repair_bench",
+            "revision": 1,
+            "eligible_actions": [
+              "inspect_line",
+              "place_felt"
+            ],
+            "cards": [
+              "trial_guidance_use",
+              "clue_check"
+            ],
+            "review_pairs": [
+              [
+                "place_felt",
+                "trial_guidance_use"
+              ],
+              [
+                "inspect_line",
+                "clue_check"
+              ]
+            ],
+            "covered_actions": [
+              "inspect_line",
+              "place_felt"
+            ],
+            "proposals": [
+              [
+                "inspect_line",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ],
+            "actions_with_proposal": [
+              "inspect_line"
+            ],
+            "accepted_action": null,
+            "plan_count": 0,
+            "action_states": {
+              "place_felt": "pending",
+              "inspect_line": "pending"
+            },
+            "source_sha256": "5ea426c9a8b82bb7fa3f8f66bf656ed856b72b94cad7703efe855bc03c2c0e1c",
+            "state_sha256": "9b3c1766f3b35474be1e89e0a7cdb643c040e377be1c93ebf620ea69e7d877c2",
+            "acceptance_preserved_facts": true,
+            "old_revision_rejected": null
+          }
+        ]
+      }
+    }
+  }
+}

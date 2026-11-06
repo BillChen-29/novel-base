@@ -1,0 +1,1340 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "catalog_cards": 4,
+  "top_k": 2,
+  "queries": "reviewed POV original base-state facts only, no generated conditions/plans",
+  "methods": {
+    "bm25": {
+      "retrieved_cards": 15,
+      "reviewed_instances": 5,
+      "original_proposals": 5,
+      "wording_proposals": 0,
+      "real_proposals": 0,
+      "cases": 12,
+      "accepted": 4,
+      "acceptance_preserved_facts": true,
+      "cross_revision_checks": 4,
+      "cross_revision_rejected": 4,
+      "results": [
+        {
+          "case_id": "letter_1",
+          "revision": 1,
+          "state_sha256": "0525ed56affc06a0899b217dae89f61382c5f890bf158202a48bf5cc2a23f274",
+          "retrieved_cards": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "chunk_id": "carrier_process",
+              "source_path": "carrier_process",
+              "score": 4.242573655990638
+            },
+            {
+              "chunk_id": "truth_trigger",
+              "source_path": "truth_trigger",
+              "score": 0.22133687517185782
+            }
+          ],
+          "action_states": {
+            "read_note": "proposed",
+            "use_code": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "use_code",
+              "reason": "binding_not_pov_established"
+            }
+          ],
+          "accepted_action": "read_note",
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "carrier_process_read"
+          ]
+        },
+        {
+          "case_id": "letter_2",
+          "revision": 2,
+          "state_sha256": "9331a143e559b12df2d6e5f31c090790745a4a695c8d06220a880fb19c398fd3",
+          "retrieved_cards": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "chunk_id": "carrier_process",
+              "source_path": "carrier_process",
+              "score": 6.073816062774991
+            },
+            {
+              "chunk_id": "truth_trigger",
+              "source_path": "truth_trigger",
+              "score": 0.11066843758592891
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "pending"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": "use_code",
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposal_variants": [
+            "carrier_process_use"
+          ]
+        },
+        {
+          "case_id": "letter_3",
+          "revision": 3,
+          "state_sha256": "7103852d51016f0839eb084221a5391d7c5418e9690a51aa596420119f0f6b36",
+          "retrieved_cards": [
+            "carrier_process"
+          ],
+          "ranking": [
+            {
+              "chunk_id": "carrier_process",
+              "source_path": "carrier_process",
+              "score": 1.1938679657444005
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "completed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "use_code",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposal_variants": []
+        },
+        {
+          "case_id": "inventory_1",
+          "revision": 1,
+          "state_sha256": "d40e8e2e16277c36b19d45f76a5c4b2d8935287b1a634e0b732cc510dd04577f",
+          "retrieved_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "chunk_id": "clue_check",
+              "source_path": "clue_check",
+              "score": 3.3852546810093793
+            },
+            {
+              "chunk_id": "truth_trigger",
+              "source_path": "truth_trigger",
+              "score": 1.8225798464558804
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": "check_new",
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "clue_check_verify"
+          ]
+        },
+        {
+          "case_id": "inventory_2",
+          "revision": 2,
+          "state_sha256": "907c9c8d644356d9cabc9c69ef11116ab95f2d0860c676d5c9a59a6543cb4513",
+          "retrieved_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "chunk_id": "clue_check",
+              "source_path": "clue_check",
+              "score": 3.6454885579322207
+            },
+            {
+              "chunk_id": "truth_trigger",
+              "source_path": "truth_trigger",
+              "score": 3.087207191138046
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "in_progress"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposal_variants": [
+            "clue_check_verify_continue"
+          ]
+        },
+        {
+          "case_id": "inventory_3",
+          "revision": 3,
+          "state_sha256": "3cb812432bb500cb19cea106d9481c59863f58a172fd980a0a964d9e7e8c34a0",
+          "retrieved_cards": [
+            "dialogue_active",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "chunk_id": "dialogue_active",
+              "source_path": "dialogue_active",
+              "score": 2.4376547693973665
+            },
+            {
+              "chunk_id": "truth_trigger",
+              "source_path": "truth_trigger",
+              "score": 1.3752957822680942
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "completed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "check_new",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposal_variants": []
+        },
+        {
+          "case_id": "inventory_4",
+          "revision": 4,
+          "state_sha256": "03c6ac80e816557af2faff233e4244325e04bf7efbfb5eb3187ba50a7a82cb81",
+          "retrieved_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "chunk_id": "clue_check",
+              "source_path": "clue_check",
+              "score": 2.9442294561932485
+            },
+            {
+              "chunk_id": "truth_trigger",
+              "source_path": "truth_trigger",
+              "score": 0.11066843758592891
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "completed",
+            "recheck_old": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "check_new",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": "recheck_old",
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "clue_check_verify"
+          ]
+        },
+        {
+          "case_id": "wording_letter_unread",
+          "revision": 1,
+          "state_sha256": "ddae73b8b6f686374beb438a473cc0682f20d290f5c087369c02ee6464afcf38",
+          "retrieved_cards": [],
+          "ranking": [],
+          "action_states": {
+            "read_note": "proposed",
+            "use_code": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "use_code",
+              "reason": "binding_not_pov_established"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": []
+        },
+        {
+          "case_id": "wording_letter_use",
+          "revision": 1,
+          "state_sha256": "34bc0c3b5f615906a1237a058ae7a224567cfbc9a7579b77b49aad7f093583f9",
+          "retrieved_cards": [],
+          "ranking": [],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "pending"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": []
+        },
+        {
+          "case_id": "wording_inventory",
+          "revision": 1,
+          "state_sha256": "46739431c038447d3a014a5018dc75e9895ca31336921c28674ad28ea838db77",
+          "retrieved_cards": [],
+          "ranking": [],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": []
+        },
+        {
+          "case_id": "real_1",
+          "revision": 1,
+          "state_sha256": "39a663342845e0ed11a6e11fbea978fac07a67002c79255f0c421dcd05352f77",
+          "retrieved_cards": [
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "chunk_id": "truth_trigger",
+              "source_path": "truth_trigger",
+              "score": 1.2646273446821654
+            }
+          ],
+          "action_states": {
+            "check_compass": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_compass",
+              "reason": "action_unknown"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": []
+        },
+        {
+          "case_id": "real_2",
+          "revision": 1,
+          "state_sha256": "64e2867c294495eda5d93bf80dc757bcb6290ad503d637908dbf7dbd756feea0",
+          "retrieved_cards": [
+            "dialogue_active"
+          ],
+          "ranking": [
+            {
+              "chunk_id": "dialogue_active",
+              "source_path": "dialogue_active",
+              "score": 1.6208791921501313
+            }
+          ],
+          "action_states": {
+            "reply_coffee": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "reply_coffee",
+              "reason": "action_unknown"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": []
+        }
+      ]
+    },
+    "vector": {
+      "retrieved_cards": 24,
+      "reviewed_instances": 8,
+      "original_proposals": 5,
+      "wording_proposals": 3,
+      "real_proposals": 0,
+      "cases": 12,
+      "accepted": 4,
+      "acceptance_preserved_facts": true,
+      "cross_revision_checks": 4,
+      "cross_revision_rejected": 4,
+      "results": [
+        {
+          "case_id": "letter_1",
+          "revision": 1,
+          "state_sha256": "0525ed56affc06a0899b217dae89f61382c5f890bf158202a48bf5cc2a23f274",
+          "retrieved_cards": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.34152705042360504
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.27221983869835337
+            }
+          ],
+          "action_states": {
+            "read_note": "proposed",
+            "use_code": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "use_code",
+              "reason": "binding_not_pov_established"
+            }
+          ],
+          "accepted_action": "read_note",
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "carrier_process_read"
+          ]
+        },
+        {
+          "case_id": "letter_2",
+          "revision": 2,
+          "state_sha256": "9331a143e559b12df2d6e5f31c090790745a4a695c8d06220a880fb19c398fd3",
+          "retrieved_cards": [
+            "carrier_process",
+            "clue_check"
+          ],
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.30545504995441336
+            },
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.22814140881683798
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "pending"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": "use_code",
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposal_variants": [
+            "carrier_process_use"
+          ]
+        },
+        {
+          "case_id": "letter_3",
+          "revision": 3,
+          "state_sha256": "7103852d51016f0839eb084221a5391d7c5418e9690a51aa596420119f0f6b36",
+          "retrieved_cards": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.24432298214899026
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.19640391129802245
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "completed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "use_code",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposal_variants": []
+        },
+        {
+          "case_id": "inventory_1",
+          "revision": 1,
+          "state_sha256": "d40e8e2e16277c36b19d45f76a5c4b2d8935287b1a634e0b732cc510dd04577f",
+          "retrieved_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.3007817309643948
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.2618824147175074
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": "check_new",
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "clue_check_verify"
+          ]
+        },
+        {
+          "case_id": "inventory_2",
+          "revision": 2,
+          "state_sha256": "907c9c8d644356d9cabc9c69ef11116ab95f2d0860c676d5c9a59a6543cb4513",
+          "retrieved_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.33753142923214363
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.320623848545271
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "in_progress"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposal_variants": [
+            "clue_check_verify_continue"
+          ]
+        },
+        {
+          "case_id": "inventory_3",
+          "revision": 3,
+          "state_sha256": "3cb812432bb500cb19cea106d9481c59863f58a172fd980a0a964d9e7e8c34a0",
+          "retrieved_cards": [
+            "truth_trigger",
+            "clue_check"
+          ],
+          "ranking": [
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.2940504004624631
+            },
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.28423907531477716
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "completed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "check_new",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposal_variants": []
+        },
+        {
+          "case_id": "inventory_4",
+          "revision": 4,
+          "state_sha256": "03c6ac80e816557af2faff233e4244325e04bf7efbfb5eb3187ba50a7a82cb81",
+          "retrieved_cards": [
+            "clue_check",
+            "carrier_process"
+          ],
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.3268444335007382
+            },
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.2731370116182899
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "completed",
+            "recheck_old": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "check_new",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": "recheck_old",
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "clue_check_verify"
+          ]
+        },
+        {
+          "case_id": "wording_letter_unread",
+          "revision": 1,
+          "state_sha256": "ddae73b8b6f686374beb438a473cc0682f20d290f5c087369c02ee6464afcf38",
+          "retrieved_cards": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.24987445099015324
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.22407904654549962
+            }
+          ],
+          "action_states": {
+            "read_note": "proposed",
+            "use_code": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "use_code",
+              "reason": "binding_not_pov_established"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "carrier_process_read"
+          ]
+        },
+        {
+          "case_id": "wording_letter_use",
+          "revision": 1,
+          "state_sha256": "34bc0c3b5f615906a1237a058ae7a224567cfbc9a7579b77b49aad7f093583f9",
+          "retrieved_cards": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.15875399861273365
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.1556277836114661
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "pending"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "carrier_process_use"
+          ]
+        },
+        {
+          "case_id": "wording_inventory",
+          "revision": 1,
+          "state_sha256": "46739431c038447d3a014a5018dc75e9895ca31336921c28674ad28ea838db77",
+          "retrieved_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.2816691560663225
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.2724968010495753
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "clue_check_verify"
+          ]
+        },
+        {
+          "case_id": "real_1",
+          "revision": 1,
+          "state_sha256": "39a663342845e0ed11a6e11fbea978fac07a67002c79255f0c421dcd05352f77",
+          "retrieved_cards": [
+            "truth_trigger",
+            "dialogue_active"
+          ],
+          "ranking": [
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.24335274833376708
+            },
+            {
+              "source_path": "dialogue_active",
+              "chunk_id": "dialogue_active",
+              "score": 0.14495410331987393
+            }
+          ],
+          "action_states": {
+            "check_compass": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_compass",
+              "reason": "action_unknown"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": []
+        },
+        {
+          "case_id": "real_2",
+          "revision": 1,
+          "state_sha256": "64e2867c294495eda5d93bf80dc757bcb6290ad503d637908dbf7dbd756feea0",
+          "retrieved_cards": [
+            "dialogue_active",
+            "clue_check"
+          ],
+          "ranking": [
+            {
+              "source_path": "dialogue_active",
+              "chunk_id": "dialogue_active",
+              "score": 0.1287046897070791
+            },
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.08832196043573524
+            }
+          ],
+          "action_states": {
+            "reply_coffee": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "reply_coffee",
+              "reason": "action_unknown"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": []
+        }
+      ]
+    },
+    "hybrid": {
+      "retrieved_cards": 24,
+      "reviewed_instances": 8,
+      "original_proposals": 5,
+      "wording_proposals": 3,
+      "real_proposals": 0,
+      "cases": 12,
+      "accepted": 4,
+      "acceptance_preserved_facts": true,
+      "cross_revision_checks": 4,
+      "cross_revision_rejected": 4,
+      "results": [
+        {
+          "case_id": "letter_1",
+          "revision": 1,
+          "state_sha256": "0525ed56affc06a0899b217dae89f61382c5f890bf158202a48bf5cc2a23f274",
+          "retrieved_cards": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.03225806451612903
+            }
+          ],
+          "action_states": {
+            "read_note": "proposed",
+            "use_code": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "use_code",
+              "reason": "binding_not_pov_established"
+            }
+          ],
+          "accepted_action": "read_note",
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "carrier_process_read"
+          ]
+        },
+        {
+          "case_id": "letter_2",
+          "revision": 2,
+          "state_sha256": "9331a143e559b12df2d6e5f31c090790745a4a695c8d06220a880fb19c398fd3",
+          "retrieved_cards": [
+            "carrier_process",
+            "clue_check"
+          ],
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.03200204813108039
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "pending"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": "use_code",
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposal_variants": [
+            "carrier_process_use"
+          ]
+        },
+        {
+          "case_id": "letter_3",
+          "revision": 3,
+          "state_sha256": "7103852d51016f0839eb084221a5391d7c5418e9690a51aa596420119f0f6b36",
+          "retrieved_cards": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.016129032258064516
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "completed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "use_code",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposal_variants": []
+        },
+        {
+          "case_id": "inventory_1",
+          "revision": 1,
+          "state_sha256": "d40e8e2e16277c36b19d45f76a5c4b2d8935287b1a634e0b732cc510dd04577f",
+          "retrieved_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.03225806451612903
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": "check_new",
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "clue_check_verify"
+          ]
+        },
+        {
+          "case_id": "inventory_2",
+          "revision": 2,
+          "state_sha256": "907c9c8d644356d9cabc9c69ef11116ab95f2d0860c676d5c9a59a6543cb4513",
+          "retrieved_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.03225806451612903
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "in_progress"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposal_variants": [
+            "clue_check_verify_continue"
+          ]
+        },
+        {
+          "case_id": "inventory_3",
+          "revision": 3,
+          "state_sha256": "3cb812432bb500cb19cea106d9481c59863f58a172fd980a0a964d9e7e8c34a0",
+          "retrieved_cards": [
+            "truth_trigger",
+            "dialogue_active"
+          ],
+          "ranking": [
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.03252247488101534
+            },
+            {
+              "source_path": "dialogue_active",
+              "chunk_id": "dialogue_active",
+              "score": 0.032018442622950824
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "completed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "check_new",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": true,
+          "proposal_variants": []
+        },
+        {
+          "case_id": "inventory_4",
+          "revision": 4,
+          "state_sha256": "03c6ac80e816557af2faff233e4244325e04bf7efbfb5eb3187ba50a7a82cb81",
+          "retrieved_cards": [
+            "clue_check",
+            "carrier_process"
+          ],
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.03200204813108039
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "completed",
+            "recheck_old": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            },
+            {
+              "action_id": "check_new",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": "recheck_old",
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "clue_check_verify"
+          ]
+        },
+        {
+          "case_id": "wording_letter_unread",
+          "revision": 1,
+          "state_sha256": "ddae73b8b6f686374beb438a473cc0682f20d290f5c087369c02ee6464afcf38",
+          "retrieved_cards": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.01639344262295082
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.016129032258064516
+            }
+          ],
+          "action_states": {
+            "read_note": "proposed",
+            "use_code": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "use_code",
+              "reason": "binding_not_pov_established"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "carrier_process_read"
+          ]
+        },
+        {
+          "case_id": "wording_letter_use",
+          "revision": 1,
+          "state_sha256": "34bc0c3b5f615906a1237a058ae7a224567cfbc9a7579b77b49aad7f093583f9",
+          "retrieved_cards": [
+            "carrier_process",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "carrier_process",
+              "chunk_id": "carrier_process",
+              "score": 0.01639344262295082
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.016129032258064516
+            }
+          ],
+          "action_states": {
+            "read_note": "completed",
+            "use_code": "pending"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "read_note",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "carrier_process_use"
+          ]
+        },
+        {
+          "case_id": "wording_inventory",
+          "revision": 1,
+          "state_sha256": "46739431c038447d3a014a5018dc75e9895ca31336921c28674ad28ea838db77",
+          "retrieved_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "ranking": [
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.01639344262295082
+            },
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.016129032258064516
+            }
+          ],
+          "action_states": {
+            "check_old": "completed",
+            "check_new": "proposed"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_old",
+              "reason": "action_completed"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": [
+            "clue_check_verify"
+          ]
+        },
+        {
+          "case_id": "real_1",
+          "revision": 1,
+          "state_sha256": "39a663342845e0ed11a6e11fbea978fac07a67002c79255f0c421dcd05352f77",
+          "retrieved_cards": [
+            "truth_trigger",
+            "dialogue_active"
+          ],
+          "ranking": [
+            {
+              "source_path": "truth_trigger",
+              "chunk_id": "truth_trigger",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "dialogue_active",
+              "chunk_id": "dialogue_active",
+              "score": 0.016129032258064516
+            }
+          ],
+          "action_states": {
+            "check_compass": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "check_compass",
+              "reason": "action_unknown"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": []
+        },
+        {
+          "case_id": "real_2",
+          "revision": 1,
+          "state_sha256": "64e2867c294495eda5d93bf80dc757bcb6290ad503d637908dbf7dbd756feea0",
+          "retrieved_cards": [
+            "dialogue_active",
+            "clue_check"
+          ],
+          "ranking": [
+            {
+              "source_path": "dialogue_active",
+              "chunk_id": "dialogue_active",
+              "score": 0.03278688524590164
+            },
+            {
+              "source_path": "clue_check",
+              "chunk_id": "clue_check",
+              "score": 0.016129032258064516
+            }
+          ],
+          "action_states": {
+            "reply_coffee": "unknown"
+          },
+          "blocked_actions": [
+            {
+              "action_id": "reply_coffee",
+              "reason": "action_unknown"
+            }
+          ],
+          "accepted_action": null,
+          "acceptance_preserved_facts": true,
+          "old_revision_acceptance_rejected": null,
+          "proposal_variants": []
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "3wordingcaseswerecontrolledoriginal-fictionstresscasesfrozenbeforeencoding;notindependentnaturalaccuracydata",
+    "Two realprefixes yieldnoreadyproposals",
+    "No evidenceofhybridbeingbetterthanvectorfromthissample"
+  ],
+  "encoding": {
+    "model": "EmbeddingGemma300M Q8_0",
+    "dimensions": 768,
+    "contexts": 12,
+    "input_evaluations": 60,
+    "unique_text_inputs": 16,
+    "total_encoding_wall_seconds": 54.04,
+    "shared_document_cache": false
+  }
+}

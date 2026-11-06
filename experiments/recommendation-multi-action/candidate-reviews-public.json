@@ -1,0 +1,3452 @@
+{
+  "schema_version": 1,
+  "reviews": {
+    "23ac89ce6bf9699c28ac959dd73a508fb63216138a320d73ece4dd9cc3f0b4a7": {
+      "schema_version": 1,
+      "project_id": "screening_room",
+      "project_sha256": "d2ec62369b9357ea1d8226a11f0c84b196dd671d2664d283a8ff58d3207db221",
+      "packet_sha256": "23ac89ce6bf9699c28ac959dd73a508fb63216138a320d73ece4dd9cc3f0b4a7",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-a"
+      },
+      "decisions": [
+        {
+          "verdict": "insufficient_evidence",
+          "reason": "卡写的是纠正裁字所需的偏移量。两人的分歧涉及署名，文中没有对周岑的指控，也没有把卡与指控相连。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 30,
+              "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 115,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+            }
+          ],
+          "fact_id": "probe_0001",
+          "epistemic_type": "uncertain",
+          "knowledge": [
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "周岑读到的是调机数值，她和阿敏谈论的是声音署名，没有接到指控或得知卡与指控有关。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 56,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+                },
+                {
+                  "scene_id": "s1",
+                  "start": 66,
+                  "end": 93,
+                  "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏向周岑追问署名对应的声音，其发言没有表明她知道一桩错案或相应物证。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "insufficient_evidence",
+          "reason": "片头仍缺字，署名仍待议。截点内没有确定处罚、待执行的决定或允许自辩的阶段。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 75,
+              "quote": "片头仍缺着半个字，她的手还没碰到旋钮。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 144,
+              "end": 157,
+              "quote": "删不删署名，两人还没说定。"
+            }
+          ],
+          "fact_id": "probe_0002",
+          "epistemic_type": "uncertain",
+          "knowledge": [
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "周岑准备回答的是署名问题，没有收到处罚决定或自辩通知。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏要求说明署名的依据，并未谈到处分或给周岑自辩的程序。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "insufficient_evidence",
+          "reason": "周岑能读到身边的卡，但卡在文中用于调机。没有依据表明它已成为可出示核验的物证。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 30,
+              "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 30,
+              "end": 56,
+              "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+            }
+          ],
+          "fact_id": "probe_0003",
+          "epistemic_type": "uncertain",
+          "knowledge": [
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "周岑掌握卡上的调机方法，文中没有交代她知道这张卡可作为物证出示。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 30,
+                  "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 56,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏指向的是署名。没有她查验校准卡或谈论其作为物证的用途的描写。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "insufficient_evidence",
+          "reason": "叙述明说她懂得两格偏移的调机用途，未写出与指控的关系或她知道怎样用卡自辩。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 30,
+              "end": 56,
+              "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+            }
+          ],
+          "fact_id": "probe_0004",
+          "epistemic_type": "uncertain",
+          "knowledge": [
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "她理解数字如何解决片头裁字，未表达用卡回应某项指控的认识。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 56,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏问的是哪段声音应当署名，没有听周岑解释卡和自辩之间的关系。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "insufficient_evidence",
+          "reason": "当前确实有人等候回答，但问题是保留署名的理由；没有出示物证自辩或听取该项自辩的情节。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 115,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 115,
+              "end": 144,
+              "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+            }
+          ],
+          "fact_id": "probe_0005",
+          "epistemic_type": "uncertain",
+          "knowledge": [
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "周岑明白阿敏在等她指出声音，未见她知道有可以受理自辩的人或渠道。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏亲口问的是声音归属，文中没有她愿意或有权听取就指控所作自辩的迹象。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        }
+      ]
+    },
+    "c4e35d1d7a5999e062f0e82fccb0a02119df4094635dfbf7942ad2d585554a9f": {
+      "schema_version": 1,
+      "project_id": "screening_room",
+      "project_sha256": "f71dc47f7dbcd40fc360a1476384d81af804a6848c2ddadc9d2ff021ae352249",
+      "packet_sha256": "c4e35d1d7a5999e062f0e82fccb0a02119df4094635dfbf7942ad2d585554a9f",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-a"
+      },
+      "decisions": [
+        {
+          "verdict": "insufficient_evidence",
+          "reason": "阿敏询问字幕署给哪段声音。没有建立周岑使用掩饰身份，也没有把署名与周岑的双重身份联系起来。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 115,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+            }
+          ],
+          "fact_id": "probe_0001",
+          "epistemic_type": "uncertain",
+          "knowledge": [
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "周岑想指出阿陶的声音，其想法中没有掩饰身份或身份受追问的内容。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 66,
+                  "end": 93,
+                  "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏的问题只指向阿陶的署名，未显示她掌握周岑真实或掩饰身份的线索。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "insufficient_evidence",
+          "reason": "没有给出周岑的第二重身份、身份差别或她对此的认识。她表明的是保留阿陶名字的意愿。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 66,
+              "end": 93,
+              "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”"
+            }
+          ],
+          "fact_id": "probe_0002",
+          "epistemic_type": "uncertain",
+          "knowledge": [
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "周岑说出自己的署名立场，却没有显露她识得真实和掩饰两重身份。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 66,
+                  "end": 93,
+                  "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏听到周岑的署名立场，没有听到周岑说明两种身份或二者之别。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 66,
+                  "end": 93,
+                  "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "insufficient_evidence",
+          "reason": "现场确有具体提问，但其内容是字幕应署给哪段声音。文中没有线索将这个问题与周岑的身份、往事或暴露风险相连。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 115,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+            }
+          ],
+          "fact_id": "probe_0003",
+          "epistemic_type": "uncertain",
+          "knowledge": [
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "周岑准备就声音作答，未表明她知道回答会暴露身份。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏亲自提出关于声音的问题，但她没有提及周岑的过往或真实身份。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "insufficient_evidence",
+          "reason": "叙述给出了周岑对问题的理解和答复计划，两者都指向声音归属，未呈现她察觉身份线索或暴露风险。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 115,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 115,
+              "end": 144,
+              "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+            }
+          ],
+          "fact_id": "probe_0004",
+          "epistemic_type": "uncertain",
+          "knowledge": [
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "周岑准备指给阿敏听的对象是那段声音，其想法没有涉及身份风险。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏尚未听到周岑的这句回答，更没有从她那里得知对身份风险的判断。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "supported",
+          "reason": "阿敏仍在现场，亲自向周岑发问并索要解释，周岑转身面向她准备回答。双方仍可当场继续交谈。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 115,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 115,
+              "end": 144,
+              "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+            }
+          ],
+          "fact_id": "probe_0005",
+          "epistemic_type": "established",
+          "knowledge": [
+            {
+              "verdict": "supported",
+              "reason": "阿敏直接问她，周岑随即转身打算回答，说明她知道阿敏仍在等答复。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "supported",
+              "reason": "阿敏自己留在现场指着署名要求周岑解释，直接参与这次问答。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "supported",
+          "reason": "追问刚刚提出，周岑有意回答且尚未开口，两人尚未决定是否删名。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 115,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 115,
+              "end": 144,
+              "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 144,
+              "end": 157,
+              "quote": "删不删署名，两人还没说定。"
+            }
+          ],
+          "fact_id": "probe_0006",
+          "epistemic_type": "established",
+          "knowledge": [
+            {
+              "verdict": "supported",
+              "reason": "周岑听到问题，打算作答但尚未开口，知道此番交涉仍在进行。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 144,
+                  "end": 157,
+                  "quote": "删不删署名，两人还没说定。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "supported",
+              "reason": "阿敏对周岑先前的保留立场提出了新的问题，尚未得到答复，两人也未达成决定。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 144,
+                  "end": 157,
+                  "quote": "删不删署名，两人还没说定。"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        }
+      ]
+    },
+    "9583152cb34d6e648f59dcf2d58fbeff6802e616aafc60c92bdf5314e38a52a3": {
+      "schema_version": 1,
+      "project_id": "screening_room",
+      "project_sha256": "6d38707809caebf318833165dffd2329fe172092a058ce5be83c69e654b9976f",
+      "packet_sha256": "9583152cb34d6e648f59dcf2d58fbeff6802e616aafc60c92bdf5314e38a52a3",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-a"
+      },
+      "decisions": [
+        {
+          "verdict": "supported",
+          "reason": "周岑已直接读到机旁校准卡对左缘裁字开出的两格偏移指令，卡正是此项调节所据的载体。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 30,
+              "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 30,
+              "end": 56,
+              "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+            }
+          ],
+          "fact_id": "probe_0001",
+          "epistemic_type": "established",
+          "knowledge": [
+            {
+              "verdict": "supported",
+              "reason": "周岑亲自读卡，认出两格偏移用于给片头左边让出位置。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 30,
+                  "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 56,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏在场并追问署名，未见她读卡、观察周岑读卡或知晓这次调节要用哪张卡。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "contradicted",
+          "reason": "“读完了”且能说明两格的用途，与尚未读取具体内容直接相反。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 30,
+              "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 30,
+              "end": 56,
+              "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+            }
+          ],
+          "fact_id": "probe_0002",
+          "epistemic_type": "uncertain",
+          "knowledge": [
+            {
+              "verdict": "contradicted",
+              "reason": "周岑亲自读完并理解这条指令，她的经验直接排除了自己尚未读取的说法。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 30,
+                  "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 56,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏谈的是署名，文中没有她获知或判断周岑阅读进度的细节。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "contradicted",
+          "reason": "叙述明确写周岑已读完整张卡并理解与调机相关的具体数值。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 30,
+              "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 30,
+              "end": 56,
+              "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+            }
+          ],
+          "fact_id": "probe_0003",
+          "epistemic_type": "uncertain",
+          "knowledge": [
+            {
+              "verdict": "contradicted",
+              "reason": "周岑已经自己读完，能把卡上的数字对应到眼前的裁字问题。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 30,
+                  "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 56,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏持续关注署名，文中没有她见证周岑读完整条指令或谈到阅读进度。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "supported",
+          "reason": "叙述分别写出读完卡、具体数字及她理解的用途，直接支持已读取并理解。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 30,
+              "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 30,
+              "end": 56,
+              "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+            }
+          ],
+          "fact_id": "probe_0004",
+          "epistemic_type": "established",
+          "knowledge": [
+            {
+              "verdict": "supported",
+              "reason": "周岑亲自读完，已理解两格偏移为什么能给片头留出左边的位置。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 30,
+                  "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 56,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "周岑的理解由叙述直接揭示给读者；阿敏问的是声音，没有听到或看见能表明周岑理解指令的举动。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 56,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "supported",
+          "reason": "周岑已将两格水平偏移与片头左侧让位联系起来，知道接下来应照卡上的数调机。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 30,
+              "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 30,
+              "end": 56,
+              "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+            }
+          ],
+          "fact_id": "probe_0005",
+          "epistemic_type": "established",
+          "knowledge": [
+            {
+              "verdict": "supported",
+              "reason": "她自己明白两格偏移的作用，也知道要按卡上的数字动手调机。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 56,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏没有与周岑讨论偏移数值，也没有其他证据表明她了解周岑对这条指令用途的认识。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 56,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "supported",
+          "reason": "片头左缘仍缺字，周岑尚未碰旋钮；她知道要照卡上数值调机来解决这一未完成的事项。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 30,
+              "end": 56,
+              "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 75,
+              "quote": "片头仍缺着半个字，她的手还没碰到旋钮。"
+            }
+          ],
+          "fact_id": "probe_0006",
+          "epistemic_type": "established",
+          "knowledge": [
+            {
+              "verdict": "supported",
+              "reason": "周岑看见片头被裁字，明白应照数调机，却尚未动手，能够知道自己的事项仍待完成。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 5,
+                  "end": 26,
+                  "quote": "周岑看见试映的片头被银幕黑边吃掉了半个字。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 56,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 75,
+                  "quote": "片头仍缺着半个字，她的手还没碰到旋钮。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "insufficient_evidence",
+              "reason": "阿敏虽可在放映室看见银幕，但没有她注意裁字、调节进度或校准卡与这项工作的关系的描写。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        }
+      ]
+    },
+    "df5a44cae6fb9ea5748ddad2f32be95d5c47ffd6af615c9b811a9b9e6f3b0faa": {
+      "schema_version": 1,
+      "project_id": "screening_room",
+      "project_sha256": "3cb807d7ec2e917c1d48b25bafe6bd73ba7c8954b835d8bbd1d3018c7db5f155",
+      "packet_sha256": "df5a44cae6fb9ea5748ddad2f32be95d5c47ffd6af615c9b811a9b9e6f3b0faa",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-a"
+      },
+      "decisions": [
+        {
+          "verdict": "supported",
+          "reason": "阿敏要删阿陶的名字，周岑说声音仍在、想留名字。接着阿敏要求解释，周岑准备指出声音，正是对这项分歧的回应。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 26,
+              "end": 66,
+              "quote": "供片人阿敏站在她旁边，要她顺手把字幕上的“口述：阿陶”也删掉，说那一段已经剪了。"
+            },
+            {
+              "scene_id": "s1",
+              "start": 66,
+              "end": 93,
+              "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 115,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 115,
+              "end": 144,
+              "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+            }
+          ],
+          "fact_id": "probe_0001",
+          "epistemic_type": "established",
+          "knowledge": [
+            {
+              "verdict": "supported",
+              "reason": "周岑听到了删名要求并当面主张留名，随后打算对阿敏的问题指出声音，清楚自己在回应哪项争议。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 26,
+                  "end": 66,
+                  "quote": "供片人阿敏站在她旁边，要她顺手把字幕上的“口述：阿陶”也删掉，说那一段已经剪了。"
+                },
+                {
+                  "scene_id": "s1",
+                  "start": 66,
+                  "end": 93,
+                  "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "supported",
+              "reason": "阿敏明确要求删名，听周岑用声音主张留名后，又要求她指明署给哪段声音。她自己将待答的问题与双方分歧相连。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 26,
+                  "end": 66,
+                  "quote": "供片人阿敏站在她旁边，要她顺手把字幕上的“口述：阿陶”也删掉，说那一段已经剪了。"
+                },
+                {
+                  "scene_id": "s1",
+                  "start": 66,
+                  "end": 93,
+                  "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "supported",
+          "reason": "阿敏继续追问，周岑准备回答但还未开口，删不删署名仍待两人决定。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 115,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 115,
+              "end": 144,
+              "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 144,
+              "end": 157,
+              "quote": "删不删署名，两人还没说定。"
+            }
+          ],
+          "fact_id": "probe_0002",
+          "epistemic_type": "established",
+          "knowledge": [
+            {
+              "verdict": "supported",
+              "reason": "周岑听见追问，转身打算回答，知道署名问题仍在交涉。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 144,
+                  "end": 157,
+                  "quote": "删不删署名，两人还没说定。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "supported",
+              "reason": "阿敏自己发问要求继续说明，截点时尚未收到答复或与周岑议定删留。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 144,
+                  "end": 157,
+                  "quote": "删不删署名，两人还没说定。"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "supported",
+          "reason": "原先要求删名的阿敏仍在场当面发问，周岑正面向她准备回答，双方可继续交谈。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 26,
+              "end": 66,
+              "quote": "供片人阿敏站在她旁边，要她顺手把字幕上的“口述：阿陶”也删掉，说那一段已经剪了。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 115,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 115,
+              "end": 144,
+              "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+            }
+          ],
+          "fact_id": "probe_0003",
+          "epistemic_type": "established",
+          "knowledge": [
+            {
+              "verdict": "supported",
+              "reason": "周岑听到阿敏的追问，转身朝她准备回答，能够确定阿敏仍可当场回应。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "supported",
+              "reason": "阿敏自己留在原地并要求周岑当面说明署名所对应的声音，能够继续交谈。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        },
+        {
+          "verdict": "supported",
+          "reason": "新提出的问题还未得到计划中的回答，叙述明确交代两人尚未议定删留。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 115,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+            },
+            {
+              "scene_id": "s2",
+              "start": 115,
+              "end": 144,
+              "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 144,
+              "end": 157,
+              "quote": "删不删署名，两人还没说定。"
+            }
+          ],
+          "fact_id": "probe_0004",
+          "epistemic_type": "established",
+          "knowledge": [
+            {
+              "verdict": "supported",
+              "reason": "周岑准备答复阿敏，尚未开口，双方还没有关于删留的决定。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 144,
+                  "end": 157,
+                  "quote": "删不删署名，两人还没说定。"
+                }
+              ],
+              "character_id": "周岑"
+            },
+            {
+              "verdict": "supported",
+              "reason": "阿敏要求周岑解释，仍未收到新提问的答复，双方也没有说定处理结果。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 144,
+                  "end": 157,
+                  "quote": "删不删署名，两人还没说定。"
+                }
+              ],
+              "character_id": "阿敏"
+            }
+          ]
+        }
+      ]
+    },
+    "fe9534084d77a972983f9dd46b2f83818dd49b99a43c4005509828003070a1cf": {
+      "schema_version": 1,
+      "project_id": "drugshop_corner",
+      "project_sha256": "df93a59e66b7e9d3dd0b5e9d8e1c1bd68b3fa80689b9951719eccfe4ecc9616a",
+      "packet_sha256": "fe9534084d77a972983f9dd46b2f83818dd49b99a43c4005509828003070a1cf",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-b"
+      },
+      "decisions": [
+        {
+          "fact_id": "probe_0001",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "门面照就在宁致左手下。她已用照片中的一个街角与街图比对，所用的材料与行动吻合。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 37,
+              "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 86,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "supported",
+              "reason": "宁致亲手压着剪报照片，并且正在辨认照片上的街角。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 37,
+                  "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 86,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0002",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "正门所对的桥仍待确定，照片与地图上的第一个拐弯比完后尚有第二个。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 46,
+              "end": 79,
+              "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 86,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 122,
+              "end": 138,
+              "quote": "正门朝东桥还是北桥，她仍拿不准。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "supported",
+              "reason": "她知道还要看第二个拐弯，也清楚自己目前仍无法确定是哪座桥。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 46,
+                  "end": 79,
+                  "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 86,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 122,
+                  "end": 138,
+                  "quote": "正门朝东桥还是北桥，她仍拿不准。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0003",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "照片和标出两座桥的街图已摆好，宁致已实际进行指定比对。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 37,
+              "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 37,
+              "end": 56,
+              "quote": "两件东西之间铺着那张标了两座桥的街图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 86,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "supported",
+              "reason": "她已拿这张照片同面前的街图比完一个拐弯，亲自验证两份材料可用于这一步。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 37,
+                  "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 37,
+                  "end": 56,
+                  "quote": "两件东西之间铺着那张标了两座桥的街图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 86,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "eff661ceeecf7e7639067c63ac4f63bde735951b9c2bb1ffe1ce58e40370d417": {
+      "schema_version": 1,
+      "project_id": "drugshop_corner",
+      "project_sha256": "15690f1470efbd38226e72614c282970aec71bbaaa48e336ca5054f1267ba1f0",
+      "packet_sha256": "eff661ceeecf7e7639067c63ac4f63bde735951b9c2bb1ffe1ce58e40370d417",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-b"
+      },
+      "decisions": [
+        {
+          "fact_id": "probe_0001",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "账簿草图正摊在宁致手下。草图标出正门至巷口的路，文本明确把这段路列为要与街图比的对象。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 37,
+              "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 37,
+              "end": 56,
+              "quote": "两件东西之间铺着那张标了两座桥的街图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 86,
+              "end": 122,
+              "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "supported",
+              "reason": "她自己摊开草图，知道图上那段路也要拿来和街图核对。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 37,
+                  "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 37,
+                  "end": 56,
+                  "quote": "两件东西之间铺着那张标了两座桥的街图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 122,
+                  "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0002",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "草图上的门至巷口走向仍待与街图核对，东西两桥中哪一座对着正门尚未查明。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 46,
+              "end": 79,
+              "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 86,
+              "end": 122,
+              "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 122,
+              "end": 138,
+              "quote": "正门朝东桥还是北桥，她仍拿不准。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "supported",
+              "reason": "她清楚草图还没开始比，也清楚自己还拿不准正门朝向。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 46,
+                  "end": 79,
+                  "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 122,
+                  "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 122,
+                  "end": 138,
+                  "quote": "正门朝东桥还是北桥，她仍拿不准。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0003",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "草图和标了两座桥的街图同时摊在手边，草图上有可比的位置。未开始比草图描述的是进度。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 37,
+              "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 37,
+              "end": 56,
+              "quote": "两件东西之间铺着那张标了两座桥的街图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 86,
+              "end": 122,
+              "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "supported",
+              "reason": "她亲手摊着草图，面对已用于比照的街图，也已辨明下一步该比草图上的哪段路。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 37,
+                  "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 37,
+                  "end": 56,
+                  "quote": "两件东西之间铺着那张标了两座桥的街图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 122,
+                  "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "d7d95d31da7b50e474c6ad4bed721d97d00754193cc33c87bae1e75d8fb7e4b5": {
+      "schema_version": 1,
+      "project_id": "drugshop_corner",
+      "project_sha256": "07e5f283998ec2a59b5f5c87c8ee8aa00ad7b6c700b087b52673406437694508",
+      "packet_sha256": "d7d95d31da7b50e474c6ad4bed721d97d00754193cc33c87bae1e75d8fb7e4b5",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-b"
+      },
+      "decisions": [
+        {
+          "fact_id": "probe_0001",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "校样上要填正门朝向，场景没有约定交稿时刻或逾期后果。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 46,
+              "end": 79,
+              "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "insufficient_evidence",
+              "reason": "宁致画圈标记待查处，未显示她听到或想起任何交稿期限及其后果。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 46,
+                  "end": 79,
+                  "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0002",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "当前已有核对进度，但没有当前时刻、倒计时或可供比较的期限。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 86,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "insufficient_evidence",
+              "reason": "她知道照片上的第二个拐弯尚待比对，文本未写她看表、计时或判断离截止还有多久。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 86,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0003",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "她的行动顺序是照片上的第二个拐弯尚待比对。没有原文将这一安排归因于特定时限的紧迫性。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 86,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "insufficient_evidence",
+              "reason": "她知道接下来还需核对门面照，未表达基于剩余时间的取舍。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 86,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0004",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "正门朝哪座桥确实未查明，但未约定解决这个问题的期限，因而无法确认“该期限内”这一层。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 46,
+              "end": 79,
+              "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 86,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 122,
+              "end": 138,
+              "quote": "正门朝东桥还是北桥，她仍拿不准。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "insufficient_evidence",
+              "reason": "宁致知道桥名仍待核对，文本未交代她得知这项调查受期限约束。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 46,
+                  "end": 79,
+                  "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 86,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 122,
+                  "end": 138,
+                  "quote": "正门朝东桥还是北桥，她仍拿不准。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0005",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "门面照就在宁致左手下。她已用照片中的一个街角与街图比对，所用的材料与行动吻合。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 37,
+              "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 86,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "supported",
+              "reason": "宁致亲手压着剪报照片，并且正在辨认照片上的街角。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 37,
+                  "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 86,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0006",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "照片和标出两座桥的街图已摆好，宁致已实际进行指定比对。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 37,
+              "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 37,
+              "end": 56,
+              "quote": "两件东西之间铺着那张标了两座桥的街图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 86,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "supported",
+              "reason": "她已拿这张照片同面前的街图比完一个拐弯，亲自验证两份材料可用于这一步。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 37,
+                  "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 37,
+                  "end": 56,
+                  "quote": "两件东西之间铺着那张标了两座桥的街图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 86,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "70064952990038e3a8c20acf1b9b206f38cc5ca31194f3c9ef235a211bf8fd39": {
+      "schema_version": 1,
+      "project_id": "drugshop_corner",
+      "project_sha256": "31f14d39a0222ac6a663765df68efbb827c633397979b0e564aee27027d34788",
+      "packet_sha256": "70064952990038e3a8c20acf1b9b206f38cc5ca31194f3c9ef235a211bf8fd39",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-b"
+      },
+      "decisions": [
+        {
+          "fact_id": "probe_0001",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "校样上要填正门朝向，场景没有约定交稿时刻或逾期后果。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 46,
+              "end": 79,
+              "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "insufficient_evidence",
+              "reason": "宁致画圈标记待查处，未显示她听到或想起任何交稿期限及其后果。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 46,
+                  "end": 79,
+                  "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0002",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "当前已有核对进度，但没有当前时刻、倒计时或可供比较的期限。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 86,
+              "end": 122,
+              "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "insufficient_evidence",
+              "reason": "她知道已在比照片，草图还没开始比，文本未写她看表、计时或判断离截止还有多久。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 122,
+                  "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0003",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "她的行动顺序是已在比照片，草图还没开始比。没有原文将这一安排归因于特定时限的紧迫性。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 86,
+              "end": 122,
+              "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "insufficient_evidence",
+              "reason": "她知道接下来还需核对账簿草图，未表达基于剩余时间的取舍。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 122,
+                  "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0004",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "正门朝哪座桥确实未查明，但未约定解决这个问题的期限，因而无法确认“该期限内”这一层。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 46,
+              "end": 79,
+              "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 86,
+              "end": 122,
+              "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 122,
+              "end": 138,
+              "quote": "正门朝东桥还是北桥，她仍拿不准。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "insufficient_evidence",
+              "reason": "宁致知道桥名仍待核对，文本未交代她得知这项调查受期限约束。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 46,
+                  "end": 79,
+                  "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 122,
+                  "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 122,
+                  "end": 138,
+                  "quote": "正门朝东桥还是北桥，她仍拿不准。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0005",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "账簿草图正摊在宁致手下。草图标出正门至巷口的路，文本明确把这段路列为要与街图比的对象。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 37,
+              "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 37,
+              "end": 56,
+              "quote": "两件东西之间铺着那张标了两座桥的街图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 86,
+              "end": 122,
+              "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "supported",
+              "reason": "她自己摊开草图，知道图上那段路也要拿来和街图核对。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 37,
+                  "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 37,
+                  "end": 56,
+                  "quote": "两件东西之间铺着那张标了两座桥的街图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 122,
+                  "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0006",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "草图和标了两座桥的街图同时摊在手边，草图上有可比的位置。未开始比草图描述的是进度。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 37,
+              "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 37,
+              "end": 56,
+              "quote": "两件东西之间铺着那张标了两座桥的街图。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 86,
+              "end": 122,
+              "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "verdict": "supported",
+              "reason": "她亲手摊着草图，面对已用于比照的街图，也已辨明下一步该比草图上的哪段路。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 37,
+                  "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 37,
+                  "end": 56,
+                  "quote": "两件东西之间铺着那张标了两座桥的街图。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 122,
+                  "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "2078ad5294f500921d8a562c8a6fb8f60d5e351baaf27e3630f10bcf87d8b4da": {
+      "schema_version": 1,
+      "project_id": "lantern_hall",
+      "project_sha256": "23e8974888a545d7f5ca13f7be4d5b4a29daa61102fd42f50f832c809c9d872e",
+      "packet_sha256": "2078ad5294f500921d8a562c8a6fb8f60d5e351baaf27e3630f10bcf87d8b4da",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-b"
+      },
+      "decisions": [
+        {
+          "fact_id": "probe_0001",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "她拿放大镜查的就是待题注的戏班合影，目标是用孔形区分两座戏台。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 53,
+              "end": 79,
+              "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 40,
+              "end": 79,
+              "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 79,
+              "end": 105,
+              "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "supported",
+              "reason": "方苇记得两处栏杆的差异，自己已经举镜看这张照片上的栏杆。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 53,
+                  "end": 79,
+                  "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 40,
+                  "end": 79,
+                  "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 79,
+                  "end": 105,
+                  "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0002",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "照片题注仍不能确定戏台。折痕遮住需辨认的孔，她还在镜下辨认它。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 128,
+              "end": 146,
+              "quote": "究竟是哪座台，她在题注上空了两个字。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 79,
+              "end": 105,
+              "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "supported",
+              "reason": "方苇先前留空题注，当前继续辨孔，知道是哪座台仍待确认。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 128,
+                  "end": 146,
+                  "quote": "究竟是哪座台，她在题注上空了两个字。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 79,
+                  "end": 105,
+                  "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0003",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "方苇记得可对照的两种孔形，有放大镜和合影，且已实际举镜查看。折痕妨碍读出结论，但观察步骤正在进行。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 40,
+              "end": 79,
+              "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 79,
+              "end": 105,
+              "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "supported",
+              "reason": "她知道要找的两种孔形，也正透镜辨孔，直接掌握执行这一步的条件。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 40,
+                  "end": 79,
+                  "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 79,
+                  "end": 105,
+                  "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "b680f89b455b67b54df8fc33294674e88e67c946f21bd6bc75b39c7a8d712bb0": {
+      "schema_version": 1,
+      "project_id": "lantern_hall",
+      "project_sha256": "a63a3dd3bbff8b0c1a3880ef62b314d0278c6f63c071553aed5fae3be33afe0e",
+      "packet_sha256": "b680f89b455b67b54df8fc33294674e88e67c946f21bd6bc75b39c7a8d712bb0",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-b"
+      },
+      "decisions": [
+        {
+          "fact_id": "probe_0001",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "戏台重开、方苇今晚值班，均未给照片题注规定截止点或误期后果。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 0,
+              "end": 13,
+              "quote": "花灯会的旧戏台要重新开门。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 98,
+              "end": 128,
+              "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 128,
+              "end": 146,
+              "quote": "究竟是哪座台，她在题注上空了两个字。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "insufficient_evidence",
+              "reason": "她准备辨孔、留空题注，未显示她收到或想起题注的交付时限及后果。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 0,
+                  "end": 13,
+                  "quote": "花灯会的旧戏台要重新开门。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 98,
+                  "end": 128,
+                  "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 128,
+                  "end": 146,
+                  "quote": "究竟是哪座台，她在题注上空了两个字。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0002",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "当前能定位的是看到了第一根竖条，无法据此计算题注离到期有多久。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 40,
+              "end": 79,
+              "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 79,
+              "end": 105,
+              "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "insufficient_evidence",
+              "reason": "她正在查照片，还未辨清孔形。没有她获得时间提示或读取倒计时的描写。",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 40,
+                  "end": 79,
+                  "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 79,
+                  "end": 105,
+                  "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0003",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "她先读灯谱再看照片。此处只给出先后顺序，未把这一安排归因于合影题注的时限。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 0,
+              "end": 16,
+              "quote": "方苇把收焰折读到末行，合上灯谱。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 16,
+              "end": 40,
+              "quote": "她现在明白了，挡片缺口得朝灯轴；这就能照着装了。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 40,
+              "end": 79,
+              "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "insufficient_evidence",
+              "reason": "她明白挡片装法后举镜查照片，未显出因时间紧迫而改变顺序。",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 0,
+                  "end": 16,
+                  "quote": "方苇把收焰折读到末行，合上灯谱。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 16,
+                  "end": 40,
+                  "quote": "她现在明白了，挡片缺口得朝灯轴；这就能照着装了。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 40,
+                  "end": 79,
+                  "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0004",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "东台与西台仍待辨别，题注暂时填不得；没有文字将这项辨认纳入一个限期任务。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 128,
+              "end": 146,
+              "quote": "究竟是哪座台，她在题注上空了两个字。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 79,
+              "end": 105,
+              "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "insufficient_evidence",
+              "reason": "方苇知道辨孔尚未完成，未见她将此事作为有期限的问题来处理。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 128,
+                  "end": 146,
+                  "quote": "究竟是哪座台，她在题注上空了两个字。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 79,
+                  "end": 105,
+                  "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0005",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "她拿放大镜查的就是待题注的戏班合影，目标是用孔形区分两座戏台。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 53,
+              "end": 79,
+              "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 40,
+              "end": 79,
+              "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 79,
+              "end": 105,
+              "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "supported",
+              "reason": "方苇记得两处栏杆的差异，自己已经举镜看这张照片上的栏杆。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 53,
+                  "end": 79,
+                  "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 40,
+                  "end": 79,
+                  "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 79,
+                  "end": 105,
+                  "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0006",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "方苇记得可对照的两种孔形，有放大镜和合影，且已实际举镜查看。折痕妨碍读出结论，但观察步骤正在进行。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 40,
+              "end": 79,
+              "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。"
+            },
+            {
+              "scene_id": "s3",
+              "start": 79,
+              "end": 105,
+              "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "supported",
+              "reason": "她知道要找的两种孔形，也正透镜辨孔，直接掌握执行这一步的条件。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 40,
+                  "end": 79,
+                  "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 79,
+                  "end": 105,
+                  "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "1953cfbc67b0a687c4b16790bc89e04712783dfaa6279b81d1962b41cae71b43": {
+      "schema_version": 1,
+      "packet_sha256": "1953cfbc67b0a687c4b16790bc89e04712783dfaa6279b81d1962b41cae71b43",
+      "project_sha256": "3601ba35f73cf1f74cd1683d884063e4ca360fd17b4da43f2b80162c3d764496",
+      "project_id": "repair_bench",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-c"
+      },
+      "decisions": [
+        {
+          "fact_id": "probe_0001",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "开店后的动作属于例行修琴，拿毡是为稳住古琴。文中没有可辨认的阈限、越界事件或进入试炼领域的描写。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 0,
+              "end": 25,
+              "quote": "修琴铺开门，邵梨照例把两把待修的琴分放在长凳两端。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 46,
+              "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "verdict": "insufficient_evidence",
+              "reason": "她的意图是垫琴；没有言行显示她知道自己跨越阈限或进入陌生试炼。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 46,
+                  "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0002",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "两把琴各有待办事项，分别是垫稳古琴和辨别小提琴背板的细线。没有证据把它们连成递进考验，也没有将厚毡指认为一次试炼目标。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 25,
+              "end": 52,
+              "quote": "左边的古琴要垫稳才好卸弦，右边的小提琴背板上有道细线。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 46,
+              "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 46,
+              "end": 68,
+              "quote": "右边背板那条线，究竟是铅笔印还是沿纹裂开了？"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "verdict": "insufficient_evidence",
+              "reason": "她分别安排了垫琴和看细线的动作，未表现出对递进考验及厚毡在其中位置的认识。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 46,
+                  "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 68,
+                  "end": 107,
+                  "quote": "她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0003",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "毡还在手里，故垫琴没有完成；没有建立垫琴是一场具体试炼。未完成的是修理步骤，这只能支持整句的一部分。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 0,
+              "end": 25,
+              "quote": "修琴铺开门，邵梨照例把两把待修的琴分放在长凳两端。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 46,
+              "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "verdict": "insufficient_evidence",
+              "reason": "她亲自拿着厚毡，能知道琴尚未垫稳。没有依据表明她知道自己面对的是一场未完成的试炼。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 46,
+                  "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0004",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "邵梨自己拿毡准备垫琴，截止场景没有交代别人给过她针对这次试炼的指导。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 46,
+              "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "verdict": "insufficient_evidence",
+              "reason": "她表现出操作意图，但没有与帮助者交流或接受某项指引的证据。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 46,
+                  "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0005",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "厚毡的用途在她的动作中很清楚，来源为已获指引以及她理解这项试炼指引的说法则未得到支持。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 25,
+              "end": 52,
+              "quote": "左边的古琴要垫稳才好卸弦，右边的小提琴背板上有道细线。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 46,
+              "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "verdict": "insufficient_evidence",
+              "reason": "她知道用厚毡稳住琴身，但没有迹象显示这是她听懂某人指引的结果。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 46,
+                  "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0006",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "琴、厚毡和放垫的位置都在场；尚无具体指引及其试炼要求，无法确认这些是执行该项指引的条件。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 46,
+              "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "verdict": "insufficient_evidence",
+              "reason": "她亲手拿毡，明白接下来怎么垫；缺少她识别或准备执行某项试炼指引的证据。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 46,
+                  "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "3513bbc061355710345859fc7fabbe393910f1d8d00f7a28458feffc61a186cc": {
+      "schema_version": 1,
+      "packet_sha256": "3513bbc061355710345859fc7fabbe393910f1d8d00f7a28458feffc61a186cc",
+      "project_sha256": "1179e17f855cf5562cd66f772f1ffb1110210ccfa2870a01f5631371ba9d7eea",
+      "project_id": "repair_bench",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-c"
+      },
+      "decisions": [
+        {
+          "fact_id": "probe_0001",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "细线位于右侧小提琴背板，邵梨已在它旁边摆好放大镜并打亮灯，明确准备沿线边缘查看。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 25,
+              "end": 52,
+              "quote": "左边的古琴要垫稳才好卸弦，右边的小提琴背板上有道细线。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 46,
+              "end": 68,
+              "quote": "右边背板那条线，究竟是铅笔印还是沿纹裂开了？"
+            },
+            {
+              "scene_id": "s2",
+              "start": 68,
+              "end": 107,
+              "quote": "她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "verdict": "supported",
+              "reason": "她亲手为查看那条线摆镜、开灯，并瞄准线的边缘，显示她知道材料和核对对象。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 46,
+                  "end": 68,
+                  "quote": "右边背板那条线，究竟是铅笔印还是沿纹裂开了？"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 68,
+                  "end": 107,
+                  "quote": "她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0002",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "是铅笔印还是裂纹仍是悬问。她正准备沿边看，尚未凑到镜前，这一核对直接对应尚未辨清的问题。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 46,
+              "end": 68,
+              "quote": "右边背板那条线，究竟是铅笔印还是沿纹裂开了？"
+            },
+            {
+              "scene_id": "s2",
+              "start": 68,
+              "end": 107,
+              "quote": "她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "verdict": "supported",
+              "reason": "她提出两种可能，并准备查看边缘，说明她知道还需要核对什么。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 46,
+                  "end": 68,
+                  "quote": "右边背板那条线，究竟是铅笔印还是沿纹裂开了？"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 68,
+                  "end": 107,
+                  "quote": "她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0003",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "背板在凳边，灯已亮，放大镜已在背板旁，行动尚待开始但观察所需条件已到位。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 25,
+              "end": 52,
+              "quote": "左边的古琴要垫稳才好卸弦，右边的小提琴背板上有道细线。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 68,
+              "end": 107,
+              "quote": "她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "verdict": "supported",
+              "reason": "灯和放大镜是她亲自准备的，她已打算顺着细线看，故有根据认为她知道目前可以开始检查。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 68,
+                  "end": 107,
+                  "quote": "她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "275f4451676b3244ac4b6d3425089e8b24827a3dd3272ce0977d1cc16c821b14": {
+      "schema_version": 1,
+      "packet_sha256": "275f4451676b3244ac4b6d3425089e8b24827a3dd3272ce0977d1cc16c821b14",
+      "project_sha256": "6230625232dc2e823073f318284e8b62385a12c78f06a789b938a9ce7e1985bf",
+      "project_id": "lantern_hall",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-c"
+      },
+      "decisions": [
+        {
+          "fact_id": "probe_0001",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "钥匙牌上的规矩明确点名灯谱收焰折并限定翻阅者；收焰页是收录挡片装法的文字载体。方苇当值，属于规矩列明的例外。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 43,
+              "end": 89,
+              "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”她自己就是今晚当值的人。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 33,
+              "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 33,
+              "end": 53,
+              "quote": "灯底那块挡片该怎么装，她得读这页才知道。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "insufficient_evidence",
+              "reason": "她接过钥匙、拿着收焰折并知道需要读这页；叙述没有写她看过钥匙牌背面的规矩或从别处得知限制。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 13,
+                  "end": 43,
+                  "quote": "方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。"
+                },
+                {
+                  "scene_id": "s1",
+                  "start": 43,
+                  "end": 89,
+                  "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”她自己就是今晚当值的人。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 33,
+                  "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 33,
+                  "end": 53,
+                  "quote": "灯底那块挡片该怎么装，她得读这页才知道。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0002",
+          "verdict": "insufficient_evidence",
+          "epistemic_type": "uncertain",
+          "reason": "规矩及其适用页均经叙述确认。但刻字在牌的背面，文中没有描写她读到刻字、回忆禁令、提及它或依据禁令作出决定。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 43,
+              "end": 89,
+              "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”她自己就是今晚当值的人。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 33,
+              "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "insufficient_evidence",
+              "reason": "她能认出收焰折并准备翻读，但不能仅从她持有钥匙和当值推断她已知道具体禁令。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 13,
+                  "end": 43,
+                  "quote": "方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。"
+                },
+                {
+                  "scene_id": "s1",
+                  "start": 43,
+                  "end": 89,
+                  "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”她自己就是今晚当值的人。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 33,
+                  "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0003",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "收焰折已经在方苇指间，正是她要读来装挡片的那页。她是当值掌灯人，符合这页的翻阅条件。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 43,
+              "end": 89,
+              "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”她自己就是今晚当值的人。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 33,
+              "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 33,
+              "end": 53,
+              "quote": "灯底那块挡片该怎么装，她得读这页才知道。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "supported",
+              "reason": "她亲手捏住该页，也明白得读它才知道装法，足以支持她知道眼前这页可以展开读取。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 33,
+                  "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 33,
+                  "end": 53,
+                  "quote": "灯底那块挡片该怎么装，她得读这页才知道。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0004",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "收焰的页签已经露出，但折页还没有展开读过，恰好排除了已经开始读装法的状态。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 33,
+              "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 33,
+              "end": 53,
+              "quote": "灯底那块挡片该怎么装，她得读这页才知道。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "supported",
+              "reason": "未展开读过是她自己的阅读经历，她也知道还得读此页才会装挡片。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 33,
+                  "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 33,
+                  "end": 53,
+                  "quote": "灯底那块挡片该怎么装，她得读这页才知道。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0005",
+          "verdict": "contradicted",
+          "epistemic_type": "established",
+          "reason": "候选声称已经开始读相关内容，正文明确交代她还没展开读过，露在外面的只有页签。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 33,
+              "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "contradicted",
+              "reason": "她刚捏住未展开的页，又把读它当作获知装法的下一步，个人经历与已经开始读相关内容相反。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 33,
+                  "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 33,
+                  "end": 53,
+                  "quote": "灯底那块挡片该怎么装，她得读这页才知道。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0006",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "灯底仍空，挡片装法还等她阅读收焰页；该页已在手里，方苇当值，规则允许她翻阅。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 13,
+              "end": 43,
+              "quote": "方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。"
+            },
+            {
+              "scene_id": "s1",
+              "start": 43,
+              "end": 89,
+              "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”她自己就是今晚当值的人。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 33,
+              "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 33,
+              "end": 53,
+              "quote": "灯底那块挡片该怎么装，她得读这页才知道。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "supported",
+              "reason": "她正在装这盏灯，亲手捏住要读的页，明白得先读它才知道怎么装挡片，足以确认她知道事项尚未完成、现可展开阅读。",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 13,
+                  "end": 43,
+                  "quote": "方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 33,
+                  "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 33,
+                  "end": 53,
+                  "quote": "灯底那块挡片该怎么装，她得读这页才知道。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "b248f4a2baed21205405e78b8ddd886a94f37ad65fd33b43531e54e6b7dd02fa": {
+      "schema_version": 1,
+      "packet_sha256": "b248f4a2baed21205405e78b8ddd886a94f37ad65fd33b43531e54e6b7dd02fa",
+      "project_sha256": "71331a5f19dc3dafd515f13182a94640d14a50e5ccfd82e2b0df505194128b7e",
+      "project_id": "lantern_hall",
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "current-ai-multi-reader-c"
+      },
+      "decisions": [
+        {
+          "fact_id": "probe_0001",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "手边照片尚待题注。她记得两台栏孔的差异，已把镜子放到照片旁准备比较孔形，具备接触材料并针对照片核对的条件。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 53,
+              "end": 79,
+              "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 98,
+              "end": 128,
+              "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "supported",
+              "reason": "照片和镜子都经她亲手摆到一起，辨别依据是她自己记得的栏孔差异，知道要核对的是这张旧照。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 98,
+                  "end": 128,
+                  "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0002",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "照片背面只泛称戏台，题注仍留空。方苇正准备借照片里栏孔的形状分辨东西两台，地点在截止处仍未定。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 53,
+              "end": 79,
+              "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 98,
+              "end": 128,
+              "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 128,
+              "end": 146,
+              "quote": "究竟是哪座台，她在题注上空了两个字。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "supported",
+              "reason": "她为台名留空，又有意通过栏孔差异核实，直接表明她清楚未决的是哪一座戏台。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 98,
+                  "end": 128,
+                  "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 128,
+                  "end": 146,
+                  "quote": "究竟是哪座台，她在题注上空了两个字。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "probe_0003",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "旧照就在手边，方苇掌握两台栏孔的区别，放大镜也放到了照片旁。她尚未举镜，但检查所需材料、工具和辨别依据都已齐备。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 53,
+              "end": 79,
+              "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+            },
+            {
+              "scene_id": "s2",
+              "start": 98,
+              "end": 128,
+              "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "verdict": "supported",
+              "reason": "她知道辨别特征并亲自把放大镜移到照片旁，准备按孔形比对，表明她知道可以着手核查。",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 98,
+                  "end": 128,
+                  "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

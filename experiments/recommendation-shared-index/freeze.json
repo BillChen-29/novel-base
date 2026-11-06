@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-05",
+  "phase": "before expanded local encoding and ranking",
+  "methods": [
+    "bm25",
+    "vector",
+    "hybrid"
+  ],
+  "top_k": 2,
+  "rrf_k": 60,
+  "catalog_cards": 12,
+  "original_cases": 12,
+  "new_real_prefix_cases": 2,
+  "file_sha256": {
+    "scripts/recommendation_embedding_cache.py": "335cb589c9927486b99c79c343afbf0da865288f8b7e1ce8587dd9ee41e8b58e",
+    "scripts/tests/test_recommendation_embedding_cache.py": "982295702926edcb2bec8d54415af23511e8d296e34585185e058f11dae45364",
+    "scripts/tests/test_recommendation_embedding_cache_cli.py": "eace88f05974417fba6027fe5f80eb09f8cfe485b609771891d20c60232ccb26",
+    "experiments/recommendation-shared-index/cache_cli.py": "ce06825fbc29339cfc4f9bd55883badaa31e582962060d934dae55838c27527a",
+    "experiments/recommendation-shared-index/catalog-expanded.json": "dc6843aeccc1d890a396682ec923daef849a4577e85750baf06b889443f70ac1",
+    "experiments/recommendation-shared-index/catalog-notes.json": "ddf87794d3ad3e798fcb21661fa67506addc6aacada14a9ddb67e72dd657767f"
+  },
+  "fixtures_all_sha256": "06d6a597e10966efebad2606c2ca0d6835aba8a5ea799b77340a7d6dfc4b85c0",
+  "state_reviews_all_sha256": "0f74c3bf4a83a57ca26aaf7a029dc2b98a6fc831b613cec70f3996b6c3772543",
+  "note": "Eight new operationalized cards are retrieval competition candidates, not yet positively validated in all circumstances. Two new prefixes overlap previously used novels and are not independent stories."
+}

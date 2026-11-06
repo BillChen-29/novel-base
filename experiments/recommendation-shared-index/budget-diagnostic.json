@@ -1,0 +1,113 @@
+{
+  "status": "read_only_diagnosis_not_new_ranking_policy",
+  "cases": [
+    {
+      "case_id": "wording_letter_use",
+      "method": "vector",
+      "full_ranking": [
+        "trial_guidance_use",
+        "forbidden_knowledge_read",
+        "story_shield_response",
+        "carrier_process",
+        "imitative_model_use",
+        "truth_trigger",
+        "deadline_investigation",
+        "clue_check",
+        "false_accusation_proof",
+        "dialogue_active",
+        "truth_pressure_response",
+        "identity_mask_response"
+      ],
+      "action_compatible_cards": [
+        "carrier_process",
+        "false_accusation_proof",
+        "imitative_model_use",
+        "trial_guidance_use"
+      ],
+      "first_two_compatible": [
+        "trial_guidance_use",
+        "carrier_process"
+      ]
+    },
+    {
+      "case_id": "wording_letter_use",
+      "method": "hybrid",
+      "full_ranking": [
+        "trial_guidance_use",
+        "forbidden_knowledge_read",
+        "story_shield_response",
+        "carrier_process",
+        "imitative_model_use",
+        "truth_trigger",
+        "deadline_investigation",
+        "clue_check",
+        "false_accusation_proof",
+        "dialogue_active",
+        "truth_pressure_response",
+        "identity_mask_response"
+      ],
+      "action_compatible_cards": [
+        "carrier_process",
+        "false_accusation_proof",
+        "imitative_model_use",
+        "trial_guidance_use"
+      ],
+      "first_two_compatible": [
+        "trial_guidance_use",
+        "carrier_process"
+      ]
+    },
+    {
+      "case_id": "real_monitor_progress",
+      "method": "vector",
+      "full_ranking": [
+        "trial_guidance_use",
+        "identity_mask_response",
+        "clue_check",
+        "truth_trigger",
+        "deadline_investigation",
+        "carrier_process",
+        "forbidden_knowledge_read",
+        "truth_pressure_response",
+        "dialogue_active",
+        "story_shield_response",
+        "imitative_model_use",
+        "false_accusation_proof"
+      ],
+      "action_compatible_cards": [
+        "clue_check",
+        "deadline_investigation"
+      ],
+      "first_two_compatible": [
+        "clue_check",
+        "deadline_investigation"
+      ]
+    },
+    {
+      "case_id": "real_monitor_progress",
+      "method": "hybrid",
+      "full_ranking": [
+        "trial_guidance_use",
+        "identity_mask_response",
+        "clue_check",
+        "truth_trigger",
+        "deadline_investigation",
+        "carrier_process",
+        "forbidden_knowledge_read",
+        "truth_pressure_response",
+        "dialogue_active",
+        "story_shield_response",
+        "imitative_model_use",
+        "false_accusation_proof"
+      ],
+      "action_compatible_cards": [
+        "clue_check",
+        "deadline_investigation"
+      ],
+      "first_two_compatible": [
+        "clue_check",
+        "deadline_investigation"
+      ]
+    }
+  ]
+}

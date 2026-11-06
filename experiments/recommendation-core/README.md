@@ -27,7 +27,7 @@ python3 experiments/recommendation-core/replay.py prepare-candidates \
   --state-reviews experiments/recommendation-core/state-reviews-public.json
 
 # 机制回归测试
-PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover \
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=scripts python3 -m unittest discover \
   -s scripts/tests -p 'test_recommendation*.py'
 ```
 
@@ -94,7 +94,7 @@ ID 和定义在一个会话中保持稳定，登记过的身份不能被悄悄�
 
 只把 `current_batch.writer_packet` 交给写作模型。它只含已审可知命题、匿名证据编号和未来提案；原文大段引句、审计理由、注册表及内部编号留在作者端。哈希用于内容一致性和旧版本拒绝，不是审阅者身份认证。低层 `install_state/install_batch` 属于可信宿主接口；外部审核应通过 engine 的审核入口导入。
 
-当前稳定闭环使用 BM25。此前本地向量检索实验仍保留，尚未作为这一会话模块的可选检索后端接入。扩大目录、换检索器或接 AI 提供方时，应保持“只审实际候选、证据门槛独立于相似度”的契约。
+本页记录的 v0.3 基线使用 BM25。后续已增加可选的本地向量与混合检索入口，见[本地向量接入](../recommendation-vector/README.md)；默认 BM25 保持兼容。扩大目录、换检索器或接 AI 提供方时，应保持“只审实际候选、证据门槛独立于相似度”的契约。
 
 本轮验证的是有限目录下的机制和来源边界，不是自动抽取、文学质量、全库召回或长篇性能的完成证明。案例限于局部顺叙前文；本轮没有增加自动插叙／倒叙时间线推理。新增正文是预先写好的原创例子，并非写作模型自动生成。
 

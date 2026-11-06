@@ -1,0 +1,1353 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "case_id": "lantern_1",
+      "episode_id": "lantern_hall",
+      "source": {
+        "schema_version": 1,
+        "project_id": "lantern_hall",
+        "title": "花灯会馆",
+        "pov_character": "方苇",
+        "characters": [
+          "方苇"
+        ],
+        "goal": {
+          "id": "recover_and_investigate",
+          "description": "布置走马灯并为旧戏台合影题注。"
+        },
+        "scenes": [
+          {
+            "id": "s1",
+            "order": 1,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "方苇"
+            ],
+            "text": "花灯会的旧戏台要重新开门。方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”她自己就是今晚当值的人。"
+          },
+          {
+            "id": "s2",
+            "order": 2,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "方苇"
+            ],
+            "text": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。灯底那块挡片该怎么装，她得读这页才知道。手边另有一张待题注的戏班旧合影，背面只写了“戏台”。她记得东台的栏杆是方孔，西台的是圆孔。她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。究竟是哪座台，她在题注上空了两个字。"
+          }
+        ],
+        "facts": [],
+        "threads": []
+      },
+      "new_scene": {
+        "id": "s2",
+        "order": 2,
+        "function": "forward_current",
+        "tension": 2,
+        "present_characters": [
+          "方苇"
+        ],
+        "text": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。灯底那块挡片该怎么装，她得读这页才知道。手边另有一张待题注的戏班旧合影，背面只写了“戏台”。她记得东台的栏杆是方孔，西台的是圆孔。她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。究竟是哪座台，她在题注上空了两个字。"
+      },
+      "annotations": {
+        "facts": [
+          {
+            "id": "keeper",
+            "text": "方苇是今晚当值的掌灯人。",
+            "quote": "她自己就是今晚当值的人。",
+            "scene_id": "s1",
+            "start": 77,
+            "end": 89,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "reading_rule",
+            "text": "会规只许当值掌灯人翻阅灯谱的收焰折。",
+            "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”",
+            "scene_id": "s1",
+            "start": 43,
+            "end": 77,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "leaf_in_hand",
+            "text": "方苇手里捏着灯谱的收焰折。",
+            "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面",
+            "scene_id": "s2",
+            "start": 0,
+            "end": 24,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "leaf_unread",
+            "text": "方苇还没展开读过收焰折。",
+            "quote": "页签“收焰”露在外面，她还没展开读过。",
+            "scene_id": "s2",
+            "start": 14,
+            "end": 33,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "fitting_open",
+            "text": "方苇尚待从收焰折了解灯底挡片的装法。",
+            "quote": "灯底那块挡片该怎么装，她得读这页才知道。",
+            "scene_id": "s2",
+            "start": 33,
+            "end": 53,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "photo_available",
+            "text": "戏班旧合影就在方苇手边。",
+            "quote": "手边另有一张待题注的戏班旧合影",
+            "scene_id": "s2",
+            "start": 53,
+            "end": 68,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "east_holes",
+            "text": "方苇记得东台栏杆有方孔。",
+            "quote": "她记得东台的栏杆是方孔",
+            "scene_id": "s2",
+            "start": 79,
+            "end": 90,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "west_holes",
+            "text": "方苇记得西台栏杆有圆孔。",
+            "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+            "scene_id": "s2",
+            "start": 79,
+            "end": 98,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "lens_ready",
+            "text": "方苇已把放大镜放到照片旁边。",
+            "quote": "她把放大镜放到照片边",
+            "scene_id": "s2",
+            "start": 98,
+            "end": 108,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "photo_pending",
+            "text": "方苇准备比较旧合影中栏杆的孔形，还没举镜。",
+            "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。",
+            "scene_id": "s2",
+            "start": 98,
+            "end": 128,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "caption_open",
+            "text": "方苇尚待确定照片拍在哪座戏台。",
+            "quote": "究竟是哪座台，她在题注上空了两个字。",
+            "scene_id": "s2",
+            "start": 128,
+            "end": 146,
+            "known_by": [
+              "方苇"
+            ]
+          }
+        ],
+        "registry": {
+          "characters": [
+            {
+              "id": "pov",
+              "label": "方苇"
+            }
+          ],
+          "entities": [
+            {
+              "id": "lamp_leaf",
+              "label": "灯谱的收焰折"
+            },
+            {
+              "id": "cast_photo",
+              "label": "戏班旧合影"
+            }
+          ],
+          "tasks": [
+            {
+              "id": "fit_lamp",
+              "label": "装好走马灯的挡片"
+            },
+            {
+              "id": "caption_photo",
+              "label": "确定旧合影拍在哪座戏台"
+            }
+          ],
+          "actions": [
+            {
+              "id": "read_lamp_leaf",
+              "actor_id": "pov",
+              "target_ids": [
+                "lamp_leaf"
+              ],
+              "task_id": "fit_lamp",
+              "operation": "read",
+              "description": "读灯谱收焰折上挡片的装法",
+              "origin": "observed",
+              "status": "pending",
+              "anchor": {
+                "scene_id": "s2",
+                "start": 0,
+                "end": 53
+              }
+            },
+            {
+              "id": "check_stage_photo",
+              "actor_id": "pov",
+              "target_ids": [
+                "cast_photo"
+              ],
+              "task_id": "caption_photo",
+              "operation": "check",
+              "description": "用放大镜查看旧合影的栏杆孔形，对照东西两台的特征",
+              "origin": "observed",
+              "status": "pending",
+              "anchor": {
+                "scene_id": "s2",
+                "start": 53,
+                "end": 146
+              }
+            }
+          ]
+        }
+      },
+      "accept_action": "read_lamp_leaf"
+    },
+    {
+      "case_id": "lantern_2",
+      "episode_id": "lantern_hall",
+      "source": {
+        "schema_version": 1,
+        "project_id": "lantern_hall",
+        "title": "花灯会馆",
+        "pov_character": "方苇",
+        "characters": [
+          "方苇"
+        ],
+        "goal": {
+          "id": "recover_and_investigate",
+          "description": "布置走马灯并为旧戏台合影题注。"
+        },
+        "scenes": [
+          {
+            "id": "s1",
+            "order": 1,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "方苇"
+            ],
+            "text": "花灯会的旧戏台要重新开门。方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”她自己就是今晚当值的人。"
+          },
+          {
+            "id": "s2",
+            "order": 2,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "方苇"
+            ],
+            "text": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。灯底那块挡片该怎么装，她得读这页才知道。手边另有一张待题注的戏班旧合影，背面只写了“戏台”。她记得东台的栏杆是方孔，西台的是圆孔。她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。究竟是哪座台，她在题注上空了两个字。"
+          },
+          {
+            "id": "s3",
+            "order": 3,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "方苇"
+            ],
+            "text": "方苇把收焰折读到末行，合上灯谱。她现在明白了，挡片缺口得朝灯轴；这就能照着装了。她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+          }
+        ],
+        "facts": [],
+        "threads": []
+      },
+      "new_scene": {
+        "id": "s3",
+        "order": 3,
+        "function": "forward_current",
+        "tension": 2,
+        "present_characters": [
+          "方苇"
+        ],
+        "text": "方苇把收焰折读到末行，合上灯谱。她现在明白了，挡片缺口得朝灯轴；这就能照着装了。她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+      },
+      "annotations": {
+        "facts": [
+          {
+            "id": "keeper",
+            "text": "方苇是今晚当值的掌灯人。",
+            "quote": "她自己就是今晚当值的人。",
+            "scene_id": "s1",
+            "start": 77,
+            "end": 89,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "reading_rule",
+            "text": "会规只许当值掌灯人翻阅灯谱的收焰折。",
+            "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”",
+            "scene_id": "s1",
+            "start": 43,
+            "end": 77,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "photo_available",
+            "text": "戏班旧合影就在方苇手边。",
+            "quote": "手边另有一张待题注的戏班旧合影",
+            "scene_id": "s2",
+            "start": 53,
+            "end": 68,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "east_holes",
+            "text": "方苇记得东台栏杆有方孔。",
+            "quote": "她记得东台的栏杆是方孔",
+            "scene_id": "s2",
+            "start": 79,
+            "end": 90,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "west_holes",
+            "text": "方苇记得西台栏杆有圆孔。",
+            "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+            "scene_id": "s2",
+            "start": 79,
+            "end": 98,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "leaf_finished",
+            "text": "方苇已读完收焰折。",
+            "quote": "方苇把收焰折读到末行，合上灯谱。",
+            "scene_id": "s3",
+            "start": 0,
+            "end": 16,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "fitting_known",
+            "text": "方苇知道挡片缺口该朝灯轴。",
+            "quote": "她现在明白了，挡片缺口得朝灯轴",
+            "scene_id": "s3",
+            "start": 16,
+            "end": 31,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "photo_under_glass",
+            "text": "方苇正用放大镜辨认旧合影上的栏杆孔。",
+            "quote": "她仍透过镜片辨那道孔",
+            "scene_id": "s3",
+            "start": 79,
+            "end": 89,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "caption_unfilled",
+            "text": "方苇仍没确定合影中的戏台。",
+            "quote": "东台还是西台，题注暂时填不得。",
+            "scene_id": "s3",
+            "start": 90,
+            "end": 105,
+            "known_by": [
+              "方苇"
+            ]
+          }
+        ],
+        "registry": {
+          "characters": [
+            {
+              "id": "pov",
+              "label": "方苇"
+            }
+          ],
+          "entities": [
+            {
+              "id": "lamp_leaf",
+              "label": "灯谱的收焰折"
+            },
+            {
+              "id": "cast_photo",
+              "label": "戏班旧合影"
+            }
+          ],
+          "tasks": [
+            {
+              "id": "fit_lamp",
+              "label": "装好走马灯的挡片"
+            },
+            {
+              "id": "caption_photo",
+              "label": "确定旧合影拍在哪座戏台"
+            }
+          ],
+          "actions": [
+            {
+              "id": "read_lamp_leaf",
+              "actor_id": "pov",
+              "target_ids": [
+                "lamp_leaf"
+              ],
+              "task_id": "fit_lamp",
+              "operation": "read",
+              "description": "读灯谱收焰折上挡片的装法",
+              "origin": "observed",
+              "status": "completed",
+              "anchor": {
+                "scene_id": "s3",
+                "start": 0,
+                "end": 40
+              }
+            },
+            {
+              "id": "check_stage_photo",
+              "actor_id": "pov",
+              "target_ids": [
+                "cast_photo"
+              ],
+              "task_id": "caption_photo",
+              "operation": "check",
+              "description": "用放大镜查看旧合影的栏杆孔形，对照东西两台的特征",
+              "origin": "observed",
+              "status": "in_progress",
+              "anchor": {
+                "scene_id": "s3",
+                "start": 40,
+                "end": 105
+              }
+            }
+          ]
+        }
+      },
+      "accept_action": "check_stage_photo"
+    },
+    {
+      "case_id": "lantern_3",
+      "episode_id": "lantern_hall",
+      "source": {
+        "schema_version": 1,
+        "project_id": "lantern_hall",
+        "title": "花灯会馆",
+        "pov_character": "方苇",
+        "characters": [
+          "方苇"
+        ],
+        "goal": {
+          "id": "recover_and_investigate",
+          "description": "布置走马灯并为旧戏台合影题注。"
+        },
+        "scenes": [
+          {
+            "id": "s1",
+            "order": 1,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "方苇"
+            ],
+            "text": "花灯会的旧戏台要重新开门。方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”她自己就是今晚当值的人。"
+          },
+          {
+            "id": "s2",
+            "order": 2,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "方苇"
+            ],
+            "text": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。灯底那块挡片该怎么装，她得读这页才知道。手边另有一张待题注的戏班旧合影，背面只写了“戏台”。她记得东台的栏杆是方孔，西台的是圆孔。她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。究竟是哪座台，她在题注上空了两个字。"
+          },
+          {
+            "id": "s3",
+            "order": 3,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "方苇"
+            ],
+            "text": "方苇把收焰折读到末行，合上灯谱。她现在明白了，挡片缺口得朝灯轴；这就能照着装了。她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。"
+          },
+          {
+            "id": "s4",
+            "order": 4,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "方苇"
+            ],
+            "text": "方苇把合影稍稍转向窗户，折痕的影子移开了。她透过放大镜看清一排圆孔，把西台旧栏杆的特征和圆孔一对，认准了，就是西台。她放下放大镜，在刚才留白的题注里填上“西台”。"
+          }
+        ],
+        "facts": [],
+        "threads": []
+      },
+      "new_scene": {
+        "id": "s4",
+        "order": 4,
+        "function": "forward_current",
+        "tension": 2,
+        "present_characters": [
+          "方苇"
+        ],
+        "text": "方苇把合影稍稍转向窗户，折痕的影子移开了。她透过放大镜看清一排圆孔，把西台旧栏杆的特征和圆孔一对，认准了，就是西台。她放下放大镜，在刚才留白的题注里填上“西台”。"
+      },
+      "annotations": {
+        "facts": [
+          {
+            "id": "keeper",
+            "text": "方苇是今晚当值的掌灯人。",
+            "quote": "她自己就是今晚当值的人。",
+            "scene_id": "s1",
+            "start": 77,
+            "end": 89,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "reading_rule",
+            "text": "会规只许当值掌灯人翻阅灯谱的收焰折。",
+            "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”",
+            "scene_id": "s1",
+            "start": 43,
+            "end": 77,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "photo_available",
+            "text": "戏班旧合影就在方苇手边。",
+            "quote": "手边另有一张待题注的戏班旧合影",
+            "scene_id": "s2",
+            "start": 53,
+            "end": 68,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "east_holes",
+            "text": "方苇记得东台栏杆有方孔。",
+            "quote": "她记得东台的栏杆是方孔",
+            "scene_id": "s2",
+            "start": 79,
+            "end": 90,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "west_holes",
+            "text": "方苇记得西台栏杆有圆孔。",
+            "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+            "scene_id": "s2",
+            "start": 79,
+            "end": 98,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "leaf_finished",
+            "text": "方苇已读完收焰折。",
+            "quote": "方苇把收焰折读到末行，合上灯谱。",
+            "scene_id": "s3",
+            "start": 0,
+            "end": 16,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "fitting_known",
+            "text": "方苇知道挡片缺口该朝灯轴。",
+            "quote": "她现在明白了，挡片缺口得朝灯轴",
+            "scene_id": "s3",
+            "start": 16,
+            "end": 31,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "round_holes",
+            "text": "方苇看清合影中栏杆上有一排圆孔。",
+            "quote": "她透过放大镜看清一排圆孔",
+            "scene_id": "s4",
+            "start": 21,
+            "end": 33,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "photo_identified",
+            "text": "方苇对照圆孔认出合影拍的是西台。",
+            "quote": "把西台旧栏杆的特征和圆孔一对，认准了，就是西台。",
+            "scene_id": "s4",
+            "start": 34,
+            "end": 58,
+            "known_by": [
+              "方苇"
+            ]
+          },
+          {
+            "id": "caption_filled",
+            "text": "方苇已在题注里填上“西台”。",
+            "quote": "她放下放大镜，在刚才留白的题注里填上“西台”。",
+            "scene_id": "s4",
+            "start": 58,
+            "end": 81,
+            "known_by": [
+              "方苇"
+            ]
+          }
+        ],
+        "registry": {
+          "characters": [
+            {
+              "id": "pov",
+              "label": "方苇"
+            }
+          ],
+          "entities": [
+            {
+              "id": "lamp_leaf",
+              "label": "灯谱的收焰折"
+            },
+            {
+              "id": "cast_photo",
+              "label": "戏班旧合影"
+            }
+          ],
+          "tasks": [
+            {
+              "id": "fit_lamp",
+              "label": "装好走马灯的挡片"
+            },
+            {
+              "id": "caption_photo",
+              "label": "确定旧合影拍在哪座戏台"
+            }
+          ],
+          "actions": [
+            {
+              "id": "read_lamp_leaf",
+              "actor_id": "pov",
+              "target_ids": [
+                "lamp_leaf"
+              ],
+              "task_id": "fit_lamp",
+              "operation": "read",
+              "description": "读灯谱收焰折上挡片的装法",
+              "origin": "observed",
+              "status": "completed",
+              "anchor": {
+                "scene_id": "s3",
+                "start": 0,
+                "end": 40
+              }
+            },
+            {
+              "id": "check_stage_photo",
+              "actor_id": "pov",
+              "target_ids": [
+                "cast_photo"
+              ],
+              "task_id": "caption_photo",
+              "operation": "check",
+              "description": "用放大镜查看旧合影的栏杆孔形，对照东西两台的特征",
+              "origin": "observed",
+              "status": "completed",
+              "anchor": {
+                "scene_id": "s4",
+                "start": 0,
+                "end": 81
+              }
+            }
+          ]
+        }
+      },
+      "accept_action": null
+    },
+    {
+      "case_id": "screening",
+      "episode_id": "screening_room",
+      "source": {
+        "schema_version": 1,
+        "project_id": "screening_room",
+        "title": "银幕左缘",
+        "pov_character": "周岑",
+        "characters": [
+          "周岑",
+          "阿敏"
+        ],
+        "goal": {
+          "id": "recover_and_investigate",
+          "description": "校正试映画面，并和供片人议定片头署名。"
+        },
+        "scenes": [
+          {
+            "id": "s1",
+            "order": 1,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "周岑",
+              "阿敏"
+            ],
+            "text": "放映室里，周岑看见试映的片头被银幕黑边吃掉了半个字。供片人阿敏站在她旁边，要她顺手把字幕上的“口述：阿陶”也删掉，说那一段已经剪了。周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”"
+          },
+          {
+            "id": "s2",
+            "order": 2,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "周岑",
+              "阿敏"
+            ],
+            "text": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”她懂这两格是给片头让出左边的位置，得照卡上的数调机。片头仍缺着半个字，她的手还没碰到旋钮。阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。删不删署名，两人还没说定。"
+          }
+        ],
+        "facts": [],
+        "threads": []
+      },
+      "new_scene": {
+        "id": "s2",
+        "order": 2,
+        "function": "forward_current",
+        "tension": 2,
+        "present_characters": [
+          "周岑",
+          "阿敏"
+        ],
+        "text": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”她懂这两格是给片头让出左边的位置，得照卡上的数调机。片头仍缺着半个字，她的手还没碰到旋钮。阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。删不删署名，两人还没说定。"
+      },
+      "annotations": {
+        "facts": [
+          {
+            "id": "card_finished",
+            "text": "周岑已读完投影机旁的校准卡。",
+            "quote": "周岑把投影机旁的校准卡读完了。",
+            "scene_id": "s2",
+            "start": 0,
+            "end": 15,
+            "known_by": [
+              "周岑"
+            ]
+          },
+          {
+            "id": "offset_setting",
+            "text": "校准卡要求左缘裁字时将水平偏移加两格。",
+            "quote": "“左缘裁字，水平偏移加两格。”",
+            "scene_id": "s2",
+            "start": 15,
+            "end": 30,
+            "known_by": [
+              "周岑"
+            ]
+          },
+          {
+            "id": "offset_understood",
+            "text": "周岑知道应按卡上的数值给片头左边让出位置。",
+            "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。",
+            "scene_id": "s2",
+            "start": 30,
+            "end": 56,
+            "known_by": [
+              "周岑"
+            ]
+          },
+          {
+            "id": "image_clipped",
+            "text": "试映片头左缘仍缺半个字。",
+            "quote": "片头仍缺着半个字",
+            "scene_id": "s2",
+            "start": 56,
+            "end": 64,
+            "known_by": [
+              "周岑"
+            ]
+          },
+          {
+            "id": "dial_untouched",
+            "text": "周岑还没碰调节旋钮。",
+            "quote": "她的手还没碰到旋钮。",
+            "scene_id": "s2",
+            "start": 65,
+            "end": 75,
+            "known_by": [
+              "周岑"
+            ]
+          },
+          {
+            "id": "removal_requested",
+            "text": "供片人阿敏要求删掉阿陶的口述署名。",
+            "quote": "供片人阿敏站在她旁边，要她顺手把字幕上的“口述：阿陶”也删掉",
+            "scene_id": "s1",
+            "start": 26,
+            "end": 56,
+            "known_by": [
+              "周岑"
+            ]
+          },
+          {
+            "id": "zhou_position",
+            "text": "周岑主张保留阿陶的名字。",
+            "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”",
+            "scene_id": "s1",
+            "start": 66,
+            "end": 93,
+            "known_by": [
+              "周岑"
+            ]
+          },
+          {
+            "id": "reply_invited",
+            "text": "阿敏当面追问这行署名指的是哪段声音。",
+            "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”",
+            "scene_id": "s2",
+            "start": 75,
+            "end": 115,
+            "known_by": [
+              "周岑"
+            ]
+          },
+          {
+            "id": "reply_pending",
+            "text": "周岑打算指出那段声音，尚未回答阿敏刚提出的问题。",
+            "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。",
+            "scene_id": "s2",
+            "start": 115,
+            "end": 144,
+            "known_by": [
+              "周岑"
+            ]
+          },
+          {
+            "id": "credit_open",
+            "text": "两人还没有议定是否删去署名。",
+            "quote": "删不删署名，两人还没说定。",
+            "scene_id": "s2",
+            "start": 144,
+            "end": 157,
+            "known_by": [
+              "周岑"
+            ]
+          }
+        ],
+        "registry": {
+          "characters": [
+            {
+              "id": "pov",
+              "label": "周岑"
+            },
+            {
+              "id": "lender",
+              "label": "阿敏"
+            }
+          ],
+          "entities": [
+            {
+              "id": "calibration_card",
+              "label": "投影机校准卡"
+            },
+            {
+              "id": "oral_credit",
+              "label": "片头的阿陶口述署名"
+            }
+          ],
+          "tasks": [
+            {
+              "id": "align_image",
+              "label": "校正片头画面的左缘"
+            },
+            {
+              "id": "settle_credit",
+              "label": "议定阿陶的片头署名"
+            }
+          ],
+          "actions": [
+            {
+              "id": "apply_offset",
+              "actor_id": "pov",
+              "target_ids": [
+                "calibration_card"
+              ],
+              "task_id": "align_image",
+              "operation": "use",
+              "description": "依照校准卡把投影机水平偏移加两格",
+              "origin": "observed",
+              "status": "pending",
+              "anchor": {
+                "scene_id": "s2",
+                "start": 0,
+                "end": 75
+              }
+            },
+            {
+              "id": "answer_lender",
+              "actor_id": "pov",
+              "target_ids": [
+                "oral_credit"
+              ],
+              "task_id": "settle_credit",
+              "operation": "respond",
+              "description": "向阿敏指出阿陶的声音，回答保留署名的理由",
+              "origin": "observed",
+              "status": "pending",
+              "anchor": {
+                "scene_id": "s2",
+                "start": 75,
+                "end": 157
+              }
+            }
+          ]
+        }
+      },
+      "accept_action": null
+    },
+    {
+      "case_id": "drugshop",
+      "episode_id": "drugshop_corner",
+      "source": {
+        "schema_version": 1,
+        "project_id": "drugshop_corner",
+        "title": "房契里的桥",
+        "pov_character": "宁致",
+        "characters": [
+          "宁致"
+        ],
+        "goal": {
+          "id": "recover_and_investigate",
+          "description": "查清旧药铺正门朝着哪座石桥。"
+        },
+        "scenes": [
+          {
+            "id": "s1",
+            "order": 1,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "宁致"
+            ],
+            "text": "宁致给旧药铺做图注。房契说刻葫芦的正门对着一座石桥，没写桥名。街图上东桥、北桥各占一个街角。她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。"
+          },
+          {
+            "id": "s2",
+            "order": 2,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "宁致"
+            ],
+            "text": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。两件东西之间铺着那张标了两座桥的街图。她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。正门朝东桥还是北桥，她仍拿不准。"
+          }
+        ],
+        "facts": [],
+        "threads": []
+      },
+      "new_scene": {
+        "id": "s2",
+        "order": 2,
+        "function": "forward_current",
+        "tension": 2,
+        "present_characters": [
+          "宁致"
+        ],
+        "text": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。两件东西之间铺着那张标了两座桥的街图。她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。正门朝东桥还是北桥，她仍拿不准。"
+      },
+      "annotations": {
+        "facts": [
+          {
+            "id": "deed_unnamed",
+            "text": "房契记载药铺正门对着石桥，未记下桥名。",
+            "quote": "房契说刻葫芦的正门对着一座石桥，没写桥名。",
+            "scene_id": "s1",
+            "start": 10,
+            "end": 31,
+            "known_by": [
+              "宁致"
+            ]
+          },
+          {
+            "id": "photo_at_hand",
+            "text": "宁致左手压着从报纸剪下的药铺门面照。",
+            "quote": "宁致左手压着从报纸上剪下的药铺门面照",
+            "scene_id": "s2",
+            "start": 0,
+            "end": 18,
+            "known_by": [
+              "宁致"
+            ]
+          },
+          {
+            "id": "sketch_at_hand",
+            "text": "宁致右手摊着木匠画在账簿封底的药铺草图。",
+            "quote": "右手摊着木匠画在账簿封底的药铺草图。",
+            "scene_id": "s2",
+            "start": 19,
+            "end": 37,
+            "known_by": [
+              "宁致"
+            ]
+          },
+          {
+            "id": "map_ready",
+            "text": "标有两座桥的街图铺在两件材料之间。",
+            "quote": "两件东西之间铺着那张标了两座桥的街图。",
+            "scene_id": "s2",
+            "start": 37,
+            "end": 56,
+            "known_by": [
+              "宁致"
+            ]
+          },
+          {
+            "id": "photo_comparison",
+            "text": "照片中的街角已经比过第一个拐弯，第二个仍待查看。",
+            "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。",
+            "scene_id": "s2",
+            "start": 56,
+            "end": 86,
+            "known_by": [
+              "宁致"
+            ]
+          },
+          {
+            "id": "sketch_pending",
+            "text": "账簿草图上正门到巷口的位置还没和街图比较。",
+            "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。",
+            "scene_id": "s2",
+            "start": 86,
+            "end": 122,
+            "known_by": [
+              "宁致"
+            ]
+          },
+          {
+            "id": "bridge_unknown",
+            "text": "宁致仍没确定正门对着东桥还是北桥。",
+            "quote": "正门朝东桥还是北桥，她仍拿不准。",
+            "scene_id": "s2",
+            "start": 122,
+            "end": 138,
+            "known_by": [
+              "宁致"
+            ]
+          }
+        ],
+        "registry": {
+          "characters": [
+            {
+              "id": "pov",
+              "label": "宁致"
+            }
+          ],
+          "entities": [
+            {
+              "id": "facade_photo",
+              "label": "从报纸剪下的门面照"
+            },
+            {
+              "id": "ledger_sketch",
+              "label": "账簿封底的草图"
+            }
+          ],
+          "tasks": [
+            {
+              "id": "identify_bridge",
+              "label": "查清药铺正门朝向的石桥"
+            }
+          ],
+          "actions": [
+            {
+              "id": "compare_facade",
+              "actor_id": "pov",
+              "target_ids": [
+                "facade_photo"
+              ],
+              "task_id": "identify_bridge",
+              "operation": "check",
+              "description": "比对门面照上的街角和街图",
+              "origin": "observed",
+              "status": "in_progress",
+              "anchor": {
+                "scene_id": "s2",
+                "start": 0,
+                "end": 138
+              }
+            },
+            {
+              "id": "compare_sketch",
+              "actor_id": "pov",
+              "target_ids": [
+                "ledger_sketch"
+              ],
+              "task_id": "identify_bridge",
+              "operation": "check",
+              "description": "比对草图上正门到巷口的位置和街图",
+              "origin": "observed",
+              "status": "pending",
+              "anchor": {
+                "scene_id": "s2",
+                "start": 0,
+                "end": 138
+              }
+            }
+          ]
+        }
+      },
+      "accept_action": null
+    },
+    {
+      "case_id": "repair_bench",
+      "episode_id": "repair_bench",
+      "source": {
+        "schema_version": 1,
+        "project_id": "repair_bench",
+        "title": "长凳两端",
+        "pov_character": "邵梨",
+        "characters": [
+          "邵梨"
+        ],
+        "goal": {
+          "id": "recover_and_investigate",
+          "description": "稳住待卸弦的古琴，并查明另一把琴背板细线的性质。"
+        },
+        "scenes": [
+          {
+            "id": "s1",
+            "order": 1,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "邵梨"
+            ],
+            "text": "修琴铺开门，邵梨照例把两把待修的琴分放在长凳两端。左边的古琴要垫稳才好卸弦，右边的小提琴背板上有道细线。她刚从抽屉里找出一块厚毡和一盏弯颈灯。"
+          },
+          {
+            "id": "s2",
+            "order": 2,
+            "function": "forward_current",
+            "tension": 2,
+            "present_characters": [
+              "邵梨"
+            ],
+            "text": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。右边背板那条线，究竟是铅笔印还是沿纹裂开了？她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。"
+          }
+        ],
+        "facts": [],
+        "threads": []
+      },
+      "new_scene": {
+        "id": "s2",
+        "order": 2,
+        "function": "forward_current",
+        "tension": 2,
+        "present_characters": [
+          "邵梨"
+        ],
+        "text": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。右边背板那条线，究竟是铅笔印还是沿纹裂开了？她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。"
+      },
+      "annotations": {
+        "facts": [
+          {
+            "id": "loose_instrument",
+            "text": "古琴在凳面上晃动。",
+            "quote": "古琴在凳面上轻轻一晃。",
+            "scene_id": "s2",
+            "start": 0,
+            "end": 11,
+            "known_by": [
+              "邵梨"
+            ]
+          },
+          {
+            "id": "pad_intended",
+            "text": "邵梨准备把厚毡垫到古琴底下稳住琴身。",
+            "quote": "邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身",
+            "scene_id": "s2",
+            "start": 11,
+            "end": 32,
+            "known_by": [
+              "邵梨"
+            ]
+          },
+          {
+            "id": "pad_unplaced",
+            "text": "厚毡还攥在邵梨手里。",
+            "quote": "毡还攥在她手里，琴底空着。",
+            "scene_id": "s2",
+            "start": 33,
+            "end": 46,
+            "known_by": [
+              "邵梨"
+            ]
+          },
+          {
+            "id": "mark_unidentified",
+            "text": "邵梨尚待辨别背板细线是铅笔印还是裂纹。",
+            "quote": "右边背板那条线，究竟是铅笔印还是沿纹裂开了？",
+            "scene_id": "s2",
+            "start": 46,
+            "end": 68,
+            "known_by": [
+              "邵梨"
+            ]
+          },
+          {
+            "id": "lamp_on",
+            "text": "邵梨已经扳亮弯颈灯。",
+            "quote": "她扳亮弯颈灯",
+            "scene_id": "s2",
+            "start": 68,
+            "end": 74,
+            "known_by": [
+              "邵梨"
+            ]
+          },
+          {
+            "id": "glass_beside",
+            "text": "放大镜已放在背板旁。",
+            "quote": "把放大镜摆在背板旁边",
+            "scene_id": "s2",
+            "start": 75,
+            "end": 85,
+            "known_by": [
+              "邵梨"
+            ]
+          },
+          {
+            "id": "inspection_pending",
+            "text": "邵梨准备查看细线边缘，还没凑到镜前。",
+            "quote": "预备顺着那条线的边缘看，现在还没凑到镜前。",
+            "scene_id": "s2",
+            "start": 86,
+            "end": 107,
+            "known_by": [
+              "邵梨"
+            ]
+          }
+        ],
+        "registry": {
+          "characters": [
+            {
+              "id": "pov",
+              "label": "邵梨"
+            }
+          ],
+          "entities": [
+            {
+              "id": "felt_pad",
+              "label": "厚毡"
+            },
+            {
+              "id": "violin_line",
+              "label": "小提琴背板上的细线"
+            }
+          ],
+          "tasks": [
+            {
+              "id": "steady_instrument",
+              "label": "垫稳古琴"
+            },
+            {
+              "id": "identify_mark",
+              "label": "辨别背板细线是不是裂纹"
+            }
+          ],
+          "actions": [
+            {
+              "id": "place_felt",
+              "actor_id": "pov",
+              "target_ids": [
+                "felt_pad"
+              ],
+              "task_id": "steady_instrument",
+              "operation": "use",
+              "description": "把厚毡垫到古琴底下",
+              "origin": "observed",
+              "status": "pending",
+              "anchor": {
+                "scene_id": "s2",
+                "start": 0,
+                "end": 46
+              }
+            },
+            {
+              "id": "inspect_line",
+              "actor_id": "pov",
+              "target_ids": [
+                "violin_line"
+              ],
+              "task_id": "identify_mark",
+              "operation": "check",
+              "description": "借弯颈灯和放大镜查看背板细线的边缘",
+              "origin": "observed",
+              "status": "pending",
+              "anchor": {
+                "scene_id": "s2",
+                "start": 46,
+                "end": 107
+              }
+            }
+          ]
+        }
+      },
+      "accept_action": null
+    }
+  ]
+}

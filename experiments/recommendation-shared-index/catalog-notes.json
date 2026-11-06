@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "status": "experimental_operationalization",
+  "purpose": "Frozen 12-card source-derived pool for local shared embedding cache experiments; no recommendation quality claim.",
+  "base_catalog": {
+    "path": "recommendation/action-catalog.json",
+    "sha256": "65c51ee0c6b39e021f68879deaaaca6c136d8d0c6f543e38f7b17a4ca252f886",
+    "preserved_card_ids": [
+      "dialogue_active",
+      "truth_trigger",
+      "carrier_process",
+      "clue_check"
+    ],
+    "preservation": "The four original card objects are unchanged."
+  },
+  "expanded_catalog": {
+    "path": "experiments/recommendation-shared-index/catalog-expanded.json",
+    "sha256": "dc6843aeccc1d890a396682ec923daef849a4577e85750baf06b889443f70ac1",
+    "canonical_sha256": "18a313b8ae11246187d1fb54a10c4c5b776b5bb28ad6442def69d5a8e6f61c6c",
+    "card_count": 12,
+    "added_card_count": 8
+  },
+  "evidence_offsets": "Zero-based Unicode character offsets, half-open [start,end), into the exact UTF-8-decoded source file; source sha256 hashes original file bytes.",
+  "boundaries": [
+    "All eight added cards are authored operationalizations, not automatic statements that complete motifs match.",
+    "Source quotes support narrative structures; current action feasibility, knowledge, availability and completion gates are authored requirements.",
+    "Begin variants allow proposed/pending only; continue variants allow in_progress only.",
+    "Every condition and proposal template binds actor, target, task and action.",
+    "Character beliefs are facts about those beliefs, not proof that their assumed effects are real.",
+    "No added card has been positively validated in this iteration; source and schema validation is not semantic validation.",
+    "No source assets, original cards, existing review gates or queries were modified; no model or API was called."
+  ],
+  "cards": [
+    {
+      "card_id": "false_accusation_proof",
+      "source": {
+        "path": "assets/motif_library/false-accusation.md",
+        "sha256": "c1fbddde8284cd785872688a2e9386faa3873ec5d5869d3eac242801ff5c1e33",
+        "evidence": [
+          {
+            "start": 288,
+            "end": 329,
+            "quote": "5. **智慧自救**：主角在临刑前通过讲故事、出示物证、或第三方介入来证明清白。"
+          }
+        ]
+      },
+      "source_structure": "源文列出临刑前借讲述、物证或第三方证明清白的智慧自救阶段；本卡只取使用物证这一路径。",
+      "authored_current_state_gates": "物证当前可用、角色理解其用途、处罚仍待执行和听取渠道开放是作者增设的适用门槛；出示物证不直接等于获释。",
+      "source_structure_condition_ids": [
+        "false_charge_established",
+        "punishment_pending"
+      ],
+      "authored_gate_condition_ids": [
+        "proof_available",
+        "proof_understood",
+        "hearing_open"
+      ],
+      "operations": [
+        "use"
+      ],
+      "validation_status": "not_positive_case_validated_in_this_iteration",
+      "retrieval_text_policy": "Written from the cited source structure and this card purpose before expanded-catalog encoding; no existing query is used to tune wording."
+    },
+    {
+      "card_id": "forbidden_knowledge_read",
+      "source": {
+        "path": "assets/motif_library/forbidden-knowledge.md",
+        "sha256": "158234c820623920364a97f952e91bd9b42e631de27e0fd0f3a45f6ca9371c14",
+        "evidence": [
+          {
+            "start": 42,
+            "end": 112,
+            "quote": "一种神圣的知识或力量被严格禁止凡人获取，有人出于求知欲、野心或命运的驱使去获取它，获得了超越凡人的力量，但同时也招致了不可挽回的灾难性后果。"
+          },
+          {
+            "start": 125,
+            "end": 180,
+            "quote": "1. **知识的诱惑**：有人告诉主角，世界上存在一种被神隐藏的知识/力量——智慧之书、生命之泉、禁忌的魔法。"
+          }
+        ]
+      },
+      "source_structure": "源文描述被禁止获取的知识及智慧之书的诱惑；本卡取接触并读取禁忌文字载体的局部操作。",
+      "authored_current_state_gates": "知道禁令、当前可访问、任务未完成及未读和未读完的分别取证均为作者门槛；不会从未见完成记录推定未读，也不预设获得力量或灾难。",
+      "source_structure_condition_ids": [
+        "forbidden_book_established"
+      ],
+      "authored_gate_condition_ids": [
+        "prohibition_known",
+        "book_accessible",
+        "content_unread",
+        "reading_unfinished",
+        "task_open"
+      ],
+      "operations": [
+        "read"
+      ],
+      "validation_status": "not_positive_case_validated_in_this_iteration",
+      "retrieval_text_policy": "Written from the cited source structure and this card purpose before expanded-catalog encoding; no existing query is used to tune wording."
+    },
+    {
+      "card_id": "identity_mask_response",
+      "source": {
+        "path": "assets/motif_library/identity-mask.md",
+        "sha256": "e372c3276a5de61e64804b2c8cfaf454d621775056bdacae788b88256727e7e8",
+        "evidence": [
+          {
+            "start": 89,
+            "end": 133,
+            "quote": "1. **触发**：主角因某种原因（逃避追杀/执行任务/自我保护）必须以另一个身份生活。"
+          },
+          {
+            "start": 191,
+            "end": 258,
+            "quote": "3. **冲突**：真实身份的线索开始浮现，有人在追查他的过去。同时，新身份下的关系（爱人/朋友/同事）越来越真实，他害怕失去这一切。"
+          }
+        ]
+      },
+      "source_structure": "源文给出被迫使用另一身份及真实身份线索浮现、他人追查过去的结构。",
+      "authored_current_state_gates": "明确的当前追问、角色自知身份与风险、对方可回应及对话尚未结束是作者门槛；不推定对方已经识破或一定受骗。",
+      "source_structure_condition_ids": [
+        "dual_identity_established",
+        "risky_question_current"
+      ],
+      "authored_gate_condition_ids": [
+        "identity_known",
+        "risk_understood",
+        "partner_available",
+        "conversation_open"
+      ],
+      "operations": [
+        "respond"
+      ],
+      "validation_status": "not_positive_case_validated_in_this_iteration",
+      "retrieval_text_policy": "Written from the cited source structure and this card purpose before expanded-catalog encoding; no existing query is used to tune wording."
+    },
+    {
+      "card_id": "trial_guidance_use",
+      "source": {
+        "path": "assets/motif_library/road-of-trials.md",
+        "sha256": "25986c66807135fc687d63c427676511b395c5c52f6e897d9b0c07cb40f685a7",
+        "evidence": [
+          {
+            "start": 119,
+            "end": 153,
+            "quote": "1. **进入秘境**：英雄跨越阈限后发现自己身处充满未知力量的领域"
+          },
+          {
+            "start": 154,
+            "end": 200,
+            "quote": "2. **连续考验**：一系列递进的困难任务——分拣混杂之物、取得不可能之物、从阴间取回宝物"
+          },
+          {
+            "start": 201,
+            "end": 241,
+            "quote": "3. **超自然援助**：在最危险的时刻，导师、精灵或动物帮助者出现给予关键指引"
+          }
+        ]
+      },
+      "source_structure": "源文给出跨越阈限、连续递进考验与帮助者提供关键指引的结构；本卡取已有援助之后使用指引的阶段。",
+      "authored_current_state_gates": "当前试炼未完、指引与本次任务相关且已理解、操作条件具备为作者门槛；不因出现帮助者就推定存在超自然能力或必能通过考验。",
+      "source_structure_condition_ids": [
+        "threshold_crossed",
+        "successive_trials_established",
+        "guidance_received"
+      ],
+      "authored_gate_condition_ids": [
+        "trial_open",
+        "guidance_understood",
+        "guidance_executable"
+      ],
+      "operations": [
+        "use"
+      ],
+      "validation_status": "not_positive_case_validated_in_this_iteration",
+      "retrieval_text_policy": "Written from the cited source structure and this card purpose before expanded-catalog encoding; no existing query is used to tune wording."
+    },
+    {
+      "card_id": "story_shield_response",
+      "source": {
+        "path": "assets/motif_library/story-as-shield.md",
+        "sha256": "552324ab8b5d3def600d1c35291e7e05850adce5c5e81111ee2f7eb1251f5e28",
+        "evidence": [
+          {
+            "start": 109,
+            "end": 148,
+            "quote": "1. **冤屈临刑**：主角被诬陷或误解，国王/掌权者下令处死，刽子手已待命。"
+          },
+          {
+            "start": 149,
+            "end": 194,
+            "quote": "2. **最后请求**：主角请求在死前讲一个故事作为最后的遗言，掌权者出于好奇或怜悯同意。"
+          },
+          {
+            "start": 195,
+            "end": 241,
+            "quote": "3. **故事嵌套**：主角讲的故事中包含另一个故事，故事与自己的处境形成巧妙的镜像或隐喻。"
+          }
+        ]
+      },
+      "source_structure": "源文给出受冤临刑、获准讲述最后故事以及故事与处境形成镜像或隐喻的结构。",
+      "authored_current_state_gates": "角色已有可讲述的故事并理解其对应关系、掌权者当前可听取及讲述机会仍开放为作者门槛；不把故事奏效或获救写成事实。",
+      "source_structure_condition_ids": [
+        "wrongful_execution_established",
+        "story_permission_granted",
+        "story_mirrors_plight"
+      ],
+      "authored_gate_condition_ids": [
+        "authority_available",
+        "telling_opportunity_open"
+      ],
+      "operations": [
+        "respond"
+      ],
+      "validation_status": "not_positive_case_validated_in_this_iteration",
+      "retrieval_text_policy": "Written from the cited source structure and this card purpose before expanded-catalog encoding; no existing query is used to tune wording."
+    },
+    {
+      "card_id": "imitative_model_use",
+      "source": {
+        "path": "assets/motif_library/sympathetic-magic-homeopathic.md",
+        "sha256": "269c5077231f4a4362a0de0f1bd0095ec074c9b298a7ba82a60c6edc591f933c",
+        "evidence": [
+          {
+            "start": 144,
+            "end": 184,
+            "quote": "1. **确立目标**：施法者渴望达到某种效果（伤害仇人、治病、求雨、丰收等）。"
+          },
+          {
+            "start": 185,
+            "end": 224,
+            "quote": "2. **制作模仿物**：用蜡、泥、木头等材料制作与目标对象相似的偶像或模型。"
+          },
+          {
+            "start": 225,
+            "end": 271,
+            "quote": "3. **施行模仿动作**：对模仿物做施法者期望在真实对象身上发生的事（扎、烧、浇、埋等）。"
+          },
+          {
+            "start": 272,
+            "end": 315,
+            "quote": "4. **交感传递**：施法者相信通过\"相似联想\"，对模仿物的影响会传递到真实对象上。"
+          }
+        ]
+      },
+      "source_structure": "源文给出效果目标、相似模仿物、模仿动作及施法者相信影响能够传递的结构。",
+      "authored_current_state_gates": "模仿物与对象的明确绑定、目的已知、当前可用及本次仪式未完为作者门槛；角色相信相似传效不等于世界中魔法真实有效。",
+      "source_structure_condition_ids": [
+        "model_and_referent_established",
+        "similarity_belief_established",
+        "ritual_purpose_known"
+      ],
+      "authored_gate_condition_ids": [
+        "model_available",
+        "ritual_unfinished"
+      ],
+      "operations": [
+        "use"
+      ],
+      "validation_status": "not_positive_case_validated_in_this_iteration",
+      "retrieval_text_policy": "Written from the cited source structure and this card purpose before expanded-catalog encoding; no existing query is used to tune wording."
+    },
+    {
+      "card_id": "deadline_investigation",
+      "source": {
+        "path": "assets/motif_library/time-pressure.md",
+        "sha256": "d3a98844e82b45fc992e210fbbecea278c173ae5f28302851357a170672665ec",
+        "evidence": [
+          {
+            "start": 36,
+            "end": 74,
+            "quote": "有明确的截止时间，主角必须在时限内完成任务，每一秒的流逝都在增加压力和代价。"
+          },
+          {
+            "start": 87,
+            "end": 147,
+            "quote": "1. **触发**：主角收到一个明确的时间限制（炸弹倒计时/人质期限/证据销毁时间/解药有效期），任务的紧迫性瞬间确立。"
+          }
+        ]
+      },
+      "source_structure": "源文给出明确时限、到期代价和由此建立的任务紧迫性；调查或核对是本实验选定的局部操作。",
+      "authored_current_state_gates": "时限此刻未到、压力实际影响行动、同一问题未解、材料可访问且步骤可执行为作者门槛；不能仅凭出现倒计时词语判定适用。",
+      "source_structure_condition_ids": [
+        "deadline_explicit",
+        "pressure_affects_action"
+      ],
+      "authored_gate_condition_ids": [
+        "deadline_not_reached",
+        "same_question_open",
+        "material_accessible",
+        "checking_executable"
+      ],
+      "operations": [
+        "investigate",
+        "check"
+      ],
+      "validation_status": "not_positive_case_validated_in_this_iteration",
+      "retrieval_text_policy": "Written from the cited source structure and this card purpose before expanded-catalog encoding; no existing query is used to tune wording."
+    },
+    {
+      "card_id": "truth_pressure_response",
+      "source": {
+        "path": "assets/motif_library/truth-pursuit.md",
+        "sha256": "b0900e167687867d1408fc2e57d8ef2a0cc92c9d25209621084a198da1b2ad42",
+        "evidence": [
+          {
+            "start": 175,
+            "end": 241,
+            "quote": "3. **冲突**：每接近真相一步，就有人警告他停下——威胁、利诱、甚至来自信任之人的阻挠。主角在\"继续查\"和\"保全自己\"之间拉扯。"
+          }
+        ]
+      },
+      "source_structure": "源文给出追查过程中有人要求停下，以及继续追查与保全自己之间的冲突。",
+      "authored_current_state_gates": "正在调查、当前明确停查要求、角色理解要求、双方可回应与交涉未结束为作者门槛；只生成当前回应，不直接决定继续追查或断言威胁成真。",
+      "source_structure_condition_ids": [
+        "investigation_established",
+        "stop_request_current"
+      ],
+      "authored_gate_condition_ids": [
+        "request_understood",
+        "both_parties_available",
+        "continuation_conflict_open"
+      ],
+      "operations": [
+        "respond"
+      ],
+      "validation_status": "not_positive_case_validated_in_this_iteration",
+      "retrieval_text_policy": "Written from the cited source structure and this card purpose before expanded-catalog encoding; no existing query is used to tune wording."
+    }
+  ],
+  "validation": {
+    "validator": "recommendation_engine.validate_catalog",
+    "validated_card_count": 12,
+    "original_card_equality": true,
+    "all_new_template_roles_bound": true,
+    "positive_case_validation_performed": false,
+    "independent_review": "Reviewed source spans, template binding, state separation and evidence boundaries; removed unsupported spatial attribute from imitative-model proposals."
+  }
+}

@@ -16,7 +16,7 @@ from motif_matcher import _validate_catalog, match_motifs
 from narrative_prototype import _validate_project
 from recommendation_session import (validate_session, source_token, canonical_digest,
     install_state, install_batch, accept_proposal)
-from retrieval_pilot import bm25_rank
+from recommendation_retrieval import prepare_embedding_bundle, rank_cards
 from semantic_review import prepare_review, apply_review
 
 OPERATIONS = {'read', 'use', 'check', 'respond', 'investigate'}
@@ -257,44 +257,108 @@ def action_block_reason(action, state):
     return None
 
 
-def prepare_recommendations(session, catalog, repo_root, top_k=2):
+def _retrieval_inputs(session, catalog, cards):
+    context = {'token':source_token(session),'state_sha256':session['state_sha256'],
+               'catalog_sha256':canonical_digest(catalog)}
+    query = '\n'.join(f['text'] for f in session['current_state']['base_facts'])
+    return context, query, list(cards.values())
+
+
+def prepare_retrieval_embeddings(session, catalog, repo_root):
+    """Export a source-bound local embedding job; never invoke a model."""
+    session = validate_session(session)
+    require(session['current_state'] is not None, 'reviewed_state_required')
+    cards = validate_catalog(catalog, repo_root)
+    return prepare_embedding_bundle(*_retrieval_inputs(session,catalog,cards))
+
+
+def _current_actions(state, pov):
+    groups = {k:{r['id']:r for r in v} for k,v in state['registry'].items()}
+    available, blocked = [], []
+    for action in state['registry']['actions']:
+        reason = action_block_reason(action, state)
+        if not reason:
+            binding = action_bindings(groups, action)
+            if binding['actor'] == pov:
+                available.append((action, binding, state['actions'][action['id']]['status']))
+                continue
+            reason = 'actor_not_current_pov'
+        blocked.append({'action_id': action['id'], 'reason': reason})
+    return available, blocked
+
+
+def _variant_matches(variant, operation, status):
+    return operation in variant['operations'] and status in variant['action_states']
+
+
+def _card_matches(card, operation, status):
+    return any(_variant_matches(v, operation, status) for v in card['variants'])
+
+
+def prepare_recommendations(session, catalog, repo_root, top_k=2, *,
+                            retrieval_method='bm25', embedding_artifact=None, candidate_policy='global'):
+    """Allocate one shared card budget, then review each matching action separately.
+
+    action_compatible takes the earliest hits matching a current unblocked POV
+    action. action_coverage gives slots to hits covering the most additional
+    action IDs, then restores retrieval order within the chosen cards.
+    """
     session = validate_session(session)
     require(session['current_state'] is not None, 'reviewed_state_required')
     require(type(top_k) is int and 0 <= top_k <= 50, 'invalid_top_k')
+    require(candidate_policy in ('global', 'action_compatible', 'action_coverage'), 'invalid_candidate_policy')
     state = session['current_state']; cards = validate_catalog(catalog, repo_root)
-    query = '\n'.join(f['text'] for f in state['base_facts'])
-    chunks = [{'source_path':c['id'],'chunk_id':c['id'],'title':c['title'],'text':c['retrieval_text']} for c in cards.values()]
-    ranking = bm25_rank(query,chunks)[:top_k] if query else []
-    groups = {k:{r['id']:r for r in v} for k,v in state['registry'].items()}
+    available, blocked = _current_actions(state, session['source']['pov_character'])
+    action_ids_by_card = {}
+    if candidate_policy != 'global':
+        for card in cards.values():
+            action_ids = {action['id'] for action, _, status in available
+                          if _card_matches(card, action['operation'], status)}
+            if action_ids:
+                action_ids_by_card[card['id']] = action_ids
+    context, query, card_list = _retrieval_inputs(session,catalog,cards)
+    retrieval = rank_cards(context,query,card_list,method=retrieval_method,top_k=top_k,
+                           embedding_artifact=embedding_artifact,
+                           eligible_card_ids=set(action_ids_by_card) if candidate_policy == 'action_compatible' else None,
+                           action_ids_by_card=action_ids_by_card if candidate_policy == 'action_coverage' else None)
+    ranking = retrieval['ranking']
     project = copy.deepcopy(session['source'])
     # Reviewed state facts remain separate. Probe reviews cannot change which
     # original facts produced retrieval, or downgrade/re-authorize the registry.
     project['facts'] = []
-    instances, blocked = [], []
-    for action in state['registry']['actions']:
-        reason = action_block_reason(action,state)
-        if reason:
-            blocked.append({'action_id':action['id'],'reason':reason}); continue
-        binding = action_bindings(groups,action)
-        if binding['actor'] != session['source']['pov_character']:
-            blocked.append({'action_id':action['id'],'reason':'actor_not_current_pov'}); continue
+    instances = []
+    for action, binding, status in available:
         for hit in ranking:
             card = cards[hit['source_path']]
-            if not any(action['operation'] in v['operations'] and state['actions'][action['id']]['status'] in v['action_states'] for v in card['variants']):
+            if not _card_matches(card, action['operation'], status):
                 continue
             iid = 'i_' + canonical_digest([card['id'],action['id']])[:24]
             spec = {'id':iid,'motif_id':card['id'],'bindings':binding,
                 'anchors':{c['id']:copy.deepcopy(action['anchor']) for c in card['conditions']}}
             prepared = prepare_candidates(project,catalog,[spec],repo_root)
             instances.append({'id':iid,'card_id':card['id'],'action_id':action['id'],'prepared':prepared})
-    return {'schema_version':1,'token':source_token(session),'state_sha256':session['state_sha256'],
-        'catalog_sha256':canonical_digest(catalog),'top_k':top_k,'retrieval_method':'bm25_reviewed_state',
+    result = {'schema_version':1,'token':source_token(session),'state_sha256':session['state_sha256'],
+        'catalog_sha256':canonical_digest(catalog),'top_k':top_k,'retrieval_method':retrieval_method + '_reviewed_state',
         'query':query,'ranking':ranking,'instances':instances,'blocked_actions':blocked}
+    if candidate_policy != 'global':
+        result.update(candidate_policy=candidate_policy, compatible_card_ids=sorted(action_ids_by_card))
+    if candidate_policy == 'action_coverage':
+        result['covered_action_ids'] = sorted({instance['action_id'] for instance in instances})
+    if retrieval_method != 'bm25':
+        result['retrieval_provenance'] = retrieval['provenance']
+    return result
 
 
-def review_recommendations(session, request, reviews, catalog, repo_root):
+def review_recommendations(session, request, reviews, catalog, repo_root, *, embedding_artifact=None):
     session = validate_session(session)
-    require(request == prepare_recommendations(session,catalog,repo_root,request['top_k']), 'recommendation_request_changed_or_stale')
+    methods = {name + '_reviewed_state':name for name in ('bm25','vector','hybrid')}
+    require(isinstance(request,dict) and isinstance(request.get('retrieval_method'),str)
+            and request['retrieval_method'] in methods, 'invalid_retrieval_method')
+    method = methods[request['retrieval_method']]
+    expected = prepare_recommendations(session,catalog,repo_root,request['top_k'],
+        retrieval_method=method,embedding_artifact=embedding_artifact,
+        candidate_policy=request.get('candidate_policy', 'global'))
+    require(request == expected, 'recommendation_request_changed_or_stale')
     require(isinstance(reviews,dict) and set(reviews) == {i['id'] for i in request['instances']}, 'instance_review_coverage')
     cards = validate_catalog(catalog,repo_root); state = session['current_state']
     groups = {k:{r['id']:r for r in v} for k,v in state['registry'].items()}
@@ -312,7 +376,7 @@ def review_recommendations(session, request, reviews, catalog, repo_root):
                        'fact_claims':{c['fact_id']:c['text'] for c in prepared['packet']['candidates']}})
         for choice in match['writer_packet']['proposals']:
             variant = variants[choice['id']]
-            if action['operation'] not in variant['operations'] or state['actions'][action['id']]['status'] not in variant['action_states']:
+            if not _variant_matches(variant, action['operation'], state['actions'][action['id']]['status']):
                 continue
             evidence_ids = []
             for fact in match['writer_packet']['facts']:
@@ -351,6 +415,14 @@ def review_recommendations(session, request, reviews, catalog, repo_root):
                          'instruction':'仅 facts 可作为当前视角事实；proposals 是未来选择，采纳不代表已经发生。'},
         'author_audit':{'ranking':request['ranking'],'blocked_actions':request['blocked_actions'],
                         'writer_fact_ids':fact_ids,'matches':audits}}
+    if 'candidate_policy' in request:
+        batch['author_audit']['candidate_policy'] = request['candidate_policy']
+        batch['author_audit']['compatible_card_ids'] = list(request['compatible_card_ids'])
+    if 'covered_action_ids' in request:
+        batch['author_audit']['covered_action_ids'] = list(request['covered_action_ids'])
+    if method != 'bm25':
+        batch['author_audit']['retrieval_provenance'] = copy.deepcopy(request['retrieval_provenance'])
+        batch['author_audit']['retrieval_method'] = request['retrieval_method']
     return install_batch(session,batch,source_token(session))
 
 

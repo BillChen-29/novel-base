@@ -1,0 +1,701 @@
+{
+  "date": "2026-11-06",
+  "cards": 12,
+  "cases": 14,
+  "top_k": 2,
+  "reuse": {
+    "reused_occurrences": 31,
+    "new_occurrences": 20,
+    "old_distinct": 12,
+    "new_distinct": 8,
+    "fresh_claims": 45,
+    "all_distinct": 20
+  },
+  "new_condition_verdicts": {
+    "insufficient_evidence": 24,
+    "supported": 18,
+    "contradicted": 3
+  },
+  "new_knowledge_verdicts": {
+    "insufficient_evidence": 28,
+    "supported": 14,
+    "contradicted": 3
+  },
+  "methods": {
+    "bm25": {
+      "global": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards_retrieved": 20,
+        "instances_reviewed": 7,
+        "cuts_with_instances": 6,
+        "proposals": 5,
+        "original_proposals": 5,
+        "wording_proposals": 0,
+        "old_real_proposals": 0,
+        "new_real_proposals": 0
+      },
+      "action_compatible": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards_retrieved": 11,
+        "instances_reviewed": 11,
+        "cuts_with_instances": 6,
+        "proposals": 5,
+        "original_proposals": 5,
+        "wording_proposals": 0,
+        "old_real_proposals": 0,
+        "new_real_proposals": 0
+      },
+      "paired_cases": [
+        {
+          "case_id": "letter_1",
+          "global_cards": [
+            "carrier_process",
+            "trial_guidance_use"
+          ],
+          "compatible_cards": [
+            "carrier_process",
+            "forbidden_knowledge_read"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "letter_2",
+          "global_cards": [
+            "carrier_process",
+            "trial_guidance_use"
+          ],
+          "compatible_cards": [
+            "carrier_process",
+            "trial_guidance_use"
+          ],
+          "global_instances": 2,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "letter_3",
+          "global_cards": [
+            "trial_guidance_use",
+            "carrier_process"
+          ],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "inventory_1",
+          "global_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "inventory_2",
+          "global_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "inventory_3",
+          "global_cards": [
+            "truth_pressure_response",
+            "deadline_investigation"
+          ],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "inventory_4",
+          "global_cards": [
+            "clue_check",
+            "forbidden_knowledge_read"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "wording_letter_unread",
+          "global_cards": [],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "wording_letter_use",
+          "global_cards": [],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "wording_inventory",
+          "global_cards": [],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "real_1",
+          "global_cards": [
+            "identity_mask_response",
+            "truth_trigger"
+          ],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "real_2",
+          "global_cards": [
+            "dialogue_active",
+            "story_shield_response"
+          ],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "real_body_pending",
+          "global_cards": [
+            "truth_pressure_response",
+            "clue_check"
+          ],
+          "compatible_cards": [
+            "clue_check"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 1,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "real_monitor_progress",
+          "global_cards": [],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        }
+      ]
+    },
+    "vector": {
+      "global": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards_retrieved": 28,
+        "instances_reviewed": 10,
+        "cuts_with_instances": 9,
+        "proposals": 7,
+        "original_proposals": 5,
+        "wording_proposals": 2,
+        "old_real_proposals": 0,
+        "new_real_proposals": 0
+      },
+      "action_compatible": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards_retrieved": 20,
+        "instances_reviewed": 20,
+        "cuts_with_instances": 10,
+        "proposals": 8,
+        "original_proposals": 5,
+        "wording_proposals": 3,
+        "old_real_proposals": 0,
+        "new_real_proposals": 0
+      },
+      "paired_cases": [
+        {
+          "case_id": "letter_1",
+          "global_cards": [
+            "carrier_process",
+            "trial_guidance_use"
+          ],
+          "compatible_cards": [
+            "carrier_process",
+            "forbidden_knowledge_read"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "letter_2",
+          "global_cards": [
+            "carrier_process",
+            "forbidden_knowledge_read"
+          ],
+          "compatible_cards": [
+            "carrier_process",
+            "trial_guidance_use"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "letter_3",
+          "global_cards": [
+            "carrier_process",
+            "forbidden_knowledge_read"
+          ],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "inventory_1",
+          "global_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "inventory_2",
+          "global_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "inventory_3",
+          "global_cards": [
+            "deadline_investigation",
+            "truth_trigger"
+          ],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "inventory_4",
+          "global_cards": [
+            "clue_check",
+            "carrier_process"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "wording_letter_unread",
+          "global_cards": [
+            "forbidden_knowledge_read",
+            "carrier_process"
+          ],
+          "compatible_cards": [
+            "forbidden_knowledge_read",
+            "carrier_process"
+          ],
+          "global_instances": 2,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "wording_letter_use",
+          "global_cards": [
+            "trial_guidance_use",
+            "forbidden_knowledge_read"
+          ],
+          "compatible_cards": [
+            "trial_guidance_use",
+            "carrier_process"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [
+            "carrier_process_use"
+          ],
+          "lost_variants": []
+        },
+        {
+          "case_id": "wording_inventory",
+          "global_cards": [
+            "forbidden_knowledge_read",
+            "clue_check"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "real_1",
+          "global_cards": [
+            "truth_trigger",
+            "deadline_investigation"
+          ],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "real_2",
+          "global_cards": [
+            "story_shield_response",
+            "dialogue_active"
+          ],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "real_body_pending",
+          "global_cards": [
+            "truth_trigger",
+            "deadline_investigation"
+          ],
+          "compatible_cards": [
+            "deadline_investigation",
+            "clue_check"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "real_monitor_progress",
+          "global_cards": [
+            "trial_guidance_use",
+            "identity_mask_response"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 0,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        }
+      ]
+    },
+    "hybrid": {
+      "global": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards_retrieved": 28,
+        "instances_reviewed": 9,
+        "cuts_with_instances": 8,
+        "proposals": 7,
+        "original_proposals": 5,
+        "wording_proposals": 2,
+        "old_real_proposals": 0,
+        "new_real_proposals": 0
+      },
+      "action_compatible": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards_retrieved": 20,
+        "instances_reviewed": 20,
+        "cuts_with_instances": 10,
+        "proposals": 8,
+        "original_proposals": 5,
+        "wording_proposals": 3,
+        "old_real_proposals": 0,
+        "new_real_proposals": 0
+      },
+      "paired_cases": [
+        {
+          "case_id": "letter_1",
+          "global_cards": [
+            "carrier_process",
+            "trial_guidance_use"
+          ],
+          "compatible_cards": [
+            "carrier_process",
+            "forbidden_knowledge_read"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "letter_2",
+          "global_cards": [
+            "carrier_process",
+            "forbidden_knowledge_read"
+          ],
+          "compatible_cards": [
+            "carrier_process",
+            "trial_guidance_use"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "letter_3",
+          "global_cards": [
+            "carrier_process",
+            "trial_guidance_use"
+          ],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "inventory_1",
+          "global_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "inventory_2",
+          "global_cards": [
+            "clue_check",
+            "truth_trigger"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "inventory_3",
+          "global_cards": [
+            "deadline_investigation",
+            "truth_pressure_response"
+          ],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "inventory_4",
+          "global_cards": [
+            "clue_check",
+            "carrier_process"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "wording_letter_unread",
+          "global_cards": [
+            "forbidden_knowledge_read",
+            "carrier_process"
+          ],
+          "compatible_cards": [
+            "forbidden_knowledge_read",
+            "carrier_process"
+          ],
+          "global_instances": 2,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "wording_letter_use",
+          "global_cards": [
+            "trial_guidance_use",
+            "forbidden_knowledge_read"
+          ],
+          "compatible_cards": [
+            "trial_guidance_use",
+            "carrier_process"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [
+            "carrier_process_use"
+          ],
+          "lost_variants": []
+        },
+        {
+          "case_id": "wording_inventory",
+          "global_cards": [
+            "forbidden_knowledge_read",
+            "clue_check"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 1,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "real_1",
+          "global_cards": [
+            "truth_trigger",
+            "identity_mask_response"
+          ],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "real_2",
+          "global_cards": [
+            "dialogue_active",
+            "story_shield_response"
+          ],
+          "compatible_cards": [],
+          "global_instances": 0,
+          "compatible_instances": 0,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "real_body_pending",
+          "global_cards": [
+            "truth_pressure_response",
+            "trial_guidance_use"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 0,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        },
+        {
+          "case_id": "real_monitor_progress",
+          "global_cards": [
+            "trial_guidance_use",
+            "identity_mask_response"
+          ],
+          "compatible_cards": [
+            "clue_check",
+            "deadline_investigation"
+          ],
+          "global_instances": 0,
+          "compatible_instances": 2,
+          "gained_variants": [],
+          "lost_variants": []
+        }
+      ]
+    }
+  }
+}

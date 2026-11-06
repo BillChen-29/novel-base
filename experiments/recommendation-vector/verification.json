@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "scope": "local vector/hybrid integration into the reviewed recommendation core; limited fixed four-card experiment",
+  "tests": {
+    "full_suite_passed": 528,
+    "new_tests": 38,
+    "full_suite_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/tests -p 'test_*.py'",
+    "full_suite_log_sha256": "9cb6308f945fcfd12776f223b1749121c607801dddd9a3865a33c6263b07b375",
+    "final_change": "After the full suite only the runner reporting label changed to imported-review-with-<method>; 9 runner tests and all three full replays passed again with no other output change.",
+    "code_review": "approved",
+    "security_review": "approved",
+    "supplementary_checks": "16 existing security/boundary tests under each of vector and hybrid (32 executions); 40 writer exports checked; rescaled vectors with unchanged ordering reject the old review."
+  },
+  "runtime": {
+    "model": "EmbeddingGemma 300M Q8_0",
+    "model_sha256": "b5ce9d77a3fc4b3b39ccb5643c36777911cc4eb46a66962eadfa3f5f60490d63",
+    "qmd_version": "2.1.0",
+    "node_llama_cpp_version": "3.18.1",
+    "node_version": "26.0.0",
+    "input_format": "qmd-format-functions-v1",
+    "dimensions": 768,
+    "backend": "Metal",
+    "threads": 4,
+    "context_size": 2048,
+    "model_build": "prebuilt",
+    "external_model_api_used": false,
+    "model_downloaded_this_run": false,
+    "qmd_store_modified": false,
+    "contexts_encoded": 12,
+    "inputs_encoded": 60,
+    "unique_content_inputs": 16,
+    "model_process_wall_seconds": 54.04,
+    "timing_scope": "Includes process start and repeated per-context card encoding; not query latency.",
+    "cache_scope": "Independent per-project/revision snapshots; no shared knowledge index or incremental document cache yet."
+  },
+  "design": {
+    "catalog_cards": 4,
+    "top_k": 2,
+    "rrf_k": 60,
+    "original_public_cuts": 7,
+    "controlled_wording_cuts": 3,
+    "private_real_cuts": 2,
+    "freeze_file": "freeze.json",
+    "freeze_fixture_sha256_refers_to": "fixtures-public.json",
+    "candidate_reviews": "Actual retrieved eligible instances only; exact identical prepared packet required for cross-method/baseline reuse.",
+    "state_review_adjudication": "Before model encoding; retained initial review and adjudication.json."
+  },
+  "results": {
+    "bm25": {
+      "retrieved_cards": 15,
+      "reviewed_instances": 5,
+      "original_proposals": 5,
+      "wording_proposals": 0,
+      "real_proposals": 0,
+      "cases": 12,
+      "accepted": 4,
+      "acceptance_preserved_facts": true,
+      "cross_revision_checks": 4,
+      "cross_revision_rejected": 4
+    },
+    "vector": {
+      "retrieved_cards": 24,
+      "reviewed_instances": 8,
+      "original_proposals": 5,
+      "wording_proposals": 3,
+      "real_proposals": 0,
+      "cases": 12,
+      "accepted": 4,
+      "acceptance_preserved_facts": true,
+      "cross_revision_checks": 4,
+      "cross_revision_rejected": 4
+    },
+    "hybrid": {
+      "retrieved_cards": 24,
+      "reviewed_instances": 8,
+      "original_proposals": 5,
+      "wording_proposals": 3,
+      "real_proposals": 0,
+      "cases": 12,
+      "accepted": 4,
+      "acceptance_preserved_facts": true,
+      "cross_revision_checks": 4,
+      "cross_revision_rejected": 4
+    }
+  },
+  "public_replay": {
+    "cases": 10,
+    "cache_reuse": "Reused existing v2 vectors only after exact dataset and embedding-input byte equality; no additional encoding performed.",
+    "methods": {
+      "bm25": {
+        "public_result_and_complete_sessions_equal": true,
+        "cases": 10,
+        "sessions": 5,
+        "proposals": 5,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4
+      },
+      "vector": {
+        "public_result_and_complete_sessions_equal": true,
+        "cases": 10,
+        "sessions": 5,
+        "proposals": 8,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4
+      },
+      "hybrid": {
+        "public_result_and_complete_sessions_equal": true,
+        "cases": 10,
+        "sessions": 5,
+        "proposals": 8,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4
+      }
+    }
+  },
+  "bm25_backward_compatibility": {
+    "public_replay_exactly_equal": true,
+    "cases": 7,
+    "sessions": 2,
+    "synthetic_configurations_requests_and_sessions_equal": 120
+  },
+  "source_integrity": {
+    "raw_assets_unchanged": true,
+    "raw_asset_files": 271,
+    "original_novel_files_checked": 2,
+    "original_novel_files_unchanged": true,
+    "frozen_public_fixtures_unchanged": true,
+    "private_fixtures_equal_pre_encoding_v1_and_final_v2": true,
+    "frozen_action_catalog_unchanged": true,
+    "freeze_fixture_sha256_refers_to": "fixtures-public.json"
+  },
+  "privacy": {
+    "public_cases": 10,
+    "real_novel_text_in_public_artifacts": false,
+    "raw_vectors_in_public_artifacts": false,
+    "private_inputs_caches_and_full_outputs": "runtime-data/recommendation-vector/ (gitignored)",
+    "publication_review": "Public cases/reviews/summary checked against real-person names, 16-character prose spans, private paths and common credential patterns; no hits."
+  },
+  "cache_file_sha256": [
+    {
+      "case_id": "letter_1",
+      "dataset_sha256": "fc13ea32ddbeaca01e546ca4a5dd4e831f8f50f05c83bd1fd23b1c5a9d840056",
+      "embedding_input_sha256": "8630f3485fe81b1d517327b5721afff69f64ac33ebc89fa0a81f941b1ee499c0",
+      "embeddings_sha256": "522dde958a1d0026e776abe0a303bded10ac34c012a6b18cf3a4d6588430fada"
+    },
+    {
+      "case_id": "letter_2",
+      "dataset_sha256": "cb4c4d0e5b0023deafcc40aaac5a62ea46497baee5e5282f290ff6c01b4f6e1a",
+      "embedding_input_sha256": "2e50e8d2260ccdbdd18fa4a9420c5358cdf985cd9947ead3ed5a0d3e01141501",
+      "embeddings_sha256": "365315df0be2934852245e22014cf5dacd10a77c852bbd90b51ae2fa5d8e10c8"
+    },
+    {
+      "case_id": "letter_3",
+      "dataset_sha256": "5583918d7eda95a884429689728ff61bd50c1ff7e32000a8ac378e4a01c69b9f",
+      "embedding_input_sha256": "36b55beae328fa3f5fea3c03fc517c2989d7d5f6096dc73718109fb6d039a650",
+      "embeddings_sha256": "014003b0ed55f2327d62b2b007acfb7208ef22a5a97797cc5e07d6eaf023be16"
+    },
+    {
+      "case_id": "inventory_1",
+      "dataset_sha256": "c82a9c547f076b2cd7c4366e2bdaed79f7fe9dd7346e9f8be70a1e2c01fb3dfe",
+      "embedding_input_sha256": "1b854d8f1ed59804c02f79609da9b284e6f4fb84069d2375191db26c73be5ec6",
+      "embeddings_sha256": "ce3ce72da8d146cb92e8381e64d682365ef0b3636ee2cf9e53c7610c82bfaa32"
+    },
+    {
+      "case_id": "inventory_2",
+      "dataset_sha256": "6d98acea482e38896b74c5e63ee2b57bf8f5cbf517bce26d965ea21dd034058e",
+      "embedding_input_sha256": "0cc73c7b4dd95c6468ef5825074eab52abeda1d42027d31b9ad4d1f6016efd52",
+      "embeddings_sha256": "7877f5ed668c9d1781cfb9e445f1b835340b798897bac066804e6190667c2a52"
+    },
+    {
+      "case_id": "inventory_3",
+      "dataset_sha256": "e3ed0604d6ba9537c486031ce14142875b78d977d3849b5e3babb320fb91ea8d",
+      "embedding_input_sha256": "63e91e6ea23d67917797ba29730cf05a0ef6012a5ab2291e0fed4afa4f1a5119",
+      "embeddings_sha256": "215295fc00116b4bce02e9dc040295c0c8448d25bc2ebedcfe8ac6987dc9a371"
+    },
+    {
+      "case_id": "inventory_4",
+      "dataset_sha256": "743a31b8116c59c18d5404368841bea858e72a4213fb89200224778514235104",
+      "embedding_input_sha256": "e3bf1bbd92f9828cf1f64301d48983718524f9598b9f4dbe6ae0ada7ee4c1846",
+      "embeddings_sha256": "f6afa71120bb7cc1645bf946579a1efce59dde672af7188e971f465ad8cd6667"
+    },
+    {
+      "case_id": "wording_letter_unread",
+      "dataset_sha256": "e307804b73ed35484aed8f0d3fdbf5dc7e4703520528b070b685db231befdb58",
+      "embedding_input_sha256": "213608f03c67b87daacf10b48d4133518366c96d7a13897b7b8bd329b2de9d26",
+      "embeddings_sha256": "fe1ed9c5c8af255c998f7f53bd2eacd5b206f049d8e998b615c216cf4705a9a5"
+    },
+    {
+      "case_id": "wording_letter_use",
+      "dataset_sha256": "c858240420ec9f3f96b49733a114558ea1e8fc6644435ced2e3abdeddc926b4f",
+      "embedding_input_sha256": "58393136c86876872d0798361e7937ee5df3efba0594d2d4819d383bfb2b9c92",
+      "embeddings_sha256": "a14e9530a5924a8f86115c1d2768f05ab8d04db42a767432cd731c130f7d43d6"
+    },
+    {
+      "case_id": "wording_inventory",
+      "dataset_sha256": "2bfb7af79ed747720ea244c66ed110ef1b52c95d8d50293e3b92da5ff169cbb0",
+      "embedding_input_sha256": "50f005802e896ed514c4e7d276027bafbc38954561805c4753e523f0fffd3a00",
+      "embeddings_sha256": "6e542e4d1cb5c69902928bc1987c96dea03a5676c6881c79276d78c1453f45f2"
+    },
+    {
+      "case_id": "real_1",
+      "dataset_sha256": "0ea2f0f200e0a4f4f31484934672f86acdc47107701adb515d53bf3329df910c",
+      "embedding_input_sha256": "7525ccea101e9e1ffc752696028eb036531a4751353fed0c45f2769b5c6238f5",
+      "embeddings_sha256": "741ceab8367240feba6a481376bf88f9dad416114640a202b350d8d4dc340fc7"
+    },
+    {
+      "case_id": "real_2",
+      "dataset_sha256": "db5948244be4f0f1ce31e0fa6f6a8fcc2291a5e9f9b2db2a403edd4cd2949def",
+      "embedding_input_sha256": "d6c8fad8b1ba198abb84cc0428ec962170680ba8260911499741c7a3ab8db545",
+      "embeddings_sha256": "d82ac43e9eaee7310fb206ae5f92bbfd606ac18be683046bdae94ad24705389e"
+    }
+  ],
+  "file_sha256": {
+    "README.md": "1aff8276c52d6eb48adc76c6bbebe6987f7548af46d06a9406a83dd4a055613d",
+    "experiments/recommendation-core/README.md": "5177d69533d153c6aa39221cd2e464bf42c109076cec925c2e962ea8fcca3e54",
+    "experiments/recommendation-vector/README.md": "c1362eb152062b13e22d6164b31e47d140cd7de1d460f64756ed39921300461e",
+    "experiments/recommendation-vector/RESULTS.md": "b7181f5558267aa1fe1afc40092eb02a3a33b03328a11a9343eda05b6523239b",
+    "experiments/recommendation-vector/adjudication.json": "e7d0afa0bc4de3dff62cd386e184b3a430ea2d09f9f85e409c98d8e6e5f859fa",
+    "experiments/recommendation-vector/candidate-reviews-bm25-public.json": "0c3e42bdf07d41ffcd44219244a803a89edca042bbf90748fafdae12db77e767",
+    "experiments/recommendation-vector/candidate-reviews-hybrid-public.json": "b9cc8e11feffbde4f7b16e0080171078e874f6dc3bd9705ac28accdb04f28920",
+    "experiments/recommendation-vector/candidate-reviews-vector-public.json": "b9cc8e11feffbde4f7b16e0080171078e874f6dc3bd9705ac28accdb04f28920",
+    "experiments/recommendation-vector/fixtures-public.json": "778abb44d2f1130bac70bf81d647027f93b1c552de1295ee9d1156eb26749c68",
+    "experiments/recommendation-vector/freeze.json": "f3a2a89eed19ec31b7b3f13280b776965488e6eb37211f53ddd81fb182bfc630",
+    "experiments/recommendation-vector/results-summary.json": "49e153052cf53f1ed2cad040c8e93d9117c30a2c5b10e219f35e3fab0f00f04e",
+    "experiments/recommendation-vector/run_experiment.py": "f451c9aca24ff78998038d18c47746091fd5c0420d7c32c1fa1f6b082b2f697f",
+    "experiments/recommendation-vector/state-reviews-public.json": "5cf7755d6114a5f16ea22ccddab2878a3e60af725711a5e8a51f4faf2b54dec4",
+    "experiments/recommendation-vector/wording-state-reviews-initial.json": "4df12aaafef656bfbacfbca2c514ee8dcd90937d6eff49bffc2853198f8a2bce",
+    "scripts/recommendation_engine.py": "a89a89b43177dd11409a723ad9d16f76e500792ba055006023b1fa370fa4bd3b",
+    "scripts/recommendation_retrieval.py": "b34aa645967a3deb45718fb86032e0481ede97a761b258767b46974582afef3a",
+    "scripts/tests/test_recommendation_retrieval.py": "3777961bf7fef21f2d4a8512c5aa1496ef6531e0030f887f66ecb364f8add73e",
+    "scripts/tests/test_recommendation_vector.py": "68223dedd6b166db49e89125a09ab686dc2d7d183d5149671f59897246dc9bfd",
+    "scripts/tests/test_recommendation_vector_review.py": "d79da3f00a923b73566f1982f05976bdb6b45cb75f8e00f20d1dfec0cd247fc7",
+    "scripts/tests/test_recommendation_vector_runner.py": "62e49d8e9796c6e2496e5980bad93cac78ced5bb888e9a86ed87e60bc37c7fcd"
+  }
+}

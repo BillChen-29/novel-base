@@ -1,0 +1,666 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-06",
+  "scope": "Engineering validation of the reviewed narrative recommendation core on labeled chronological prefixes. External usefulness and literary quality require separate evidence.",
+  "tests": {
+    "full_regression_passed": 579,
+    "new_tests": 13,
+    "log_sha256": "431ae23029ede0361db5329341709e2113e94e20377d0fdebcc466b2aae3c37e",
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/tests -p 'test_*.py'",
+    "independent_code_and_boundary_reviews": "approved"
+  },
+  "data": {
+    "public_stories": 4,
+    "public_cutoffs": 6,
+    "first_cuts_with_two_eligible_actions": 4,
+    "linked_followup_revisions": 2,
+    "private_cutoffs_new_books": 2,
+    "all_source_file_and_substring_checks_pass": true,
+    "raw_knowledge_files_unchanged": 271,
+    "pre_ranking_corrections": [
+      "Excluded one retrospective private excerpt and retained its audit trail.",
+      "Neutralized the sketch display label before ranking, retained the narrator-only claim in state review and independently re-reviewed the revised one case."
+    ]
+  },
+  "local_encoding": {
+    "shared_cards": 12,
+    "encoded_documents": 0,
+    "encoded_queries_pair": 8,
+    "encoded_queries_writing_handoff": 1,
+    "dim": 768,
+    "remote_model_api": false,
+    "model_sha256": "b5ce9d77a3fc4b3b39ccb5643c36777911cc4eb46a66962eadfa3f5f60490d63",
+    "shared_index_unchanged": true
+  },
+  "paired_results": {
+    "condition_worlds": {
+      "insufficient_evidence": 38,
+      "supported": 36,
+      "contradicted": 3
+    },
+    "condition_knowledge": {
+      "insufficient_evidence": 54,
+      "supported": 41,
+      "contradicted": 3
+    },
+    "review_pool": 16,
+    "methods": {
+      "bm25": {
+        "action_compatible": {
+          "cuts": 4,
+          "eligible": 8,
+          "covered": 5,
+          "double_covered": 2,
+          "actions_with_proposals": 2,
+          "two_actions_with_proposals": 1,
+          "instances": 5,
+          "proposals": 2
+        },
+        "action_coverage": {
+          "cuts": 4,
+          "eligible": 8,
+          "covered": 5,
+          "double_covered": 2,
+          "actions_with_proposals": 2,
+          "two_actions_with_proposals": 1,
+          "instances": 5,
+          "proposals": 2
+        }
+      },
+      "vector": {
+        "action_compatible": {
+          "cuts": 4,
+          "eligible": 8,
+          "covered": 8,
+          "double_covered": 4,
+          "actions_with_proposals": 6,
+          "two_actions_with_proposals": 2,
+          "instances": 10,
+          "proposals": 6
+        },
+        "action_coverage": {
+          "cuts": 4,
+          "eligible": 8,
+          "covered": 8,
+          "double_covered": 4,
+          "actions_with_proposals": 6,
+          "two_actions_with_proposals": 2,
+          "instances": 10,
+          "proposals": 6
+        }
+      },
+      "hybrid": {
+        "action_compatible": {
+          "cuts": 4,
+          "eligible": 8,
+          "covered": 8,
+          "double_covered": 4,
+          "actions_with_proposals": 6,
+          "two_actions_with_proposals": 2,
+          "instances": 10,
+          "proposals": 6
+        },
+        "action_coverage": {
+          "cuts": 4,
+          "eligible": 8,
+          "covered": 8,
+          "double_covered": 4,
+          "actions_with_proposals": 6,
+          "two_actions_with_proposals": 2,
+          "instances": 10,
+          "proposals": 6
+        }
+      }
+    },
+    "real": {
+      "bm25": {
+        "action_compatible": {
+          "cuts": 2,
+          "eligible": 1,
+          "covered": 0,
+          "double_covered": 0,
+          "actions_with_proposals": 0,
+          "two_actions_with_proposals": 0,
+          "instances": 0,
+          "proposals": 0
+        },
+        "action_coverage": {
+          "cuts": 2,
+          "eligible": 1,
+          "covered": 0,
+          "double_covered": 0,
+          "actions_with_proposals": 0,
+          "two_actions_with_proposals": 0,
+          "instances": 0,
+          "proposals": 0
+        }
+      },
+      "vector": {
+        "action_compatible": {
+          "cuts": 2,
+          "eligible": 1,
+          "covered": 1,
+          "double_covered": 0,
+          "actions_with_proposals": 0,
+          "two_actions_with_proposals": 0,
+          "instances": 2,
+          "proposals": 0
+        },
+        "action_coverage": {
+          "cuts": 2,
+          "eligible": 1,
+          "covered": 1,
+          "double_covered": 0,
+          "actions_with_proposals": 0,
+          "two_actions_with_proposals": 0,
+          "instances": 2,
+          "proposals": 0
+        }
+      },
+      "hybrid": {
+        "action_compatible": {
+          "cuts": 2,
+          "eligible": 1,
+          "covered": 1,
+          "double_covered": 0,
+          "actions_with_proposals": 0,
+          "two_actions_with_proposals": 0,
+          "instances": 2,
+          "proposals": 0
+        },
+        "action_coverage": {
+          "cuts": 2,
+          "eligible": 1,
+          "covered": 1,
+          "double_covered": 0,
+          "actions_with_proposals": 0,
+          "two_actions_with_proposals": 0,
+          "instances": 2,
+          "proposals": 0
+        }
+      }
+    },
+    "chain": {
+      "bm25": {
+        "action_compatible": [
+          {
+            "case_id": "lantern_1",
+            "states": {
+              "read_lamp_leaf": "pending",
+              "check_stage_photo": "pending"
+            },
+            "accepted": null,
+            "stale": null,
+            "proposals": []
+          },
+          {
+            "case_id": "lantern_2",
+            "states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "in_progress"
+            },
+            "accepted": null,
+            "stale": null,
+            "proposals": []
+          },
+          {
+            "case_id": "lantern_3",
+            "states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "completed"
+            },
+            "accepted": null,
+            "stale": null,
+            "proposals": []
+          }
+        ],
+        "action_coverage": [
+          {
+            "case_id": "lantern_1",
+            "states": {
+              "read_lamp_leaf": "pending",
+              "check_stage_photo": "pending"
+            },
+            "accepted": null,
+            "stale": null,
+            "proposals": []
+          },
+          {
+            "case_id": "lantern_2",
+            "states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "in_progress"
+            },
+            "accepted": null,
+            "stale": null,
+            "proposals": []
+          },
+          {
+            "case_id": "lantern_3",
+            "states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "completed"
+            },
+            "accepted": null,
+            "stale": null,
+            "proposals": []
+          }
+        ]
+      },
+      "vector": {
+        "action_compatible": [
+          {
+            "case_id": "lantern_1",
+            "states": {
+              "read_lamp_leaf": "pending",
+              "check_stage_photo": "pending"
+            },
+            "accepted": null,
+            "stale": null,
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ]
+          },
+          {
+            "case_id": "lantern_2",
+            "states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "in_progress"
+            },
+            "accepted": "check_stage_photo",
+            "stale": true,
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify_continue"
+              ]
+            ]
+          },
+          {
+            "case_id": "lantern_3",
+            "states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "completed"
+            },
+            "accepted": null,
+            "stale": true,
+            "proposals": []
+          }
+        ],
+        "action_coverage": [
+          {
+            "case_id": "lantern_1",
+            "states": {
+              "read_lamp_leaf": "pending",
+              "check_stage_photo": "pending"
+            },
+            "accepted": null,
+            "stale": null,
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ]
+          },
+          {
+            "case_id": "lantern_2",
+            "states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "in_progress"
+            },
+            "accepted": "check_stage_photo",
+            "stale": true,
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify_continue"
+              ]
+            ]
+          },
+          {
+            "case_id": "lantern_3",
+            "states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "completed"
+            },
+            "accepted": null,
+            "stale": true,
+            "proposals": []
+          }
+        ]
+      },
+      "hybrid": {
+        "action_compatible": [
+          {
+            "case_id": "lantern_1",
+            "states": {
+              "read_lamp_leaf": "pending",
+              "check_stage_photo": "pending"
+            },
+            "accepted": null,
+            "stale": null,
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ]
+          },
+          {
+            "case_id": "lantern_2",
+            "states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "in_progress"
+            },
+            "accepted": "check_stage_photo",
+            "stale": true,
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify_continue"
+              ]
+            ]
+          },
+          {
+            "case_id": "lantern_3",
+            "states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "completed"
+            },
+            "accepted": null,
+            "stale": true,
+            "proposals": []
+          }
+        ],
+        "action_coverage": [
+          {
+            "case_id": "lantern_1",
+            "states": {
+              "read_lamp_leaf": "pending",
+              "check_stage_photo": "pending"
+            },
+            "accepted": null,
+            "stale": null,
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify"
+              ]
+            ]
+          },
+          {
+            "case_id": "lantern_2",
+            "states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "in_progress"
+            },
+            "accepted": "check_stage_photo",
+            "stale": true,
+            "proposals": [
+              [
+                "check_stage_photo",
+                "clue_check",
+                "clue_check_verify_continue"
+              ]
+            ]
+          },
+          {
+            "case_id": "lantern_3",
+            "states": {
+              "read_lamp_leaf": "completed",
+              "check_stage_photo": "completed"
+            },
+            "accepted": null,
+            "stale": true,
+            "proposals": []
+          }
+        ]
+      }
+    },
+    "writer_guard": {
+      "final_session_packets_checked": 36,
+      "unverified_sketch_creator_excluded": true
+    }
+  },
+  "independent_oracle": {
+    "old_case_method_comparisons": 42,
+    "new_case_method_comparisons": 24,
+    "old_results": {
+      "bm25/global": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards": 20,
+        "instances": 7,
+        "proposals": 5
+      },
+      "bm25/action_compatible": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards": 11,
+        "instances": 11,
+        "proposals": 5
+      },
+      "bm25/action_coverage": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards": 11,
+        "instances": 11,
+        "proposals": 5
+      },
+      "vector/global": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards": 28,
+        "instances": 10,
+        "proposals": 7
+      },
+      "vector/action_compatible": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards": 20,
+        "instances": 20,
+        "proposals": 8
+      },
+      "vector/action_coverage": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards": 20,
+        "instances": 20,
+        "proposals": 8
+      },
+      "hybrid/global": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards": 28,
+        "instances": 9,
+        "proposals": 7
+      },
+      "hybrid/action_compatible": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards": 20,
+        "instances": 20,
+        "proposals": 8
+      },
+      "hybrid/action_coverage": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards": 20,
+        "instances": 20,
+        "proposals": 8
+      }
+    },
+    "new_counts": {
+      "bm25": {
+        "cases": 8,
+        "eligible_actions": 10,
+        "rankable_actions": 5,
+        "cases_two_eligible": 4,
+        "baseline_cards": 4,
+        "coverage_cards": 4,
+        "baseline_instances": 5,
+        "coverage_instances": 5,
+        "baseline_actions": 5,
+        "coverage_actions": 5,
+        "baseline_dual": 2,
+        "coverage_dual": 2,
+        "changed_membership": 0,
+        "new_pairs": 0,
+        "dropped_pairs": 0
+      },
+      "vector": {
+        "cases": 8,
+        "eligible_actions": 10,
+        "rankable_actions": 10,
+        "cases_two_eligible": 4,
+        "baseline_cards": 12,
+        "coverage_cards": 12,
+        "baseline_instances": 14,
+        "coverage_instances": 14,
+        "baseline_actions": 10,
+        "coverage_actions": 10,
+        "baseline_dual": 4,
+        "coverage_dual": 4,
+        "changed_membership": 0,
+        "new_pairs": 0,
+        "dropped_pairs": 0
+      },
+      "hybrid": {
+        "cases": 8,
+        "eligible_actions": 10,
+        "rankable_actions": 10,
+        "cases_two_eligible": 4,
+        "baseline_cards": 12,
+        "coverage_cards": 12,
+        "baseline_instances": 14,
+        "coverage_instances": 14,
+        "baseline_actions": 10,
+        "coverage_actions": 10,
+        "baseline_dual": 4,
+        "coverage_dual": 4,
+        "changed_membership": 0,
+        "new_pairs": 0,
+        "dropped_pairs": 0
+      }
+    },
+    "old_global_and_compatible_request_result_byte_parity": true,
+    "original_four_and_linked_revisions_public_replay_equals_corresponding_full_rows": true,
+    "public_replay_sha256": "e2c9796cf2493ddea0474511ce0973ebf1deb8596a735837402fe2dbb73dceea"
+  },
+  "semantic_boundaries": {
+    "public_state_claims": 79,
+    "public_knowledge_supported": 76,
+    "public_knowledge_insufficient": 7,
+    "real_state_claims": 11,
+    "new_pool_size_all": 16,
+    "new_pool_size_public": 14,
+    "blind_candidate_world_claims": 77,
+    "blind_candidate_character_claims": 98,
+    "motif_workflow": {
+      "cases": 9,
+      "candidate_judgments": 43,
+      "judgments": {
+        "supported": 35,
+        "contradicted": 8
+      },
+      "workflow_passed": 36,
+      "workflow_total": 36
+    },
+    "continuity_legacy_raw_input": {
+      "counts": {
+        "pass": 18,
+        "fail": 2,
+        "error": 0
+      },
+      "failed_checks": [
+        "test_16_prototype_rejects_semantically_opposite_fact",
+        "test_18_prototype_verifies_knowledge_labels_against_text"
+      ]
+    },
+    "imported_semantic_review_path": {
+      "project_count": 3,
+      "candidate_count": 18,
+      "checks_passed": 20,
+      "checks_total": 20
+    }
+  },
+  "purpose_selected_real_challenge": {
+    "books_scanned": 3,
+    "windows_checked": 22,
+    "eligible_examples": 0,
+    "interpretation": "Separate bounded selection audit. No eligible query or candidate review in this arm; distinct from the two paired real cutoffs."
+  },
+  "writing_branch": {
+    "accepted_intent_preserves_state": true,
+    "writer_draft_imported": true,
+    "actual_cited_digits": "047",
+    "read_action_completed": true,
+    "use_action_unknown": true,
+    "stale_acceptance_and_other_project_artifacts_rejected": true,
+    "editing_early_prose_invalidates_derived_state": true
+  },
+  "limitations": [
+    "Scope uses AI semantic reviews and author-annotated actions, threads and scene intensity.",
+    "Two real cutoffs in this release and four historical cutoffs produced no proposals.",
+    "Action coverage selected identical actual cards to compatible ranking on these scenarios. Controlled tests show behavior when a rank conflict occurs.",
+    "The early raw-label prototype fails two semantic capability checks. Use the reviewed-state adapter for the supported route.",
+    "Library generalization, long-novel performance, user preference and literary quality were not measured."
+  ],
+  "file_sha256": {
+    "README.md": "c6aaa783129c90a34ede149477ad2b26cbeefe0f8efe43cf9759a2c336b8c584",
+    "scripts/recommendation_engine.py": "15eb3c0daaec657a22117e5009a00dfa163d6e6da561f1fa41ff762ec42fb1fd",
+    "scripts/recommendation_retrieval.py": "f7e1d6a898f28a745ea670133f1d7cba2e6e0f09188813d7757429973f0a5068",
+    "scripts/recommendation_scene_advice.py": "33fb123e3dcc32909397c66c335a749b19483789079be20cebfe86d3196313f0",
+    "scripts/tests/test_recommendation_multi_action.py": "0c3b83be68eb743c965bc5d6ed03f61f2f3496388d9483ff2bb1ca57fde1a136",
+    "scripts/tests/test_recommendation_scene_advice.py": "77d26beec2c1b30e533617732a244de2550cf38e2e689d1d8662e9a4bbf5148f",
+    "experiments/recommendation-vector/run_experiment.py": "517bd472bdaaeacb9445379e16548ac0771df5eb99cf0d11ddbc300be16d8d38",
+    "experiments/recommendation-multi-action/README.md": "5d4c5ffc26d3cd5bdd5f2ed51b531e3d6d244f356553c2c6b6e6e350e3ed3db1",
+    "experiments/recommendation-multi-action/RESULTS.md": "7a3957c7df2815610552572e15c9bf5135fc466f2d048b92f2ff420b6588c261",
+    "experiments/recommendation-multi-action/author-strategy-check.json": "04f38e4ab45c11575a8b760a59c4274e8dbe1d28b173c78894e3ff9aa162cd1b",
+    "experiments/recommendation-multi-action/candidate-reviews-public.json": "7c5e6a3987538a52e7dc6b2a846468d8fdbe571ae5a444d9350f00f89329c113",
+    "experiments/recommendation-multi-action/fixtures-public.json": "575f6baced4d8a1a68ae02ce1243e42ec7693d51ffc0d7268ca79b1ea5b9e737",
+    "experiments/recommendation-multi-action/freeze.json": "4b8afb146ccc3d6428f9fe20adabd921d8b9f9939f1820c6dda12a8e75422767",
+    "experiments/recommendation-multi-action/replay.py": "78de48a09ca2a75c0ccd8263a416840206569235490ed6f7a6382c07bb867bd2",
+    "experiments/recommendation-multi-action/results-public.json": "e2c9796cf2493ddea0474511ce0973ebf1deb8596a735837402fe2dbb73dceea",
+    "experiments/recommendation-multi-action/state-reviews-public.json": "3cac00c694cc913366a80840e6823bcffdc6b334fcac38e0f452f50b453ea67f",
+    "experiments/recommendation-multi-action/writing-handoff.json": "5fe3b6551de42f377bcc09f1fdb9e445f1c8a8963192e5b6707dce7d0217aae9"
+  }
+}

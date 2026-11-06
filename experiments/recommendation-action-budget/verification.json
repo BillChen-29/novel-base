@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-06",
+  "scope": "Paired replay at fixed two-card budget: immutable full-catalog order then eligible union versus original global top two. No new model calls or embedding inputs.",
+  "controls": {
+    "same_input_files": {
+      "manifest.json": "534cf7cebef50cf2040ccb92990653681bc72c25f447701c28d30211a0e145c3",
+      "fixtures.json": "06d6a597e10966efebad2606c2ca0d6835aba8a5ea799b77340a7d6dfc4b85c0",
+      "state-reviews.json": "0f74c3bf4a83a57ca26aaf7a029dc2b98a6fc831b613cec70f3996b6c3772543",
+      "catalog.json": "dc6843aeccc1d890a396682ec923daef849a4577e85750baf06b889443f70ac1"
+    },
+    "frozen_encoding_files_matched": 42,
+    "original_assets_unchanged": 271,
+    "case_count": 14,
+    "knowledge_cards": 12,
+    "budget_per_case": 2,
+    "cases_with_one_eligible_action": 10,
+    "cases_with_none": 4,
+    "negative_control_ids": [
+      "letter_3",
+      "inventory_3",
+      "real_1",
+      "real_2"
+    ],
+    "new_model_inputs": 0
+  },
+  "verification": {
+    "global_candidate_and_replay_files_byte_identical": 6,
+    "unchanged_global_file_hashes": {
+      "candidates-bm25.json": "bf8b8cac274cfb3e56d73b900b392b2e8bb0f5be6a6b9ad7adcc1700d327951c",
+      "results-bm25.json": "8aa0cbc179b1471b655b7151b7f3e4d47b1514e1b8206dd43116c432bb24763b",
+      "candidates-vector.json": "93c0664ec1d68f72424ad67e698882f96b13f91a0e61969b079736af9ed9f630",
+      "results-vector.json": "8d79e1c8bc32f0a6595e55c72ef900431cce3fc3293e48035671921ca09d782c",
+      "candidates-hybrid.json": "7f45328752e85f77929b62a20372703b6fd1ff3fee6af844464ed475a1bdd75f",
+      "results-hybrid.json": "2779925aa5f8d52c801e9193bc440cbda6090436ba78fd1a10cbabbdd1f941ab"
+    },
+    "independent_expected_shortlists_matched": 42,
+    "filtered_scores_equal_to_full_ranking": true,
+    "public_only_replays": {
+      "bm25:global": {
+        "cases": 10,
+        "sessions": 5,
+        "complete_session_subset_equal": true
+      },
+      "bm25:action_compatible": {
+        "cases": 10,
+        "sessions": 5,
+        "complete_session_subset_equal": true
+      },
+      "vector:global": {
+        "cases": 10,
+        "sessions": 5,
+        "complete_session_subset_equal": true
+      },
+      "vector:action_compatible": {
+        "cases": 10,
+        "sessions": 5,
+        "complete_session_subset_equal": true
+      },
+      "hybrid:global": {
+        "cases": 10,
+        "sessions": 5,
+        "complete_session_subset_equal": true
+      },
+      "hybrid:action_compatible": {
+        "cases": 10,
+        "sessions": 5,
+        "complete_session_subset_equal": true
+      }
+    },
+    "new_tests": 13,
+    "full_tests_passed": 566,
+    "test_log_sha256": "8c4359971a494f5fb97c947b37bd89831e03c5d088cc1d632f96aafaa9875a86",
+    "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/tests -p 'test_*.py'",
+    "code_review": "approved; replay explicitly rejects JSON null instead of switching to candidate generation",
+    "boundary_review": "passed; writer packet excludes policy and eligible ID metadata; role and state checks still required"
+  },
+  "outcomes": {
+    "bm25": {
+      "global": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards_retrieved": 20,
+        "instances_reviewed": 7,
+        "cuts_with_instances": 6,
+        "proposals": 5,
+        "original_proposals": 5,
+        "wording_proposals": 0,
+        "old_real_proposals": 0,
+        "new_real_proposals": 0
+      },
+      "action_compatible": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards_retrieved": 11,
+        "instances_reviewed": 11,
+        "cuts_with_instances": 6,
+        "proposals": 5,
+        "original_proposals": 5,
+        "wording_proposals": 0,
+        "old_real_proposals": 0,
+        "new_real_proposals": 0
+      }
+    },
+    "vector": {
+      "global": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards_retrieved": 28,
+        "instances_reviewed": 10,
+        "cuts_with_instances": 9,
+        "proposals": 7,
+        "original_proposals": 5,
+        "wording_proposals": 2,
+        "old_real_proposals": 0,
+        "new_real_proposals": 0
+      },
+      "action_compatible": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards_retrieved": 20,
+        "instances_reviewed": 20,
+        "cuts_with_instances": 10,
+        "proposals": 8,
+        "original_proposals": 5,
+        "wording_proposals": 3,
+        "old_real_proposals": 0,
+        "new_real_proposals": 0
+      }
+    },
+    "hybrid": {
+      "global": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards_retrieved": 28,
+        "instances_reviewed": 9,
+        "cuts_with_instances": 8,
+        "proposals": 7,
+        "original_proposals": 5,
+        "wording_proposals": 2,
+        "old_real_proposals": 0,
+        "new_real_proposals": 0
+      },
+      "action_compatible": {
+        "cases": 14,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4,
+        "cards_retrieved": 20,
+        "instances_reviewed": 20,
+        "cuts_with_instances": 10,
+        "proposals": 8,
+        "original_proposals": 5,
+        "wording_proposals": 3,
+        "old_real_proposals": 0,
+        "new_real_proposals": 0
+      }
+    }
+  },
+  "semantic_reviews": {
+    "reuse": {
+      "reused_occurrences": 31,
+      "new_occurrences": 20,
+      "old_distinct": 12,
+      "new_distinct": 8,
+      "fresh_claims": 45,
+      "all_distinct": 20
+    },
+    "new_condition_verdicts": {
+      "insufficient_evidence": 24,
+      "supported": 18,
+      "contradicted": 3
+    },
+    "new_knowledge_verdicts": {
+      "insufficient_evidence": 28,
+      "supported": 14,
+      "contradicted": 3
+    },
+    "secondary_check": {
+      "claims": 15,
+      "knowledge": 15,
+      "world_agree": 14,
+      "knowledge_agree": 14
+    },
+    "single_disagreement_does_not_change_use_variant": true
+  },
+  "limits": [
+    "Known failures are diagnostic examples, not a held-out accuracy test.",
+    "No naturally occurring multi-action case in the fourteen. Shared budget can omit one eligible action.",
+    "Current-AI semantic reviews are not independent human validation.",
+    "Input count is unchanged; compatible policy increases instances reviewed despite fewer retrieved cards."
+  ],
+  "file_sha256": {
+    "README.md": "77a0c37060eda0b5ccacaa93b459cefab3b8aed38a8e78a937a856c418f6e7bf",
+    "scripts/recommendation_engine.py": "01b65b6d70cb08503ce780b2319c3226b3633d676979a134f491b43b097c1baa",
+    "scripts/recommendation_retrieval.py": "cf25b484caa38100ee2cc6c8fc5e1435447c55d67b983bedc44e7f6aae7ffea2",
+    "scripts/tests/test_recommendation_action_budget.py": "c7bf65c5977cb30951b8c3e47d7f5b66406d6daa94b6486356bec12a3ef9bd27",
+    "scripts/tests/test_recommendation_action_budget_runner.py": "2fd25de62568db7f5c975cbb9a717971cc581473848c18cb9bb81bd391c15583",
+    "experiments/recommendation-vector/run_experiment.py": "15a3c8b0d39f9fb49ed749d940abb0de9c2b877b825f178373f4922d65d5e5f2",
+    "experiments/recommendation-action-budget/README.md": "dc3fe59c6cc49d57c9aad3d116a359e8aa0386afcdfcb1bc222894a966d7d7c8",
+    "experiments/recommendation-action-budget/RESULTS.md": "8983c6a9094e42b7bd8097ef1bd2adc68615e4c0c9ee49855552ecdaf8213893",
+    "experiments/recommendation-action-budget/candidate-reviews-bm25-public.json": "4acf2e3e732dc011c3897ceb3f333eb854568385c9d9b4dbe58ed18d14ac5e8c",
+    "experiments/recommendation-action-budget/candidate-reviews-hybrid-public.json": "ac36be8a896cc6d71477d21c8d40e3c66fcce80cd97fd8c19449f94dc9ad8bda",
+    "experiments/recommendation-action-budget/candidate-reviews-vector-public.json": "ac36be8a896cc6d71477d21c8d40e3c66fcce80cd97fd8c19449f94dc9ad8bda",
+    "experiments/recommendation-action-budget/freeze.json": "313848f3722822fc5b1a17caaa38e6431d07ef2fc5726836ede72b39f0720ff2",
+    "experiments/recommendation-action-budget/results-summary.json": "6ad4b806a9e8605341a9e95d6d4f5934cb05f434259b1c13cbb755da46b73c04",
+    "experiments/recommendation-action-budget/run_experiment.py": "9f260eab65dbeffa39840e4ae021121b36fbc2c49a921cd65a8eac152f728d6c",
+    "experiments/recommendation-action-budget/target-review.json": "ec3f75186a0ff23c64b433ce17c07a5f9b317bc491ad1920b017217c3711c988"
+  }
+}

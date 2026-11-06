@@ -1,0 +1,397 @@
+{
+  "same_accepted_action": {
+    "recover_and_investigate": {
+      "schema_version": 1,
+      "token": {
+        "project_id": "letter_loop",
+        "revision": 1,
+        "source_sha256": "17c8198703fd711a76b55400fb770ac1c18c22ac75ad5638f5e313183b651396"
+      },
+      "state_sha256": "0525ed56affc06a0899b217dae89f61382c5f890bf158202a48bf5cc2a23f274",
+      "batch_sha256": "62da62b9c2f1a2bf01e9d4b5a1aa3b6ab14f84730303b9f301ce2e7283f47ccd",
+      "proposal_id": "proposal_ab2b436a0263661ce5f4e800e795760e",
+      "action_id": "read_note",
+      "operation": "read",
+      "goal": {
+        "id": "recover_and_investigate",
+        "description": "处理后果并沿既有线索调查"
+      },
+      "threads_sha256": "efd3e8c3c6b30c908c1e7672c0c78a5c4f9df22e40b98a00b7266a8891211e44",
+      "known_fact_ids": [
+        "base_01",
+        "base_02",
+        "base_03"
+      ],
+      "rhythm": [
+        {
+          "scene_id": "s1",
+          "order": 1,
+          "function": "forward_current",
+          "tension": 2
+        }
+      ],
+      "strategies": [
+        {
+          "id": "aftermath_clue",
+          "title": "处理后果，沿既有线索推进",
+          "score": 90,
+          "score_breakdown": [
+            {
+              "rule": "base",
+              "points": 50,
+              "reason": "通过必要条件的策略基线"
+            },
+            {
+              "rule": "author_goal",
+              "points": 40,
+              "reason": "符合作者当前目标"
+            }
+          ],
+          "evidence_fact_ids": [
+            "base_03",
+            "base_02",
+            "base_01"
+          ],
+          "function": "aftermath",
+          "target_tension": "降低外部动作强度，保留未完成问题",
+          "source_refs": [
+            {
+              "path": "assets/pacing/pacing-curve.md",
+              "title": "节奏曲线模板",
+              "sha256": "36a894efcc984a75a06747949f761469ae03705a18333674a4f2b56b418c2683"
+            },
+            {
+              "path": "assets/technique_library/rhythm-variation.md",
+              "title": "节奏变化技巧",
+              "sha256": "dff3ffe8498df146fc41932c6f91b21934fb5311060d62fa6509c20c0c95a165"
+            },
+            {
+              "path": "assets/technique_library/suspense-laddering.md",
+              "title": "技法：悬念的阶梯式设置",
+              "sha256": "8c5473fda82814eaa4f7b75b5e4ef6462e6c6d7c0c204d1a409ab90546182ccc"
+            }
+          ]
+        },
+        {
+          "id": "escalate_pressure",
+          "title": "保持压力，推进未完成目标",
+          "score": 50,
+          "score_breakdown": [
+            {
+              "rule": "base",
+              "points": 50,
+              "reason": "通过必要条件的策略基线"
+            }
+          ],
+          "evidence_fact_ids": [
+            "base_03",
+            "base_02",
+            "base_01"
+          ],
+          "function": "action",
+          "target_tension": "保持或提高外部动作强度",
+          "source_refs": [
+            {
+              "path": "assets/technique_library/suspense-laddering.md",
+              "title": "技法：悬念的阶梯式设置",
+              "sha256": "8c5473fda82814eaa4f7b75b5e4ef6462e6c6d7c0c204d1a409ab90546182ccc"
+            },
+            {
+              "path": "assets/technique_library/_scenarios/climax.md",
+              "title": "场景：高潮（Climax）",
+              "sha256": "306390321460bb795d7fe19650f12d7da4cc4fc4ddd8e0a8fe54bf7ffb27b1cc"
+            }
+          ]
+        }
+      ]
+    },
+    "raise_pressure": {
+      "schema_version": 1,
+      "token": {
+        "project_id": "letter_loop",
+        "revision": 1,
+        "source_sha256": "17c8198703fd711a76b55400fb770ac1c18c22ac75ad5638f5e313183b651396"
+      },
+      "state_sha256": "0525ed56affc06a0899b217dae89f61382c5f890bf158202a48bf5cc2a23f274",
+      "batch_sha256": "62da62b9c2f1a2bf01e9d4b5a1aa3b6ab14f84730303b9f301ce2e7283f47ccd",
+      "proposal_id": "proposal_ab2b436a0263661ce5f4e800e795760e",
+      "action_id": "read_note",
+      "operation": "read",
+      "goal": {
+        "id": "raise_pressure",
+        "description": "保持压力并推进当前目标"
+      },
+      "threads_sha256": "efd3e8c3c6b30c908c1e7672c0c78a5c4f9df22e40b98a00b7266a8891211e44",
+      "known_fact_ids": [
+        "base_01",
+        "base_02",
+        "base_03"
+      ],
+      "rhythm": [
+        {
+          "scene_id": "s1",
+          "order": 1,
+          "function": "forward_current",
+          "tension": 2
+        }
+      ],
+      "strategies": [
+        {
+          "id": "escalate_pressure",
+          "title": "保持压力，推进未完成目标",
+          "score": 90,
+          "score_breakdown": [
+            {
+              "rule": "base",
+              "points": 50,
+              "reason": "通过必要条件的策略基线"
+            },
+            {
+              "rule": "author_goal",
+              "points": 40,
+              "reason": "符合作者当前目标"
+            }
+          ],
+          "evidence_fact_ids": [
+            "base_03",
+            "base_02",
+            "base_01"
+          ],
+          "function": "action",
+          "target_tension": "保持或提高外部动作强度",
+          "source_refs": [
+            {
+              "path": "assets/technique_library/suspense-laddering.md",
+              "title": "技法：悬念的阶梯式设置",
+              "sha256": "8c5473fda82814eaa4f7b75b5e4ef6462e6c6d7c0c204d1a409ab90546182ccc"
+            },
+            {
+              "path": "assets/technique_library/_scenarios/climax.md",
+              "title": "场景：高潮（Climax）",
+              "sha256": "306390321460bb795d7fe19650f12d7da4cc4fc4ddd8e0a8fe54bf7ffb27b1cc"
+            }
+          ]
+        },
+        {
+          "id": "aftermath_clue",
+          "title": "处理后果，沿既有线索推进",
+          "score": 50,
+          "score_breakdown": [
+            {
+              "rule": "base",
+              "points": 50,
+              "reason": "通过必要条件的策略基线"
+            }
+          ],
+          "evidence_fact_ids": [
+            "base_03",
+            "base_02",
+            "base_01"
+          ],
+          "function": "aftermath",
+          "target_tension": "降低外部动作强度，保留未完成问题",
+          "source_refs": [
+            {
+              "path": "assets/pacing/pacing-curve.md",
+              "title": "节奏曲线模板",
+              "sha256": "36a894efcc984a75a06747949f761469ae03705a18333674a4f2b56b418c2683"
+            },
+            {
+              "path": "assets/technique_library/rhythm-variation.md",
+              "title": "节奏变化技巧",
+              "sha256": "dff3ffe8498df146fc41932c6f91b21934fb5311060d62fa6509c20c0c95a165"
+            },
+            {
+              "path": "assets/technique_library/suspense-laddering.md",
+              "title": "技法：悬念的阶梯式设置",
+              "sha256": "8c5473fda82814eaa4f7b75b5e4ef6462e6c6d7c0c204d1a409ab90546182ccc"
+            }
+          ]
+        }
+      ]
+    },
+    "reveal_truth": {
+      "schema_version": 1,
+      "token": {
+        "project_id": "letter_loop",
+        "revision": 1,
+        "source_sha256": "17c8198703fd711a76b55400fb770ac1c18c22ac75ad5638f5e313183b651396"
+      },
+      "state_sha256": "0525ed56affc06a0899b217dae89f61382c5f890bf158202a48bf5cc2a23f274",
+      "batch_sha256": "62da62b9c2f1a2bf01e9d4b5a1aa3b6ab14f84730303b9f301ce2e7283f47ccd",
+      "proposal_id": "proposal_ab2b436a0263661ce5f4e800e795760e",
+      "action_id": "read_note",
+      "operation": "read",
+      "goal": {
+        "id": "reveal_truth",
+        "description": "在前提与许可允许时揭示真相"
+      },
+      "threads_sha256": "efd3e8c3c6b30c908c1e7672c0c78a5c4f9df22e40b98a00b7266a8891211e44",
+      "known_fact_ids": [
+        "base_01",
+        "base_02",
+        "base_03"
+      ],
+      "rhythm": [
+        {
+          "scene_id": "s1",
+          "order": 1,
+          "function": "forward_current",
+          "tension": 2
+        }
+      ],
+      "strategies": [
+        {
+          "id": "aftermath_clue",
+          "title": "处理后果，沿既有线索推进",
+          "score": 50,
+          "score_breakdown": [
+            {
+              "rule": "base",
+              "points": 50,
+              "reason": "通过必要条件的策略基线"
+            }
+          ],
+          "evidence_fact_ids": [
+            "base_03",
+            "base_02",
+            "base_01"
+          ],
+          "function": "aftermath",
+          "target_tension": "降低外部动作强度，保留未完成问题",
+          "source_refs": [
+            {
+              "path": "assets/pacing/pacing-curve.md",
+              "title": "节奏曲线模板",
+              "sha256": "36a894efcc984a75a06747949f761469ae03705a18333674a4f2b56b418c2683"
+            },
+            {
+              "path": "assets/technique_library/rhythm-variation.md",
+              "title": "节奏变化技巧",
+              "sha256": "dff3ffe8498df146fc41932c6f91b21934fb5311060d62fa6509c20c0c95a165"
+            },
+            {
+              "path": "assets/technique_library/suspense-laddering.md",
+              "title": "技法：悬念的阶梯式设置",
+              "sha256": "8c5473fda82814eaa4f7b75b5e4ef6462e6c6d7c0c204d1a409ab90546182ccc"
+            }
+          ]
+        },
+        {
+          "id": "escalate_pressure",
+          "title": "保持压力，推进未完成目标",
+          "score": 50,
+          "score_breakdown": [
+            {
+              "rule": "base",
+              "points": 50,
+              "reason": "通过必要条件的策略基线"
+            }
+          ],
+          "evidence_fact_ids": [
+            "base_03",
+            "base_02",
+            "base_01"
+          ],
+          "function": "action",
+          "target_tension": "保持或提高外部动作强度",
+          "source_refs": [
+            {
+              "path": "assets/technique_library/suspense-laddering.md",
+              "title": "技法：悬念的阶梯式设置",
+              "sha256": "8c5473fda82814eaa4f7b75b5e4ef6462e6c6d7c0c204d1a409ab90546182ccc"
+            },
+            {
+              "path": "assets/technique_library/_scenarios/climax.md",
+              "title": "场景：高潮（Climax）",
+              "sha256": "306390321460bb795d7fe19650f12d7da4cc4fc4ddd8e0a8fe54bf7ffb27b1cc"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "accepted_session_digest_unchanged": true,
+  "source_assets_verified": true,
+  "continuous_high_tension_original_example": {
+    "recover_and_investigate": {
+      "top": "aftermath_clue",
+      "rhythm": [
+        {
+          "scene_id": "s01",
+          "order": 1,
+          "function": "setup",
+          "tension": 3
+        },
+        {
+          "scene_id": "s02",
+          "order": 2,
+          "function": "action",
+          "tension": 5
+        },
+        {
+          "scene_id": "s03",
+          "order": 3,
+          "function": "action",
+          "tension": 5
+        }
+      ]
+    },
+    "raise_pressure": {
+      "top": "escalate_pressure",
+      "rhythm": [
+        {
+          "scene_id": "s01",
+          "order": 1,
+          "function": "setup",
+          "tension": 3
+        },
+        {
+          "scene_id": "s02",
+          "order": 2,
+          "function": "action",
+          "tension": 5
+        },
+        {
+          "scene_id": "s03",
+          "order": 3,
+          "function": "action",
+          "tension": 5
+        }
+      ]
+    },
+    "reveal_truth": {
+      "top": "aftermath_clue",
+      "rhythm": [
+        {
+          "scene_id": "s01",
+          "order": 1,
+          "function": "setup",
+          "tension": 3
+        },
+        {
+          "scene_id": "s02",
+          "order": 2,
+          "function": "action",
+          "tension": 5
+        },
+        {
+          "scene_id": "s03",
+          "order": 3,
+          "function": "action",
+          "tension": 5
+        }
+      ]
+    }
+  },
+  "motif_replay": {
+    "cases": 9,
+    "candidate_judgments": 43,
+    "judgments": {
+      "supported": 35,
+      "contradicted": 8
+    },
+    "workflow_passed": 36,
+    "workflow_total": 36
+  }
+}

@@ -1,0 +1,2951 @@
+{
+  "reviews": {
+    "lantern_1": {
+      "schema_version": 1,
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "独立截点状态审核（当前 AI）"
+      },
+      "decisions": [
+        {
+          "fact_id": "keeper",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述明确指定今晚由方苇当值，钥匙也已交她。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 13,
+              "end": 43,
+              "quote": "方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。",
+              "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+            },
+            {
+              "scene_id": "s1",
+              "start": 77,
+              "end": 89,
+              "quote": "她自己就是今晚当值的人。",
+              "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她接任掌灯并自己独自装灯；“她自己就是今晚当值的人”直接落在她身上。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 13,
+                  "end": 43,
+                  "quote": "方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。",
+                  "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+                },
+                {
+                  "scene_id": "s1",
+                  "start": 77,
+                  "end": 89,
+                  "quote": "她自己就是今晚当值的人。",
+                  "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "reading_rule",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "牌上所刻会规明确限定翻阅资格。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 43,
+              "end": 77,
+              "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”",
+              "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "钥匙已交给方苇；文中没有说她翻看钥匙牌背面或读到这条会规。",
+              "epistemic_type": "uncertain",
+              "verdict": "insufficient_evidence",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 43,
+                  "end": 77,
+                  "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”",
+                  "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "leaf_in_hand",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "方苇捏住的折页有“收焰”页签。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 24,
+              "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她正捏着这页，收焰页签外露，而且她想到要读这页。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 24,
+                  "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "leaf_unread",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述明确指出她未展开阅读。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 14,
+              "end": 33,
+              "quote": "页签“收焰”露在外面，她还没展开读过。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "“她还没展开读过”直接交代她本人的阅读经历。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 14,
+                  "end": 33,
+                  "quote": "页签“收焰”露在外面，她还没展开读过。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "fitting_open",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "装法尚待她从折页中了解。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 33,
+              "end": 53,
+              "quote": "灯底那块挡片该怎么装，她得读这页才知道。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "“她得读这页才知道”直接交代她对缺少信息的认识。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 33,
+                  "end": 53,
+                  "quote": "灯底那块挡片该怎么装，她得读这页才知道。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "photo_available",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "照片被叙述定位在她手边，她还将放大镜放在照片边。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 53,
+              "end": 79,
+              "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            },
+            {
+              "scene_id": "s2",
+              "start": 98,
+              "end": 128,
+              "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她已经把放大镜放到这张照片边并打算检查照片。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 53,
+                  "end": 79,
+                  "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 98,
+                  "end": 128,
+                  "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "east_holes",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "命题说的是她的记忆；叙述明确写了她记得的东台特征。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 90,
+              "quote": "她记得东台的栏杆是方孔",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "“她记得”直接指明方苇拥有这段记忆。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 90,
+                  "quote": "她记得东台的栏杆是方孔",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "west_holes",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述直接给出她关于西台栏杆的记忆内容。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "同一句将圆孔列在方苇记得的两种特征中。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "lens_ready",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "放镜的动作已完成，位置就是照片边。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 98,
+              "end": 108,
+              "quote": "她把放大镜放到照片边",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "方苇亲手将镜子放在那里。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 98,
+                  "end": 108,
+                  "quote": "她把放大镜放到照片边",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "photo_pending",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "准备对比和未举镜两点均由同句直接给出。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 98,
+              "end": 128,
+              "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她自己安排比较步骤，亲手放镜，尚未举镜。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 98,
+                  "end": 128,
+                  "quote": "她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "caption_open",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述提出待解的地点问题，她在题注中留白。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 128,
+              "end": 146,
+              "quote": "究竟是哪座台，她在题注上空了两个字。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "方苇亲自留出两个字，叙述直陈她面对的地点问题。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 128,
+                  "end": 146,
+                  "quote": "究竟是哪座台，她在题注上空了两个字。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_binding_read_lamp_leaf",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "方苇拿着有明确页签的灯谱页，装法确须从该页了解；提案没有预设装法。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 53,
+              "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。灯底那块挡片该怎么装，她得读这页才知道。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她捏住该页，明确意识到装挡片需要先读这页。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 53,
+                  "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。灯底那块挡片该怎么装，她得读这页才知道。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_status_read_lamp_leaf",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "末尾仍是持页待读，捏住折页不等于读到页内装法。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 53,
+              "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。灯底那块挡片该怎么装，她得读这页才知道。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "“她还没展开读过”直接交代她本人的进度。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 53,
+                  "quote": "方苇捏住灯谱里折起的那一页。页签“收焰”露在外面，她还没展开读过。灯底那块挡片该怎么装，她得读这页才知道。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_binding_check_stage_photo",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "合影、镜子、对照特征及空题注均出现；提案没有指定哪座台。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 53,
+              "end": 146,
+              "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。她记得东台的栏杆是方孔，西台的是圆孔。她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。究竟是哪座台，她在题注上空了两个字。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她知道两台的特征，并已亲自把镜子放在合影边，准备比较。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 53,
+                  "end": 146,
+                  "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。她记得东台的栏杆是方孔，西台的是圆孔。她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。究竟是哪座台，她在题注上空了两个字。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_status_check_stage_photo",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "只做好准备，还没举镜比较，题注也仍缺地点。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 53,
+              "end": 146,
+              "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。她记得东台的栏杆是方孔，西台的是圆孔。她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。究竟是哪座台，她在题注上空了两个字。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她明知自己将做比较，尚未举镜，题注也由她留空。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 53,
+                  "end": 146,
+                  "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。她记得东台的栏杆是方孔，西台的是圆孔。她把放大镜放到照片边，准备比一比照片里栏杆的孔形，还没举镜。究竟是哪座台，她在题注上空了两个字。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "project_id": "lantern_hall",
+      "project_sha256": "e512e7b184d4aa3c8a197d69da94966b37e3be119d2cfd0e85e337718528c7d9",
+      "packet_sha256": "a9a7455c0bc970173060569faf48334b292f60366fc2ceb07f1b48963df5fc3c"
+    },
+    "lantern_2": {
+      "schema_version": 1,
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "独立截点状态审核（当前 AI）"
+      },
+      "decisions": [
+        {
+          "fact_id": "keeper",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "钥匙刚交给方苇，叙述明确指定她今夜当值。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 13,
+              "end": 43,
+              "quote": "方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。",
+              "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+            },
+            {
+              "scene_id": "s1",
+              "start": 77,
+              "end": 89,
+              "quote": "她自己就是今晚当值的人。",
+              "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她接了值班钥匙并自己独自装灯；叙述点明她自己当值。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 13,
+                  "end": 43,
+                  "quote": "方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。",
+                  "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+                },
+                {
+                  "scene_id": "s1",
+                  "start": 77,
+                  "end": 89,
+                  "quote": "她自己就是今晚当值的人。",
+                  "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "reading_rule",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "钥匙牌直接载明只有当值掌灯人能翻收焰折。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 43,
+              "end": 77,
+              "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”",
+              "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她实际翻了折页；此举与规定相符，但没有写她读过牌背或听过这条规定。",
+              "epistemic_type": "uncertain",
+              "verdict": "insufficient_evidence",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 43,
+                  "end": 77,
+                  "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”",
+                  "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "photo_available",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "她在末段还能举镜查看这张照片，照片在手边的条件持续。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 53,
+              "end": 79,
+              "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            },
+            {
+              "scene_id": "s3",
+              "start": 40,
+              "end": 53,
+              "quote": "她举起放大镜查那张戏班合影",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她亲自用放大镜查这张照片。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 53,
+                  "end": 79,
+                  "quote": "手边另有一张待题注的戏班旧合影，背面只写了“戏台”。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 40,
+                  "end": 53,
+                  "quote": "她举起放大镜查那张戏班合影",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "east_holes",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "句中明确给出她记得的东台特征。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 90,
+              "quote": "她记得东台的栏杆是方孔",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "“她记得”标出了记忆所属的人。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 90,
+                  "quote": "她记得东台的栏杆是方孔",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "west_holes",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "西台圆孔是叙述给出的记忆内容。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "西台的特征直接包含在方苇所记得的内容里。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "leaf_finished",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "她已经读至末行，随即合上灯谱。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 0,
+              "end": 16,
+              "quote": "方苇把收焰折读到末行，合上灯谱。",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她亲自读完并合书，紧接着能说清挡片装法。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 0,
+                  "end": 16,
+                  "quote": "方苇把收焰折读到末行，合上灯谱。",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "fitting_known",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述直接写她已经明白缺口的朝向。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 16,
+              "end": 31,
+              "quote": "她现在明白了，挡片缺口得朝灯轴",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "这句直接呈现方苇读后所得的装配知识。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 16,
+                  "end": 31,
+                  "quote": "她现在明白了，挡片缺口得朝灯轴",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "photo_under_glass",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "末尾仍在透过镜片辨认合影栏杆上的孔。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 40,
+              "end": 89,
+              "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。她仍透过镜片辨那道孔",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她自己举镜并且仍在观察孔形。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 40,
+                  "end": 89,
+                  "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。她仍透过镜片辨那道孔",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "caption_unfilled",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "题注还不能填，“东台还是西台”仍是待答的问题。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 90,
+              "end": 105,
+              "quote": "东台还是西台，题注暂时填不得。",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "句中直接给出她此时要面对的两个地点选项。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 90,
+                  "end": 105,
+                  "quote": "东台还是西台，题注暂时填不得。",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_binding_read_lamp_leaf",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "读的是指定折页，读完知道挡片缺口朝向；动作描述并未宣称她已装好灯。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 0,
+              "end": 40,
+              "quote": "方苇把收焰折读到末行，合上灯谱。她现在明白了，挡片缺口得朝灯轴；这就能照着装了。",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "方苇亲自读谱，并明白这个信息怎样用于安装。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 0,
+                  "end": 40,
+                  "quote": "方苇把收焰折读到末行，合上灯谱。她现在明白了，挡片缺口得朝灯轴；这就能照着装了。",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_status_read_lamp_leaf",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "到末行并合书足以认定阅读动作完成；安装是另一动作。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 0,
+              "end": 40,
+              "quote": "方苇把收焰折读到末行，合上灯谱。她现在明白了，挡片缺口得朝灯轴；这就能照着装了。",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她读至末行且明白了装法，能够意识到阅读已完。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 0,
+                  "end": 40,
+                  "quote": "方苇把收焰折读到末行，合上灯谱。她现在明白了，挡片缺口得朝灯轴；这就能照着装了。",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_binding_check_stage_photo",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "她正用镜子查看合影里栏杆的孔，东西两台是比较对象，题注是待完成的目标。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            },
+            {
+              "scene_id": "s3",
+              "start": 79,
+              "end": 105,
+              "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她记得用于对照的特征，此刻正透镜看孔，地点仍待确定。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                },
+                {
+                  "scene_id": "s3",
+                  "start": 79,
+                  "end": 105,
+                  "quote": "她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_status_check_stage_photo",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "举镜检查已开始，末尾的“仍透过镜片辨”明确给出动作持续且尚无结论。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 40,
+              "end": 105,
+              "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她本人正聚焦折痕里的孔，尚未能填题注。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 40,
+                  "end": 105,
+                  "quote": "她举起放大镜查那张戏班合影，刚看清栏杆的第一根竖条，旁边的孔还压在一道折痕里。她仍透过镜片辨那道孔，东台还是西台，题注暂时填不得。",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "project_id": "lantern_hall",
+      "project_sha256": "3dc05cdf660c81cfd2c88421df9ce7d37aa841b32f5351659a4d5e472708d8d8",
+      "packet_sha256": "b6a275660c62fcf19476d31e6f14dda5a7621a5c34706efc73d3665b160ced66"
+    },
+    "lantern_3": {
+      "schema_version": 1,
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "独立截点状态审核（当前 AI）"
+      },
+      "decisions": [
+        {
+          "fact_id": "keeper",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述明说方苇是今晚当值的人。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 13,
+              "end": 43,
+              "quote": "方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。",
+              "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+            },
+            {
+              "scene_id": "s1",
+              "start": 77,
+              "end": 89,
+              "quote": "她自己就是今晚当值的人。",
+              "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她接任值班钥匙，正独自装灯；叙述强调她自己当值。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 13,
+                  "end": 43,
+                  "quote": "方苇刚接过掌灯人的钥匙，第一次独自装那盏走马灯，灯底还空着。",
+                  "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+                },
+                {
+                  "scene_id": "s1",
+                  "start": 77,
+                  "end": 89,
+                  "quote": "她自己就是今晚当值的人。",
+                  "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "reading_rule",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "文中明示牌背这行字为会规，限定翻阅资格。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 43,
+              "end": 77,
+              "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”",
+              "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "拿过钥匙并实际翻阅折页，均不能证明方苇知道其他人无权翻阅；没有写她读了牌背。",
+              "epistemic_type": "uncertain",
+              "verdict": "insufficient_evidence",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 43,
+                  "end": 77,
+                  "quote": "钥匙牌背面刻着会里的规矩：“除当值掌灯人，谁也不许翻灯谱的收焰折。”",
+                  "source_sha256": "7dd23d83464f9a8a0f9664d5eba9787b21cfd5f9080b0103d580a19092082fd8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "photo_available",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "方苇亲自转动照片、填写题注；末尾能直接触及照片。",
+          "evidence": [
+            {
+              "scene_id": "s4",
+              "start": 0,
+              "end": 21,
+              "quote": "方苇把合影稍稍转向窗户，折痕的影子移开了。",
+              "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+            },
+            {
+              "scene_id": "s4",
+              "start": 58,
+              "end": 81,
+              "quote": "她放下放大镜，在刚才留白的题注里填上“西台”。",
+              "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她把合影转向窗户，又亲手在题注中写字。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s4",
+                  "start": 0,
+                  "end": 21,
+                  "quote": "方苇把合影稍稍转向窗户，折痕的影子移开了。",
+                  "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+                },
+                {
+                  "scene_id": "s4",
+                  "start": 58,
+                  "end": 81,
+                  "quote": "她放下放大镜，在刚才留白的题注里填上“西台”。",
+                  "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "east_holes",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "命题是她记得东台栏杆方孔，叙述直接归属这段记忆。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 90,
+              "quote": "她记得东台的栏杆是方孔",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "记忆明确归于方苇。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 90,
+                  "quote": "她记得东台的栏杆是方孔",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "west_holes",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "她记得西台圆孔，随后还用该记忆作对照。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            },
+            {
+              "scene_id": "s4",
+              "start": 34,
+              "end": 58,
+              "quote": "把西台旧栏杆的特征和圆孔一对，认准了，就是西台。",
+              "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "叙述直接呈现她的记忆和运用。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                },
+                {
+                  "scene_id": "s4",
+                  "start": 34,
+                  "end": 58,
+                  "quote": "把西台旧栏杆的特征和圆孔一对，认准了，就是西台。",
+                  "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "leaf_finished",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "她读到末行并合书，已经完成阅读。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 0,
+              "end": 16,
+              "quote": "方苇把收焰折读到末行，合上灯谱。",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "方苇亲自通读并合上灯谱。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 0,
+                  "end": 16,
+                  "quote": "方苇把收焰折读到末行，合上灯谱。",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "fitting_known",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "读谱后的理解和缺口应朝灯轴都有明文。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 16,
+              "end": 31,
+              "quote": "她现在明白了，挡片缺口得朝灯轴",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "句中呈现方苇已经明白的信息。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 16,
+                  "end": 31,
+                  "quote": "她现在明白了，挡片缺口得朝灯轴",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "round_holes",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "镜下看清的是一排圆孔，叙述直接呈现这次观察。",
+          "evidence": [
+            {
+              "scene_id": "s4",
+              "start": 21,
+              "end": 33,
+              "quote": "她透过放大镜看清一排圆孔",
+              "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她亲眼透镜看到圆孔。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s4",
+                  "start": 21,
+                  "end": 33,
+                  "quote": "她透过放大镜看清一排圆孔",
+                  "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "photo_identified",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "命题归属方苇的辨认结果；正文写她通过对照认准西台。",
+          "evidence": [
+            {
+              "scene_id": "s4",
+              "start": 34,
+              "end": 58,
+              "quote": "把西台旧栏杆的特征和圆孔一对，认准了，就是西台。",
+              "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "“认准了”直接写出她在对照后形成的结论。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s4",
+                  "start": 34,
+                  "end": 58,
+                  "quote": "把西台旧栏杆的特征和圆孔一对，认准了，就是西台。",
+                  "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "caption_filled",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "在留白处填上“西台”的动作已经完成。",
+          "evidence": [
+            {
+              "scene_id": "s4",
+              "start": 58,
+              "end": 81,
+              "quote": "她放下放大镜，在刚才留白的题注里填上“西台”。",
+              "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "方苇亲手填了这两个字。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s4",
+                  "start": 58,
+                  "end": 81,
+                  "quote": "她放下放大镜，在刚才留白的题注里填上“西台”。",
+                  "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_binding_read_lamp_leaf",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "读的是收焰折，所得知识用于装挡片；提案所列对象、人物和任务齐全。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 0,
+              "end": 40,
+              "quote": "方苇把收焰折读到末行，合上灯谱。她现在明白了，挡片缺口得朝灯轴；这就能照着装了。",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "方苇自己读完并意识到可以照此装配。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 0,
+                  "end": 40,
+                  "quote": "方苇把收焰折读到末行，合上灯谱。她现在明白了，挡片缺口得朝灯轴；这就能照着装了。",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_status_read_lamp_leaf",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "读到折页末行并合谱，确定阅读已经结束。",
+          "evidence": [
+            {
+              "scene_id": "s3",
+              "start": 0,
+              "end": 40,
+              "quote": "方苇把收焰折读到末行，合上灯谱。她现在明白了，挡片缺口得朝灯轴；这就能照着装了。",
+              "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "方苇亲自读完，明白挡片朝向。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s3",
+                  "start": 0,
+                  "end": 40,
+                  "quote": "方苇把收焰折读到末行，合上灯谱。她现在明白了，挡片缺口得朝灯轴；这就能照着装了。",
+                  "source_sha256": "98e1a5c5340f1207221c5e79ce498a511db9cf9a9ea6e22c63503224d2b8bb9a"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_binding_check_stage_photo",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "合影、放大镜、栏杆的孔、两台供对照的特征与留空的题注均在同一条行动线上。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 79,
+              "end": 98,
+              "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+              "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+            },
+            {
+              "scene_id": "s4",
+              "start": 21,
+              "end": 81,
+              "quote": "她透过放大镜看清一排圆孔，把西台旧栏杆的特征和圆孔一对，认准了，就是西台。她放下放大镜，在刚才留白的题注里填上“西台”。",
+              "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "方苇拥有双方的特征记忆，又亲自观察、比对并题注。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 79,
+                  "end": 98,
+                  "quote": "她记得东台的栏杆是方孔，西台的是圆孔。",
+                  "source_sha256": "ea0891c63c945820365e92630df3268ad59fac6ce9b681e552f208540434491a"
+                },
+                {
+                  "scene_id": "s4",
+                  "start": 21,
+                  "end": 81,
+                  "quote": "她透过放大镜看清一排圆孔，把西台旧栏杆的特征和圆孔一对，认准了，就是西台。她放下放大镜，在刚才留白的题注里填上“西台”。",
+                  "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_status_check_stage_photo",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "孔形已看清，对照得出地点后她放下镜子，填完题注。",
+          "evidence": [
+            {
+              "scene_id": "s4",
+              "start": 0,
+              "end": 81,
+              "quote": "方苇把合影稍稍转向窗户，折痕的影子移开了。她透过放大镜看清一排圆孔，把西台旧栏杆的特征和圆孔一对，认准了，就是西台。她放下放大镜，在刚才留白的题注里填上“西台”。",
+              "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "方苇",
+              "reason": "她亲手结束观察，认定地点并填写题注。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s4",
+                  "start": 0,
+                  "end": 81,
+                  "quote": "方苇把合影稍稍转向窗户，折痕的影子移开了。她透过放大镜看清一排圆孔，把西台旧栏杆的特征和圆孔一对，认准了，就是西台。她放下放大镜，在刚才留白的题注里填上“西台”。",
+                  "source_sha256": "d497eb4878177e66feb7bed612410bc502b076256417ce811f80361d46f9ea21"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "project_id": "lantern_hall",
+      "project_sha256": "45633ff8e73e6ebbd787980cf50f1d4c41d2891f1dc854e288a0ed3f850404d3",
+      "packet_sha256": "459e6ef17ad56032ce0bc696dcabf9f140fbbcbc5e5575b849ae04ec75ee7e3f"
+    },
+    "screening": {
+      "schema_version": 1,
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "独立截点状态审核（当前 AI）"
+      },
+      "decisions": [
+        {
+          "fact_id": "card_finished",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述直接交代校准卡已经读完。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 15,
+              "quote": "周岑把投影机旁的校准卡读完了。",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "周岑亲自读完这张卡。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 15,
+                  "quote": "周岑把投影机旁的校准卡读完了。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "offset_setting",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "卡上原文就“左缘裁字”给出水平偏移加两格的要求。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 56,
+              "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”她懂这两格是给片头让出左边的位置，得照卡上的数调机。",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "周岑读完卡，并能解释为什么要用卡上这个数。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 56,
+                  "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”她懂这两格是给片头让出左边的位置，得照卡上的数调机。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "offset_understood",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述直接说明她理解数值的作用，并知道要按数调机。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 30,
+              "end": 56,
+              "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "“她懂”明确将这项理解归属于周岑。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 56,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "image_clipped",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "她先看见片头少半个字，次场仍缺；调整时要给左边让位置，交代了裁切方向。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 5,
+              "end": 26,
+              "quote": "周岑看见试映的片头被银幕黑边吃掉了半个字。",
+              "source_sha256": "eeda37ccf48d880b25adb4d6609ee6e61f59ed51089bc34faa583a1b077800e0"
+            },
+            {
+              "scene_id": "s2",
+              "start": 30,
+              "end": 64,
+              "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。片头仍缺着半个字",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "她亲见裁字，而且已读卡并理解要纠正的左侧余量。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 5,
+                  "end": 26,
+                  "quote": "周岑看见试映的片头被银幕黑边吃掉了半个字。",
+                  "source_sha256": "eeda37ccf48d880b25adb4d6609ee6e61f59ed51089bc34faa583a1b077800e0"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 30,
+                  "end": 64,
+                  "quote": "她懂这两格是给片头让出左边的位置，得照卡上的数调机。片头仍缺着半个字",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "dial_untouched",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述明确写她的手还没碰到旋钮。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 65,
+              "end": 75,
+              "quote": "她的手还没碰到旋钮。",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "这是周岑自己未实施的手部动作。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 65,
+                  "end": 75,
+                  "quote": "她的手还没碰到旋钮。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "removal_requested",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "阿敏向周岑提出了删除口述署名的要求；本项只认定请求。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 26,
+              "end": 93,
+              "quote": "供片人阿敏站在她旁边，要她顺手把字幕上的“口述：阿陶”也删掉，说那一段已经剪了。周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”",
+              "source_sha256": "eeda37ccf48d880b25adb4d6609ee6e61f59ed51089bc34faa583a1b077800e0"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "要求直接说给周岑，她还以保留署名回应。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 26,
+                  "end": 93,
+                  "quote": "供片人阿敏站在她旁边，要她顺手把字幕上的“口述：阿陶”也删掉，说那一段已经剪了。周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”",
+                  "source_sha256": "eeda37ccf48d880b25adb4d6609ee6e61f59ed51089bc34faa583a1b077800e0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "zhou_position",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "她亲口表示想留阿陶的名字。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 66,
+              "end": 93,
+              "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”",
+              "source_sha256": "eeda37ccf48d880b25adb4d6609ee6e61f59ed51089bc34faa583a1b077800e0"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "周岑自己陈述了这一立场。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 66,
+                  "end": 93,
+                  "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”",
+                  "source_sha256": "eeda37ccf48d880b25adb4d6609ee6e61f59ed51089bc34faa583a1b077800e0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "reply_invited",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "阿敏明确追问署名对应哪段声音。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 115,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            },
+            {
+              "scene_id": "s2",
+              "start": 115,
+              "end": 144,
+              "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "周岑听到追问，随即转身准备作答。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 115,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "reply_pending",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "她有回答这次追问的打算，但准备说的话未出口。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 115,
+              "end": 144,
+              "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "叙述直接写出周岑自己的意图和她尚未作答的进度。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 115,
+                  "end": 144,
+                  "quote": "周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "credit_open",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述明示两人尚无共同决定。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 157,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。删不删署名，两人还没说定。",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "她是争议当事人，已表态并听到对方追问，还在准备回答。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 157,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。删不删署名，两人还没说定。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_binding_apply_offset",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "左缘裁字、对应卡值和周岑要调机的想法都明确，提案没有假定校正一定成功。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 75,
+              "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”她懂这两格是给片头让出左边的位置，得照卡上的数调机。片头仍缺着半个字，她的手还没碰到旋钮。",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "她读完卡并理解两格的用途。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 75,
+                  "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”她懂这两格是给片头让出左边的位置，得照卡上的数调机。片头仍缺着半个字，她的手还没碰到旋钮。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            },
+            {
+              "character_id": "阿敏",
+              "reason": "读卡和理解校准值的人是周岑；阿敏的言行都围绕署名，未显示她也看懂卡或听见调节数值。",
+              "epistemic_type": "uncertain",
+              "verdict": "insufficient_evidence",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 75,
+                  "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”她懂这两格是给片头让出左边的位置，得照卡上的数调机。片头仍缺着半个字，她的手还没碰到旋钮。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_status_apply_offset",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "片头仍缺字，周岑还没碰旋钮也知道得照数调机，具体调节尚待开始。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 75,
+              "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”她懂这两格是给片头让出左边的位置，得照卡上的数调机。片头仍缺着半个字，她的手还没碰到旋钮。",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "她明白应调什么，也知道自己的手还没有接触旋钮。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 75,
+                  "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”她懂这两格是给片头让出左边的位置，得照卡上的数调机。片头仍缺着半个字，她的手还没碰到旋钮。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            },
+            {
+              "character_id": "阿敏",
+              "reason": "周岑的手还没碰旋钮是叙述给出的事实；文中没写阿敏留意旋钮或知道这次调节尚待做。",
+              "epistemic_type": "uncertain",
+              "verdict": "insufficient_evidence",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 75,
+                  "quote": "周岑把投影机旁的校准卡读完了。“左缘裁字，水平偏移加两格。”她懂这两格是给片头让出左边的位置，得照卡上的数调机。片头仍缺着半个字，她的手还没碰到旋钮。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_binding_answer_lender",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "阿敏要求删阿陶署名，听到周岑提出保留并追问对应声音；动作准确回应这次交涉，没有预设能说服她。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 66,
+              "end": 93,
+              "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”",
+              "source_sha256": "eeda37ccf48d880b25adb4d6609ee6e61f59ed51089bc34faa583a1b077800e0"
+            },
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 157,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。删不删署名，两人还没说定。",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "周岑已说过保留理由，此时明确打算指出声音作答。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 66,
+                  "end": 93,
+                  "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”",
+                  "source_sha256": "eeda37ccf48d880b25adb4d6609ee6e61f59ed51089bc34faa583a1b077800e0"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 157,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。删不删署名，两人还没说定。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            },
+            {
+              "character_id": "阿敏",
+              "reason": "她直接听到保留名字与声音仍在的主张，并亲口追问这行署名具体对应哪段；足以识别这项回应的对象和任务。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 66,
+                  "end": 93,
+                  "quote": "周岑指着声轨说：“阿陶的声音还在，我想留着他的名字。”",
+                  "source_sha256": "eeda37ccf48d880b25adb4d6609ee6e61f59ed51089bc34faa583a1b077800e0"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 157,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。删不删署名，两人还没说定。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_status_answer_lender",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "她早先表达过立场，但此动作专指指出某段声音来答新追问；末尾还没指给阿敏，也没说出回答。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 75,
+              "end": 157,
+              "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。删不删署名，两人还没说定。",
+              "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "周岑",
+              "reason": "叙述直陈周岑正打算指出声音，回答尚未出口。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 157,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。删不删署名，两人还没说定。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            },
+            {
+              "character_id": "阿敏",
+              "reason": "她当面提出新问题，正等别人给她指明；截至末尾对方只转身，针对这次问题的答复还没出口。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 75,
+                  "end": 157,
+                  "quote": "阿敏没走，指着那行署名又问：“你还是要留？那请你说说，这一行到底署给哪段声音？”周岑转身对着她，打算把那段声音指出来答她，这句话还没出口。删不删署名，两人还没说定。",
+                  "source_sha256": "48697f303f0c72ebcdc090cdd46e4c6b6e278758385688be71032166e6099492"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "project_id": "screening_room",
+      "project_sha256": "208ba8477e01cdcd19ea7d0a5e3911877e1076e74f3bad17427f3e13dfe51cd8",
+      "packet_sha256": "f5dc286f18f4d1f9ffedab7dcbf4379b5f1eb260bcc1f1cda3bae183d4c832d2"
+    },
+    "drugshop": {
+      "schema_version": 1,
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "独立截点状态审核（当前 AI）"
+      },
+      "decisions": [
+        {
+          "fact_id": "deed_unnamed",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述逐字说明了房契上的地标及所缺的信息。候选只涉及这份契据的内容。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 10,
+              "end": 31,
+              "quote": "房契说刻葫芦的正门对着一座石桥，没写桥名。",
+              "source_sha256": "a05c70a7dda1834d1054a79e686801ef40a454ccf94d601cd0447d5804875857"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "reason": "她在校样中留圈，知道要找桥名。正文未写她读过房契，也未写她得知该契据没有署桥名。",
+              "epistemic_type": "uncertain",
+              "verdict": "insufficient_evidence",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 10,
+                  "end": 31,
+                  "quote": "房契说刻葫芦的正门对着一座石桥，没写桥名。",
+                  "source_sha256": "a05c70a7dda1834d1054a79e686801ef40a454ccf94d601cd0447d5804875857"
+                },
+                {
+                  "scene_id": "s1",
+                  "start": 46,
+                  "end": 79,
+                  "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。",
+                  "source_sha256": "a05c70a7dda1834d1054a79e686801ef40a454ccf94d601cd0447d5804875857"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "photo_at_hand",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "左手压住的实物是剪下来的报纸门面照。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 18,
+              "quote": "宁致左手压着从报纸上剪下的药铺门面照",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            },
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 86,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "reason": "她用左手按住剪报，又拿照片里的街角和街图比，对眼前这件材料有直接接触和辨认。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 18,
+                  "quote": "宁致左手压着从报纸上剪下的药铺门面照",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 86,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "sketch_at_hand",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "原句给出她的手势、草图所在位置，还交代画者是木匠。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 19,
+              "end": 37,
+              "quote": "右手摊着木匠画在账簿封底的药铺草图。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "reason": "她摊开账簿，也知道草图上的路线可供核对。叙述直接告诉读者画者身份，但没有交代她知道是木匠所画。",
+              "epistemic_type": "uncertain",
+              "verdict": "insufficient_evidence",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 19,
+                  "end": 37,
+                  "quote": "右手摊着木匠画在账簿封底的药铺草图。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 111,
+                  "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "map_ready",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述明确说街图标有两座桥，且正铺在两件材料之间。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 37,
+              "end": 86,
+              "quote": "两件东西之间铺着那张标了两座桥的街图。她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            },
+            {
+              "scene_id": "s2",
+              "start": 122,
+              "end": 138,
+              "quote": "正门朝东桥还是北桥，她仍拿不准。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "reason": "她亲自用眼前的地图比街角，又在东、北两桥间斟酌，能认出地图和待选的桥。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 37,
+                  "end": 86,
+                  "quote": "两件东西之间铺着那张标了两座桥的街图。她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 122,
+                  "end": 138,
+                  "quote": "正门朝东桥还是北桥，她仍拿不准。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "photo_comparison",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "照片的第一处拐弯已比过，第二处还待查看，两处的进度分别有明文。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 86,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "reason": "宁致正在做这个比对，刚完成第一处，也知道接下来还要看第二处。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 86,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "sketch_pending",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "账簿上另记了一段路线，宁致还没将它跟街图比较。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 86,
+              "end": 122,
+              "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "reason": "她想到也得比对账簿上的路线，叙述随即交代这项工作尚未着手。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 122,
+                  "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "bridge_unknown",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "东桥和北桥仍都是她心中的可能，叙述直陈她没拿准。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 122,
+              "end": 138,
+              "quote": "正门朝东桥还是北桥，她仍拿不准。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "reason": "“她仍拿不准”点出了宁致本人的认识状态。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 122,
+                  "end": 138,
+                  "quote": "正门朝东桥还是北桥，她仍拿不准。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_binding_compare_facade",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "校样上的问题是正门朝向哪座桥。宁致确在对照门面照中的街角和街图，动作没有预设东桥或北桥。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 46,
+              "end": 79,
+              "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。",
+              "source_sha256": "a05c70a7dda1834d1054a79e686801ef40a454ccf94d601cd0447d5804875857"
+            },
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 18,
+              "quote": "宁致左手压着从报纸上剪下的药铺门面照",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            },
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 86,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "reason": "照片就在她手中，街角是她正在对照的位置，桥名也是她自己想查清的问题。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 46,
+                  "end": 79,
+                  "quote": "她在校样的“正门朝向”一栏里只画了个圈，得查清正门当年对着哪座桥。",
+                  "source_sha256": "a05c70a7dda1834d1054a79e686801ef40a454ccf94d601cd0447d5804875857"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 18,
+                  "quote": "宁致左手压着从报纸上剪下的药铺门面照",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 86,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_status_compare_facade",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "“正拿”说明比对正在进行。第一个拐弯比完，还要看第二个，整个动作尚未结束。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 86,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "reason": "她正在做照片比对，并掌握已看和待看的位置。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 86,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_binding_compare_sketch",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "账簿封底的草图画出了正门到巷口的路线；拿它与街图比较，可用于查明正门朝向哪座桥。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 19,
+              "end": 37,
+              "quote": "右手摊着木匠画在账簿封底的药铺草图。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            },
+            {
+              "scene_id": "s2",
+              "start": 86,
+              "end": 138,
+              "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。正门朝东桥还是北桥，她仍拿不准。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "reason": "她亲自摊开账簿，想到要把图上的正门至巷口路线与街图相对照。识别提案对象所需的是账簿和这条路线。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 19,
+                  "end": 37,
+                  "quote": "右手摊着木匠画在账簿封底的药铺草图。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 138,
+                  "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。正门朝东桥还是北桥，她仍拿不准。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_status_compare_sketch",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "账簿已经摊开，但“那张草图还没开始比”明确指出这项具体比对仍待进行。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 86,
+              "end": 122,
+              "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "reason": "她自己想到还要拿账簿草图比较，且截至此刻尚未开始。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 122,
+                  "quote": "账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_distinct_6bf4f55e68f32f32cef9fb8bafb9df0f9704b8c255415470c1e00425adf60c83",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "两手分别拿着门面剪报和账簿封底草图，地图铺在两件东西之间，材质及各自所处的位置足以辨别两件实物。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 56,
+              "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。两件东西之间铺着那张标了两座桥的街图。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            },
+            {
+              "scene_id": "s2",
+              "start": 56,
+              "end": 122,
+              "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。",
+              "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "宁致",
+              "reason": "宁致一手持一件，正在比的是门面照，另待比的是账簿草图。她能通过手中的实物及不同的比对进度区分它们。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 56,
+                  "quote": "宁致左手压着从报纸上剪下的药铺门面照，右手摊着木匠画在账簿封底的药铺草图。两件东西之间铺着那张标了两座桥的街图。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 56,
+                  "end": 122,
+                  "quote": "她正拿照片里的街角同街图比，刚比完第一个拐弯，还要看第二个。账簿上另画着正门到巷口的几步路，她也得和街图比一比，那张草图还没开始比。",
+                  "source_sha256": "9ffbcd3987b921bdb39dc88703672620a4da21d3e91ffcea17c4cee610328dfa"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "project_id": "drugshop_corner",
+      "project_sha256": "b15e8aa90652fb4e85d469585b769f468247993fcec5dc960abf20cdf977d0e7",
+      "packet_sha256": "7d727e0b72e8fc9748312955e92fd1f2215b0ffe31add3cd595b1dab89e3a81a"
+    },
+    "repair_bench": {
+      "schema_version": 1,
+      "reviewer": {
+        "kind": "agent_review",
+        "name": "独立截点状态审核（当前 AI）"
+      },
+      "decisions": [
+        {
+          "fact_id": "loose_instrument",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述明写古琴在凳上晃了一下；证据足以证明这次晃动。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 32,
+              "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身",
+              "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "reason": "晃动之后邵梨随即拿毡，目的明确是稳住眼前的琴身，她的反应把所见问题与行动相连。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 32,
+                  "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身",
+                  "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "pad_intended",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "叙述直接给出她拿毡后打算垫的位置和目的。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 11,
+              "end": 32,
+              "quote": "邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身",
+              "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "reason": "这是邵梨自己的打算。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 11,
+                  "end": 32,
+                  "quote": "邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身",
+                  "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "pad_unplaced",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "原文明示毡仍握在她手中，琴底还空。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 33,
+              "end": 46,
+              "quote": "毡还攥在她手里，琴底空着。",
+              "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "reason": "邵梨正在亲手握着这块毡。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 33,
+                  "end": 46,
+                  "quote": "毡还攥在她手里，琴底空着。",
+                  "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "mark_unidentified",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "疑问将两种可能并列，她还在准备查看边缘。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 46,
+              "end": 107,
+              "quote": "右边背板那条线，究竟是铅笔印还是沿纹裂开了？她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。",
+              "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "reason": "她打算顺着细线看以解答这个问题，尚不确定是哪种痕迹。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 46,
+                  "end": 107,
+                  "quote": "右边背板那条线，究竟是铅笔印还是沿纹裂开了？她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。",
+                  "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "lamp_on",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "已经扳亮弯颈灯，动作明确。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 68,
+              "end": 74,
+              "quote": "她扳亮弯颈灯",
+              "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "reason": "邵梨自己打开了灯。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 68,
+                  "end": 74,
+                  "quote": "她扳亮弯颈灯",
+                  "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "glass_beside",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "放大镜的位置在背板旁边。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 68,
+              "end": 85,
+              "quote": "她扳亮弯颈灯，把放大镜摆在背板旁边",
+              "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "reason": "邵梨亲手把放大镜摆在这里。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 68,
+                  "end": 85,
+                  "quote": "她扳亮弯颈灯，把放大镜摆在背板旁边",
+                  "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "inspection_pending",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "她已经备好工具，准备看线的边缘；到末尾还没凑到镜前。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 86,
+              "end": 107,
+              "quote": "预备顺着那条线的边缘看，现在还没凑到镜前。",
+              "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "reason": "叙述直接交代邵梨的意图和自己的观察进展。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 86,
+                  "end": 107,
+                  "quote": "预备顺着那条线的边缘看，现在还没凑到镜前。",
+                  "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_binding_place_felt",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "琴在晃，她拿毡就是为了垫在琴下稳住它；动作没有先断言琴已经垫稳。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 46,
+              "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。",
+              "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "reason": "邵梨亲自拿毡，叙述直陈她要垫到哪把琴下以及目的。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 46,
+                  "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。",
+                  "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_status_place_felt",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "只完成了取毡；毡仍握在手中，琴底空着，具体的垫入尚未开始。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 0,
+              "end": 46,
+              "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。",
+              "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "reason": "她手握厚毡并准备垫稳古琴，尚未垫入。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 0,
+                  "end": 46,
+                  "quote": "古琴在凳面上轻轻一晃。邵梨拿起厚毡，准备把它垫到古琴底下稳住琴身；毡还攥在她手里，琴底空着。",
+                  "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_binding_inspect_line",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "右侧是小提琴，背板细线有两种待辨原因；镜和灯均已准备，查看提案没有猜定答案。",
+          "evidence": [
+            {
+              "scene_id": "s1",
+              "start": 38,
+              "end": 52,
+              "quote": "右边的小提琴背板上有道细线。",
+              "source_sha256": "e4e218ef888a082550aa476ad064246389a17bcb9209a9a5d92220b672124919"
+            },
+            {
+              "scene_id": "s2",
+              "start": 46,
+              "end": 107,
+              "quote": "右边背板那条线，究竟是铅笔印还是沿纹裂开了？她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。",
+              "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "reason": "这是邵梨自己提出的辨认问题，她已为查看线缘亲自点灯、摆镜。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s1",
+                  "start": 38,
+                  "end": 52,
+                  "quote": "右边的小提琴背板上有道细线。",
+                  "source_sha256": "e4e218ef888a082550aa476ad064246389a17bcb9209a9a5d92220b672124919"
+                },
+                {
+                  "scene_id": "s2",
+                  "start": 46,
+                  "end": 107,
+                  "quote": "右边背板那条线，究竟是铅笔印还是沿纹裂开了？她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。",
+                  "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "core_status_inspect_line",
+          "verdict": "supported",
+          "epistemic_type": "established",
+          "reason": "扳灯和摆镜是准备，该动作以透镜查线缘为内容，她还没有凑到镜前。",
+          "evidence": [
+            {
+              "scene_id": "s2",
+              "start": 46,
+              "end": 107,
+              "quote": "右边背板那条线，究竟是铅笔印还是沿纹裂开了？她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。",
+              "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+            }
+          ],
+          "knowledge": [
+            {
+              "character_id": "邵梨",
+              "reason": "她明确预备查看线缘，亲自摆镜，还没开始透镜查看。",
+              "epistemic_type": "established",
+              "verdict": "supported",
+              "evidence": [
+                {
+                  "scene_id": "s2",
+                  "start": 46,
+                  "end": 107,
+                  "quote": "右边背板那条线，究竟是铅笔印还是沿纹裂开了？她扳亮弯颈灯，把放大镜摆在背板旁边，预备顺着那条线的边缘看，现在还没凑到镜前。",
+                  "source_sha256": "b48e7d31a30725b116a26d7fe5804e2214547c7d4c32c3349fdffeb8ad6c8aff"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "project_id": "repair_bench",
+      "project_sha256": "b1cfbe3d27082731cba8d479996d2f81f7932181dc7c0d24d1dc6de8787d95a5",
+      "packet_sha256": "ce50de26ddb2a5d2a144935c4f642c4e6faafc1e3e104aceacfcd1eebe798910"
+    }
+  }
+}

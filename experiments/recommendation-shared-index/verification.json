@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "scope": "Shared document encoding cache and strictly scoped query snapshots; twelve-card competition experiment, no action-compatible retrieval policy installed.",
+  "tests": {
+    "new_tests": 25,
+    "full_suite_passed": 553,
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/tests -p 'test_*.py'",
+    "log_sha256": "80e73f13d2dd32166dcb19fdcf615498854b32457486fa0661e4d8a57e460534",
+    "code_review": "approved after enforcing exact project context",
+    "security_review": "approved after private permissions and no-follow directory-fd publishing fixes"
+  },
+  "source_integrity": {
+    "raw_assets_unchanged": 271,
+    "prior_recommendation_source_code_unchanged": true,
+    "default_four_card_catalog_unchanged": true,
+    "expanded_catalog_file_sha256": "dc6843aeccc1d890a396682ec923daef849a4577e85750baf06b889443f70ac1",
+    "fixtures_all_equal_frozen": true,
+    "state_reviews_equal_frozen": true,
+    "freeze_note": "Input catalog/fixtures/reviews were frozen before encoding. CLI permission/directory hardening occurred after the initial code hashes in freeze.json and before the run; final source hashes are below."
+  },
+  "runtime": {
+    "model_sha256": "b5ce9d77a3fc4b3b39ccb5643c36777911cc4eb46a66962eadfa3f5f60490d63",
+    "qmd_version": "2.1.0",
+    "node_llama_cpp_version": "3.18.1",
+    "input_format": "qmd-format-functions-v1",
+    "dimensions": 768,
+    "local_model_only": true,
+    "model_downloaded_this_run": false,
+    "model_processes": 14,
+    "new_document_inputs": 8,
+    "query_inputs": 14,
+    "total_encoding_inputs": 22,
+    "document_cache_hits": 160,
+    "model_process_wall_seconds": 13.071,
+    "full_per_head_input_count_if_reencoded": 182,
+    "comparison_note": "182 is a computed full-reencoding work count, not a separately timed baseline or speedup result.",
+    "warm_contexts": 14,
+    "warm_new_inputs": 0,
+    "warm_artifacts_exactly_equal": true
+  },
+  "baseline_reuse": {
+    "documents_imported": 4,
+    "private_query_snapshots": 12,
+    "model_inputs": 0,
+    "methods": {
+      "bm25": {
+        "rankings_proposals_except_content_ids_and_gates_equal": true,
+        "cases": 12,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4
+      },
+      "vector": {
+        "rankings_proposals_except_content_ids_and_gates_equal": true,
+        "cases": 12,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4
+      },
+      "hybrid": {
+        "rankings_proposals_except_content_ids_and_gates_equal": true,
+        "cases": 12,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4
+      }
+    }
+  },
+  "public_replay": {
+    "cache_reuse": "Exact input byte equality before reusing assembled vectors; no new model encoding.",
+    "methods": {
+      "bm25": {
+        "cases": 10,
+        "complete_public_sessions_equal": true,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4
+      },
+      "vector": {
+        "cases": 10,
+        "complete_public_sessions_equal": true,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4
+      },
+      "hybrid": {
+        "cases": 10,
+        "complete_public_sessions_equal": true,
+        "accepted": 4,
+        "acceptance_preserved_facts": true,
+        "cross_revision_checks": 4,
+        "cross_revision_rejected": 4
+      }
+    }
+  },
+  "semantic_review": {
+    "unique_packets": 12,
+    "claim_counts": {
+      "supported": 32,
+      "contradicted": 5,
+      "insufficient_evidence": 20
+    },
+    "knowledge_decisions": 57,
+    "reviewer_mode": "current AI reading at frozen cutoff; source spans and bindings mechanically verified",
+    "new_cards_actually_reviewed": [
+      "trial_guidance_use",
+      "forbidden_knowledge_read",
+      "deadline_investigation"
+    ],
+    "remaining_five_added_cards": "retrieval competition only; no complete positive/negative semantic evaluation"
+  },
+  "results": {
+    "bm25": {
+      "cases": 14,
+      "accepted": 4,
+      "acceptance_preserved_facts": true,
+      "cross_revision_checks": 4,
+      "cross_revision_rejected": 4,
+      "original_proposals": 5,
+      "wording_proposals": 0,
+      "old_real_proposals": 0,
+      "new_real_proposals": 0,
+      "retrieved_cards": 20,
+      "reviewed_instances": 7
+    },
+    "vector": {
+      "cases": 14,
+      "accepted": 4,
+      "acceptance_preserved_facts": true,
+      "cross_revision_checks": 4,
+      "cross_revision_rejected": 4,
+      "original_proposals": 5,
+      "wording_proposals": 2,
+      "old_real_proposals": 0,
+      "new_real_proposals": 0,
+      "retrieved_cards": 28,
+      "reviewed_instances": 10
+    },
+    "hybrid": {
+      "cases": 14,
+      "accepted": 4,
+      "acceptance_preserved_facts": true,
+      "cross_revision_checks": 4,
+      "cross_revision_rejected": 4,
+      "original_proposals": 5,
+      "wording_proposals": 2,
+      "old_real_proposals": 0,
+      "new_real_proposals": 0,
+      "retrieved_cards": 28,
+      "reviewed_instances": 9
+    }
+  },
+  "privacy": {
+    "public_cases": 10,
+    "private_real_cases": 4,
+    "private_runtime_gitignored": true,
+    "shared_index_query_entries": 0,
+    "new_cli_directory_mode": "0700",
+    "new_cli_file_mode": "0600"
+  },
+  "limitations": [
+    "JSON index still fully loaded and validated; no large-scale vector DB or garbage collection.",
+    "Queries conservatively invalidated on catalog change.",
+    "Four real prefixes overlap the same two novels; no independent-story gain claim.",
+    "Current retrieval filters incompatible actions after top-k; read-only diagnostic identifies missed candidates but does not change the tested policy."
+  ],
+  "encoded_jobs_sha256": [
+    {
+      "case_id": "letter_1",
+      "dataset_sha256": "64523cecf815c8736a1b8012be56cf16d4c4e76acddfd71b214aca89cef6260b",
+      "embedding_input_sha256": "3b4c77aa3090325f24f951dfa5eb3d6883b513c143d17abcafee3a15a34ec6a8",
+      "embeddings_sha256": "8f222819971318b268d6f09bce89f3231f8cc53f9b01370d5b0bbe5bc008ba3f"
+    },
+    {
+      "case_id": "letter_2",
+      "dataset_sha256": "24bccef32afaa60a74f7a6dfb105ed41e6d55eae76444e5de795d0039d5c5557",
+      "embedding_input_sha256": "2c674575b5f51de8256049bc406e240989498485bd6fbfa5c3a76ed17976f311",
+      "embeddings_sha256": "95f568c2feff2d155a10517414d1ac0c3b52dcd18eec6ec6ff420787ce524996"
+    },
+    {
+      "case_id": "letter_3",
+      "dataset_sha256": "9bd2b813be769cfecafb3272bdc75d75c3f968c613288adc2a202613b0023f96",
+      "embedding_input_sha256": "7c6f37b9160702c31815da8e447ef0e8e403ae2515e256d040441208e4ca9872",
+      "embeddings_sha256": "32ad10e198e43d34fd27781804fb18fa79e455a6531871b955ebac3f0d87102c"
+    },
+    {
+      "case_id": "inventory_1",
+      "dataset_sha256": "0bf3382ed90ddddc40ba4d40d09b0af8713cff375d937ac7a40f8df2c07c2c2f",
+      "embedding_input_sha256": "7978cde734b3f8c8eb5a85afe3086b95eba51d721a5b2f401f142487c9a8725b",
+      "embeddings_sha256": "09f050c4d759882faf67a85fadad4e9cdb656e7a80e16398332f32f111f45f69"
+    },
+    {
+      "case_id": "inventory_2",
+      "dataset_sha256": "59dc509fa8f54fe7bf6af090f5c854ae762f2c9235081a666c8d6a233b8a8112",
+      "embedding_input_sha256": "ac5cf5cfc960217761a5037feb569706f82dcf9d56deedcac41442ec9698460c",
+      "embeddings_sha256": "8944f725b894b6918f435e20cfd5d9f2482c6d202a3ba6a59c2149a513d59613"
+    },
+    {
+      "case_id": "inventory_3",
+      "dataset_sha256": "98dcaaf1f00a064db2ae8875eb657f93cb560fa484e1d31792a5cdfec665c60d",
+      "embedding_input_sha256": "5be5ae0dfe9e62b687c35050497f0cee0c6de490f6884980f78c6df8e6b83c0f",
+      "embeddings_sha256": "df11b24a6bb1038cf9692062ffcf1cd5d6387fd0329c2abc7653d2e9ad1c2832"
+    },
+    {
+      "case_id": "inventory_4",
+      "dataset_sha256": "e2b608963c0ba37c4659832fcf5afdf7b01a63953c52cf9016e4856b9108cba5",
+      "embedding_input_sha256": "da4de7b433058c30e14fb47f37f5f923cc9e274845e8d7439dd01644882a4be4",
+      "embeddings_sha256": "cc118c17b226853a5cf8928fa8f29eb31e7f374beb0433affa749ded48f8a363"
+    },
+    {
+      "case_id": "wording_letter_unread",
+      "dataset_sha256": "87f5676f9a3b1eafd6d4785036b5762a797cb79111f9a634fc44aa709e41ce5c",
+      "embedding_input_sha256": "bd40e9ebbb450e24b143041ace32bc20af0cc4d20053257839a3bb64108f0b1e",
+      "embeddings_sha256": "3402933f9f772554fd676bb6dc94ab8c31daf403d360fce2501a2e5d469751a5"
+    },
+    {
+      "case_id": "wording_letter_use",
+      "dataset_sha256": "267ccbc5ba55a2c690379e477701e07520bc09097a162e5601f319a568081b10",
+      "embedding_input_sha256": "59b120ec2c06d7bcbc72ea63d0351005a198423e173657ca0d79b2380ded8b66",
+      "embeddings_sha256": "28eb7f979b5c606b629dae8715b48fceb116a9f625eca5b1ab24cfb8eb09d4e0"
+    },
+    {
+      "case_id": "wording_inventory",
+      "dataset_sha256": "98abe09d0dfa4b584c1d6f3fa454630630ea04ecacff9b202ab4316be7905b9b",
+      "embedding_input_sha256": "aa500b0e58e429d4dc4fcab8f8e87dd5a80dc643c2223b0fef1dcd7e6f12dfb9",
+      "embeddings_sha256": "41be9a8b526812a4f5e4a1a43568a502da4e6e265842ee77f3b9c8b835a41f8f"
+    },
+    {
+      "case_id": "real_1",
+      "dataset_sha256": "e553c4b4d46a371ccacfaab1726bf6053faccc1ba7932d80619f3ad9cb7e5fad",
+      "embedding_input_sha256": "84cec72b2f7218816ae66cabb005cf1756cc86ab357f8781f715f90ed997fd90",
+      "embeddings_sha256": "a2d88b8e176fc855dd025e42d9a3d077183f7b3d83cadb496ff8db1d21ce50ae"
+    },
+    {
+      "case_id": "real_2",
+      "dataset_sha256": "34a0ea8b03410fab70159d077e6de90cdbba8116ef3d8338e7ef22694680007a",
+      "embedding_input_sha256": "b218bc86ba3a1c363ef77c12b70c3c8de05796849711daeb2293897a8c35b499",
+      "embeddings_sha256": "2acbd437607bcaf73565b15f8d270016e8fbd079da814bd4a29be094c81d6ee1"
+    },
+    {
+      "case_id": "real_body_pending",
+      "dataset_sha256": "ae0f285de1aba0e14009699cc199f1ceaf5c82fb9740e4a4eb842e1b4bb4dec5",
+      "embedding_input_sha256": "dcd49e572a299795ba00f0ff9115611ede1a7163d707440ce22c7626e885e90c",
+      "embeddings_sha256": "68e16786080436ba9b518e5be049958ec124c2d6c5b1fff590a275174c62623a"
+    },
+    {
+      "case_id": "real_monitor_progress",
+      "dataset_sha256": "c32abf496fd85ee7cd50b36a4ea02215bea9b23c18954e541b31bc6e72c73ef4",
+      "embedding_input_sha256": "82730f12aa0dffab1099628fdd24bdc942a01a74457671d0de55b3f3070acdf0",
+      "embeddings_sha256": "65872e977841e4dc38c9e19a85af299bad33ff82c15c4fa019368a5340b7b06b"
+    }
+  ],
+  "file_sha256": {
+    "README.md": "407f3b4d50fd5e254d780a1122bc7d99d9400e0c0c8e5271192885464066cb09",
+    "scripts/recommendation_embedding_cache.py": "335cb589c9927486b99c79c343afbf0da865288f8b7e1ce8587dd9ee41e8b58e",
+    "scripts/tests/test_recommendation_embedding_cache.py": "982295702926edcb2bec8d54415af23511e8d296e34585185e058f11dae45364",
+    "scripts/tests/test_recommendation_embedding_cache_cli.py": "480eb1c4c573d4fa5507ebcd336d4cd5acbd6cca8482a13aaf22879ac79442b1",
+    "experiments/recommendation-shared-index/README.md": "6d85174a77ea5b013f6126cd7ebf49e31fc26b8dea0efd4f011247b6248caff5",
+    "experiments/recommendation-shared-index/RESULTS.md": "c270b51ec457db5f9abe6f707dd39a900983790c03d2a1d38ae87540423dc272",
+    "experiments/recommendation-shared-index/budget-diagnostic.json": "ee4e73bb1eca0816ef54290e82b54d02aacd838c566af75c6ceab79189887cb3",
+    "experiments/recommendation-shared-index/cache_cli.py": "e73f6f618629b6a152154e1dde78dde0aae960d76445b50b52897cfe61ff586e",
+    "experiments/recommendation-shared-index/candidate-reviews-bm25-public.json": "b8421112c699b79cfe43e2d4540d7f8073662cc4ed71c15f0e2d1cd210e5fc2f",
+    "experiments/recommendation-shared-index/candidate-reviews-hybrid-public.json": "74c0a34237e57e32a92c60cbd70348940195e4782be7fc7f952be63308409be8",
+    "experiments/recommendation-shared-index/candidate-reviews-vector-public.json": "74c0a34237e57e32a92c60cbd70348940195e4782be7fc7f952be63308409be8",
+    "experiments/recommendation-shared-index/catalog-expanded.json": "dc6843aeccc1d890a396682ec923daef849a4577e85750baf06b889443f70ac1",
+    "experiments/recommendation-shared-index/catalog-notes.json": "ddf87794d3ad3e798fcb21661fa67506addc6aacada14a9ddb67e72dd657767f",
+    "experiments/recommendation-shared-index/freeze.json": "c648842d84b00a76db80678e70d5c5bd0a1b9c85c0419c456cf3a198bd5d2367",
+    "experiments/recommendation-shared-index/results-summary.json": "5541b1d67d95c5693ee72573d2dcd2edaa18224c27275f1a29ad7f4608f5c16e"
+  }
+}
